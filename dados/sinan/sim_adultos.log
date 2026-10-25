@@ -1,0 +1,9 @@
+2023 dbc 130355169
+2023 {'total': 43443, '18+': 40683, '18+_sexo_1': 37178, '18+_sexo_2': 3504, '<18': 2152, 'ignorada': 608, '18+_sexo_0': 1}
+2024 dbc 137713772
+2024 {'total': 39946, '18+': 37276, '18+_sexo_1': 33994, '18+_sexo_2': 3278, '<18': 2171, 'ignorada': 499, '18+_sexo_0': 4}
+
+## SIM microdados: óbitos por agressão (X85-Y09) em adultos 18+ (DOBR2023/2024.dbc, FTP DATASUS)
+- 2023: total 43,443; 18+ 40,683 (93.6%); <18 2,152; idade ignorada 608; 18+ homens 37,178, mulheres 3,504. Taxa adulta aproximada (denominador Censo 2022 18+ = 154.346.198): 26.4 por 100 mil adultos.
+- 2024: total 39,946; 18+ 37,276 (93.3%); <18 2,171; idade ignorada 499; 18+ homens 33,994, mulheres 3,278. Taxa adulta aproximada (denominador Censo 2022 18+ = 154.346.198): 24.2 por 100 mil adultos.
+FIM

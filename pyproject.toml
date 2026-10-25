@@ -1,0 +1,37 @@
+[project]
+name = "lgbt-indicador-violencia"
+version = "0.1.0"
+description = "Existe indicador confiável de violência motivada por LGBTfobia no Brasil? Dados derivados, código, pré-registros e testes que travam os números publicados"
+requires-python = ">=3.12"
+license = "Apache-2.0 AND CC-BY-4.0"
+authors = [{ name = "Carlos Ulisses Flores" }]
+
+# Lint em dois níveis (v0.3):
+# 1. ESTRITO (padrão da casa; bloqueia a CI): código de infraestrutura do repositório (run_all.py, make_provenance.py, scripts/,
+#    tests/test_auditar_publicacao.py): line-length 100, E,F,W,I,UP,B,D (docstring numpy) e interrogate 100%.
+# 2. INFORMATIVO (não bloqueia): scripts de pesquisa copiados do projeto de origem e testes escritos no estilo do autor. Eles ficam fora
+#    do nível estrito de propósito: reformatá-los quebraria a correspondência com o original registrada em manifest/MODIFICACOES.tsv
+#    (sha256 antes/depois) e mudaria arquivos cobertos pelo selo sem mudar lógica. A CI roda neles `ruff check --isolated --select E,F,W,B`.
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+extend-exclude = [
+    "dados", "simulacao", "research-*", "paper", "dashboard",
+    "tests/_util.py", "tests/test_c09_presidencia.py", "tests/test_c10_exposicao.py", "tests/test_correcoes_v03.py",
+    "tests/test_integridade.py", "tests/test_numeros_publicados.py", "tests/test_reanalises_publicadas.py",
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "D"]
+ignore = ["D203", "D213", "D301"]  # D301: make_provenance.py documenta o formato "<caminho>\\0<sha256>\\n" de propósito
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+
+[tool.interrogate]
+fail-under = 100
+verbose = 1
+
+[tool.pytest.ini_options]
+# dados/disque100/tests usa pytest.mark.parametrize: roda no pytest, não no run_all.py (que chama funções sem argumento)
+testpaths = ["tests", "paper/tests", "dados/disque100/tests"]

@@ -1,0 +1,56 @@
+[
+ {
+  "cenario": "base: GGB trans x TDoR todos (URL ou nome+cidade ou nome 2 tokens+UF)",
+  "n_ggb": 118,
+  "n_tdor": 139,
+  "m": 88,
+  "chapman": 186.2,
+  "ep": 6.0,
+  "cob_ggb": 0.634
+ },
+ {
+  "cenario": "estrito: so URL ou >=2 tokens de nome",
+  "n_ggb": 118,
+  "n_tdor": 139,
+  "m": 74,
+  "chapman": 221.1,
+  "ep": 10.6,
+  "cob_ggb": 0.534
+ },
+ {
+  "cenario": "TDoR so categorias violence+suicide",
+  "n_ggb": 118,
+  "n_tdor": 132,
+  "m": 87,
+  "chapman": 178.9,
+  "ep": 5.7,
+  "cob_ggb": 0.66
+ },
+ {
+  "cenario": "TDoR so violence (sem suicidio)",
+  "n_ggb": 118,
+  "n_tdor": 112,
+  "m": 77,
+  "chapman": 171.4,
+  "ep": 6.3,
+  "cob_ggb": 0.688
+ },
+ {
+  "cenario": "GGB sem os casos cuja fonte e o proprio TDoR",
+  "n_ggb": 111,
+  "n_tdor": 139,
+  "m": 82,
+  "chapman": 187.9,
+  "ep": 6.7,
+  "cob_ggb": 0.591
+ },
+ {
+  "cenario": "so casos com nome nas duas listas",
+  "n_ggb": 96,
+  "n_tdor": 126,
+  "m": 80,
+  "chapman": 151.1,
+  "ep": 4.1,
+  "cob_ggb": 0.635
+ }
+]

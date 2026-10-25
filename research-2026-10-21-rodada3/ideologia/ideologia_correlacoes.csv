@@ -1,0 +1,297 @@
+fonteA,ondaA,dimA,fonteB,ondaB,dimB,defasagem_anos,subconjunto,n,spearman,spearman_ic95_aprox,pearson,partidos
+BLS,2009,esq-dir geral,BLS,2013,esq-dir geral,4,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",7,1.0,"[1.0, 1.0]",0.987,CID DEM MDB PL PP PSDB PTB
+BLS,2009,esq-dir geral,BLS,2017,esq-dir geral,8,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",7,0.821,"[0.179, 0.973]",0.83,CID DEM MDB PL PP PSDB PTB
+BLS,2009,esq-dir geral,BLS,2021,esq-dir geral,12,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",7,0.786,"[0.08, 0.967]",0.888,CID DEM MDB PL PP PSDB PTB
+BLS,2009,esq-dir geral,BRC,2018,esq-dir geral,9,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",7,0.893,"[0.427, 0.984]",0.863,CID DEM MDB PL PP PSDB PTB
+BLS,2009,esq-dir geral,BRC,2022,esq-dir geral,13,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.943,"[0.559, 0.994]",0.871,CID MDB PL PP PSDB PTB
+BLS,2009,esq-dir geral,CHES_LRGEN,2020,esq-dir geral,11,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",5,0.8,"[-0.28, 0.986]",0.861,DEM MDB PL PP PSDB
+BLS,2009,esq-dir geral,CHES_SOC,2020,social/valores,11,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",5,0.2,"[-0.828, 0.92]",0.343,DEM MDB PL PP PSDB
+BLS,2009,esq-dir geral,PREPPS_LR,2018,esq-dir geral,9,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.771,"[-0.107, 0.974]",0.822,DEM MDB PL PP PSDB PTB
+BLS,2009,esq-dir geral,PREPPS_SOC,2018,social/valores (inclui homossexualidade),9,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.657,"[-0.331, 0.958]",0.755,DEM MDB PL PP PSDB PTB
+BLS,2009,esq-dir geral,VPARTY_ECON,2010,economico,1,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.943,"[0.559, 0.994]",0.942,DEM MDB PL PP PSDB PTB
+BLS,2009,esq-dir geral,VPARTY_ECON,2014,economico,5,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.943,"[0.559, 0.994]",0.859,DEM MDB PL PP PSDB PTB
+BLS,2009,esq-dir geral,VPARTY_ECON,2018,economico,9,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",5,0.9,"[0.086, 0.993]",0.871,DEM MDB PL PP PSDB
+BLS,2009,esq-dir geral,VPARTY_LGBT,2010,LGBT,1,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.714,"[-0.231, 0.966]",0.818,DEM MDB PL PP PSDB PTB
+BLS,2009,esq-dir geral,VPARTY_LGBT,2014,LGBT,5,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.771,"[-0.107, 0.974]",0.831,DEM MDB PL PP PSDB PTB
+BLS,2009,esq-dir geral,VPARTY_LGBT,2018,LGBT,9,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",5,0.7,"[-0.477, 0.978]",0.843,DEM MDB PL PP PSDB
+BLS,2013,esq-dir geral,BLS,2017,esq-dir geral,4,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",8,0.81,"[0.244, 0.964]",0.902,CID DEM MDB PL PP PSD PSDB PTB
+BLS,2013,esq-dir geral,BLS,2021,esq-dir geral,8,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",8,0.81,"[0.244, 0.964]",0.837,CID DEM MDB PL PP PSD PSDB PTB
+BLS,2013,esq-dir geral,BRC,2018,esq-dir geral,5,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",8,0.881,"[0.465, 0.978]",0.913,CID DEM MDB PL PP PSD PSDB PTB
+BLS,2013,esq-dir geral,BRC,2022,esq-dir geral,9,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",7,0.929,"[0.584, 0.99]",0.769,CID MDB PL PP PSD PSDB PTB
+BLS,2013,esq-dir geral,CHES_LRGEN,2020,esq-dir geral,7,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.657,"[-0.331, 0.958]",0.725,DEM MDB PL PP PSD PSDB
+BLS,2013,esq-dir geral,CHES_SOC,2020,social/valores,7,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.314,"[-0.668, 0.897]",0.203,DEM MDB PL PP PSD PSDB
+BLS,2013,esq-dir geral,PREPPS_LR,2018,esq-dir geral,5,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",7,0.857,"[0.294, 0.979]",0.863,DEM MDB PL PP PSD PSDB PTB
+BLS,2013,esq-dir geral,PREPPS_SOC,2018,social/valores (inclui homossexualidade),5,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",7,0.786,"[0.08, 0.967]",0.733,DEM MDB PL PP PSD PSDB PTB
+BLS,2013,esq-dir geral,VPARTY_ECON,2010,economico,3,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.943,"[0.559, 0.994]",0.942,DEM MDB PL PP PSDB PTB
+BLS,2013,esq-dir geral,VPARTY_ECON,2014,economico,1,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",7,0.893,"[0.427, 0.984]",0.873,DEM MDB PL PP PSD PSDB PTB
+BLS,2013,esq-dir geral,VPARTY_ECON,2018,economico,5,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.886,"[0.264, 0.987]",0.829,DEM MDB PL PP PSD PSDB
+BLS,2013,esq-dir geral,VPARTY_LGBT,2010,LGBT,3,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.714,"[-0.231, 0.966]",0.744,DEM MDB PL PP PSDB PTB
+BLS,2013,esq-dir geral,VPARTY_LGBT,2014,LGBT,1,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",7,0.857,"[0.294, 0.979]",0.762,DEM MDB PL PP PSD PSDB PTB
+BLS,2013,esq-dir geral,VPARTY_LGBT,2018,LGBT,5,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.829,"[0.052, 0.981]",0.776,DEM MDB PL PP PSD PSDB
+BLS,2017,esq-dir geral,BLS,2021,esq-dir geral,4,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",13,0.654,"[0.161, 0.886]",0.681,CID DEM MDB PL PODE PP PROS PSC PSD PSDB PTB REP SD
+BLS,2017,esq-dir geral,BRC,2018,esq-dir geral,1,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",13,0.802,"[0.45, 0.938]",0.83,CID DEM MDB PL PODE PP PROS PSC PSD PSDB PTB REP SD
+BLS,2017,esq-dir geral,BRC,2022,esq-dir geral,5,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",12,0.587,"[0.02, 0.869]",0.551,CID MDB PL PODE PP PROS PSC PSD PSDB PTB REP SD
+BLS,2017,esq-dir geral,CHES_LRGEN,2020,esq-dir geral,3,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",7,0.179,"[-0.664, 0.821]",0.211,DEM MDB PL PP PSD PSDB REP
+BLS,2017,esq-dir geral,CHES_SOC,2020,social/valores,3,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",7,-0.179,"[-0.821, 0.664]",-0.284,DEM MDB PL PP PSD PSDB REP
+BLS,2017,esq-dir geral,GPS_ECON,2019,economico,2,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",5,0.7,"[-0.477, 0.978]",0.64,DEM MDB PP PSDB REP
+BLS,2017,esq-dir geral,GPS_SOC,2019,social/valores,2,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",5,0.3,"[-0.792, 0.935]",0.422,DEM MDB PP PSDB REP
+BLS,2017,esq-dir geral,PREPPS_LR,2018,esq-dir geral,1,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",9,0.733,"[0.135, 0.94]",0.748,DEM MDB PL PODE PP PSD PSDB PTB REP
+BLS,2017,esq-dir geral,PREPPS_SOC,2018,social/valores (inclui homossexualidade),1,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",9,0.417,"[-0.342, 0.847]",0.436,DEM MDB PL PODE PP PSD PSDB PTB REP
+BLS,2017,esq-dir geral,VPARTY_ECON,2010,economico,7,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.886,"[0.264, 0.987]",0.754,DEM MDB PL PP PSDB PTB
+BLS,2017,esq-dir geral,VPARTY_ECON,2014,economico,3,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",8,0.905,"[0.552, 0.983]",0.813,DEM MDB PL PP PSD PSDB PTB REP
+BLS,2017,esq-dir geral,VPARTY_ECON,2018,economico,1,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",7,0.821,"[0.179, 0.973]",0.628,DEM MDB PL PP PSD PSDB REP
+BLS,2017,esq-dir geral,VPARTY_LGBT,2010,LGBT,7,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.257,"[-0.701, 0.884]",0.363,DEM MDB PL PP PSDB PTB
+BLS,2017,esq-dir geral,VPARTY_LGBT,2014,LGBT,3,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",8,0.333,"[-0.485, 0.841]",0.197,DEM MDB PL PP PSD PSDB PTB REP
+BLS,2017,esq-dir geral,VPARTY_LGBT,2018,LGBT,1,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",7,0.357,"[-0.542, 0.875]",0.084,DEM MDB PL PP PSD PSDB REP
+BLS,2021,esq-dir geral,BRC,2018,esq-dir geral,3,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",15,0.682,"[0.261, 0.885]",0.672,CID DEM MDB NOVO PL PODE PP PROS PSC PSD PSDB PSL PTB REP SD
+BLS,2021,esq-dir geral,BRC,2022,esq-dir geral,1,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",13,0.824,"[0.5, 0.946]",0.855,CID MDB NOVO PL PODE PP PROS PSC PSD PSDB PTB REP SD
+BLS,2021,esq-dir geral,CHES_LRGEN,2020,esq-dir geral,1,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",8,0.857,"[0.385, 0.974]",0.936,DEM MDB PL PP PSD PSDB PSL REP
+BLS,2021,esq-dir geral,CHES_SOC,2020,social/valores,1,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",8,0.881,"[0.465, 0.978]",0.83,DEM MDB PL PP PSD PSDB PSL REP
+BLS,2021,esq-dir geral,GPS_ECON,2019,economico,2,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.714,"[-0.231, 0.966]",0.91,DEM MDB PP PSDB PSL REP
+BLS,2021,esq-dir geral,GPS_SOC,2019,social/valores,2,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.886,"[0.264, 0.987]",0.923,DEM MDB PP PSDB PSL REP
+BLS,2021,esq-dir geral,PREPPS_LR,2018,esq-dir geral,3,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",11,0.745,"[0.263, 0.93]",0.755,DEM MDB NOVO PL PODE PP PSD PSDB PSL PTB REP
+BLS,2021,esq-dir geral,PREPPS_SOC,2018,social/valores (inclui homossexualidade),3,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",11,0.491,"[-0.154, 0.843]",0.542,DEM MDB NOVO PL PODE PP PSD PSDB PSL PTB REP
+BLS,2021,esq-dir geral,VPARTY_ECON,2010,economico,11,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.543,"[-0.48, 0.94]",0.69,DEM MDB PL PP PSDB PTB
+BLS,2021,esq-dir geral,VPARTY_ECON,2014,economico,7,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",8,0.548,"[-0.256, 0.904]",0.577,DEM MDB PL PP PSD PSDB PTB REP
+BLS,2021,esq-dir geral,VPARTY_ECON,2018,economico,3,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",8,0.857,"[0.385, 0.974]",0.924,DEM MDB PL PP PSD PSDB PSL REP
+BLS,2021,esq-dir geral,VPARTY_LGBT,2010,LGBT,11,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.829,"[0.052, 0.981]",0.923,DEM MDB PL PP PSDB PTB
+BLS,2021,esq-dir geral,VPARTY_LGBT,2014,LGBT,7,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",8,0.905,"[0.552, 0.983]",0.852,DEM MDB PL PP PSD PSDB PTB REP
+BLS,2021,esq-dir geral,VPARTY_LGBT,2018,LGBT,3,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",8,0.976,"[0.87, 0.996]",0.893,DEM MDB PL PP PSD PSDB PSL REP
+BRC,2018,esq-dir geral,BRC,2022,esq-dir geral,4,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",20,0.818,"[0.589, 0.926]",0.792,AGIR AVANTE CID DC MDB NOVO PATRIOTA PL PMB PMN PODE PP PROS PRTB PSC PSD PSDB PTB REP SD
+BRC,2018,esq-dir geral,CHES_LRGEN,2020,esq-dir geral,2,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",8,0.5,"[-0.316, 0.891]",0.622,DEM MDB PL PP PSD PSDB PSL REP
+BRC,2018,esq-dir geral,CHES_SOC,2020,social/valores,2,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",8,0.262,"[-0.543, 0.816]",0.344,DEM MDB PL PP PSD PSDB PSL REP
+BRC,2018,esq-dir geral,GPS_ECON,2019,economico,1,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.771,"[-0.107, 0.974]",0.919,DEM MDB PP PSDB PSL REP
+BRC,2018,esq-dir geral,GPS_SOC,2019,social/valores,1,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.543,"[-0.48, 0.94]",0.807,DEM MDB PP PSDB PSL REP
+BRC,2018,esq-dir geral,PREPPS_LR,2018,esq-dir geral,0,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",11,0.882,"[0.599, 0.969]",0.93,DEM MDB NOVO PL PODE PP PSD PSDB PSL PTB REP
+BRC,2018,esq-dir geral,PREPPS_SOC,2018,social/valores (inclui homossexualidade),0,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",11,0.6,"[0.0, 0.882]",0.686,DEM MDB NOVO PL PODE PP PSD PSDB PSL PTB REP
+BRC,2018,esq-dir geral,VPARTY_ECON,2010,economico,8,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.943,"[0.559, 0.994]",0.784,DEM MDB PL PP PSDB PTB
+BRC,2018,esq-dir geral,VPARTY_ECON,2014,economico,4,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",8,0.976,"[0.87, 0.996]",0.854,DEM MDB PL PP PSD PSDB PTB REP
+BRC,2018,esq-dir geral,VPARTY_ECON,2018,economico,0,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",8,0.881,"[0.465, 0.978]",0.717,DEM MDB PL PP PSD PSDB PSL REP
+BRC,2018,esq-dir geral,VPARTY_LGBT,2010,LGBT,8,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.543,"[-0.48, 0.94]",0.616,DEM MDB PL PP PSDB PTB
+BRC,2018,esq-dir geral,VPARTY_LGBT,2014,LGBT,4,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",8,0.619,"[-0.152, 0.922]",0.528,DEM MDB PL PP PSD PSDB PTB REP
+BRC,2018,esq-dir geral,VPARTY_LGBT,2018,LGBT,0,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",8,0.571,"[-0.223, 0.91]",0.579,DEM MDB PL PP PSD PSDB PSL REP
+BRC,2022,esq-dir geral,CHES_LRGEN,2020,esq-dir geral,2,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.543,"[-0.48, 0.94]",0.698,MDB PL PP PSD PSDB REP
+BRC,2022,esq-dir geral,CHES_SOC,2020,social/valores,2,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.771,"[-0.107, 0.974]",0.774,MDB PL PP PSD PSDB REP
+BRC,2022,esq-dir geral,PREPPS_LR,2018,esq-dir geral,4,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",9,0.8,"[0.29, 0.956]",0.757,MDB NOVO PL PODE PP PSD PSDB PTB REP
+BRC,2022,esq-dir geral,PREPPS_SOC,2018,social/valores (inclui homossexualidade),4,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",9,0.617,"[-0.08, 0.909]",0.657,MDB NOVO PL PODE PP PSD PSDB PTB REP
+BRC,2022,esq-dir geral,VPARTY_ECON,2010,economico,12,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",5,0.8,"[-0.28, 0.986]",0.669,MDB PL PP PSDB PTB
+BRC,2022,esq-dir geral,VPARTY_ECON,2014,economico,8,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",7,0.75,"[-0.007, 0.961]",0.661,MDB PL PP PSD PSDB PTB REP
+BRC,2022,esq-dir geral,VPARTY_ECON,2018,economico,4,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.714,"[-0.231, 0.966]",0.784,MDB PL PP PSD PSDB REP
+BRC,2022,esq-dir geral,VPARTY_LGBT,2010,LGBT,12,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",5,0.9,"[0.086, 0.993]",0.942,MDB PL PP PSDB PTB
+BRC,2022,esq-dir geral,VPARTY_LGBT,2014,LGBT,8,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",7,0.821,"[0.179, 0.973]",0.806,MDB PL PP PSD PSDB PTB REP
+BRC,2022,esq-dir geral,VPARTY_LGBT,2018,LGBT,4,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.829,"[0.052, 0.981]",0.788,MDB PL PP PSD PSDB REP
+CHES_LRGEN,2020,esq-dir geral,CHES_SOC,2020,social/valores,0,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",8,0.857,"[0.385, 0.974]",0.884,DEM MDB PL PP PSD PSDB PSL REP
+CHES_LRGEN,2020,esq-dir geral,GPS_ECON,2019,economico,1,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.829,"[0.052, 0.981]",0.918,DEM MDB PP PSDB PSL REP
+CHES_LRGEN,2020,esq-dir geral,GPS_SOC,2019,social/valores,1,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,1.0,"[, ]",0.959,DEM MDB PP PSDB PSL REP
+CHES_LRGEN,2020,esq-dir geral,PREPPS_LR,2018,esq-dir geral,2,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",8,0.619,"[-0.152, 0.922]",0.813,DEM MDB PL PP PSD PSDB PSL REP
+CHES_LRGEN,2020,esq-dir geral,PREPPS_SOC,2018,social/valores (inclui homossexualidade),2,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",8,0.429,"[-0.396, 0.87]",0.76,DEM MDB PL PP PSD PSDB PSL REP
+CHES_LRGEN,2020,esq-dir geral,VPARTY_ECON,2010,economico,10,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",5,0.8,"[-0.28, 0.986]",0.794,DEM MDB PL PP PSDB
+CHES_LRGEN,2020,esq-dir geral,VPARTY_ECON,2014,economico,6,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",7,0.429,"[-0.479, 0.893]",0.538,DEM MDB PL PP PSD PSDB REP
+CHES_LRGEN,2020,esq-dir geral,VPARTY_ECON,2018,economico,2,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",8,0.762,"[0.124, 0.954]",0.854,DEM MDB PL PP PSD PSDB PSL REP
+CHES_LRGEN,2020,esq-dir geral,VPARTY_LGBT,2010,LGBT,10,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",5,0.7,"[-0.477, 0.978]",0.939,DEM MDB PL PP PSDB
+CHES_LRGEN,2020,esq-dir geral,VPARTY_LGBT,2014,LGBT,6,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",7,0.821,"[0.179, 0.973]",0.84,DEM MDB PL PP PSD PSDB REP
+CHES_LRGEN,2020,esq-dir geral,VPARTY_LGBT,2018,LGBT,2,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",8,0.81,"[0.244, 0.964]",0.849,DEM MDB PL PP PSD PSDB PSL REP
+CHES_SOC,2020,social/valores,GPS_ECON,2019,economico,1,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.6,"[-0.412, 0.949]",0.69,DEM MDB PP PSDB PSL REP
+CHES_SOC,2020,social/valores,GPS_SOC,2019,social/valores,1,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.886,"[0.264, 0.987]",0.826,DEM MDB PP PSDB PSL REP
+CHES_SOC,2020,social/valores,PREPPS_LR,2018,esq-dir geral,2,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",8,0.5,"[-0.316, 0.891]",0.559,DEM MDB PL PP PSD PSDB PSL REP
+CHES_SOC,2020,social/valores,PREPPS_SOC,2018,social/valores (inclui homossexualidade),2,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",8,0.524,"[-0.287, 0.897]",0.714,DEM MDB PL PP PSD PSDB PSL REP
+CHES_SOC,2020,social/valores,VPARTY_ECON,2010,economico,10,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",5,0.2,"[-0.828, 0.92]",0.252,DEM MDB PL PP PSDB
+CHES_SOC,2020,social/valores,VPARTY_ECON,2014,economico,6,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",7,0.179,"[-0.664, 0.821]",0.14,DEM MDB PL PP PSD PSDB REP
+CHES_SOC,2020,social/valores,VPARTY_ECON,2018,economico,2,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",8,0.595,"[-0.189, 0.916]",0.657,DEM MDB PL PP PSD PSDB PSL REP
+CHES_SOC,2020,social/valores,VPARTY_LGBT,2010,LGBT,10,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",5,0.8,"[-0.28, 0.986]",0.761,DEM MDB PL PP PSDB
+CHES_SOC,2020,social/valores,VPARTY_LGBT,2014,LGBT,6,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",7,0.893,"[0.427, 0.984]",0.775,DEM MDB PL PP PSD PSDB REP
+CHES_SOC,2020,social/valores,VPARTY_LGBT,2018,LGBT,2,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",8,0.857,"[0.385, 0.974]",0.806,DEM MDB PL PP PSD PSDB PSL REP
+GPS_ECON,2019,economico,GPS_SOC,2019,social/valores,0,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.829,"[0.052, 0.981]",0.97,DEM MDB PP PSDB PSL REP
+GPS_ECON,2019,economico,PREPPS_LR,2018,esq-dir geral,1,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.943,"[0.559, 0.994]",0.972,DEM MDB PP PSDB PSL REP
+GPS_ECON,2019,economico,PREPPS_SOC,2018,social/valores (inclui homossexualidade),1,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.486,"[-0.538, 0.93]",0.919,DEM MDB PP PSDB PSL REP
+GPS_ECON,2019,economico,VPARTY_ECON,2014,economico,5,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",5,0.9,"[0.086, 0.993]",0.772,DEM MDB PP PSDB REP
+GPS_ECON,2019,economico,VPARTY_ECON,2018,economico,1,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.886,"[0.264, 0.987]",0.823,DEM MDB PP PSDB PSL REP
+GPS_ECON,2019,economico,VPARTY_LGBT,2014,LGBT,5,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",5,0.6,"[-0.6, 0.969]",0.764,DEM MDB PP PSDB REP
+GPS_ECON,2019,economico,VPARTY_LGBT,2018,LGBT,1,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.543,"[-0.48, 0.94]",0.777,DEM MDB PP PSDB PSL REP
+GPS_SOC,2019,social/valores,PREPPS_LR,2018,esq-dir geral,1,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.771,"[-0.107, 0.974]",0.9,DEM MDB PP PSDB PSL REP
+GPS_SOC,2019,social/valores,PREPPS_SOC,2018,social/valores (inclui homossexualidade),1,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.486,"[-0.538, 0.93]",0.945,DEM MDB PP PSDB PSL REP
+GPS_SOC,2019,social/valores,VPARTY_ECON,2014,economico,5,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",5,0.6,"[-0.6, 0.969]",0.594,DEM MDB PP PSDB REP
+GPS_SOC,2019,social/valores,VPARTY_ECON,2018,economico,1,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.886,"[0.264, 0.987]",0.783,DEM MDB PP PSDB PSL REP
+GPS_SOC,2019,social/valores,VPARTY_LGBT,2014,LGBT,5,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",5,0.9,"[0.086, 0.993]",0.828,DEM MDB PP PSDB REP
+GPS_SOC,2019,social/valores,VPARTY_LGBT,2018,LGBT,1,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.771,"[-0.107, 0.974]",0.828,DEM MDB PP PSDB PSL REP
+PREPPS_LR,2018,esq-dir geral,PREPPS_SOC,2018,social/valores (inclui homossexualidade),0,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",11,0.582,"[-0.028, 0.876]",0.696,DEM MDB NOVO PL PODE PP PSD PSDB PSL PTB REP
+PREPPS_LR,2018,esq-dir geral,VPARTY_ECON,2010,economico,8,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.886,"[0.264, 0.987]",0.818,DEM MDB PL PP PSDB PTB
+PREPPS_LR,2018,esq-dir geral,VPARTY_ECON,2014,economico,4,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",8,0.929,"[0.648, 0.987]",0.848,DEM MDB PL PP PSD PSDB PTB REP
+PREPPS_LR,2018,esq-dir geral,VPARTY_ECON,2018,economico,0,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",8,0.857,"[0.385, 0.974]",0.844,DEM MDB PL PP PSD PSDB PSL REP
+PREPPS_LR,2018,esq-dir geral,VPARTY_LGBT,2010,LGBT,8,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.6,"[-0.412, 0.949]",0.765,DEM MDB PL PP PSDB PTB
+PREPPS_LR,2018,esq-dir geral,VPARTY_LGBT,2014,LGBT,4,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",8,0.667,"[-0.072, 0.933]",0.65,DEM MDB PL PP PSD PSDB PTB REP
+PREPPS_LR,2018,esq-dir geral,VPARTY_LGBT,2018,LGBT,0,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",8,0.667,"[-0.072, 0.933]",0.723,DEM MDB PL PP PSD PSDB PSL REP
+PREPPS_SOC,2018,social/valores (inclui homossexualidade),VPARTY_ECON,2010,economico,8,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.6,"[-0.412, 0.949]",0.648,DEM MDB PL PP PSDB PTB
+PREPPS_SOC,2018,social/valores (inclui homossexualidade),VPARTY_ECON,2014,economico,4,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",8,0.619,"[-0.152, 0.922]",0.605,DEM MDB PL PP PSD PSDB PTB REP
+PREPPS_SOC,2018,social/valores (inclui homossexualidade),VPARTY_ECON,2018,economico,0,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",8,0.476,"[-0.344, 0.884]",0.537,DEM MDB PL PP PSD PSDB PSL REP
+PREPPS_SOC,2018,social/valores (inclui homossexualidade),VPARTY_LGBT,2010,LGBT,8,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.886,"[0.264, 0.987]",0.921,DEM MDB PL PP PSDB PTB
+PREPPS_SOC,2018,social/valores (inclui homossexualidade),VPARTY_LGBT,2014,LGBT,4,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",8,0.905,"[0.552, 0.983]",0.849,DEM MDB PL PP PSD PSDB PTB REP
+PREPPS_SOC,2018,social/valores (inclui homossexualidade),VPARTY_LGBT,2018,LGBT,0,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",8,0.762,"[0.124, 0.954]",0.773,DEM MDB PL PP PSD PSDB PSL REP
+VPARTY_ECON,2010,economico,VPARTY_ECON,2014,economico,4,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,1.0,"[, ]",0.965,DEM MDB PL PP PSDB PTB
+VPARTY_ECON,2010,economico,VPARTY_ECON,2018,economico,8,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",5,0.9,"[0.086, 0.993]",0.954,DEM MDB PL PP PSDB
+VPARTY_ECON,2010,economico,VPARTY_LGBT,2010,LGBT,0,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.6,"[-0.412, 0.949]",0.723,DEM MDB PL PP PSDB PTB
+VPARTY_ECON,2010,economico,VPARTY_LGBT,2014,LGBT,4,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.657,"[-0.331, 0.958]",0.772,DEM MDB PL PP PSDB PTB
+VPARTY_ECON,2010,economico,VPARTY_LGBT,2018,LGBT,8,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",5,0.7,"[-0.477, 0.978]",0.819,DEM MDB PL PP PSDB
+VPARTY_ECON,2014,economico,VPARTY_ECON,2018,economico,4,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",7,0.929,"[0.584, 0.99]",0.947,DEM MDB PL PP PSD PSDB REP
+VPARTY_ECON,2014,economico,VPARTY_LGBT,2010,LGBT,4,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.6,"[-0.412, 0.949]",0.7,DEM MDB PL PP PSDB PTB
+VPARTY_ECON,2014,economico,VPARTY_LGBT,2014,LGBT,0,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",8,0.643,"[-0.113, 0.927]",0.499,DEM MDB PL PP PSD PSDB PTB REP
+VPARTY_ECON,2014,economico,VPARTY_LGBT,2018,LGBT,4,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",7,0.643,"[-0.214, 0.941]",0.449,DEM MDB PL PP PSD PSDB REP
+VPARTY_ECON,2018,economico,VPARTY_LGBT,2010,LGBT,8,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",5,0.6,"[-0.6, 0.969]",0.795,DEM MDB PL PP PSDB
+VPARTY_ECON,2018,economico,VPARTY_LGBT,2014,LGBT,4,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",7,0.714,"[-0.084, 0.954]",0.678,DEM MDB PL PP PSD PSDB REP
+VPARTY_ECON,2018,economico,VPARTY_LGBT,2018,LGBT,0,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",8,0.786,"[0.182, 0.959]",0.741,DEM MDB PL PP PSD PSDB PSL REP
+VPARTY_LGBT,2010,LGBT,VPARTY_LGBT,2014,LGBT,4,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",6,0.943,"[0.559, 0.994]",0.993,DEM MDB PL PP PSDB PTB
+VPARTY_LGBT,2010,LGBT,VPARTY_LGBT,2018,LGBT,8,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",5,0.8,"[-0.28, 0.986]",0.973,DEM MDB PL PP PSDB
+VPARTY_LGBT,2014,LGBT,VPARTY_LGBT,2018,LGBT,4,"sem bloco de esquerda (PT,PSB,PDT,PCdoB,PSOL,PV,Rede,...)",7,0.964,"[0.771, 0.995]",0.993,DEM MDB PL PP PSD PSDB REP
+BLS,2009,esq-dir geral,BLS,2013,esq-dir geral,4,todos,13,1.0,"[, ]",0.997,CID DEM MDB PCdoB PDT PL PP PSB PSDB PSOL PT PTB PV
+BLS,2009,esq-dir geral,BLS,2017,esq-dir geral,8,todos,13,0.962,"[0.873, 0.989]",0.955,CID DEM MDB PCdoB PDT PL PP PSB PSDB PSOL PT PTB PV
+BLS,2009,esq-dir geral,BLS,2021,esq-dir geral,12,todos,12,0.958,"[0.853, 0.988]",0.971,CID DEM MDB PCdoB PDT PL PP PSB PSDB PSOL PT PTB
+BLS,2009,esq-dir geral,BRC,2018,esq-dir geral,9,todos,13,0.973,"[0.908, 0.992]",0.971,CID DEM MDB PCdoB PDT PL PP PSB PSDB PSOL PT PTB PV
+BLS,2009,esq-dir geral,BRC,2022,esq-dir geral,13,todos,12,0.993,"[0.974, 0.998]",0.973,CID MDB PCdoB PDT PL PP PSB PSDB PSOL PT PTB PV
+BLS,2009,esq-dir geral,CHES_LRGEN,2020,esq-dir geral,11,todos,8,0.952,"[0.753, 0.992]",0.968,DEM MDB PDT PL PP PSB PSDB PT
+BLS,2009,esq-dir geral,CHES_SOC,2020,social/valores,11,todos,8,0.79,"[0.194, 0.96]",0.783,DEM MDB PDT PL PP PSB PSDB PT
+BLS,2009,esq-dir geral,GPS_ECON,2019,economico,10,todos,6,0.943,"[0.559, 0.994]",0.995,DEM MDB PP PSB PSDB PT
+BLS,2009,esq-dir geral,GPS_SOC,2019,social/valores,10,todos,6,0.886,"[0.264, 0.987]",0.954,DEM MDB PP PSB PSDB PT
+BLS,2009,esq-dir geral,PREPPS_LR,2018,esq-dir geral,9,todos,11,0.955,"[0.83, 0.988]",0.972,DEM MDB PDT PL PP PSB PSDB PSOL PT PTB PV
+BLS,2009,esq-dir geral,PREPPS_SOC,2018,social/valores (inclui homossexualidade),9,todos,11,0.918,"[0.709, 0.979]",0.964,DEM MDB PDT PL PP PSB PSDB PSOL PT PTB PV
+BLS,2009,esq-dir geral,VPARTY_ECON,2010,economico,1,todos,9,0.967,"[0.845, 0.993]",0.986,DEM MDB PDT PL PP PSB PSDB PT PTB
+BLS,2009,esq-dir geral,VPARTY_ECON,2014,economico,5,todos,9,0.967,"[0.845, 0.993]",0.973,DEM MDB PDT PL PP PSB PSDB PT PTB
+BLS,2009,esq-dir geral,VPARTY_ECON,2018,economico,9,todos,8,0.976,"[0.87, 0.996]",0.966,DEM MDB PDT PL PP PSB PSDB PT
+BLS,2009,esq-dir geral,VPARTY_LGBT,2010,LGBT,1,todos,9,0.9,"[0.586, 0.979]",0.946,DEM MDB PDT PL PP PSB PSDB PT PTB
+BLS,2009,esq-dir geral,VPARTY_LGBT,2014,LGBT,5,todos,9,0.917,"[0.646, 0.983]",0.946,DEM MDB PDT PL PP PSB PSDB PT PTB
+BLS,2009,esq-dir geral,VPARTY_LGBT,2018,LGBT,9,todos,8,0.905,"[0.552, 0.983]",0.952,DEM MDB PDT PL PP PSB PSDB PT
+BLS,2013,esq-dir geral,BLS,2017,esq-dir geral,4,todos,14,0.956,"[0.863, 0.986]",0.969,CID DEM MDB PCdoB PDT PL PP PSB PSD PSDB PSOL PT PTB PV
+BLS,2013,esq-dir geral,BLS,2021,esq-dir geral,8,todos,13,0.956,"[0.856, 0.987]",0.965,CID DEM MDB PCdoB PDT PL PP PSB PSD PSDB PSOL PT PTB
+BLS,2013,esq-dir geral,BRC,2018,esq-dir geral,5,todos,14,0.969,"[0.903, 0.99]",0.979,CID DEM MDB PCdoB PDT PL PP PSB PSD PSDB PSOL PT PTB PV
+BLS,2013,esq-dir geral,BRC,2022,esq-dir geral,9,todos,13,0.989,"[0.963, 0.997]",0.966,CID MDB PCdoB PDT PL PP PSB PSD PSDB PSOL PT PTB PV
+BLS,2013,esq-dir geral,CHES_LRGEN,2020,esq-dir geral,7,todos,9,0.9,"[0.586, 0.979]",0.946,DEM MDB PDT PL PP PSB PSD PSDB PT
+BLS,2013,esq-dir geral,CHES_SOC,2020,social/valores,7,todos,9,0.787,"[0.256, 0.953]",0.769,DEM MDB PDT PL PP PSB PSD PSDB PT
+BLS,2013,esq-dir geral,GPS_ECON,2019,economico,6,todos,6,0.943,"[0.559, 0.994]",0.994,DEM MDB PP PSB PSDB PT
+BLS,2013,esq-dir geral,GPS_SOC,2019,social/valores,6,todos,6,0.886,"[0.264, 0.987]",0.943,DEM MDB PP PSB PSDB PT
+BLS,2013,esq-dir geral,PREPPS_LR,2018,esq-dir geral,5,todos,12,0.965,"[0.877, 0.99]",0.98,DEM MDB PDT PL PP PSB PSD PSDB PSOL PT PTB PV
+BLS,2013,esq-dir geral,PREPPS_SOC,2018,social/valores (inclui homossexualidade),5,todos,12,0.937,"[0.786, 0.983]",0.969,DEM MDB PDT PL PP PSB PSD PSDB PSOL PT PTB PV
+BLS,2013,esq-dir geral,VPARTY_ECON,2010,economico,3,todos,9,0.967,"[0.845, 0.993]",0.986,DEM MDB PDT PL PP PSB PSDB PT PTB
+BLS,2013,esq-dir geral,VPARTY_ECON,2014,economico,1,todos,10,0.952,"[0.803, 0.989]",0.979,DEM MDB PDT PL PP PSB PSD PSDB PT PTB
+BLS,2013,esq-dir geral,VPARTY_ECON,2018,economico,5,todos,9,0.967,"[0.845, 0.993]",0.971,DEM MDB PDT PL PP PSB PSD PSDB PT
+BLS,2013,esq-dir geral,VPARTY_LGBT,2010,LGBT,3,todos,9,0.9,"[0.586, 0.979]",0.94,DEM MDB PDT PL PP PSB PSDB PT PTB
+BLS,2013,esq-dir geral,VPARTY_LGBT,2014,LGBT,1,todos,10,0.939,"[0.758, 0.986]",0.945,DEM MDB PDT PL PP PSB PSD PSDB PT PTB
+BLS,2013,esq-dir geral,VPARTY_LGBT,2018,LGBT,5,todos,9,0.933,"[0.708, 0.986]",0.954,DEM MDB PDT PL PP PSB PSD PSDB PT
+BLS,2017,esq-dir geral,BLS,2021,esq-dir geral,4,todos,18,0.868,"[0.674, 0.95]",0.945,CID DEM MDB PCdoB PDT PL PODE PP PROS PSB PSC PSD PSDB PSOL PT PTB REP SD
+BLS,2017,esq-dir geral,BRC,2018,esq-dir geral,1,todos,20,0.941,"[0.855, 0.977]",0.955,CID DEM MDB PCdoB PDT PL PODE PP PROS PSB PSC PSD PSDB PSOL PT PTB PV REDE REP SD
+BLS,2017,esq-dir geral,BRC,2022,esq-dir geral,5,todos,19,0.888,"[0.726, 0.956]",0.929,CID MDB PCdoB PDT PL PODE PP PROS PSB PSC PSD PSDB PSOL PT PTB PV REDE REP SD
+BLS,2017,esq-dir geral,CHES_LRGEN,2020,esq-dir geral,3,todos,10,0.709,"[0.144, 0.926]",0.855,DEM MDB PDT PL PP PSB PSD PSDB PT REP
+BLS,2017,esq-dir geral,CHES_SOC,2020,social/valores,3,todos,10,0.553,"[-0.117, 0.877]",0.705,DEM MDB PDT PL PP PSB PSD PSDB PT REP
+BLS,2017,esq-dir geral,GPS_ECON,2019,economico,2,todos,7,0.893,"[0.427, 0.984]",0.921,DEM MDB PP PSB PSDB PT REP
+BLS,2017,esq-dir geral,GPS_SOC,2019,social/valores,2,todos,7,0.75,"[-0.007, 0.961]",0.822,DEM MDB PP PSB PSDB PT REP
+BLS,2017,esq-dir geral,PREPPS_LR,2018,esq-dir geral,1,todos,15,0.932,"[0.804, 0.978]",0.964,DEM MDB PDT PL PODE PP PSB PSD PSDB PSOL PT PTB PV REDE REP
+BLS,2017,esq-dir geral,PREPPS_SOC,2018,social/valores (inclui homossexualidade),1,todos,15,0.85,"[0.598, 0.949]",0.921,DEM MDB PDT PL PODE PP PSB PSD PSDB PSOL PT PTB PV REDE REP
+BLS,2017,esq-dir geral,VPARTY_ECON,2010,economico,7,todos,9,0.917,"[0.646, 0.983]",0.929,DEM MDB PDT PL PP PSB PSDB PT PTB
+BLS,2017,esq-dir geral,VPARTY_ECON,2014,economico,3,todos,11,0.964,"[0.862, 0.991]",0.96,DEM MDB PDT PL PP PSB PSD PSDB PT PTB REP
+BLS,2017,esq-dir geral,VPARTY_ECON,2018,economico,1,todos,10,0.927,"[0.715, 0.983]",0.964,DEM MDB PDT PL PP PSB PSD PSDB PT REP
+BLS,2017,esq-dir geral,VPARTY_LGBT,2010,LGBT,7,todos,9,0.783,"[0.248, 0.952]",0.906,DEM MDB PDT PL PP PSB PSDB PT PTB
+BLS,2017,esq-dir geral,VPARTY_LGBT,2014,LGBT,3,todos,11,0.745,"[0.263, 0.93]",0.857,DEM MDB PDT PL PP PSB PSD PSDB PT PTB REP
+BLS,2017,esq-dir geral,VPARTY_LGBT,2018,LGBT,1,todos,10,0.782,"[0.3, 0.946]",0.861,DEM MDB PDT PL PP PSB PSD PSDB PT REP
+BLS,2021,esq-dir geral,BRC,2018,esq-dir geral,3,todos,20,0.865,"[0.684, 0.945]",0.947,CID DEM MDB NOVO PCdoB PDT PL PODE PP PROS PSB PSC PSD PSDB PSL PSOL PT PTB REP SD
+BLS,2021,esq-dir geral,BRC,2022,esq-dir geral,1,todos,18,0.934,"[0.828, 0.975]",0.979,CID MDB NOVO PCdoB PDT PL PODE PP PROS PSB PSC PSD PSDB PSOL PT PTB REP SD
+BLS,2021,esq-dir geral,CHES_LRGEN,2020,esq-dir geral,1,todos,11,0.945,"[0.798, 0.986]",0.97,DEM MDB PDT PL PP PSB PSD PSDB PSL PT REP
+BLS,2021,esq-dir geral,CHES_SOC,2020,social/valores,1,todos,11,0.948,"[0.806, 0.987]",0.91,DEM MDB PDT PL PP PSB PSD PSDB PSL PT REP
+BLS,2021,esq-dir geral,GPS_ECON,2019,economico,2,todos,8,0.881,"[0.465, 0.978]",0.98,DEM MDB PP PSB PSDB PSL PT REP
+BLS,2021,esq-dir geral,GPS_SOC,2019,social/valores,2,todos,8,0.952,"[0.753, 0.992]",0.953,DEM MDB PP PSB PSDB PSL PT REP
+BLS,2021,esq-dir geral,PREPPS_LR,2018,esq-dir geral,3,todos,15,0.896,"[0.71, 0.965]",0.972,DEM MDB NOVO PDT PL PODE PP PSB PSD PSDB PSL PSOL PT PTB REP
+BLS,2021,esq-dir geral,PREPPS_SOC,2018,social/valores (inclui homossexualidade),3,todos,15,0.796,"[0.48, 0.929]",0.953,DEM MDB NOVO PDT PL PODE PP PSB PSD PSDB PSL PSOL PT PTB REP
+BLS,2021,esq-dir geral,VPARTY_ECON,2010,economico,11,todos,9,0.85,"[0.427, 0.968]",0.945,DEM MDB PDT PL PP PSB PSDB PT PTB
+BLS,2021,esq-dir geral,VPARTY_ECON,2014,economico,7,todos,11,0.818,"[0.429, 0.951]",0.946,DEM MDB PDT PL PP PSB PSD PSDB PT PTB REP
+BLS,2021,esq-dir geral,VPARTY_ECON,2018,economico,3,todos,11,0.945,"[0.798, 0.986]",0.987,DEM MDB PDT PL PP PSB PSD PSDB PSL PT REP
+BLS,2021,esq-dir geral,VPARTY_LGBT,2010,LGBT,11,todos,9,0.933,"[0.708, 0.986]",0.974,DEM MDB PDT PL PP PSB PSDB PT PTB
+BLS,2021,esq-dir geral,VPARTY_LGBT,2014,LGBT,7,todos,11,0.955,"[0.83, 0.988]",0.95,DEM MDB PDT PL PP PSB PSD PSDB PT PTB REP
+BLS,2021,esq-dir geral,VPARTY_LGBT,2018,LGBT,3,todos,11,0.982,"[0.929, 0.995]",0.967,DEM MDB PDT PL PP PSB PSD PSDB PSL PT REP
+BRC,2018,esq-dir geral,BRC,2022,esq-dir geral,4,todos,30,0.944,"[0.884, 0.973]",0.978,AGIR AVANTE CID DC MDB NOVO PATRIOTA PCB PCO PCdoB PDT PL PMB PMN PODE PP PROS PRTB PSB PSC PSD PSDB PSOL PSTU PT PTB PV REDE REP SD
+BRC,2018,esq-dir geral,CHES_LRGEN,2020,esq-dir geral,2,todos,11,0.8,"[0.385, 0.946]",0.895,DEM MDB PDT PL PP PSB PSD PSDB PSL PT REP
+BRC,2018,esq-dir geral,CHES_SOC,2020,social/valores,2,todos,11,0.692,"[0.158, 0.913]",0.786,DEM MDB PDT PL PP PSB PSD PSDB PSL PT REP
+BRC,2018,esq-dir geral,GPS_ECON,2019,economico,1,todos,8,0.905,"[0.552, 0.983]",0.969,DEM MDB PP PSB PSDB PSL PT REP
+BRC,2018,esq-dir geral,GPS_SOC,2019,social/valores,1,todos,8,0.81,"[0.244, 0.964]",0.888,DEM MDB PP PSB PSDB PSL PT REP
+BRC,2018,esq-dir geral,PREPPS_LR,2018,esq-dir geral,0,todos,17,0.968,"[0.912, 0.989]",0.993,DEM MDB NOVO PDT PL PODE PP PSB PSD PSDB PSL PSOL PT PTB PV REDE REP
+BRC,2018,esq-dir geral,PREPPS_SOC,2018,social/valores (inclui homossexualidade),0,todos,17,0.885,"[0.703, 0.958]",0.967,DEM MDB NOVO PDT PL PODE PP PSB PSD PSDB PSL PSOL PT PTB PV REDE REP
+BRC,2018,esq-dir geral,VPARTY_ECON,2010,economico,8,todos,9,0.933,"[0.708, 0.986]",0.96,DEM MDB PDT PL PP PSB PSDB PT PTB
+BRC,2018,esq-dir geral,VPARTY_ECON,2014,economico,4,todos,11,0.991,"[0.964, 0.998]",0.98,DEM MDB PDT PL PP PSB PSD PSDB PT PTB REP
+BRC,2018,esq-dir geral,VPARTY_ECON,2018,economico,0,todos,11,0.945,"[0.798, 0.986]",0.966,DEM MDB PDT PL PP PSB PSD PSDB PSL PT REP
+BRC,2018,esq-dir geral,VPARTY_LGBT,2010,LGBT,8,todos,9,0.867,"[0.477, 0.972]",0.933,DEM MDB PDT PL PP PSB PSDB PT PTB
+BRC,2018,esq-dir geral,VPARTY_LGBT,2014,LGBT,4,todos,11,0.855,"[0.523, 0.962]",0.9,DEM MDB PDT PL PP PSB PSD PSDB PT PTB REP
+BRC,2018,esq-dir geral,VPARTY_LGBT,2018,LGBT,0,todos,11,0.836,"[0.475, 0.956]",0.906,DEM MDB PDT PL PP PSB PSD PSDB PSL PT REP
+BRC,2022,esq-dir geral,CHES_LRGEN,2020,esq-dir geral,2,todos,9,0.867,"[0.477, 0.972]",0.936,MDB PDT PL PP PSB PSD PSDB PT REP
+BRC,2022,esq-dir geral,CHES_SOC,2020,social/valores,2,todos,9,0.921,"[0.66, 0.983]",0.919,MDB PDT PL PP PSB PSD PSDB PT REP
+BRC,2022,esq-dir geral,GPS_ECON,2019,economico,3,todos,6,0.886,"[0.264, 0.987]",0.988,MDB PP PSB PSDB PT REP
+BRC,2022,esq-dir geral,GPS_SOC,2019,social/valores,3,todos,6,0.886,"[0.264, 0.987]",0.92,MDB PP PSB PSDB PT REP
+BRC,2022,esq-dir geral,PREPPS_LR,2018,esq-dir geral,4,todos,15,0.946,"[0.843, 0.982]",0.974,MDB NOVO PDT PL PODE PP PSB PSD PSDB PSOL PT PTB PV REDE REP
+BRC,2022,esq-dir geral,PREPPS_SOC,2018,social/valores (inclui homossexualidade),4,todos,15,0.889,"[0.692, 0.963]",0.958,MDB NOVO PDT PL PODE PP PSB PSD PSDB PSOL PT PTB PV REDE REP
+BRC,2022,esq-dir geral,VPARTY_ECON,2010,economico,12,todos,8,0.929,"[0.648, 0.987]",0.955,MDB PDT PL PP PSB PSDB PT PTB
+BRC,2022,esq-dir geral,VPARTY_ECON,2014,economico,8,todos,10,0.903,"[0.634, 0.977]",0.962,MDB PDT PL PP PSB PSD PSDB PT PTB REP
+BRC,2022,esq-dir geral,VPARTY_ECON,2018,economico,4,todos,9,0.917,"[0.646, 0.983]",0.977,MDB PDT PL PP PSB PSD PSDB PT REP
+BRC,2022,esq-dir geral,VPARTY_LGBT,2010,LGBT,12,todos,8,0.952,"[0.753, 0.992]",0.972,MDB PDT PL PP PSB PSDB PT PTB
+BRC,2022,esq-dir geral,VPARTY_LGBT,2014,LGBT,8,todos,10,0.927,"[0.715, 0.983]",0.94,MDB PDT PL PP PSB PSD PSDB PT PTB REP
+BRC,2022,esq-dir geral,VPARTY_LGBT,2018,LGBT,4,todos,9,0.933,"[0.708, 0.986]",0.945,MDB PDT PL PP PSB PSD PSDB PT REP
+CHES_LRGEN,2020,esq-dir geral,CHES_SOC,2020,social/valores,0,todos,11,0.943,"[0.79, 0.985]",0.947,DEM MDB PDT PL PP PSB PSD PSDB PSL PT REP
+CHES_LRGEN,2020,esq-dir geral,GPS_ECON,2019,economico,1,todos,8,0.929,"[0.648, 0.987]",0.966,DEM MDB PP PSB PSDB PSL PT REP
+CHES_LRGEN,2020,esq-dir geral,GPS_SOC,2019,social/valores,1,todos,8,1.0,"[, ]",0.984,DEM MDB PP PSB PSDB PSL PT REP
+CHES_LRGEN,2020,esq-dir geral,PREPPS_LR,2018,esq-dir geral,2,todos,11,0.845,"[0.498, 0.959]",0.913,DEM MDB PDT PL PP PSB PSD PSDB PSL PT REP
+CHES_LRGEN,2020,esq-dir geral,PREPPS_SOC,2018,social/valores (inclui homossexualidade),2,todos,11,0.773,"[0.322, 0.938]",0.918,DEM MDB PDT PL PP PSB PSD PSDB PSL PT REP
+CHES_LRGEN,2020,esq-dir geral,VPARTY_ECON,2010,economico,10,todos,8,0.929,"[0.648, 0.987]",0.947,DEM MDB PDT PL PP PSB PSDB PT
+CHES_LRGEN,2020,esq-dir geral,VPARTY_ECON,2014,economico,6,todos,10,0.794,"[0.329, 0.949]",0.91,DEM MDB PDT PL PP PSB PSD PSDB PT REP
+CHES_LRGEN,2020,esq-dir geral,VPARTY_ECON,2018,economico,2,todos,11,0.909,"[0.68, 0.976]",0.95,DEM MDB PDT PL PP PSB PSD PSDB PSL PT REP
+CHES_LRGEN,2020,esq-dir geral,VPARTY_LGBT,2010,LGBT,10,todos,8,0.905,"[0.552, 0.983]",0.968,DEM MDB PDT PL PP PSB PSDB PT
+CHES_LRGEN,2020,esq-dir geral,VPARTY_LGBT,2014,LGBT,6,todos,10,0.927,"[0.715, 0.983]",0.945,DEM MDB PDT PL PP PSB PSD PSDB PT REP
+CHES_LRGEN,2020,esq-dir geral,VPARTY_LGBT,2018,LGBT,2,todos,11,0.918,"[0.709, 0.979]",0.947,DEM MDB PDT PL PP PSB PSD PSDB PSL PT REP
+CHES_SOC,2020,social/valores,GPS_ECON,2019,economico,1,todos,8,0.833,"[0.312, 0.969]",0.859,DEM MDB PP PSB PSDB PSL PT REP
+CHES_SOC,2020,social/valores,GPS_SOC,2019,social/valores,1,todos,8,0.952,"[0.753, 0.992]",0.922,DEM MDB PP PSB PSDB PSL PT REP
+CHES_SOC,2020,social/valores,PREPPS_LR,2018,esq-dir geral,2,todos,11,0.788,"[0.357, 0.942]",0.813,DEM MDB PDT PL PP PSB PSD PSDB PSL PT REP
+CHES_SOC,2020,social/valores,PREPPS_SOC,2018,social/valores (inclui homossexualidade),2,todos,11,0.802,"[0.389, 0.946]",0.859,DEM MDB PDT PL PP PSB PSD PSDB PSL PT REP
+CHES_SOC,2020,social/valores,VPARTY_ECON,2010,economico,10,todos,8,0.766,"[0.134, 0.955]",0.754,DEM MDB PDT PL PP PSB PSDB PT
+CHES_SOC,2020,social/valores,VPARTY_ECON,2014,economico,6,todos,10,0.687,"[0.101, 0.919]",0.755,DEM MDB PDT PL PP PSB PSD PSDB PT REP
+CHES_SOC,2020,social/valores,VPARTY_ECON,2018,economico,2,todos,11,0.834,"[0.468, 0.956]",0.858,DEM MDB PDT PL PP PSB PSD PSDB PSL PT REP
+CHES_SOC,2020,social/valores,VPARTY_LGBT,2010,LGBT,10,todos,8,0.91,"[0.573, 0.984]",0.897,DEM MDB PDT PL PP PSB PSDB PT
+CHES_SOC,2020,social/valores,VPARTY_LGBT,2014,LGBT,6,todos,10,0.942,"[0.769, 0.987]",0.907,DEM MDB PDT PL PP PSB PSD PSDB PT REP
+CHES_SOC,2020,social/valores,VPARTY_LGBT,2018,LGBT,2,todos,11,0.925,"[0.73, 0.981]",0.912,DEM MDB PDT PL PP PSB PSD PSDB PSL PT REP
+GPS_ECON,2019,economico,GPS_SOC,2019,social/valores,0,todos,8,0.929,"[0.648, 0.987]",0.97,DEM MDB PP PSB PSDB PSL PT REP
+GPS_ECON,2019,economico,PREPPS_LR,2018,esq-dir geral,1,todos,8,0.976,"[0.87, 0.996]",0.977,DEM MDB PP PSB PSDB PSL PT REP
+GPS_ECON,2019,economico,PREPPS_SOC,2018,social/valores (inclui homossexualidade),1,todos,8,0.786,"[0.182, 0.959]",0.97,DEM MDB PP PSB PSDB PSL PT REP
+GPS_ECON,2019,economico,VPARTY_ECON,2010,economico,9,todos,6,0.886,"[0.264, 0.987]",0.977,DEM MDB PP PSB PSDB PT
+GPS_ECON,2019,economico,VPARTY_ECON,2014,economico,5,todos,7,0.964,"[0.771, 0.995]",0.964,DEM MDB PP PSB PSDB PT REP
+GPS_ECON,2019,economico,VPARTY_ECON,2018,economico,1,todos,8,0.952,"[0.753, 0.992]",0.968,DEM MDB PP PSB PSDB PSL PT REP
+GPS_ECON,2019,economico,VPARTY_LGBT,2010,LGBT,9,todos,6,0.943,"[0.559, 0.994]",0.971,DEM MDB PP PSB PSDB PT
+GPS_ECON,2019,economico,VPARTY_LGBT,2014,LGBT,5,todos,7,0.857,"[0.294, 0.979]",0.921,DEM MDB PP PSB PSDB PT REP
+GPS_ECON,2019,economico,VPARTY_LGBT,2018,LGBT,1,todos,8,0.81,"[0.244, 0.964]",0.93,DEM MDB PP PSB PSDB PSL PT REP
+GPS_SOC,2019,social/valores,PREPPS_LR,2018,esq-dir geral,1,todos,8,0.905,"[0.552, 0.983]",0.908,DEM MDB PP PSB PSDB PSL PT REP
+GPS_SOC,2019,social/valores,PREPPS_SOC,2018,social/valores (inclui homossexualidade),1,todos,8,0.786,"[0.182, 0.959]",0.933,DEM MDB PP PSB PSDB PSL PT REP
+GPS_SOC,2019,social/valores,VPARTY_ECON,2010,economico,9,todos,6,0.829,"[0.052, 0.981]",0.907,DEM MDB PP PSB PSDB PT
+GPS_SOC,2019,social/valores,VPARTY_ECON,2014,economico,5,todos,7,0.857,"[0.294, 0.979]",0.873,DEM MDB PP PSB PSDB PT REP
+GPS_SOC,2019,social/valores,VPARTY_ECON,2018,economico,1,todos,8,0.952,"[0.753, 0.992]",0.915,DEM MDB PP PSB PSDB PSL PT REP
+GPS_SOC,2019,social/valores,VPARTY_LGBT,2010,LGBT,9,todos,6,1.0,"[, ]",0.963,DEM MDB PP PSB PSDB PT
+GPS_SOC,2019,social/valores,VPARTY_LGBT,2014,LGBT,5,todos,7,0.964,"[0.771, 0.995]",0.932,DEM MDB PP PSB PSDB PT REP
+GPS_SOC,2019,social/valores,VPARTY_LGBT,2018,LGBT,1,todos,8,0.905,"[0.552, 0.983]",0.934,DEM MDB PP PSB PSDB PSL PT REP
+PREPPS_LR,2018,esq-dir geral,PREPPS_SOC,2018,social/valores (inclui homossexualidade),0,todos,17,0.88,"[0.692, 0.956]",0.974,DEM MDB NOVO PDT PL PODE PP PSB PSD PSDB PSL PSOL PT PTB PV REDE REP
+PREPPS_LR,2018,esq-dir geral,VPARTY_ECON,2010,economico,8,todos,9,0.917,"[0.646, 0.983]",0.961,DEM MDB PDT PL PP PSB PSDB PT PTB
+PREPPS_LR,2018,esq-dir geral,VPARTY_ECON,2014,economico,4,todos,11,0.973,"[0.895, 0.993]",0.979,DEM MDB PDT PL PP PSB PSD PSDB PT PTB REP
+PREPPS_LR,2018,esq-dir geral,VPARTY_ECON,2018,economico,0,todos,11,0.936,"[0.768, 0.984]",0.975,DEM MDB PDT PL PP PSB PSD PSDB PSL PT REP
+PREPPS_LR,2018,esq-dir geral,VPARTY_LGBT,2010,LGBT,8,todos,9,0.883,"[0.53, 0.975]",0.952,DEM MDB PDT PL PP PSB PSDB PT PTB
+PREPPS_LR,2018,esq-dir geral,VPARTY_LGBT,2014,LGBT,4,todos,11,0.873,"[0.573, 0.967]",0.918,DEM MDB PDT PL PP PSB PSD PSDB PT PTB REP
+PREPPS_LR,2018,esq-dir geral,VPARTY_LGBT,2018,LGBT,0,todos,11,0.873,"[0.573, 0.967]",0.923,DEM MDB PDT PL PP PSB PSD PSDB PSL PT REP
+PREPPS_SOC,2018,social/valores (inclui homossexualidade),VPARTY_ECON,2010,economico,8,todos,9,0.833,"[0.379, 0.964]",0.929,DEM MDB PDT PL PP PSB PSDB PT PTB
+PREPPS_SOC,2018,social/valores (inclui homossexualidade),VPARTY_ECON,2014,economico,4,todos,11,0.855,"[0.523, 0.962]",0.943,DEM MDB PDT PL PP PSB PSD PSDB PT PTB REP
+PREPPS_SOC,2018,social/valores (inclui homossexualidade),VPARTY_ECON,2018,economico,0,todos,11,0.791,"[0.363, 0.943]",0.941,DEM MDB PDT PL PP PSB PSD PSDB PSL PT REP
+PREPPS_SOC,2018,social/valores (inclui homossexualidade),VPARTY_LGBT,2010,LGBT,8,todos,9,0.967,"[0.845, 0.993]",0.983,DEM MDB PDT PL PP PSB PSDB PT PTB
+PREPPS_SOC,2018,social/valores (inclui homossexualidade),VPARTY_LGBT,2014,LGBT,4,todos,11,0.964,"[0.862, 0.991]",0.96,DEM MDB PDT PL PP PSB PSD PSDB PT PTB REP
+PREPPS_SOC,2018,social/valores (inclui homossexualidade),VPARTY_LGBT,2018,LGBT,0,todos,11,0.909,"[0.68, 0.976]",0.941,DEM MDB PDT PL PP PSB PSD PSDB PSL PT REP
+VPARTY_ECON,2010,economico,VPARTY_ECON,2014,economico,4,todos,9,0.95,"[0.775, 0.99]",0.992,DEM MDB PDT PL PP PSB PSDB PT PTB
+VPARTY_ECON,2010,economico,VPARTY_ECON,2018,economico,8,todos,8,0.952,"[0.753, 0.992]",0.981,DEM MDB PDT PL PP PSB PSDB PT
+VPARTY_ECON,2010,economico,VPARTY_LGBT,2010,LGBT,0,todos,9,0.833,"[0.379, 0.964]",0.92,DEM MDB PDT PL PP PSB PSDB PT PTB
+VPARTY_ECON,2010,economico,VPARTY_LGBT,2014,LGBT,4,todos,9,0.85,"[0.427, 0.968]",0.929,DEM MDB PDT PL PP PSB PSDB PT PTB
+VPARTY_ECON,2010,economico,VPARTY_LGBT,2018,LGBT,8,todos,8,0.857,"[0.385, 0.974]",0.946,DEM MDB PDT PL PP PSB PSDB PT
+VPARTY_ECON,2014,economico,VPARTY_ECON,2018,economico,4,todos,10,0.964,"[0.849, 0.992]",0.991,DEM MDB PDT PL PP PSB PSD PSDB PT REP
+VPARTY_ECON,2014,economico,VPARTY_LGBT,2010,LGBT,4,todos,9,0.883,"[0.53, 0.975]",0.933,DEM MDB PDT PL PP PSB PSDB PT PTB
+VPARTY_ECON,2014,economico,VPARTY_LGBT,2014,LGBT,0,todos,11,0.864,"[0.547, 0.964]",0.886,DEM MDB PDT PL PP PSB PSD PSDB PT PTB REP
+VPARTY_ECON,2014,economico,VPARTY_LGBT,2018,LGBT,4,todos,10,0.879,"[0.558, 0.971]",0.889,DEM MDB PDT PL PP PSB PSD PSDB PT REP
+VPARTY_ECON,2018,economico,VPARTY_LGBT,2010,LGBT,8,todos,8,0.881,"[0.465, 0.978]",0.948,DEM MDB PDT PL PP PSB PSDB PT
+VPARTY_ECON,2018,economico,VPARTY_LGBT,2014,LGBT,4,todos,10,0.891,"[0.595, 0.974]",0.918,DEM MDB PDT PL PP PSB PSD PSDB PT REP
+VPARTY_ECON,2018,economico,VPARTY_LGBT,2018,LGBT,0,todos,11,0.909,"[0.68, 0.976]",0.935,DEM MDB PDT PL PP PSB PSD PSDB PSL PT REP
+VPARTY_LGBT,2010,LGBT,VPARTY_LGBT,2014,LGBT,4,todos,9,0.983,"[0.92, 0.997]",0.997,DEM MDB PDT PL PP PSB PSDB PT PTB
+VPARTY_LGBT,2010,LGBT,VPARTY_LGBT,2018,LGBT,8,todos,8,0.952,"[0.753, 0.992]",0.989,DEM MDB PDT PL PP PSB PSDB PT
+VPARTY_LGBT,2014,LGBT,VPARTY_LGBT,2018,LGBT,4,todos,10,0.988,"[0.948, 0.997]",0.998,DEM MDB PDT PL PP PSB PSD PSDB PT REP

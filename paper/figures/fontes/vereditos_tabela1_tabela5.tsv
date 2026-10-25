@@ -1,0 +1,17 @@
+linha	coluna	categoria	texto_curto	texto_verbatim	origem	ancora_v03
+COL	N1		incidência: quantos?	quantos morrem, por 100 mil do grupo	Tabela 1	
+COL	N2		disparidade residual: persiste após covariáveis?	a disparidade persiste após covariáveis?	Tabela 1	
+COL	N3		contexto: em que circunstância?	em que circunstância	Tabela 1	
+COL	N4		motivação: o agressor agiu por causa do atributo?	o agressor agiu por causa do atributo?	Tabela 1	
+L1	N1	sustentada	14,70% x 3,82% (física); razão 3,84	disponível: 14,70% x 3,82% (física)	Tabela 1, coluna Pessoas LGBT+, N1 incidência não letal	
+L1	N2	sustentada	razão ajustada 2,82	não letal: RP ajustada 2,82	Tabela 1, coluna Pessoas LGBT+, N2	
+L1	N3	sem veredito	agressor e local descritos (n = 179)	não letal: agressor e local (n = 179)	Tabela 1, coluna Pessoas LGBT+, N3 (o paper descreve; não dá veredito)	
+L1	N4	não sustentada pelo que foi medido	fração nacional não estimada (nenhuma proporção defensável)	nenhuma proporção defensável	Tabela 1, coluna Pessoas LGBT+, N4	
+L2	N1	não testável	Brasil: sem estimativa. Mundo: sim, todas as causas, em populações definidas; sem razão de homicídio	sem taxa: o óbito não registra orientação	Tabela 1, coluna Pessoas LGBT+, N1 incidência letal	sustentada para mortalidade por todas as causas em populações definidas fora do Brasil
+L2	N2	não testável	Brasil: inviável; sem razão ajustada de homicídio	letal: inviável	Tabela 1, coluna Pessoas LGBT+, N2	
+L2	N3	sem veredito	o paper só traz o contexto não letal	não letal: agressor e local (n = 179)	Tabela 1, coluna Pessoas LGBT+, N3 (célula só para não letal)	
+L2	N4	não sustentada pelo que foi medido	fração nacional não estimada; atribuído em 4,1%, desconhecido em 47,9%	(4) Que uma fração conhecida das mortes de LGBT+ é motivada por ódio: na amostra de 2019, a motivação foi atribuída na fonte em 4,1% e era desconhecida em 47,9%	Seção 4.2, item (4)	
+L3	N1	sustentada	taxa padronizada por idade: 2,6 a 51,7 por 100 mil	taxa padronizada por idade disponível	Tabela 1, coluna Mulheres e negros, N1 incidência letal; valores na Tabela 3	
+L3	N2	parcial	raça: poucos estudos, sem controle de renda	raça: poucos estudos, sem renda	Tabela 1, coluna Mulheres e negros, N2	
+L3	N3	sem veredito	apenas proxy (residência, vínculo)	proxy (residência, vínculo)	Tabela 1, coluna Mulheres e negros, N3	
+L3	N4	não sustentada pelo que foi medido	fração nacional não estimada (nenhuma proporção defensável)	nenhuma proporção defensável	Tabela 1, coluna Mulheres e negros, N4	

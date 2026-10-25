@@ -1,0 +1,24 @@
+id	estudo	valor	lo	hi	unidade	ancora_verbatim
+ons26_lgb	ONS 2026	1.31	1.28	1.33	razão de taxas padronizada por idade	razão de 1,31 (IC 95% 1,28-1,33)
+ons26_gl	ONS 2026	1.31	1.28	1.35	razão de taxas padronizada por idade	para gays e lésbicas a razão foi 1,31 (1,28-1,35)
+ons26_bi	ONS 2026	1.33	1.28	1.38	razão de taxas padronizada por idade	para bissexuais 1,33 (1,28-1,38)
+ons26_gayh	ONS 2026	1.23	1.20	1.27	razão de taxas padronizada por idade	só entre homens gays, 1,23 (1,20-1,27)
+ons26_taxa_lgb	ONS 2026	982.8			por 100 mil no período	982,8 por 100 mil no grupo LGB+
+ons26_taxa_het	ONS 2026	752.6			por 100 mil no período	752,6 por 100 mil entre heterossexuais
+ons25_sui_lgb	ONS 2025	50.3			suicídio por 100 mil	50,3 contra 23,1 por 100 mil
+ons25_sui_het	ONS 2025	23.1			suicídio por 100 mil	50,3 contra 23,1 por 100 mil
+mck24	McKetta 2024	0.74	0.64	0.84	fator de aceleração do tempo até o óbito	fator de aceleração ajustado de 0,74 (0,64-0,84)
+erl23_todas	Erlangsen 2023	2.0	1.7	2.4	razão ajustada de taxas	razão ajustada de 2,0 (1,7-2,4) para mortalidade por todas as causas
+erl23_sui	Erlangsen 2023	3.5	2.0	6.3	razão ajustada de taxas	de 3,5 (2,0-6,3) para suicídio, esta sobre 12 suicídios
+luis26_pareados	Luis 2026	1325			óbitos pareados	encontraram 1.325 óbitos
+luis26_violentos	Luis 2026	563			óbitos por causas violentas	dos quais 563 (42,5% dos óbitos pareados
+zach25_estudos	Zachry 2025	43			estudos incluídos	dos 43 estudos incluídos
+zach25_pleno	Zachry 2025	14			estudos que sustentam mortalidade maior	14 sustentam mortalidade maior em minorias sexuais e de gênero
+zach25_parcial	Zachry 2025	28			estudos que sustentam em parte	28 a sustentam em parte
+zach25_nenhum	Zachry 2025	1			estudo sem excesso	1 não encontra excesso
+zach25_homicidio	Zachry 2025	7			estudos com homicídio como desfecho	7 têm homicídio como desfecho
+mcl26_violencia	McLellan 2026	64.23	47.38	78.17	% de violência física ou sexual na vida	64,23% (9 estudos; 47,38%-78,17%)
+mcl26_homicidio	McLellan 2026	0			estudos com prevalência de homicídio	não encontrou nenhum estudo que reportasse prevalência de homicídio
+mck24_obitos	McKetta 2024	81			óbitos no grupo LGB	sobre 81 óbitos no grupo LGB em 27 anos
+ons26_pessoas	ONS 2026	28659465			pessoas de 16 anos ou mais	28.659.465 pessoas de 16 anos ou mais
+erl23_suicidios	Erlangsen 2023	12			suicídios	esta sobre 12 suicídios

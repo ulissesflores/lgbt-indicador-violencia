@@ -1,0 +1,266 @@
+[
+ {
+  "id": "BR-causal-1",
+  "q": "Bolsonaro election violence against LGBT",
+  "lang": "en",
+  "ts": "2026-10-21T20:08:52Z",
+  "openalex": 431,
+  "europepmc": 13
+ },
+ {
+  "id": "BR-causal-2",
+  "q": "Bolsonaro difference-in-differences hate crime",
+  "lang": "en",
+  "ts": "2026-10-21T20:08:55Z",
+  "openalex": 812,
+  "europepmc": 10
+ },
+ {
+  "id": "BR-causal-3",
+  "q": "Brazil 2018 election homophobic violence",
+  "lang": "en",
+  "ts": "2026-10-21T20:08:58Z",
+  "openalex": 738,
+  "europepmc": 24
+ },
+ {
+  "id": "BR-causal-4",
+  "q": "Brazil LGBT policy Bolsonaro government dismantling",
+  "lang": "en",
+  "ts": "2026-10-21T20:09:02Z",
+  "openalex": 243,
+  "europepmc": 7
+ },
+ {
+  "id": "BR-causal-5",
+  "q": "eleições 2018 violência contra LGBT",
+  "lang": "pt",
+  "ts": "2026-10-21T20:09:05Z",
+  "openalex": 1727,
+  "europepmc": 1
+ },
+ {
+  "id": "BR-causal-6",
+  "q": "governo Bolsonaro violência LGBT efeito discurso",
+  "lang": "pt",
+  "ts": "2026-10-21T20:09:08Z",
+  "openalex": 1433,
+  "europepmc": 0
+ },
+ {
+  "id": "BR-causal-7",
+  "q": "violencia contra personas LGBT Brasil elecciones 2018 Bolsonaro",
+  "lang": "es",
+  "ts": "2026-10-21T20:09:10Z",
+  "openalex": 129,
+  "europepmc": 0
+ },
+ {
+  "id": "BR-causal-8",
+  "q": "desmonte política pública LGBT governo federal 2019",
+  "lang": "pt",
+  "ts": "2026-10-21T20:09:13Z",
+  "openalex": 698,
+  "europepmc": 3
+ },
+ {
+  "id": "BR-causal-9",
+  "q": "violência política eleitoral Brasil 2018 homofobia",
+  "lang": "pt",
+  "ts": "2026-10-21T20:09:16Z",
+  "openalex": 1393,
+  "europepmc": 1
+ },
+ {
+  "id": "BR-estado-1",
+  "q": "ditadura militar perseguição homossexuais Brasil",
+  "lang": "pt",
+  "ts": "2026-10-21T20:09:18Z",
+  "openalex": 1084,
+  "europepmc": 1
+ },
+ {
+  "id": "BR-estado-2",
+  "q": "Operação Limpeza Richetti travestis polícia São Paulo",
+  "lang": "pt",
+  "ts": "2026-10-21T20:09:21Z",
+  "openalex": 38,
+  "europepmc": 0
+ },
+ {
+  "id": "BR-estado-3",
+  "q": "violência policial contra travestis Brasil",
+  "lang": "pt",
+  "ts": "2026-10-21T20:09:24Z",
+  "openalex": 2977,
+  "europepmc": 4
+ },
+ {
+  "id": "BR-estado-4",
+  "q": "Brazilian military dictatorship homosexuals persecution",
+  "lang": "en",
+  "ts": "2026-10-21T20:09:26Z",
+  "openalex": 410,
+  "europepmc": 4
+ },
+ {
+  "id": "RU-1",
+  "q": "gay propaganda law hate crimes Russia",
+  "lang": "en",
+  "ts": "2026-10-21T20:09:29Z",
+  "openalex": 2178,
+  "europepmc": 18
+ },
+ {
+  "id": "RU-2",
+  "q": "закон о гей-пропаганде преступления ненависти ЛГБТ",
+  "lang": "ru",
+  "ts": "2026-10-21T20:09:33Z",
+  "openalex": 4,
+  "europepmc": 0
+ },
+ {
+  "id": "CH-1",
+  "q": "Chechnya LGBT persecution report",
+  "lang": "en",
+  "ts": "2026-10-21T20:09:35Z",
+  "openalex": 145,
+  "europepmc": 0
+ },
+ {
+  "id": "PL-1",
+  "q": "Poland LGBT-free zones violence",
+  "lang": "en",
+  "ts": "2026-10-21T20:09:38Z",
+  "openalex": 806,
+  "europepmc": 27
+ },
+ {
+  "id": "PL-2",
+  "q": "strefy wolne od LGBT przemoc",
+  "lang": "pl",
+  "ts": "2026-10-21T20:09:40Z",
+  "openalex": 40,
+  "europepmc": 0
+ },
+ {
+  "id": "HU-1",
+  "q": "Hungary anti-LGBT law violence",
+  "lang": "en",
+  "ts": "2026-10-21T20:09:43Z",
+  "openalex": 2317,
+  "europepmc": 35
+ },
+ {
+  "id": "HU-2",
+  "q": "LMBTQ törvény erőszak Magyarország",
+  "lang": "hu",
+  "ts": "2026-10-21T20:09:45Z",
+  "openalex": 19,
+  "europepmc": 0
+ },
+ {
+  "id": "UG-1",
+  "q": "Uganda Anti-Homosexuality Act violence",
+  "lang": "en",
+  "ts": "2026-10-21T20:09:47Z",
+  "openalex": 2903,
+  "europepmc": 135
+ },
+ {
+  "id": "NG-1",
+  "q": "Nigeria Same Sex Marriage Prohibition Act violence",
+  "lang": "en",
+  "ts": "2026-10-21T20:09:50Z",
+  "openalex": 3505,
+  "europepmc": 110
+ },
+ {
+  "id": "GH-1",
+  "q": "Ghana anti-LGBT bill violence",
+  "lang": "en",
+  "ts": "2026-10-21T20:09:55Z",
+  "openalex": 486,
+  "europepmc": 46
+ },
+ {
+  "id": "US-1",
+  "q": "Trump election hate crimes sexual orientation",
+  "lang": "en",
+  "ts": "2026-10-21T20:09:57Z",
+  "openalex": 2806,
+  "europepmc": 54
+ },
+ {
+  "id": "US-2",
+  "q": "Trump rallies hate incidents",
+  "lang": "en",
+  "ts": "2026-10-21T20:10:00Z",
+  "openalex": null,
+  "europepmc": 29,
+  "openalex_nota": "HTTP 429 (cota compartilhada); contagem não obtida"
+ },
+ {
+  "id": "UK-1",
+  "q": "Brexit referendum hate crime",
+  "lang": "en",
+  "ts": "2026-10-21T20:10:03Z",
+  "openalex": null,
+  "europepmc": 30,
+  "openalex_nota": "HTTP 429 (cota compartilhada); contagem não obtida"
+ },
+ {
+  "id": "UK-2",
+  "q": "Brexit homophobic hate crime sexual orientation",
+  "lang": "en",
+  "ts": "2026-10-21T20:10:08Z",
+  "openalex": null,
+  "europepmc": 3,
+  "openalex_nota": "HTTP 429 (cota compartilhada); contagem não obtida"
+ },
+ {
+  "id": "MA-1",
+  "q": "systematic review anti-LGBT laws violence",
+  "lang": "en",
+  "ts": "2026-10-21T20:10:10Z",
+  "openalex": null,
+  "europepmc": 283,
+  "openalex_nota": "HTTP 429 (cota compartilhada); contagem não obtida"
+ },
+ {
+  "id": "MA-2",
+  "q": "meta-analysis political events hate crime",
+  "lang": "en",
+  "ts": "2026-10-21T20:10:13Z",
+  "openalex": null,
+  "europepmc": 203,
+  "openalex_nota": "HTTP 429 (cota compartilhada); contagem não obtida"
+ },
+ {
+  "id": "MA-3",
+  "q": "structural stigma LGBT systematic review",
+  "lang": "en",
+  "ts": "2026-10-21T20:10:17Z",
+  "openalex": null,
+  "europepmc": 1068,
+  "openalex_nota": "HTTP 429 (cota compartilhada); contagem não obtida"
+ },
+ {
+  "id": "ME-1",
+  "q": "sexual orientation death certificate homicide",
+  "lang": "en",
+  "ts": "2026-10-21T20:10:21Z",
+  "openalex": null,
+  "europepmc": 136,
+  "openalex_nota": "HTTP 429 (cota compartilhada); contagem não obtida"
+ },
+ {
+  "id": "ME-2",
+  "q": "orientação sexual declaração de óbito homicídio",
+  "lang": "pt",
+  "ts": "2026-10-21T20:10:23Z",
+  "openalex": null,
+  "europepmc": 3,
+  "openalex_nota": "HTTP 429 (cota compartilhada); contagem não obtida"
+ }
+]

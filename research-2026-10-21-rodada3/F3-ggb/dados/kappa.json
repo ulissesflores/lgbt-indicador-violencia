@@ -1,0 +1,86 @@
+{
+ "n_casos_dupla": 23,
+ "corresp": {
+  "n": 23,
+  "concordancia": 0.913,
+  "kappa": 0.641
+ },
+ "morte": {
+  "n": 21,
+  "concordancia": 0.905,
+  "kappa": 0.462
+ },
+ "tipo": {
+  "n": 21,
+  "concordancia": 0.857,
+  "kappa": 0.726
+ },
+ "lgbt": {
+  "n": 21,
+  "concordancia": 0.952,
+  "kappa": 0.912
+ },
+ "base": {
+  "n": 21,
+  "concordancia": 0.952,
+  "kappa": 0.92
+ },
+ "motivo": {
+  "n": 21,
+  "concordancia": 0.905,
+  "kappa": 0.854
+ },
+ "desfecho": {
+  "n": 21,
+  "concordancia": 0.952,
+  "kappa": 0.924
+ },
+ "desacordos": [
+  {
+   "caso": "1",
+   "lgbt": [
+    "S",
+    "I"
+   ]
+  },
+  {
+   "caso": "62",
+   "corresp": [
+    "P",
+    "S"
+   ]
+  },
+  {
+   "caso": "90",
+   "morte": [
+    "I",
+    "S"
+   ],
+   "motivo": [
+    "U",
+    "S"
+   ]
+  },
+  {
+   "caso": "91",
+   "motivo": [
+    "R",
+    "U"
+   ]
+  },
+  {
+   "caso": "122",
+   "corresp": [
+    "P",
+    "S"
+   ]
+  },
+  {
+   "caso": "159",
+   "morte": [
+    "I",
+    "S"
+   ]
+  }
+ ]
+}

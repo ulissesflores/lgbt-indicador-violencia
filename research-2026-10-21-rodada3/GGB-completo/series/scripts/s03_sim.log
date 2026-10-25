@@ -1,0 +1,10 @@
+{'ano': 2000, 'obitos_total_arquivo': 946686, 'agressao': 45360, 'indet': 11934, 'interv_legal': 73, 'sha256_dbc': '37bb9069c4ebb6b7624b412e0bd69fc4661ba6c3adab570f3960c8cd7fe64dd0'}
+{'ano': 2001, 'obitos_total_arquivo': 961492, 'agressao': 47943, 'indet': 11520, 'interv_legal': 89, 'sha256_dbc': 'a0069642da6dcdabd23d435e28c9a6a9830574f661ea1c2c54b1b5afc68c20aa'}
+{'ano': 2002, 'obitos_total_arquivo': 982807, 'agressao': 49695, 'indet': 12557, 'interv_legal': 121, 'sha256_dbc': 'dcf9c06bf41c2252772f1a443653e4c305c1e67fd009b4a722c1fb14f4446105'}
+{'ano': 2003, 'obitos_total_arquivo': 1002340, 'agressao': 51043, 'indet': 11101, 'interv_legal': 491, 'sha256_dbc': '5c0078b823218c13dd61c7a298e47117f81a49e964e5d727106346d76a3a771b'}
+{'ano': 2004, 'obitos_total_arquivo': 1024073, 'agressao': 48374, 'indet': 11597, 'interv_legal': 535, 'sha256_dbc': '9707af26f801e575e1cf31ae710e1d86399d20377cf7d8f57e76d0046a90a260'}
+{'ano': 2005, 'obitos_total_arquivo': 1006827, 'agressao': 47578, 'indet': 11269, 'interv_legal': 558, 'sha256_dbc': 'f3205e75cc87452bfbdc85cd49c7d2e67ba015736e19c177c5c5852d50b5000d'}
+{'ano': 2006, 'obitos_total_arquivo': 1031691, 'agressao': 49145, 'indet': 9147, 'interv_legal': 559, 'sha256_dbc': '0acf546bc11beaae3ed0c261158c25761e5695b5c35d892259f22adac40d4584'}
+{'ano': 2007, 'obitos_total_arquivo': 1047824, 'agressao': 47707, 'indet': 11367, 'interv_legal': 512, 'sha256_dbc': '723df8ffeca77057ed9af51f72642a3670c692a686c9b823a744fa3809a02ad3'}
+{'ano': 2008, 'obitos_total_arquivo': 1077007, 'agressao': 50113, 'indet': 12056, 'interv_legal': 546, 'sha256_dbc': '148e92ccf8ef8e47346f355ddc398a650a6022aca89de2028c47dc817ade25c6'}
+{'ano': 2009, 'obitos_total_arquivo': 1103088, 'agressao': 51434, 'indet': 13253, 'interv_legal': 609, 'sha256_dbc': '8f0cb1effcdc46bc7c3ae03f6def01e48a5ce8ea9f7771a438bfa2670ecaa0e2'}

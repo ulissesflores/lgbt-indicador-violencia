@@ -1,0 +1,6 @@
+# Trilha 1 (conferência dos números publicados): só a biblioteca padrão do Python 3.12+ e os pacotes abaixo.
+numpy>=2.0
+pandas>=2.2
+scipy>=1.13
+matplotlib>=3.8
+# Trilha 2 (microdado bruto): pyreaddbc dbfread (ver REPRODUCIBILITY.md)

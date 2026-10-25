@@ -1,0 +1,5 @@
+# Ambiente em que o selo e a réplica foram verificados (Python 3.14.8, macOS arm64, 2026-10-23). Freeze dos pacotes importados pelos scripts.
+numpy==2.4.6
+pandas==3.0.2
+scipy==1.17.1
+matplotlib==3.10.9

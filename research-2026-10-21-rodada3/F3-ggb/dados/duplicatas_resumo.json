@@ -1,0 +1,31 @@
+{
+ "n": 329,
+ "sem_nome_ou_iniciais": 31,
+ "sem_nome": 17,
+ "links_com_mais_de_um_caso": 9,
+ "casos_em_link_compartilhado": 18,
+ "link_compartilhado_dist": {
+  "2": 9
+ },
+ "pares_nome_quase_igual_mesma_uf_cidade": 1,
+ "por_categoria_ggb": {
+  "Travesti": 89,
+  "Gay": 174,
+  "Transexual": 27,
+  "Lésbica": 32,
+  "Mulher Trans": 2,
+  "Bissexual": 4,
+  "Bisexual": 1
+ },
+ "exemplo_tamanhos_link_compartilhado": [
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2
+ ]
+}

@@ -1,0 +1,26 @@
+{
+ "n_ggb_trans": 118,
+ "n_tdor": 139,
+ "sobreposicao": 88,
+ "por_criterio": {
+  "url": 54,
+  "nome+cidade": 27,
+  "nome2tok+uf": 7
+ },
+ "chapman": 186.2,
+ "ep": 6.0,
+ "ic95_normal": [
+  174.5,
+  197.9
+ ],
+ "ic95_log": [
+  177.9,
+  202.3
+ ],
+ "n_uniao_observada": 169,
+ "chapman_so_url": 301.9,
+ "cobertura_ggb_vs_chapman": 0.634,
+ "cobertura_tdor_vs_chapman": 0.747,
+ "obs": "dependencia positiva entre listas (ambas por midia; TDoR cita as mesmas materias; GGB cita TDoR em alguns casos) => Chapman subestima N",
+ "ggb_fonte_tdor_total": 7
+}

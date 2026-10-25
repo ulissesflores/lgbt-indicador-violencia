@@ -1,0 +1,121 @@
+modo,faixa_idade,indicador,est,se,n,deff
+modulo V preenchido pelo proprio morador,18+,lgb,0.0325704,0.00230104,21669,3.64121
+modulo V preenchido pelo proprio morador,18+,sogi_nresp,0.0711499,0.00336162,21669,3.70523
+modulo V preenchido pelo proprio morador,18+,fisica,0.0581496,0.00340479,21669,4.58659
+modulo V preenchido pelo proprio morador,18+,psico,0.233042,0.00562953,21669,3.84217
+modulo V preenchido pelo proprio morador,18+,sexual12,0.0124425,0.00124355,21669,2.72707
+modulo V preenchido pelo proprio morador,18+,qualquer,0.243128,0.00572323,21669,3.85712
+modulo V preenchido pelo proprio morador,18-29,lgb,0.0677293,0.00612751,5558,3.30497
+modulo V preenchido pelo proprio morador,18-29,sogi_nresp,0.0964582,0.00731433,5558,3.41178
+modulo V preenchido pelo proprio morador,18-29,fisica,0.0903165,0.00669571,5558,3.03288
+modulo V preenchido pelo proprio morador,18-29,psico,0.319871,0.011722,5558,3.51037
+modulo V preenchido pelo proprio morador,18-29,sexual12,0.0223131,0.0030336,5558,2.34462
+modulo V preenchido pelo proprio morador,18-29,qualquer,0.33603,0.0119272,5558,3.5438
+modulo V preenchido pelo proprio morador,30-44,lgb,0.0234271,0.0026153,7897,2.36092
+modulo V preenchido pelo proprio morador,30-44,sogi_nresp,0.0534906,0.00434542,7897,2.94525
+modulo V preenchido pelo proprio morador,30-44,fisica,0.0545929,0.00515364,7897,4.06383
+modulo V preenchido pelo proprio morador,30-44,psico,0.236277,0.00917741,7897,3.68591
+modulo V preenchido pelo proprio morador,30-44,sexual12,0.00912257,0.0017161,7897,2.57284
+modulo V preenchido pelo proprio morador,30-44,qualquer,0.243568,0.00914654,7897,3.5858
+modulo V preenchido pelo proprio morador,45-59,lgb,0.012799,0.00210173,4960,1.73402
+modulo V preenchido pelo proprio morador,45-59,sogi_nresp,0.0756528,0.00793168,4960,4.46223
+modulo V preenchido pelo proprio morador,45-59,fisica,0.0402592,0.00571188,4960,4.18813
+modulo V preenchido pelo proprio morador,45-59,psico,0.173952,0.0086421,4960,2.57802
+modulo V preenchido pelo proprio morador,45-59,sexual12,0.00981615,0.00243088,4960,3.01545
+modulo V preenchido pelo proprio morador,45-59,qualquer,0.181395,0.00886797,4960,2.62682
+modulo V preenchido pelo proprio morador,60+,lgb,0.00535752,0.00158066,3254,1.52568
+modulo V preenchido pelo proprio morador,60+,sogi_nresp,0.0484418,0.00662375,3254,3.09721
+modulo V preenchido pelo proprio morador,60+,fisica,0.0194357,0.0046505,3254,3.69268
+modulo V preenchido pelo proprio morador,60+,psico,0.112288,0.00985978,3254,3.17356
+modulo V preenchido pelo proprio morador,60+,sexual12,0.00158403,0.000693989,3254,0.990942
+modulo V preenchido pelo proprio morador,60+,qualquer,0.119664,0.0102483,3254,3.24424
+modulo V preenchido pelo entrevistador,18+,lgb,0.0135109,0.000838723,66862,3.5289
+modulo V preenchido pelo entrevistador,18+,sogi_nresp,0.0186715,0.00100426,66862,3.68027
+modulo V preenchido pelo entrevistador,18+,fisica,0.0348794,0.00129346,66862,3.32305
+modulo V preenchido pelo entrevistador,18+,psico,0.150109,0.00292626,66862,4.4878
+modulo V preenchido pelo entrevistador,18+,sexual12,0.00574799,0.000740284,66862,6.41157
+modulo V preenchido pelo entrevistador,18+,qualquer,0.158799,0.00297156,66862,4.41979
+modulo V preenchido pelo entrevistador,18-29,lgb,0.03681,0.00359463,9836,3.58468
+modulo V preenchido pelo entrevistador,18-29,sogi_nresp,0.0243287,0.00267895,9836,2.97388
+modulo V preenchido pelo entrevistador,18-29,fisica,0.0674415,0.00448511,9836,3.14602
+modulo V preenchido pelo entrevistador,18-29,psico,0.209244,0.0080063,9836,3.81054
+modulo V preenchido pelo entrevistador,18-29,sexual12,0.0120462,0.00190471,9836,2.99838
+modulo V preenchido pelo entrevistador,18-29,qualquer,0.226458,0.00813348,9836,3.71449
+modulo V preenchido pelo entrevistador,30-44,lgb,0.0137734,0.00149682,18857,3.11021
+modulo V preenchido pelo entrevistador,30-44,sogi_nresp,0.0140206,0.00130326,18857,2.31687
+modulo V preenchido pelo entrevistador,30-44,fisica,0.0387446,0.00226953,18857,2.60791
+modulo V preenchido pelo entrevistador,30-44,psico,0.170789,0.00500422,18857,3.33442
+modulo V preenchido pelo entrevistador,30-44,sexual12,0.00505464,0.000750509,18857,2.11201
+modulo V preenchido pelo entrevistador,30-44,qualquer,0.180636,0.00509383,18857,3.30582
+modulo V preenchido pelo entrevistador,45-59,lgb,0.00813622,0.00101953,18695,2.40798
+modulo V preenchido pelo entrevistador,45-59,sogi_nresp,0.0176583,0.00218201,18695,5.1313
+modulo V preenchido pelo entrevistador,45-59,fisica,0.0274102,0.001911,18695,2.56098
+modulo V preenchido pelo entrevistador,45-59,psico,0.141229,0.00453416,18695,3.16896
+modulo V preenchido pelo entrevistador,45-59,sexual12,0.0056375,0.00219188,18695,16.0225
+modulo V preenchido pelo entrevistador,45-59,qualquer,0.1476,0.0045742,18695,3.10903
+modulo V preenchido pelo entrevistador,60+,lgb,0.00199104,0.000335671,19474,1.10425
+modulo V preenchido pelo entrevistador,60+,sogi_nresp,0.0208514,0.00179308,19474,3.06671
+modulo V preenchido pelo entrevistador,60+,fisica,0.0148033,0.00133655,19474,2.3853
+modulo V preenchido pelo entrevistador,60+,psico,0.0931754,0.00364306,19474,3.05888
+modulo V preenchido pelo entrevistador,60+,sexual12,0.00202326,0.000553373,19474,2.95338
+modulo V preenchido pelo entrevistador,60+,qualquer,0.096846,0.00368332,19474,3.02059
+privacidade assegurada,18+,lgb,0.0190841,0.000902726,80914,3.52235
+privacidade assegurada,18+,sogi_nresp,0.03212,0.00128881,80914,4.3232
+privacidade assegurada,18+,fisica,0.0421674,0.00144456,80914,4.1805
+privacidade assegurada,18+,psico,0.177259,0.00279828,80914,4.34445
+privacidade assegurada,18+,sexual12,0.00782752,0.000686958,80914,4.91668
+privacidade assegurada,18+,qualquer,0.186386,0.00284092,80914,4.30637
+privacidade assegurada,18-29,lgb,0.0491589,0.00337125,14143,3.43884
+privacidade assegurada,18-29,sogi_nresp,0.0510952,0.00343429,14143,3.44043
+privacidade assegurada,18-29,fisica,0.0765787,0.00393988,14143,3.10455
+privacidade assegurada,18-29,psico,0.257658,0.00706389,14143,3.68962
+privacidade assegurada,18-29,sexual12,0.0162173,0.00173113,14143,2.65659
+privacidade assegurada,18-29,qualquer,0.274312,0.00720916,14143,3.69245
+privacidade assegurada,30-44,lgb,0.017511,0.00140137,24566,2.80414
+privacidade assegurada,30-44,sogi_nresp,0.0249776,0.0016493,24566,2.74389
+privacidade assegurada,30-44,fisica,0.0445806,0.00245489,24566,3.47581
+privacidade assegurada,30-44,psico,0.195105,0.00478239,24566,3.5778
+privacidade assegurada,30-44,sexual12,0.00659494,0.000798663,24566,2.3918
+privacidade assegurada,30-44,qualquer,0.203995,0.00481385,24566,3.50578
+privacidade assegurada,45-59,lgb,0.00885918,0.000872607,21715,1.88308
+privacidade assegurada,45-59,sogi_nresp,0.0309319,0.0028259,21715,5.78512
+privacidade assegurada,45-59,fisica,0.0312626,0.00215337,21715,3.32479
+privacidade assegurada,45-59,psico,0.15262,0.00430043,21715,3.10524
+privacidade assegurada,45-59,sexual12,0.00694976,0.00189678,21715,11.3201
+privacidade assegurada,45-59,qualquer,0.159464,0.00435851,21715,3.07763
+privacidade assegurada,60+,lgb,0.00246568,0.000381329,20490,1.21137
+privacidade assegurada,60+,sogi_nresp,0.0238894,0.00197296,20490,3.42038
+privacidade assegurada,60+,fisica,0.0160982,0.00145174,20490,2.7264
+privacidade assegurada,60+,psico,0.0977396,0.00364579,20490,3.08832
+privacidade assegurada,60+,sexual12,0.00186044,0.000513734,20490,2.91214
+privacidade assegurada,60+,qualquer,0.102136,0.00371803,20490,3.08871
+privacidade NAO assegurada,18+,lgb,0.0169983,0.00301896,7617,4.1547
+privacidade NAO assegurada,18+,sogi_nresp,0.0493975,0.00431966,7617,3.02677
+privacidade NAO assegurada,18+,fisica,0.0337514,0.00380716,7617,3.38536
+privacidade NAO assegurada,18+,psico,0.132996,0.00689034,7617,3.13621
+privacidade NAO assegurada,18+,sexual12,0.00561412,0.00138228,7617,2.60698
+privacidade NAO assegurada,18+,qualquer,0.141618,0.00701056,7617,3.07957
+privacidade NAO assegurada,18-29,lgb,0.0484542,0.0123249,1251,4.12161
+privacidade NAO assegurada,18-29,sogi_nresp,0.0756266,0.0132701,1251,3.15125
+privacidade NAO assegurada,18-29,fisica,0.0760434,0.0137582,1251,3.37027
+privacidade NAO assegurada,18-29,psico,0.200897,0.0208932,1251,3.40166
+privacidade NAO assegurada,18-29,sexual12,0.0150784,0.00576878,1251,2.80329
+privacidade NAO assegurada,18-29,qualquer,0.21935,0.0211826,1251,3.27809
+privacidade NAO assegurada,30-44,lgb,0.00940371,0.0023613,2188,1.30964
+privacidade NAO assegurada,30-44,sogi_nresp,0.0487851,0.0080567,2188,3.06053
+privacidade NAO assegurada,30-44,fisica,0.0352208,0.00564235,2188,2.04993
+privacidade NAO assegurada,30-44,psico,0.153787,0.013833,2188,3.21722
+privacidade NAO assegurada,30-44,sexual12,0.00363521,0.00167913,2188,1.70322
+privacidade NAO assegurada,30-44,qualquer,0.16439,0.0140031,2188,3.1233
+privacidade NAO assegurada,45-59,lgb,0.0142745,0.00541401,1940,4.04131
+privacidade NAO assegurada,45-59,sogi_nresp,0.0410991,0.00720132,1940,2.55282
+privacidade NAO assegurada,45-59,fisica,0.0213392,0.00589916,1940,3.23274
+privacidade NAO assegurada,45-59,psico,0.106254,0.0108477,1940,2.40392
+privacidade NAO assegurada,45-59,sexual12,0.00292922,0.00126468,1940,1.06239
+privacidade NAO assegurada,45-59,qualquer,0.110241,0.01098,1940,2.38447
+privacidade NAO assegurada,60+,lgb,0.00310694,0.00157071,2238,1.78267
+privacidade NAO assegurada,60+,sogi_nresp,0.037259,0.00509203,2238,1.61771
+privacidade NAO assegurada,60+,fisica,0.0108682,0.00344436,2238,2.46983
+privacidade NAO assegurada,60+,psico,0.0835756,0.010225,2238,3.05502
+privacidade NAO assegurada,60+,sexual12,0.00273763,0.00122311,2238,1.22633
+privacidade NAO assegurada,60+,qualquer,0.0867381,0.0102648,2238,2.97682

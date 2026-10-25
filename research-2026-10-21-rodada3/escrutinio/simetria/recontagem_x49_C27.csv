@@ -1,0 +1,7 @@
+estrato,codificador,n_itens,n_AFIRMA+ATRIBUI,n_primaria_verificavel,Wilson_lo,Wilson_hi,n_com_alguma_fonte,distribuicao_fonte_nos_AFIRMA+ATRIBUI
+F2-Parlamento,original(Claude),56,49,0,0.00,0.07,8,"{'nenhuma': 41, 'oficial_sem_referencia': 1, 'secundaria_ONG': 7}"
+F2-Parlamento,segundo(Grok),56,50,1,0.00,0.10,5,"{'nenhuma': 45, 'primaria_verificavel': 1, 'secundaria_ONG': 4}"
+F3-Parlamento,original(Claude),60,33,0,0.00,0.10,0,{'nenhuma': 33}
+F3-Parlamento,segundo(Grok),60,25,1,0.01,0.20,2,"{'nenhuma': 23, 'oficial_sem_referencia': 1, 'primaria_verificavel': 1}"
+Outras-100,original(Claude),100,19,2,0.03,0.31,7,"{'nenhuma': 12, 'secundaria_imprensa': 1, 'secundaria_ONG': 4, 'primaria_verificavel': 2}"
+Outras-100,segundo(Grok),100,13,0,0.00,0.23,3,"{'nenhuma': 10, 'secundaria_imprensa': 1, 'secundaria_ONG': 2}"

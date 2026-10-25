@@ -1,0 +1,9 @@
+teste,tabela,odds,p,rho,p_perm,n,auc,ic95,n_nao_inf,n_inf,poder
+Fisher Zbin x C(comite LGBT em alguma edicao),"[[13, 6], [6, 2]]",0.7222222222222222,1.0,,,,,,,,
+Fisher Zbin x S>=mediana,"[[10, 9], [2, 6]]",3.3333333333333335,0.23574879227053144,,,,,,,,
+Spearman Z x S,,,,0.1816351841350632,0.36935,27.0,,,,,
+AUC S(informante) > S(nao informante),,,,,,,0.375,"[0.12828947368421054, 0.6415296052631567]",8.0,19.0,
+Spearman taxa24/100k (informantes) x S,,,,0.18357890866192947,0.4021,23.0,,,,,
+Poder Fisher (simulado) para OR verdadeiro de 2 (nao informar vs estrutura alta),,,,,,,,,,,0.0705
+Poder Fisher (simulado) para OR verdadeiro de 4 (nao informar vs estrutura alta),,,,,,,,,,,0.26375
+Poder Fisher (simulado) para OR verdadeiro de 8 (nao informar vs estrutura alta),,,,,,,,,,,0.568

@@ -1,0 +1,4 @@
+78223687c1b90c806d099f32ce601c0084084daa729cf567aada15ca0cd4ccc8  PRE-REGISTRO.md
+2026-10-22T22:15:03Z
+prova de que o texto pre-registrado nao mudou: sha256 dos bytes de PRE-REGISTRO.md ate o primeiro "\n---\n\n**ADENDO" (exclusive) = dc231b3f9cf016ed84582c9fb44b2fc33cd0e4b88e96cb871586537cd5bb40dc = hash gravado em PRE-REGISTRO.sha256 (2026-10-22T21:29:37Z)
+verificar: python3 -c "import hashlib;b=open('PRE-REGISTRO.md','rb').read();print(hashlib.sha256(b[:b.index(b'\n---\n\n**ADENDO')]).hexdigest())"

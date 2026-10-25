@@ -1,0 +1,30 @@
+Você é um codificador de conteúdo independente. Tarefa: classificar trechos curtos segundo um livro de códigos fixo. Não use ferramentas, não busque nada na web, não peça esclarecimento: responda só com o JSON pedido. Codifique cada item de forma INDEPENDENTE dos demais, olhando apenas o texto dele.
+
+AFIRMAÇÃO-ALVO desta rodada (família {FAMILIA}): {ALVO}
+
+Cada item traz um trecho (de discurso parlamentar, manchete de imprensa só com título, resumo acadêmico ou página enciclopédica). Codifique:
+
+1. postura (exatamente um valor):
+- AFIRMA: o texto, em voz própria, sustenta a afirmação-alvo (afirma o ranking, o risco, a frequência, o número; atribui a governo/instituição/direita a conduta, na família F3; nega ou diz inflada a estatística, na família F4).
+- ATRIBUI: o texto relata a alegação-alvo como dita por terceiros, sem assumi-la.
+- NEGA/CRITICA: o texto rebate ou critica a afirmação-alvo.
+- MENCIONA: o texto noticia um fato relacionado (por exemplo uma decisão judicial) ou cita o tema sem afirmar a alegação-alvo.
+- FORA: o trecho NÃO é a afirmação-alvo (falso positivo de busca: outro assunto, palavra homônima, etc.).
+
+2. forma (tipo de afirmação; escolha dentre a lista da família; vazio "" se a postura for FORA):
+{FORMAS}
+
+3. fonte_citada: a fonte que o PRÓPRIO trecho dá para o dado ou afirmação (exatamente um valor):
+- primaria_verificavel: relatório, dado ou artigo OFICIAL ou científico com nome E ano (ou link) localizáveis no trecho (por exemplo "Atlas da Violência 2019", "Pesquisa Nacional de Saúde 2019", um estudo citado com autor e ano). Para artigo acadêmico empírico, o próprio estudo conta como fonte, e só vale primaria_verificavel quando o resumo traz o dado.
+- secundaria_ONG: relatório ou contagem de ONG (GGB / Grupo Gay da Bahia, ANTRA, TGEU, Transgender Europe, Observatório e semelhantes). GGB, ANTRA e TGEU são secundaria_ONG POR DEFINIÇÃO, mesmo com ano.
+- secundaria_imprensa: o trecho cita reportagem ou veículo de imprensa.
+- oficial_sem_referencia: cita "dados oficiais", "o IBGE", "o Ministério" ou órgão semelhante SEM nome de relatório e ano.
+- nenhuma: não cita fonte. Se a postura for FORA, use nenhuma. Em item só com título (manchete), a fonte só vale se o título a nomeia.
+
+4. fonte_nomeada: o nome da fonte como aparece no trecho ("" se nenhuma).
+5. cita_GGB, cita_ANTRA, cita_TGEU, cita_ONU: 1 se o trecho menciona esse ente (GGB/Grupo Gay da Bahia; ANTRA; TGEU/Transgender Europe/TMM/TDoR; ONU/Nações Unidas/OMS/ACNUDH), senão 0.
+
+Responda SOMENTE com um objeto JSON de acordo com o esquema, com um elemento em "itens" para cada item recebido, usando o mesmo "id".
+
+ITENS:
+{ITENS}

@@ -1,0 +1,49 @@
+name: verify
+on: [push, pull_request]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # 3.12 (piso de requires-python) e 3.13. O selo e a evidência foram feitos em 3.14 (requirements.lock); 3.11 fica fora:
+        # requires-python >= 3.12 e um script de pesquisa (discurso/governos/scripts/tabela_md.py) usa f-string que só compila a partir da 3.12.
+        python: ["3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: pip install -r requirements.txt pytest
+      # 1. integridade: o selo commitado confere com os arquivos (verification-first)
+      - run: python -I make_provenance.py --verify
+      # 2. testes que travam os números publicados, só sobre os derivados distribuídos (sem microdado bruto, sem rede)
+      - run: pytest -q
+      # 3. recálculo na réplica (Trilha 1) + testes + selo, o mesmo comando do README; falha se algum arquivo divergir
+      - run: python -I run_all.py
+      # 4. auditoria de publicação: inventário e literatura têm de passar (código 0)
+      - run: python -I scripts/inventario_publico.py --check
+      - run: python -I scripts/auditar_publicacao.py --check inventario
+      - run: python -I scripts/auditar_publicacao.py --check literatura
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # nível estrito (bloqueia): código de infraestrutura, configurado em pyproject.toml (line-length 100, docstring numpy)
+      - uses: astral-sh/ruff-action@v3
+        with:
+          args: check
+      - uses: astral-sh/ruff-action@v3
+        with:
+          args: format --check
+      - run: pipx run interrogate run_all.py make_provenance.py scripts/ tests/test_auditar_publicacao.py
+  lint-pesquisa:
+    runs-on: ubuntu-latest
+    # informativo: scripts de pesquisa copiados do projeto de origem; reformatá-los quebraria a correspondência registrada em
+    # manifest/MODIFICACOES.tsv e mudaria arquivos cobertos pelo selo sem mudar lógica (ver pyproject.toml)
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/ruff-action@v3
+        with:
+          args: check --isolated --select E,F,W,B --ignore E401,E701,E702,E741,E501,E731,E402 --line-length 130 .

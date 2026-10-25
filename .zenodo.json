@@ -1,0 +1,26 @@
+{
+  "title": "Violência motivada por LGBTfobia no Brasil: o que os dados públicos sustentam (dados derivados, código, pré-registros e testes)",
+  "upload_type": "dataset",
+  "version": "0.1.0",
+  "access_right": "closed",
+  "notes": "No DOI before the author's explicit authorization. access_right flips to open at the release that mints the DOI.",
+  "license": "cc-by-4.0",
+  "creators": [
+    {
+      "name": "Flores, Carlos Ulisses",
+      "orcid": "0000-0002-6034-7765",
+      "affiliation": "Codex Hash Research Laboratory"
+    }
+  ],
+  "description": "Dados derivados, código, pré-registros datados com hash e testes que travam os números publicados. Sem dado nominal, sem PDF de terceiros, sem microdado bruto (manifesto com URL, data e SHA-256). Inclui as quatro revisões hostis com a triagem de cada ataque, as reanálises pré-registradas e, na v0.3, a troca de presidente (C09) e a exposição por governo sem atribuição de causa (C10).",
+  "keywords": [
+    "LGBTfobia",
+    "violência",
+    "Brasil",
+    "indicadores",
+    "reprodutibilidade",
+    "hash-chain",
+    "pré-registro"
+  ],
+  "language": "por"
+}

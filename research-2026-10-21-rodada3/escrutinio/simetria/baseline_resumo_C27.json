@@ -1,0 +1,29 @@
+{
+ "baseline_n": 60,
+ "postura": {
+  "AFIRMA": 37,
+  "FORA": 22,
+  "ATRIBUI": 1
+ },
+ "den_AFIRMA+ATRIBUI": 38,
+ "primaria_verificavel": 2,
+ "wilson95": [
+  0.0145539024485368,
+  0.17285766881068843
+ ],
+ "alguma_fonte": 3,
+ "fonte_dist_den": {
+  "nenhuma": 35,
+  "primaria_verificavel": 2,
+  "oficial_sem_referencia": 1
+ },
+ "F2_parlamento_segundo": {
+  "den": 50,
+  "primaria": 1,
+  "alguma_fonte": 5,
+  "wilson95": [
+   0.0035391680889764613,
+   0.10495686471836953
+  ]
+ }
+}

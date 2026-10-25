@@ -1,0 +1,110 @@
+{
+ "n_amostra": 160,
+ "N_universo": 329,
+ "fracao_amostral": 0.486,
+ "fpc": 0.718,
+ "recuperadas": 106,
+ "nao_recuperadas": 54,
+ "motivo_nao_recuperacao": {
+  "link_morto_404": 31,
+  "dominio_inacessivel": 12,
+  "bloqueio_ou_erro_servidor": 4,
+  "sem_link_no_anexo4": 7
+ },
+ "correspondem": 88,
+ "correspondencia_S": 73,
+ "morte_violenta": 73,
+ "verificavel_estrito": 50,
+ "verificavel_largo": 54,
+ "motivo_entre_verificavel_estrito": {
+  "C": 11,
+  "R": 7,
+  "U": 23,
+  "V": 3,
+  "S": 2,
+  "P": 4
+ },
+ "motivo_entre_morte_violenta_confirmada": {
+  "C": 13,
+  "R": 13,
+  "U": 35,
+  "V": 3,
+  "S": 3,
+  "P": 6
+ },
+ "tipo_entre_morte_violenta": {
+  "H": 60,
+  "L": 10,
+  "S": 3
+ },
+ "base_identificacao_entre_verificavel_estrito": {
+  "I": 33,
+  "P": 11,
+  "A": 2,
+  "F": 4
+ },
+ "desfecho_entre_morte_violenta": {
+  "INQ": 46,
+  "FORAGIDO": 7,
+  "ND": 5,
+  "PRESO": 14,
+  "SUSP_MORTO": 1
+ },
+ "cat_ggb_entre_verificavel_estrito": {
+  "Travesti": 20,
+  "Gay": 19,
+  "Lésbica": 3,
+  "Transexual": 8
+ },
+ "cat_ggb_entre_correspondem": {
+  "Travesti": 27,
+  "Gay": 46,
+  "Lésbica": 4,
+  "Transexual": 9,
+  "Mulher Trans": 1,
+  "Bissexual": 1
+ },
+ "tipo_fonte_entre_recuperadas": {
+  "noticia": 84,
+  "homepage": 6,
+  "soft404": 6,
+  "rede_social": 6,
+  "lista_secundaria": 3,
+  "outro": 1
+ },
+ "dominios_nao_recuperadas_top": [
+  [
+   "",
+   7
+  ],
+  [
+   "g1.globo.com",
+   6
+  ],
+  [
+   "simoesfilhoonline.com.br",
+   2
+  ],
+  [
+   "otempo.com.br",
+   2
+  ],
+  [
+   "op9.com.br",
+   2
+  ],
+  [
+   "redemais.tv.br",
+   1
+  ],
+  [
+   "petrolandianoticias.com.br",
+   1
+  ],
+  [
+   "maranhaoempauta.com",
+   1
+  ]
+ ],
+ "divergencia_categoria_ou_cidade": 3
+}

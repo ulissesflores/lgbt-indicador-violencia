@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="514.944pt" height="771.900212pt" viewBox="0 0 514.944 771.900212" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.9, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 771.900212 
+L 514.944 771.900212 
+L 514.944 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 99.124364 156.061662 
+L 305.945766 156.061662 
+L 305.945766 127.629415 
+L 99.124364 127.629415 
+z
+" clip-path="url(#p8ad291a697)" style="fill: #6b3fa0"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 134.025475 201.920123 
+L 271.044655 201.920123 
+L 271.044655 173.487877 
+L 134.025475 173.487877 
+z
+" clip-path="url(#p8ad291a697)" style="fill: #cdbde6"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 145.659179 247.778585 
+L 259.410951 247.778585 
+L 259.410951 219.346338 
+L 145.659179 219.346338 
+z
+" clip-path="url(#p8ad291a697)" style="fill: #cdbde6"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 155.353932 293.637046 
+L 249.716197 293.637046 
+L 249.716197 265.2048 
+L 155.353932 265.2048 
+z
+" clip-path="url(#p8ad291a697)" style="fill: #cdbde6"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 170.219221 339.495508 
+L 234.850909 339.495508 
+L 234.850909 311.063262 
+L 170.219221 311.063262 
+z
+" clip-path="url(#p8ad291a697)" style="fill: #6b3fa0"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="202.535065" y="144.880851" transform="rotate(-0 202.535065 144.880851)">160</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(9.932634 139.573913)">casos sorteados da lista</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(9.932634 148.532163)">de 2019</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1f1f1e" x="202.535065" y="190.739312" transform="rotate(-0 202.535065 190.739312)">106</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f1f1e" x="9.932634" y="190.0715" transform="rotate(-0 9.932634 190.0715)">com a matéria recuperada</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1f1f1e" x="202.535065" y="236.597774" transform="rotate(-0 202.535065 236.597774)">88</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f1f1e" x="9.932634" y="235.929962" transform="rotate(-0 9.932634 235.929962)">em que a matéria é do caso</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1f1f1e" x="202.535065" y="282.456236" transform="rotate(-0 202.535065 282.456236)">73</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(9.932634 277.149298)">com morte violenta</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(9.932634 286.107548)">confirmada</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #ffffff" x="202.535065" y="328.314697" transform="rotate(-0 202.535065 328.314697)">50</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(9.932634 318.336635)">e a fonte diz</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(9.932634 327.678885)">expressamente que a vítima</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(9.932634 336.637135)">é LGBT+</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(313.701569 157.800019)">54 sem matéria recuperada: 31 link morto,</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(313.701569 167.142269)">12 site inacessível, 4 bloqueio ou erro, 7</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(313.701569 176.484519)">sem link: não dá para verificar</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5b5a55" x="313.701569" y="213.000731" transform="rotate(-0 313.701569 213.000731)">18 em que a matéria não é a do caso</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(313.701569 254.220067)">15 sem morte violenta confirmada</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(313.701569 263.178317)">(indeterminada ou não violenta)</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(313.701569 299.996779)">23 com morte violenta, mas sem a</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(313.701569 309.118529)">identificação expressa como LGBT+ na fonte</text>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f1f1e" x="9.932634" y="96.304297" transform="rotate(-0 9.932634 96.304297)">(a) De 160 casos sorteados a 50 com todos os critérios</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_7">
+    <path d="M 205.632 565.338462 
+L 309.312 565.338462 
+L 309.312 425.370462 
+L 205.632 425.370462 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 205.632 565.338462 
+L 205.632 425.370462 
+" clip-path="url(#p63564c2acf)" style="fill: none; stroke: #d9d8d3; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2">
+      <defs>
+       <path id="m3df62e9e97" d="M 0 0 
+L 0 3.5 
+" style="stroke: #5b5a55; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m3df62e9e97" x="205.632" y="565.338462" style="fill: #5b5a55; stroke: #5b5a55; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_16">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #5b5a55" x="205.632" y="578.417212" transform="rotate(-0 205.632 578.417212)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 243.333818 565.338462 
+L 243.333818 425.370462 
+" clip-path="url(#p63564c2acf)" style="fill: none; stroke: #d9d8d3; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m3df62e9e97" x="243.333818" y="565.338462" style="fill: #5b5a55; stroke: #5b5a55; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_17">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #5b5a55" x="243.333818" y="578.417212" transform="rotate(-0 243.333818 578.417212)">20</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 281.035636 565.338462 
+L 281.035636 425.370462 
+" clip-path="url(#p63564c2acf)" style="fill: none; stroke: #d9d8d3; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m3df62e9e97" x="281.035636" y="565.338462" style="fill: #5b5a55; stroke: #5b5a55; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_18">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #5b5a55" x="281.035636" y="578.417212" transform="rotate(-0 281.035636 578.417212)">40</text>
+     </g>
+    </g>
+    <g id="text_19">
+     <text style="font-size: 8.3px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1f1f1e" x="257.472" y="590.387665" transform="rotate(-0 257.472 590.387665)">mortes violentas confirmadas (n = 73)</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_7">
+      <defs>
+       <path id="m8f0416909c" d="M 0 0 
+L -3.5 0 
+" style="stroke: #5b5a55; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m8f0416909c" x="205.632" y="438.75142" style="fill: #5b5a55; stroke: #5b5a55; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_20">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #5b5a55" x="198.632" y="441.85892" transform="rotate(-0 198.632 441.85892)">motivo desconhecido ou não reportado</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m8f0416909c" x="205.632" y="461.392637" style="fill: #5b5a55; stroke: #5b5a55; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_21">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #5b5a55" x="198.632" y="464.432012" transform="rotate(-0 198.632 464.432012)">conflito interpessoal</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#m8f0416909c" x="205.632" y="484.033853" style="fill: #5b5a55; stroke: #5b5a55; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_22">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #5b5a55" x="198.632" y="487.073228" transform="rotate(-0 198.632 487.073228)">roubo ou latrocínio</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m8f0416909c" x="205.632" y="506.67507" style="fill: #5b5a55; stroke: #5b5a55; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_23">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #5b5a55" x="198.632" y="509.714445" transform="rotate(-0 198.632 509.714445)">passional</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_11">
+      <g>
+       <use xlink:href="#m8f0416909c" x="205.632" y="529.316286" style="fill: #5b5a55; stroke: #5b5a55; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_24">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #5b5a55" x="198.632" y="532.355661" transform="rotate(-0 198.632 532.355661)">suicídio</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m8f0416909c" x="205.632" y="551.957503" style="fill: #5b5a55; stroke: #5b5a55; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_25">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #5b5a55" x="198.632" y="555.156878" transform="rotate(-0 198.632 555.156878)">LGBTfobia atribuída na própria fonte</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_8">
+    <path d="M 205.632 445.770198 
+L 271.610182 445.770198 
+L 271.610182 431.732643 
+L 205.632 431.732643 
+z
+" clip-path="url(#p63564c2acf)" style="fill: #6b3fa0"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 205.632 468.411414 
+L 230.138182 468.411414 
+L 230.138182 454.37386 
+L 205.632 454.37386 
+z
+" clip-path="url(#p63564c2acf)" style="fill: #cdbde6"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 205.632 491.05263 
+L 230.138182 491.05263 
+L 230.138182 477.015076 
+L 205.632 477.015076 
+z
+" clip-path="url(#p63564c2acf)" style="fill: #cdbde6"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 205.632 513.693847 
+L 216.942545 513.693847 
+L 216.942545 499.656293 
+L 205.632 499.656293 
+z
+" clip-path="url(#p63564c2acf)" style="fill: #cdbde6"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 205.632 536.335063 
+L 211.287273 536.335063 
+L 211.287273 522.297509 
+L 205.632 522.297509 
+z
+" clip-path="url(#p63564c2acf)" style="fill: #cdbde6"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 205.632 558.97628 
+L 211.287273 558.97628 
+L 211.287273 544.938726 
+L 205.632 544.938726 
+z
+" clip-path="url(#p63564c2acf)" style="fill: #6b3fa0"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 205.632 565.338462 
+L 205.632 425.370462 
+" style="fill: none; stroke: #5b5a55; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 205.632 565.338462 
+L 309.312 565.338462 
+" style="fill: none; stroke: #5b5a55; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_26">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f1f1e" x="273.495273" y="440.95892" transform="rotate(-0 273.495273 440.95892)">35  (47,9%)</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f1f1e" x="232.023273" y="463.600137" transform="rotate(-0 232.023273 463.600137)">13  (17,8%)</text>
+   </g>
+   <g id="text_28">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f1f1e" x="232.023273" y="486.241353" transform="rotate(-0 232.023273 486.241353)">13  (17,8%)</text>
+   </g>
+   <g id="text_29">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f1f1e" x="218.827636" y="508.88257" transform="rotate(-0 218.827636 508.88257)">6  (8,2%)</text>
+   </g>
+   <g id="text_30">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f1f1e" x="213.172364" y="531.523786" transform="rotate(-0 213.172364 531.523786)">3  (4,1%)</text>
+   </g>
+   <g id="text_31">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f1f1e" x="213.172364" y="554.165003" transform="rotate(-0 213.172364 554.165003)">3  (4,1%)</text>
+   </g>
+   <g id="text_32">
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f1f1e" x="81.216" y="419.370462" transform="rotate(-0 81.216 419.370462)">(b) O motivo que a própria fonte registra</text>
+   </g>
+  </g>
+  <g id="patch_16">
+   <path d="M 14.4 741.074462 
+L 500.544 741.074462 
+Q 506.304 741.074462 506.304 735.314462 
+L 506.304 610.178462 
+Q 506.304 604.418462 500.544 604.418462 
+L 14.4 604.418462 
+Q 8.64 604.418462 8.64 610.178462 
+L 8.64 735.314462 
+Q 8.64 741.074462 14.4 741.074462 
+z
+" style="fill: #f3f2ee; stroke: #d9d8d3; stroke-width: 0.8; stroke-linejoin: miter"/>
+  </g>
+  <g id="text_33">
+   <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(8.64 17.758125)">Dos 160 casos sorteados da lista do GGB de 2019, 50 (31,3%) puderam</text>
+   <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(8.64 31.291594)">ser verificados nos critérios do paper; LGBTfobia aparece como</text>
+   <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(8.64 44.273062)">motivo em só 3 das 73 mortes violentas</text>
+  </g>
+  <g id="text_34">
+   <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(8.64 62.838625)">Lista de casos do relatório de 2019 do GGB, amostra aleatória de 160: em cada etapa, quantos casos</text>
+   <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(8.64 72.6927)">continuam a poder ser conferidos</text>
+  </g>
+  <g id="text_35">
+   <text style="font-weight: 700; font-size: 8.6px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f1f1e" x="18" y="618.153118" transform="rotate(-0 18 618.153118)">Como ler</text>
+  </g>
+  <g id="text_36">
+   <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(18 630.41718)">Em (a), cada barra é quantos casos passaram por uma etapa de conferência; a que sobra à direita explica o</text>
+   <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(18 639.861812)">que saiu: casos sem matéria recuperada ou fora do critério são casos que não deu para verificar, nunca</text>
+   <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(18 649.306444)">casos considerados falsos. A largura é proporcional ao número de casos. Em (b), entre as mortes violentas</text>
+   <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(18 658.751076)">confirmadas, o que a própria fonte (matéria, polícia, família) diz ser o motivo; o motivo vem da fonte,</text>
+   <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(18 668.195708)">não do codificador. Nenhum caso é identificado: só contagens.</text>
+  </g>
+  <g id="text_37">
+   <text style="font-weight: 700; font-size: 8.6px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f1f1e" x="18" y="687.273118" transform="rotate(-0 18 687.273118)">Termos</text>
+  </g>
+  <g id="text_38">
+   <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(18 699.53718)">verificável = a matéria foi recuperada, é do caso, confirma morte violenta e identifica a vítima como</text>
+   <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(18 708.594772)">LGBT+ de forma expressa · amostra de 160 de 329 casos da lista nominal de 2019 · motivo desconhecido = a</text>
+   <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(18 718.039404)">fonte não informa motivo · “não dá para verificar” não é o mesmo que “falso”: o paper não usa essa</text>
+   <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(18 727.484036)">palavra · GGB = Grupo Gay da Bahia · latrocínio = roubo seguido de morte</text>
+  </g>
+  <g id="text_39">
+   <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(8.64 752.193212)">Fonte: paper/figures/fontes/ggb_validacao_resumo.json (origem</text>
+   <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(8.64 761.373962)">research-2026-10-21-rodada3/F3-ggb/dados/validacao_resumo.json); conferido contra codificacao_A.csv no teste.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p8ad291a697">
+   <rect x="8.64" y="114.330462" width="497.664" height="238.464"/>
+  </clipPath>
+  <clipPath id="p63564c2acf">
+   <rect x="205.632" y="425.370462" width="103.68" height="139.968"/>
+  </clipPath>
+ </defs>
+</svg>

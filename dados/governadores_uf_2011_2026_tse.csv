@@ -1,0 +1,476 @@
+uf,ano,governador,partido,inicio,fim,fonte_url,confianca,obs,partido_wiki,fonte_partido
+Acre,2011,Tião Viana,PT,2011-01-01,2011-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Acre,alta,,PT,tse
+Acre,2012,Tião Viana,PT,2012-01-01,2012-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Acre,alta,,PT,tse
+Acre,2013,Tião Viana,PT,2013-01-01,2013-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Acre,alta,,PT,tse
+Acre,2014,Tião Viana,PT,2014-01-01,2014-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Acre,alta,,PT,tse
+Acre,2015,Tião Viana,PT,2015-01-01,2015-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Acre,alta,,PT,tse
+Acre,2016,Tião Viana,PT,2016-01-01,2016-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Acre,alta,,PT,tse
+Acre,2017,Tião Viana,PT,2017-01-01,2017-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Acre,alta,,PT,tse
+Acre,2018,Tião Viana,PT,2018-01-01,2018-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Acre,alta,,PT,tse
+Acre,2019,Gladson Cameli,PP,2019-01-01,2019-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Acre,alta,,PP,tse
+Acre,2020,Gladson Cameli,PP,2020-01-01,2020-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Acre,alta,,PP,tse
+Acre,2021,Gladson Cameli,PP,2021-01-01,2021-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Acre,alta,,PP,tse
+Acre,2022,Gladson Cameli,PP,2022-01-01,2022-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Acre,alta,,PP,tse
+Acre,2023,Gladson Cameli,PP,2023-01-01,2023-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Acre,alta,,PP,tse
+Acre,2024,Gladson Cameli,PP,2024-01-01,2024-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Acre,alta,,PP,tse
+Acre,2025,Gladson Cameli,PP,2025-01-01,2025-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Acre,alta,,PP,tse
+Acre,2026,Gladson Cameli,PP,2026-01-01,2026-04-02,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Acre,alta,,PP,tse
+Acre,2026,Mailza Assis,PP,2026-04-02,,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Acre,alta,,PP,tse
+Alagoas,2011,Teotônio Vilela Filho,PSDB,2011-01-01,2011-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Alagoas,alta,,PSDB,tse
+Alagoas,2012,Teotônio Vilela Filho,PSDB,2012-01-01,2012-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Alagoas,alta,,PSDB,tse
+Alagoas,2013,Teotônio Vilela Filho,PSDB,2013-01-01,2013-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Alagoas,alta,,PSDB,tse
+Alagoas,2014,Teotônio Vilela Filho,PSDB,2014-01-01,2014-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Alagoas,alta,,PSDB,tse
+Alagoas,2015,Renan Filho,PMDB,2015-01-01,2015-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Alagoas,alta,,PMDB,tse
+Alagoas,2016,Renan Filho,PMDB,2016-01-01,2016-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Alagoas,alta,,PMDB,tse
+Alagoas,2017,Renan Filho,PMDB,2017-01-01,2017-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Alagoas,alta,,PMDB,tse
+Alagoas,2018,Renan Filho,PMDB,2018-01-01,2018-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Alagoas,alta,,PMDB,tse
+Alagoas,2019,Renan Filho,MDB,2019-01-01,2019-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Alagoas,alta,,PMDB,tse
+Alagoas,2020,Renan Filho,MDB,2020-01-01,2020-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Alagoas,alta,,PMDB,tse
+Alagoas,2021,Renan Filho,MDB,2021-01-01,2021-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Alagoas,alta,,PMDB,tse
+Alagoas,2022,Renan Filho,MDB,2022-01-01,2022-04-02,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Alagoas,alta,,PMDB,tse
+Alagoas,2022,Klever Loureiro,sem partido,2022-04-02,2022-05-15,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Alagoas,alta,interino,sem partido,fallback_wiki
+Alagoas,2022,Paulo Dantas,MDB,2022-05-15,2022-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Alagoas,alta,,MDB,fallback_wiki
+Alagoas,2023,Paulo Dantas,MDB,2023-01-01,2023-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Alagoas,alta,,MDB,tse
+Alagoas,2024,Paulo Dantas,MDB,2024-01-01,2024-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Alagoas,alta,,MDB,tse
+Alagoas,2025,Paulo Dantas,MDB,2025-01-01,2025-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Alagoas,alta,,MDB,tse
+Alagoas,2026,Paulo Dantas,MDB,2026-01-01,,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Alagoas,alta,,MDB,tse
+Amapá,2011,Camilo Capiberibe,PSB,2011-01-01,2011-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Amapá,alta,,PSB,tse
+Amapá,2012,Camilo Capiberibe,PSB,2012-01-01,2012-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Amapá,alta,,PSB,tse
+Amapá,2013,Camilo Capiberibe,PSB,2013-01-01,2013-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Amapá,alta,,PSB,tse
+Amapá,2014,Camilo Capiberibe,PSB,2014-01-01,2014-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Amapá,alta,,PSB,tse
+Amapá,2015,Waldez Góes,PDT,2015-01-01,2015-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Amapá,alta,,PDT,tse
+Amapá,2016,Waldez Góes,PDT,2016-01-01,2016-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Amapá,alta,,PDT,tse
+Amapá,2017,Waldez Góes,PDT,2017-01-01,2017-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Amapá,alta,,PDT,tse
+Amapá,2018,Waldez Góes,PDT,2018-01-01,2018-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Amapá,alta,,PDT,tse
+Amapá,2019,Waldez Góes,PDT,2019-01-01,2019-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Amapá,alta,,PDT,tse
+Amapá,2020,Waldez Góes,PDT,2020-01-01,2020-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Amapá,alta,,PDT,tse
+Amapá,2021,Waldez Góes,PDT,2021-01-01,2021-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Amapá,alta,,PDT,tse
+Amapá,2022,Waldez Góes,PDT,2022-01-01,2022-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Amapá,alta,,PDT,tse
+Amapá,2023,Clécio Luís,SD,2023-01-01,2023-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Amapá,alta,,União Brasil,tse
+Amapá,2024,Clécio Luís,SD,2024-01-01,2024-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Amapá,alta,,União Brasil,tse
+Amapá,2025,Clécio Luís,SD,2025-01-01,2025-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Amapá,alta,,União Brasil,tse
+Amapá,2026,Clécio Luís,SD,2026-01-01,,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Amapá,alta,,União Brasil,tse
+Amazonas,2011,Omar Aziz,PMN,2011-01-01,2011-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Amazonas,alta,,PSD,tse
+Amazonas,2012,Omar Aziz,PMN,2012-01-01,2012-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Amazonas,alta,,PSD,tse
+Amazonas,2013,Omar Aziz,PMN,2013-01-01,2013-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Amazonas,alta,,PSD,tse
+Amazonas,2014,Omar Aziz,PMN,2014-01-01,2014-04-04,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Amazonas,alta,,PSD,tse
+Amazonas,2014,José Melo,PROS,2014-04-04,2014-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Amazonas,alta,cassado pelo TSE,PROS,fallback_wiki
+Amazonas,2015,José Melo,PROS,2015-01-01,2015-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Amazonas,alta,cassado pelo TSE,PROS,tse
+Amazonas,2016,José Melo,PROS,2016-01-01,2016-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Amazonas,alta,cassado pelo TSE,PROS,tse
+Amazonas,2017,José Melo,PROS,2017-01-01,2017-05-09,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Amazonas,alta,cassado pelo TSE,PROS,tse
+Amazonas,2017,David Almeida,PSD,2017-05-09,2017-10-04,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Amazonas,alta,interino,PSD,fallback_wiki
+Amazonas,2017,Amazonino Mendes,PDT,2017-10-04,2017-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Amazonas,alta,,PDT,tse
+Amazonas,2018,Amazonino Mendes,PDT,2018-01-01,2018-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Amazonas,alta,,PDT,tse
+Amazonas,2019,Wilson Lima,PSC,2019-01-01,2019-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Amazonas,alta,,PSC,tse
+Amazonas,2020,Wilson Lima,PSC,2020-01-01,2020-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Amazonas,alta,,PSC,tse
+Amazonas,2021,Wilson Lima,PSC,2021-01-01,2021-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Amazonas,alta,,PSC,tse
+Amazonas,2022,Wilson Lima,PSC,2022-01-01,2022-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Amazonas,alta,,PSC,tse
+Amazonas,2023,Wilson Lima,União Brasil,2023-01-01,2023-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Amazonas,alta,reeleito; renúncia 2026,União Brasil,tse
+Amazonas,2024,Wilson Lima,União Brasil,2024-01-01,2024-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Amazonas,alta,reeleito; renúncia 2026,União Brasil,tse
+Amazonas,2025,Wilson Lima,União Brasil,2025-01-01,2025-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Amazonas,alta,reeleito; renúncia 2026,União Brasil,tse
+Amazonas,2026,Wilson Lima,União Brasil,2026-01-01,2026-04-04,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Amazonas,alta,reeleito; renúncia 2026,União Brasil,tse
+Amazonas,2026,Roberto Cidade,União Brasil,2026-04-04,,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Amazonas,alta,eleito pela ALE,União Brasil,fallback_wiki
+Bahia,2011,Jaques Wagner,PT,2011-01-01,2011-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_da_Bahia,alta,,PT,tse
+Bahia,2012,Jaques Wagner,PT,2012-01-01,2012-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_da_Bahia,alta,,PT,tse
+Bahia,2013,Jaques Wagner,PT,2013-01-01,2013-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_da_Bahia,alta,,PT,tse
+Bahia,2014,Jaques Wagner,PT,2014-01-01,2014-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_da_Bahia,alta,,PT,tse
+Bahia,2015,Rui Costa,PT,2015-01-01,2015-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_da_Bahia,media,linha 2019 da fonte truncada; término 2022 não confirmado no trecho baixado,PT,tse
+Bahia,2016,Rui Costa,PT,2016-01-01,2016-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_da_Bahia,media,linha 2019 da fonte truncada; término 2022 não confirmado no trecho baixado,PT,tse
+Bahia,2017,Rui Costa,PT,2017-01-01,2017-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_da_Bahia,media,linha 2019 da fonte truncada; término 2022 não confirmado no trecho baixado,PT,tse
+Bahia,2018,Rui Costa,PT,2018-01-01,2018-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_da_Bahia,media,linha 2019 da fonte truncada; término 2022 não confirmado no trecho baixado,PT,tse
+Bahia,2019,Rui Costa,PT,2019-01-01,2019-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_da_Bahia,media,linha 2019 da fonte truncada; término 2022 não confirmado no trecho baixado,PT,tse
+Bahia,2020,Rui Costa,PT,2020-01-01,2020-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_da_Bahia,media,linha 2019 da fonte truncada; término 2022 não confirmado no trecho baixado,PT,tse
+Bahia,2021,Rui Costa,PT,2021-01-01,2021-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_da_Bahia,media,linha 2019 da fonte truncada; término 2022 não confirmado no trecho baixado,PT,tse
+Bahia,2022,Rui Costa,PT,2022-01-01,2022-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_da_Bahia,media,linha 2019 da fonte truncada; término 2022 não confirmado no trecho baixado,PT,tse
+Bahia,2023,Jerônimo Rodrigues,PT,2023-01-01,2023-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_da_Bahia,alta,,PT,tse
+Bahia,2024,Jerônimo Rodrigues,PT,2024-01-01,2024-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_da_Bahia,alta,,PT,tse
+Bahia,2025,Jerônimo Rodrigues,PT,2025-01-01,2025-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_da_Bahia,alta,,PT,tse
+Bahia,2026,Jerônimo Rodrigues,PT,2026-01-01,,https://pt.wikipedia.org/wiki/Lista_de_governadores_da_Bahia,alta,,PT,tse
+Ceará,2011,Cid Gomes,PSB,2011-01-01,2011-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Ceará,alta,,PROS,tse
+Ceará,2012,Cid Gomes,PSB,2012-01-01,2012-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Ceará,alta,,PROS,tse
+Ceará,2013,Cid Gomes,PSB,2013-01-01,2013-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Ceará,alta,,PROS,tse
+Ceará,2014,Cid Gomes,PSB,2014-01-01,2014-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Ceará,alta,,PROS,tse
+Ceará,2015,Camilo Santana,PT,2015-01-01,2015-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Ceará,alta,,PT,tse
+Ceará,2016,Camilo Santana,PT,2016-01-01,2016-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Ceará,alta,,PT,tse
+Ceará,2017,Camilo Santana,PT,2017-01-01,2017-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Ceará,alta,,PT,tse
+Ceará,2018,Camilo Santana,PT,2018-01-01,2018-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Ceará,alta,,PT,tse
+Ceará,2019,Camilo Santana,PT,2019-01-01,2019-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Ceará,alta,,PT,tse
+Ceará,2020,Camilo Santana,PT,2020-01-01,2020-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Ceará,alta,,PT,tse
+Ceará,2021,Camilo Santana,PT,2021-01-01,2021-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Ceará,alta,,PT,tse
+Ceará,2022,Camilo Santana,PT,2022-01-01,2022-04-02,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Ceará,alta,,PT,tse
+Ceará,2022,Izolda Cela,PDT,2022-04-02,2022-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Ceará,alta,,PDT,tse
+Ceará,2023,Elmano de Freitas,PT,2023-01-01,2023-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Ceará,alta,,PT,tse
+Ceará,2024,Elmano de Freitas,PT,2024-01-01,2024-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Ceará,alta,,PT,tse
+Ceará,2025,Elmano de Freitas,PT,2025-01-01,2025-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Ceará,alta,,PT,tse
+Ceará,2026,Elmano de Freitas,PT,2026-01-01,,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Ceará,alta,,PT,tse
+Distrito Federal,2011,Agnelo Queiroz,PT,2011-01-01,2011-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Distrito_Federal,alta,,PT,tse
+Distrito Federal,2012,Agnelo Queiroz,PT,2012-01-01,2012-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Distrito_Federal,alta,,PT,tse
+Distrito Federal,2013,Agnelo Queiroz,PT,2013-01-01,2013-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Distrito_Federal,alta,,PT,tse
+Distrito Federal,2014,Agnelo Queiroz,PT,2014-01-01,2014-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Distrito_Federal,alta,,PT,tse
+Distrito Federal,2015,Rodrigo Rollemberg,PSB,2015-01-01,2015-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Distrito_Federal,alta,,PSB,tse
+Distrito Federal,2016,Rodrigo Rollemberg,PSB,2016-01-01,2016-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Distrito_Federal,alta,,PSB,tse
+Distrito Federal,2017,Rodrigo Rollemberg,PSB,2017-01-01,2017-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Distrito_Federal,alta,,PSB,tse
+Distrito Federal,2018,Rodrigo Rollemberg,PSB,2018-01-01,2018-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Distrito_Federal,alta,,PSB,tse
+Distrito Federal,2019,Ibaneis Rocha,MDB,2019-01-01,2019-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Distrito_Federal,alta,afastado,MDB,tse
+Distrito Federal,2020,Ibaneis Rocha,MDB,2020-01-01,2020-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Distrito_Federal,alta,afastado,MDB,tse
+Distrito Federal,2021,Ibaneis Rocha,MDB,2021-01-01,2021-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Distrito_Federal,alta,afastado,MDB,tse
+Distrito Federal,2022,Ibaneis Rocha,MDB,2022-01-01,2022-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Distrito_Federal,alta,afastado,MDB,tse
+Distrito Federal,2023,Ibaneis Rocha,MDB,2023-01-01,2023-01-09,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Distrito_Federal,alta,afastado,MDB,tse
+Distrito Federal,2023,Celina Leão,PP,2023-01-09,2023-03-15,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Distrito_Federal,alta,interina,PP,tse
+Distrito Federal,2023,Ibaneis Rocha,MDB,2023-03-15,2023-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Distrito_Federal,alta,retorno,MDB,tse
+Distrito Federal,2024,Ibaneis Rocha,MDB,2024-01-01,2024-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Distrito_Federal,alta,retorno,MDB,tse
+Distrito Federal,2025,Ibaneis Rocha,MDB,2025-01-01,2025-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Distrito_Federal,alta,retorno,MDB,tse
+Distrito Federal,2026,Ibaneis Rocha,MDB,2026-01-01,2026-03-30,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Distrito_Federal,alta,retorno,MDB,tse
+Distrito Federal,2026,Celina Leão,PP,2026-03-30,,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Distrito_Federal,alta,,PP,tse
+Espírito Santo,2011,Renato Casagrande,PSB,2011-01-01,2011-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Espírito_Santo,alta,,PSB,tse
+Espírito Santo,2012,Renato Casagrande,PSB,2012-01-01,2012-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Espírito_Santo,alta,,PSB,tse
+Espírito Santo,2013,Renato Casagrande,PSB,2013-01-01,2013-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Espírito_Santo,alta,,PSB,tse
+Espírito Santo,2014,Renato Casagrande,PSB,2014-01-01,2014-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Espírito_Santo,alta,,PSB,tse
+Espírito Santo,2015,Paulo Hartung,PMDB,2015-01-01,2015-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Espírito_Santo,alta,,PMDB,tse
+Espírito Santo,2016,Paulo Hartung,PMDB,2016-01-01,2016-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Espírito_Santo,alta,,PMDB,tse
+Espírito Santo,2017,Paulo Hartung,PMDB,2017-01-01,2017-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Espírito_Santo,alta,,PMDB,tse
+Espírito Santo,2018,Paulo Hartung,PMDB,2018-01-01,2018-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Espírito_Santo,alta,,PMDB,tse
+Espírito Santo,2019,Renato Casagrande,PSB,2019-01-01,2019-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Espírito_Santo,alta,,PSB,tse
+Espírito Santo,2020,Renato Casagrande,PSB,2020-01-01,2020-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Espírito_Santo,alta,,PSB,tse
+Espírito Santo,2021,Renato Casagrande,PSB,2021-01-01,2021-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Espírito_Santo,alta,,PSB,tse
+Espírito Santo,2022,Renato Casagrande,PSB,2022-01-01,2022-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Espírito_Santo,alta,,PSB,tse
+Espírito Santo,2023,Renato Casagrande,PSB,2023-01-01,2023-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Espírito_Santo,media,"CORRIGIDO 2026-10-21: o CSV tinha Ricardo Ferraço (vice) em 2023; TSE 2022: eleito governador = Renato Casagrande (PSB). Data de saída 2026-04 herdada, não conferida",PSB,tse
+Espírito Santo,2024,Renato Casagrande,PSB,2024-01-01,2024-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Espírito_Santo,media,"CORRIGIDO 2026-10-21: o CSV tinha Ricardo Ferraço (vice) em 2023; TSE 2022: eleito governador = Renato Casagrande (PSB). Data de saída 2026-04 herdada, não conferida",PSB,tse
+Espírito Santo,2025,Renato Casagrande,PSB,2025-01-01,2025-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Espírito_Santo,media,"CORRIGIDO 2026-10-21: o CSV tinha Ricardo Ferraço (vice) em 2023; TSE 2022: eleito governador = Renato Casagrande (PSB). Data de saída 2026-04 herdada, não conferida",PSB,tse
+Espírito Santo,2026,Renato Casagrande,PSB,2026-01-01,2026-04-01,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Espírito_Santo,media,"CORRIGIDO 2026-10-21: o CSV tinha Ricardo Ferraço (vice) em 2023; TSE 2022: eleito governador = Renato Casagrande (PSB). Data de saída 2026-04 herdada, não conferida",PSB,tse
+Espírito Santo,2026,Ricardo Ferraço,PSDB,2026-04-02,,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Espírito_Santo,alta,vice assumiu,MDB,tse
+Goiás,2011,Marconi Perillo,PSDB,2011-01-01,2011-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Goiás,alta,reeleito 2014,PSDB,tse
+Goiás,2012,Marconi Perillo,PSDB,2012-01-01,2012-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Goiás,alta,reeleito 2014,PSDB,tse
+Goiás,2013,Marconi Perillo,PSDB,2013-01-01,2013-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Goiás,alta,reeleito 2014,PSDB,tse
+Goiás,2014,Marconi Perillo,PSDB,2014-01-01,2014-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Goiás,alta,reeleito 2014,PSDB,tse
+Goiás,2015,Marconi Perillo,PSDB,2015-01-01,2015-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Goiás,alta,reeleito 2014,PSDB,tse
+Goiás,2016,Marconi Perillo,PSDB,2016-01-01,2016-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Goiás,alta,reeleito 2014,PSDB,tse
+Goiás,2017,Marconi Perillo,PSDB,2017-01-01,2017-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Goiás,alta,reeleito 2014,PSDB,tse
+Goiás,2018,Marconi Perillo,PSDB,2018-01-01,2018-04-07,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Goiás,alta,reeleito 2014,PSDB,tse
+Goiás,2018,José Eliton Júnior,PP,2018-04-07,2018-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Goiás,media,vice assumiu; partido do vice não aparece no trecho baixado,,tse
+Goiás,2019,Ronaldo Caiado,DEM,2019-01-01,2019-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Goiás,alta,,DEM,tse
+Goiás,2020,Ronaldo Caiado,DEM,2020-01-01,2020-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Goiás,alta,,DEM,tse
+Goiás,2021,Ronaldo Caiado,DEM,2021-01-01,2021-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Goiás,alta,,DEM,tse
+Goiás,2022,Ronaldo Caiado,DEM,2022-01-01,2022-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Goiás,alta,,DEM,tse
+Goiás,2023,Ronaldo Caiado,União Brasil,2023-01-01,2023-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Goiás,media,"CORRIGIDO 2026-10-21: o CSV tinha Daniel Vilela (vice) em 2023; TSE 2022: eleito governador = Ronaldo Caiado (UNIÃO). Data de saída 2026-03 herdada, não conferida",União Brasil,tse
+Goiás,2024,Ronaldo Caiado,União Brasil,2024-01-01,2024-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Goiás,media,"CORRIGIDO 2026-10-21: o CSV tinha Daniel Vilela (vice) em 2023; TSE 2022: eleito governador = Ronaldo Caiado (UNIÃO). Data de saída 2026-03 herdada, não conferida",União Brasil,tse
+Goiás,2025,Ronaldo Caiado,União Brasil,2025-01-01,2025-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Goiás,media,"CORRIGIDO 2026-10-21: o CSV tinha Daniel Vilela (vice) em 2023; TSE 2022: eleito governador = Ronaldo Caiado (UNIÃO). Data de saída 2026-03 herdada, não conferida",União Brasil,tse
+Goiás,2026,Ronaldo Caiado,União Brasil,2026-01-01,2026-03-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Goiás,media,"CORRIGIDO 2026-10-21: o CSV tinha Daniel Vilela (vice) em 2023; TSE 2022: eleito governador = Ronaldo Caiado (UNIÃO). Data de saída 2026-03 herdada, não conferida",União Brasil,tse
+Goiás,2026,Daniel Vilela,MDB,2026-03-31,,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Goiás,alta,vice assumiu; partido como listado,MDB,tse
+Maranhão,2011,Roseana Sarney,PMDB,2011-01-01,2011-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Maranhão,alta,,PMDB,tse
+Maranhão,2012,Roseana Sarney,PMDB,2012-01-01,2012-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Maranhão,alta,,PMDB,tse
+Maranhão,2013,Roseana Sarney,PMDB,2013-01-01,2013-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Maranhão,alta,,PMDB,tse
+Maranhão,2014,Roseana Sarney,PMDB,2014-01-01,2014-12-10,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Maranhão,alta,,PMDB,tse
+Maranhão,2014,Arnaldo Melo,PMDB,2014-12-10,2014-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Maranhão,alta,interino,PMDB,fallback_wiki
+Maranhão,2015,Flávio Dino,PCdoB,2015-01-01,2015-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Maranhão,alta,,PCdoB,tse
+Maranhão,2016,Flávio Dino,PCdoB,2016-01-01,2016-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Maranhão,alta,,PCdoB,tse
+Maranhão,2017,Flávio Dino,PCdoB,2017-01-01,2017-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Maranhão,alta,,PCdoB,tse
+Maranhão,2018,Flávio Dino,PCdoB,2018-01-01,2018-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Maranhão,alta,,PCdoB,tse
+Maranhão,2019,Flávio Dino,PCdoB,2019-01-01,2019-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Maranhão,alta,,PCdoB,tse
+Maranhão,2020,Flávio Dino,PCdoB,2020-01-01,2020-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Maranhão,alta,,PCdoB,tse
+Maranhão,2021,Flávio Dino,PCdoB,2021-01-01,2021-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Maranhão,alta,,PCdoB,tse
+Maranhão,2022,Flávio Dino,PCdoB,2022-01-01,2022-04-02,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Maranhão,alta,,PCdoB,tse
+Maranhão,2022,Carlos Brandão,PRB,2022-04-02,2022-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Maranhão,alta,,PSB,tse
+Maranhão,2023,Carlos Brandão,PSB,2023-01-01,2023-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Maranhão,alta,,PSB,tse
+Maranhão,2024,Carlos Brandão,PSB,2024-01-01,2024-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Maranhão,alta,,PSB,tse
+Maranhão,2025,Carlos Brandão,PSB,2025-01-01,2025-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Maranhão,alta,,PSB,tse
+Maranhão,2026,Carlos Brandão,PSB,2026-01-01,,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Maranhão,alta,,PSB,tse
+Mato Grosso,2011,Silval Barbosa,PMDB,2011-01-01,2011-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Mato_Grosso,alta,,PMDB,tse
+Mato Grosso,2012,Silval Barbosa,PMDB,2012-01-01,2012-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Mato_Grosso,alta,,PMDB,tse
+Mato Grosso,2013,Silval Barbosa,PMDB,2013-01-01,2013-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Mato_Grosso,alta,,PMDB,tse
+Mato Grosso,2014,Silval Barbosa,PMDB,2014-01-01,2014-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Mato_Grosso,alta,,PMDB,tse
+Mato Grosso,2015,Pedro Taques,PDT,2015-01-01,2015-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Mato_Grosso,alta,,PDT,tse
+Mato Grosso,2016,Pedro Taques,PDT,2016-01-01,2016-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Mato_Grosso,alta,,PDT,tse
+Mato Grosso,2017,Pedro Taques,PDT,2017-01-01,2017-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Mato_Grosso,alta,,PDT,tse
+Mato Grosso,2018,Pedro Taques,PDT,2018-01-01,2018-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Mato_Grosso,alta,,PDT,tse
+Mato Grosso,2019,Mauro Mendes,DEM,2019-01-01,2019-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Mato_Grosso,alta,,DEM,tse
+Mato Grosso,2020,Mauro Mendes,DEM,2020-01-01,2020-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Mato_Grosso,alta,,DEM,tse
+Mato Grosso,2021,Mauro Mendes,DEM,2021-01-01,2021-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Mato_Grosso,alta,,DEM,tse
+Mato Grosso,2022,Mauro Mendes,DEM,2022-01-01,2022-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Mato_Grosso,alta,,DEM,tse
+Mato Grosso,2023,Mauro Mendes,União Brasil,2023-01-01,2023-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Mato_Grosso,alta,renúncia 2026,União Brasil,tse
+Mato Grosso,2024,Mauro Mendes,União Brasil,2024-01-01,2024-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Mato_Grosso,alta,renúncia 2026,União Brasil,tse
+Mato Grosso,2025,Mauro Mendes,União Brasil,2025-01-01,2025-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Mato_Grosso,alta,renúncia 2026,União Brasil,tse
+Mato Grosso,2026,Mauro Mendes,União Brasil,2026-01-01,2026-03-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Mato_Grosso,alta,renúncia 2026,União Brasil,tse
+Mato Grosso,2026,Otaviano Pivetta,Republicanos,2026-03-31,,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Mato_Grosso,alta,vice assumiu,Republicanos,tse
+Mato Grosso do Sul,2011,André Puccinelli,PMDB,2011-01-01,2011-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Mato_Grosso_do_Sul,alta,,PMDB,tse
+Mato Grosso do Sul,2012,André Puccinelli,PMDB,2012-01-01,2012-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Mato_Grosso_do_Sul,alta,,PMDB,tse
+Mato Grosso do Sul,2013,André Puccinelli,PMDB,2013-01-01,2013-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Mato_Grosso_do_Sul,alta,,PMDB,tse
+Mato Grosso do Sul,2014,André Puccinelli,PMDB,2014-01-01,2014-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Mato_Grosso_do_Sul,alta,,PMDB,tse
+Mato Grosso do Sul,2015,Reinaldo Azambuja,PSDB,2015-01-01,2015-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Mato_Grosso_do_Sul,alta,,PSDB,tse
+Mato Grosso do Sul,2016,Reinaldo Azambuja,PSDB,2016-01-01,2016-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Mato_Grosso_do_Sul,alta,,PSDB,tse
+Mato Grosso do Sul,2017,Reinaldo Azambuja,PSDB,2017-01-01,2017-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Mato_Grosso_do_Sul,alta,,PSDB,tse
+Mato Grosso do Sul,2018,Reinaldo Azambuja,PSDB,2018-01-01,2018-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Mato_Grosso_do_Sul,alta,,PSDB,tse
+Mato Grosso do Sul,2019,Reinaldo Azambuja,PSDB,2019-01-01,2019-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Mato_Grosso_do_Sul,alta,,PSDB,tse
+Mato Grosso do Sul,2020,Reinaldo Azambuja,PSDB,2020-01-01,2020-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Mato_Grosso_do_Sul,alta,,PSDB,tse
+Mato Grosso do Sul,2021,Reinaldo Azambuja,PSDB,2021-01-01,2021-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Mato_Grosso_do_Sul,alta,,PSDB,tse
+Mato Grosso do Sul,2022,Reinaldo Azambuja,PSDB,2022-01-01,2022-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Mato_Grosso_do_Sul,alta,,PSDB,tse
+Mato Grosso do Sul,2023,Eduardo Riedel,PSDB,2023-01-01,2023-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Mato_Grosso_do_Sul,alta,,PSDB,tse
+Mato Grosso do Sul,2024,Eduardo Riedel,PSDB,2024-01-01,2024-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Mato_Grosso_do_Sul,alta,,PSDB,tse
+Mato Grosso do Sul,2025,Eduardo Riedel,PSDB,2025-01-01,2025-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Mato_Grosso_do_Sul,alta,,PSDB,tse
+Mato Grosso do Sul,2026,Eduardo Riedel,PSDB,2026-01-01,,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Mato_Grosso_do_Sul,alta,,PSDB,tse
+Minas Gerais,2011,Antônio Anastasia,PSDB,2011-01-01,2011-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Minas_Gerais,alta,,PSDB,tse
+Minas Gerais,2012,Antônio Anastasia,PSDB,2012-01-01,2012-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Minas_Gerais,alta,,PSDB,tse
+Minas Gerais,2013,Antônio Anastasia,PSDB,2013-01-01,2013-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Minas_Gerais,alta,,PSDB,tse
+Minas Gerais,2014,Antônio Anastasia,PSDB,2014-01-01,2014-04-04,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Minas_Gerais,alta,,PSDB,tse
+Minas Gerais,2014,Alberto Pinto Coelho,PP,2014-04-04,2014-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Minas_Gerais,alta,vice assumiu,PP,fallback_wiki
+Minas Gerais,2015,Fernando Pimentel,PT,2015-01-01,2015-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Minas_Gerais,alta,,PT,tse
+Minas Gerais,2016,Fernando Pimentel,PT,2016-01-01,2016-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Minas_Gerais,alta,,PT,tse
+Minas Gerais,2017,Fernando Pimentel,PT,2017-01-01,2017-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Minas_Gerais,alta,,PT,tse
+Minas Gerais,2018,Fernando Pimentel,PT,2018-01-01,2018-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Minas_Gerais,alta,,PT,tse
+Minas Gerais,2019,Romeu Zema,Novo,2019-01-01,2019-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Minas_Gerais,alta,,Novo,tse
+Minas Gerais,2020,Romeu Zema,Novo,2020-01-01,2020-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Minas_Gerais,alta,,Novo,tse
+Minas Gerais,2021,Romeu Zema,Novo,2021-01-01,2021-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Minas_Gerais,alta,,Novo,tse
+Minas Gerais,2022,Romeu Zema,Novo,2022-01-01,2022-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Minas_Gerais,alta,,Novo,tse
+Minas Gerais,2023,Romeu Zema,Novo,2023-01-01,2023-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Minas_Gerais,alta,,Novo,tse
+Minas Gerais,2024,Romeu Zema,Novo,2024-01-01,2024-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Minas_Gerais,alta,,Novo,tse
+Minas Gerais,2025,Romeu Zema,Novo,2025-01-01,2025-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Minas_Gerais,alta,,Novo,tse
+Minas Gerais,2026,Romeu Zema,Novo,2026-01-01,2026-03-22,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Minas_Gerais,alta,,Novo,tse
+Minas Gerais,2026,Mateus Simões,Novo,2026-03-22,,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Minas_Gerais,alta,vice assumiu,PSD,tse
+Pará,2011,Simão Jatene,PSDB,2011-01-01,2011-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Pará,alta,reeleito 2014,PSDB,tse
+Pará,2012,Simão Jatene,PSDB,2012-01-01,2012-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Pará,alta,reeleito 2014,PSDB,tse
+Pará,2013,Simão Jatene,PSDB,2013-01-01,2013-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Pará,alta,reeleito 2014,PSDB,tse
+Pará,2014,Simão Jatene,PSDB,2014-01-01,2014-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Pará,alta,reeleito 2014,PSDB,tse
+Pará,2015,Simão Jatene,PSDB,2015-01-01,2015-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Pará,alta,reeleito 2014,PSDB,tse
+Pará,2016,Simão Jatene,PSDB,2016-01-01,2016-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Pará,alta,reeleito 2014,PSDB,tse
+Pará,2017,Simão Jatene,PSDB,2017-01-01,2017-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Pará,alta,reeleito 2014,PSDB,tse
+Pará,2018,Simão Jatene,PSDB,2018-01-01,2018-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Pará,alta,reeleito 2014,PSDB,tse
+Pará,2019,Helder Barbalho,MDB,2019-01-01,2019-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Pará,alta,reeleito 2022,MDB,tse
+Pará,2020,Helder Barbalho,MDB,2020-01-01,2020-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Pará,alta,reeleito 2022,MDB,tse
+Pará,2021,Helder Barbalho,MDB,2021-01-01,2021-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Pará,alta,reeleito 2022,MDB,tse
+Pará,2022,Helder Barbalho,MDB,2022-01-01,2022-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Pará,alta,reeleito 2022,MDB,tse
+Pará,2023,Helder Barbalho,MDB,2023-01-01,2023-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Pará,alta,reeleito 2022,MDB,tse
+Pará,2024,Helder Barbalho,MDB,2024-01-01,2024-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Pará,alta,reeleito 2022,MDB,tse
+Pará,2025,Helder Barbalho,MDB,2025-01-01,2025-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Pará,alta,reeleito 2022,MDB,tse
+Pará,2026,Helder Barbalho,MDB,2026-01-01,2026-04-02,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Pará,alta,reeleito 2022,MDB,tse
+Pará,2026,Hana Ghassan,MDB,2026-04-02,,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Pará,alta,vice assumiu,MDB,tse
+Paraíba,2011,Ricardo Coutinho,PSB,2011-01-01,2011-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_da_Paraíba,alta,,PSB,tse
+Paraíba,2012,Ricardo Coutinho,PSB,2012-01-01,2012-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_da_Paraíba,alta,,PSB,tse
+Paraíba,2013,Ricardo Coutinho,PSB,2013-01-01,2013-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_da_Paraíba,alta,,PSB,tse
+Paraíba,2014,Ricardo Coutinho,PSB,2014-01-01,2014-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_da_Paraíba,alta,,PSB,tse
+Paraíba,2015,Ricardo Coutinho,PSB,2015-01-01,2015-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_da_Paraíba,alta,,PSB,tse
+Paraíba,2016,Ricardo Coutinho,PSB,2016-01-01,2016-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_da_Paraíba,alta,,PSB,tse
+Paraíba,2017,Ricardo Coutinho,PSB,2017-01-01,2017-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_da_Paraíba,alta,,PSB,tse
+Paraíba,2018,Ricardo Coutinho,PSB,2018-01-01,2018-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_da_Paraíba,alta,,PSB,tse
+Paraíba,2019,João Azevêdo,PSB,2019-01-01,2019-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_da_Paraíba,alta,,PSB,tse
+Paraíba,2020,João Azevêdo,PSB,2020-01-01,2020-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_da_Paraíba,alta,,PSB,tse
+Paraíba,2021,João Azevêdo,PSB,2021-01-01,2021-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_da_Paraíba,alta,,PSB,tse
+Paraíba,2022,João Azevêdo,PSB,2022-01-01,2022-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_da_Paraíba,alta,,PSB,tse
+Paraíba,2023,João Azevêdo,PSB,2023-01-01,2023-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_da_Paraíba,alta,,PSB,tse
+Paraíba,2024,João Azevêdo,PSB,2024-01-01,2024-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_da_Paraíba,alta,,PSB,tse
+Paraíba,2025,João Azevêdo,PSB,2025-01-01,2025-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_da_Paraíba,alta,,PSB,tse
+Paraíba,2026,João Azevêdo,PSB,2026-01-01,2026-04-02,https://pt.wikipedia.org/wiki/Lista_de_governadores_da_Paraíba,alta,,PSB,tse
+Paraíba,2026,Lucas Ribeiro,PP,2026-04-02,,https://pt.wikipedia.org/wiki/Lista_de_governadores_da_Paraíba,alta,vice assumiu,PP,tse
+Paraná,2011,Beto Richa,PSDB,2011-01-01,2011-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Paraná,alta,,PSDB,tse
+Paraná,2012,Beto Richa,PSDB,2012-01-01,2012-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Paraná,alta,,PSDB,tse
+Paraná,2013,Beto Richa,PSDB,2013-01-01,2013-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Paraná,alta,,PSDB,tse
+Paraná,2014,Beto Richa,PSDB,2014-01-01,2014-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Paraná,alta,,PSDB,tse
+Paraná,2015,Beto Richa,PSDB,2015-01-01,2015-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Paraná,alta,,PSDB,tse
+Paraná,2016,Beto Richa,PSDB,2016-01-01,2016-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Paraná,alta,,PSDB,tse
+Paraná,2017,Beto Richa,PSDB,2017-01-01,2017-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Paraná,alta,,PSDB,tse
+Paraná,2018,Beto Richa,PSDB,2018-01-01,2018-04-06,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Paraná,alta,,PSDB,tse
+Paraná,2018,Cida Borghetti,PROS,2018-04-06,2018-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Paraná,alta,vice assumiu,PP,tse
+Paraná,2019,Ratinho Júnior,PSD,2019-01-01,2019-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Paraná,alta,,PSD,tse
+Paraná,2020,Ratinho Júnior,PSD,2020-01-01,2020-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Paraná,alta,,PSD,tse
+Paraná,2021,Ratinho Júnior,PSD,2021-01-01,2021-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Paraná,alta,,PSD,tse
+Paraná,2022,Ratinho Júnior,PSD,2022-01-01,2022-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Paraná,alta,,PSD,tse
+Paraná,2023,Ratinho Júnior,PSD,2023-01-01,2023-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Paraná,alta,,PSD,tse
+Paraná,2024,Ratinho Júnior,PSD,2024-01-01,2024-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Paraná,alta,,PSD,tse
+Paraná,2025,Ratinho Júnior,PSD,2025-01-01,2025-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Paraná,alta,,PSD,tse
+Paraná,2026,Ratinho Júnior,PSD,2026-01-01,,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Paraná,alta,,PSD,tse
+Pernambuco,2011,Eduardo Campos,PSB,2011-01-01,2011-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Pernambuco,alta,,PSB,tse
+Pernambuco,2012,Eduardo Campos,PSB,2012-01-01,2012-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Pernambuco,alta,,PSB,tse
+Pernambuco,2013,Eduardo Campos,PSB,2013-01-01,2013-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Pernambuco,alta,,PSB,tse
+Pernambuco,2014,Eduardo Campos,PSB,2014-01-01,2014-04-04,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Pernambuco,alta,,PSB,tse
+Pernambuco,2014,João Lyra Neto,PSB,2014-04-04,2014-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Pernambuco,alta,vice assumiu,PSB,fallback_wiki
+Pernambuco,2015,Paulo Câmara,PSB,2015-01-01,2015-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Pernambuco,alta,,PSB,tse
+Pernambuco,2016,Paulo Câmara,PSB,2016-01-01,2016-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Pernambuco,alta,,PSB,tse
+Pernambuco,2017,Paulo Câmara,PSB,2017-01-01,2017-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Pernambuco,alta,,PSB,tse
+Pernambuco,2018,Paulo Câmara,PSB,2018-01-01,2018-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Pernambuco,alta,,PSB,tse
+Pernambuco,2019,Paulo Câmara,PSB,2019-01-01,2019-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Pernambuco,alta,,PSB,tse
+Pernambuco,2020,Paulo Câmara,PSB,2020-01-01,2020-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Pernambuco,alta,,PSB,tse
+Pernambuco,2021,Paulo Câmara,PSB,2021-01-01,2021-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Pernambuco,alta,,PSB,tse
+Pernambuco,2022,Paulo Câmara,PSB,2022-01-01,2022-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Pernambuco,alta,,PSB,tse
+Pernambuco,2023,Raquel Lyra,PSDB,2023-01-01,2023-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Pernambuco,alta,,PSDB,tse
+Pernambuco,2024,Raquel Lyra,PSDB,2024-01-01,2024-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Pernambuco,alta,,PSDB,tse
+Pernambuco,2025,Raquel Lyra,PSDB,2025-01-01,2025-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Pernambuco,alta,,PSDB,tse
+Pernambuco,2026,Raquel Lyra,PSDB,2026-01-01,,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Pernambuco,alta,,PSDB,tse
+Piauí,2011,Wilson Martins,PSB,2011-01-01,2011-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Piauí,alta,,PSB,tse
+Piauí,2012,Wilson Martins,PSB,2012-01-01,2012-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Piauí,alta,,PSB,tse
+Piauí,2013,Wilson Martins,PSB,2013-01-01,2013-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Piauí,alta,,PSB,tse
+Piauí,2014,Wilson Martins,PSB,2014-01-01,2014-04-04,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Piauí,alta,,PSB,tse
+Piauí,2014,Zé Filho,PMDB,2014-04-04,2014-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Piauí,alta,vice assumiu,PMDB,fallback_wiki
+Piauí,2015,Wellington Dias,PT,2015-01-01,2015-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Piauí,alta,,PT,tse
+Piauí,2016,Wellington Dias,PT,2016-01-01,2016-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Piauí,alta,,PT,tse
+Piauí,2017,Wellington Dias,PT,2017-01-01,2017-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Piauí,alta,,PT,tse
+Piauí,2018,Wellington Dias,PT,2018-01-01,2018-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Piauí,alta,,PT,tse
+Piauí,2019,Wellington Dias,PT,2019-01-01,2019-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Piauí,alta,,PT,tse
+Piauí,2020,Wellington Dias,PT,2020-01-01,2020-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Piauí,alta,,PT,tse
+Piauí,2021,Wellington Dias,PT,2021-01-01,2021-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Piauí,alta,,PT,tse
+Piauí,2022,Wellington Dias,PT,2022-01-01,2022-03-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Piauí,alta,,PT,tse
+Piauí,2022,Regina Sousa,PT,2022-03-31,2022-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Piauí,alta,vice assumiu,PT,tse
+Piauí,2023,Rafael Fonteles,PT,2023-01-01,2023-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Piauí,alta,,PT,tse
+Piauí,2024,Rafael Fonteles,PT,2024-01-01,2024-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Piauí,alta,,PT,tse
+Piauí,2025,Rafael Fonteles,PT,2025-01-01,2025-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Piauí,alta,,PT,tse
+Piauí,2026,Rafael Fonteles,PT,2026-01-01,,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Piauí,alta,,PT,tse
+Rio de Janeiro,2011,Sérgio Cabral,PMDB,2011-01-01,2011-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_de_Janeiro,alta,,PMDB,tse
+Rio de Janeiro,2012,Sérgio Cabral,PMDB,2012-01-01,2012-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_de_Janeiro,alta,,PMDB,tse
+Rio de Janeiro,2013,Sérgio Cabral,PMDB,2013-01-01,2013-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_de_Janeiro,alta,,PMDB,tse
+Rio de Janeiro,2014,Sérgio Cabral,PMDB,2014-01-01,2014-04-03,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_de_Janeiro,alta,,PMDB,tse
+Rio de Janeiro,2014,Luiz Fernando Pezão,PMDB,2014-04-04,2014-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_de_Janeiro,alta,,PMDB,fallback_wiki
+Rio de Janeiro,2015,Luiz Fernando Pezão,PMDB,2015-01-01,2015-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_de_Janeiro,alta,,PMDB,tse
+Rio de Janeiro,2016,Luiz Fernando Pezão,PMDB,2016-01-01,2016-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_de_Janeiro,alta,,PMDB,tse
+Rio de Janeiro,2017,Luiz Fernando Pezão,PMDB,2017-01-01,2017-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_de_Janeiro,alta,,PMDB,tse
+Rio de Janeiro,2018,Luiz Fernando Pezão,PMDB,2018-01-01,2018-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_de_Janeiro,alta,,PMDB,tse
+Rio de Janeiro,2019,Wilson Witzel,PSC,2019-01-01,2019-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_de_Janeiro,alta,afastado,PSC,tse
+Rio de Janeiro,2020,Wilson Witzel,PSC,2020-01-01,2020-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_de_Janeiro,alta,afastado,PSC,tse
+Rio de Janeiro,2021,Wilson Witzel,PSC,2021-01-01,2021-04-30,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_de_Janeiro,alta,afastado,PSC,tse
+Rio de Janeiro,2021,Cláudio Castro,PSC,2021-05-01,2021-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_de_Janeiro,alta,partido como listado na fonte,PSC,tse
+Rio de Janeiro,2022,Cláudio Castro,PSC,2022-01-01,2022-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_de_Janeiro,alta,partido como listado na fonte,PSC,tse
+Rio de Janeiro,2023,Cláudio Castro,PL,2023-01-01,2023-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_de_Janeiro,alta,partido como listado na fonte,PSC,tse
+Rio de Janeiro,2024,Cláudio Castro,PL,2024-01-01,2024-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_de_Janeiro,alta,partido como listado na fonte,PSC,tse
+Rio de Janeiro,2025,Cláudio Castro,PL,2025-01-01,2025-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_de_Janeiro,alta,partido como listado na fonte,PSC,tse
+Rio de Janeiro,2026,Cláudio Castro,PL,2026-01-01,2026-03-23,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_de_Janeiro,alta,partido como listado na fonte,PSC,tse
+Rio de Janeiro,2026,Ricardo Couto,,2026-03-23,,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_de_Janeiro,alta,"presidente do TJ-RJ no cargo, interino",,fallback_wiki
+Rio Grande do Norte,2011,Rosalba Ciarlini,DEM,2011-01-01,2011-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_Grande_do_Norte,alta,,DEM,tse
+Rio Grande do Norte,2012,Rosalba Ciarlini,DEM,2012-01-01,2012-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_Grande_do_Norte,alta,,DEM,tse
+Rio Grande do Norte,2013,Rosalba Ciarlini,DEM,2013-01-01,2013-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_Grande_do_Norte,alta,,DEM,tse
+Rio Grande do Norte,2014,Rosalba Ciarlini,DEM,2014-01-01,2014-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_Grande_do_Norte,alta,,DEM,tse
+Rio Grande do Norte,2015,Robinson Faria,PSD,2015-01-01,2015-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_Grande_do_Norte,alta,,PSD,tse
+Rio Grande do Norte,2016,Robinson Faria,PSD,2016-01-01,2016-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_Grande_do_Norte,alta,,PSD,tse
+Rio Grande do Norte,2017,Robinson Faria,PSD,2017-01-01,2017-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_Grande_do_Norte,alta,,PSD,tse
+Rio Grande do Norte,2018,Robinson Faria,PSD,2018-01-01,2018-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_Grande_do_Norte,alta,,PSD,tse
+Rio Grande do Norte,2019,Fátima Bezerra,PT,2019-01-01,2019-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_Grande_do_Norte,alta,reeleita 2022,PT,tse
+Rio Grande do Norte,2020,Fátima Bezerra,PT,2020-01-01,2020-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_Grande_do_Norte,alta,reeleita 2022,PT,tse
+Rio Grande do Norte,2021,Fátima Bezerra,PT,2021-01-01,2021-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_Grande_do_Norte,alta,reeleita 2022,PT,tse
+Rio Grande do Norte,2022,Fátima Bezerra,PT,2022-01-01,2022-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_Grande_do_Norte,alta,reeleita 2022,PT,tse
+Rio Grande do Norte,2023,Fátima Bezerra,PT,2023-01-01,2023-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_Grande_do_Norte,alta,reeleita 2022,PT,tse
+Rio Grande do Norte,2024,Fátima Bezerra,PT,2024-01-01,2024-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_Grande_do_Norte,alta,reeleita 2022,PT,tse
+Rio Grande do Norte,2025,Fátima Bezerra,PT,2025-01-01,2025-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_Grande_do_Norte,alta,reeleita 2022,PT,tse
+Rio Grande do Norte,2026,Fátima Bezerra,PT,2026-01-01,,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_Grande_do_Norte,alta,reeleita 2022,PT,tse
+Rio Grande do Sul,2011,Tarso Genro,PT,2011-01-01,2011-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_Grande_do_Sul,alta,,PT,tse
+Rio Grande do Sul,2012,Tarso Genro,PT,2012-01-01,2012-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_Grande_do_Sul,alta,,PT,tse
+Rio Grande do Sul,2013,Tarso Genro,PT,2013-01-01,2013-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_Grande_do_Sul,alta,,PT,tse
+Rio Grande do Sul,2014,Tarso Genro,PT,2014-01-01,2014-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_Grande_do_Sul,alta,,PT,tse
+Rio Grande do Sul,2015,José Ivo Sartori,PMDB,2015-01-01,2015-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_Grande_do_Sul,alta,,PMDB,tse
+Rio Grande do Sul,2016,José Ivo Sartori,PMDB,2016-01-01,2016-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_Grande_do_Sul,alta,,PMDB,tse
+Rio Grande do Sul,2017,José Ivo Sartori,PMDB,2017-01-01,2017-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_Grande_do_Sul,alta,,PMDB,tse
+Rio Grande do Sul,2018,José Ivo Sartori,PMDB,2018-01-01,2018-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_Grande_do_Sul,alta,,PMDB,tse
+Rio Grande do Sul,2019,Eduardo Leite,PSDB,2019-01-01,2019-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_Grande_do_Sul,alta,,PSDB,tse
+Rio Grande do Sul,2020,Eduardo Leite,PSDB,2020-01-01,2020-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_Grande_do_Sul,alta,,PSDB,tse
+Rio Grande do Sul,2021,Eduardo Leite,PSDB,2021-01-01,2021-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_Grande_do_Sul,alta,,PSDB,tse
+Rio Grande do Sul,2022,Eduardo Leite,PSDB,2022-01-01,2022-03-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_Grande_do_Sul,alta,,PSDB,tse
+Rio Grande do Sul,2022,Ranolfo Vieira Júnior,PTB,2022-03-31,2022-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_Grande_do_Sul,alta,interino,PSDB,tse
+Rio Grande do Sul,2023,Eduardo Leite,PSDB,2023-01-01,2023-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_Grande_do_Sul,alta,reeleito 2022,PSDB,tse
+Rio Grande do Sul,2024,Eduardo Leite,PSDB,2024-01-01,2024-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_Grande_do_Sul,alta,reeleito 2022,PSDB,tse
+Rio Grande do Sul,2025,Eduardo Leite,PSDB,2025-01-01,2025-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_Grande_do_Sul,alta,reeleito 2022,PSDB,tse
+Rio Grande do Sul,2026,Eduardo Leite,PSDB,2026-01-01,,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Rio_Grande_do_Sul,alta,reeleito 2022,PSDB,tse
+Rondônia,2011,Confúcio Moura,PMDB,2011-01-01,2011-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Rondônia,alta,,PMDB,tse
+Rondônia,2012,Confúcio Moura,PMDB,2012-01-01,2012-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Rondônia,alta,,PMDB,tse
+Rondônia,2013,Confúcio Moura,PMDB,2013-01-01,2013-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Rondônia,alta,,PMDB,tse
+Rondônia,2014,Confúcio Moura,PMDB,2014-01-01,2014-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Rondônia,alta,,PMDB,tse
+Rondônia,2015,Confúcio Moura,PMDB,2015-01-01,2015-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Rondônia,alta,,PMDB,tse
+Rondônia,2016,Confúcio Moura,PMDB,2016-01-01,2016-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Rondônia,alta,,PMDB,tse
+Rondônia,2017,Confúcio Moura,PMDB,2017-01-01,2017-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Rondônia,alta,,PMDB,tse
+Rondônia,2018,Confúcio Moura,PMDB,2018-01-01,2018-04-05,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Rondônia,alta,,PMDB,tse
+Rondônia,2018,Daniel Pereira,PSB,2018-04-06,2018-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Rondônia,alta,vice assumiu,PSB,tse
+Rondônia,2019,Marcos Rocha,PSL,2019-01-01,2019-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Rondônia,alta,,PSL,tse
+Rondônia,2020,Marcos Rocha,PSL,2020-01-01,2020-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Rondônia,alta,,PSL,tse
+Rondônia,2021,Marcos Rocha,PSL,2021-01-01,2021-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Rondônia,alta,,PSL,tse
+Rondônia,2022,Marcos Rocha,PSL,2022-01-01,2022-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Rondônia,alta,,PSL,tse
+Rondônia,2023,Marcos Rocha,União Brasil,2023-01-01,2023-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Rondônia,alta,,PSL,tse
+Rondônia,2024,Marcos Rocha,União Brasil,2024-01-01,2024-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Rondônia,alta,,PSL,tse
+Rondônia,2025,Marcos Rocha,União Brasil,2025-01-01,2025-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Rondônia,alta,,PSL,tse
+Rondônia,2026,Marcos Rocha,União Brasil,2026-01-01,,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Rondônia,alta,,PSL,tse
+Roraima,2011,José Anchieta Júnior,PSDB,2011-01-01,2011-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Roraima,alta,,PSDB,tse
+Roraima,2012,José Anchieta Júnior,PSDB,2012-01-01,2012-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Roraima,alta,,PSDB,tse
+Roraima,2013,José Anchieta Júnior,PSDB,2013-01-01,2013-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Roraima,alta,,PSDB,tse
+Roraima,2014,José Anchieta Júnior,PSDB,2014-01-01,2014-04-04,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Roraima,alta,,PSDB,tse
+Roraima,2014,Chico Rodrigues,PSB,2014-04-04,2014-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Roraima,alta,vice assumiu,PSB,fallback_wiki
+Roraima,2015,Suely Campos,PP,2015-01-01,2015-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Roraima,alta,,PP,tse
+Roraima,2016,Suely Campos,PP,2016-01-01,2016-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Roraima,alta,,PP,tse
+Roraima,2017,Suely Campos,PP,2017-01-01,2017-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Roraima,alta,,PP,tse
+Roraima,2018,Suely Campos,PP,2018-01-01,2018-12-10,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Roraima,alta,,PP,tse
+Roraima,2019,Antônio Denarium,PSL,2019-01-01,2019-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Roraima,alta,,PSL,tse
+Roraima,2020,Antônio Denarium,PSL,2020-01-01,2020-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Roraima,alta,,PSL,tse
+Roraima,2021,Antônio Denarium,PSL,2021-01-01,2021-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Roraima,alta,,PSL,tse
+Roraima,2022,Antônio Denarium,PSL,2022-01-01,2022-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Roraima,alta,,PSL,tse
+Roraima,2023,Antônio Denarium,PP,2023-01-01,2023-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Roraima,alta,,PSL,tse
+Roraima,2024,Antônio Denarium,PP,2024-01-01,2024-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Roraima,alta,,PSL,tse
+Roraima,2025,Antônio Denarium,PP,2025-01-01,2025-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Roraima,alta,,PSL,tse
+Roraima,2026,Antônio Denarium,PP,2026-01-01,2026-03-27,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Roraima,alta,,PSL,tse
+Roraima,2026,Edilson Damião,Republicanos,2026-03-27,2026-04-30,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Roraima,alta,vice assumiu,União Brasil,tse
+Roraima,2026,Soldado Sampaio,Republicanos,2026-04-30,,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Roraima,alta,,Republicanos,fallback_wiki
+Santa Catarina,2011,Raimundo Colombo,DEM,2011-01-01,2011-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Santa_Catarina,alta,,DEM,tse
+Santa Catarina,2012,Raimundo Colombo,DEM,2012-01-01,2012-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Santa_Catarina,alta,,DEM,tse
+Santa Catarina,2013,Raimundo Colombo,DEM,2013-01-01,2013-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Santa_Catarina,alta,,DEM,tse
+Santa Catarina,2014,Raimundo Colombo,DEM,2014-01-01,2014-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Santa_Catarina,alta,,DEM,tse
+Santa Catarina,2015,Raimundo Colombo,PSD,2015-01-01,2015-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Santa_Catarina,alta,reeleito; partido mudou para PSD,PSD,tse
+Santa Catarina,2016,Raimundo Colombo,PSD,2016-01-01,2016-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Santa_Catarina,alta,reeleito; partido mudou para PSD,PSD,tse
+Santa Catarina,2017,Raimundo Colombo,PSD,2017-01-01,2017-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Santa_Catarina,alta,reeleito; partido mudou para PSD,PSD,tse
+Santa Catarina,2018,Raimundo Colombo,PSD,2018-01-01,2018-04-05,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Santa_Catarina,alta,reeleito; partido mudou para PSD,PSD,tse
+Santa Catarina,2018,Eduardo Moreira,PMDB,2018-04-05,2018-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Santa_Catarina,alta,vice assumiu,MDB,tse
+Santa Catarina,2019,Carlos Moisés,PSL,2019-01-01,2019-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Santa_Catarina,alta,fonte lista PSL e depois Republicanos,PSL,tse
+Santa Catarina,2020,Carlos Moisés,PSL,2020-01-01,2020-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Santa_Catarina,alta,fonte lista PSL e depois Republicanos,PSL,tse
+Santa Catarina,2021,Carlos Moisés,PSL,2021-01-01,2021-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Santa_Catarina,alta,fonte lista PSL e depois Republicanos,PSL,tse
+Santa Catarina,2022,Carlos Moisés,PSL,2022-01-01,2022-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Santa_Catarina,alta,fonte lista PSL e depois Republicanos,PSL,tse
+Santa Catarina,2023,Jorginho Mello,PL,2023-01-01,2023-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Santa_Catarina,alta,,PL,tse
+Santa Catarina,2024,Jorginho Mello,PL,2024-01-01,2024-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Santa_Catarina,alta,,PL,tse
+Santa Catarina,2025,Jorginho Mello,PL,2025-01-01,2025-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Santa_Catarina,alta,,PL,tse
+Santa Catarina,2026,Jorginho Mello,PL,2026-01-01,,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Santa_Catarina,alta,,PL,tse
+São Paulo,2011,Geraldo Alckmin,PSDB,2011-01-01,2011-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_São_Paulo,alta,,PSDB,tse
+São Paulo,2012,Geraldo Alckmin,PSDB,2012-01-01,2012-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_São_Paulo,alta,,PSDB,tse
+São Paulo,2013,Geraldo Alckmin,PSDB,2013-01-01,2013-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_São_Paulo,alta,,PSDB,tse
+São Paulo,2014,Geraldo Alckmin,PSDB,2014-01-01,2014-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_São_Paulo,alta,,PSDB,tse
+São Paulo,2015,Geraldo Alckmin,PSDB,2015-01-01,2015-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_São_Paulo,alta,,PSDB,tse
+São Paulo,2016,Geraldo Alckmin,PSDB,2016-01-01,2016-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_São_Paulo,alta,,PSDB,tse
+São Paulo,2017,Geraldo Alckmin,PSDB,2017-01-01,2017-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_São_Paulo,alta,,PSDB,tse
+São Paulo,2018,Geraldo Alckmin,PSDB,2018-01-01,2018-04-06,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_São_Paulo,alta,,PSDB,tse
+São Paulo,2018,Márcio França,PSB,2018-04-06,2018-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_São_Paulo,alta,vice assumiu,PSB,tse
+São Paulo,2019,João Doria,PSDB,2019-01-01,2019-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_São_Paulo,alta,,PSDB,tse
+São Paulo,2020,João Doria,PSDB,2020-01-01,2020-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_São_Paulo,alta,,PSDB,tse
+São Paulo,2021,João Doria,PSDB,2021-01-01,2021-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_São_Paulo,alta,,PSDB,tse
+São Paulo,2022,João Doria,PSDB,2022-01-01,2022-04-01,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_São_Paulo,alta,,PSDB,tse
+São Paulo,2022,Rodrigo Garcia,DEM,2022-04-01,2022-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_São_Paulo,alta,,PSDB,tse
+São Paulo,2023,Tarcísio de Freitas,Republicanos,2023-01-01,2023-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_São_Paulo,alta,,Republicanos,tse
+São Paulo,2024,Tarcísio de Freitas,Republicanos,2024-01-01,2024-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_São_Paulo,alta,,Republicanos,tse
+São Paulo,2025,Tarcísio de Freitas,Republicanos,2025-01-01,2025-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_São_Paulo,alta,,Republicanos,tse
+São Paulo,2026,Tarcísio de Freitas,Republicanos,2026-01-01,,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_São_Paulo,alta,,Republicanos,tse
+Sergipe,2011,Marcelo Déda,PT,2011-01-01,2011-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Sergipe,alta,falecido no cargo,PT,tse
+Sergipe,2012,Marcelo Déda,PT,2012-01-01,2012-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Sergipe,alta,falecido no cargo,PT,tse
+Sergipe,2013,Marcelo Déda,PT,2013-01-01,2013-12-02,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Sergipe,alta,falecido no cargo,PT,tse
+Sergipe,2013,Jackson Barreto,PMDB,2013-12-02,2013-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Sergipe,alta,vice assumiu; reeleito 2014,PMDB,fallback_wiki
+Sergipe,2014,Jackson Barreto,PMDB,2014-01-01,2014-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Sergipe,alta,vice assumiu; reeleito 2014,PMDB,fallback_wiki
+Sergipe,2015,Jackson Barreto,PMDB,2015-01-01,2015-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Sergipe,alta,vice assumiu; reeleito 2014,PMDB,tse
+Sergipe,2016,Jackson Barreto,PMDB,2016-01-01,2016-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Sergipe,alta,vice assumiu; reeleito 2014,PMDB,tse
+Sergipe,2017,Jackson Barreto,PMDB,2017-01-01,2017-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Sergipe,alta,vice assumiu; reeleito 2014,PMDB,tse
+Sergipe,2018,Jackson Barreto,PMDB,2018-01-01,2018-04-06,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Sergipe,alta,vice assumiu; reeleito 2014,PMDB,tse
+Sergipe,2018,Belivaldo Chagas,PSB,2018-04-06,2018-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Sergipe,alta,vice assumiu,PSD,tse
+Sergipe,2019,Belivaldo Chagas,PSD,2019-01-01,2019-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Sergipe,alta,vice assumiu,PSD,tse
+Sergipe,2020,Belivaldo Chagas,PSD,2020-01-01,2020-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Sergipe,alta,vice assumiu,PSD,tse
+Sergipe,2021,Belivaldo Chagas,PSD,2021-01-01,2021-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Sergipe,alta,vice assumiu,PSD,tse
+Sergipe,2022,Belivaldo Chagas,PSD,2022-01-01,2022-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Sergipe,alta,vice assumiu,PSD,tse
+Sergipe,2023,Fábio Mitidieri,PSD,2023-01-01,2023-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Sergipe,alta,,PSD,tse
+Sergipe,2024,Fábio Mitidieri,PSD,2024-01-01,2024-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Sergipe,alta,,PSD,tse
+Sergipe,2025,Fábio Mitidieri,PSD,2025-01-01,2025-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Sergipe,alta,,PSD,tse
+Sergipe,2026,Fábio Mitidieri,PSD,2026-01-01,,https://pt.wikipedia.org/wiki/Lista_de_governadores_de_Sergipe,alta,,PSD,tse
+Tocantins,2011,Siqueira Campos,PSDB,2011-01-01,2011-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Tocantins,alta,,PSDB,tse
+Tocantins,2012,Siqueira Campos,PSDB,2012-01-01,2012-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Tocantins,alta,,PSDB,tse
+Tocantins,2013,Siqueira Campos,PSDB,2013-01-01,2013-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Tocantins,alta,,PSDB,tse
+Tocantins,2014,Siqueira Campos,PSDB,2014-01-01,2014-04-04,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Tocantins,alta,,PSDB,tse
+Tocantins,2014,Sandoval Cardoso,SD,2014-04-04,2014-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Tocantins,alta,indireto,SD,fallback_wiki
+Tocantins,2015,Marcelo Miranda,PMDB,2015-01-01,2015-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Tocantins,alta,,PMDB,tse
+Tocantins,2016,Marcelo Miranda,PMDB,2016-01-01,2016-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Tocantins,alta,,PMDB,tse
+Tocantins,2017,Marcelo Miranda,PMDB,2017-01-01,2017-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Tocantins,alta,,PMDB,tse
+Tocantins,2018,Marcelo Miranda,PMDB,2018-01-01,2018-03-27,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Tocantins,alta,,PMDB,tse
+Tocantins,2018,Mauro Carlesse,PHS,2018-03-27,2018-04-06,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Tocantins,media,interino; datas do trecho truncadas,PHS,tse
+Tocantins,2018,Marcelo Miranda,PMDB,2018-04-06,2018-04-19,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Tocantins,media,retorno breve,PMDB,tse
+Tocantins,2018,Mauro Carlesse,PHS,2018-04-19,2018-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Tocantins,alta,indireto em 2018 e reeleito,PHS,tse
+Tocantins,2019,Mauro Carlesse,PHS,2019-01-01,2019-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Tocantins,alta,indireto em 2018 e reeleito,PHS,tse
+Tocantins,2020,Mauro Carlesse,PHS,2020-01-01,2020-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Tocantins,alta,indireto em 2018 e reeleito,PHS,tse
+Tocantins,2021,Mauro Carlesse,PHS,2021-01-01,2021-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Tocantins,alta,indireto em 2018 e reeleito,PHS,tse
+Tocantins,2022,Mauro Carlesse,PHS,2022-01-01,2022-03-11,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Tocantins,alta,indireto em 2018 e reeleito,PHS,tse
+Tocantins,2022,Wanderlei Barbosa,PHS,2022-03-11,2022-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Tocantins,alta,,Republicanos,tse
+Tocantins,2023,Wanderlei Barbosa,Republicanos,2023-01-01,2023-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Tocantins,alta,,Republicanos,tse
+Tocantins,2024,Wanderlei Barbosa,Republicanos,2024-01-01,2024-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Tocantins,alta,,Republicanos,tse
+Tocantins,2025,Wanderlei Barbosa,Republicanos,2025-01-01,2025-12-31,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Tocantins,alta,,Republicanos,tse
+Tocantins,2026,Wanderlei Barbosa,Republicanos,2026-01-01,,https://pt.wikipedia.org/wiki/Lista_de_governadores_do_Tocantins,alta,,Republicanos,tse

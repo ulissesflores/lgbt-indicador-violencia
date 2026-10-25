@@ -1,0 +1,1791 @@
+{
+ "Q1": {
+  "query": "(\"sexual orientation\"[tiab] OR \"same-sex\"[tiab]) AND mortality[tiab] AND (cohort[tiab] OR \"national death index\"[tiab] OR register*[tiab])",
+  "count": "104",
+  "items": [
+   {
+    "pmid": "42753202",
+    "title": "All-Cause and External-Cause Mortality Disparities Among Australians in Same-Sex Relationships Before and After Marriage Equality: A Nationwide Cohort Study, 2011-2023.",
+    "journal": "Am J Public Health",
+    "year": "2026",
+    "first": "Saxby K"
+   },
+   {
+    "pmid": "42748420",
+    "title": "Risk Alert System to Facilitate Universal Suicide Risk Screening in Emergency Care: Protocol for a Prediction Model and Software Development Study Using a Co-Design Approach.",
+    "journal": "JMIR Res Protoc",
+    "year": "2026",
+    "first": "López-Fernández M"
+   },
+   {
+    "pmid": "42394162",
+    "title": "Incidence of Childhood Dilated Cardiomyopathy in Sweden From 1991 to 2019: A National Population-Based Study.",
+    "journal": "Acta Paediatr",
+    "year": "2026",
+    "first": "Fadl S"
+   },
+   {
+    "pmid": "41637940",
+    "title": "The widowhood effect across diverse partnerships: Mortality risk after partner loss in same-sex and mixed-sex unions.",
+    "journal": "Soc Sci Med",
+    "year": "2026",
+    "first": "Knoblauch E"
+   },
+   {
+    "pmid": "41623867",
+    "title": "When similar is not the same: sex-specific outcomes and risk factors in thoracoabdominal aortic repair.",
+    "journal": "Front Cardiovasc Med",
+    "year": "2025",
+    "first": "Helms F"
+   },
+   {
+    "pmid": "41345590",
+    "title": "Knowledge and integration of social determinants of health among physiotherapists in Spain: a cross-sectional study.",
+    "journal": "BMC Public Health",
+    "year": "2025",
+    "first": "Torija-López L"
+   },
+   {
+    "pmid": "40809276",
+    "title": "The impact of donor-recipient size mismatch on lung transplant outcomes.",
+    "journal": "J Thorac Dis",
+    "year": "2025",
+    "first": "Poo-Fernández C"
+   },
+   {
+    "pmid": "40741698",
+    "title": "The association between HIV drug resistance testing, viral suppression and mortality in Ontario: a retrospective cohort study.",
+    "journal": "HIV Med",
+    "year": "2025",
+    "first": "Mbuagbaw L"
+   },
+   {
+    "pmid": "40188287",
+    "title": "IGFBP-1 and IGF-I in relation to adiposity and mortality from midlife to old age in the Swedish Adoption/Twin Study of Aging.",
+    "journal": "Int J Obes (Lond)",
+    "year": "2025",
+    "first": "Lewitt MS"
+   },
+   {
+    "pmid": "39899557",
+    "title": "Mortality among sexual and gender minority populations: A systematic review.",
+    "journal": "PLoS One",
+    "year": "2025",
+    "first": "Zachry CE"
+   },
+   {
+    "pmid": "39670170",
+    "title": "Contribution of infection to mortality in people with type 2 diabetes: a population-based cohort study using electronic records.",
+    "journal": "Lancet Reg Health Eur",
+    "year": "2025",
+    "first": "Carey IM"
+   },
+   {
+    "pmid": "39423992",
+    "title": "Fontan circulation and systemic disease - a retrospective cohort analysis over 35 years of follow-up.",
+    "journal": "Am Heart J",
+    "year": "2025",
+    "first": "Veldtman GR"
+   },
+   {
+    "pmid": "39167408",
+    "title": "Sex, Atrial Fibrillation, and Long-Term Mortality After Cardiac Surgery.",
+    "journal": "JAMA Netw Open",
+    "year": "2024",
+    "first": "Karamnov S"
+   },
+   {
+    "pmid": "39083795",
+    "title": "Measuring Relationship Influences on Romantic Couples' Cancer-Related Behaviors During the COVID-19 Pandemic: Protocol for a Longitudinal Online Study of Dyads and Cancer Survivors.",
+    "journal": "JMIR Res Protoc",
+    "year": "2024",
+    "first": "Bowers JM"
+   },
+   {
+    "pmid": "38662342",
+    "title": "Disparities in Mortality by Sexual Orientation in a Large, Prospective Cohort of Female Nurses.",
+    "journal": "JAMA",
+    "year": "2024",
+    "first": "McKetta S"
+   },
+   {
+    "pmid": "38580835",
+    "title": "Pre-frailty after blood or marrow transplantation and the risk of subsequent mortality.",
+    "journal": "Leukemia",
+    "year": "2024",
+    "first": "Balas N"
+   },
+   {
+    "pmid": "38503544",
+    "title": "Twin births in Yucatan, Mexico during 2008-2020: trends in maternal sociodemographic factors and differences in birth weight and length according to sex of co-twin.",
+    "journal": "J Matern Fetal Neonatal Med",
+    "year": "2024",
+    "first": "Azcorra H"
+   },
+   {
+    "pmid": "38405602",
+    "title": "Knowledge, Attitude, and Practice Towards Mpox and Associated Factors Among HIV-Infected Individuals - Beijing Municipality, China, 2023.",
+    "journal": "China CDC Wkly",
+    "year": "2024",
+    "first": "Gu Y"
+   },
+   {
+    "pmid": "37782496",
+    "title": "Nirmatrelvir-Ritonavir and COVID-19 Mortality and Hospitalization Among Patients With Vulnerability to COVID-19 Complications.",
+    "journal": "JAMA Netw Open",
+    "year": "2023",
+    "first": "Dormuth CR"
+   },
+   {
+    "pmid": "37372707",
+    "title": "Investigating the Joint Effect of Allostatic Load among Lesbian, Gay, and Bisexual Adults with Risk of Cancer Mortality.",
+    "journal": "Int J Environ Res Public Health",
+    "year": "2023",
+    "first": "Moore JX"
+   },
+   {
+    "pmid": "36736374",
+    "title": "Mortality rates by gender and sexual orientation reveal a disproportionally high mortality among cisgender men of unknown sexual orientation and men who have sex with women in a cohort of people living with HIV in Rio de Janeiro, Brazil.",
+    "journal": "Braz J Infect Dis",
+    "year": "2023",
+    "first": "Coelho LE"
+   },
+   {
+    "pmid": "36707492",
+    "title": "COVID-19 and comedications in atrial fibrillation-a case-control study in Stockholm.",
+    "journal": "Eur J Epidemiol",
+    "year": "2023",
+    "first": "Bell M"
+   },
+   {
+    "pmid": "36571942",
+    "title": "Causes of alcohol-attributable death and associated years of potential life lost among LGB and non-LGB veteran men and women in Veterans Health Administration.",
+    "journal": "Addict Behav",
+    "year": "2023",
+    "first": "Livingston NA"
+   },
+   {
+    "pmid": "36526216",
+    "title": "Hand Grip Strength Predicts Mortality and Quality of Life in Heart Failure: Insights From the Singapore Cohort of Patients With Advanced Heart Failure.",
+    "journal": "J Card Fail",
+    "year": "2023",
+    "first": "Dai KZ"
+   },
+   {
+    "pmid": "36450613",
+    "title": "Attribution for everyday discrimination typologies and mortality risk among older black adults: Evidence from the health and retirement study?",
+    "journal": "Soc Sci Med",
+    "year": "2023",
+    "first": "Cobb RJ"
+   },
+   {
+    "pmid": "35820201",
+    "title": "Cancer-Related Reductions in Survival: Extent and Duration Evaluated Using a Large Cohort Study of Twins, 1943-2011.",
+    "journal": "Cancer Epidemiol Biomarkers Prev",
+    "year": "2022",
+    "first": "Villumsen MD"
+   },
+   {
+    "pmid": "35717789",
+    "title": "Alcohol-attributable deaths and years of potential life lost due to alcohol among veterans: Overall and between persons with minoritized and non-minoritized sexual orientations.",
+    "journal": "Drug Alcohol Depend",
+    "year": "2022",
+    "first": "Lynch KE"
+   },
+   {
+    "pmid": "35202994",
+    "title": "Premature death and causes of death among patients with panic disorder and comorbid psychiatric disorders: A nationwide cohort study.",
+    "journal": "J Psychiatr Res",
+    "year": "2022",
+    "first": "Chang HM"
+   },
+   {
+    "pmid": "34698549",
+    "title": "Mortality Disparities Among Sexual Minority Adults in the United States.",
+    "journal": "LGBT Health",
+    "year": "2022",
+    "first": "Laughney CI"
+   },
+   {
+    "pmid": "34630233",
+    "title": "What Matters and What Matters Most for Survival After age 80? A Multidisciplinary Exploration Based on Twin Data.",
+    "journal": "Front Psychol",
+    "year": "2021",
+    "first": "Johansson B"
+   },
+   {
+    "pmid": "34129753",
+    "title": "The majority of conversion total hip arthroplasties can be considered primary replacements - a matched cohort study.",
+    "journal": "Acta Orthop Belg",
+    "year": "2021",
+    "first": "Vles G"
+   },
+   {
+    "pmid": "33955843",
+    "title": "Influence of Stress, Gender, and Minority Status on Cardiovascular Disease Risk in the Hispanic/Latino Community: Protocol for a Longitudinal Observational Cohort Study.",
+    "journal": "JMIR Res Protoc",
+    "year": "2021",
+    "first": "Poteat T"
+   },
+   {
+    "pmid": "33692403",
+    "title": "Association between coffee and green tea intake and pneumonia among the Japanese elderly: a case-control study.",
+    "journal": "Sci Rep",
+    "year": "2021",
+    "first": "Kondo K"
+   },
+   {
+    "pmid": "33369662",
+    "title": "Evaluation of Suicide Mortality Among Sexual Minority US Veterans From 2000 to 2017.",
+    "journal": "JAMA Netw Open",
+    "year": "2020",
+    "first": "Lynch KE"
+   },
+   {
+    "pmid": "33308313",
+    "title": "The majority of conversion total hip arthroplasties can be considered a primary replacement: a matched cohort study.",
+    "journal": "Eur J Med Res",
+    "year": "2020",
+    "first": "Aharram S"
+   },
+   {
+    "pmid": "36101682",
+    "title": "Sexual orientation and all-cause mortality: A population-based prospective cohort study in southern Sweden.",
+    "journal": "Public Health Pract (Oxf)",
+    "year": "2020",
+    "first": "Lindström M"
+   },
+   {
+    "pmid": "32488053",
+    "title": "Trends and causes of mortality in a population-based cohort of HIV-infected adults in Spain: comparison with the general population.",
+    "journal": "Sci Rep",
+    "year": "2020",
+    "first": "Fontela C"
+   },
+   {
+    "pmid": "32451356",
+    "title": "Neonatal outcomes of extremely preterm twins by sex pairing: an international cohort study.",
+    "journal": "Arch Dis Child Fetal Neonatal Ed",
+    "year": "2021",
+    "first": "Gagliardi L"
+   },
+   {
+    "pmid": "31722984",
+    "title": "Suicide among persons who entered same-sex and opposite-sex marriage in Denmark and Sweden, 1989-2016: a binational, register-based cohort study.",
+    "journal": "J Epidemiol Community Health",
+    "year": "2020",
+    "first": "Erlangsen A"
+   },
+   {
+    "pmid": "31585192",
+    "title": "A prospective, multicenter case control study of risk factors for acquisition and mortality in Enterobacter species bacteremia.",
+    "journal": "J Infect",
+    "year": "2020",
+    "first": "Álvarez-Marín R"
+   },
+   {
+    "pmid": "31439269",
+    "title": "Structural stigma and all-cause mortality among sexual minorities: Differences by sexual behavior?",
+    "journal": "Soc Sci Med",
+    "year": "2020",
+    "first": "Hatzenbuehler ML"
+   },
+   {
+    "pmid": "30791679",
+    "title": "Lifespans of Twins: Does Zygosity Matter?",
+    "journal": "Genes (Basel)",
+    "year": "2019",
+    "first": "Hjelmborg J"
+   },
+   {
+    "pmid": "30660189",
+    "title": "Leisure-time physical activity and DNA methylation age-a twin study.",
+    "journal": "Clin Epigenetics",
+    "year": "2019",
+    "first": "Sillanpää E"
+   },
+   {
+    "pmid": "29666136",
+    "title": "Systematic review and meta-analysis of diabetes mellitus, cardiovascular and respiratory condition epidemiology in sexual minority women.",
+    "journal": "BMJ Open",
+    "year": "2018",
+    "first": "Meads C"
+   },
+   {
+    "pmid": "29131849",
+    "title": "Modelling the cost-effectiveness of HIV care shows a clear benefit when transmission risk is considered in the calculations - A message for Central and Eastern Europe.",
+    "journal": "PLoS One",
+    "year": "2017",
+    "first": "Kowalska JD"
+   },
+   {
+    "pmid": "28437534",
+    "title": "Association of Mortality With the Death of a Sibling in Childhood.",
+    "journal": "JAMA Pediatr",
+    "year": "2017",
+    "first": "Yu Y"
+   },
+   {
+    "pmid": "28024904",
+    "title": "Early-life mortality risks in opposite-sex and same-sex twins: a Danish cohort study of the twin testosterone transfer hypothesis.",
+    "journal": "Ann Epidemiol",
+    "year": "2017",
+    "first": "Ahrenfeldt LJ"
+   },
+   {
+    "pmid": "27889281",
+    "title": "Is structural stigma's effect on the mortality of sexual minorities robust? A failure to replicate the results of a published study.",
+    "journal": "Soc Sci Med",
+    "year": "2017",
+    "first": "Regnerus M"
+   },
+   {
+    "pmid": "27365289",
+    "title": "Fetal and neonatal outcomes after term and preterm delivery following betamethasone administration in twin pregnancies.",
+    "journal": "Int J Gynaecol Obstet",
+    "year": "2016",
+    "first": "Braun T"
+   },
+   {
+    "pmid": "27227678",
+    "title": "Is Cesarean Delivery Preferable in Twin Pregnancies at >=36 Weeks Gestation?",
+    "journal": "PLoS One",
+    "year": "2016",
+    "first": "Dong Y"
+   },
+   {
+    "pmid": "27168192",
+    "title": "Suicide in married couples in Sweden: Is the risk greater in same-sex couples?",
+    "journal": "Eur J Epidemiol",
+    "year": "2016",
+    "first": "Björkenstam C"
+   },
+   {
+    "pmid": "26359785",
+    "title": "Drinking and mortality: long-term follow-up of drinking-discordant twin pairs.",
+    "journal": "Addiction",
+    "year": "2016",
+    "first": "Sipilä P"
+   },
+   {
+    "pmid": "25477130",
+    "title": "Childhood family background and mortality differences by income in adulthood: fixed-effects analysis of Finnish siblings.",
+    "journal": "Eur J Public Health",
+    "year": "2015",
+    "first": "Tarkiainen L"
+   },
+   {
+    "pmid": "25318623",
+    "title": "Unprotected sexual practices among men who have sex with women and men who have sex with men living with HIV/AIDS in Rio de Janeiro.",
+    "journal": "Arch Sex Behav",
+    "year": "2015",
+    "first": "Julio RS"
+   },
+   {
+    "pmid": "25246080",
+    "title": "The impact of children's sex composition on parents' mortality.",
+    "journal": "BMC Public Health",
+    "year": "2014",
+    "first": "Christiansen SG"
+   },
+   {
+    "pmid": "25033136",
+    "title": "Mortality risks among persons reporting same-sex sexual partners: evidence from the 2008 General Social Survey-National Death Index data set.",
+    "journal": "Am J Public Health",
+    "year": "2015",
+    "first": "Cochran SD"
+   },
+   {
+    "pmid": "24500534",
+    "title": "Dyspnea and all-cause mortality: 28-yr follow-up study among adult twins.",
+    "journal": "Med Sci Sports Exerc",
+    "year": "2014",
+    "first": "Waller K"
+   },
+   {
+    "pmid": "24328664",
+    "title": "Anti-gay prejudice and all-cause mortality among heterosexuals in the United States.",
+    "journal": "Am J Public Health",
+    "year": "2014",
+    "first": "Hatzenbuehler ML"
+   },
+   {
+    "pmid": "24108384",
+    "title": "Risk of fatal unintentional injuries in children by migration status: a nationwide cohort study with 46 years' follow-up.",
+    "journal": "Inj Prev",
+    "year": "2015",
+    "first": "Karimi N"
+   },
+   {
+    "pmid": "24063418",
+    "title": "Risk of adolescent offspring's completed suicide increases with prior history of their same-sex parents' death by suicide.",
+    "journal": "Psychol Med",
+    "year": "2014",
+    "first": "Cheng CC"
+   }
+  ]
+ },
+ "Q2": {
+  "query": "(\"same-sex marriage\"[tiab] OR \"registered partnership\"[tiab] OR \"same-sex partner*\"[tiab]) AND (mortality[tiab] OR \"cause of death\"[tiab] OR \"life expectancy\"[tiab])",
+  "count": "16",
+  "items": [
+   {
+    "pmid": "42753202",
+    "title": "All-Cause and External-Cause Mortality Disparities Among Australians in Same-Sex Relationships Before and After Marriage Equality: A Nationwide Cohort Study, 2011-2023.",
+    "journal": "Am J Public Health",
+    "year": "2026",
+    "first": "Saxby K"
+   },
+   {
+    "pmid": "41637940",
+    "title": "The widowhood effect across diverse partnerships: Mortality risk after partner loss in same-sex and mixed-sex unions.",
+    "journal": "Soc Sci Med",
+    "year": "2026",
+    "first": "Knoblauch E"
+   },
+   {
+    "pmid": "37360000",
+    "title": "Men. Male-biased sex ratios and masculinity norms: evidence from Australia's colonial past.",
+    "journal": "J Econ Growth (Boston)",
+    "year": "2023",
+    "first": "Baranov V"
+   },
+   {
+    "pmid": "34727980",
+    "title": "Global stakeholder perspectives of home birth: a systematic scoping review.",
+    "journal": "Syst Rev",
+    "year": "2021",
+    "first": "Brunton G"
+   },
+   {
+    "pmid": "34587961",
+    "title": "Socioeconomic position and prognosis in premenopausal breast cancer: a population-based cohort study in Denmark.",
+    "journal": "BMC Med",
+    "year": "2021",
+    "first": "Hjorth CF"
+   },
+   {
+    "pmid": "31722984",
+    "title": "Suicide among persons who entered same-sex and opposite-sex marriage in Denmark and Sweden, 1989-2016: a binational, register-based cohort study.",
+    "journal": "J Epidemiol Community Health",
+    "year": "2020",
+    "first": "Erlangsen A"
+   },
+   {
+    "pmid": "28241285",
+    "title": "Difference-in-Differences Analysis of the Association Between State Same-Sex Marriage Policies and Adolescent Suicide Attempts.",
+    "journal": "JAMA Pediatr",
+    "year": "2017",
+    "first": "Raifman J"
+   },
+   {
+    "pmid": "27168192",
+    "title": "Suicide in married couples in Sweden: Is the risk greater in same-sex couples?",
+    "journal": "Eur J Epidemiol",
+    "year": "2016",
+    "first": "Björkenstam C"
+   },
+   {
+    "pmid": "25033136",
+    "title": "Mortality risks among persons reporting same-sex sexual partners: evidence from the 2008 General Social Survey-National Death Index data set.",
+    "journal": "Am J Public Health",
+    "year": "2015",
+    "first": "Cochran SD"
+   },
+   {
+    "pmid": "23482379",
+    "title": "Marriage, cohabitation and mortality in Denmark: national cohort study of 6.5 million persons followed for up to three decades (1982-2011).",
+    "journal": "Int J Epidemiol",
+    "year": "2013",
+    "first": "Frisch M"
+   },
+   {
+    "pmid": "22578298",
+    "title": "An ecological approach to examine lung cancer disparities due to sexual orientation.",
+    "journal": "Public Health",
+    "year": "2012",
+    "first": "Boehmer U"
+   },
+   {
+    "pmid": "22360695",
+    "title": "Risk of breast cancer mortality among women cohabiting with same sex partners: findings from the National Health Interview Survey, 1997-2003.",
+    "journal": "J Womens Health (Larchmt)",
+    "year": "2012",
+    "first": "Cochran SD"
+   },
+   {
+    "pmid": "21936932",
+    "title": "An ecological analysis of colorectal cancer incidence and mortality: differences by sexual orientation.",
+    "journal": "BMC Cancer",
+    "year": "2011",
+    "first": "Boehmer U"
+   },
+   {
+    "pmid": "20033129",
+    "title": "The association between relationship markers of sexual orientation and suicide: Denmark, 1990-2001.",
+    "journal": "Soc Psychiatry Psychiatr Epidemiol",
+    "year": "2011",
+    "first": "Mathy RM"
+   },
+   {
+    "pmid": "19008504",
+    "title": "Mortality among men and women in same-sex marriage: a national cohort study of 8333 Danes.",
+    "journal": "Am J Public Health",
+    "year": "2009",
+    "first": "Frisch M"
+   },
+   {
+    "pmid": "16612436",
+    "title": "AIDS incidence and mortality in injecting drug users: the AjUDE-Brasil II Project.",
+    "journal": "Cad Saude Publica",
+    "year": "2006",
+    "first": "Cardoso MN"
+   }
+  ]
+ },
+ "Q3": {
+  "query": "(gay[tiab] OR bisexual[tiab] OR lesbian[tiab] OR \"sexual minority\"[tiab]) AND suicide[tiab] AND (\"systematic review\"[tiab] OR meta-analysis[tiab])",
+  "count": "44",
+  "items": [
+   {
+    "pmid": "42670821",
+    "title": "Risk Factors for Suicidal Behavior Among European Youth: A Systematic Review.",
+    "journal": "Arch Suicide Res",
+    "year": "2026",
+    "first": "Carmona A"
+   },
+   {
+    "pmid": "42105375",
+    "title": "Interventions Addressing Suicide and Depression in Those Identifying as Lesbian, Gay, Bisexual, Trans, Queer, Intersex, Asexual and Other Gender Identities: A Systematic Review and Intervention Component Analysis.",
+    "journal": "Arch Suicide Res",
+    "year": "2026",
+    "first": "Josifovski N"
+   },
+   {
+    "pmid": "41455859",
+    "title": "The Relationship Between School Bullying and Suicide-Related Behaviors Among Sexual Minorities: A Systematic Review and Meta-Analysis.",
+    "journal": "Arch Sex Behav",
+    "year": "2025",
+    "first": "Chen H"
+   },
+   {
+    "pmid": "40928192",
+    "title": "Mental Health in Sexual and Gender Minority Populations: A Systematic Review of Systematic Reviews With Narrative Synthesis and a Network Meta-Analysis of Suicide Attempts.",
+    "journal": "Int J Soc Psychiatry",
+    "year": "2026",
+    "first": "Marchi M"
+   },
+   {
+    "pmid": "40922797",
+    "title": "Systematic Review: A 25-Year Global Publication Analysis of the Role of Spirituality and Religiosity in Suicidal Risk Assessment in Adolescents.",
+    "journal": "JAACAP Open",
+    "year": "2025",
+    "first": "West T"
+   },
+   {
+    "pmid": "40207732",
+    "title": "Effectiveness of Suicide Prevention Programmes Among Adolescents and Sociocultural Adaptation of Programmes: A Systematic Review.",
+    "journal": "Int J Ment Health Nurs",
+    "year": "2025",
+    "first": "Pokharel Poudel R"
+   },
+   {
+    "pmid": "39468405",
+    "title": "The Associations Between Intimate Partner Violence and Mental Health Outcomes Among Sexual Minority Men: A Systematic Review and Meta-Analysis.",
+    "journal": "Trauma Violence Abuse",
+    "year": "2025",
+    "first": "Hong C"
+   },
+   {
+    "pmid": "39400120",
+    "title": "A systematic review of the prevalence and associated factors of mental health conditions among lesbian, bisexual, and other sexual minority women in Southeast Asia.",
+    "journal": "J Lesbian Stud",
+    "year": "2026",
+    "first": "Alibudbud R"
+   },
+   {
+    "pmid": "39364609",
+    "title": "Differences in Mental Health Between Female Sexual Minority and Heterosexual Youth with a Substance Use Disorder Who Are Experiencing Homelessness.",
+    "journal": "LGBT Health",
+    "year": "2025",
+    "first": "Mallory AB"
+   },
+   {
+    "pmid": "38564099",
+    "title": "Risk and Protective Factors of Self-harm and Suicidality in Adolescents: An Umbrella Review with Meta-Analysis.",
+    "journal": "J Youth Adolesc",
+    "year": "2024",
+    "first": "Richardson R"
+   },
+   {
+    "pmid": "38372179",
+    "title": "Risk and protective factors for suicidality among lesbian, gay, bisexual, transgender, and queer (LGBTQ+) young people, from countries with a high global acceptance index (GAI), within the context of the socio-ecological model: A scoping review.",
+    "journal": "J Adolesc",
+    "year": "2024",
+    "first": "Wallace ER"
+   },
+   {
+    "pmid": "37906109",
+    "title": "Microaggressions Toward Sexual and Gender Minority Emerging Adults: An Updated Systematic Review of Psychological Correlates and Outcomes and the Role of Intersectionality.",
+    "journal": "LGBT Health",
+    "year": "2024",
+    "first": "DeSon JJ"
+   },
+   {
+    "pmid": "37690324",
+    "title": "Comparing asexual with heterosexual, bisexual, and gay/lesbian individuals in common mental health problems: A multivariate meta-analysis.",
+    "journal": "Clin Psychol Rev",
+    "year": "2023",
+    "first": "Xu Y"
+   },
+   {
+    "pmid": "37638668",
+    "title": "Microaggression toward LGBTIQ people and implications for mental health: A systematic review.",
+    "journal": "Int J Soc Psychiatry",
+    "year": "2024",
+    "first": "Marchi M"
+   },
+   {
+    "pmid": "37547195",
+    "title": "Relationships between internalized stigma and depression and suicide risk among queer youth in the United States: a systematic review and meta-analysis.",
+    "journal": "Front Psychiatry",
+    "year": "2023",
+    "first": "Williams DY"
+   },
+   {
+    "pmid": "36563876",
+    "title": "Systematic Review and Meta-analysis: International Prevalence of Suicidal Ideation and Attempt in Youth.",
+    "journal": "J Am Acad Child Adolesc Psychiatry",
+    "year": "2023",
+    "first": "Van Meter AR"
+   },
+   {
+    "pmid": "36151841",
+    "title": "Self-harm and suicidality among LGBTIQ people: a systematic review and meta-analysis.",
+    "journal": "Int Rev Psychiatry",
+    "year": "2022",
+    "first": "Marchi M"
+   },
+   {
+    "pmid": "35190078",
+    "title": "The roles of school in supporting LGBTQ+ youth: A systematic review and ecological framework for understanding risk for suicide-related thoughts and behaviors.",
+    "journal": "J Sch Psychol",
+    "year": "2022",
+    "first": "Marraccini ME"
+   },
+   {
+    "pmid": "34831556",
+    "title": "Health Inequities in LGBT People and Nursing Interventions to Reduce Them: A Systematic Review.",
+    "journal": "Int J Environ Res Public Health",
+    "year": "2021",
+    "first": "Medina-Martínez J"
+   },
+   {
+    "pmid": "33904768",
+    "title": "Understanding Factors Associated with Suicidality Among Transgender and Gender-Diverse Identified Youth.",
+    "journal": "LGBT Health",
+    "year": "2021",
+    "first": "Bochicchio L"
+   },
+   {
+    "pmid": "33151088",
+    "title": "Suicidal as Normal - A Lesbian, Gay, and Bisexual Youth Script?",
+    "journal": "Crisis",
+    "year": "2021",
+    "first": "Canetto SS"
+   },
+   {
+    "pmid": "32474585",
+    "title": "Inequalities in Health and Care Among Lesbian, Gay, and Bisexual People Aged 50 and Older in the United Kingdom: A Systematic Review and Meta-analysis of Sources of Individual Participant Data.",
+    "journal": "J Gerontol B Psychol Sci Soc Sci",
+    "year": "2020",
+    "first": "Kneale D"
+   },
+   {
+    "pmid": "31907085",
+    "title": "Characterizing the phenomenology of passive suicidal ideation: a systematic review and meta-analysis of its prevalence, psychiatric comorbidity, correlates, and comparisons with active suicidal ideation.",
+    "journal": "Psychol Med",
+    "year": "2020",
+    "first": "Liu RT"
+   },
+   {
+    "pmid": "31719085",
+    "title": "Examining risk factors for self-harm and suicide in LGBTQ+ young people: a systematic review protocol.",
+    "journal": "BMJ Open",
+    "year": "2019",
+    "first": "Williams AJ"
+   },
+   {
+    "pmid": "31597541",
+    "title": "Suicidal Thoughts and Behaviors Among LGBTQ Youth: Meta-Analyses and a Systematic Review.",
+    "journal": "Arch Suicide Res",
+    "year": "2021",
+    "first": "Hatchel T"
+   },
+   {
+    "pmid": "30690471",
+    "title": "Intimate Partner Violence, Suicide, and Their Overlapping Risk in Women Veterans: A Review of the Literature.",
+    "journal": "Mil Med",
+    "year": "2019",
+    "first": "Iovine-Wong PE"
+   },
+   {
+    "pmid": "30304350",
+    "title": "Estimating the Risk of Attempted Suicide Among Sexual Minority Youths: A Systematic Review and Meta-analysis.",
+    "journal": "JAMA Pediatr",
+    "year": "2018",
+    "first": "di Giacomo E"
+   },
+   {
+    "pmid": "30188991",
+    "title": "Effects of Multiple Forms of Information Bias on Estimated Prevalence of Suicide Attempts According to Sexual Orientation: An Application of a Bayesian Misclassification Correction Method to Data From a Systematic Review.",
+    "journal": "Am J Epidemiol",
+    "year": "2019",
+    "first": "Salway T"
+   },
+   {
+    "pmid": "30173060",
+    "title": "What is the relationship between rejection and self-harm or suicidality in adulthood?",
+    "journal": "J Affect Disord",
+    "year": "2019",
+    "first": "Cawley R"
+   },
+   {
+    "pmid": "30146143",
+    "title": "Self-Injurious Thoughts and Behaviors May Be More Common and Severe Among People Identifying as a Sexual Minority.",
+    "journal": "Behav Ther",
+    "year": "2018",
+    "first": "Fox KR"
+   },
+   {
+    "pmid": "30029759",
+    "title": "Suicide in sexual minority populations: A systematic review of evidence-based studies.",
+    "journal": "Arch Psychiatr Nurs",
+    "year": "2018",
+    "first": "Yıldız E"
+   },
+   {
+    "pmid": "29492768",
+    "title": "A Systematic Review and Meta-Analysis of Disparities in the Prevalence of Suicide Ideation and Attempt Among Bisexual Populations.",
+    "journal": "Arch Sex Behav",
+    "year": "2019",
+    "first": "Salway T"
+   },
+   {
+    "pmid": "28254960",
+    "title": "Sexual orientation and suicidal behaviour in adolescents and young adults: systematic review and meta-analysis.",
+    "journal": "Br J Psychiatry",
+    "year": "2017",
+    "first": "Miranda-Mendizábal A"
+   },
+   {
+    "pmid": "28080099",
+    "title": "School connectedness and suicidal thoughts and behaviors: A systematic meta-analysis.",
+    "journal": "Sch Psychol Q",
+    "year": "2017",
+    "first": "Marraccini ME"
+   },
+   {
+    "pmid": "27598491",
+    "title": "[Suicide in lesbian, gay, bisexual and trans populations: systematic review of a decade of research (2004-2014)].",
+    "journal": "Rev Med Chil",
+    "year": "2016",
+    "first": "Tomicic A"
+   },
+   {
+    "pmid": "27066890",
+    "title": "Making the invisible visible: a systematic review of sexual minority women's health in Southern Africa.",
+    "journal": "BMC Public Health",
+    "year": "2016",
+    "first": "Muller A"
+   },
+   {
+    "pmid": "27049424",
+    "title": "Lifetime Prevalence of Suicide Attempts Among Sexual Minority Adults by Study Sampling Strategies: A Systematic Review and Meta-Analysis.",
+    "journal": "Am J Public Health",
+    "year": "2016",
+    "first": "Hottes TS"
+   },
+   {
+    "pmid": "27009565",
+    "title": "Sexual orientation and symptoms of common mental disorder or low wellbeing: combined meta-analysis of 12 UK population health surveys.",
+    "journal": "BMC Psychiatry",
+    "year": "2016",
+    "first": "Semlyen J"
+   },
+   {
+    "pmid": "26583348",
+    "title": "The impact of intimate partner relationships on suicidal thoughts and behaviours: A systematic review.",
+    "journal": "J Affect Disord",
+    "year": "2016",
+    "first": "Kazan D"
+   },
+   {
+    "pmid": "26552495",
+    "title": "Mental health of sexual minorities. A systematic review.",
+    "journal": "Int Rev Psychiatry",
+    "year": "2015",
+    "first": "Plöderl M"
+   },
+   {
+    "pmid": "24839908",
+    "title": "Bisexuality and suicide: a systematic review of the current literature.",
+    "journal": "J Sex Med",
+    "year": "2014",
+    "first": "Pompili M"
+   },
+   {
+    "pmid": "21161599",
+    "title": "A systematic review of parental influences on the health and well-being of lesbian, gay, and bisexual youth: time for a new public health research and practice agenda.",
+    "journal": "J Prim Prev",
+    "year": "2010",
+    "first": "Bouris A"
+   },
+   {
+    "pmid": "19515600",
+    "title": "Mental health in sexual minorities: recent indicators, trends, and their relationships to place in North America and Europe.",
+    "journal": "Health Place",
+    "year": "2009",
+    "first": "Lewis NM"
+   },
+   {
+    "pmid": "18706118",
+    "title": "A systematic review of mental disorder, suicide, and deliberate self harm in lesbian, gay and bisexual people.",
+    "journal": "BMC Psychiatry",
+    "year": "2008",
+    "first": "King M"
+   }
+  ]
+ },
+ "Q4": {
+  "query": "(suicide[tiab] OR \"suicide attempt\"[tiab]) AND \"sexual orientation\"[tiab] AND (death[tiab] OR mortality[tiab] OR register*[tiab] OR \"death certificate\"[tiab])",
+  "count": "88",
+  "items": [
+   {
+    "pmid": "42858464",
+    "title": "Trajectories of suicidal ideation and attempts across the academic year: longitudinal study of UK university students.",
+    "journal": "Br J Psychiatry",
+    "year": "2026",
+    "first": "Morse KF"
+   },
+   {
+    "pmid": "42169984",
+    "title": "Risk factors for suicidal ideation in university students.",
+    "journal": "Rev Cuid",
+    "year": "2026",
+    "first": "Aguilar Chávez PV"
+   },
+   {
+    "pmid": "42024834",
+    "title": "Enhancing Classification of Sexual Orientation and Gender Identity Information Among Suicide Decedents Reported in the National Violent Death Reporting System, 2003-2021.",
+    "journal": "Am J Public Health",
+    "year": "2026",
+    "first": "Anderson AM"
+   },
+   {
+    "pmid": "41907175",
+    "title": "Pharmacists' implicit bias in suicide screening of male patients: an experimental vignette study.",
+    "journal": "J Pharm Policy Pract",
+    "year": "2026",
+    "first": "Carpini JA"
+   },
+   {
+    "pmid": "41823922",
+    "title": "Crisis Text Service Use Among Young Adults With Suicidal Ideation: Findings From a Survey Study.",
+    "journal": "J Adolesc Health",
+    "year": "2026",
+    "first": "LaForge K"
+   },
+   {
+    "pmid": "41717466",
+    "title": "Associated factors of depression, anxiety, and suicide behavior among men in Switzerland: findings from the Swiss health survey 2022.",
+    "journal": "Front Psychol",
+    "year": "2026",
+    "first": "Laskowski NM"
+   },
+   {
+    "pmid": "41666109",
+    "title": "Trends in Suicidal Behaviors among Hispanic Individuals: Differences by Sexual Orientation, 2015-2019, USA.",
+    "journal": "Hisp Health Care Int",
+    "year": "2026",
+    "first": "Yockey RA"
+   },
+   {
+    "pmid": "41620185",
+    "title": "Examining sexual identity and suicidal thoughts and behaviors by sex among Asian American high school students in the US, 2023.",
+    "journal": "J Affect Disord",
+    "year": "2026",
+    "first": "Lao A"
+   },
+   {
+    "pmid": "41557353",
+    "title": "Sexual Orientation-Related Differences in Alcohol Use and Suicide Death.",
+    "journal": "JAMA Netw Open",
+    "year": "2026",
+    "first": "McKetta S"
+   },
+   {
+    "pmid": "41538612",
+    "title": "[Suicide, rape and family: trajectories of necropolitics in the lives of LGBTQIA+ youths].",
+    "journal": "Cien Saude Colet",
+    "year": "2025",
+    "first": "Carvalho MFL"
+   },
+   {
+    "pmid": "41455859",
+    "title": "The Relationship Between School Bullying and Suicide-Related Behaviors Among Sexual Minorities: A Systematic Review and Meta-Analysis.",
+    "journal": "Arch Sex Behav",
+    "year": "2025",
+    "first": "Chen H"
+   },
+   {
+    "pmid": "41455689",
+    "title": "Masculinity and gender norms as risk factors in suicide and suicide ideation among male university students in Zimbabwe.",
+    "journal": "Psychol Health Med",
+    "year": "2026",
+    "first": "Mhlanga S"
+   },
+   {
+    "pmid": "41437759",
+    "title": "Risk Factors Addressed in Programs for the Prevention of Child and Adolescent Suicide in the School Setting: A Systematic Review.",
+    "journal": "Actas Esp Psiquiatr",
+    "year": "2025",
+    "first": "Díaz-López A"
+   },
+   {
+    "pmid": "41313903",
+    "title": "Adverse childhood experiences partially mediate sexual minority disparities in depression, anxiety, and suicidality in a population-based study.",
+    "journal": "Soc Sci Med",
+    "year": "2026",
+    "first": "Smart BD"
+   },
+   {
+    "pmid": "41190046",
+    "title": "Exploring the influence of human-animal bonds on suicide characteristics: cross-sectional study of human-animal bond associated suicide in the USA using the National Violent Death Reporting System.",
+    "journal": "BMJ Public Health",
+    "year": "2025",
+    "first": "Giron A"
+   },
+   {
+    "pmid": "40928780",
+    "title": "Sexual Orientation and Exposure to Close Others' Self-Injurious Thoughts and Behaviors.",
+    "journal": "JAMA Netw Open",
+    "year": "2025",
+    "first": "Clark KA"
+   },
+   {
+    "pmid": "40752143",
+    "title": "Suicidality among sexual minority individuals: A preregistered systematic umbrella review of 20 years of research.",
+    "journal": "Psychiatry Res",
+    "year": "2025",
+    "first": "Zwickl AA"
+   },
+   {
+    "pmid": "40327893",
+    "title": "The Prevalence and Incidence of Suicidal Thoughts and Behavior in a Smartphone-Delivered Treatment Trial for Body Dysmorphic Disorder: Cohort Study.",
+    "journal": "JMIR Ment Health",
+    "year": "2025",
+    "first": "Jaroszewski AC"
+   },
+   {
+    "pmid": "40310495",
+    "title": "\"They're Lacking Purpose. It's a Recipe for Suicide.\": Masculinity and Gender-Based Inequalities in Deaths of Despair in England.",
+    "journal": "Am J Mens Health",
+    "year": "2025",
+    "first": "Price T"
+   },
+   {
+    "pmid": "40305499",
+    "title": "\"Don't You Love Me?\" Abusers' use of shame-to-guilt to coercively control 2SLGBTQQIA+ individuals and rural women experiencing intimate partner violence.",
+    "journal": "Womens Health (Lond)",
+    "year": "2025",
+    "first": "Kurbatfinski S"
+   },
+   {
+    "pmid": "40280440",
+    "title": "Risk factors for suicidality among college students: A systematic review and meta-analysis.",
+    "journal": "J Affect Disord",
+    "year": "2025",
+    "first": "Zhao M"
+   },
+   {
+    "pmid": "40189068",
+    "title": "Prediction of first attempt of suicide in early adolescence using machine learning.",
+    "journal": "J Affect Disord",
+    "year": "2025",
+    "first": "Huang C"
+   },
+   {
+    "pmid": "39899557",
+    "title": "Mortality among sexual and gender minority populations: A systematic review.",
+    "journal": "PLoS One",
+    "year": "2025",
+    "first": "Zachry CE"
+   },
+   {
+    "pmid": "39674946",
+    "title": "Parental Emotional Abuse, Sexual Identity, and Adolescent Suicide Attempts During the COVID-19 Pandemic.",
+    "journal": "J Adolesc Health",
+    "year": "2025",
+    "first": "Lyons AJ"
+   },
+   {
+    "pmid": "39480290",
+    "title": "Investigating the association between housing mobility and self-reported adolescent suicidality and mental health.",
+    "journal": "Am J Orthopsychiatry",
+    "year": "2025",
+    "first": "Kohlbeck SA"
+   },
+   {
+    "pmid": "39018450",
+    "title": "A 3-Year Retrospective Review of Complex Suicides With a Review of the Literature.",
+    "journal": "Am J Forensic Med Pathol",
+    "year": "2024",
+    "first": "Paredes Rivera A"
+   },
+   {
+    "pmid": "38782090",
+    "title": "Predictive Validity of the K-CAT-SS in High-Risk Adolescents and Young Adults.",
+    "journal": "J Am Acad Child Adolesc Psychiatry",
+    "year": "2025",
+    "first": "Gibbons RD"
+   },
+   {
+    "pmid": "38568596",
+    "title": "Male sex and hazardous alcohol use following military sexual assault increase suicide risk among US service members and veterans.",
+    "journal": "Eur J Psychotraumatol",
+    "year": "2024",
+    "first": "Blais RK"
+   },
+   {
+    "pmid": "38461275",
+    "title": "Suicide prevention for substance using youth experiencing homelessness: study protocol for a randomized controlled trial.",
+    "journal": "Trials",
+    "year": "2024",
+    "first": "Slesnick N"
+   },
+   {
+    "pmid": "38335951",
+    "title": "Preventing Suicide and Promoting Mental Health Among Student-Athletes From Diverse Backgrounds.",
+    "journal": "J Sport Rehabil",
+    "year": "2025",
+    "first": "Hamstra-Wright KL"
+   },
+   {
+    "pmid": "37939269",
+    "title": "Limitations of Sexual Orientation and Gender Identity Information as Reported in the National Violent Death Reporting System.",
+    "journal": "LGBT Health",
+    "year": "2024",
+    "first": "Clark KA"
+   },
+   {
+    "pmid": "37625179",
+    "title": "Hair Collection for Cortisol Among Youth Experiencing Homelessness.",
+    "journal": "Nurs Res",
+    "year": "2023",
+    "first": "Ford JL"
+   },
+   {
+    "pmid": "37429387",
+    "title": "Sexual Orientation and Disclosure of Suicidal Thoughts Before Suicide Mortality.",
+    "journal": "Am J Prev Med",
+    "year": "2023",
+    "first": "Clark KA"
+   },
+   {
+    "pmid": "37350065",
+    "title": "Research on Youth Suicide and Sexual Orientation is Impacted by High Rates of Missingness in National Surveillance Systems.",
+    "journal": "Arch Suicide Res",
+    "year": "2024",
+    "first": "Phalen PL"
+   },
+   {
+    "pmid": "37270726",
+    "title": "Acculturation and suicide-related risk in ethnoracially minoritized youth in the US: a scoping review and content analysis of the empirical evidence.",
+    "journal": "Soc Psychiatry Psychiatr Epidemiol",
+    "year": "2023",
+    "first": "Polanco-Roman L"
+   },
+   {
+    "pmid": "37226725",
+    "title": "Sexual Assault, Posttraumatic Stress, Alcohol Use, and Suicidality Among Diverse College Students.",
+    "journal": "J Interpers Violence",
+    "year": "2023",
+    "first": "Gilmore AK"
+   },
+   {
+    "pmid": "36571942",
+    "title": "Causes of alcohol-attributable death and associated years of potential life lost among LGB and non-LGB veteran men and women in Veterans Health Administration.",
+    "journal": "Addict Behav",
+    "year": "2023",
+    "first": "Livingston NA"
+   },
+   {
+    "pmid": "36519928",
+    "title": "Emergency care for youth who experience suicidality and identify as LGBTQ.",
+    "journal": "Public Health Nurs",
+    "year": "2023",
+    "first": "Schultz TR"
+   },
+   {
+    "pmid": "36412229",
+    "title": "Help-seeking and Man Therapy: The impact of an online suicide intervention.",
+    "journal": "Suicide Life Threat Behav",
+    "year": "2023",
+    "first": "Gilgoff JN"
+   },
+   {
+    "pmid": "36399099",
+    "title": "Same-Sex Marriage and Common Mental Health Diagnoses: A Sibling Comparison and Adoption Approach.",
+    "journal": "J Sex Res",
+    "year": "2023",
+    "first": "Xu Y"
+   },
+   {
+    "pmid": "36207778",
+    "title": "Firearm-Related Injuries and Deaths in Children and Youth.",
+    "journal": "Pediatrics",
+    "year": "2022",
+    "first": "Lee LK"
+   },
+   {
+    "pmid": "36282939",
+    "title": "",
+    "journal": "",
+    "year": "2022",
+    "first": "Viswanathan M"
+   },
+   {
+    "pmid": "35980836",
+    "title": "One-year incidence, predictors, and accuracy of prediction of suicidal thoughts and behaviors from the first to second year of university.",
+    "journal": "Depress Anxiety",
+    "year": "2022",
+    "first": "Benjet C"
+   },
+   {
+    "pmid": "35963758",
+    "title": "Trends in Deaths by Suicide 2014-2019 Among Lesbian, Gay, Bisexual, Transgender, Queer, Questioning, and Other Gender/Sexual Minority (LGBTQ+) Youth.",
+    "journal": "J Adolesc Health",
+    "year": "2022",
+    "first": "Ream GL"
+   },
+   {
+    "pmid": "35801497",
+    "title": "Trends in Self-Injurious Thoughts and Behaviors Among US Adults, 2015-2019: Differential Risk According to Sexual Orientation.",
+    "journal": "Arch Suicide Res",
+    "year": "2023",
+    "first": "Sönmez İ"
+   },
+   {
+    "pmid": "34808470",
+    "title": "Circumstances of Suicide Among Lesbian, Gay, Bisexual and Transgender Individuals.",
+    "journal": "J Surg Res",
+    "year": "2022",
+    "first": "Patten M"
+   },
+   {
+    "pmid": "34774646",
+    "title": "The influence of diagnosed mental health conditions and symptoms of depression and/or anxiety on suicide ideation, plan, and attempt among college students: Findings from the Healthy Minds Study, 2018-2019.",
+    "journal": "J Affect Disord",
+    "year": "2022",
+    "first": "Casey SM"
+   },
+   {
+    "pmid": "34741837",
+    "title": "Prevalence and correlates of past-month suicidal thoughts, suicide attempts, and non-suicidal self-injury among adults in a partial hospital program.",
+    "journal": "J Psychiatr Res",
+    "year": "2021",
+    "first": "Christensen K"
+   },
+   {
+    "pmid": "34725752",
+    "title": "Psychological Distress, Suicidal Ideation, and Suicide Attempt Among Lesbian, Gay, and Bisexual Immigrants: Population-Based Findings from the Stockholm Public Health Cohort.",
+    "journal": "Arch Sex Behav",
+    "year": "2021",
+    "first": "Clark KA"
+   },
+   {
+    "pmid": "34582270",
+    "title": "Suicides Among Lesbian, Gay, Bisexual, and Transgender People: Medical Examiner Reports in the Special Wards of Tokyo, Japan, 2009-2018.",
+    "journal": "LGBT Health",
+    "year": "2021",
+    "first": "Sakai K"
+   },
+   {
+    "pmid": "34559797",
+    "title": "Suicidal Phenomenon in Pandemic Times. The Trentino's Reality.",
+    "journal": "Psychiatr Danub",
+    "year": "2021",
+    "first": "di Napoli WAR"
+   },
+   {
+    "pmid": "33878016",
+    "title": "Suicide Prevention Among College Students Before and During the COVID-19 Pandemic: Protocol for a Systematic Review and Meta-analysis.",
+    "journal": "JMIR Res Protoc",
+    "year": "2021",
+    "first": "Xiao Y"
+   },
+   {
+    "pmid": "33861331",
+    "title": "Temporal Trends and Disparities in Suicidal Behaviors by Sex and Sexual Identity Among Asian American Adolescents.",
+    "journal": "JAMA Netw Open",
+    "year": "2021",
+    "first": "Xiao Y"
+   },
+   {
+    "pmid": "33813254",
+    "title": "Lifetime prevalence of suicidal attempt among homeless individuals in North America: a meta-analysis.",
+    "journal": "J Affect Disord",
+    "year": "2021",
+    "first": "Xiang J"
+   },
+   {
+    "pmid": "33629220",
+    "title": "Racial/Ethnic, Sex, Sexual Orientation, and Socioeconomic Disparities in Suicidal Trajectories and Mental Health Treatment Among Adolescents Transitioning to Young Adulthood in the USA: A Population-Based Cohort Study.",
+    "journal": "Adm Policy Ment Health",
+    "year": "2021",
+    "first": "Xiao Y"
+   },
+   {
+    "pmid": "33438247",
+    "title": "Family-of-origin rejection on suicidal ideation among a sexual minority sample.",
+    "journal": "J Marital Fam Ther",
+    "year": "2022",
+    "first": "VanBergen AM"
+   },
+   {
+    "pmid": "33369662",
+    "title": "Evaluation of Suicide Mortality Among Sexual Minority US Veterans From 2000 to 2017.",
+    "journal": "JAMA Netw Open",
+    "year": "2020",
+    "first": "Lynch KE"
+   },
+   {
+    "pmid": "32897837",
+    "title": "Sexual Orientation Differences in Lethal Methods Used in Suicide: Findings From the National Violent Death Reporting System.",
+    "journal": "Arch Suicide Res",
+    "year": "2022",
+    "first": "Clark KA"
+   },
+   {
+    "pmid": "32384717",
+    "title": "Preferences in Information Processing, Marginalized Identity, and Non-Monogamy: Understanding Factors in Suicide-Related Behavior among Members of the Alternative Sexuality Community.",
+    "journal": "Int J Environ Res Public Health",
+    "year": "2020",
+    "first": "Cramer RJ"
+   },
+   {
+    "pmid": "31982330",
+    "title": "An Investigation of the LGBTQ+ Youth Suicide Disparity Using National Violent Death Reporting System Narrative Data.",
+    "journal": "J Adolesc Health",
+    "year": "2020",
+    "first": "Ream GL"
+   }
+  ]
+ },
+ "Q5": {
+  "query": "homicide[tiab] AND (\"sexual orientation\"[tiab] OR \"sexual minority\"[tiab] OR LGBT[tiab]) AND (NVDRS[tiab] OR \"violent death\"[tiab] OR NCVS[tiab] OR victimization[tiab])",
+  "count": "1",
+  "items": [
+   {
+    "pmid": "36600607",
+    "title": "Epidemiological Profile of Intimate Partner Homicides of Sexual and Gender Minority Women in the United States, 2003 to 2017.",
+    "journal": "J Interpers Violence",
+    "year": "2023",
+    "first": "Anderson EJ"
+   }
+  ]
+ },
+ "Q6": {
+  "query": "(transgender[tiab] OR \"gender dysphoria\"[tiab] OR \"gender identity\"[tiab]) AND (mortality[tiab] OR \"cause of death\"[tiab] OR \"suicide death\"[tiab] OR homicide[tiab]) AND (cohort[tiab] OR register*[tiab])",
+  "count": "66",
+  "items": [
+   {
+    "pmid": "42871927",
+    "title": "Higher Risk of Loss to Follow-up Among Transgender People With HIV in Italy: Findings From the ICONA Cohort.",
+    "journal": "Open Forum Infect Dis",
+    "year": "2026",
+    "first": "Moschese D"
+   },
+   {
+    "pmid": "42577637",
+    "title": "Clinical warning signs preceding severe suicide attempts requiring pediatric intensive care in children and adolescents.",
+    "journal": "Front Psychiatry",
+    "year": "2026",
+    "first": "Boyraz M"
+   },
+   {
+    "pmid": "42576911",
+    "title": "Nationwide estimates of all-cause and cause-specific mortality among individuals with gender dysphoria in Sweden, 2001-2023: a register-based cohort study.",
+    "journal": "EClinicalMedicine",
+    "year": "2026",
+    "first": "Clark KD"
+   },
+   {
+    "pmid": "41919720",
+    "title": "Lenacapavir as pre-exposure prophylaxis for HIV prevention.",
+    "journal": "Cochrane Database Syst Rev",
+    "year": "2026",
+    "first": "Ebrahim S"
+   },
+   {
+    "pmid": "41818636",
+    "title": "Identifying Undiagnosed High-Risk Suicidality Cases by Matching Patients With a Similar Comorbidity Burden: Retrospective Observational Study.",
+    "journal": "JMIR Form Res",
+    "year": "2026",
+    "first": "Bode L"
+   },
+   {
+    "pmid": "41757239",
+    "title": "Cardiovascular mortality associated with testosterone therapy in cisgender women and transgender men: a systematic review.",
+    "journal": "Front Endocrinol (Lausanne)",
+    "year": "2026",
+    "first": "Viana DPDC"
+   },
+   {
+    "pmid": "41716602",
+    "title": "All-cause and cause-specific mortality among transgender and gender diverse people: a nationwide cohort study in Australia.",
+    "journal": "Lancet Reg Health West Pac",
+    "year": "2026",
+    "first": "Saxby K"
+   },
+   {
+    "pmid": "41158824",
+    "title": "Mortality among transgender persons: a Taiwan matched-population and sibling-comparison cohort study.",
+    "journal": "Lancet Reg Health West Pac",
+    "year": "2025",
+    "first": "Hsu CW"
+   },
+   {
+    "pmid": "41081597",
+    "title": "Association of Body Mass Index With Postoperative Complications After Chest Masculinization Surgery: An Updated Analysis.",
+    "journal": "Ann Plast Surg",
+    "year": "2025",
+    "first": "Blackman C"
+   },
+   {
+    "pmid": "41048669",
+    "title": "Mortality using raltegravir versus other integrase strand-transfer inhibitors in people with HIV in Europe and Australia: a prospective multicentre study.",
+    "journal": "EClinicalMedicine",
+    "year": "2025",
+    "first": "Tusch E"
+   },
+   {
+    "pmid": "40826068",
+    "title": "A longitudinal qualitative study of clinical nurses caring for hospitalized adults during the first fifteen months of COVID-19: lessons in professional survival and leadership.",
+    "journal": "BMC Nurs",
+    "year": "2025",
+    "first": "Norman EM"
+   },
+   {
+    "pmid": "40778136",
+    "title": "Identifying undiagnosed high-risk suicidality cases through comorbidity-adjusted risk modeling.",
+    "journal": "medRxiv",
+    "year": "2025",
+    "first": "Bode L"
+   },
+   {
+    "pmid": "40747769",
+    "title": "Low Testosterone Level and Mortality Risk in Patients With Prostate Cancer: A Post-Randomization Analysis.",
+    "journal": "Cancer Med",
+    "year": "2025",
+    "first": "Fattahi S"
+   },
+   {
+    "pmid": "40235555",
+    "title": "Impact of the introduction of a package of care involving early detection of opportunistic infections, a prospective multicenter cohort study of people living with HIV/AIDS in Brazil.",
+    "journal": "Lancet Reg Health Am",
+    "year": "2025",
+    "first": "Pasqualotto AC"
+   },
+   {
+    "pmid": "39899557",
+    "title": "Mortality among sexual and gender minority populations: A systematic review.",
+    "journal": "PLoS One",
+    "year": "2025",
+    "first": "Zachry CE"
+   },
+   {
+    "pmid": "39648282",
+    "title": "Treatment trajectories among children and adolescents referred to the Norwegian National Center for Gender Incongruence.",
+    "journal": "Acta Paediatr",
+    "year": "2025",
+    "first": "Nyquist CB"
+   },
+   {
+    "pmid": "39531266",
+    "title": "Clinical and Biochemical Outcomes in Transgender Individuals Undergoing Hormone Therapy: Protocol for a Systematic Review.",
+    "journal": "JMIR Res Protoc",
+    "year": "2024",
+    "first": "Sattora E"
+   },
+   {
+    "pmid": "39408061",
+    "title": "Assessing the Influence of Long-Term Gender-Affirming Hormone Therapy on Cardiovascular Risk in Transgender Men through Carotid Intima-Media Thickness.",
+    "journal": "J Clin Med",
+    "year": "2024",
+    "first": "Hamid R"
+   },
+   {
+    "pmid": "39389223",
+    "title": "Hormones, Stress, and Heart Disease in Transgender Women with HIV in LITE Plus.",
+    "journal": "Am J Prev Med",
+    "year": "2025",
+    "first": "Poteat TC"
+   },
+   {
+    "pmid": "39330345",
+    "title": "Lifestyle Habits and Risk of Cardiovascular Mortality in Menopausal Women with Cardiovascular Risk Factors: A Retrospective Cohort Study.",
+    "journal": "J Cardiovasc Dev Dis",
+    "year": "2024",
+    "first": "Lopez-Pineda A"
+   },
+   {
+    "pmid": "39252793",
+    "title": "Prevalence of cardiovascular events among transgender adults with obesity: A population-based analysis.",
+    "journal": "Obes Pillars",
+    "year": "2024",
+    "first": "Pingili A"
+   },
+   {
+    "pmid": "38916204",
+    "title": "Characteristics and Outcomes Among US Commercially Insured Transgender Adults With Cirrhosis: A National Cohort Study.",
+    "journal": "Am J Gastroenterol",
+    "year": "2024",
+    "first": "Elhence H"
+   },
+   {
+    "pmid": "38623767",
+    "title": "Hospitalizations and transgender patients in the United States.",
+    "journal": "J Hosp Med",
+    "year": "2024",
+    "first": "Khanijow K"
+   },
+   {
+    "pmid": "38578239",
+    "title": "Association between serum estradiol and cardiovascular health among transgender adults using gender-affirming estrogen therapy.",
+    "journal": "Am J Physiol Heart Circ Physiol",
+    "year": "2024",
+    "first": "Rytz CL"
+   },
+   {
+    "pmid": "38563736",
+    "title": "From Invisibility to Inclusion: A Call to Action to Address COPD Disparities in the Lesbian, Gay, Bisexual, Transgender, and Queer+ Community.",
+    "journal": "Chronic Obstr Pulm Dis",
+    "year": "2024",
+    "first": "Maniar NT"
+   },
+   {
+    "pmid": "38515173",
+    "title": "Nurses' use of 'wellness' supplements during the COVID-19 pandemic in the United States.",
+    "journal": "J Adv Nurs",
+    "year": "2024",
+    "first": "Turner SL"
+   },
+   {
+    "pmid": "38367979",
+    "title": "All-cause and suicide mortalities among adolescents and young adults who contacted specialised gender identity services in Finland in 1996-2019: a register study.",
+    "journal": "BMJ Ment Health",
+    "year": "2024",
+    "first": "Ruuska SM"
+   },
+   {
+    "pmid": "38255753",
+    "title": "Breast Reconstruction following Mastectomy for Breast Cancer or Prophylactic Mastectomy: Therapeutic Options and Results.",
+    "journal": "Life (Basel)",
+    "year": "2024",
+    "first": "Simion L"
+   },
+   {
+    "pmid": "38141428",
+    "title": "Strategies enhancing the patient experience in mammography: A scoping review.",
+    "journal": "Radiography (Lond)",
+    "year": "2024",
+    "first": "Ding S"
+   },
+   {
+    "pmid": "37910274",
+    "title": "Prostate Cancer in Transgender Women: Epidemiology, Clinical Characteristics, and Management Challenges.",
+    "journal": "Curr Oncol Rep",
+    "year": "2023",
+    "first": "Manfredi C"
+   },
+   {
+    "pmid": "37790660",
+    "title": "Cardiovascular Disease Risk Estimation for Transgender and Gender-Diverse Patients: Cross-Sectional Analysis of Baseline Data From the LITE Plus Cohort Study.",
+    "journal": "AJPM Focus",
+    "year": "2023",
+    "first": "Poteat TC"
+   },
+   {
+    "pmid": "37773618",
+    "title": "A Suicide Prevention Intervention for Emerging Adult Sexual and Gender Minority Groups: Protocol for a Pilot Hybrid Effectiveness Randomized Controlled Trial.",
+    "journal": "JMIR Res Protoc",
+    "year": "2023",
+    "first": "Brown LA"
+   },
+   {
+    "pmid": "37606667",
+    "title": "Preexposure Prophylaxis for the Prevention of HIV: Updated Evidence Report and Systematic Review for the US Preventive Services Task Force.",
+    "journal": "JAMA",
+    "year": "2023",
+    "first": "Chou R"
+   },
+   {
+    "pmid": "37595204",
+    "title": "Impact of Latent M. tuberculosis Infection Treatment on Time to CD4/CD8 Recovery in Acute, Recent, and Chronic HIV Infection.",
+    "journal": "J Acquir Immune Defic Syndr",
+    "year": "2023",
+    "first": "Grinsztejn E"
+   },
+   {
+    "pmid": "37669412",
+    "title": "",
+    "journal": "",
+    "year": "2023",
+    "first": "Chou R"
+   },
+   {
+    "pmid": "37367977",
+    "title": "Transgender Identity and Suicide Attempts and Mortality in Denmark.",
+    "journal": "JAMA",
+    "year": "2023",
+    "first": "Erlangsen A"
+   },
+   {
+    "pmid": "37052321",
+    "title": "Suicide prevention: What does the evidence show for the effectiveness of safety planning for children and young people? - A systematic scoping review.",
+    "journal": "J Psychiatr Ment Health Nurs",
+    "year": "2023",
+    "first": "Abbott-Smith S"
+   },
+   {
+    "pmid": "36913427",
+    "title": "Sexually transmitted infections among key populations in India: A protocol for systematic review.",
+    "journal": "PLoS One",
+    "year": "2023",
+    "first": "Bhatta M"
+   },
+   {
+    "pmid": "36868260",
+    "title": "HIV incidence and mortality in transgender women in the eastern and southern USA: a multisite cohort study.",
+    "journal": "Lancet HIV",
+    "year": "2023",
+    "first": "Wirtz AL"
+   },
+   {
+    "pmid": "36828001",
+    "title": "Mpox in people with advanced HIV infection: a global case series.",
+    "journal": "Lancet",
+    "year": "2023",
+    "first": "Mitjà O"
+   },
+   {
+    "pmid": "36736374",
+    "title": "Mortality rates by gender and sexual orientation reveal a disproportionally high mortality among cisgender men of unknown sexual orientation and men who have sex with women in a cohort of people living with HIV in Rio de Janeiro, Brazil.",
+    "journal": "Braz J Infect Dis",
+    "year": "2023",
+    "first": "Coelho LE"
+   },
+   {
+    "pmid": "36716027",
+    "title": "Analysis of Mortality Among Transgender and Gender Diverse Adults in England.",
+    "journal": "JAMA Netw Open",
+    "year": "2023",
+    "first": "Jackson SS"
+   },
+   {
+    "pmid": "36539065",
+    "title": "Risk Assessment and Coronary Artery Calcium Scoring in Transgender and Gender-Diverse Individuals Receiving Gender-Affirming Hormone Therapy.",
+    "journal": "Endocr Pract",
+    "year": "2023",
+    "first": "Duro T"
+   },
+   {
+    "pmid": "36328386",
+    "title": "Serum oestradiol levels and risk of adverse cardiovascular events associated with gender-affirming oestrogen therapy: a protocol for a systematic review and meta-analysis.",
+    "journal": "BMJ Open",
+    "year": "2022",
+    "first": "Rytz CL"
+   },
+   {
+    "pmid": "36053748",
+    "title": "Gender-affirming estrogen therapy route of administration and cardiovascular risk: a systematic review and narrative synthesis.",
+    "journal": "Am J Physiol Heart Circ Physiol",
+    "year": "2022",
+    "first": "Turino Miranda K"
+   },
+   {
+    "pmid": "35548863",
+    "title": "Differences in All-Cause Mortality Among Transgender and Non-Transgender People Enrolled in Private Insurance.",
+    "journal": "Demography",
+    "year": "2022",
+    "first": "Hughes LD"
+   },
+   {
+    "pmid": "35407392",
+    "title": "The ENIGI (European Network for the Investigation of Gender Incongruence) Study: Overview of Acquired Endocrine Knowledge and Future Perspectives.",
+    "journal": "J Clin Med",
+    "year": "2022",
+    "first": "Cocchetti C"
+   },
+   {
+    "pmid": "35358492",
+    "title": "Sexual and/or gender minority disparities in obstetrical and birth outcomes.",
+    "journal": "Am J Obstet Gynecol",
+    "year": "2022",
+    "first": "Leonard SA"
+   },
+   {
+    "pmid": "35065598",
+    "title": "Examining the association between loneliness and emergency department visits using Canadian Longitudinal Study of Aging (CLSA) data: a retrospective cross-sectional study.",
+    "journal": "BMC Geriatr",
+    "year": "2022",
+    "first": "Chamberlain SA"
+   },
+   {
+    "pmid": "34481559",
+    "title": "Mortality trends over five decades in adult transgender people receiving hormone treatment: a report from the Amsterdam cohort of gender dysphoria.",
+    "journal": "Lancet Diabetes Endocrinol",
+    "year": "2021",
+    "first": "de Blok CJ"
+   },
+   {
+    "pmid": "33955843",
+    "title": "Influence of Stress, Gender, and Minority Status on Cardiovascular Disease Risk in the Hispanic/Latino Community: Protocol for a Longitudinal Observational Cohort Study.",
+    "journal": "JMIR Res Protoc",
+    "year": "2021",
+    "first": "Poteat T"
+   },
+   {
+    "pmid": "33538824",
+    "title": "Prevalence and Co-occurrence of Alcohol, Nicotine, and Other Substance Use Disorder Diagnoses Among US Transgender and Cisgender Adults.",
+    "journal": "JAMA Netw Open",
+    "year": "2021",
+    "first": "Hughto JMW"
+   },
+   {
+    "pmid": "33252154",
+    "title": "Assessing the Quality of Care Delivered to Transgender and Gender Diverse Patients with Cancer in Ireland: A Case Series.",
+    "journal": "Oncologist",
+    "year": "2021",
+    "first": "Moloney C"
+   },
+   {
+    "pmid": "32685379",
+    "title": "Effects of gender affirming hormone therapy on body mass index in transgender individuals: A longitudinal cohort study.",
+    "journal": "J Clin Transl Endocrinol",
+    "year": "2020",
+    "first": "Suppakitjanusant P"
+   },
+   {
+    "pmid": "32594155",
+    "title": "Prostate Cancer Incidence under Androgen Deprivation: Nationwide Cohort Study in Trans Women Receiving Hormone Treatment.",
+    "journal": "J Clin Endocrinol Metab",
+    "year": "2020",
+    "first": "de Nie I"
+   },
+   {
+    "pmid": "32072611",
+    "title": "Trends in suicide death risk in transgender people: results from the Amsterdam Cohort of Gender Dysphoria study (1972-2017).",
+    "journal": "Acta Psychiatr Scand",
+    "year": "2020",
+    "first": "Wiepjes CM"
+   },
+   {
+    "pmid": "31825502",
+    "title": "Health Outcomes Among Long-term Opioid Users With Testosterone Prescription in the Veterans Health Administration.",
+    "journal": "JAMA Netw Open",
+    "year": "2019",
+    "first": "Jasuja GK"
+   },
+   {
+    "pmid": "30602477",
+    "title": "Effects of Gender-Affirming Hormones on Lipid, Metabolic, and Cardiac Surrogate Blood Markers in Transgender Persons.",
+    "journal": "Clin Chem",
+    "year": "2019",
+    "first": "Defreyne J"
+   },
+   {
+    "pmid": "30107028",
+    "title": "Gender-affirming hormone therapy and the risk of sex hormone-dependent tumours in transgender individuals-A systematic review.",
+    "journal": "Clin Endocrinol (Oxf)",
+    "year": "2018",
+    "first": "McFarlane T"
+   },
+   {
+    "pmid": "28738421",
+    "title": "Cardiovascular Disease Among Transgender Adults Receiving Hormone Therapy: A Narrative Review.",
+    "journal": "Ann Intern Med",
+    "year": "2017",
+    "first": "Streed CG Jr"
+   }
+  ]
+ },
+ "Q7": {
+  "query": "HIV[tiab] AND \"gay and bisexual men\"[tiab] AND (mortality[tiab] OR \"life expectancy\"[tiab]) AND (HAART[tiab] OR antiretroviral[tiab])",
+  "count": "3",
+  "items": [
+   {
+    "pmid": "36397250",
+    "title": "Late diagnosis of HIV in 2022: Why so little change?",
+    "journal": "HIV Med",
+    "year": "2022",
+    "first": "Collins S"
+   },
+   {
+    "pmid": "10832178",
+    "title": "Modern antiretroviral therapy improves life expectancy of gay and bisexual males in Vancouver's West End.",
+    "journal": "Can J Public Health",
+    "year": "2000",
+    "first": "Wood E"
+   },
+   {
+    "pmid": "8885823",
+    "title": "Depressive affect and survival among gay and bisexual men infected with HIV.",
+    "journal": "Arch Intern Med",
+    "year": "1996",
+    "first": "Mayne TJ"
+   }
+  ]
+ },
+ "Q8": {
+  "query": "\"sexual orientation\"[tiab] AND \"death records\"[tiab] AND (collection[tiab] OR \"gender identity\"[tiab] OR SOGI[tiab]) AND (suicide[tiab] OR \"violent death\"[tiab])",
+  "count": "0",
+  "items": []
+ },
+ "Q9": {
+  "query": "\"sexual orientation\"[tiab] AND mortality[tiab] AND \"structural stigma\"[tiab]",
+  "count": "4",
+  "items": [
+   {
+    "pmid": "31439269",
+    "title": "Structural stigma and all-cause mortality among sexual minorities: Differences by sexual behavior?",
+    "journal": "Soc Sci Med",
+    "year": "2020",
+    "first": "Hatzenbuehler ML"
+   },
+   {
+    "pmid": "27977256",
+    "title": "Structural stigma: Research evidence and implications for psychological science.",
+    "journal": "Am Psychol",
+    "year": "2016",
+    "first": "Hatzenbuehler ML"
+   },
+   {
+    "pmid": "27889281",
+    "title": "Is structural stigma's effect on the mortality of sexual minorities robust? A failure to replicate the results of a published study.",
+    "journal": "Soc Sci Med",
+    "year": "2017",
+    "first": "Regnerus M"
+   },
+   {
+    "pmid": "23830012",
+    "title": "RETRACTED: Structural stigma and all-cause mortality in sexual minority populations.",
+    "journal": "Soc Sci Med",
+    "year": "2014",
+    "first": "Hatzenbuehler ML"
+   }
+  ]
+ }
+}

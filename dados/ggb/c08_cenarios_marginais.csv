@@ -1,0 +1,12 @@
+ano,cenario,n,E_RR1,cob_RR1,ancoras_conferidas
+2023,N1 homicídio + latrocínio (inclui trans e heterossexuais),221,1122.2073428744345,0.19693330417347663,True
+2023,N2 cenário: N1 menos TODAS as trans da tabela (publicado),94,1122.2073428744345,0.08376348684301721,True
+2023,cis LGB dentro de N1: mínimo compatível com as marginais,100,1122.2073428744345,0.08911009238618853,True
+2023,cis LGB dentro de N1: máximo compatível com as marginais,118,1122.2073428744345,0.10514990901570245,True
+2023,mínimo compatível menos toda a faixa etária até 18 anos do release (cenário de idade; idade não informada fica),92,1122.2073428744345,0.08198128499529345,True
+2024,N1 homicídio + latrocínio (inclui trans e heterossexuais),269,1012.6623197775901,0.2656364266215417,True
+2024,N2 cenário: N1 menos TODAS as trans da tabela (publicado),167,1012.6623197775901,0.16491183362749987,True
+2024,contraexemplo do Astra: 269 - 99 trans (102 - 3 suicidas) - 6 heterossexuais,164,1012.6623197775901,0.16194934559826332,True
+2024,cis LGB dentro de N1: mínimo compatível com as marginais,164,1012.6623197775901,0.16194934559826332,True
+2024,cis LGB dentro de N1: máximo compatível com as marginais,168,1012.6623197775901,0.16589932963724535,True
+2024,mínimo compatível menos toda a faixa etária até 18 anos do release (cenário de idade; idade não informada fica),148,1012.6623197775901,0.1461494094423352,True

@@ -1,0 +1,5 @@
+f48b1ee4172ea0870ebdf7b186b338f65c25e28943becb6f7fa828e2a047a41a  PREREGISTRO-C09.md
+# gravado 2026-10-24T20:06:38Z (ANTES de qualquer script que leia desfecho; só c09_estrutura.py, que lê exposições, rodou antes)
+# arquivo inteiro na gravação (seção ADENDOS vazia): f7a011e3cf65b5c1987ec6d4e39b59408755641869f0ed5b1650a1d3fe0431a2
+# a 1a linha é o sha256 dos bytes até o primeiro "\n---\n\n**ADENDOS" (exclusive): é o que prova que o corpo não mudou depois de adendos
+# verificar: python3 -c "import hashlib;b=open('PREREGISTRO-C09.md','rb').read();print(hashlib.sha256(b[:b.index(b'\n---\n\n**ADENDOS')]).hexdigest())"

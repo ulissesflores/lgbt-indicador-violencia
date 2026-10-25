@@ -1,0 +1,68 @@
+uf,ano_troca,partido_antes,partido_depois,ideologia_antes,ideologia_depois,delta,sentido,bloco_antes,bloco_depois,direcao_bloco,janela_completa,contaminada,n_referencias
+Acre,2019,PT,PP,2.97,8.2,5.23,direita,esquerda,direita,esquerda->direita,1,0,9
+Alagoas,2015,PSDB,PMDB,7.12,7.01,-0.11,esquerda,direita,direita,mesmo bloco,1,0,10
+Amapá,2015,PSB,PDT,4.05,3.92,-0.13,esquerda,esquerda,esquerda,mesmo bloco,1,0,10
+Amapá,2023,PDT,SD,3.85,6.01,2.16,direita,esquerda,direita,esquerda->direita,0,0,15
+Amazonas,2014,PMN,PMN|PROS,6.88,7.32,0.44,direita,direita,direita,mesmo bloco,0,1,10
+Amazonas,2015,PMN|PROS,PROS,7.32,7.47,0.15,direita,direita,direita,mesmo bloco,1,1,10
+Amazonas,2017,PROS,PDT|PROS|PSD,7.47,6.46,-1.01,esquerda,direita,direita,mesmo bloco,1,1,3
+Amazonas,2018,PDT|PROS|PSD,PDT,6.46,3.92,-2.54,esquerda,direita,esquerda,direita->esquerda,1,1,9
+Amazonas,2019,PDT,PSC,3.92,8.33,4.41,direita,esquerda,direita,esquerda->direita,1,1,9
+Amazonas,2023,PSC,União Brasil,8.41,8.48,0.07,direita,direita,direita,mesmo bloco,0,0,15
+Ceará,2015,PSB,PT,4.05,2.97,-1.08,esquerda,esquerda,esquerda,mesmo bloco,1,0,10
+Ceará,2022,PT,PDT|PT,2.68,3.56,0.88,direita,esquerda,esquerda,mesmo bloco,1,1,15
+Ceará,2023,PDT|PT,PT,3.56,2.68,-0.88,esquerda,esquerda,esquerda,mesmo bloco,0,1,15
+Distrito Federal,2015,PT,PSB,2.97,4.05,1.08,direita,esquerda,esquerda,mesmo bloco,1,0,10
+Distrito Federal,2019,PSB,MDB,4.05,7.01,2.96,direita,esquerda,direita,esquerda->direita,1,0,9
+Distrito Federal,2023,MDB,MDB|PP,6.5,6.78,0.28,direita,direita,direita,mesmo bloco,0,1,15
+Distrito Federal,2024,MDB|PP,MDB,6.78,6.5,-0.28,esquerda,direita,direita,mesmo bloco,0,1,15
+Espírito Santo,2015,PSB,PMDB,4.05,7.01,2.96,direita,esquerda,direita,esquerda->direita,1,0,10
+Espírito Santo,2019,PMDB,PSB,7.01,4.05,-2.96,esquerda,direita,esquerda,direita->esquerda,1,0,9
+Goiás,2018,PSDB,PP|PSDB,7.12,7.91,0.79,direita,direita,direita,mesmo bloco,1,1,9
+Goiás,2019,PP|PSDB,DEM,7.91,8.57,0.66,direita,direita,direita,mesmo bloco,1,1,9
+Maranhão,2015,PMDB,PCdoB,7.01,1.92,-5.09,esquerda,direita,esquerda,direita->esquerda,1,0,10
+Maranhão,2022,PCdoB,PCdoB|PRB,1.78,6.69,4.91,direita,esquerda,direita,esquerda->direita,1,1,15
+Maranhão,2023,PCdoB|PRB,PSB,6.69,3.59,-3.1,esquerda,direita,esquerda,direita->esquerda,0,1,15
+Mato Grosso,2015,PMDB,PDT,7.01,3.92,-3.09,esquerda,direita,esquerda,direita->esquerda,1,0,10
+Mato Grosso,2019,PDT,DEM,3.92,8.57,4.65,direita,esquerda,direita,esquerda->direita,1,0,9
+Mato Grosso do Sul,2015,PMDB,PSDB,7.01,7.12,0.11,direita,direita,direita,mesmo bloco,1,0,10
+Minas Gerais,2014,PSDB,PP|PSDB,7.12,7.92,0.8,direita,direita,direita,mesmo bloco,0,1,10
+Minas Gerais,2015,PP|PSDB,PT,7.92,2.97,-4.95,esquerda,direita,esquerda,direita->esquerda,1,1,10
+Minas Gerais,2019,PT,Novo,2.97,8.13,5.16,direita,esquerda,direita,esquerda->direita,1,0,9
+Paraná,2018,PSDB,PROS|PSDB,7.12,7.38,0.26,direita,direita,direita,mesmo bloco,1,1,9
+Paraná,2019,PROS|PSDB,PSD,7.38,7.09,-0.29,esquerda,direita,direita,mesmo bloco,1,1,9
+Pará,2019,PSDB,MDB,7.12,7.01,-0.11,esquerda,direita,direita,mesmo bloco,1,0,9
+Pernambuco,2023,PSB,PSDB,3.59,6.76,3.17,direita,esquerda,direita,esquerda->direita,0,0,15
+Piauí,2014,PSB,PMDB|PSB,4.05,6.26,2.21,direita,esquerda,direita,esquerda->direita,0,1,10
+Piauí,2015,PMDB|PSB,PT,6.26,2.97,-3.29,esquerda,direita,esquerda,direita->esquerda,1,1,10
+Rio Grande do Norte,2015,DEM,PSD,8.57,7.09,-1.48,esquerda,direita,direita,mesmo bloco,1,0,10
+Rio Grande do Norte,2019,PSD,PT,7.09,2.97,-4.12,esquerda,direita,esquerda,direita->esquerda,1,0,9
+Rio Grande do Sul,2015,PT,PMDB,2.97,7.01,4.04,direita,esquerda,direita,esquerda->direita,1,0,10
+Rio Grande do Sul,2019,PMDB,PSDB,7.01,7.12,0.11,direita,direita,direita,mesmo bloco,1,0,9
+Rio Grande do Sul,2022,PSDB,PSDB|PTB,6.76,7.49,0.73,direita,direita,direita,mesmo bloco,1,1,15
+Rio Grande do Sul,2023,PSDB|PTB,PSDB,7.49,6.76,-0.73,esquerda,direita,direita,mesmo bloco,0,1,15
+Rio de Janeiro,2019,PMDB,PSC,7.01,8.33,1.32,direita,direita,direita,mesmo bloco,1,0,9
+Rio de Janeiro,2023,PSC,PL,8.41,8.8,0.39,direita,direita,direita,mesmo bloco,0,0,15
+Rondônia,2018,PMDB,PMDB|PSB,7.01,4.82,-2.19,esquerda,direita,centro,envolve centro,1,1,9
+Rondônia,2019,PMDB|PSB,PSL,4.82,8.11,3.29,direita,centro,direita,envolve centro,1,1,9
+Roraima,2014,PSDB,PSB|PSDB,7.12,4.83,-2.29,esquerda,direita,centro,envolve centro,0,1,10
+Roraima,2015,PSB|PSDB,PP,4.83,8.2,3.37,direita,centro,direita,envolve centro,1,1,10
+Roraima,2019,PP,PSL,8.2,8.11,-0.09,esquerda,direita,direita,mesmo bloco,1,0,9
+Roraima,2023,PSL,PP,8.48,8.15,-0.33,esquerda,direita,direita,mesmo bloco,0,0,15
+Santa Catarina,2015,DEM,PSD,8.57,7.09,-1.48,esquerda,direita,direita,mesmo bloco,1,0,10
+Santa Catarina,2018,PSD,PMDB|PSD,7.09,7.04,-0.05,esquerda,direita,direita,mesmo bloco,1,1,9
+Santa Catarina,2019,PMDB|PSD,PSL,7.04,8.11,1.07,direita,direita,direita,mesmo bloco,1,1,9
+Santa Catarina,2023,PSL,PL,8.48,8.8,0.32,direita,direita,direita,mesmo bloco,0,0,15
+Sergipe,2013,PT,PMDB|PT,2.97,3.31,0.34,direita,esquerda,esquerda,mesmo bloco,0,1,10
+Sergipe,2014,PMDB|PT,PMDB,3.31,7.01,3.7,direita,esquerda,direita,esquerda->direita,0,1,10
+Sergipe,2018,PMDB,PMDB|PSB,7.01,4.82,-2.19,esquerda,direita,centro,envolve centro,1,1,9
+Sergipe,2019,PMDB|PSB,PSD,4.82,7.09,2.27,direita,centro,direita,envolve centro,1,1,9
+São Paulo,2018,PSDB,PSB|PSDB,7.12,4.85,-2.27,esquerda,direita,centro,envolve centro,1,1,9
+São Paulo,2019,PSB|PSDB,PSDB,4.85,7.12,2.27,direita,centro,direita,envolve centro,1,1,9
+São Paulo,2022,PSDB,DEM|PSDB,6.76,8.06,1.3,direita,direita,direita,mesmo bloco,1,1,15
+São Paulo,2023,DEM|PSDB,Republicanos,8.06,8.33,0.27,direita,direita,direita,mesmo bloco,0,1,15
+Tocantins,2014,PSDB,PSDB|SD,7.12,6.66,-0.46,esquerda,direita,direita,mesmo bloco,0,1,10
+Tocantins,2015,PSDB|SD,PMDB,6.66,7.01,0.35,direita,direita,direita,mesmo bloco,1,1,10
+Tocantins,2018,PMDB,PHS|PMDB,7.01,6.97,-0.04,esquerda,direita,direita,mesmo bloco,1,1,9
+Tocantins,2019,PHS|PMDB,PHS,6.97,6.96,-0.01,esquerda,direita,direita,mesmo bloco,1,1,9
+Tocantins,2023,PHS,Republicanos,7.44,8.33,0.89,direita,direita,direita,mesmo bloco,0,0,15

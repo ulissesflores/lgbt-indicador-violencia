@@ -1,0 +1,124 @@
+{
+ "n_uf": 27,
+ "total_ggb_uf": 329,
+ "spearman": {
+  "ggb_n ~ populacao": {
+   "rho": 0.852,
+   "p_perm": 0.0
+  },
+  "ggb_por_milhao ~ internet_dom_pct": {
+   "rho": -0.43,
+   "p_perm": 0.0284
+  },
+  "ggb_por_milhao ~ hom_taxa_100mil": {
+   "rho": 0.387,
+   "p_perm": 0.048
+  },
+  "ggb_por_milhao ~ sinan_por_milhao": {
+   "rho": 0.107,
+   "p_perm": 0.595
+  },
+  "sinan_por_milhao ~ internet_dom_pct": {
+   "rho": 0.293,
+   "p_perm": 0.1377
+  },
+  "hom_taxa ~ internet_dom_pct": {
+   "rho": -0.506,
+   "p_perm": 0.0069
+  }
+ },
+ "poisson_ggb ~ internet": {
+  "coef": [
+   0.502,
+   -0.248
+  ],
+  "irr_por_dp": [
+   0.78
+  ],
+  "ep_robusto": [
+   0.077,
+   0.07
+  ],
+  "ic95_irr": [
+   [
+    0.68,
+    0.89
+   ]
+  ],
+  "deviance": 61.0,
+  "dispersao": 2.44
+ },
+ "poisson_ggb ~ internet + homicidio": {
+  "coef": [
+   0.564,
+   -0.021,
+   0.287
+  ],
+  "irr_por_dp": [
+   0.979,
+   1.332
+  ],
+  "ep_robusto": [
+   0.062,
+   0.087,
+   0.083
+  ],
+  "ic95_irr": [
+   [
+    0.83,
+    1.16
+   ],
+   [
+    1.13,
+    1.57
+   ]
+  ],
+  "deviance": 43.8,
+  "dispersao": 1.83
+ },
+ "poisson_ggb ~ homicidio": {
+  "coef": [
+   0.565,
+   0.3
+  ],
+  "irr_por_dp": [
+   1.35
+  ],
+  "ep_robusto": [
+   0.061,
+   0.048
+  ],
+  "ic95_irr": [
+   [
+    1.23,
+    1.48
+   ]
+  ],
+  "deviance": 43.9,
+  "dispersao": 1.76
+ },
+ "serie": {
+  "ggb~internet 2016-2025": {
+   "n": 9,
+   "rho": -0.82
+  },
+  "ggb~sinan_lgbtfobia 2015-2025": {
+   "n": 11,
+   "rho": -0.565
+  },
+  "ggb~homicidios_sim 2015-2023": {
+   "n": 9,
+   "rho": 0.617
+  },
+  "sinan_lgbtfobia~internet 2016-2025": {
+   "n": 9,
+   "rho": 0.983
+  }
+ },
+ "variacao": {
+  "ggb_2000_2017": 3.423076923076923,
+  "ggb_2017_2025": 0.5775280898876405,
+  "internet_2016_2025": 1.371212121212121,
+  "sinan_lgbtfobia_2015_2025": 2.542194092827004
+ }
+}

@@ -1,0 +1,2 @@
+d513a095101d6ab0216c02df3a5265b2c13c1b18266a3ae11dc2479365b6f36f  dados/ggb/cobertura_implicita.py
+003f0482544cf1b4fa038e86cbc8d45b5a58b4031003d8fed7c143cdbc9a503b  dados/ggb/cobertura_implicita.csv

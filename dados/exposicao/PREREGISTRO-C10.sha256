@@ -1,0 +1,6 @@
+83c4ef0f7e73bce22aaff9097f336b7a57a1438926f9a72709ab1845de496f14  PREREGISTRO-C10.md
+# gravado 2026-10-24T20:43:46Z (ANTES de qualquer script que leia desfecho; só c10_estrutura.py, que lê exposições, rodou antes)
+# arquivo inteiro na gravação (seção ADENDOS vazia): ad20ac861ab7ea42e60745d47d1281978a2a86aef77332b5c45fa654eb535571
+# a 1a linha é o sha256 dos bytes até o primeiro "\n---\n\n**ADENDOS" (exclusive): prova que o corpo não mudou depois de adendos
+# estrutura (exposições apenas): c10_estrutura.py 87643a57f9d0e228d29eec19c09108742bed3cd4dcce62850b3796e13f8c617c; c10_estrutura.md 652a73b88f1eba4a3e6f4ed02e985cd52fc00238f58a3ba89eccddd575a364fa; c10_trocas.csv 8a776fb61066baaf3e508ca997392f6790147eff64acb3416b4120008747eded
+# verificar: python3 -c "import hashlib;b=open('PREREGISTRO-C10.md','rb').read();print(hashlib.sha256(b[:b.index(b'\n---\n\n**ADENDOS')]).hexdigest())"

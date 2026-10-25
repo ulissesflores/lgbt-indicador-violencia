@@ -1,0 +1,61 @@
+regiao,pi_lgb_regional,n_lgb_pns2019_na_regiao,indicador,mudanca_rel,sobreamostra_k,n_lgb_por_rodada,n_total_regiao_por_rodada,domicilios_a_visitar,B_custo_central_BRL,nota
+Norte,0.0189133,256,fisica,0.1,1,48434,2560810,3137210,649861114,
+Norte,0.0189133,256,fisica,0.1,5,48434,550909,3137251,649869597,triagem independe de k; k=5 so reduz completos
+Norte,0.0189133,256,fisica,0.2,1,12571,664626,814223,168663272,
+Norte,0.0189133,256,fisica,0.2,5,12571,142982,814271,168673054,triagem independe de k; k=5 so reduz completos
+Norte,0.0189133,256,fisica,0.3,1,5787,305938,374800,77638407,
+Norte,0.0189133,256,fisica,0.3,5,5787,65817,374846,77647837,triagem independe de k; k=5 so reduz completos
+Norte,0.0189133,256,qualquer,0.1,1,7740,409188,501290,103840336,
+Norte,0.0189133,256,qualquer,0.1,5,7740,88029,501349,103852473,triagem independe de k; k=5 so reduz completos
+Norte,0.0189133,256,qualquer,0.2,1,1949,103043,126236,26149398,
+Norte,0.0189133,256,qualquer,0.2,5,1949,22168,126244,26150965,triagem independe de k; k=5 so reduz completos
+Norte,0.0189133,256,qualquer,0.3,1,869,45920,56256,11653197,
+Norte,0.0189133,256,qualquer,0.3,5,869,9879,56288,11659922,triagem independe de k; k=5 so reduz completos
+Nordeste,0.0155795,458,fisica,0.1,1,48434,3108792,3808534,788923440,
+Nordeste,0.0155795,458,fisica,0.1,5,48434,660506,3808580,788932806,triagem independe de k; k=5 so reduz completos
+Nordeste,0.0155795,458,fisica,0.2,1,12571,806847,988456,204754937,
+Nordeste,0.0155795,458,fisica,0.2,5,12571,171426,988513,204766782,triagem independe de k; k=5 so reduz completos
+Nordeste,0.0155795,458,fisica,0.3,1,5787,371404,455001,94251826,
+Nordeste,0.0155795,458,fisica,0.3,5,5787,78910,455057,94263413,triagem independe de k; k=5 so reduz completos
+Nordeste,0.0155795,458,qualquer,0.1,1,7740,496749,608560,126060840,
+Nordeste,0.0155795,458,qualquer,0.1,5,7740,105541,608630,126075483,triagem independe de k; k=5 so reduz completos
+Nordeste,0.0155795,458,qualquer,0.2,1,1949,125093,153250,31745064,
+Nordeste,0.0155795,458,qualquer,0.2,5,1949,26578,153258,31746914,triagem independe de k; k=5 so reduz completos
+Nordeste,0.0155795,458,qualquer,0.3,1,869,55746,68294,14146757,
+Nordeste,0.0155795,458,qualquer,0.3,5,869,11844,68333,14154986,triagem independe de k; k=5 so reduz completos
+Sudeste,0.0209749,403,fisica,0.1,1,48434,2309108,2828854,585986269,
+Sudeste,0.0209749,403,fisica,0.1,5,48434,500569,2828894,585994625,triagem independe de k; k=5 so reduz completos
+Sudeste,0.0209749,403,fisica,0.2,1,12571,599299,734192,152085128,
+Sudeste,0.0209749,403,fisica,0.2,5,12571,129916,734237,152094364,triagem independe de k; k=5 so reduz completos
+Sudeste,0.0209749,403,fisica,0.3,1,5787,275867,337961,70007238,
+Sudeste,0.0209749,403,fisica,0.3,5,5787,59803,338002,70015916,triagem independe de k; k=5 so reduz completos
+Sudeste,0.0209749,403,qualquer,0.1,1,7740,368968,452017,93633638,
+Sudeste,0.0209749,403,qualquer,0.1,5,7740,79985,452072,93644927,triagem independe de k; k=5 so reduz completos
+Sudeste,0.0209749,403,qualquer,0.2,1,1949,92915,113829,23579198,
+Sudeste,0.0209749,403,qualquer,0.2,5,1949,20142,113836,23580615,triagem independe de k; k=5 so reduz completos
+Sudeste,0.0209749,403,qualquer,0.3,1,869,41406,50726,10507671,
+Sudeste,0.0209749,403,qualquer,0.3,5,869,8976,50756,10513881,triagem independe de k; k=5 so reduz completos
+Sul,0.0194487,232,fisica,0.1,1,48434,2490315,3050848,631971478,
+Sul,0.0194487,232,fisica,0.1,5,48434,536810,3050886,631979446,triagem independe de k; k=5 so reduz completos
+Sul,0.0194487,232,fisica,0.2,1,12571,646329,791808,164020011,
+Sul,0.0194487,232,fisica,0.2,5,12571,139322,791855,164029682,triagem independe de k; k=5 so reduz completos
+Sul,0.0194487,232,fisica,0.3,1,5787,297516,364482,75501142,
+Sul,0.0194487,232,fisica,0.3,5,5787,64133,364527,75510283,triagem independe de k; k=5 so reduz completos
+Sul,0.0194487,232,qualquer,0.1,1,7740,397923,487489,100981597,
+Sul,0.0194487,232,qualquer,0.1,5,7740,85776,487547,100993536,triagem independe de k; k=5 so reduz completos
+Sul,0.0194487,232,qualquer,0.2,1,1949,100206,122761,25429447,
+Sul,0.0194487,232,qualquer,0.2,5,1949,21601,122769,25431060,triagem independe de k; k=5 so reduz completos
+Sul,0.0194487,232,qualquer,0.3,1,869,44656,54707,11332429,
+Sul,0.0194487,232,qualquer,0.3,5,869,9626,54739,11338938,triagem independe de k; k=5 so reduz completos
+Centro-Oeste,0.0176795,205,fisica,0.1,1,48434,2739522,3356147,695213163,
+Centro-Oeste,0.0176795,205,fisica,0.1,5,48434,586651,3356190,695222074,triagem independe de k; k=5 so reduz completos
+Centro-Oeste,0.0176795,205,fisica,0.2,1,12571,711008,871045,180433711,
+Centro-Oeste,0.0176795,205,fisica,0.2,5,12571,152258,871096,180444248,triagem independe de k; k=5 so reduz completos
+Centro-Oeste,0.0176795,205,fisica,0.3,1,5787,327288,400956,83056433,
+Centro-Oeste,0.0176795,205,fisica,0.3,5,5787,70087,401005,83066650,triagem independe de k; k=5 so reduz completos
+Centro-Oeste,0.0176795,205,qualquer,0.1,1,7740,437744,536274,111087040,
+Centro-Oeste,0.0176795,205,qualquer,0.1,5,7740,93740,536336,111100030,triagem independe de k; k=5 so reduz completos
+Centro-Oeste,0.0176795,205,qualquer,0.2,1,1949,110234,135046,27974270,
+Centro-Oeste,0.0176795,205,qualquer,0.2,5,1949,23606,135054,27975964,triagem independe de k; k=5 so reduz completos
+Centro-Oeste,0.0176795,205,qualquer,0.3,1,869,49124,60181,12466281,
+Centro-Oeste,0.0176795,205,qualquer,0.3,5,869,10520,60217,12473634,triagem independe de k; k=5 so reduz completos

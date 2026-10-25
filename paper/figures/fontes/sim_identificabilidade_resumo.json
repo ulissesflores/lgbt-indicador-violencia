@@ -1,0 +1,98 @@
+{
+ "observado": {
+  "2022": 783,
+  "2023": 1633,
+  "2024": 2567,
+  "2025": 3481
+ },
+ "P0": 0.04,
+ "cenarios": {
+  "S1 incidencia constante": {
+   "g": 0.0,
+   "I0_2022": 21948,
+   "h_registro": 0.637,
+   "sse_log": 0.0472,
+   "p_2025": 0.175,
+   "I_2030": 21948,
+   "R_2030_mediana": 22026,
+   "R_2030_IC90": [
+    19030,
+    25229
+   ]
+  },
+  "S2 incidencia +15%/ano": {
+   "g": 0.15,
+   "I0_2022": 21947,
+   "h_registro": 0.423,
+   "sse_log": 0.0472,
+   "p_2025": 0.115,
+   "I_2030": 67136,
+   "R_2030_mediana": 45232,
+   "R_2030_IC90": [
+    26866,
+    63400
+   ]
+  },
+  "S3 incidencia -5%/ano": {
+   "g": -0.05,
+   "I0_2022": 21946,
+   "h_registro": 0.723,
+   "sse_log": 0.0472,
+   "p_2025": 0.205,
+   "I_2030": 14559,
+   "R_2030_mediana": 14529,
+   "R_2030_IC90": [
+    12645,
+    16827
+   ]
+  }
+ },
+ "sse_por_p0": {
+  "0.02": {
+   "S1 incidencia constante": 0.0472,
+   "S2 incidencia +15%/ano": 0.0472,
+   "S3 incidencia -5%/ano": 0.0472
+  },
+  "0.04": {
+   "S1 incidencia constante": 0.0472,
+   "S2 incidencia +15%/ano": 0.0472,
+   "S3 incidencia -5%/ano": 0.0472
+  },
+  "0.08": {
+   "S1 incidencia constante": 0.0472,
+   "S2 incidencia +15%/ano": 0.0472,
+   "S3 incidencia -5%/ano": 0.0472
+  },
+  "0.15": {
+   "S1 incidencia constante": 0.0472,
+   "S2 incidencia +15%/ano": 0.0472,
+   "S3 incidencia -5%/ano": 0.0472
+  }
+ },
+ "poder_survey": [
+  {
+   "mudanca_relativa": 0.1,
+   "n_LGB_por_rodada": 9481,
+   "n_total_sem_sobreamostra": 501641,
+   "n_total_com_sobreamostra_5x": 100329
+  },
+  {
+   "mudanca_relativa": 0.2,
+   "n_LGB_por_rodada": 2461,
+   "n_total_sem_sobreamostra": 130212,
+   "n_total_com_sobreamostra_5x": 26043
+  },
+  {
+   "mudanca_relativa": 0.3,
+   "n_LGB_por_rodada": 1133,
+   "n_total_sem_sobreamostra": 59948,
+   "n_total_com_sobreamostra_5x": 11990
+  },
+  {
+   "mudanca_relativa": 0.5,
+   "n_LGB_por_rodada": 435,
+   "n_total_sem_sobreamostra": 23016,
+   "n_total_com_sobreamostra_5x": 4604
+  }
+ ]
+}

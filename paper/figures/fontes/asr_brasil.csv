@@ -1,0 +1,271 @@
+grupo,ano,taxa_padronizada,ic_lo,ic_hi,taxa_bruta,obitos,pop,desfecho
+Brasil,2010,25.93,25.7,26.15,27.37,52214,190749191,agressao
+Brasil,2010,31.72,,,,,,agressao+indet
+Brasil,2011,25.94,25.72,26.17,27.26,52131,191227436,agressao
+Brasil,2011,32.07,,,,,,agressao+indet
+Brasil,2012,27.87,27.64,28.1,29.33,56263,191803000,agressao
+Brasil,2012,33.68,,,,,,agressao+indet
+Brasil,2013,28.09,27.86,28.33,29.46,56699,192476015,agressao
+Brasil,2013,33.69,,,,,,agressao+indet
+Brasil,2014,29.5,29.26,29.74,30.82,59568,193246898,agressao
+Brasil,2014,34.78,,,,,,agressao+indet
+Brasil,2015,28.81,28.57,29.04,29.9,58040,194116331,agressao
+Brasil,2015,34.22,,,,,,agressao+indet
+Brasil,2016,30.25,30.01,30.49,31.29,61044,195085249,agressao
+Brasil,2016,35.84,,,,,,agressao+indet
+Brasil,2017,31.47,31.22,31.71,32.44,63641,196154830,agressao
+Brasil,2017,36.74,,,,,,agressao+indet
+Brasil,2018,27.61,27.38,27.84,28.27,55783,197326481,agressao
+Brasil,2018,34.09,,,,,,agressao+indet
+Brasil,2019,21.77,21.57,21.97,22.13,43959,198601833,agressao
+Brasil,2019,30.34,,,,,,agressao+indet
+Brasil,2020,23.51,23.3,23.72,23.78,47564,199982735,agressao
+Brasil,2020,30.66,,,,,,agressao+indet
+Brasil,2021,22.45,22.25,22.66,22.58,45488,201471246,agressao
+Brasil,2021,29.38,,,,,,agressao+indet
+Brasil,2022,21.81,21.61,22.01,21.81,44292,203069637,agressao
+Brasil,2022,29.44,,,,,,agressao+indet
+Brasil,2023,21.28,21.08,21.48,21.17,43346,204780381,agressao
+Brasil,2023,27.97,,,,,,agressao+indet
+Brasil,2024,19.5,19.31,19.69,19.3,39882,206606159,agressao
+Brasil,2024,27.63,,,,,,agressao+indet
+Homens,2010,48.28,47.83,48.72,51.12,47749,93402274,agressao
+Homens,2010,57.19,,,,,,agressao+indet
+Homens,2011,48.24,47.8,48.68,50.89,47619,93579354,agressao
+Homens,2011,57.56,,,,,,agressao+indet
+Homens,2012,51.95,51.49,52.4,54.95,51544,93800643,agressao
+Homens,2012,60.86,,,,,,agressao+indet
+Homens,2013,52.34,51.88,52.79,55.21,51937,94066264,agressao
+Homens,2013,61.08,,,,,,agressao+indet
+Homens,2014,55.12,54.65,55.58,58.0,54736,94376458,agressao
+Homens,2014,63.28,,,,,,agressao+indet
+Homens,2015,53.94,53.48,54.41,56.4,53424,94731575,agressao
+Homens,2015,62.36,,,,,,agressao+indet
+Homens,2016,56.85,56.37,57.32,59.3,56409,95132074,agressao
+Homens,2016,65.6,,,,,,agressao+indet
+Homens,2017,59.01,58.53,59.49,61.43,58713,95578514,agressao
+Homens,2017,67.27,,,,,,agressao+indet
+Homens,2018,51.65,51.2,52.1,53.37,51271,96071550,agressao
+Homens,2018,61.85,,,,,,agressao+indet
+Homens,2019,40.59,40.19,40.98,41.64,40231,96611935,agressao
+Homens,2019,54.5,,,,,,agressao+indet
+Homens,2020,44.05,43.64,44.46,45.0,43742,97200514,agressao
+Homens,2020,55.29,,,,,,agressao+indet
+Homens,2021,41.92,41.52,42.32,42.56,41644,97838223,agressao
+Homens,2021,52.5,,,,,,agressao+indet
+Homens,2022,40.7,40.3,41.09,41.11,40504,98526088,agressao
+Homens,2022,52.58,,,,,,agressao+indet
+Homens,2023,39.57,39.18,39.96,39.75,39459,99265224,agressao
+Homens,2023,49.9,,,,,,agressao+indet
+Homens,2024,36.25,35.87,36.62,36.24,36260,100056835,agressao
+Homens,2024,49.0,,,,,,agressao+indet
+Mulheres,2010,4.45,4.32,4.58,4.59,4465,97346917,agressao
+Mulheres,2010,7.32,,,,,,agressao+indet
+Mulheres,2011,4.5,4.37,4.63,4.62,4512,97648082,agressao
+Mulheres,2011,7.64,,,,,,agressao+indet
+Mulheres,2012,4.69,4.55,4.82,4.82,4719,98002357,agressao
+Mulheres,2012,7.58,,,,,,agressao+indet
+Mulheres,2013,4.73,4.59,4.87,4.84,4762,98409751,agressao
+Mulheres,2013,7.4,,,,,,agressao+indet
+Mulheres,2014,4.78,4.65,4.92,4.89,4832,98870440,agressao
+Mulheres,2014,7.37,,,,,,agressao+indet
+Mulheres,2015,4.58,4.44,4.71,4.64,4616,99384755,agressao
+Mulheres,2015,7.18,,,,,,agressao+indet
+Mulheres,2016,4.58,4.45,4.71,4.64,4635,99953175,agressao
+Mulheres,2016,7.22,,,,,,agressao+indet
+Mulheres,2017,4.84,4.71,4.98,4.9,4928,100576316,agressao
+Mulheres,2017,7.35,,,,,,agressao+indet
+Mulheres,2018,4.42,4.29,4.55,4.46,4512,101254931,agressao
+Mulheres,2018,7.44,,,,,,agressao+indet
+Mulheres,2019,3.64,3.52,3.76,3.66,3728,101989898,agressao
+Mulheres,2019,7.21,,,,,,agressao+indet
+Mulheres,2020,3.71,3.6,3.83,3.72,3822,102782220,agressao
+Mulheres,2020,7.08,,,,,,agressao+indet
+Mulheres,2021,3.72,3.6,3.83,3.71,3844,103633023,agressao
+Mulheres,2021,7.27,,,,,,agressao+indet
+Mulheres,2022,3.64,3.53,3.76,3.62,3788,104543549,agressao
+Mulheres,2022,7.32,,,,,,agressao+indet
+Mulheres,2023,3.72,3.6,3.83,3.68,3887,105515157,agressao
+Mulheres,2023,7.05,,,,,,agressao+indet
+Mulheres,2024,3.44,3.32,3.55,3.4,3622,106549323,agressao
+Mulheres,2024,7.3,,,,,,agressao+indet
+Negros,2010,35.46,35.09,35.83,38.36,37131,96795294,agressao
+Negros,2010,41.61,,,,,,agressao+indet
+Negros,2011,35.27,34.9,35.63,38.07,37238,97813082,agressao
+Negros,2011,41.73,,,,,,agressao+indet
+Negros,2012,37.97,37.59,38.34,41.2,40740,98880867,agressao
+Negros,2012,44.42,,,,,,agressao+indet
+Negros,2013,38.26,37.89,38.64,41.42,41425,100000418,agressao
+Negros,2013,44.48,,,,,,agressao+indet
+Negros,2014,40.07,39.69,40.45,43.34,43852,101173582,agressao
+Negros,2014,45.99,,,,,,agressao+indet
+Negros,2015,39.31,38.93,39.68,42.16,43175,102402291,agressao
+Negros,2015,45.57,,,,,,agressao+indet
+Negros,2016,41.45,41.07,41.83,44.36,46001,103688560,agressao
+Negros,2016,47.92,,,,,,agressao+indet
+Negros,2017,43.62,43.24,44.01,46.68,49028,105034496,agressao
+Negros,2017,49.55,,,,,,agressao+indet
+Negros,2018,38.24,37.87,38.6,40.64,43255,106442299,agressao
+Negros,2018,45.32,,,,,,agressao+indet
+Negros,2019,29.84,29.52,30.16,31.46,33954,107914269,agressao
+Negros,2019,39.8,,,,,,agressao+indet
+Negros,2020,32.32,31.99,32.64,33.97,37185,109452808,agressao
+Negros,2020,40.17,,,,,,agressao+indet
+Negros,2021,30.76,30.44,31.08,32.14,35693,111060425,agressao
+Negros,2021,38.04,,,,,,agressao+indet
+Negros,2022,29.33,29.02,29.64,30.51,34399,112739744,agressao
+Negros,2022,37.71,,,,,,agressao+indet
+Negros,2023,28.47,28.17,28.78,29.48,33749,114493504,agressao
+Negros,2023,35.55,,,,,,agressao+indet
+Negros,2024,25.95,25.66,26.24,26.72,31082,116324570,agressao
+Negros,2024,34.81,,,,,,agressao+indet
+Não negros,2010,15.73,15.47,15.98,16.05,15083,93953897,agressao
+Não negros,2010,21.01,,,,,,agressao+indet
+Não negros,2011,15.71,15.46,15.96,15.94,14893,93414354,agressao
+Não negros,2011,21.32,,,,,,agressao+indet
+Não negros,2012,16.49,16.23,16.75,16.71,15523,92922133,agressao
+Não negros,2012,21.5,,,,,,agressao+indet
+Não negros,2013,16.37,16.11,16.63,16.52,15274,92475597,agressao
+Não negros,2013,21.19,,,,,,agressao+indet
+Não negros,2014,17.0,16.74,17.27,17.07,15716,92073316,agressao
+Não negros,2014,21.52,,,,,,agressao+indet
+Não negros,2015,16.23,15.96,16.49,16.21,14865,91714040,agressao
+Não negros,2015,20.59,,,,,,agressao+indet
+Não negros,2016,16.55,16.29,16.82,16.46,15043,91396689,agressao
+Não negros,2016,21.07,,,,,,agressao+indet
+Não negros,2017,16.22,15.95,16.48,16.04,14613,91120334,agressao
+Não negros,2017,20.64,,,,,,agressao+indet
+Não negros,2018,14.02,13.77,14.27,13.79,12528,90884182,agressao
+Não negros,2018,19.64,,,,,,agressao+indet
+Não negros,2019,11.27,11.05,11.5,11.03,10005,90687564,agressao
+Não negros,2019,18.03,,,,,,agressao+indet
+Não negros,2020,11.78,11.56,12.01,11.46,10379,90529927,agressao
+Não negros,2020,17.95,,,,,,agressao+indet
+Não negros,2021,11.18,10.96,11.4,10.83,9795,90410821,agressao
+Não negros,2021,17.48,,,,,,agressao+indet
+Não negros,2022,11.39,11.16,11.61,10.95,9893,90329893,agressao
+Não negros,2022,17.9,,,,,,agressao+indet
+Não negros,2023,11.08,10.86,11.3,10.63,9597,90286877,agressao
+Não negros,2023,17.13,,,,,,agressao+indet
+Não negros,2024,10.22,10.0,10.43,9.75,8800,90281589,agressao
+Não negros,2024,17.2,,,,,,agressao+indet
+Homens negros,2010,65.52,64.8,66.23,71.05,34381,48388475,agressao
+Homens negros,2010,75.49,,,,,,agressao+indet
+Homens negros,2011,64.95,64.24,65.66,70.35,34369,48855152,agressao
+Homens negros,2011,75.11,,,,,,agressao+indet
+Homens negros,2012,70.01,69.29,70.74,76.36,37678,49345163,agressao
+Homens negros,2012,80.28,,,,,,agressao+indet
+Homens negros,2013,70.73,70.0,71.45,77.0,38391,49859319,agressao
+Homens negros,2013,80.67,,,,,,agressao+indet
+Homens negros,2014,74.26,73.52,74.99,80.79,40717,50398463,agressao
+Homens negros,2014,83.57,,,,,,agressao+indet
+Homens negros,2015,72.97,72.25,73.7,78.8,40159,50963477,agressao
+Homens negros,2015,82.96,,,,,,agressao+indet
+Homens negros,2016,77.18,76.44,77.92,83.21,42901,51555282,agressao
+Homens negros,2016,87.52,,,,,,agressao+indet
+Homens negros,2017,81.15,80.4,81.9,87.54,45674,52174838,agressao
+Homens negros,2017,90.61,,,,,,agressao+indet
+Homens negros,2018,70.92,70.22,71.62,75.97,40129,52823148,agressao
+Homens negros,2018,82.36,,,,,,agressao+indet
+Homens negros,2019,55.31,54.69,55.92,58.77,31443,53501261,agressao
+Homens negros,2019,71.85,,,,,,agressao+indet
+Homens negros,2020,60.15,59.52,60.79,63.76,34563,54210270,agressao
+Homens negros,2020,72.77,,,,,,agressao+indet
+Homens negros,2021,57.11,56.49,57.73,60.15,33055,54951318,agressao
+Homens negros,2021,68.44,,,,,,agressao+indet
+Homens negros,2022,54.49,53.89,55.09,57.16,31850,55725597,agressao
+Homens negros,2022,67.86,,,,,,agressao+indet
+Homens negros,2023,52.66,52.07,53.25,54.97,31075,56534353,agressao
+Homens negros,2023,63.82,,,,,,agressao+indet
+Homens negros,2024,48.03,47.47,48.59,49.86,28612,57378887,agressao
+Homens negros,2024,62.32,,,,,,agressao+indet
+Homens não negros,2010,29.12,28.62,29.62,29.7,13368,45013799,agressao
+Homens não negros,2010,36.85,,,,,,agressao+indet
+Homens não negros,2011,29.19,28.69,29.69,29.63,13250,44724202,agressao
+Homens não negros,2011,37.46,,,,,,agressao+indet
+Homens não negros,2012,30.77,30.25,31.29,31.19,13866,44455480,agressao
+Homens não negros,2012,38.11,,,,,,agressao+indet
+Homens não negros,2013,30.33,29.82,30.85,30.64,13546,44206945,agressao
+Homens não negros,2013,37.62,,,,,,agressao+indet
+Homens não negros,2014,31.67,31.15,32.2,31.88,14019,43977995,agressao
+Homens não negros,2014,38.44,,,,,,agressao+indet
+Homens não negros,2015,30.26,29.74,30.78,30.31,13265,43768098,agressao
+Homens não negros,2015,36.76,,,,,,agressao+indet
+Homens não negros,2016,31.05,30.53,31.58,31.0,13508,43576793,agressao
+Homens não negros,2016,37.83,,,,,,agressao+indet
+Homens não negros,2017,30.23,29.71,30.75,30.04,13039,43403676,agressao
+Homens não negros,2017,36.93,,,,,,agressao+indet
+Homens não negros,2018,26.1,25.61,26.58,25.76,11142,43248402,agressao
+Homens não negros,2018,34.6,,,,,,agressao+indet
+Homens não negros,2019,20.75,20.31,21.18,20.38,8788,43110674,agressao
+Homens não negros,2019,31.22,,,,,,agressao+indet
+Homens não negros,2020,21.85,21.4,22.29,21.35,9179,42990244,agressao
+Homens não negros,2020,31.23,,,,,,agressao+indet
+Homens não negros,2021,20.58,20.15,21.02,20.03,8589,42886905,agressao
+Homens não negros,2021,29.98,,,,,,agressao+indet
+Homens não negros,2022,20.91,20.47,21.35,20.22,8654,42800491,agressao
+Homens não negros,2022,30.7,,,,,,agressao+indet
+Homens não negros,2023,20.37,19.93,20.8,19.62,8384,42730871,agressao
+Homens não negros,2023,29.42,,,,,,agressao+indet
+Homens não negros,2024,18.69,18.27,19.11,17.92,7648,42677948,agressao
+Homens não negros,2024,29.15,,,,,,agressao+indet
+Mulheres negras,2010,5.43,5.22,5.64,5.68,2750,48406819,agressao
+Mulheres negras,2010,7.88,,,,,,agressao+indet
+Mulheres negras,2011,5.6,5.39,5.8,5.86,2869,48957930,agressao
+Mulheres negras,2011,8.46,,,,,,agressao+indet
+Mulheres negras,2012,5.9,5.68,6.11,6.18,3062,49535703,agressao
+Mulheres negras,2012,8.63,,,,,,agressao+indet
+Mulheres negras,2013,5.79,5.58,6.0,6.05,3034,50141099,agressao
+Mulheres negras,2013,8.39,,,,,,agressao+indet
+Mulheres negras,2014,5.87,5.66,6.08,6.17,3135,50775119,agressao
+Mulheres negras,2014,8.47,,,,,,agressao+indet
+Mulheres negras,2015,5.67,5.47,5.88,5.86,3015,51438814,agressao
+Mulheres negras,2015,8.32,,,,,,agressao+indet
+Mulheres negras,2016,5.76,5.55,5.96,5.95,3101,52133278,agressao
+Mulheres negras,2016,8.47,,,,,,agressao+indet
+Mulheres negras,2017,6.1,5.9,6.31,6.34,3353,52859658,agressao
+Mulheres negras,2017,8.62,,,,,,agressao+indet
+Mulheres negras,2018,5.62,5.42,5.82,5.83,3126,53619151,agressao
+Mulheres negras,2018,8.48,,,,,,agressao+indet
+Mulheres negras,2019,4.48,4.31,4.66,4.61,2510,54413008,agressao
+Mulheres negras,2019,8.07,,,,,,agressao+indet
+Mulheres negras,2020,4.6,4.43,4.78,4.75,2622,55242537,agressao
+Mulheres negras,2020,7.9,,,,,,agressao+indet
+Mulheres negras,2021,4.58,4.41,4.76,4.7,2638,56109107,agressao
+Mulheres negras,2021,7.97,,,,,,agressao+indet
+Mulheres negras,2022,4.36,4.19,4.53,4.47,2549,57014147,agressao
+Mulheres negras,2022,7.96,,,,,,agressao+indet
+Mulheres negras,2023,4.52,4.35,4.69,4.61,2674,57959151,agressao
+Mulheres negras,2023,7.68,,,,,,agressao+indet
+Mulheres negras,2024,4.11,3.95,4.27,4.19,2471,58945683,agressao
+Mulheres negras,2024,7.79,,,,,,agressao+indet
+Mulheres não negras,2010,3.44,3.28,3.61,3.5,1715,48940098,agressao
+Mulheres não negras,2010,6.53,,,,,,agressao+indet
+Mulheres não negras,2011,3.35,3.18,3.51,3.37,1643,48690151,agressao
+Mulheres não negras,2011,6.57,,,,,,agressao+indet
+Mulheres não negras,2012,3.39,3.23,3.56,3.42,1657,48466653,agressao
+Mulheres não negras,2012,6.31,,,,,,agressao+indet
+Mulheres não negras,2013,3.56,3.39,3.73,3.58,1728,48268652,agressao
+Mulheres não negras,2013,6.2,,,,,,agressao+indet
+Mulheres não negras,2014,3.53,3.36,3.7,3.53,1697,48095321,agressao
+Mulheres não negras,2014,6.03,,,,,,agressao+indet
+Mulheres não negras,2015,3.34,3.18,3.51,3.34,1601,47945942,agressao
+Mulheres não negras,2015,5.82,,,,,,agressao+indet
+Mulheres não negras,2016,3.22,3.06,3.38,3.21,1534,47819897,agressao
+Mulheres não negras,2016,5.73,,,,,,agressao+indet
+Mulheres não negras,2017,3.33,3.17,3.5,3.3,1575,47716658,agressao
+Mulheres não negras,2017,5.77,,,,,,agressao+indet
+Mulheres não negras,2018,2.95,2.79,3.1,2.91,1386,47635780,agressao
+Mulheres não negras,2018,6.03,,,,,,agressao+indet
+Mulheres não negras,2019,2.59,2.45,2.74,2.56,1218,47576890,agressao
+Mulheres não negras,2019,6.05,,,,,,agressao+indet
+Mulheres não negras,2020,2.57,2.42,2.71,2.52,1200,47539683,agressao
+Mulheres não negras,2020,5.9,,,,,,agressao+indet
+Mulheres não negras,2021,2.58,2.43,2.72,2.54,1206,47523916,agressao
+Mulheres não negras,2021,6.16,,,,,,agressao+indet
+Mulheres não negras,2022,2.68,2.53,2.83,2.61,1239,47529402,agressao
+Mulheres não negras,2022,6.32,,,,,,agressao+indet
+Mulheres não negras,2023,2.62,2.47,2.77,2.55,1213,47556006,agressao
+Mulheres não negras,2023,6.04,,,,,,agressao+indet
+Mulheres não negras,2024,2.51,2.36,2.65,2.42,1151,47603641,agressao
+Mulheres não negras,2024,6.44,,,,,,agressao+indet

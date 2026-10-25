@@ -1,0 +1,97 @@
+desfecho,ano,prevalencia_LGB,RR_cenario,medida_GGB,ggb,pop_LGB_adulta,mortes_esperadas,cobertura_implicita
+agressao,2023,"1,89% (PNS 2019, publicado; não resposta = não LGB+)",1.0,todas,257,3025764,1122.2,0.229
+agressao,2023,"1,89% (PNS 2019, publicado; não resposta = não LGB+)",1.0,homicidios_decl,221,3025764,1122.2,0.197
+agressao,2023,"1,89% (PNS 2019, publicado; não resposta = não LGB+)",2.82,todas,257,3025764,3164.6,0.081
+agressao,2023,"1,89% (PNS 2019, publicado; não resposta = não LGB+)",2.82,homicidios_decl,221,3025764,3164.6,0.07
+agressao,2023,"1,89% (PNS 2019, publicado; não resposta = não LGB+)",3.84,todas,257,3025764,4309.3,0.06
+agressao,2023,"1,89% (PNS 2019, publicado; não resposta = não LGB+)",3.84,homicidios_decl,221,3025764,4309.3,0.051
+agressao,2023,"1,96% (PNS, só respostas válidas)",1.0,todas,257,3132474,1161.8,0.221
+agressao,2023,"1,96% (PNS, só respostas válidas)",1.0,homicidios_decl,221,3132474,1161.8,0.19
+agressao,2023,"1,96% (PNS, só respostas válidas)",2.82,todas,257,3132474,3276.2,0.078
+agressao,2023,"1,96% (PNS, só respostas válidas)",2.82,homicidios_decl,221,3132474,3276.2,0.067
+agressao,2023,"1,96% (PNS, só respostas válidas)",3.84,todas,257,3132474,4461.3,0.058
+agressao,2023,"1,96% (PNS, só respostas válidas)",3.84,homicidios_decl,221,3132474,4461.3,0.05
+agressao,2023,3% (cenário),1.0,todas,257,4802801,1781.3,0.144
+agressao,2023,3% (cenário),1.0,homicidios_decl,221,4802801,1781.3,0.124
+agressao,2023,3% (cenário),2.82,todas,257,4802801,5023.2,0.051
+agressao,2023,3% (cenário),2.82,homicidios_decl,221,4802801,5023.2,0.044
+agressao,2023,3% (cenário),3.84,todas,257,4802801,6840.1,0.038
+agressao,2023,3% (cenário),3.84,homicidios_decl,221,4802801,6840.1,0.032
+agressao,2023,5% (cenário),1.0,todas,257,8004668,2968.8,0.087
+agressao,2023,5% (cenário),1.0,homicidios_decl,221,8004668,2968.8,0.074
+agressao,2023,5% (cenário),2.82,todas,257,8004668,8372.0,0.031
+agressao,2023,5% (cenário),2.82,homicidios_decl,221,8004668,8372.0,0.026
+agressao,2023,5% (cenário),3.84,todas,257,8004668,11400.2,0.023
+agressao,2023,5% (cenário),3.84,homicidios_decl,221,8004668,11400.2,0.019
+agressao,2024,"1,89% (PNS 2019, publicado; não resposta = não LGB+)",1.0,todas,291,3027156,1012.7,0.287
+agressao,2024,"1,89% (PNS 2019, publicado; não resposta = não LGB+)",1.0,homicidios_decl,273,3027156,1012.7,0.27
+agressao,2024,"1,89% (PNS 2019, publicado; não resposta = não LGB+)",2.82,todas,291,3027156,2855.7,0.102
+agressao,2024,"1,89% (PNS 2019, publicado; não resposta = não LGB+)",2.82,homicidios_decl,273,3027156,2855.7,0.096
+agressao,2024,"1,89% (PNS 2019, publicado; não resposta = não LGB+)",3.84,todas,291,3027156,3888.6,0.075
+agressao,2024,"1,89% (PNS 2019, publicado; não resposta = não LGB+)",3.84,homicidios_decl,273,3027156,3888.6,0.07
+agressao,2024,"1,96% (PNS, só respostas válidas)",1.0,todas,291,3133915,1048.4,0.278
+agressao,2024,"1,96% (PNS, só respostas válidas)",1.0,homicidios_decl,273,3133915,1048.4,0.26
+agressao,2024,"1,96% (PNS, só respostas válidas)",2.82,todas,291,3133915,2956.4,0.098
+agressao,2024,"1,96% (PNS, só respostas válidas)",2.82,homicidios_decl,273,3133915,2956.4,0.092
+agressao,2024,"1,96% (PNS, só respostas válidas)",3.84,todas,291,3133915,4025.8,0.072
+agressao,2024,"1,96% (PNS, só respostas válidas)",3.84,homicidios_decl,273,3133915,4025.8,0.068
+agressao,2024,3% (cenário),1.0,todas,291,4805010,1607.4,0.181
+agressao,2024,3% (cenário),1.0,homicidios_decl,273,4805010,1607.4,0.17
+agressao,2024,3% (cenário),2.82,todas,291,4805010,4532.9,0.064
+agressao,2024,3% (cenário),2.82,homicidios_decl,273,4805010,4532.9,0.06
+agressao,2024,3% (cenário),3.84,todas,291,4805010,6172.4,0.047
+agressao,2024,3% (cenário),3.84,homicidios_decl,273,4805010,6172.4,0.044
+agressao,2024,5% (cenário),1.0,todas,291,8008350,2679.0,0.109
+agressao,2024,5% (cenário),1.0,homicidios_decl,273,8008350,2679.0,0.102
+agressao,2024,5% (cenário),2.82,todas,291,8008350,7554.8,0.039
+agressao,2024,5% (cenário),2.82,homicidios_decl,273,8008350,7554.8,0.036
+agressao,2024,5% (cenário),3.84,todas,291,8008350,10287.4,0.028
+agressao,2024,5% (cenário),3.84,homicidios_decl,273,8008350,10287.4,0.027
+agressao+indet,2023,"1,89% (PNS 2019, publicado; não resposta = não LGB+)",1.0,todas,257,3025764,1297.6,0.198
+agressao+indet,2023,"1,89% (PNS 2019, publicado; não resposta = não LGB+)",1.0,homicidios_decl,221,3025764,1297.6,0.17
+agressao+indet,2023,"1,89% (PNS 2019, publicado; não resposta = não LGB+)",2.82,todas,257,3025764,3659.1,0.07
+agressao+indet,2023,"1,89% (PNS 2019, publicado; não resposta = não LGB+)",2.82,homicidios_decl,221,3025764,3659.1,0.06
+agressao+indet,2023,"1,89% (PNS 2019, publicado; não resposta = não LGB+)",3.84,todas,257,3025764,4982.6,0.052
+agressao+indet,2023,"1,89% (PNS 2019, publicado; não resposta = não LGB+)",3.84,homicidios_decl,221,3025764,4982.6,0.044
+agressao+indet,2023,"1,96% (PNS, só respostas válidas)",1.0,todas,257,3132474,1343.3,0.191
+agressao+indet,2023,"1,96% (PNS, só respostas válidas)",1.0,homicidios_decl,221,3132474,1343.3,0.165
+agressao+indet,2023,"1,96% (PNS, só respostas válidas)",2.82,todas,257,3132474,3788.2,0.068
+agressao+indet,2023,"1,96% (PNS, só respostas válidas)",2.82,homicidios_decl,221,3132474,3788.2,0.058
+agressao+indet,2023,"1,96% (PNS, só respostas válidas)",3.84,todas,257,3132474,5158.4,0.05
+agressao+indet,2023,"1,96% (PNS, só respostas válidas)",3.84,homicidios_decl,221,3132474,5158.4,0.043
+agressao+indet,2023,3% (cenário),1.0,todas,257,4802801,2059.6,0.125
+agressao+indet,2023,3% (cenário),1.0,homicidios_decl,221,4802801,2059.6,0.107
+agressao+indet,2023,3% (cenário),2.82,todas,257,4802801,5808.1,0.044
+agressao+indet,2023,3% (cenário),2.82,homicidios_decl,221,4802801,5808.1,0.038
+agressao+indet,2023,3% (cenário),3.84,todas,257,4802801,7908.9,0.032
+agressao+indet,2023,3% (cenário),3.84,homicidios_decl,221,4802801,7908.9,0.028
+agressao+indet,2023,5% (cenário),1.0,todas,257,8004668,3432.7,0.075
+agressao+indet,2023,5% (cenário),1.0,homicidios_decl,221,8004668,3432.7,0.064
+agressao+indet,2023,5% (cenário),2.82,todas,257,8004668,9680.2,0.027
+agressao+indet,2023,5% (cenário),2.82,homicidios_decl,221,8004668,9680.2,0.023
+agressao+indet,2023,5% (cenário),3.84,todas,257,8004668,13181.6,0.019
+agressao+indet,2023,5% (cenário),3.84,homicidios_decl,221,8004668,13181.6,0.017
+agressao+indet,2024,"1,89% (PNS 2019, publicado; não resposta = não LGB+)",1.0,todas,291,3027156,1245.0,0.234
+agressao+indet,2024,"1,89% (PNS 2019, publicado; não resposta = não LGB+)",1.0,homicidios_decl,273,3027156,1245.0,0.219
+agressao+indet,2024,"1,89% (PNS 2019, publicado; não resposta = não LGB+)",2.82,todas,291,3027156,3510.9,0.083
+agressao+indet,2024,"1,89% (PNS 2019, publicado; não resposta = não LGB+)",2.82,homicidios_decl,273,3027156,3510.9,0.078
+agressao+indet,2024,"1,89% (PNS 2019, publicado; não resposta = não LGB+)",3.84,todas,291,3027156,4780.8,0.061
+agressao+indet,2024,"1,89% (PNS 2019, publicado; não resposta = não LGB+)",3.84,homicidios_decl,273,3027156,4780.8,0.057
+agressao+indet,2024,"1,96% (PNS, só respostas válidas)",1.0,todas,291,3133915,1288.9,0.226
+agressao+indet,2024,"1,96% (PNS, só respostas válidas)",1.0,homicidios_decl,273,3133915,1288.9,0.212
+agressao+indet,2024,"1,96% (PNS, só respostas válidas)",2.82,todas,291,3133915,3634.7,0.08
+agressao+indet,2024,"1,96% (PNS, só respostas válidas)",2.82,homicidios_decl,273,3133915,3634.7,0.075
+agressao+indet,2024,"1,96% (PNS, só respostas válidas)",3.84,todas,291,3133915,4949.4,0.059
+agressao+indet,2024,"1,96% (PNS, só respostas válidas)",3.84,homicidios_decl,273,3133915,4949.4,0.055
+agressao+indet,2024,3% (cenário),1.0,todas,291,4805010,1976.2,0.147
+agressao+indet,2024,3% (cenário),1.0,homicidios_decl,273,4805010,1976.2,0.138
+agressao+indet,2024,3% (cenário),2.82,todas,291,4805010,5572.9,0.052
+agressao+indet,2024,3% (cenário),2.82,homicidios_decl,273,4805010,5572.9,0.049
+agressao+indet,2024,3% (cenário),3.84,todas,291,4805010,7588.6,0.038
+agressao+indet,2024,3% (cenário),3.84,homicidios_decl,273,4805010,7588.6,0.036
+agressao+indet,2024,5% (cenário),1.0,todas,291,8008350,3293.7,0.088
+agressao+indet,2024,5% (cenário),1.0,homicidios_decl,273,8008350,3293.7,0.083
+agressao+indet,2024,5% (cenário),2.82,todas,291,8008350,9288.1,0.031
+agressao+indet,2024,5% (cenário),2.82,homicidios_decl,273,8008350,9288.1,0.029
+agressao+indet,2024,5% (cenário),3.84,todas,291,8008350,12647.7,0.023
+agressao+indet,2024,5% (cenário),3.84,homicidios_decl,273,8008350,12647.7,0.022

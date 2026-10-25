@@ -1,0 +1,174 @@
+{
+ "regras": {
+  "conjunto": "arquivos distribuídos segundo make_provenance.arquivos() (o mesmo conjunto do selo)",
+  "ledger": "todo sources*.jsonl do conjunto; registro = linha não vazia",
+  "fonte_unica": "chave_id do painel: DOI minúsculo; URL minúscula sem barra final; URL doi.org vira DOI",
+  "obra_distinta": "fonte única sem o sufixo /vN de DOI (mesmo preprint com e sem versão conta uma vez)",
+  "idioma": "idioma_do_id do painel: pt e pt-BR fundidos; maioria entre registros; empate pelo ledger consolidado",
+  "tipo": "tipo_do_id do painel; quartis de A-textointegral/verificacao-metadados.csv (extraída das planilhas privadas de verificação, só metadados) e das tabelas dos dossiês em docs/dossies/, nessa ordem",
+  "scripts": "todo *.py do conjunto; cruzado com a lista dos 139 do título (painel); análise = dados/, simulacao/, research-*; o resto é empacotamento do repositório"
+ },
+ "ledgers": {
+  "n": 18,
+  "arquivos": [
+   "research-2026-10-10/sources.jsonl",
+   "research-2026-10-11/sources.jsonl",
+   "research-2026-10-12-deep/sources.jsonl",
+   "research-2026-10-21-rodada3/A-textointegral/sources.jsonl",
+   "research-2026-10-21-rodada3/F2-custos/sources.jsonl",
+   "research-2026-10-21-rodada3/F3-ggb/lit/sources.jsonl",
+   "research-2026-10-21-rodada3/F3-ggb/sources.jsonl",
+   "research-2026-10-21-rodada3/F5-economia-politica/sources.jsonl",
+   "research-2026-10-21-rodada3/F6-asia-africa/sources.jsonl",
+   "research-2026-10-21-rodada3/F8-literatura/sources.jsonl",
+   "research-2026-10-21-rodada3/GGB-completo/perfil/sources.jsonl",
+   "research-2026-10-21-rodada3/GGB-completo/series/sources.jsonl",
+   "research-2026-10-21-rodada3/discurso/governos/sources.jsonl",
+   "research-2026-10-21-rodada3/discurso/midia/sources.jsonl",
+   "research-2026-10-21-rodada3/discurso/mortalidade/sources.jsonl",
+   "research-2026-10-21-rodada3/ideologia/sources.jsonl",
+   "research-2026-10-24-v03/L-ledger/sources.jsonl",
+   "research-consolidado/sources.jsonl"
+  ],
+  "registros": 1599
+ },
+ "fontes": {
+  "identificadores_unicos": 853,
+  "obras_distintas": 852,
+  "pares_de_versao": [
+   [
+    "doi:10.21203/rs.3.rs-2864681",
+    "doi:10.21203/rs.3.rs-2864681/v1"
+   ]
+  ],
+  "por_idioma_identificador": {
+   "en": 388,
+   "pt": 301,
+   "es": 108,
+   "fr": 29,
+   "de": 17,
+   "ja": 5,
+   "ko": 2,
+   "id": 1,
+   "tr": 1,
+   "zh-Hans": 1
+  },
+  "por_idioma_obra": {
+   "en": 387,
+   "pt": 301,
+   "es": 108,
+   "fr": 29,
+   "de": 17,
+   "ja": 5,
+   "ko": 2,
+   "id": 1,
+   "tr": 1,
+   "zh-Hans": 1
+  },
+  "idiomas": 10,
+  "por_tipo": {
+   "per_q1": 61,
+   "per_q2": 10,
+   "per_q34": 3,
+   "per_semq": 254,
+   "oficial": 296,
+   "preprint": 22,
+   "ong": 64,
+   "imprensa": 32,
+   "dado": 46,
+   "livro": 6,
+   "enciclopedia": 27,
+   "nao_classificado": 32
+  }
+ },
+ "scripts": {
+  "no_repositorio": 166,
+  "lista_do_titulo": 139,
+  "da_lista_no_repositorio": 128,
+  "da_lista_fora_do_repositorio": [
+   "research-2026-10-21-rodada3/A-textointegral/_lote4_aquisicao/fetch_legit.py",
+   "research-2026-10-21-rodada3/A-textointegral/entregues/G1-replicacao-ferguson-malouff.py",
+   "research-2026-10-21-rodada3/A-textointegral/entregues/aplicar_rodada5.py",
+   "research-2026-10-21-rodada3/A-textointegral/entregues/aplicar_rodada6.py",
+   "research-2026-10-21-rodada3/F6-asia-africa/raw/_tools/fp.py",
+   "research-2026-10-21-rodada3/F6-asia-africa/raw/_tools/h2t.py",
+   "research-2026-10-21-rodada3/F8-literatura/aquisicao-out/adquirir.py",
+   "research-2026-10-21-rodada3/F8-literatura/aquisicao-out/consolidar.py",
+   "research-2026-10-21-rodada3/F8-literatura/aquisicao-out/delegado-download.py",
+   "research-2026-10-21-rodada3/F8-literatura/aquisicao-out2/adquirir.py",
+   "research-2026-10-21-rodada3/F8-literatura/aquisicao-out3/adquirir-publicos.py"
+  ],
+  "fora_da_lista_analise": [
+   "dados/disque100/scripts/baixar.py",
+   "dados/disque100/scripts/d100_catalogo.py",
+   "dados/disque100/scripts/d100_comum.py",
+   "dados/disque100/scripts/d100_dicionario.py",
+   "dados/disque100/scripts/d100_estrutura.py",
+   "dados/disque100/scripts/d100_selo.py",
+   "dados/disque100/scripts/d100_series.py",
+   "dados/disque100/scripts/d100_tabular.py",
+   "dados/disque100/tests/test_d100_regras.py",
+   "dados/disque100/tests/test_d100_saidas.py",
+   "dados/exposicao/c10_estrutura.py",
+   "dados/exposicao/c10_exposicao.py",
+   "dados/painel/painel_r6_ic_wild_invertido.py",
+   "dados/presidencia/c09_d1_its.py",
+   "dados/presidencia/c09_d2_painel.py",
+   "dados/presidencia/c09_estrutura.py",
+   "research-2026-10-21-rodada3/escrutinio/simetria/scripts/r7_parlamento_sensibilidade.py"
+  ],
+  "fora_da_lista_empacotamento": 21,
+  "empacotamento_por_pasta": {
+   "(raiz)": 2,
+   "dashboard": 1,
+   "paper": 2,
+   "scripts": 8,
+   "tests": 8
+  }
+ },
+ "reconciliacao_painel": {
+  "painel_ledgers": 17,
+  "painel_registros": 1569,
+  "painel_fontes_unicas": 829,
+  "painel_idiomas": 10,
+  "painel_tipos": {
+   "per_q1": 61,
+   "per_q2": 10,
+   "per_q34": 3,
+   "per_semq": 252,
+   "oficial": 280,
+   "preprint": 22,
+   "ong": 64,
+   "imprensa": 32,
+   "dado": 46,
+   "livro": 6,
+   "enciclopedia": 27,
+   "nao_classificado": 26
+  },
+  "painel_scripts": 139,
+  "so_ledgers_do_painel": {
+   "registros": 1569,
+   "identificadores_unicos": 829,
+   "idiomas": 10,
+   "por_tipo": {
+    "per_q1": 61,
+    "per_q2": 10,
+    "per_q34": 3,
+    "per_semq": 252,
+    "oficial": 280,
+    "preprint": 22,
+    "ong": 64,
+    "imprensa": 32,
+    "dado": 46,
+    "livro": 6,
+    "enciclopedia": 27,
+    "nao_classificado": 26
+   },
+   "iguais_ao_painel": true
+  },
+  "ledgers_do_painel_ausentes_no_repositorio": [],
+  "ledgers_do_repositorio_posteriores_ao_painel": [
+   "research-2026-10-24-v03/L-ledger/sources.jsonl"
+  ]
+ }
+}

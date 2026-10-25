@@ -1,0 +1,37 @@
+indicador,dominio,p_base,deff,opcao,n_dominio,mde_deff_medido
+fisica,mulher,0.0424,5.03,A: modulo PNADC (1 ano),145890,0.114
+fisica,mulher,0.0424,5.03,PNS 2019 (observado),46869,0.204
+fisica,homem,0.0405,3.44,A: modulo PNADC (1 ano),129682,0.102
+fisica,homem,0.0405,3.44,PNS 2019 (observado),41662,0.183
+fisica,negro (preta+parda),0.0497,4.02,A: modulo PNADC (1 ano),170509,0.086
+fisica,negro (preta+parda),0.0497,4.02,PNS 2019 (observado),54778,0.154
+fisica,branco,0.0317,3.25,A: modulo PNADC (1 ano),100880,0.128
+fisica,branco,0.0317,3.25,PNS 2019 (observado),32409,0.231
+fisica,mulher negra,0.052,4.4,A: modulo PNADC (1 ano),89911,0.122
+fisica,mulher negra,0.052,4.4,PNS 2019 (observado),28885,0.219
+fisica,homem negro,0.0471,3.88,A: modulo PNADC (1 ano),80598,0.127
+fisica,homem negro,0.0471,3.88,PNS 2019 (observado),25893,0.23
+sexual12,mulher,0.0105,5.41,A: modulo PNADC (1 ano),145890,0.249
+sexual12,mulher,0.0105,5.41,PNS 2019 (observado),46869,0.458
+sexual12,homem,0.0045,3.17,A: modulo PNADC (1 ano),129682,0.315
+sexual12,homem,0.0045,3.17,PNS 2019 (observado),41662,0.587
+sexual12,negro (preta+parda),0.008,2.58,A: modulo PNADC (1 ano),170509,0.179
+sexual12,negro (preta+parda),0.008,2.58,PNS 2019 (observado),54778,0.327
+sexual12,branco,0.0073,6.84,A: modulo PNADC (1 ano),100880,0.418
+sexual12,branco,0.0073,6.84,PNS 2019 (observado),32409,0.792
+sexual12,mulher negra,0.0102,2.56,A: modulo PNADC (1 ano),89911,0.219
+sexual12,mulher negra,0.0102,2.56,PNS 2019 (observado),28885,0.403
+sexual12,homem negro,0.0055,2.73,A: modulo PNADC (1 ano),80598,0.335
+sexual12,homem negro,0.0055,2.73,PNS 2019 (observado),25893,0.627
+qualquer,mulher,0.1938,3.62,A: modulo PNADC (1 ano),145890,0.041
+qualquer,mulher,0.1938,3.62,PNS 2019 (observado),46869,0.072
+qualquer,homem,0.1701,4.2,A: modulo PNADC (1 ano),129682,0.05
+qualquer,homem,0.1701,4.2,PNS 2019 (observado),41662,0.089
+qualquer,negro (preta+parda),0.1956,4.18,A: modulo PNADC (1 ano),170509,0.04
+qualquer,negro (preta+parda),0.1956,4.18,PNS 2019 (observado),54778,0.071
+qualquer,branco,0.1662,3.41,A: modulo PNADC (1 ano),100880,0.052
+qualquer,branco,0.1662,3.41,PNS 2019 (observado),32409,0.093
+qualquer,mulher negra,0.2043,3.64,A: modulo PNADC (1 ano),89911,0.05
+qualquer,mulher negra,0.2043,3.64,PNS 2019 (observado),28885,0.089
+qualquer,homem negro,0.1859,4.41,A: modulo PNADC (1 ano),80598,0.062
+qualquer,homem negro,0.1859,4.41,PNS 2019 (observado),25893,0.11

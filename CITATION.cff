@@ -1,0 +1,58 @@
+cff-version: 1.2.0
+message: "Se usar estes dados ou este código, cite assim. / If you use this data or code, please cite it as below."
+title: "Violência motivada por LGBTfobia no Brasil: o que os dados públicos sustentam (dados derivados, código, pré-registros e testes)"
+abstract: >-
+  Companion público da pesquisa sobre a existência de um indicador confiável de violência motivada por LGBTfobia no Brasil.
+  Reúne os dados derivados e o código que recalculam os números publicados: taxas de agressão padronizadas por idade (SIM, 2010-2024)
+  por sexo e raça; violência autorrelatada por orientação sexual (PNS 2019); campo de motivação do Sinan (2015-2025);
+  concordância entre registros de saúde e polícia por UF; painel UF x ano de ideologia de governadores; cobertura implícita e
+  validação da contagem do Grupo Gay da Bahia; poder e custo de um survey; ledgers de fontes e pré-registros datados com hash;
+  as quatro revisões hostis com a triagem de cada ataque e as reanálises pré-registradas.
+  Na v0.3: troca de presidente (C09) e exposição por governo sem atribuição de causa (C10), ambas pré-registradas;
+  correções do escrutínio externo com o número anterior registrado; inventário público de fontes e scripts refeito do próprio repositório.
+  Nenhum dado nominal, nenhum PDF de terceiros e nenhum microdado bruto são distribuídos: o manifesto traz URL, data e SHA-256
+  de cada fonte e scripts de aquisição. English: public companion repository for a study of whether a reliable indicator of
+  anti-LGBT violence exists in Brazil; derived data, code, dated pre-registrations with hashes, and tests that lock every published number.
+authors:
+  - family-names: Flores
+    given-names: Carlos Ulisses
+    orcid: "https://orcid.org/0000-0002-6034-7765"
+    website: "https://ulissesflores.com"
+    affiliation: "Codex Hash Research Laboratory"
+type: dataset
+version: 0.1.0
+date-released: 2026-10-23
+license:
+  - Apache-2.0
+  - CC-BY-4.0
+repository-code: "https://github.com/ulissesflores/lgbt-indicador-violencia"
+url: "https://ulissesflores.com"
+keywords:
+  - LGBTfobia
+  - violência
+  - Brasil
+  - indicadores
+  - subnotificação
+  - reprodutibilidade
+  - hash-chain
+  - pré-registro
+references:
+  - type: article
+    authors: [{family-names: Haber, given-names: Stuart}, {family-names: Stornetta, given-names: W. Scott}]
+    title: "How to time-stamp a digital document"
+    journal: "Journal of Cryptology"
+    year: 1991
+    volume: 3
+    start: 99
+    end: 111
+    doi: "10.1007/bf00196791"
+  - type: data
+    authors: [{family-names: Zucco, given-names: Cesar}, {family-names: Power, given-names: Timothy J.}]
+    title: "The Ideology of Brazilian Parties and Presidents: replication data (BLS9)"
+    year: 2023
+    doi: "10.7910/DVN/6KVTUV"
+  - type: data
+    authors: [{name: "Instituto Brasileiro de Geografia e Estatística (IBGE)"}]
+    title: "Pesquisa Nacional de Saúde 2019: microdados"
+    year: 2022
+    url: "https://ftp.ibge.gov.br/PNS/2019/Microdados/"

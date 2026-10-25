@@ -1,0 +1,46 @@
+arquivo	origem (relativa ao projeto privado lgbt-indicador-violencia, salvo indicado)	sha256
+seguro_pns2019.csv	dados/pns/seguro_pns2019.csv	19045c1bdc8d8f668127b7b351dee9648814f009535ccfb132aa7bd5f198e96d
+seguro_pns2019.md	dados/pns/seguro_pns2019.md	850180707833aeff1b3d17a1137f1375f66712394cd32ef5a30b6c41e3027648
+c08_numeradores.csv	dados/ggb/c08_numeradores.csv	966eee5d6e88c72587500936010ffa46a4d11701a4bb1ffb354711692576fd67
+c02_indet_resultados.csv	dados/painel/c02_indet_resultados.csv	c93a912065c18d538af3f5fc36100bff20900478cd6a7a075a8575603689af3e
+c03_event_pesos_resultados.csv	dados/painel/c03_event_pesos_resultados.csv	830e21ff68bc39ff725b5fd7cdd147af0ed182fd50c73ceea734b1003666289c
+dashboard_extrato.json	extrato (tools/extrai_dashboard.py) do dashboard_dados.json do painel do artigo (sha256 167512e92a5d883ac10c3174bbde4203204a264cbd45971fab313ffb2dbdc92b; extrato público completo em dashboard/dashboard_dados.publico.json)	2b428e5d0cd729b703e9054fe78d1eb46cdec088a9ee9dceb44531ee03c17f89
+asr_brasil.csv	dados/sim/asr_brasil.csv	ceda326ed683a01879a7560add6463266695184e2977fb379b38bcb68aac95cc
+sim_identificabilidade_resumo.json	simulacao/resumo.json	1877d9adcc0d40ef489d31d1f31fecd2ffdcf098b14a454dcba7cfd5032d1092
+contagens.csv	research-2026-10-21-rodada3/discurso/midia/contagens.csv	62bbc68509ba792b34c0b62b75957885bb22bc1fd61435b03f4d5370896b6828
+estatisticas_amostra.txt	research-2026-10-21-rodada3/discurso/midia/_estatisticas_amostra.txt	c759412a01aa99ff569933404d3fa9a16d101f1dd88ec90a866196599084acc5
+baseline_resumo_C27.json	research-2026-10-21-rodada3/escrutinio/simetria/baseline_resumo_C27.json	8302d605488a3ac5ffb5897e10d7a291e5e03c4aa619939267d2b73b80502b7b
+fisher_C27.txt	research-2026-10-21-rodada3/escrutinio/simetria/fisher_C27.txt	bb0a128754650c764007ffcc8b455a395a60c985ace6fbf483d6eb3c2f940a13
+TRIAGEM.csv	research-2026-10-21-rodada3/escrutinio/TRIAGEM.csv	71606532dd4eb6e872b0a18bdb5ca753de1f169f0702656a77b68d944387da5f
+paper_v0.1.md	paper/paper.md congelado na v0.1 (sha256 8f6cd9f100de042849a48995f0161895ce229943c33f9a29ffb8cbfeadccb2a6); o paper.md vivo muda, esta copia nao	8f6cd9f100de042849a48995f0161895ce229943c33f9a29ffb8cbfeadccb2a6
+vereditos_tabela1_tabela5.tsv	AUTORAL: transcricao de celulas da Tabela 1 e das secoes 3-4 do paper v0.1 (paper_v0.1.md), uma linha por celula, com o trecho literal; a coluna categoria e a unica leitura do autor da figura	0533feb18c00a7feffacc6554c9fa99ca02a7d90f1ae325b4bb43327576ddb3c
+triangulacao_pns_sinan.md	dados/sinan/triangulacao_pns_sinan.md	a04bfec0fce154e823f45b8aefe7d41115359776d8772cb1d870731589be0969
+triangulacao_pns_sinan.csv	dados/sinan/triangulacao_pns_sinan.csv	a70d4f8fb214e1eb0efc93595835ce647d1519e8e374c144850917ba523322fc
+c05_razao_direta.md	dados/pns/c05_razao_direta.md	8a14f0ccc369b9415b2e7ec03ac90951aa8d38e4779464ce0709e97d17fcbe1c
+concordancia_v2.csv	dados/concordancia/concordancia_v2.csv	f6d2b0815b736b21734626d5f65939bf864c60734499dab16bcdb7891f2cd09a
+serie_campo55_uf_ano.csv	dados/sinan/serie_campo55_uf_ano.csv	2cb04470089193e6563c685e10ad6e6c55618d28b3f50b4b6a9bd7b97e27859a
+anuario_lgbtfobia_uf_ano_v2.csv	dados/anuario/anuario_lgbtfobia_uf_ano_v2.csv	201ce01af940d11167551ad9e5e8f35b1a779afb12e5109ba67a4b207b649d91
+sidra_9514.json	fontes/p2-f8-dados-uf/tabnet/raw/sidra_9514.json	bf970c4bcc1606ab876107815334ce9c9a75e7221cfcb82678e23fb891b068d6
+painel_uf_ano_tse_brc.csv	dados/painel/painel_uf_ano_tse_brc.csv	7c719fb271cb78dacf528b06224062795e9030bf248af30ce755c1476f52ae08
+uf_2019.csv	research-2026-10-21-rodada3/F3-ggb/dados/uf_2019.csv	5f463c6753a59035f3968a1d926a942625fd517d859310efdfc77e123660f422
+inflacao_uf_serie.json	research-2026-10-21-rodada3/F3-ggb/dados/inflacao_uf_serie.json	13acfa7b0e73749a3425f33e1cadc4434ef4e6be51d8d9f4bde0e50b6d953bb9
+serie_ggb_vs_cobertura.csv	research-2026-10-21-rodada3/F3-ggb/dados/serie_ggb_vs_cobertura.csv	d4da6e9473c5cec1e55e14cbaf6a11ca3940f9572260e138c4e5727d21eef262
+cenarios_n_custo.csv	research-2026-10-21-rodada3/F2-custos/cenarios_n_custo.csv	7bb6c4beaa469c20c3f417b782f0f73894c6b7a0895aa2724dd6ad3eb5bfde02
+capacidade_por_opcao.csv	research-2026-10-21-rodada3/F2-custos/capacidade_por_opcao.csv	df75bf442d3558dc26f23d2014fc710106801c0e9450e512c77f5d92bdabaf4b
+cobertura_fontes.tsv	AUTORAL: o que cada fonte mede e não mede, com trecho literal do paper v0.1 (paper_v0.1.md); anos de cobertura vêm dos CSVs	3f60c249367482ec487d4e768a45116139f546eee18e27d9c988bef8c751e214
+n_necessario.csv	research-2026-10-21-rodada3/F2-custos/n_necessario.csv	5541e598f5b33422fa0fe93d436be9135b2d4adc315dd792248b19ba02ce8fc9
+c09_d1_resultados.csv	m4/pesquisas/lgbt-indicador-violencia/research-2026-10-24-presidencia/c09_d1_resultados.csv (fora do repositório: pasta de trabalho da C09, pré-registro PREREGISTRO-C09.sha256)	773ae52667cfa4fca126e047a07a2bfe61dd22b321e50e14b77993f53fb9895a
+c09_d2_resultados.csv	m4/pesquisas/lgbt-indicador-violencia/research-2026-10-24-presidencia/c09_d2_resultados.csv (fora do repositório: pasta de trabalho da C09, pré-registro PREREGISTRO-C09.sha256)	9b0b3a1fd2a7fa000ecc87b00eb38d0fc174c3be7a00117610954e15e959f853
+RELATORIO-C09.md	m4/pesquisas/lgbt-indicador-violencia/research-2026-10-24-presidencia/RELATORIO-C09.md (fora do repositório: pasta de trabalho da C09, pré-registro PREREGISTRO-C09.sha256) [cópia sem o prefixo de home nos caminhos, exigência do teste de integridade; o teste compara com a origem após a mesma troca]	d70c25be59c44abb520f2cda716f86cdcd293e25e8ff71c12ad79c7b435cbad5
+RELATORIO-EXPOSICAO.md	m4/pesquisas/lgbt-indicador-violencia/research-2026-10-24-exposicao/RELATORIO-EXPOSICAO.md (fora do repositório: pasta de trabalho da C10, pré-registro PREREGISTRO-C10.sha256) [cópia sem o prefixo de home nos caminhos, exigência do teste de integridade; o teste compara com a origem após a mesma troca]	2fe1459ed53c441c337b2c992a68f6cabaffa5004d8d97ffdfb071b324a411d9
+c10_e1_federal.csv	m4/pesquisas/lgbt-indicador-violencia/research-2026-10-24-exposicao/c10_e1_federal.csv (fora do repositório: pasta de trabalho da C10, pré-registro PREREGISTRO-C10.sha256)	6ccdcb2d2ec52359118e23ae84fcd852577d119f621471639c9b244df907992f
+c10_e1_serie_longo.csv	m4/pesquisas/lgbt-indicador-violencia/research-2026-10-24-exposicao/c10_e1_serie_longo.csv (fora do repositório: pasta de trabalho da C10, pré-registro PREREGISTRO-C10.sha256)	fd7bae277c7c153ca864a9396cc0a85bad71cb651dadc1b28d633a713c9a166e
+c10_e2_trocas_longo.csv	m4/pesquisas/lgbt-indicador-violencia/research-2026-10-24-exposicao/c10_e2_trocas_longo.csv (fora do repositório: pasta de trabalho da C10, pré-registro PREREGISTRO-C10.sha256)	92b962b84b7e38f1fbee6d4bf29cc4f098dd58699d4e15668c830ebf18cfb6ca
+c10_e2_resumo.csv	m4/pesquisas/lgbt-indicador-violencia/research-2026-10-24-exposicao/c10_e2_resumo.csv (fora do repositório: pasta de trabalho da C10, pré-registro PREREGISTRO-C10.sha256)	3370286c18202325bdff5e499d05e46aeb08a7ddd0f50d31b950163b164b39b4
+L-RELATORIO.md	m4/pesquisas/lgbt-indicador-violencia/research-2026-10-24-v03/L-RELATORIO.md [cópia sem o prefixo de home nos caminhos; o teste compara com a origem após a mesma troca]	7600c06ad7fff617255b2419eda1e0af6cc4fc4e396068eaba1405b1778fefc8
+L-SECAO-3-3-PROPOSTA.md	m4/pesquisas/lgbt-indicador-violencia/research-2026-10-24-v03/L-SECAO-3-3-PROPOSTA.md [cópia sem o prefixo de home nos caminhos; o teste compara com a origem após a mesma troca]	81f9655ea4b641bfcce3745bd6a29b5d0bb0a75bb1ce48cbba5e13d3951702eb
+ggb_validacao_resumo.json	research-2026-10-21-rodada3/F3-ggb/dados/validacao_resumo.json (só agregados; a lista por caso, com UF e observações, não é copiada)	66ee0ba9880fd0011c5e150e3bb9379d95c50bfe81cf433c1cb0dddcb17e5e9d
+estudos_mortalidade.tsv	AUTORAL: números de estudos de mortalidade transcritos de L-SECAO-3-3-PROPOSTA.md, uma linha por número, com o trecho literal	94405000a4e702b3f133179a0d6f5ca95338c98711d0cd40cb16e1dcea5690a1
+r7_parlamento_sensibilidade.csv	research-2026-10-21-rodada3/escrutinio/simetria/r7_parlamento_sensibilidade.csv	10bcab747a262d4b169369e03a93d23d97881462ba206131d7a16575c10d2cb3
+r7_parlamento_sensibilidade.md	research-2026-10-21-rodada3/escrutinio/simetria/r7_parlamento_sensibilidade.md	f0f7c189d7e7009658e4a773607d45da80d76e55264555f4a961ebb702d929ed
+d100_serie_anual.csv	dados/disque100/saidas/d100_serie_anual.csv (Disque 100: série anual por recorte e unidade; saída de dados/disque100/scripts/d100_series.py)	d3e9a51bf3f2c4bca91cdbe027481634cc9771d7a892333d887c6f73f913d46e

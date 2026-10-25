@@ -1,0 +1,30 @@
+[
+ {
+  "modo": "wiki",
+  "uf_anos": 351,
+  "replica_atual_ok": "351/351",
+  "com_BRC": 351,
+  "com_BLS": 348,
+  "pearson_atual_vs_BRCper": 0.9953,
+  "spearman_atual_vs_BRCper": 0.9618,
+  "mudam_gt_0_5": 22,
+  "mudam_gt_1": 2,
+  "mudam_max": 1.02,
+  "pearson_atual_vs_BLS": 0.9669,
+  "spearman_atual_vs_BLS": 0.9122
+ },
+ {
+  "modo": "tse",
+  "uf_anos": 351,
+  "replica_atual_ok": "351/351",
+  "com_BRC": 351,
+  "com_BLS": 348,
+  "pearson_atual_vs_BRCper": 0.9942,
+  "spearman_atual_vs_BRCper": 0.9592,
+  "mudam_gt_0_5": 24,
+  "mudam_gt_1": 5,
+  "mudam_max": 1.14,
+  "pearson_atual_vs_BLS": 0.967,
+  "spearman_atual_vs_BLS": 0.9117
+ }
+]

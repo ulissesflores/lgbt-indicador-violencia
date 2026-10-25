@@ -1,0 +1,6 @@
+presidente,partido_eleicao,inicio,fim,bls9_rotulo,fonte
+Luiz Inácio Lula da Silva (2º mandato),PT,2007-01-01,2010-12-31,LULA,"eleito pelo PT em 2006; só 2010 entra (D1)"
+Dilma Rousseff,PT,2011-01-01,2016-05-11,DILMA,"registro público; afastamento pelo Senado em 12/05/2016 (pt.wikipedia.org/wiki/Processo_de_impeachment_de_Dilma_Rousseff, lido 2026-10-24: 'Em 12 de maio o Senado aprovou por 55 votos a 22 a abertura do processo, afastando Dilma')"
+Michel Temer,PMDB,2016-05-12,2018-12-31,TEMER,"mesma página: 'o vice-presidente Michel Temer assumiu interinamente o cargo'; efetivado em 31/08/2016; eleito vice pelo PMDB (rótulo MDB a partir de 2018 em dados/ideologia/ideologia_aliases.csv)"
+Jair Bolsonaro,PSL,2019-01-01,2022-12-31,BOLSONARO,"eleito pelo PSL em 2018 (partido de ELEIÇÃO, mesma convenção do painel tse); em exercício ficou sem partido 2019-11 a 2021-11 e no PL depois (não usado)"
+Luiz Inácio Lula da Silva,PT,2023-01-01,2024-12-31,LULA,"eleito pelo PT em 2022"

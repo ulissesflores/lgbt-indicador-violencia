@@ -1,0 +1,14 @@
+Existe um indicador confiável de violência motivada por LGBTfobia no Brasil? Dados derivados, código, pré-registros e testes
+Copyright 2026 Carlos Ulisses Flores
+
+Licenças (ver LICENSES/):
+- Código (scripts em dados/, simulacao/, research-2026-10-21-rodada3/*/scripts/, scripts/, tests/, run_all.py, make_provenance.py): Apache-2.0 (LICENSES/Apache-2.0.txt; cópia em LICENSE).
+- Texto, tabelas, figuras e dados derivados (docs/, README.md, REPRODUCIBILITY.md, CSV/JSON/MD gerados pelos scripts): CC-BY-4.0 (LICENSES/CC-BY-4.0.txt).
+- Dados oficiais de terceiros incluídos sem alteração, por serem dados abertos e necessários para recalcular:
+  - fontes/p2-f8-dados-uf/sidra/*.json e fontes/p2-f8-dados-uf/tabnet/raw/sidra_*.json: IBGE (SIDRA, https://apisidra.ibge.gov.br), dados abertos.
+  - fontes/p2-f8-governos/zucco-power-dataverse/bls9_estimates_partiespresidents_long.tab: Zucco & Power (2023), doi:10.7910/DVN/6KVTUV, CC0 1.0.
+- Tabelas derivadas de dados abertos (SIM/Sinan/DATASUS, PNS/IBGE, TSE, Anuário FBSP, Atlas da Violência/IPEA, Portal da Transparência): os
+  números são fatos públicos; a coluna fonte_url e o manifest/MANIFESTO-FONTES.csv apontam a origem. A lista de governadores foi
+  curada a partir de listas da Wikipédia em português (CC BY-SA 4.0) e conferida contra o TSE; a atribuição é a URL na coluna fonte_url.
+- Microdados oficiais do IBGE, DATASUS e TSE seguem os termos das fontes e não são redistribuídos aqui (só URL, data e SHA-256).
+- Não distribuídos (licença ou privacidade): PDFs e HTML de terceiros, microdados brutos, textos de notícias, lista nominal de vítimas.

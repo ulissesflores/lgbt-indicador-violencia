@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="550.332pt" height="711.77925pt" viewBox="0 0 550.332 711.77925" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.9, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 711.77925 
+L 550.332 711.77925 
+L 550.332 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 138.96 150.12 
+L 226.8 150.12 
+Q 231.12 150.12 231.12 154.44 
+L 231.12 253.8 
+Q 231.12 258.12 226.8 258.12 
+L 138.96 258.12 
+Q 134.64 258.12 134.64 253.8 
+L 134.64 154.44 
+Q 134.64 150.12 138.96 150.12 
+z
+" clip-path="url(#pd688d40d4a)" style="fill: #e3f5ee; stroke: #1b8f66; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 239.76 150.12 
+L 327.6 150.12 
+Q 331.92 150.12 331.92 154.44 
+L 331.92 253.8 
+Q 331.92 258.12 327.6 258.12 
+L 239.76 258.12 
+Q 235.44 258.12 235.44 253.8 
+L 235.44 154.44 
+Q 235.44 150.12 239.76 150.12 
+z
+" clip-path="url(#pd688d40d4a)" style="fill: #e3f5ee; stroke: #1b8f66; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 340.56 150.12 
+L 428.4 150.12 
+Q 432.72 150.12 432.72 154.44 
+L 432.72 253.8 
+Q 432.72 258.12 428.4 258.12 
+L 340.56 258.12 
+Q 336.24 258.12 336.24 253.8 
+L 336.24 154.44 
+Q 336.24 150.12 340.56 150.12 
+z
+" clip-path="url(#pd688d40d4a)" style="fill: #f7f7f5; stroke: #8b8a85; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 441.36 150.12 
+L 529.2 150.12 
+Q 533.52 150.12 533.52 154.44 
+L 533.52 253.8 
+Q 533.52 258.12 529.2 258.12 
+L 441.36 258.12 
+Q 437.04 258.12 437.04 253.8 
+L 437.04 154.44 
+Q 437.04 150.12 441.36 150.12 
+z
+" clip-path="url(#pd688d40d4a)" style="fill: #f8e6ee; stroke: #b03a6e; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 138.96 262.44 
+L 226.8 262.44 
+Q 231.12 262.44 231.12 266.76 
+L 231.12 366.12 
+Q 231.12 370.44 226.8 370.44 
+L 138.96 370.44 
+Q 134.64 370.44 134.64 366.12 
+L 134.64 266.76 
+Q 134.64 262.44 138.96 262.44 
+z
+" clip-path="url(#pd688d40d4a)" style="fill: #e4e3df; stroke: #4b4a46; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 239.76 262.44 
+L 327.6 262.44 
+Q 331.92 262.44 331.92 266.76 
+L 331.92 366.12 
+Q 331.92 370.44 327.6 370.44 
+L 239.76 370.44 
+Q 235.44 370.44 235.44 366.12 
+L 235.44 266.76 
+Q 235.44 262.44 239.76 262.44 
+z
+" clip-path="url(#pd688d40d4a)" style="fill: #e4e3df; stroke: #4b4a46; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 340.56 262.44 
+L 428.4 262.44 
+Q 432.72 262.44 432.72 266.76 
+L 432.72 366.12 
+Q 432.72 370.44 428.4 370.44 
+L 340.56 370.44 
+Q 336.24 370.44 336.24 366.12 
+L 336.24 266.76 
+Q 336.24 262.44 340.56 262.44 
+z
+" clip-path="url(#pd688d40d4a)" style="fill: #f7f7f5; stroke: #8b8a85; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 441.36 262.44 
+L 529.2 262.44 
+Q 533.52 262.44 533.52 266.76 
+L 533.52 366.12 
+Q 533.52 370.44 529.2 370.44 
+L 441.36 370.44 
+Q 437.04 370.44 437.04 366.12 
+L 437.04 266.76 
+Q 437.04 262.44 441.36 262.44 
+z
+" clip-path="url(#pd688d40d4a)" style="fill: #f8e6ee; stroke: #b03a6e; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 138.96 374.76 
+L 226.8 374.76 
+Q 231.12 374.76 231.12 379.08 
+L 231.12 478.44 
+Q 231.12 482.76 226.8 482.76 
+L 138.96 482.76 
+Q 134.64 482.76 134.64 478.44 
+L 134.64 379.08 
+Q 134.64 374.76 138.96 374.76 
+z
+" clip-path="url(#pd688d40d4a)" style="fill: #e3f5ee; stroke: #1b8f66; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 239.76 374.76 
+L 327.6 374.76 
+Q 331.92 374.76 331.92 379.08 
+L 331.92 478.44 
+Q 331.92 482.76 327.6 482.76 
+L 239.76 482.76 
+Q 235.44 482.76 235.44 478.44 
+L 235.44 379.08 
+Q 235.44 374.76 239.76 374.76 
+z
+" clip-path="url(#pd688d40d4a)" style="fill: #fbf0d4; stroke: #9a6a00; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 340.56 374.76 
+L 428.4 374.76 
+Q 432.72 374.76 432.72 379.08 
+L 432.72 478.44 
+Q 432.72 482.76 428.4 482.76 
+L 340.56 482.76 
+Q 336.24 482.76 336.24 478.44 
+L 336.24 379.08 
+Q 336.24 374.76 340.56 374.76 
+z
+" clip-path="url(#pd688d40d4a)" style="fill: #f7f7f5; stroke: #8b8a85; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 441.36 374.76 
+L 529.2 374.76 
+Q 533.52 374.76 533.52 379.08 
+L 533.52 478.44 
+Q 533.52 482.76 529.2 482.76 
+L 441.36 482.76 
+Q 437.04 482.76 437.04 478.44 
+L 437.04 379.08 
+Q 437.04 374.76 441.36 374.76 
+z
+" clip-path="url(#pd688d40d4a)" style="fill: #f8e6ee; stroke: #b03a6e; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 136.8 494.28 
+L 146.88 494.28 
+Q 149.04 494.28 149.04 496.44 
+L 149.04 506.52 
+Q 149.04 508.68 146.88 508.68 
+L 136.8 508.68 
+Q 134.64 508.68 134.64 506.52 
+L 134.64 496.44 
+Q 134.64 494.28 136.8 494.28 
+z
+" clip-path="url(#pd688d40d4a)" style="fill: #e3f5ee; stroke: #1b8f66; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 218.88 494.28 
+L 228.96 494.28 
+Q 231.12 494.28 231.12 496.44 
+L 231.12 506.52 
+Q 231.12 508.68 228.96 508.68 
+L 218.88 508.68 
+Q 216.72 508.68 216.72 506.52 
+L 216.72 496.44 
+Q 216.72 494.28 218.88 494.28 
+z
+" clip-path="url(#pd688d40d4a)" style="fill: #fbf0d4; stroke: #9a6a00; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 285.408 494.28 
+L 295.488 494.28 
+Q 297.648 494.28 297.648 496.44 
+L 297.648 506.52 
+Q 297.648 508.68 295.488 508.68 
+L 285.408 508.68 
+Q 283.248 508.68 283.248 506.52 
+L 283.248 496.44 
+Q 283.248 494.28 285.408 494.28 
+z
+" clip-path="url(#pd688d40d4a)" style="fill: #f8e6ee; stroke: #b03a6e; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 388.224 494.28 
+L 398.304 494.28 
+Q 400.464 494.28 400.464 496.44 
+L 400.464 506.52 
+Q 400.464 508.68 398.304 508.68 
+L 388.224 508.68 
+Q 386.064 508.68 386.064 506.52 
+L 386.064 496.44 
+Q 386.064 494.28 388.224 494.28 
+z
+" clip-path="url(#pd688d40d4a)" style="fill: #e4e3df; stroke: #4b4a46; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 480.672 494.28 
+L 490.752 494.28 
+Q 492.912 494.28 492.912 496.44 
+L 492.912 506.52 
+Q 492.912 508.68 490.752 508.68 
+L 480.672 508.68 
+Q 478.512 508.68 478.512 506.52 
+L 478.512 496.44 
+Q 478.512 494.28 480.672 494.28 
+z
+" clip-path="url(#pd688d40d4a)" style="fill: #f7f7f5; stroke: #8b8a85; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(175.983047 97.198594)">N1</text>
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(157.199766 107.276625)">incidência</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #5b5a55" x="182.88" y="125.23875" transform="rotate(-0 182.88 125.23875)">quantos?</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(245.223984 97.198594)">N2 disparidade</text>
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(263.183906 107.276625)">residual</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(256.93375 125.55875)">persiste após</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(258.860625 134.517)">covariáveis?</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(377.583047 97.198594)">N3</text>
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(362.169141 107.276625)">contexto</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #5b5a55" x="384.48" y="125.55875" transform="rotate(-0 384.48 125.55875)">em que circunstância?</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(478.383047 97.198594)">N4</text>
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(459.039375 107.339063)">motivação</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(446.485 125.23875)">o agressor agiu por</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(448.041875 134.197)">causa do atributo?</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(12.24 196.525406)">LGB+ sofrem mais</text>
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(12.24 206.603437)">violência não letal</text>
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(12.24 216.681469)">que heterossexuais?</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1b8f66" x="141.12" y="165.037969" transform="rotate(-0 141.12 165.037969)">✓</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f1f1e" x="156.96" y="162.67875" transform="rotate(-0 156.96 162.67875)">sustentada</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(141.12 242.458)">14,70% x 3,82%</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(141.12 251.41625)">(física); razão 3,84</text>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1b8f66" x="241.92" y="165.037969" transform="rotate(-0 241.92 165.037969)">✓</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f1f1e" x="257.76" y="162.67875" transform="rotate(-0 257.76 162.67875)">sustentada</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5b5a55" x="241.92" y="251.41625" transform="rotate(-0 241.92 251.41625)">razão ajustada 2,82</text>
+   </g>
+   <g id="text_16">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #8b8a85" x="342.72" y="165.037969" transform="rotate(-0 342.72 165.037969)">–</text>
+   </g>
+   <g id="text_17">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(358.56 162.67875)">sem veredito</text>
+    <text style="font-weight: 700; font-size: 8px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(358.56 171.637)">(só descrito)</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(342.72 242.458)">agressor e local</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(342.72 251.41625)">descritos (n = 179)</text>
+   </g>
+   <g id="text_19">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #b03a6e" x="443.52" y="165.037969" transform="rotate(-0 443.52 165.037969)">✗</text>
+   </g>
+   <g id="text_20">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(459.36 162.67875)">não sustentada</text>
+    <text style="font-weight: 700; font-size: 8px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(459.36 171.637)">pelo que foi</text>
+    <text style="font-weight: 700; font-size: 8px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(459.36 180.59525)">medido</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(443.52 224.378)">fração nacional não</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(443.52 233.33625)">estimada (nenhuma</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(443.52 242.458)">proporção</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(443.52 251.41625)">defensável)</text>
+   </g>
+   <g id="text_22">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(12.24 313.849266)">Gays morrem mais que</text>
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(12.24 323.997609)">héteros?</text>
+   </g>
+   <g id="text_23">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #4b4a46" x="141.12" y="277.357969" transform="rotate(-0 141.12 277.357969)">?</text>
+   </g>
+   <g id="text_24">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f1f1e" x="156.96" y="274.99875" transform="rotate(-0 156.96 274.99875)">não testável</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(141.12 309.82325)">Brasil: sem</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(141.12 318.7815)">estimativa. Mundo:</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(141.12 327.73975)">sim, todas as</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(141.12 336.698)">causas, em</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(141.12 345.81975)">populações</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(141.12 354.778)">definidas; sem razão</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(141.12 363.73625)">de homicídio</text>
+   </g>
+   <g id="text_26">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #4b4a46" x="241.92" y="277.357969" transform="rotate(-0 241.92 277.357969)">?</text>
+   </g>
+   <g id="text_27">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f1f1e" x="257.76" y="274.99875" transform="rotate(-0 257.76 274.99875)">não testável</text>
+   </g>
+   <g id="text_28">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(241.92 345.65625)">Brasil: inviável;</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(241.92 354.778)">sem razão ajustada</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(241.92 363.73625)">de homicídio</text>
+   </g>
+   <g id="text_29">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #8b8a85" x="342.72" y="277.357969" transform="rotate(-0 342.72 277.357969)">–</text>
+   </g>
+   <g id="text_30">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(358.56 274.99875)">sem veredito</text>
+    <text style="font-weight: 700; font-size: 8px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(358.56 283.957)">(só descrito)</text>
+   </g>
+   <g id="text_31">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(342.72 354.778)">o paper só traz o</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(342.72 363.73625)">contexto não letal</text>
+   </g>
+   <g id="text_32">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #b03a6e" x="443.52" y="277.357969" transform="rotate(-0 443.52 277.357969)">✗</text>
+   </g>
+   <g id="text_33">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(459.36 274.99875)">não sustentada</text>
+    <text style="font-weight: 700; font-size: 8px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(459.36 283.957)">pelo que foi</text>
+    <text style="font-weight: 700; font-size: 8px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(459.36 292.91525)">medido</text>
+   </g>
+   <g id="text_34">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(443.52 327.90325)">fração nacional não</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(443.52 336.8615)">estimada; atribuído</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(443.52 345.81975)">em 4,1%,</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(443.52 354.778)">desconhecido em</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(443.52 363.73625)">47,9%</text>
+   </g>
+   <g id="text_35">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(12.24 425.953266)">Mulheres e negros:</text>
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(12.24 436.533609)">dá para saber?</text>
+   </g>
+   <g id="text_36">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1b8f66" x="141.12" y="389.677969" transform="rotate(-0 141.12 389.677969)">✓</text>
+   </g>
+   <g id="text_37">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f1f1e" x="156.96" y="387.31875" transform="rotate(-0 156.96 387.31875)">sustentada</text>
+   </g>
+   <g id="text_38">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(141.12 458.13975)">taxa padronizada por</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(141.12 467.098)">idade: 2,6 a 51,7</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(141.12 476.05625)">por 100 mil</text>
+   </g>
+   <g id="text_39">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #9a6a00" x="241.92" y="389.677969" transform="rotate(-0 241.92 389.677969)">◐</text>
+   </g>
+   <g id="text_40">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f1f1e" x="257.76" y="387.31875" transform="rotate(-0 257.76 387.31875)">parcial</text>
+   </g>
+   <g id="text_41">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(241.92 458.13975)">raça: poucos</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(241.92 467.098)">estudos, sem</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(241.92 476.05625)">controle de renda</text>
+   </g>
+   <g id="text_42">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #8b8a85" x="342.72" y="389.677969" transform="rotate(-0 342.72 389.677969)">–</text>
+   </g>
+   <g id="text_43">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(358.56 387.31875)">sem veredito</text>
+    <text style="font-weight: 700; font-size: 8px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(358.56 396.277)">(só descrito)</text>
+   </g>
+   <g id="text_44">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(342.72 458.13975)">apenas proxy</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(342.72 467.098)">(residência,</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(342.72 476.05625)">vínculo)</text>
+   </g>
+   <g id="text_45">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #b03a6e" x="443.52" y="389.677969" transform="rotate(-0 443.52 389.677969)">✗</text>
+   </g>
+   <g id="text_46">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(459.36 387.31875)">não sustentada</text>
+    <text style="font-weight: 700; font-size: 8px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(459.36 396.277)">pelo que foi</text>
+    <text style="font-weight: 700; font-size: 8px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(459.36 405.23525)">medido</text>
+   </g>
+   <g id="text_47">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(443.52 449.018)">fração nacional não</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(443.52 457.97625)">estimada (nenhuma</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(443.52 467.098)">proporção</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(443.52 476.05625)">defensável)</text>
+   </g>
+   <g id="text_48">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1b8f66" x="141.84" y="503.6875" transform="rotate(-0 141.84 503.6875)">✓</text>
+   </g>
+   <g id="text_49">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f1f1e" x="154.08" y="503.6875" transform="rotate(-0 154.08 503.6875)">sustentada</text>
+   </g>
+   <g id="text_50">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #9a6a00" x="223.92" y="503.6875" transform="rotate(-0 223.92 503.6875)">◐</text>
+   </g>
+   <g id="text_51">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f1f1e" x="236.16" y="503.6875" transform="rotate(-0 236.16 503.6875)">parcial</text>
+   </g>
+   <g id="text_52">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #b03a6e" x="290.448" y="503.6875" transform="rotate(-0 290.448 503.6875)">✗</text>
+   </g>
+   <g id="text_53">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f1f1e" x="302.688" y="503.6875" transform="rotate(-0 302.688 503.6875)">não sustentada</text>
+   </g>
+   <g id="text_54">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #4b4a46" x="393.264" y="503.6875" transform="rotate(-0 393.264 503.6875)">?</text>
+   </g>
+   <g id="text_55">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f1f1e" x="405.504" y="503.6875" transform="rotate(-0 405.504 503.6875)">não testável</text>
+   </g>
+   <g id="text_56">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #8b8a85" x="485.712" y="503.6875" transform="rotate(-0 485.712 503.6875)">–</text>
+   </g>
+   <g id="text_57">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f1f1e" x="497.952" y="503.6875" transform="rotate(-0 497.952 503.6875)">só descrito</text>
+   </g>
+  </g>
+  <g id="patch_19">
+   <path d="M 14.4 680.472 
+L 535.932 680.472 
+Q 541.692 680.472 541.692 674.712 
+L 541.692 559.8 
+Q 541.692 554.04 535.932 554.04 
+L 14.4 554.04 
+Q 8.64 554.04 8.64 559.8 
+L 8.64 674.712 
+Q 8.64 680.472 14.4 680.472 
+z
+" style="fill: #f3f2ee; stroke: #d9d8d3; stroke-width: 0.8; stroke-linejoin: miter"/>
+  </g>
+  <g id="text_58">
+   <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(8.64 17.758125)">No Brasil, só a violência não letal contra LGB+ e as mortes de mulheres</text>
+   <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(8.64 31.291594)">e negros são medidas; “gays morrem mais?” não é testável com o dado</text>
+   <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(8.64 44.918812)">público, e fora do país só vale para mortalidade geral</text>
+  </g>
+  <g id="text_59">
+   <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(8.64 62.838625)">Resposta do paper a cada pergunta, para o Brasil, em cada nível (N1 a N4); cor e símbolo dizem a força da</text>
+   <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(8.64 72.6927)">evidência</text>
+  </g>
+  <g id="text_60">
+   <text style="font-weight: 700; font-size: 8.6px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f1f1e" x="18" y="567.774656" transform="rotate(-0 18 567.774656)">Como ler</text>
+  </g>
+  <g id="text_61">
+   <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(18 580.038719)">Cada linha é uma pergunta; cada coluna, um jeito de olhar para ela, de “quantos?” (N1) a “por quê?” (N4). Verde</text>
+   <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(18 589.483351)">com ✓: o dado sustenta a resposta. Cinza com ?: não há dado que permita testar. Vinho com ✗: os dados lidos não</text>
+   <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(18 598.927982)">alcançam a afirmação. Cinza claro: o paper só descreve, sem dar veredito.</text>
+  </g>
+  <g id="text_62">
+   <text style="font-weight: 700; font-size: 8.6px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f1f1e" x="18" y="616.446656" transform="rotate(-0 18 616.446656)">Termos</text>
+  </g>
+  <g id="text_63">
+   <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(18 628.710719)">não letal = violência que não matou · letal = morte · N2 = a diferença persiste depois de descontar idade, cor,</text>
+   <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(18 638.155351)">instrução e região? · “sem veredito” = há números descritivos, mas o paper não classifica a célula · N4 “não</text>
+   <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(18 647.599982)">sustentada pelo que foi medido” = fração nacional não estimada · fora do Brasil, “gays morrem mais?” é sustentada</text>
+   <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(18 656.822369)">para mortalidade geral em populações definidas pela regra ampliada do adendo de 24/10 sobre o quartil Q1 (pela</text>
+   <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(18 666.267001)">regra original seria “parcial”), sem razão de homicídio · RP = quantas vezes mais</text>
+  </g>
+  <g id="text_64">
+   <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(8.64 691.91075)">Fonte: paper/figures/fontes/vereditos_tabela1_tabela5.tsv: cada célula cita um trecho literal da Tabela 1 e das seções 3 e 4</text>
+   <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(8.64 701.4755)">do paper v0.1; a categoria é a classificação desta figura.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pd688d40d4a">
+   <rect x="8.64" y="88.92" width="532.8" height="453.6"/>
+  </clipPath>
+ </defs>
+</svg>

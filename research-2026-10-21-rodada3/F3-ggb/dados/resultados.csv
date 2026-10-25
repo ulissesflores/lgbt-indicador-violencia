@@ -1,0 +1,15 @@
+medida,k,n,denominador,proporcao,ic95_wilson_inf,ic95_wilson_sup,obs
+fonte citada recuperada (pagina existe e foi lida),106,160,amostra (160),0.6625,0.5862,0.7312,
+fonte recuperada que NAO e a materia do caso (home/404/suspensa/login/spam),18,106,fonte recuperada,0.1698,0.1102,0.2525,
+materia corresponde ao caso (S ou P) ,88,160,amostra (160),0.55,0.4726,0.625,
+materia corresponde ao caso (S ou P),88,106,fonte recuperada,0.8302,0.7475,0.8898,
+morte violenta confirmada pela fonte (S),73,88,materia que corresponde,0.8295,0.7376,0.8939,"inclui homicidio, latrocinio, suicidio"
+morte violenta indeterminada ou nao violenta (I/N),15,88,materia que corresponde,0.1705,0.1061,0.2624,
+VERIFICAVEL ESTRITO: corresponde + morte violenta + LGBT+ explicito na fonte,50,160,amostra (160),0.3125,0.2458,0.388,piso: trata nao-recuperada como nao verificada
+VERIFICAVEL ESTRITO,50,106,fonte recuperada,0.4717,0.3793,0.566,
+VERIFICAVEL ESTRITO,50,88,materia que corresponde,0.5682,0.464,0.6667,condicional a fonte ser a materia do caso
+VERIFICAVEL LARGO (LGBT+ explicito ou indicio),54,88,materia que corresponde,0.6136,0.5092,0.7086,
+VERIFICAVEL ESTRITO so com correspondencia S (nome ou alcunha confere),40,73,materia com correspondencia S,0.5479,0.4342,0.6569,
+LGBT+ NAO mencionado na fonte citada (materia corresponde e morte violenta),19,73,morte violenta confirmada,0.2603,0.1734,0.3711,ausencia na fonte citada nao prova que a vitima nao fosse LGBT+
+"morte violenta + LGBT+ explicito, fonte unica = noticia (exclui memorial/rede)",48,88,materia que corresponde,0.5455,0.4417,0.6454,
+LIMITES (pior/melhor caso) do verificavel estrito sobre 160,,160,amostra (160),,0.3125,0.65,inf: nao-recuperadas = nao verificadas; sup: todas verificariam

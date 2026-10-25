@@ -1,0 +1,45 @@
+{
+ "origem": "dashboard_dados.json do painel do artigo (projeto de publicação, não distribuído; extrato público completo em dashboard/dashboard_dados.publico.json)",
+ "origem_sha256": "167512e92a5d883ac10c3174bbde4203204a264cbd45971fab313ffb2dbdc92b",
+ "fontes_unicas": 829,
+ "funil": {
+  "registradas": 829,
+  "lido": 79,
+  "q1_lido": 50,
+  "q1_usado": 46
+ },
+ "tipos": {
+  "per_q1": 61,
+  "per_q2": 10,
+  "per_q34": 3,
+  "per_semq": 252,
+  "oficial": 280,
+  "preprint": 22,
+  "ong": 64,
+  "imprensa": 32,
+  "dado": 46,
+  "livro": 6,
+  "enciclopedia": 27,
+  "nao_classificado": 26
+ },
+ "faixas_ano": {
+  "ate2009": 57,
+  "2010_14": 53,
+  "2015_19": 151,
+  "2020_24": 297,
+  "2025_26": 240,
+  "sem_ano": 31
+ },
+ "idiomas": {
+  "Inglês": 377,
+  "Português": 288,
+  "Espanhol": 108,
+  "Francês": 29,
+  "Alemão": 17,
+  "Japonês": 5,
+  "Coreano": 2,
+  "Indonésio": 1,
+  "Turco": 1,
+  "Chinês": 1
+ }
+}

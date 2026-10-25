@@ -1,0 +1,21 @@
+estrato,ente,n,concordancia,n_orig_1,n_seg_1
+F2-Parlamento,cita_GGB,56,0.911,8,3
+F2-Parlamento,cita_ANTRA,56,1.000,1,1
+F2-Parlamento,cita_TGEU,56,0.982,1,0
+F2-Parlamento,cita_ONU,56,0.982,1,0
+F3-Parlamento,cita_GGB,60,1.000,0,0
+F3-Parlamento,cita_ANTRA,60,1.000,0,0
+F3-Parlamento,cita_TGEU,60,1.000,0,0
+F3-Parlamento,cita_ONU,60,0.967,0,2
+Parlamento (F2+F3),cita_GGB,116,0.957,8,3
+Parlamento (F2+F3),cita_ANTRA,116,1.000,1,1
+Parlamento (F2+F3),cita_TGEU,116,0.991,1,0
+Parlamento (F2+F3),cita_ONU,116,0.974,1,2
+Outras-100,cita_GGB,100,1.000,1,1
+Outras-100,cita_ANTRA,100,0.990,1,2
+Outras-100,cita_TGEU,100,1.000,0,0
+Outras-100,cita_ONU,100,0.970,0,3
+Tudo-216,cita_GGB,216,0.977,9,4
+Tudo-216,cita_ANTRA,216,0.995,2,3
+Tudo-216,cita_TGEU,216,0.995,1,0
+Tudo-216,cita_ONU,216,0.972,1,5

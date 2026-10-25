@@ -1,0 +1,35 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "name": "lgbt-indicador-violencia",
+  "description": "Companion público da pesquisa sobre indicador de violência motivada por LGBTfobia no Brasil: dados derivados, código, pré-registros com hash, ledgers de fontes e testes que travam os números publicados; inclui as revisões hostis com triagem, as reanálises pré-registradas e, na v0.3, a troca de presidente (C09) e a exposição por governo (C10).",
+  "version": "0.1.0",
+  "license": [
+    "https://spdx.org/licenses/Apache-2.0",
+    "https://spdx.org/licenses/CC-BY-4.0"
+  ],
+  "programmingLanguage": "Python",
+  "runtimePlatform": "Python >= 3.12",
+  "codeRepository": "https://github.com/ulissesflores/lgbt-indicador-violencia",
+  "author": [
+    {
+      "@type": "Person",
+      "@id": "https://orcid.org/0000-0002-6034-7765",
+      "givenName": "Carlos Ulisses",
+      "familyName": "Flores",
+      "url": "https://ulissesflores.com"
+    }
+  ],
+  "keywords": [
+    "LGBTfobia",
+    "violência",
+    "Brasil",
+    "indicadores",
+    "reprodutibilidade",
+    "hash-chain",
+    "pré-registro"
+  ],
+  "relatedLink": [
+    "https://ulissesflores.com"
+  ]
+}

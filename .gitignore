@@ -1,0 +1,34 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ruff_cache/
+.DS_Store
+CLAUDE.md
+# estado interno da montagem e área de trabalho local
+BUILD-STATE.md
+.work/
+.run/
+# microdado bruto e dados nominais: nunca versionados (ver manifest/MANIFESTO-FONTES.csv e scripts/acquire_*.py)
+/raw/
+**/dados/raw/
+**/ideologia/raw/
+**/F6-asia-africa/raw/
+fontes/p3-ggb/
+fontes/q1-textointegral/
+fontes/p2-sim-microdados/
+fontes/p2-sinan-microdados/
+fontes/p2-f8-governos/tse/
+fontes/pns2019/
+*.dbc
+*.dbf
+# juiz da rubrica do paper: prompts e respostas cruas (caminhos locais, ids de sessão) ficam fora; os vereditos rodada-N.json ficam
+paper/build/juiz/*.prompt.txt
+paper/build/juiz/*.raw.txt
+paper/build/juiz/*.stdout.txt
+paper/build/juiz/rodada-1.json
+paper/build/juiz/rodada-9.json
+paper/build/fig-embed/
+paper/build/juiz/rodada-v2-1.json
+# Disque 100: os 23 CSV brutos (13 GB) são baixados por dados/disque100/scripts/baixar.py e nunca versionados
+dados/disque100/raw/

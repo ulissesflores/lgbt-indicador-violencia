@@ -1,0 +1,217 @@
+desfecho,grupo,ano,cenario_centro,ponto,ic80_lo,ic80_hi,ic95_lo,ic95_hi
+agressao,Brasil,2025,persistencia,19.5,17.15,22.17,15.45,24.62
+agressao,Brasil,2026,persistencia,19.5,16.39,23.2,13.42,28.33
+agressao,Brasil,2027,persistencia,19.5,14.56,26.11,13.96,27.25
+agressao,Brasil,2028,persistencia,19.5,14.89,25.53,13.72,27.71
+agressao,Brasil,2029,persistencia,19.5,13.69,27.77,13.11,29.01
+agressao,Brasil,2030,persistencia,19.5,13.24,28.72,12.62,30.13
+agressao,Brasil,2025,tendencia,19.16,16.85,21.78,15.18,24.19
+agressao,Brasil,2026,tendencia,18.89,15.88,22.48,13.0,27.45
+agressao,Brasil,2027,tendencia,18.68,13.95,25.01,13.37,26.1
+agressao,Brasil,2028,tendencia,18.51,14.14,24.24,13.03,26.31
+agressao,Brasil,2029,tendencia,18.38,12.91,26.17,12.35,27.34
+agressao,Brasil,2030,tendencia,18.27,12.41,26.91,11.83,28.24
+agressao,Homens,2025,persistencia,36.25,31.88,41.21,28.71,45.77
+agressao,Homens,2026,persistencia,36.25,30.46,43.14,24.95,52.67
+agressao,Homens,2027,persistencia,36.25,27.07,48.54,25.94,50.65
+agressao,Homens,2028,persistencia,36.25,27.69,47.46,25.51,51.51
+agressao,Homens,2029,persistencia,36.25,25.46,51.62,24.37,53.93
+agressao,Homens,2030,persistencia,36.25,24.61,53.39,23.46,56.01
+agressao,Homens,2025,tendencia,35.6,31.31,40.48,28.2,44.95
+agressao,Homens,2026,tendencia,35.09,29.49,41.75,24.15,50.98
+agressao,Homens,2027,tendencia,34.68,25.9,46.44,24.82,48.46
+agressao,Homens,2028,tendencia,34.36,26.25,45.0,24.18,48.83
+agressao,Homens,2029,tendencia,34.11,23.95,48.58,22.93,50.75
+agressao,Homens,2030,tendencia,33.91,23.02,49.95,21.94,52.4
+agressao,Mulheres,2025,persistencia,3.44,3.03,3.91,2.72,4.34
+agressao,Mulheres,2026,persistencia,3.44,2.89,4.09,2.37,5.0
+agressao,Mulheres,2027,persistencia,3.44,2.57,4.61,2.46,4.81
+agressao,Mulheres,2028,persistencia,3.44,2.63,4.5,2.42,4.89
+agressao,Mulheres,2029,persistencia,3.44,2.42,4.9,2.31,5.12
+agressao,Mulheres,2030,persistencia,3.44,2.34,5.07,2.23,5.32
+agressao,Mulheres,2025,tendencia,3.41,3.0,3.88,2.7,4.3
+agressao,Mulheres,2026,tendencia,3.38,2.84,4.03,2.33,4.92
+agressao,Mulheres,2027,tendencia,3.36,2.51,4.51,2.41,4.7
+agressao,Mulheres,2028,tendencia,3.35,2.56,4.39,2.36,4.76
+agressao,Mulheres,2029,tendencia,3.34,2.34,4.75,2.24,4.96
+agressao,Mulheres,2030,tendencia,3.33,2.26,4.9,2.15,5.14
+agressao,Negros,2025,persistencia,25.95,22.82,29.5,20.55,32.76
+agressao,Negros,2026,persistencia,25.95,21.81,30.88,17.86,37.7
+agressao,Negros,2027,persistencia,25.95,19.38,34.75,18.57,36.26
+agressao,Negros,2028,persistencia,25.95,19.82,33.98,18.26,36.88
+agressao,Negros,2029,persistencia,25.95,18.22,36.95,17.44,38.61
+agressao,Negros,2030,persistencia,25.95,17.62,38.22,16.79,40.1
+agressao,Negros,2025,tendencia,25.38,22.32,28.85,20.1,32.04
+agressao,Negros,2026,tendencia,24.93,20.95,29.66,17.16,36.22
+agressao,Negros,2027,tendencia,24.57,18.35,32.9,17.59,34.33
+agressao,Negros,2028,tendencia,24.29,18.55,31.81,17.1,34.52
+agressao,Negros,2029,tendencia,24.07,16.9,34.28,16.18,35.81
+agressao,Negros,2030,tendencia,23.9,16.22,35.2,15.46,36.92
+agressao,Não negros,2025,persistencia,10.22,8.99,11.62,8.09,12.9
+agressao,Não negros,2026,persistencia,10.22,8.59,12.16,7.03,14.85
+agressao,Não negros,2027,persistencia,10.22,7.63,13.68,7.31,14.28
+agressao,Não negros,2028,persistencia,10.22,7.81,13.38,7.19,14.52
+agressao,Não negros,2029,persistencia,10.22,7.18,14.55,6.87,15.2
+agressao,Não negros,2030,persistencia,10.22,6.94,15.05,6.61,15.79
+agressao,Não negros,2025,tendencia,10.06,8.85,11.44,7.97,12.7
+agressao,Não negros,2026,tendencia,9.94,8.35,11.82,6.84,14.44
+agressao,Não negros,2027,tendencia,9.84,7.35,13.17,7.04,13.74
+agressao,Não negros,2028,tendencia,9.76,7.45,12.78,6.87,13.87
+agressao,Não negros,2029,tendencia,9.7,6.81,13.81,6.52,14.43
+agressao,Não negros,2030,tendencia,9.65,6.55,14.21,6.24,14.91
+agressao,Homens negros,2025,persistencia,48.03,42.24,54.61,38.04,60.64
+agressao,Homens negros,2026,persistencia,48.03,40.36,57.15,33.06,69.79
+agressao,Homens negros,2027,persistencia,48.03,35.87,64.31,34.38,67.11
+agressao,Homens negros,2028,persistencia,48.03,36.68,62.89,33.8,68.25
+agressao,Homens negros,2029,persistencia,48.03,33.73,68.4,32.28,71.46
+agressao,Homens negros,2030,persistencia,48.03,32.61,70.74,31.08,74.22
+agressao,Homens negros,2025,tendencia,46.96,41.3,53.39,37.19,59.28
+agressao,Homens negros,2026,tendencia,46.12,38.76,54.88,31.74,67.01
+agressao,Homens negros,2027,tendencia,45.46,33.95,60.86,32.53,63.51
+agressao,Homens negros,2028,tendencia,44.93,34.32,58.83,31.62,63.85
+agressao,Homens negros,2029,tendencia,44.52,31.26,63.4,29.92,66.23
+agressao,Homens negros,2030,tendencia,44.19,30.0,65.09,28.6,68.28
+agressao,Homens não negros,2025,persistencia,18.69,16.44,21.25,14.8,23.6
+agressao,Homens não negros,2026,persistencia,18.69,15.71,22.24,12.86,27.16
+agressao,Homens não negros,2027,persistencia,18.69,13.96,25.03,13.38,26.11
+agressao,Homens não negros,2028,persistencia,18.69,14.27,24.47,13.15,26.56
+agressao,Homens não negros,2029,persistencia,18.69,13.12,26.62,12.56,27.81
+agressao,Homens não negros,2030,persistencia,18.69,12.69,27.53,12.1,28.88
+agressao,Homens não negros,2025,tendencia,18.38,16.17,20.9,14.56,23.2
+agressao,Homens não negros,2026,tendencia,18.14,15.24,21.58,12.48,26.35
+agressao,Homens não negros,2027,tendencia,17.94,13.4,24.02,12.84,25.07
+agressao,Homens não negros,2028,tendencia,17.79,13.59,23.29,12.52,25.28
+agressao,Homens não negros,2029,tendencia,17.67,12.41,25.16,11.88,26.29
+agressao,Homens não negros,2030,tendencia,17.57,11.93,25.88,11.37,27.15
+agressao,Mulheres negras,2025,persistencia,4.11,3.61,4.67,3.26,5.19
+agressao,Mulheres negras,2026,persistencia,4.11,3.45,4.89,2.83,5.97
+agressao,Mulheres negras,2027,persistencia,4.11,3.07,5.5,2.94,5.74
+agressao,Mulheres negras,2028,persistencia,4.11,3.14,5.38,2.89,5.84
+agressao,Mulheres negras,2029,persistencia,4.11,2.89,5.85,2.76,6.11
+agressao,Mulheres negras,2030,persistencia,4.11,2.79,6.05,2.66,6.35
+agressao,Mulheres negras,2025,tendencia,4.05,3.57,4.61,3.21,5.12
+agressao,Mulheres negras,2026,tendencia,4.01,3.37,4.77,2.76,5.83
+agressao,Mulheres negras,2027,tendencia,3.97,2.97,5.32,2.84,5.55
+agressao,Mulheres negras,2028,tendencia,3.95,3.01,5.17,2.78,5.61
+agressao,Mulheres negras,2029,tendencia,3.92,2.76,5.59,2.64,5.84
+agressao,Mulheres negras,2030,tendencia,3.91,2.65,5.75,2.53,6.04
+agressao,Mulheres não negras,2025,persistencia,2.51,2.21,2.85,1.99,3.17
+agressao,Mulheres não negras,2026,persistencia,2.51,2.11,2.99,1.73,3.65
+agressao,Mulheres não negras,2027,persistencia,2.51,1.87,3.36,1.8,3.51
+agressao,Mulheres não negras,2028,persistencia,2.51,1.92,3.29,1.77,3.57
+agressao,Mulheres não negras,2029,persistencia,2.51,1.76,3.57,1.69,3.73
+agressao,Mulheres não negras,2030,persistencia,2.51,1.7,3.7,1.62,3.88
+agressao,Mulheres não negras,2025,tendencia,2.5,2.2,2.84,1.98,3.15
+agressao,Mulheres não negras,2026,tendencia,2.49,2.09,2.96,1.71,3.61
+agressao,Mulheres não negras,2027,tendencia,2.48,1.85,3.32,1.77,3.46
+agressao,Mulheres não negras,2028,tendencia,2.47,1.89,3.24,1.74,3.51
+agressao,Mulheres não negras,2029,tendencia,2.47,1.73,3.51,1.66,3.67
+agressao,Mulheres não negras,2030,tendencia,2.46,1.67,3.63,1.59,3.81
+agressao+indet,Brasil,2025,persistencia,27.63,26.09,29.26,24.59,31.04
+agressao+indet,Brasil,2026,persistencia,27.63,25.15,30.36,22.38,34.11
+agressao+indet,Brasil,2027,persistencia,27.63,23.21,32.89,21.64,35.27
+agressao+indet,Brasil,2028,persistencia,27.63,22.67,33.67,20.69,36.89
+agressao+indet,Brasil,2029,persistencia,27.63,21.17,36.06,19.88,38.4
+agressao+indet,Brasil,2030,persistencia,27.63,20.64,36.98,19.27,39.62
+agressao+indet,Brasil,2025,tendencia,27.22,25.7,28.83,24.23,30.58
+agressao+indet,Brasil,2026,tendencia,26.9,24.48,29.55,21.79,33.2
+agressao+indet,Brasil,2027,tendencia,26.64,22.38,31.71,20.87,34.01
+agressao+indet,Brasil,2028,tendencia,26.44,21.69,32.22,19.8,35.3
+agressao+indet,Brasil,2029,tendencia,26.27,20.13,34.29,18.91,36.51
+agressao+indet,Brasil,2030,tendencia,26.15,19.53,35.0,18.23,37.49
+agressao+indet,Homens,2025,persistencia,49.0,46.26,51.9,43.61,55.05
+agressao+indet,Homens,2026,persistencia,49.0,44.59,53.84,39.69,60.49
+agressao+indet,Homens,2027,persistencia,49.0,41.16,58.33,38.38,62.55
+agressao+indet,Homens,2028,persistencia,49.0,40.21,59.72,36.7,65.42
+agressao+indet,Homens,2029,persistencia,49.0,37.55,63.94,35.26,68.09
+agressao+indet,Homens,2030,persistencia,49.0,36.61,65.59,34.17,70.27
+agressao+indet,Homens,2025,tendencia,48.17,45.48,51.02,42.88,54.12
+agressao+indet,Homens,2026,tendencia,47.52,43.25,52.22,38.49,58.67
+agressao+indet,Homens,2027,tendencia,47.01,39.49,55.95,36.82,60.01
+agressao+indet,Homens,2028,tendencia,46.6,38.24,56.79,34.9,62.22
+agressao+indet,Homens,2029,tendencia,46.28,35.46,60.39,33.3,64.31
+agressao+indet,Homens,2030,tendencia,46.02,34.38,61.6,32.09,65.99
+agressao+indet,Mulheres,2025,persistencia,7.3,6.89,7.73,6.5,8.2
+agressao+indet,Mulheres,2026,persistencia,7.3,6.64,8.02,5.91,9.01
+agressao+indet,Mulheres,2027,persistencia,7.3,6.13,8.69,5.72,9.32
+agressao+indet,Mulheres,2028,persistencia,7.3,5.99,8.9,5.47,9.75
+agressao+indet,Mulheres,2029,persistencia,7.3,5.59,9.53,5.25,10.14
+agressao+indet,Mulheres,2030,persistencia,7.3,5.45,9.77,5.09,10.47
+agressao+indet,Mulheres,2025,tendencia,7.31,6.91,7.75,6.51,8.22
+agressao+indet,Mulheres,2026,tendencia,7.33,6.67,8.05,5.93,9.04
+agressao+indet,Mulheres,2027,tendencia,7.34,6.16,8.73,5.75,9.36
+agressao+indet,Mulheres,2028,tendencia,7.34,6.03,8.95,5.5,9.8
+agressao+indet,Mulheres,2029,tendencia,7.35,5.63,9.59,5.29,10.21
+agressao+indet,Mulheres,2030,tendencia,7.35,5.49,9.84,5.13,10.55
+agressao+indet,Negros,2025,persistencia,34.81,32.87,36.87,30.98,39.11
+agressao+indet,Negros,2026,persistencia,34.81,31.68,38.25,28.2,42.97
+agressao+indet,Negros,2027,persistencia,34.81,29.24,41.44,27.27,44.44
+agressao+indet,Negros,2028,persistencia,34.81,28.56,42.42,26.07,46.48
+agressao+indet,Negros,2029,persistencia,34.81,26.67,45.43,25.05,48.37
+agressao+indet,Negros,2030,persistencia,34.81,26.01,46.6,24.27,49.92
+agressao+indet,Negros,2025,tendencia,34.07,32.17,36.09,30.33,38.28
+agressao+indet,Negros,2026,tendencia,33.49,30.48,36.8,27.13,41.35
+agressao+indet,Negros,2027,tendencia,33.04,27.75,39.32,25.88,42.17
+agressao+indet,Negros,2028,tendencia,32.68,26.81,39.82,24.47,43.63
+agressao+indet,Negros,2029,tendencia,32.39,24.82,42.27,23.31,45.01
+agressao+indet,Negros,2030,tendencia,32.16,24.03,43.05,22.43,46.12
+agressao+indet,Não negros,2025,persistencia,17.2,16.24,18.22,15.31,19.32
+agressao+indet,Não negros,2026,persistencia,17.2,15.65,18.9,13.93,21.23
+agressao+indet,Não negros,2027,persistencia,17.2,14.45,20.47,13.47,21.96
+agressao+indet,Não negros,2028,persistencia,17.2,14.11,20.96,12.88,22.97
+agressao+indet,Não negros,2029,persistencia,17.2,13.18,22.45,12.38,23.9
+agressao+indet,Não negros,2030,persistencia,17.2,12.85,23.02,11.99,24.67
+agressao+indet,Não negros,2025,tendencia,17.07,16.12,18.08,15.19,19.18
+agressao+indet,Não negros,2026,tendencia,16.97,15.44,18.64,13.74,20.95
+agressao+indet,Não negros,2027,tendencia,16.89,14.19,20.1,13.23,21.56
+agressao+indet,Não negros,2028,tendencia,16.82,13.8,20.5,12.6,22.46
+agressao+indet,Não negros,2029,tendencia,16.77,12.85,21.88,12.07,23.3
+agressao+indet,Não negros,2030,tendencia,16.73,12.5,22.39,11.67,23.99
+agressao+indet,Homens negros,2025,persistencia,62.32,58.84,66.0,55.47,70.02
+agressao+indet,Homens negros,2026,persistencia,62.32,56.72,68.48,50.48,76.94
+agressao+indet,Homens negros,2027,persistencia,62.32,52.35,74.18,48.82,79.56
+agressao+indet,Homens negros,2028,persistencia,62.32,51.14,75.95,46.67,83.21
+agressao+indet,Homens negros,2029,persistencia,62.32,47.76,81.33,44.84,86.61
+agressao+indet,Homens negros,2030,persistencia,62.32,46.56,83.42,43.46,89.37
+agressao+indet,Homens negros,2025,tendencia,60.92,57.52,64.52,54.22,68.44
+agressao+indet,Homens negros,2026,tendencia,59.82,54.44,65.73,48.45,73.85
+agressao+indet,Homens negros,2027,tendencia,58.95,49.53,70.17,46.18,75.26
+agressao+indet,Homens negros,2028,tendencia,58.27,47.81,71.01,43.64,77.8
+agressao+indet,Homens negros,2029,tendencia,57.73,44.24,75.33,41.54,80.22
+agressao+indet,Homens negros,2030,tendencia,57.3,42.81,76.7,39.96,82.17
+agressao+indet,Homens não negros,2025,persistencia,29.15,27.52,30.87,25.95,32.75
+agressao+indet,Homens não negros,2026,persistencia,29.15,26.53,32.03,23.61,35.99
+agressao+indet,Homens não negros,2027,persistencia,29.15,24.49,34.7,22.83,37.21
+agressao+indet,Homens não negros,2028,persistencia,29.15,23.92,35.52,21.83,38.92
+agressao+indet,Homens não negros,2029,persistencia,29.15,22.34,38.04,20.98,40.51
+agressao+indet,Homens não negros,2030,persistencia,29.15,21.78,39.02,20.33,41.8
+agressao+indet,Homens não negros,2025,tendencia,28.83,27.22,30.54,25.66,32.39
+agressao+indet,Homens não negros,2026,tendencia,28.58,26.01,31.4,23.15,35.28
+agressao+indet,Homens não negros,2027,tendencia,28.38,23.84,33.78,22.23,36.23
+agressao+indet,Homens não negros,2028,tendencia,28.22,23.16,34.39,21.14,37.68
+agressao+indet,Homens não negros,2029,tendencia,28.09,21.53,36.66,20.22,39.04
+agressao+indet,Homens não negros,2030,tendencia,27.99,20.91,37.47,19.52,40.14
+agressao+indet,Mulheres negras,2025,persistencia,7.79,7.36,8.25,6.93,8.75
+agressao+indet,Mulheres negras,2026,persistencia,7.79,7.09,8.56,6.31,9.62
+agressao+indet,Mulheres negras,2027,persistencia,7.79,6.54,9.27,6.1,9.94
+agressao+indet,Mulheres negras,2028,persistencia,7.79,6.39,9.49,5.83,10.4
+agressao+indet,Mulheres negras,2029,persistencia,7.79,5.97,10.17,5.61,10.83
+agressao+indet,Mulheres negras,2030,persistencia,7.79,5.82,10.43,5.43,11.17
+agressao+indet,Mulheres negras,2025,tendencia,7.75,7.31,8.2,6.89,8.7
+agressao+indet,Mulheres negras,2026,tendencia,7.71,7.02,8.47,6.25,9.52
+agressao+indet,Mulheres negras,2027,tendencia,7.68,6.45,9.15,6.02,9.81
+agressao+indet,Mulheres negras,2028,tendencia,7.66,6.29,9.34,5.74,10.23
+agressao+indet,Mulheres negras,2029,tendencia,7.64,5.86,9.97,5.5,10.62
+agressao+indet,Mulheres negras,2030,tendencia,7.63,5.7,10.21,5.32,10.94
+agressao+indet,Mulheres não negras,2025,persistencia,6.44,6.08,6.82,5.73,7.24
+agressao+indet,Mulheres não negras,2026,persistencia,6.44,5.86,7.08,5.22,7.95
+agressao+indet,Mulheres não negras,2027,persistencia,6.44,5.41,7.67,5.04,8.22
+agressao+indet,Mulheres não negras,2028,persistencia,6.44,5.28,7.85,4.82,8.6
+agressao+indet,Mulheres não negras,2029,persistencia,6.44,4.93,8.4,4.63,8.95
+agressao+indet,Mulheres não negras,2030,persistencia,6.44,4.81,8.62,4.49,9.24
+agressao+indet,Mulheres não negras,2025,tendencia,6.5,6.14,6.89,5.79,7.31
+agressao+indet,Mulheres não negras,2026,tendencia,6.56,5.97,7.2,5.31,8.09
+agressao+indet,Mulheres não negras,2027,tendencia,6.6,5.54,7.86,5.17,8.42
+agressao+indet,Mulheres não negras,2028,tendencia,6.63,5.44,8.08,4.97,8.86
+agressao+indet,Mulheres não negras,2029,tendencia,6.66,5.1,8.69,4.79,9.26
+agressao+indet,Mulheres não negras,2030,tendencia,6.68,4.99,8.94,4.66,9.58

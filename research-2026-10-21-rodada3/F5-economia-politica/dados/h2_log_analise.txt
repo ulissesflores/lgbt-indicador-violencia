@@ -1,0 +1,37 @@
+        uf  Z  n_anos  Zbin     S    C  S2019  n_edicoes  rate24
+cod_uf                                                          
+11      RO  0       4     0  0.17  0.0   0.17          2    0.46
+12      AC  0       4     0  0.50  0.0   0.33          2    1.02
+13      AM  1       4     1  0.58  0.0   0.67          2    0.12
+14      RR  0       4     0  0.17  0.0   0.33          2    0.98
+15      PA  2       4     1  0.75  1.0   0.67          2    0.44
+16      AP  0       4     0  0.48  0.0   0.17          2    1.87
+17      TO  2       4     1  0.83  1.0   1.00          2     NaN
+21      MA  2       4     1  0.42  0.0   0.50          2    0.21
+22      PI  0       4     0  0.67  0.0   0.67          2    1.69
+23      CE  0       4     0  0.50  0.0   0.33          2    3.81
+24      RN  0       4     0  0.58  1.0   0.50          2    1.10
+25      PB  0       4     0  0.58  0.0   0.50          2    0.48
+26      PE  0       4     0  0.67  1.0   0.83          2    1.01
+27      AL  0       4     0  0.42  0.0   0.33          2    0.25
+28      SE  0       4     0  0.29  0.0   0.25          2    0.87
+29      BA  4       4     1  0.67  0.0   0.83          2     NaN
+31      MG  0       4     0  0.75  1.0   0.50          2    0.07
+32      ES  0       4     0  0.53  0.0   0.40          2    1.51
+33      RJ  4       4     1  0.58  0.0   0.67          2     NaN
+35      SP  1       4     1  0.83  0.0   0.83          2    2.08
+41      PR  0       4     0  0.67  1.0   0.83          2    1.23
+42      SC  2       4     1  0.08  0.0   0.00          2     NaN
+43      RS  0       4     0  0.45  0.0   0.40          2    3.56
+50      MS  0       4     0  0.67  0.0   0.50          2    0.55
+51      MT  0       4     0  0.50  0.0   0.67          2    0.36
+52      GO  0       4     0  0.67  1.0   0.33          2    1.81
+53      DF  0       4     0  0.83  1.0   0.83          2    4.66
+Fisher Zbin x C(comite LGBT em alguma edicao) {'tabela': [[13, 6], [6, 2]], 'odds': np.float64(0.7222222222222222), 'p': 1.0}
+Fisher Zbin x S>=mediana {'tabela': [[10, 9], [2, 6]], 'odds': np.float64(3.3333333333333335), 'p': np.float64(0.23574879227053144)}
+Spearman Z x S {'rho': np.float64(0.1816351841350632), 'p_perm': 0.36935, 'n': 27}
+AUC S(informante) > S(nao informante) {'auc': 0.375, 'ic95': [0.12828947368421054, 0.6415296052631567], 'n_nao_inf': 8, 'n_inf': 19}
+Spearman taxa24/100k (informantes) x S {'rho': np.float64(0.18357890866192947), 'p_perm': 0.4021, 'n': 23}
+Poder Fisher (simulado) para OR verdadeiro de 2 (nao informar vs estrutura alta) {'poder': np.float64(0.0705)}
+Poder Fisher (simulado) para OR verdadeiro de 4 (nao informar vs estrutura alta) {'poder': np.float64(0.26375)}
+Poder Fisher (simulado) para OR verdadeiro de 8 (nao informar vs estrutura alta) {'poder': np.float64(0.568)}

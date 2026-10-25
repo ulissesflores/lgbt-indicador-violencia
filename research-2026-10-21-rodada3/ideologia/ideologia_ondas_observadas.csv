@@ -1,0 +1,281 @@
+fonte,dimensao,onda,linhagem,rotulo_src,escore,escala,sd,n,nota
+BLS,esq-dir geral,2009,CID,CID,-0.1906,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.036,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2009,DEM,DEM,0.6352,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.041,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2009,MDB,MDB,0.054,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.036,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2009,PCdoB,PCDOB,-0.7318,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.04,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2009,PDT,PDT,-0.3744,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.037,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2009,PL,PL,0.3278,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.037,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2009,PP,PP,0.5279,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.039,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2009,PSB,PSB,-0.4903,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.038,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2009,PSDB,PSDB,0.0875,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.036,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2009,PSOL,PSOL,-0.9583,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.043,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2009,PT,PT,-0.5345,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.038,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2009,PTB,PTB,0.2761,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.037,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2009,PV,PV,-0.2666,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.037,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2013,CID,CID,-0.217,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.037,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2013,DEM,DEM,0.7931,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.043,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2013,MDB,MDB,0.1793,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.037,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2013,PCdoB,PCDOB,-0.744,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.04,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2013,PDT,PDT,-0.3363,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.038,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2013,PL,PL,0.4089,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.038,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2013,PP,PP,0.6099,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.04,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2013,PSB,PSB,-0.4282,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.037,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2013,PSD,PSD,0.3731,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.039,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2013,PSDB,PSDB,0.2192,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.036,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2013,PSOL,PSOL,-0.9675,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.044,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2013,PT,PT,-0.5316,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.039,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2013,PTB,PTB,0.3228,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.037,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2013,PV,PV,-0.2299,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.037,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2017,CID,CID,-0.1285,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.035,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2017,DEM,DEM,0.7386,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.04,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2017,MDB,MDB,0.3854,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.037,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2017,PCdoB,PCDOB,-0.7374,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.039,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2017,PDT,PDT,-0.4047,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.036,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2017,PL,PL,0.4343,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.037,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2017,PODE,PODE,0.2691,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.067,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2017,PP,PP,0.5765,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.038,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2017,PROS,PROS,0.02,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.065,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2017,PSB,PSB,-0.1706,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.035,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2017,PSC,PSC,0.5409,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.038,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2017,PSD,PSD,0.3991,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.037,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2017,PSDB,PSDB,0.4772,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.037,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2017,PSOL,PSOL,-0.8983,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.041,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2017,PT,PT,-0.6679,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.039,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2017,PTB,PTB,0.1976,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.035,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2017,PV,PV,-0.0688,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.034,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2017,REDE,REDE,-0.5549,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.037,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2017,REP,REP,0.4246,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.037,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2017,SD,SD,0.1534,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.068,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2021,CID,CID,-0.0144,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.037,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2021,DEM,DEM,0.4313,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.038,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2021,MDB,MDB,0.1369,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.037,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2021,NOVO,NOVO,0.7113,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.041,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2021,PCdoB,PCDOB,-0.8221,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.101,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2021,PDT,PDT,-0.3557,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.038,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2021,PL,PL,0.4934,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.039,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2021,PODE,PODE,0.3856,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.039,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2021,PP,PP,0.5096,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.04,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2021,PROS,PROS,0.0316,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.097,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2021,PSB,PSB,-0.4266,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.038,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2021,PSC,PSC,0.5965,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.071,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2021,PSD,PSD,0.2959,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.037,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2021,PSDB,PSDB,0.1573,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.037,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2021,PSL,PSL,0.8034,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.043,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2021,PSOL,PSOL,-0.874,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.045,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2021,PT,PT,-0.6911,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.042,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2021,PTB,PTB,0.4554,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.039,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2021,REP,REP,0.5504,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.04,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2021,SD,SD,0.1902,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",0.064,,ideo.se = erro-padrao posterior; ideo.raw = media bruta
+BLS,esq-dir geral,2021,UNIAO,DEM+PSL,0.6691,"aprox. -1 (esquerda) a +1 (direita), estimativa rescalada",,,"FUSAO DEM+PSL (Uniao Brasil, 2022): media ponderada por cadeiras eleitas em 2018 (DEM 0.361, PSL 0.639; V-Party v2 seatshare 5,7 e 10,1). Regra dos autores do BRC: media aritmetica simples"
+BRC,esq-dir geral,2018,AGIR,ideol_18_ptc,7.8583,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.648,480,n respondentes da onda=519
+BRC,esq-dir geral,2018,AVANTE,ideol_18_avante,6.3171,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",2.266,451,n respondentes da onda=519
+BRC,esq-dir geral,2018,CID,ideol_18_pps,4.9258,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",2.356,472,n respondentes da onda=519
+BRC,esq-dir geral,2018,DC,ideol_18_dc,8.1113,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.549,503,n respondentes da onda=519
+BRC,esq-dir geral,2018,DEM,ideol_18_dem,8.5714,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.398,511,n respondentes da onda=519
+BRC,esq-dir geral,2018,MDB,ideol_18_mdb,7.0155,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.664,453,n respondentes da onda=519
+BRC,esq-dir geral,2018,NOVO,ideol_18_novo,8.1329,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.722,474,n respondentes da onda=519
+BRC,esq-dir geral,2018,PATRIOTA,ideol_18_patri,8.551,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.585,490,n respondentes da onda=519
+BRC,esq-dir geral,2018,PCB,ideol_18_pcb,0.9062,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.268,512,n respondentes da onda=519
+BRC,esq-dir geral,2018,PCO,ideol_18_pco,0.6071,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.19,509,n respondentes da onda=519
+BRC,esq-dir geral,2018,PCdoB,ideol_18_p_cdo_b,1.9199,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.503,512,n respondentes da onda=519
+BRC,esq-dir geral,2018,PDT,ideol_18_pdt,3.9255,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.485,483,n respondentes da onda=519
+BRC,esq-dir geral,2018,PHS,ideol_18_phs,6.9594,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.936,443,n respondentes da onda=519
+BRC,esq-dir geral,2018,PL,ideol_18_pr,7.7807,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.526,488,n respondentes da onda=519
+BRC,esq-dir geral,2018,PMB,ideol_18_pmb,6.9026,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",2.033,431,n respondentes da onda=519
+BRC,esq-dir geral,2018,PMN,ideol_18_pmn,6.8806,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",2.097,444,n respondentes da onda=519
+BRC,esq-dir geral,2018,PODE,ideol_18_pode,7.2431,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.758,469,n respondentes da onda=519
+BRC,esq-dir geral,2018,PP,ideol_18_progressistas,8.1976,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.533,496,n respondentes da onda=519
+BRC,esq-dir geral,2018,PPL,ideol_18_ppl,7.2688,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",2.68,465,n respondentes da onda=519
+BRC,esq-dir geral,2018,PRD,PTB+Patriota,7.3244,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",,,"FUSAO PTB+Patriota (PRD, 2023): media aritmetica simples (cadeiras de 2022 nao obtidas; sem governador do PRD no painel)"
+BRC,esq-dir geral,2018,PROS,ideol_18_pros,7.4746,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.829,472,n respondentes da onda=519
+BRC,esq-dir geral,2018,PRP,ideol_18_prp,7.5953,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.569,472,n respondentes da onda=519
+BRC,esq-dir geral,2018,PRTB,ideol_18_prtb,7.4502,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.976,462,n respondentes da onda=519
+BRC,esq-dir geral,2018,PSB,ideol_18_psb,4.047,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.592,468,n respondentes da onda=519
+BRC,esq-dir geral,2018,PSC,ideol_18_psc,8.3287,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.518,505,n respondentes da onda=519
+BRC,esq-dir geral,2018,PSD,ideol_18_psd,7.0919,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.717,479,n respondentes da onda=519
+BRC,esq-dir geral,2018,PSDB,ideol_18_psdb,7.1149,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.694,496,n respondentes da onda=519
+BRC,esq-dir geral,2018,PSL,ideol_18_psl,8.1104,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.687,489,n respondentes da onda=519
+BRC,esq-dir geral,2018,PSOL,ideol_18_psol,1.2827,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.186,513,n respondentes da onda=519
+BRC,esq-dir geral,2018,PSTU,ideol_18_pstu,0.5136,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.131,514,n respondentes da onda=519
+BRC,esq-dir geral,2018,PT,ideol_18_pt,2.9742,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.338,504,n respondentes da onda=519
+BRC,esq-dir geral,2018,PTB,ideol_18_ptb,6.0977,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",2.18,481,n respondentes da onda=519
+BRC,esq-dir geral,2018,PV,ideol_18_pv,5.2897,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.789,435,n respondentes da onda=519
+BRC,esq-dir geral,2018,REDE,ideol_18_rede,4.7738,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.718,451,n respondentes da onda=519
+BRC,esq-dir geral,2018,REP,ideol_18_prb,7.7778,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.476,495,n respondentes da onda=519
+BRC,esq-dir geral,2018,SD,ideol_18_sdd,6.5011,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.984,469,n respondentes da onda=519
+BRC,esq-dir geral,2018,UNIAO,DEM+PSL,8.2767,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",,,"FUSAO DEM+PSL (Uniao Brasil, 2022): media ponderada por cadeiras eleitas em 2018 (DEM 0.361, PSL 0.639; V-Party v2 seatshare 5,7 e 10,1). Regra dos autores do BRC: media aritmetica simples"
+BRC,esq-dir geral,2022,AGIR,ideol_22_agir,7.5498,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.723,422,n respondentes da onda=571
+BRC,esq-dir geral,2022,AVANTE,ideol_22_avante,6.4728,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.964,423,n respondentes da onda=571
+BRC,esq-dir geral,2022,CID,ideol_22_cdd,6.1699,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.877,412,n respondentes da onda=571
+BRC,esq-dir geral,2022,DC,ideol_22_dc,8.2111,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.447,488,n respondentes da onda=571
+BRC,esq-dir geral,2022,MDB,ideol_22_mdb,6.4989,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.486,473,n respondentes da onda=571
+BRC,esq-dir geral,2022,NOVO,ideol_22_novo,8.666,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.372,494,n respondentes da onda=571
+BRC,esq-dir geral,2022,PATRIOTA,ideol_22_patri,8.6008,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.346,491,n respondentes da onda=571
+BRC,esq-dir geral,2022,PCB,ideol_22_pcb,0.6864,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.172,507,n respondentes da onda=571
+BRC,esq-dir geral,2022,PCO,ideol_22_pco,0.5467,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.261,503,n respondentes da onda=571
+BRC,esq-dir geral,2022,PCdoB,ideol_22_p_cdo_b,1.7776,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.253,508,n respondentes da onda=571
+BRC,esq-dir geral,2022,PDT,ideol_22_pdt,3.8553,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.429,463,n respondentes da onda=571
+BRC,esq-dir geral,2022,PL,ideol_22_pl,8.7955,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.264,489,n respondentes da onda=571
+BRC,esq-dir geral,2022,PMB,ideol_22_pmb,7.2919,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.933,418,n respondentes da onda=571
+BRC,esq-dir geral,2022,PMN,ideol_22_pmn,6.7419,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",2.239,403,n respondentes da onda=571
+BRC,esq-dir geral,2022,PODE,ideol_22_podemos,7.4374,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.492,471,n respondentes da onda=571
+BRC,esq-dir geral,2022,PP,ideol_22_progre,8.1526,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.438,498,n respondentes da onda=571
+BRC,esq-dir geral,2022,PRD,PTB+Patriota,8.1607,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",,,"FUSAO PTB+Patriota (PRD, 2023): media aritmetica simples (cadeiras de 2022 nao obtidas; sem governador do PRD no painel)"
+BRC,esq-dir geral,2022,PROS,ideol_22_pros,7.4455,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.905,440,n respondentes da onda=571
+BRC,esq-dir geral,2022,PRTB,ideol_22_prtb,7.4896,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",2.122,431,n respondentes da onda=571
+BRC,esq-dir geral,2022,PSB,ideol_22_psb,3.5892,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.346,465,n respondentes da onda=571
+BRC,esq-dir geral,2022,PSC,ideol_22_psc,8.4105,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.305,497,n respondentes da onda=571
+BRC,esq-dir geral,2022,PSD,ideol_22_psd,6.9368,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.591,443,n respondentes da onda=571
+BRC,esq-dir geral,2022,PSDB,ideol_22_psdb,6.7594,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.427,453,n respondentes da onda=571
+BRC,esq-dir geral,2022,PSOL,ideol_22_psol,1.4145,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.143,509,n respondentes da onda=571
+BRC,esq-dir geral,2022,PSTU,ideol_22_pstu,0.5138,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.074,508,n respondentes da onda=571
+BRC,esq-dir geral,2022,PT,ideol_22_pt,2.6786,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.136,501,n respondentes da onda=571
+BRC,esq-dir geral,2022,PTB,ideol_22_ptb,7.7205,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",2.346,483,n respondentes da onda=571
+BRC,esq-dir geral,2022,PV,ideol_22_pv,4.1231,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.57,398,n respondentes da onda=571
+BRC,esq-dir geral,2022,REDE,ideol_22_rede,3.6918,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.456,451,n respondentes da onda=571
+BRC,esq-dir geral,2022,REP,ideol_22_rep,8.3333,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.314,492,n respondentes da onda=571
+BRC,esq-dir geral,2022,SD,ideol_22_sdd,6.0074,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.871,407,n respondentes da onda=571
+BRC,esq-dir geral,2022,UNIAO,ideol_22_uniao,8.4852,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",1.368,507,n respondentes da onda=571
+BRC,esq-dir geral,2022,UP,ideol_22_up,1.6259,"0 (extrema esquerda) a 10 (extrema direita), media de especialistas",2.445,441,n respondentes da onda=571
+CHES_LRGEN,esq-dir geral,2020,DEM,DEM,6.8462,0 (extrema esquerda) a 10 (extrema direita),,,survey jul-out/2020; 160 especialistas na regiao
+CHES_LRGEN,esq-dir geral,2020,MDB,MDB,5.4615,0 (extrema esquerda) a 10 (extrema direita),,,survey jul-out/2020; 160 especialistas na regiao
+CHES_LRGEN,esq-dir geral,2020,PDT,PDT,3.8462,0 (extrema esquerda) a 10 (extrema direita),,,survey jul-out/2020; 160 especialistas na regiao
+CHES_LRGEN,esq-dir geral,2020,PL,PR,6.7273,0 (extrema esquerda) a 10 (extrema direita),,,survey jul-out/2020; 160 especialistas na regiao
+CHES_LRGEN,esq-dir geral,2020,PP,PP,7.8333,0 (extrema esquerda) a 10 (extrema direita),,,survey jul-out/2020; 160 especialistas na regiao
+CHES_LRGEN,esq-dir geral,2020,PSB,PS,3.0769,0 (extrema esquerda) a 10 (extrema direita),,,survey jul-out/2020; 160 especialistas na regiao
+CHES_LRGEN,esq-dir geral,2020,PSD,PSD,7.0833,0 (extrema esquerda) a 10 (extrema direita),,,survey jul-out/2020; 160 especialistas na regiao
+CHES_LRGEN,esq-dir geral,2020,PSDB,PSDB,4.9231,0 (extrema esquerda) a 10 (extrema direita),,,survey jul-out/2020; 160 especialistas na regiao
+CHES_LRGEN,esq-dir geral,2020,PSL,PSL,9.1538,0 (extrema esquerda) a 10 (extrema direita),,,survey jul-out/2020; 160 especialistas na regiao
+CHES_LRGEN,esq-dir geral,2020,PT,PT,2.6923,0 (extrema esquerda) a 10 (extrema direita),,,survey jul-out/2020; 160 especialistas na regiao
+CHES_LRGEN,esq-dir geral,2020,REP,PRB,7.8182,0 (extrema esquerda) a 10 (extrema direita),,,survey jul-out/2020; 160 especialistas na regiao
+CHES_LRGEN,esq-dir geral,2020,UNIAO,DEM+PSL,8.3213,0 (extrema esquerda) a 10 (extrema direita),,,"FUSAO DEM+PSL (Uniao Brasil, 2022): media ponderada por cadeiras eleitas em 2018 (DEM 0.361, PSL 0.639; V-Party v2 seatshare 5,7 e 10,1). Regra dos autores do BRC: media aritmetica simples"
+CHES_SOC,social/valores,2020,DEM,DEM,4.5556,0 (liberal) a 10 (conservador) [ver codebook],,,survey jul-out/2020
+CHES_SOC,social/valores,2020,MDB,MDB,5.5556,0 (liberal) a 10 (conservador) [ver codebook],,,survey jul-out/2020
+CHES_SOC,social/valores,2020,PDT,PDT,3.5556,0 (liberal) a 10 (conservador) [ver codebook],,,survey jul-out/2020
+CHES_SOC,social/valores,2020,PL,PR,7.2222,0 (liberal) a 10 (conservador) [ver codebook],,,survey jul-out/2020
+CHES_SOC,social/valores,2020,PP,PP,7.875,0 (liberal) a 10 (conservador) [ver codebook],,,survey jul-out/2020
+CHES_SOC,social/valores,2020,PSB,PS,2.6667,0 (liberal) a 10 (conservador) [ver codebook],,,survey jul-out/2020
+CHES_SOC,social/valores,2020,PSD,PSD,6.4444,0 (liberal) a 10 (conservador) [ver codebook],,,survey jul-out/2020
+CHES_SOC,social/valores,2020,PSDB,PSDB,3.5556,0 (liberal) a 10 (conservador) [ver codebook],,,survey jul-out/2020
+CHES_SOC,social/valores,2020,PSL,PSL,9.3,0 (liberal) a 10 (conservador) [ver codebook],,,survey jul-out/2020
+CHES_SOC,social/valores,2020,PT,PT,1.6,0 (liberal) a 10 (conservador) [ver codebook],,,survey jul-out/2020
+CHES_SOC,social/valores,2020,REP,PRB,8.2222,0 (liberal) a 10 (conservador) [ver codebook],,,survey jul-out/2020
+CHES_SOC,social/valores,2020,UNIAO,DEM+PSL,7.5884,0 (liberal) a 10 (conservador) [ver codebook],,,"FUSAO DEM+PSL (Uniao Brasil, 2022): media ponderada por cadeiras eleitas em 2018 (DEM 0.361, PSL 0.639; V-Party v2 seatshare 5,7 e 10,1). Regra dos autores do BRC: media aritmetica simples"
+GPS_ECON,economico,2019,DEM,DEM,8.5135,0 (extrema esquerda economica) a 10 (extrema direita economica),,47,n = especialistas do pais (todos os partidos)
+GPS_ECON,economico,2019,MDB,MDB,6.1875,0 (extrema esquerda economica) a 10 (extrema direita economica),,47,n = especialistas do pais (todos os partidos)
+GPS_ECON,economico,2019,PP,PP,8.2857,0 (extrema esquerda economica) a 10 (extrema direita economica),,47,n = especialistas do pais (todos os partidos)
+GPS_ECON,economico,2019,PSB,PSB,2.9706,0 (extrema esquerda economica) a 10 (extrema direita economica),,47,n = especialistas do pais (todos os partidos)
+GPS_ECON,economico,2019,PSDB,PSDB,5.75,0 (extrema esquerda economica) a 10 (extrema direita economica),,47,n = especialistas do pais (todos os partidos)
+GPS_ECON,economico,2019,PSL,PSL,8.8857,0 (extrema esquerda economica) a 10 (extrema direita economica),,47,n = especialistas do pais (todos os partidos)
+GPS_ECON,economico,2019,PT,PT,2.4359,0 (extrema esquerda economica) a 10 (extrema direita economica),,47,n = especialistas do pais (todos os partidos)
+GPS_ECON,economico,2019,REP,PRB,8.0435,0 (extrema esquerda economica) a 10 (extrema direita economica),,47,n = especialistas do pais (todos os partidos)
+GPS_ECON,economico,2019,UNIAO,DEM+PSL,8.7514,0 (extrema esquerda economica) a 10 (extrema direita economica),,,"FUSAO DEM+PSL (Uniao Brasil, 2022): media ponderada por cadeiras eleitas em 2018 (DEM 0.361, PSL 0.639; V-Party v2 seatshare 5,7 e 10,1). Regra dos autores do BRC: media aritmetica simples"
+GPS_SOC,social/valores,2019,DEM,DEM,8.0741,0 (muito liberal) a 10 (muito conservador),,47,n = especialistas do pais
+GPS_SOC,social/valores,2019,MDB,MDB,5.5,0 (muito liberal) a 10 (muito conservador),,47,n = especialistas do pais
+GPS_SOC,social/valores,2019,PP,PP,8.5333,0 (muito liberal) a 10 (muito conservador),,47,n = especialistas do pais
+GPS_SOC,social/valores,2019,PSB,PSB,2.4167,0 (muito liberal) a 10 (muito conservador),,47,n = especialistas do pais
+GPS_SOC,social/valores,2019,PSDB,PSDB,3.5909,0 (muito liberal) a 10 (muito conservador),,47,n = especialistas do pais
+GPS_SOC,social/valores,2019,PSL,PSL,9.7143,0 (muito liberal) a 10 (muito conservador),,47,n = especialistas do pais
+GPS_SOC,social/valores,2019,PT,PT,1.4872,0 (muito liberal) a 10 (muito conservador),,47,n = especialistas do pais
+GPS_SOC,social/valores,2019,REP,PRB,8.5,0 (muito liberal) a 10 (muito conservador),,47,n = especialistas do pais
+GPS_SOC,social/valores,2019,UNIAO,DEM+PSL,9.1226,0 (muito liberal) a 10 (muito conservador),,,"FUSAO DEM+PSL (Uniao Brasil, 2022): media ponderada por cadeiras eleitas em 2018 (DEM 0.361, PSL 0.639; V-Party v2 seatshare 5,7 e 10,1). Regra dos autores do BRC: media aritmetica simples"
+PREPPS_LR,esq-dir geral,2018,DEM,Democrats,18.087,1 (esquerda) a 20 (direita),2.462,115,survey outono/2018 + meados/2019
+PREPPS_LR,esq-dir geral,2018,MDB,Brazilian Democratic Movement,14.6609,1 (esquerda) a 20 (direita),3.287,115,survey outono/2018 + meados/2019
+PREPPS_LR,esq-dir geral,2018,NOVO,New Party,18.3077,1 (esquerda) a 20 (direita),1.974,13,survey outono/2018 + meados/2019
+PREPPS_LR,esq-dir geral,2018,PDT,Democratic Labour Party,6.6609,1 (esquerda) a 20 (direita),2.988,115,survey outono/2018 + meados/2019
+PREPPS_LR,esq-dir geral,2018,PL,Party of the Republic,17.0536,1 (esquerda) a 20 (direita),3.096,112,survey outono/2018 + meados/2019
+PREPPS_LR,esq-dir geral,2018,PODE,Podemos,15.951,1 (esquerda) a 20 (direita),3.708,102,survey outono/2018 + meados/2019
+PREPPS_LR,esq-dir geral,2018,PP,Progressives,17.0,1 (esquerda) a 20 (direita),3.0,103,survey outono/2018 + meados/2019
+PREPPS_LR,esq-dir geral,2018,PSB,Brazilian Socialist Party,7.9735,1 (esquerda) a 20 (direita),3.547,113,survey outono/2018 + meados/2019
+PREPPS_LR,esq-dir geral,2018,PSD,Social Democratic Party,15.8148,1 (esquerda) a 20 (direita),3.651,108,survey outono/2018 + meados/2019
+PREPPS_LR,esq-dir geral,2018,PSDB,Brazilian Social Democracy Party,14.7719,1 (esquerda) a 20 (direita),3.444,114,survey outono/2018 + meados/2019
+PREPPS_LR,esq-dir geral,2018,PSL,Social Liberal Party,18.3548,1 (esquerda) a 20 (direita),3.675,31,survey outono/2018 + meados/2019
+PREPPS_LR,esq-dir geral,2018,PSOL,Socialism and Liberty Party,1.6579,1 (esquerda) a 20 (direita),1.047,38,survey outono/2018 + meados/2019
+PREPPS_LR,esq-dir geral,2018,PT,Worker's Party,5.0439,1 (esquerda) a 20 (direita),2.705,114,survey outono/2018 + meados/2019
+PREPPS_LR,esq-dir geral,2018,PTB,Brazilian Labour Party,13.8839,1 (esquerda) a 20 (direita),4.274,112,survey outono/2018 + meados/2019
+PREPPS_LR,esq-dir geral,2018,PV,Green Party,9.7692,1 (esquerda) a 20 (direita),2.673,26,survey outono/2018 + meados/2019
+PREPPS_LR,esq-dir geral,2018,REDE,Sustainability Network,9.3333,1 (esquerda) a 20 (direita),3.933,30,survey outono/2018 + meados/2019
+PREPPS_LR,esq-dir geral,2018,REP,Brazilian Republican Party,16.8077,1 (esquerda) a 20 (direita),3.342,104,survey outono/2018 + meados/2019
+PREPPS_LR,esq-dir geral,2018,UNIAO,DEM+PSL,18.2582,1 (esquerda) a 20 (direita),,,"FUSAO DEM+PSL (Uniao Brasil, 2022): media ponderada por cadeiras eleitas em 2018 (DEM 0.361, PSL 0.639; V-Party v2 seatshare 5,7 e 10,1). Regra dos autores do BRC: media aritmetica simples"
+PREPPS_SOC,social/valores (inclui homossexualidade),2018,DEM,Democrats,16.786,1 (liberal) a 20 (contra politicas liberais),3.904,257,survey outono/2018 + meados/2019
+PREPPS_SOC,social/valores (inclui homossexualidade),2018,MDB,Brazilian Democratic Movement,14.3571,1 (liberal) a 20 (contra politicas liberais),3.829,252,survey outono/2018 + meados/2019
+PREPPS_SOC,social/valores (inclui homossexualidade),2018,NOVO,New Party,14.75,1 (liberal) a 20 (contra politicas liberais),5.701,40,survey outono/2018 + meados/2019
+PREPPS_SOC,social/valores (inclui homossexualidade),2018,PDT,Democratic Labour Party,7.5,1 (liberal) a 20 (contra politicas liberais),4.064,242,survey outono/2018 + meados/2019
+PREPPS_SOC,social/valores (inclui homossexualidade),2018,PL,Party of the Republic,17.4188,1 (liberal) a 20 (contra politicas liberais),3.672,234,survey outono/2018 + meados/2019
+PREPPS_SOC,social/valores (inclui homossexualidade),2018,PODE,Podemos,15.2527,1 (liberal) a 20 (contra politicas liberais),4.401,182,survey outono/2018 + meados/2019
+PREPPS_SOC,social/valores (inclui homossexualidade),2018,PP,Progressives,16.7122,1 (liberal) a 20 (contra politicas liberais),3.56,205,survey outono/2018 + meados/2019
+PREPPS_SOC,social/valores (inclui homossexualidade),2018,PSB,Brazilian Socialist Party,8.4191,1 (liberal) a 20 (contra politicas liberais),4.118,241,survey outono/2018 + meados/2019
+PREPPS_SOC,social/valores (inclui homossexualidade),2018,PSD,Social Democratic Party,15.3349,1 (liberal) a 20 (contra politicas liberais),4.155,209,survey outono/2018 + meados/2019
+PREPPS_SOC,social/valores (inclui homossexualidade),2018,PSDB,Brazilian Social Democracy Party,12.6887,1 (liberal) a 20 (contra politicas liberais),4.312,257,survey outono/2018 + meados/2019
+PREPPS_SOC,social/valores (inclui homossexualidade),2018,PSL,Social Liberal Party,16.6944,1 (liberal) a 20 (contra politicas liberais),5.835,36,survey outono/2018 + meados/2019
+PREPPS_SOC,social/valores (inclui homossexualidade),2018,PSOL,Socialism and Liberty Party,2.3056,1 (liberal) a 20 (contra politicas liberais),3.767,72,survey outono/2018 + meados/2019
+PREPPS_SOC,social/valores (inclui homossexualidade),2018,PT,Worker's Party,4.6667,1 (liberal) a 20 (contra politicas liberais),3.937,264,survey outono/2018 + meados/2019
+PREPPS_SOC,social/valores (inclui homossexualidade),2018,PTB,Brazilian Labour Party,13.6968,1 (liberal) a 20 (contra politicas liberais),4.802,221,survey outono/2018 + meados/2019
+PREPPS_SOC,social/valores (inclui homossexualidade),2018,PV,Green Party,8.2222,1 (liberal) a 20 (contra politicas liberais),5.276,54,survey outono/2018 + meados/2019
+PREPPS_SOC,social/valores (inclui homossexualidade),2018,REDE,Sustainability Network,10.5082,1 (liberal) a 20 (contra politicas liberais),4.707,61,survey outono/2018 + meados/2019
+PREPPS_SOC,social/valores (inclui homossexualidade),2018,REP,Brazilian Republican Party,17.5785,1 (liberal) a 20 (contra politicas liberais),3.727,223,survey outono/2018 + meados/2019
+PREPPS_SOC,social/valores (inclui homossexualidade),2018,UNIAO,DEM+PSL,16.7275,1 (liberal) a 20 (contra politicas liberais),,,"FUSAO DEM+PSL (Uniao Brasil, 2022): media ponderada por cadeiras eleitas em 2018 (DEM 0.361, PSL 0.639; V-Party v2 seatshare 5,7 e 10,1). Regra dos autores do BRC: media aritmetica simples"
+VPARTY_ECON,economico,2010,DEM,PFL,2.157,intervalo IRT (0 extrema esquerda .. 6 extrema direita nas categorias; escore continuo ~ -3..+3),0.327,10.0,eleicao; n = codificadores
+VPARTY_ECON,economico,2010,MDB,PMDB,0.433,intervalo IRT (0 extrema esquerda .. 6 extrema direita nas categorias; escore continuo ~ -3..+3),0.303,10.0,eleicao; n = codificadores
+VPARTY_ECON,economico,2010,PDT,PDT,-1.192,intervalo IRT (0 extrema esquerda .. 6 extrema direita nas categorias; escore continuo ~ -3..+3),0.318,10.0,eleicao; n = codificadores
+VPARTY_ECON,economico,2010,PL,PR / PL,1.306,intervalo IRT (0 extrema esquerda .. 6 extrema direita nas categorias; escore continuo ~ -3..+3),0.317,10.0,eleicao; n = codificadores
+VPARTY_ECON,economico,2010,PP,PPB,2.1,intervalo IRT (0 extrema esquerda .. 6 extrema direita nas categorias; escore continuo ~ -3..+3),0.327,10.0,eleicao; n = codificadores
+VPARTY_ECON,economico,2010,PSB,PSB,-1.453,intervalo IRT (0 extrema esquerda .. 6 extrema direita nas categorias; escore continuo ~ -3..+3),0.318,10.0,eleicao; n = codificadores
+VPARTY_ECON,economico,2010,PSDB,PSDB,1.09,intervalo IRT (0 extrema esquerda .. 6 extrema direita nas categorias; escore continuo ~ -3..+3),0.306,10.0,eleicao; n = codificadores
+VPARTY_ECON,economico,2010,PT,PT,-1.296,intervalo IRT (0 extrema esquerda .. 6 extrema direita nas categorias; escore continuo ~ -3..+3),0.317,10.0,eleicao; n = codificadores
+VPARTY_ECON,economico,2010,PTB,PTB,1.042,intervalo IRT (0 extrema esquerda .. 6 extrema direita nas categorias; escore continuo ~ -3..+3),0.309,10.0,eleicao; n = codificadores
+VPARTY_ECON,economico,2014,DEM,PFL,2.318,intervalo IRT (0 extrema esquerda .. 6 extrema direita nas categorias; escore continuo ~ -3..+3),0.345,10.0,eleicao; n = codificadores
+VPARTY_ECON,economico,2014,MDB,PMDB,0.668,intervalo IRT (0 extrema esquerda .. 6 extrema direita nas categorias; escore continuo ~ -3..+3),0.306,10.0,eleicao; n = codificadores
+VPARTY_ECON,economico,2014,PDT,PDT,-1.192,intervalo IRT (0 extrema esquerda .. 6 extrema direita nas categorias; escore continuo ~ -3..+3),0.318,10.0,eleicao; n = codificadores
+VPARTY_ECON,economico,2014,PL,PR / PL,1.76,intervalo IRT (0 extrema esquerda .. 6 extrema direita nas categorias; escore continuo ~ -3..+3),0.326,10.0,eleicao; n = codificadores
+VPARTY_ECON,economico,2014,PP,PPB,2.264,intervalo IRT (0 extrema esquerda .. 6 extrema direita nas categorias; escore continuo ~ -3..+3),0.327,10.0,eleicao; n = codificadores
+VPARTY_ECON,economico,2014,PSB,PSB,-1.144,intervalo IRT (0 extrema esquerda .. 6 extrema direita nas categorias; escore continuo ~ -3..+3),0.316,10.0,eleicao; n = codificadores
+VPARTY_ECON,economico,2014,PSD,PSD,1.279,intervalo IRT (0 extrema esquerda .. 6 extrema direita nas categorias; escore continuo ~ -3..+3),0.314,10.0,eleicao; n = codificadores
+VPARTY_ECON,economico,2014,PSDB,PSDB,1.521,intervalo IRT (0 extrema esquerda .. 6 extrema direita nas categorias; escore continuo ~ -3..+3),0.307,10.0,eleicao; n = codificadores
+VPARTY_ECON,economico,2014,PT,PT,-1.46,intervalo IRT (0 extrema esquerda .. 6 extrema direita nas categorias; escore continuo ~ -3..+3),0.314,10.0,eleicao; n = codificadores
+VPARTY_ECON,economico,2014,PTB,PTB,1.042,intervalo IRT (0 extrema esquerda .. 6 extrema direita nas categorias; escore continuo ~ -3..+3),0.309,10.0,eleicao; n = codificadores
+VPARTY_ECON,economico,2014,REP,PRB,1.604,intervalo IRT (0 extrema esquerda .. 6 extrema direita nas categorias; escore continuo ~ -3..+3),0.314,10.0,eleicao; n = codificadores
+VPARTY_ECON,economico,2018,DEM,PFL,1.961,intervalo IRT (0 extrema esquerda .. 6 extrema direita nas categorias; escore continuo ~ -3..+3),0.323,10.0,eleicao; n = codificadores
+VPARTY_ECON,economico,2018,MDB,PMDB,0.792,intervalo IRT (0 extrema esquerda .. 6 extrema direita nas categorias; escore continuo ~ -3..+3),0.304,9.0,eleicao; n = codificadores
+VPARTY_ECON,economico,2018,PDT,PDT,-1.175,intervalo IRT (0 extrema esquerda .. 6 extrema direita nas categorias; escore continuo ~ -3..+3),0.327,10.0,eleicao; n = codificadores
+VPARTY_ECON,economico,2018,PL,PR / PL,1.74,intervalo IRT (0 extrema esquerda .. 6 extrema direita nas categorias; escore continuo ~ -3..+3),0.325,10.0,eleicao; n = codificadores
+VPARTY_ECON,economico,2018,PP,PPB,2.256,intervalo IRT (0 extrema esquerda .. 6 extrema direita nas categorias; escore continuo ~ -3..+3),0.333,10.0,eleicao; n = codificadores
+VPARTY_ECON,economico,2018,PSB,PSB,-1.278,intervalo IRT (0 extrema esquerda .. 6 extrema direita nas categorias; escore continuo ~ -3..+3),0.326,10.0,eleicao; n = codificadores
+VPARTY_ECON,economico,2018,PSD,PSD,1.406,intervalo IRT (0 extrema esquerda .. 6 extrema direita nas categorias; escore continuo ~ -3..+3),0.321,10.0,eleicao; n = codificadores
+VPARTY_ECON,economico,2018,PSDB,PSDB,1.431,intervalo IRT (0 extrema esquerda .. 6 extrema direita nas categorias; escore continuo ~ -3..+3),0.317,10.0,eleicao; n = codificadores
+VPARTY_ECON,economico,2018,PSL,PSL,3.251,intervalo IRT (0 extrema esquerda .. 6 extrema direita nas categorias; escore continuo ~ -3..+3),0.359,10.0,eleicao; n = codificadores
+VPARTY_ECON,economico,2018,PT,PT,-1.896,intervalo IRT (0 extrema esquerda .. 6 extrema direita nas categorias; escore continuo ~ -3..+3),0.33,10.0,eleicao; n = codificadores
+VPARTY_ECON,economico,2018,REP,PRB,1.849,intervalo IRT (0 extrema esquerda .. 6 extrema direita nas categorias; escore continuo ~ -3..+3),0.316,10.0,eleicao; n = codificadores
+VPARTY_ECON,economico,2018,UNIAO,DEM+PSL,2.7856,intervalo IRT (0 extrema esquerda .. 6 extrema direita nas categorias; escore continuo ~ -3..+3),,,"FUSAO DEM+PSL (Uniao Brasil, 2022): media ponderada por cadeiras eleitas em 2018 (DEM 0.361, PSL 0.639; V-Party v2 seatshare 5,7 e 10,1). Regra dos autores do BRC: media aritmetica simples"
+VPARTY_LGBT,LGBT,2010,DEM,PFL,-0.542,intervalo IRT (0 forte oposicao .. 4 forte apoio nas categorias); escore ORIGINAL maior=mais apoio,0.37,10.0,eleicao; n = codificadores; escore original maior=apoio LGBT
+VPARTY_LGBT,LGBT,2010,MDB,PMDB,0.716,intervalo IRT (0 forte oposicao .. 4 forte apoio nas categorias); escore ORIGINAL maior=mais apoio,0.372,10.0,eleicao; n = codificadores; escore original maior=apoio LGBT
+VPARTY_LGBT,LGBT,2010,PDT,PDT,2.345,intervalo IRT (0 forte oposicao .. 4 forte apoio nas categorias); escore ORIGINAL maior=mais apoio,0.428,10.0,eleicao; n = codificadores; escore original maior=apoio LGBT
+VPARTY_LGBT,LGBT,2010,PL,PR / PL,-0.972,intervalo IRT (0 forte oposicao .. 4 forte apoio nas categorias); escore ORIGINAL maior=mais apoio,0.369,10.0,eleicao; n = codificadores; escore original maior=apoio LGBT
+VPARTY_LGBT,LGBT,2010,PP,PPB,-0.967,intervalo IRT (0 forte oposicao .. 4 forte apoio nas categorias); escore ORIGINAL maior=mais apoio,0.361,10.0,eleicao; n = codificadores; escore original maior=apoio LGBT
+VPARTY_LGBT,LGBT,2010,PSB,PSB,2.039,intervalo IRT (0 forte oposicao .. 4 forte apoio nas categorias); escore ORIGINAL maior=mais apoio,0.385,10.0,eleicao; n = codificadores; escore original maior=apoio LGBT
+VPARTY_LGBT,LGBT,2010,PSDB,PSDB,1.013,intervalo IRT (0 forte oposicao .. 4 forte apoio nas categorias); escore ORIGINAL maior=mais apoio,0.363,10.0,eleicao; n = codificadores; escore original maior=apoio LGBT
+VPARTY_LGBT,LGBT,2010,PT,PT,3.467,intervalo IRT (0 forte oposicao .. 4 forte apoio nas categorias); escore ORIGINAL maior=mais apoio,0.554,10.0,eleicao; n = codificadores; escore original maior=apoio LGBT
+VPARTY_LGBT,LGBT,2010,PTB,PTB,0.051,intervalo IRT (0 forte oposicao .. 4 forte apoio nas categorias); escore ORIGINAL maior=mais apoio,0.37,10.0,eleicao; n = codificadores; escore original maior=apoio LGBT
+VPARTY_LGBT,LGBT,2014,DEM,PFL,-0.542,intervalo IRT (0 forte oposicao .. 4 forte apoio nas categorias); escore ORIGINAL maior=mais apoio,0.37,10.0,eleicao; n = codificadores; escore original maior=apoio LGBT
+VPARTY_LGBT,LGBT,2014,MDB,PMDB,0.716,intervalo IRT (0 forte oposicao .. 4 forte apoio nas categorias); escore ORIGINAL maior=mais apoio,0.372,10.0,eleicao; n = codificadores; escore original maior=apoio LGBT
+VPARTY_LGBT,LGBT,2014,PDT,PDT,2.548,intervalo IRT (0 forte oposicao .. 4 forte apoio nas categorias); escore ORIGINAL maior=mais apoio,0.427,10.0,eleicao; n = codificadores; escore original maior=apoio LGBT
+VPARTY_LGBT,LGBT,2014,PL,PR / PL,-0.916,intervalo IRT (0 forte oposicao .. 4 forte apoio nas categorias); escore ORIGINAL maior=mais apoio,0.37,10.0,eleicao; n = codificadores; escore original maior=apoio LGBT
+VPARTY_LGBT,LGBT,2014,PP,PPB,-0.967,intervalo IRT (0 forte oposicao .. 4 forte apoio nas categorias); escore ORIGINAL maior=mais apoio,0.361,10.0,eleicao; n = codificadores; escore original maior=apoio LGBT
+VPARTY_LGBT,LGBT,2014,PSB,PSB,2.039,intervalo IRT (0 forte oposicao .. 4 forte apoio nas categorias); escore ORIGINAL maior=mais apoio,0.385,10.0,eleicao; n = codificadores; escore original maior=apoio LGBT
+VPARTY_LGBT,LGBT,2014,PSD,PSD,-0.013,intervalo IRT (0 forte oposicao .. 4 forte apoio nas categorias); escore ORIGINAL maior=mais apoio,0.369,10.0,eleicao; n = codificadores; escore original maior=apoio LGBT
+VPARTY_LGBT,LGBT,2014,PSDB,PSDB,0.724,intervalo IRT (0 forte oposicao .. 4 forte apoio nas categorias); escore ORIGINAL maior=mais apoio,0.375,10.0,eleicao; n = codificadores; escore original maior=apoio LGBT
+VPARTY_LGBT,LGBT,2014,PT,PT,3.69,intervalo IRT (0 forte oposicao .. 4 forte apoio nas categorias); escore ORIGINAL maior=mais apoio,0.549,10.0,eleicao; n = codificadores; escore original maior=apoio LGBT
+VPARTY_LGBT,LGBT,2014,PTB,PTB,0.051,intervalo IRT (0 forte oposicao .. 4 forte apoio nas categorias); escore ORIGINAL maior=mais apoio,0.37,10.0,eleicao; n = codificadores; escore original maior=apoio LGBT
+VPARTY_LGBT,LGBT,2014,REP,PRB,-2.461,intervalo IRT (0 forte oposicao .. 4 forte apoio nas categorias); escore ORIGINAL maior=mais apoio,0.42,10.0,eleicao; n = codificadores; escore original maior=apoio LGBT
+VPARTY_LGBT,LGBT,2018,DEM,PFL,-0.542,intervalo IRT (0 forte oposicao .. 4 forte apoio nas categorias); escore ORIGINAL maior=mais apoio,0.37,10.0,eleicao; n = codificadores; escore original maior=apoio LGBT
+VPARTY_LGBT,LGBT,2018,MDB,PMDB,0.716,intervalo IRT (0 forte oposicao .. 4 forte apoio nas categorias); escore ORIGINAL maior=mais apoio,0.372,9.0,eleicao; n = codificadores; escore original maior=apoio LGBT
+VPARTY_LGBT,LGBT,2018,PDT,PDT,2.686,intervalo IRT (0 forte oposicao .. 4 forte apoio nas categorias); escore ORIGINAL maior=mais apoio,0.428,10.0,eleicao; n = codificadores; escore original maior=apoio LGBT
+VPARTY_LGBT,LGBT,2018,PL,PR / PL,-0.815,intervalo IRT (0 forte oposicao .. 4 forte apoio nas categorias); escore ORIGINAL maior=mais apoio,0.364,10.0,eleicao; n = codificadores; escore original maior=apoio LGBT
+VPARTY_LGBT,LGBT,2018,PP,PPB,-0.967,intervalo IRT (0 forte oposicao .. 4 forte apoio nas categorias); escore ORIGINAL maior=mais apoio,0.361,10.0,eleicao; n = codificadores; escore original maior=apoio LGBT
+VPARTY_LGBT,LGBT,2018,PSB,PSB,2.215,intervalo IRT (0 forte oposicao .. 4 forte apoio nas categorias); escore ORIGINAL maior=mais apoio,0.378,10.0,eleicao; n = codificadores; escore original maior=apoio LGBT
+VPARTY_LGBT,LGBT,2018,PSD,PSD,-0.013,intervalo IRT (0 forte oposicao .. 4 forte apoio nas categorias); escore ORIGINAL maior=mais apoio,0.369,10.0,eleicao; n = codificadores; escore original maior=apoio LGBT
+VPARTY_LGBT,LGBT,2018,PSDB,PSDB,0.477,intervalo IRT (0 forte oposicao .. 4 forte apoio nas categorias); escore ORIGINAL maior=mais apoio,0.373,10.0,eleicao; n = codificadores; escore original maior=apoio LGBT
+VPARTY_LGBT,LGBT,2018,PSL,PSL,-2.25,intervalo IRT (0 forte oposicao .. 4 forte apoio nas categorias); escore ORIGINAL maior=mais apoio,0.426,10.0,eleicao; n = codificadores; escore original maior=apoio LGBT
+VPARTY_LGBT,LGBT,2018,PT,PT,3.69,intervalo IRT (0 forte oposicao .. 4 forte apoio nas categorias); escore ORIGINAL maior=mais apoio,0.549,10.0,eleicao; n = codificadores; escore original maior=apoio LGBT
+VPARTY_LGBT,LGBT,2018,REP,PRB,-2.7,intervalo IRT (0 forte oposicao .. 4 forte apoio nas categorias); escore ORIGINAL maior=mais apoio,0.44,10.0,eleicao; n = codificadores; escore original maior=apoio LGBT
+VPARTY_LGBT,LGBT,2018,UNIAO,DEM+PSL,-1.6338,intervalo IRT (0 forte oposicao .. 4 forte apoio nas categorias); escore ORIGINAL maior=mais apoio,,,"FUSAO DEM+PSL (Uniao Brasil, 2022): media ponderada por cadeiras eleitas em 2018 (DEM 0.361, PSL 0.639; V-Party v2 seatshare 5,7 e 10,1). Regra dos autores do BRC: media aritmetica simples"

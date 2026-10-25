@@ -1,0 +1,4 @@
+opcao,domicilios,adultos,n_lgb,n_vitimas_lgb_fisica,n_vitimas_lgb_qualquer,mde_fisica,mde_qualquer,custo_central_BRL,custo_faixa_min_BRL,custo_faixa_max_BRL,custo_por_LGB_completo_BRL,base_do_custo
+1. Modulo PNADC (1 ano),337600,275573,5212,766,2170,0.317,0.122,6848075,6848075,69932557,1314,"min/central = TED 02/2021 MJSP-IBGE (marginal, IPCA); max = se o modulo exigisse visita propria ao custo/domicilio do TED da PNS"
+2. Rodada dedicada tipo PNS (140 mil dom.),140000,114278,2161,318,900,0.507,0.19,29000468,25327639,32673297,13418,"TED 'PNS-2024' R$22,29 mi dividido por 140 mil (min) ou 108,5 mil (max) domicilios, IPCA"
+3. Painel/web probabilistico (mesmo n da opcao 2),140000,114278,2161,318,900,0.507,0.19,41990599,41990599,89083654,19429,min/central = GSGB GBP/completo x PTAX; max = CSEW GBP/entrevista (face a face/misto); benchmark estrangeiro nominal

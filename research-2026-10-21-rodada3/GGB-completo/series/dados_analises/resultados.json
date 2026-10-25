@@ -1,0 +1,923 @@
+{
+ "cor_variacoes": [
+  {
+   "par": "GGB total x SIM agressao",
+   "n": 24,
+   "anos": "2001-2024",
+   "pearson": 0.2,
+   "p_lo": -0.37,
+   "p_hi": 0.6,
+   "p_perm": 0.346,
+   "spearman": 0.13,
+   "s_lo": -0.33,
+   "s_hi": 0.56,
+   "sinal_igual": "13/24 (54%; IC95 exato 33%-74%)",
+   "nota": "contexto: o SIM nao tem orientacao/identidade"
+  },
+  {
+   "par": "GGB total x ANTRA trans",
+   "n": 8,
+   "anos": "2018-2025",
+   "pearson": -0.34,
+   "p_lo": -0.91,
+   "p_hi": 0.57,
+   "p_perm": 0.401,
+   "spearman": -0.21,
+   "s_lo": -1.0,
+   "s_hi": 0.64,
+   "sinal_igual": "5/8 (62%; IC95 exato 24%-91%)",
+   "nota": "ANTRA independente do GGB so a partir de 2017 (ANTRA 2017: serie 2008-2016 = GGB)"
+  },
+  {
+   "par": "GGB trans x ANTRA trans",
+   "n": 6,
+   "anos": "2018-2025",
+   "pearson": 0.97,
+   "p_lo": 0.64,
+   "p_hi": 1.0,
+   "p_perm": 0.003,
+   "spearman": 0.94,
+   "s_lo": 0.5,
+   "s_hi": 1.0,
+   "sinal_igual": "6/6 (100%; IC95 exato 54%-100%)",
+   "nota": "so anos consecutivos com ambos (GGB sem composicao em 2022)"
+  },
+  {
+   "par": "GGB trans+homens trans x ANTRA",
+   "n": 6,
+   "anos": "2018-2025",
+   "pearson": 0.98,
+   "p_lo": 0.65,
+   "p_hi": 1.0,
+   "p_perm": 0.004,
+   "spearman": 0.94,
+   "s_lo": 0.5,
+   "s_hi": 1.0,
+   "sinal_igual": "6/6 (100%; IC95 exato 54%-100%)",
+   "nota": "sensibilidade: soma homens trans onde o GGB publica"
+  },
+  {
+   "par": "GGB trans x TMM (ciclo TDoR), 2020+",
+   "n": 4,
+   "anos": "2020-2025",
+   "pearson": 0.84,
+   "p_lo": 0.72,
+   "p_hi": 1.0,
+   "p_perm": 0.044,
+   "spearman": 1.0,
+   "s_lo": 1.0,
+   "s_hi": 1.0,
+   "sinal_igual": "3/4 (75%; IC95 exato 19%-99%)",
+   "nota": "janela independente: 2020-2025 (TDoR/TMM deixa de citar GGB/Homofobia Mata em 2019; ver dados_tdor_dependencia.csv)"
+  },
+  {
+   "par": "GGB total x TMM (ciclo TDoR), 2020+",
+   "n": 6,
+   "anos": "2020-2025",
+   "pearson": -0.21,
+   "p_lo": -0.96,
+   "p_hi": 1.0,
+   "p_perm": 0.677,
+   "spearman": -0.03,
+   "s_lo": -1.0,
+   "s_hi": 1.0,
+   "sinal_igual": "4/6 (67%; IC95 exato 22%-96%)",
+   "nota": "janela independente: 2020-2025 (TDoR/TMM deixa de citar GGB/Homofobia Mata em 2019; ver dados_tdor_dependencia.csv)"
+  },
+  {
+   "par": "GGB total x TDoR (ano civil), 2020+",
+   "n": 6,
+   "anos": "2020-2025",
+   "pearson": -0.72,
+   "p_lo": -1.0,
+   "p_hi": 0.27,
+   "p_perm": 0.111,
+   "spearman": -0.71,
+   "s_lo": -1.0,
+   "s_hi": 0.23,
+   "sinal_igual": "3/6 (50%; IC95 exato 12%-88%)",
+   "nota": "janela independente: 2020-2025 (TDoR/TMM deixa de citar GGB/Homofobia Mata em 2019; ver dados_tdor_dependencia.csv)"
+  },
+  {
+   "par": "GGB total x TDoR (ano civil), 2010-2018",
+   "n": 9,
+   "anos": "2010-2018",
+   "pearson": 0.94,
+   "p_lo": 0.86,
+   "p_hi": 0.99,
+   "p_perm": 0.0,
+   "spearman": 0.98,
+   "s_lo": 0.82,
+   "s_hi": 1.0,
+   "sinal_igual": "9/9 (100%; IC95 exato 66%-100%)",
+   "nota": "janela DEPENDENTE: ate 2018 o TDoR/TMM Brasil cita GGB/Homofobia Mata em 73-94% dos registros (2012-2018)"
+  },
+  {
+   "par": "ANTRA x TMM (ciclo TDoR), 2018+",
+   "n": 8,
+   "anos": "2018-2025",
+   "pearson": 0.74,
+   "p_lo": 0.08,
+   "p_hi": 0.97,
+   "p_perm": 0.027,
+   "spearman": 0.52,
+   "s_lo": -0.37,
+   "s_hi": 1.0,
+   "sinal_igual": "7/8 (88%; IC95 exato 47%-100%)",
+   "nota": "inclui 2018 (TDoR 78% GGB/HM)"
+  },
+  {
+   "par": "ANTRA x TMM (ciclo TDoR), 2020+",
+   "n": 6,
+   "anos": "2020-2025",
+   "pearson": 0.72,
+   "p_lo": -0.3,
+   "p_hi": 1.0,
+   "p_perm": 0.109,
+   "spearman": 0.54,
+   "s_lo": -0.6,
+   "s_hi": 1.0,
+   "sinal_igual": "5/6 (83%; IC95 exato 36%-100%)",
+   "nota": "janela independente: 2020-2025 (TDoR/TMM deixa de citar GGB/Homofobia Mata em 2019; ver dados_tdor_dependencia.csv)"
+  },
+  {
+   "par": "ANTRA x TDoR (ano civil), 2020+",
+   "n": 6,
+   "anos": "2020-2025",
+   "pearson": 0.91,
+   "p_lo": 0.25,
+   "p_hi": 1.0,
+   "p_perm": 0.009,
+   "spearman": 0.94,
+   "s_lo": 0.52,
+   "s_hi": 1.0,
+   "sinal_igual": "6/6 (100%; IC95 exato 54%-100%)",
+   "nota": "janela independente: 2020-2025 (TDoR/TMM deixa de citar GGB/Homofobia Mata em 2019; ver dados_tdor_dependencia.csv)"
+  },
+  {
+   "par": "GGB total x Anuario FBSP homicidio LGBT",
+   "n": 5,
+   "anos": "2021-2025",
+   "pearson": 0.15,
+   "p_lo": -1.0,
+   "p_hi": 1.0,
+   "p_perm": 0.905,
+   "spearman": 0.2,
+   "s_lo": -1.0,
+   "s_hi": 1.0,
+   "sinal_igual": "4/5 (80%; IC95 exato 28%-99%)",
+   "nota": "2021-2025; cobertura por UF muda"
+  }
+ ],
+ "razoes": [
+  {
+   "razao": "GGB trans / ANTRA",
+   "n_anos": 8,
+   "anos": "2017-2025",
+   "media": 0.899,
+   "ic_lo": 0.833,
+   "ic_hi": 0.968,
+   "rho_vs_ano": -0.83,
+   "p_rho": 0.01,
+   "valores": "2017:1.07; 2018:1.01; 2019:0.95; 2020:0.92; 2021:0.79; 2023:0.88; 2024:0.79; 2025:0.80"
+  },
+  {
+   "razao": "GGB trans+homens trans / ANTRA",
+   "n_anos": 8,
+   "anos": "2017-2025",
+   "media": 0.912,
+   "ic_lo": 0.853,
+   "ic_hi": 0.975,
+   "rho_vs_ano": -0.83,
+   "p_rho": 0.01,
+   "valores": "2017:1.07; 2018:1.01; 2019:0.95; 2020:0.94; 2021:0.79; 2023:0.88; 2024:0.84; 2025:0.84"
+  },
+  {
+   "razao": "ANTRA / TDoR(ano civil)",
+   "n_anos": 9,
+   "anos": "2017-2025",
+   "media": 1.025,
+   "ic_lo": 0.949,
+   "ic_hi": 1.104,
+   "rho_vs_ano": 0.78,
+   "p_rho": 0.013,
+   "valores": "2017:0.90; 2018:0.92; 2019:0.89; 2020:0.92; 2021:1.06; 2022:1.16; 2023:1.16; 2024:1.21; 2025:1.00"
+  },
+  {
+   "razao": "ANTRA / TMM(ciclo TDoR)",
+   "n_anos": 9,
+   "anos": "2017-2025",
+   "media": 1.129,
+   "ic_lo": 1.026,
+   "ic_hi": 1.246,
+   "rho_vs_ano": 0.2,
+   "p_rho": 0.606,
+   "valores": "2017:1.05; 2018:0.98; 2019:0.95; 2020:1.15; 2021:1.12; 2022:1.36; 2023:1.45; 2024:1.15; 2025:0.94"
+  },
+  {
+   "razao": "GGB trans / TMM(ciclo)",
+   "n_anos": 14,
+   "anos": "2011-2025",
+   "media": 1.007,
+   "ic_lo": 0.94,
+   "ic_hi": 1.076,
+   "rho_vs_ano": -0.28,
+   "p_rho": 0.326,
+   "valores": "2011:0.98; 2012:0.95; 2013:1.05; 2014:1.12; 2015:0.95; 2016:1.17; 2017:1.12; 2018:0.98; 2019:0.91; 2020:1.06; 2021:0.88; 2023:1.27; 2024:0.91; 2025:0.75"
+  },
+  {
+   "razao": "Obs trans(travestis+mulheres) / ANTRA",
+   "n_anos": 3,
+   "anos": "2021-2023",
+   "media": 1.067,
+   "ic_lo": 0.979,
+   "ic_hi": 1.214,
+   "rho_vs_ano": -0.5,
+   "p_rho": 0.667,
+   "valores": "2021:1.01; 2022:1.21; 2023:0.98"
+  },
+  {
+   "razao": "Obs total / GGB total",
+   "n_anos": 3,
+   "anos": "2021-2023",
+   "media": 1.005,
+   "ic_lo": 0.895,
+   "ic_hi": 1.066,
+   "rho_vs_ano": -0.5,
+   "p_rho": 0.667,
+   "valores": "2021:1.05; 2022:1.07; 2023:0.89"
+  },
+  {
+   "razao": "Anuario FBSP / GGB total",
+   "n_anos": 6,
+   "anos": "2020-2025",
+   "media": 0.739,
+   "ic_lo": 0.634,
+   "ic_hi": 0.879,
+   "rho_vs_ano": 0.54,
+   "p_rho": 0.266,
+   "valores": "2020:0.70; 2021:0.60; 2022:0.59; 2023:1.07; 2024:0.75; 2025:0.73"
+  },
+  {
+   "razao": "GGB total por mil mortes por agressao (SIM)",
+   "n_anos": 25,
+   "anos": "2000-2024",
+   "media": 4.817,
+   "ic_lo": 4.158,
+   "ic_hi": 5.491,
+   "rho_vs_ano": 0.87,
+   "p_rho": 0.0,
+   "valores": "2000:2.87; 2001:2.75; 2002:2.54; 2003:2.45; 2004:3.27; 2005:2.84; 2006:2.28; 2007:2.98; 2008:3.73; 2009:3.87; 2010:4.98; 2011:5.10; 2012:6.01; 2013:5.54; 2014:5.52; 2015:5.50; 2016:5.62; 2017:6.99; 2018:7.53; 2019:7.48; 2020:4.98; 2021:6.60; 2022:5.78; 2023:5.93; 2024:7.30"
+  }
+ ],
+ "captura_recaptura_2019": {
+  "chapman": 186.2,
+  "ic95_normal": [
+   174.5,
+   197.9
+  ],
+  "uniao_observada": 169,
+  "ggb_trans": 118,
+  "tdor": 139,
+  "sobreposicao": 88,
+  "antra_agregado": 124.0,
+  "tmm_ciclo2019": 130.0,
+  "tdor_violencia": 112.0,
+  "cenarios": [
+   [
+    "base: GGB trans x TDoR todos (URL ou nome+cidade ou nome 2 tokens+UF)",
+    186.2
+   ],
+   [
+    "estrito: so URL ou >=2 tokens de nome",
+    221.1
+   ],
+   [
+    "TDoR so categorias violence+suicide",
+    178.9
+   ],
+   [
+    "TDoR so violence (sem suicidio)",
+    171.4
+   ],
+   [
+    "GGB sem os casos cuja fonte e o proprio TDoR",
+    187.9
+   ],
+   [
+    "so casos com nome nas duas listas",
+    151.1
+   ]
+  ],
+  "cobertura_antra_sobre_chapman": 0.666,
+  "cobertura_antra_sobre_uniao": 0.734,
+  "cobertura_ggb_sobre_chapman": 0.634,
+  "cobertura_ggb_ic": [
+   0.596,
+   0.676
+  ]
+ },
+ "tmm_dependencia": {
+  "2008": {
+   "n": 57,
+   "pct_GGB": 100.0
+  },
+  "2009": {
+   "n": 68,
+   "pct_GGB": 38.2
+  },
+  "2010": {
+   "n": 99,
+   "pct_GGB": 52.5
+  },
+  "2011": {
+   "n": 103,
+   "pct_GGB": 14.6
+  },
+  "2012": {
+   "n": 126,
+   "pct_GGB": 7.9
+  },
+  "2013": {
+   "n": 104,
+   "pct_GGB": 71.2
+  },
+  "2014": {
+   "n": 132,
+   "pct_GGB": 95.5
+  },
+  "2015": {
+   "n": 112,
+   "pct_GGB": 100.0
+  },
+  "2016": {
+   "n": 136,
+   "pct_GGB": 2.2
+  },
+  "2017": {
+   "n": 176,
+   "pct_GGB": 0.0
+  },
+  "2018": {
+   "n": 167,
+   "pct_GGB": 0.0
+  },
+  "2019": {
+   "n": 115,
+   "pct_GGB": 0.0
+  },
+  "2020": {
+   "n": 157,
+   "pct_GGB": 0.0
+  },
+  "2021": {
+   "n": 111,
+   "pct_GGB": 0.0
+  },
+  "2022": {
+   "n": 102,
+   "pct_GGB": 0.0
+  },
+  "2023": {
+   "n": 116,
+   "pct_GGB": 0.0
+  },
+  "2024": {
+   "n": 94,
+   "pct_GGB": 0.0
+  },
+  "2025": {
+   "n": 56,
+   "pct_GGB": 0.0
+  }
+ },
+ "colisao_2023_2025": {
+  "prob_identidade_exata": 0.00034359086254163535,
+  "nota": "P(duas sorteios independentes da mesma multinomial coincidirem em TODAS as 4 caixas), p = proporcoes observadas; descritivo, nao prova copia"
+ },
+ "ggb_vs_sim_variacoes": {
+  "todo": {
+   "anos": "2001-2024",
+   "n": 24,
+   "pearson": [
+    0.2,
+    -0.37,
+    0.6
+   ],
+   "p_perm": 0.353,
+   "spearman": [
+    0.13,
+    -0.33,
+    0.56
+   ],
+   "sinal_igual": "13/24",
+   "sinal_igual_ic": [
+    0.33,
+    0.74
+   ],
+   "inclinacao": 0.5,
+   "inclinacao_ic": [
+    -1.37,
+    1.23
+   ]
+  },
+  "ate_2017": {
+   "anos": "2001-2017",
+   "n": 17,
+   "pearson": [
+    0.07,
+    -0.43,
+    0.62
+   ],
+   "p_perm": 0.792,
+   "spearman": [
+    0.21,
+    -0.28,
+    0.6
+   ],
+   "sinal_igual": "10/17",
+   "sinal_igual_ic": [
+    0.33,
+    0.82
+   ],
+   "inclinacao": 0.29,
+   "inclinacao_ic": [
+    -1.74,
+    3.26
+   ]
+  },
+  "2018_em_diante": {
+   "anos": "2018-2024",
+   "n": 7,
+   "pearson": [
+    -0.04,
+    -0.9,
+    0.9
+   ],
+   "p_perm": 0.936,
+   "spearman": [
+    -0.14,
+    -0.89,
+    0.96
+   ],
+   "sinal_igual": "3/7",
+   "sinal_igual_ic": [
+    0.1,
+    0.82
+   ],
+   "inclinacao": -0.09,
+   "inclinacao_ic": [
+    -3.42,
+    1.97
+   ]
+  },
+  "2018_2024_sem_2020": {
+   "anos": "2018-2024",
+   "n": 6,
+   "pearson": [
+    0.55,
+    -0.68,
+    1.0
+   ],
+   "p_perm": 0.263,
+   "spearman": [
+    0.37,
+    -0.75,
+    1.0
+   ],
+   "sinal_igual": "3/6",
+   "sinal_igual_ic": [
+    0.12,
+    0.88
+   ],
+   "inclinacao": 1.17,
+   "inclinacao_ic": [
+    -4.37,
+    2.53
+   ]
+  }
+ },
+ "ggb_por_mil_sim": {
+  "2000": 2.87,
+  "2001": 2.75,
+  "2002": 2.54,
+  "2003": 2.45,
+  "2004": 3.27,
+  "2005": 2.84,
+  "2006": 2.28,
+  "2007": 2.98,
+  "2008": 3.73,
+  "2009": 3.87,
+  "2010": 4.98,
+  "2011": 5.1,
+  "2012": 6.01,
+  "2013": 5.54,
+  "2014": 5.52,
+  "2015": 5.5,
+  "2016": 5.62,
+  "2017": 6.99,
+  "2018": 7.53,
+  "2019": 7.48,
+  "2020": 4.98,
+  "2021": 6.6,
+  "2022": 5.78,
+  "2023": 5.93,
+  "2024": 7.3
+ },
+ "ggb_por_mil_sim_tendencia": {
+  "rho_vs_ano": 0.86,
+  "p": 0.0
+ },
+ "acumulado_2017_2024": {
+  "GGB": -34.6,
+  "SIM": -37.3,
+  "ANTRA": -31.8,
+  "TDoR": -49.2,
+  "TMM_ciclo": -37.6
+ },
+ "acumulado_2000_2017": {
+  "GGB": 242.3,
+  "SIM": 40.3
+ },
+ "acumulado_2010_2017": {
+  "GGB": 71.2,
+  "SIM": 21.9
+ },
+ "parcial_GGBtotal_ANTRA_dado_SIM": {
+  "n": 7,
+  "r": -0.78,
+  "ic": [
+   -1.0,
+   0.96
+  ]
+ },
+ "bruta_GGBtotal_ANTRA": {
+  "par": "GGB total x ANTRA trans",
+  "n": 8,
+  "anos": "2018-2025",
+  "pearson": -0.34,
+  "p_lo": -0.91,
+  "p_hi": 0.57,
+  "p_perm": 0.401,
+  "spearman": -0.21,
+  "s_lo": -1.0,
+  "s_hi": 0.64,
+  "sinal_igual": "5/8 (62%; IC95 exato 24%-91%)",
+  "nota": "ANTRA independente do GGB so a partir de 2017 (ANTRA 2017: serie 2008-2016 = GGB)"
+ },
+ "sensibilidade_variacao": [
+  {
+   "janela": "2017->2025",
+   "A_todas": {
+    "de": 2017,
+    "para": 2025,
+    "v1": 445,
+    "v2": 257,
+    "pct": -42.2,
+    "ic_poisson": [
+     -50.7,
+     -32.5
+    ]
+   },
+   "B_sem_suicidio": {
+    "de": 2017,
+    "para": 2025,
+    "v1": 387,
+    "v2": 237,
+    "pct": -38.8,
+    "ic_poisson": [
+     -48.1,
+     -27.8
+    ]
+   },
+   "C_homicidio_estrito": null
+  },
+  {
+   "janela": "2017->2018",
+   "A_todas": {
+    "de": 2017,
+    "para": 2018,
+    "v1": 445,
+    "v2": 420,
+    "pct": -5.6,
+    "ic_poisson": [
+     -17.6,
+     8.1
+    ]
+   },
+   "B_sem_suicidio": {
+    "de": 2017,
+    "para": 2018,
+    "v1": 387,
+    "v2": 320,
+    "pct": -17.3,
+    "ic_poisson": [
+     -28.9,
+     -3.9
+    ]
+   },
+   "C_homicidio_estrito": null
+  },
+  {
+   "janela": "2018->2019",
+   "A_todas": {
+    "de": 2018,
+    "para": 2019,
+    "v1": 420,
+    "v2": 329,
+    "pct": -21.7,
+    "ic_poisson": [
+     -32.4,
+     -9.3
+    ]
+   },
+   "B_sem_suicidio": {
+    "de": 2018,
+    "para": 2019,
+    "v1": 320,
+    "v2": 297,
+    "pct": -7.2,
+    "ic_poisson": [
+     -21.0,
+     9.0
+    ]
+   },
+   "C_homicidio_estrito": null
+  },
+  {
+   "janela": "2019->2020",
+   "A_todas": {
+    "de": 2019,
+    "para": 2020,
+    "v1": 329,
+    "v2": 237,
+    "pct": -28.0,
+    "ic_poisson": [
+     -39.3,
+     -14.6
+    ]
+   },
+   "B_sem_suicidio": {
+    "de": 2019,
+    "para": 2020,
+    "v1": 297,
+    "v2": 224,
+    "pct": -24.6,
+    "ic_poisson": [
+     -36.9,
+     -10.0
+    ]
+   },
+   "C_homicidio_estrito": {
+    "de": 2019,
+    "para": 2020,
+    "v1": 272,
+    "v2": 215,
+    "pct": -21.0,
+    "ic_poisson": [
+     -34.2,
+     -5.1
+    ]
+   }
+  },
+  {
+   "janela": "2019->2023",
+   "A_todas": {
+    "de": 2019,
+    "para": 2023,
+    "v1": 329,
+    "v2": 257,
+    "pct": -21.9,
+    "ic_poisson": [
+     -33.9,
+     -7.8
+    ]
+   },
+   "B_sem_suicidio": {
+    "de": 2019,
+    "para": 2023,
+    "v1": 297,
+    "v2": 237,
+    "pct": -20.2,
+    "ic_poisson": [
+     -33.0,
+     -5.0
+    ]
+   },
+   "C_homicidio_estrito": {
+    "de": 2019,
+    "para": 2023,
+    "v1": 272,
+    "v2": 204,
+    "pct": -25.0,
+    "ic_poisson": [
+     -37.8,
+     -9.7
+    ]
+   }
+  },
+  {
+   "janela": "2023->2025",
+   "A_todas": {
+    "de": 2023,
+    "para": 2025,
+    "v1": 257,
+    "v2": 257,
+    "pct": 0.0,
+    "ic_poisson": [
+     -16.2,
+     19.3
+    ]
+   },
+   "B_sem_suicidio": {
+    "de": 2023,
+    "para": 2025,
+    "v1": 237,
+    "v2": 237,
+    "pct": 0.0,
+    "ic_poisson": [
+     -16.8,
+     20.2
+    ]
+   },
+   "C_homicidio_estrito": {
+    "de": 2023,
+    "para": 2025,
+    "v1": 204,
+    "v2": 204,
+    "pct": 0.0,
+    "ic_poisson": [
+     -18.0,
+     22.0
+    ]
+   }
+  },
+  {
+   "janela": "2023->2024",
+   "A_todas": {
+    "de": 2023,
+    "para": 2024,
+    "v1": 257,
+    "v2": 291,
+    "pct": 13.2,
+    "ic_poisson": [
+     -4.6,
+     34.4
+    ]
+   },
+   "B_sem_suicidio": {
+    "de": 2023,
+    "para": 2024,
+    "v1": 237,
+    "v2": 273,
+    "pct": 15.2,
+    "ic_poisson": [
+     -3.6,
+     37.7
+    ]
+   },
+   "C_homicidio_estrito": null
+  }
+ ],
+ "suicidios_pct_do_total": {
+  "2013": 3.2,
+  "2014": 2.7,
+  "2015": 1.6,
+  "2016": 7.6,
+  "2017": 13.0,
+  "2018": 23.8,
+  "2019": 9.7,
+  "2020": 5.5,
+  "2021": 8.0,
+  "2023": 7.8,
+  "2024": 6.2,
+  "2025": 7.8
+ },
+ "robz_GGB_total": {
+  "2001": 0.0,
+  "2002": -0.3,
+  "2003": -0.11,
+  "2004": 1.06,
+  "2005": -0.83,
+  "2006": -0.98,
+  "2007": 1.07,
+  "2008": 1.26,
+  "2009": 0.23,
+  "2010": 1.22,
+  "2011": 0.04,
+  "2012": 1.08,
+  "2013": -0.43,
+  "2014": 0.15,
+  "2015": -0.22,
+  "2016": 0.28,
+  "2017": 1.18,
+  "2018": -0.35,
+  "2019": -1.25,
+  "2020": -1.66,
+  "2021": 1.07,
+  "2022": -0.84,
+  "2023": -0.05,
+  "2024": 0.53,
+  "2025": -0.67
+ },
+ "robz_ANTRA": {
+  "2018": 0.23,
+  "2019": -0.82,
+  "2020": 2.8,
+  "2021": -0.53,
+  "2022": 0.39,
+  "2023": 1.38,
+  "2024": -0.23,
+  "2025": -1.69
+ },
+ "quebras_declaradas_GGB": {
+  "2018": "suicidios 58->100 (GGB 2018)",
+  "2019": "relatorio com lista nominal; 158 casos descartados/58 retirados",
+  "2020": "coprodutor Acontece; coleta por Google Alerts; pandemia",
+  "2021": "novos termos de busca, delegacias, servicos funerarios, redes sociais",
+  "2022": "sem relatorio anual",
+  "2024": "'aprimoramento nas tecnicas de coleta e depuracao' sem reconciliacao; 32 casos 'no limbo'",
+  "2025": "destaque '237 homicidios' (=204+17+16); regiao NI 33%, idade NI 60%"
+ },
+ "ggb2021_decadas_vs_serie_anual": {
+  "2000-2009": {
+   "tabela_ggb2021": 1429,
+   "soma_anual_ggb2019": 1446,
+   "diferenca": 17
+  },
+  "2010-2019": {
+   "tabela_ggb2021": 3029,
+   "soma_anual_ggb2019": 3363,
+   "diferenca": 334
+  }
+ },
+ "revisao_ggb_original_vs_tabela2019": {
+  "2012": {
+   "original": 338.0,
+   "tabela2019": 338.0,
+   "dif": 0.0
+  },
+  "2013": {
+   "original": 312.0,
+   "tabela2019": 314.0,
+   "dif": 2.0
+  },
+  "2014": {
+   "original": 326.0,
+   "tabela2019": 329.0,
+   "dif": 3.0
+  },
+  "2015": {
+   "original": 318.0,
+   "tabela2019": 319.0,
+   "dif": 1.0
+  },
+  "2016": {
+   "original": 343.0,
+   "tabela2019": 343.0,
+   "dif": 0.0
+  }
+ },
+ "consistencia_composicao": {
+  "2017": {
+   "soma_categorias": 445,
+   "total_declarado": 445,
+   "falta": 0
+  },
+  "2018": {
+   "soma_categorias": 420,
+   "total_declarado": 420,
+   "falta": 0
+  },
+  "2019": {
+   "soma_categorias": 329,
+   "total_declarado": 329,
+   "falta": 0
+  },
+  "2020": {
+   "soma_categorias": 230,
+   "total_declarado": 237,
+   "falta": 7
+  },
+  "2021": {
+   "soma_categorias": 281,
+   "total_declarado": 300,
+   "falta": 19
+  },
+  "2023": {
+   "soma_categorias": 257,
+   "total_declarado": 257,
+   "falta": 0
+  },
+  "2024": {
+   "soma_categorias": 291,
+   "total_declarado": 291,
+   "falta": 0
+  },
+  "2025": {
+   "soma_categorias": 255,
+   "total_declarado": 257,
+   "falta": 2
+  }
+ }
+}

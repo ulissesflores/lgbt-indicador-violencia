@@ -1,0 +1,1707 @@
+{
+ "_extrato_publico": {
+  "origem": "dashboard_dados.json do painel do artigo (projeto de publicação, não distribuído)",
+  "origem_sha256": "167512e92a5d883ac10c3174bbde4203204a264cbd45971fab313ffb2dbdc92b",
+  "alteracao": "caminhos absolutos -> relativos à raiz do projeto de origem; 'python3' no lugar do caminho do interpretador; nenhum número alterado"
+ },
+ "versao": 1,
+ "projeto": "LGBT-INDICADOR",
+ "reproduzir": "python3 -I dashboard/build_dashboard.py",
+ "regras": {
+  "fonte_unica": "id unico: DOI em minusculas; URL sem barra final, minuscula; URL doi.org dobrada em DOI; 17 sources.jsonl",
+  "idioma": "pt e pt-BR fundidos; divergencia entre registros decidida pela maioria, empate pelo research-consolidado",
+  "scripts": "*.py do projeto fora de fontes/ (material baixado) e fora de __pycache__",
+  "numero_digitado": "nenhum para exibicao; asserts de teste comparam com as frases da reanalise (RESULTADOS.md) e do MIDIA.md"
+ },
+ "numeros": {
+  "fontes_unicas": {
+   "valor": 829,
+   "origem": {
+    "arquivos": [
+     "research-2026-10-10/sources.jsonl",
+     "research-2026-10-11/sources.jsonl",
+     "research-2026-10-12-deep/sources.jsonl",
+     "research-2026-10-21-rodada3/A-textointegral/sources.jsonl",
+     "research-2026-10-21-rodada3/F2-custos/sources.jsonl",
+     "research-2026-10-21-rodada3/F3-ggb/lit/sources.jsonl",
+     "research-2026-10-21-rodada3/F3-ggb/sources.jsonl",
+     "research-2026-10-21-rodada3/F5-economia-politica/sources.jsonl",
+     "research-2026-10-21-rodada3/F6-asia-africa/sources.jsonl",
+     "research-2026-10-21-rodada3/F8-literatura/sources.jsonl",
+     "research-2026-10-21-rodada3/GGB-completo/perfil/sources.jsonl",
+     "research-2026-10-21-rodada3/GGB-completo/series/sources.jsonl",
+     "research-2026-10-21-rodada3/discurso/governos/sources.jsonl",
+     "research-2026-10-21-rodada3/discurso/midia/sources.jsonl",
+     "research-2026-10-21-rodada3/discurso/mortalidade/sources.jsonl",
+     "research-2026-10-21-rodada3/ideologia/sources.jsonl",
+     "research-consolidado/sources.jsonl"
+    ],
+    "como": "ids unicos: doi em minusculas; URL sem barra final e em minusculas; URL doi.org dobrada em doi; 17 sources.jsonl",
+    "comando": "python3 -I dashboard/build_dashboard.py  # funcao calcular(), chave 'fontes_unicas'"
+   }
+  },
+  "registros_brutos": {
+   "valor": 1569,
+   "origem": {
+    "arquivos": [
+     "research-2026-10-10/sources.jsonl",
+     "research-2026-10-11/sources.jsonl",
+     "research-2026-10-12-deep/sources.jsonl",
+     "research-2026-10-21-rodada3/A-textointegral/sources.jsonl",
+     "research-2026-10-21-rodada3/F2-custos/sources.jsonl",
+     "research-2026-10-21-rodada3/F3-ggb/lit/sources.jsonl",
+     "research-2026-10-21-rodada3/F3-ggb/sources.jsonl",
+     "research-2026-10-21-rodada3/F5-economia-politica/sources.jsonl",
+     "research-2026-10-21-rodada3/F6-asia-africa/sources.jsonl",
+     "research-2026-10-21-rodada3/F8-literatura/sources.jsonl",
+     "research-2026-10-21-rodada3/GGB-completo/perfil/sources.jsonl",
+     "research-2026-10-21-rodada3/GGB-completo/series/sources.jsonl",
+     "research-2026-10-21-rodada3/discurso/governos/sources.jsonl",
+     "research-2026-10-21-rodada3/discurso/midia/sources.jsonl",
+     "research-2026-10-21-rodada3/discurso/mortalidade/sources.jsonl",
+     "research-2026-10-21-rodada3/ideologia/sources.jsonl",
+     "research-consolidado/sources.jsonl"
+    ],
+    "como": "linhas nao vazias dos 17 sources.jsonl (inclui repeticoes entre ledgers)",
+    "comando": "find . -name sources.jsonl -exec cat {} + | grep -c ."
+   }
+  },
+  "ledgers": {
+   "valor": 17,
+   "origem": {
+    "arquivos": [
+     "research-2026-10-10/sources.jsonl",
+     "research-2026-10-11/sources.jsonl",
+     "research-2026-10-12-deep/sources.jsonl",
+     "research-2026-10-21-rodada3/A-textointegral/sources.jsonl",
+     "research-2026-10-21-rodada3/F2-custos/sources.jsonl",
+     "research-2026-10-21-rodada3/F3-ggb/lit/sources.jsonl",
+     "research-2026-10-21-rodada3/F3-ggb/sources.jsonl",
+     "research-2026-10-21-rodada3/F5-economia-politica/sources.jsonl",
+     "research-2026-10-21-rodada3/F6-asia-africa/sources.jsonl",
+     "research-2026-10-21-rodada3/F8-literatura/sources.jsonl",
+     "research-2026-10-21-rodada3/GGB-completo/perfil/sources.jsonl",
+     "research-2026-10-21-rodada3/GGB-completo/series/sources.jsonl",
+     "research-2026-10-21-rodada3/discurso/governos/sources.jsonl",
+     "research-2026-10-21-rodada3/discurso/midia/sources.jsonl",
+     "research-2026-10-21-rodada3/discurso/mortalidade/sources.jsonl",
+     "research-2026-10-21-rodada3/ideologia/sources.jsonl",
+     "research-consolidado/sources.jsonl"
+    ],
+    "como": "glob **/sources.jsonl",
+    "comando": "find . -name sources.jsonl | wc -l"
+   }
+  },
+  "ledger_ts_min": {
+   "valor": "2026-10-11",
+   "origem": {
+    "arquivos": [
+     "research-2026-10-10/sources.jsonl",
+     "research-2026-10-11/sources.jsonl",
+     "research-2026-10-12-deep/sources.jsonl",
+     "research-2026-10-21-rodada3/A-textointegral/sources.jsonl",
+     "research-2026-10-21-rodada3/F2-custos/sources.jsonl",
+     "research-2026-10-21-rodada3/F3-ggb/lit/sources.jsonl",
+     "research-2026-10-21-rodada3/F3-ggb/sources.jsonl",
+     "research-2026-10-21-rodada3/F5-economia-politica/sources.jsonl",
+     "research-2026-10-21-rodada3/F6-asia-africa/sources.jsonl",
+     "research-2026-10-21-rodada3/F8-literatura/sources.jsonl",
+     "research-2026-10-21-rodada3/GGB-completo/perfil/sources.jsonl",
+     "research-2026-10-21-rodada3/GGB-completo/series/sources.jsonl",
+     "research-2026-10-21-rodada3/discurso/governos/sources.jsonl",
+     "research-2026-10-21-rodada3/discurso/midia/sources.jsonl",
+     "research-2026-10-21-rodada3/discurso/mortalidade/sources.jsonl",
+     "research-2026-10-21-rodada3/ideologia/sources.jsonl",
+     "research-consolidado/sources.jsonl"
+    ],
+    "como": "menor campo ts",
+    "comando": "python3 -I dashboard/build_dashboard.py  # funcao calcular(), chave 'ledger_ts_min'"
+   }
+  },
+  "ledger_ts_max": {
+   "valor": "2026-10-23",
+   "origem": {
+    "arquivos": [
+     "research-2026-10-10/sources.jsonl",
+     "research-2026-10-11/sources.jsonl",
+     "research-2026-10-12-deep/sources.jsonl",
+     "research-2026-10-21-rodada3/A-textointegral/sources.jsonl",
+     "research-2026-10-21-rodada3/F2-custos/sources.jsonl",
+     "research-2026-10-21-rodada3/F3-ggb/lit/sources.jsonl",
+     "research-2026-10-21-rodada3/F3-ggb/sources.jsonl",
+     "research-2026-10-21-rodada3/F5-economia-politica/sources.jsonl",
+     "research-2026-10-21-rodada3/F6-asia-africa/sources.jsonl",
+     "research-2026-10-21-rodada3/F8-literatura/sources.jsonl",
+     "research-2026-10-21-rodada3/GGB-completo/perfil/sources.jsonl",
+     "research-2026-10-21-rodada3/GGB-completo/series/sources.jsonl",
+     "research-2026-10-21-rodada3/discurso/governos/sources.jsonl",
+     "research-2026-10-21-rodada3/discurso/midia/sources.jsonl",
+     "research-2026-10-21-rodada3/discurso/mortalidade/sources.jsonl",
+     "research-2026-10-21-rodada3/ideologia/sources.jsonl",
+     "research-consolidado/sources.jsonl"
+    ],
+    "como": "maior campo ts",
+    "comando": "python3 -I dashboard/build_dashboard.py  # funcao calcular(), chave 'ledger_ts_max'"
+   }
+  },
+  "idiomas": {
+   "valor": 10,
+   "origem": {
+    "arquivos": [
+     "research-2026-10-10/sources.jsonl",
+     "research-2026-10-11/sources.jsonl",
+     "research-2026-10-12-deep/sources.jsonl",
+     "research-2026-10-21-rodada3/A-textointegral/sources.jsonl",
+     "research-2026-10-21-rodada3/F2-custos/sources.jsonl",
+     "research-2026-10-21-rodada3/F3-ggb/lit/sources.jsonl",
+     "research-2026-10-21-rodada3/F3-ggb/sources.jsonl",
+     "research-2026-10-21-rodada3/F5-economia-politica/sources.jsonl",
+     "research-2026-10-21-rodada3/F6-asia-africa/sources.jsonl",
+     "research-2026-10-21-rodada3/F8-literatura/sources.jsonl",
+     "research-2026-10-21-rodada3/GGB-completo/perfil/sources.jsonl",
+     "research-2026-10-21-rodada3/GGB-completo/series/sources.jsonl",
+     "research-2026-10-21-rodada3/discurso/governos/sources.jsonl",
+     "research-2026-10-21-rodada3/discurso/midia/sources.jsonl",
+     "research-2026-10-21-rodada3/discurso/mortalidade/sources.jsonl",
+     "research-2026-10-21-rodada3/ideologia/sources.jsonl",
+     "research-consolidado/sources.jsonl"
+    ],
+    "como": "codigos distintos do campo idioma (pt e pt-BR fundidos), por id unico",
+    "comando": "python3 -I dashboard/build_dashboard.py  # funcao calcular(), chave 'idiomas'"
+   }
+  },
+  "idiomas_ids_com_conflito": {
+   "valor": 11,
+   "origem": {
+    "arquivos": [
+     "research-2026-10-10/sources.jsonl",
+     "research-2026-10-11/sources.jsonl",
+     "research-2026-10-12-deep/sources.jsonl",
+     "research-2026-10-21-rodada3/A-textointegral/sources.jsonl",
+     "research-2026-10-21-rodada3/F2-custos/sources.jsonl",
+     "research-2026-10-21-rodada3/F3-ggb/lit/sources.jsonl",
+     "research-2026-10-21-rodada3/F3-ggb/sources.jsonl",
+     "research-2026-10-21-rodada3/F5-economia-politica/sources.jsonl",
+     "research-2026-10-21-rodada3/F6-asia-africa/sources.jsonl",
+     "research-2026-10-21-rodada3/F8-literatura/sources.jsonl",
+     "research-2026-10-21-rodada3/GGB-completo/perfil/sources.jsonl",
+     "research-2026-10-21-rodada3/GGB-completo/series/sources.jsonl",
+     "research-2026-10-21-rodada3/discurso/governos/sources.jsonl",
+     "research-2026-10-21-rodada3/discurso/midia/sources.jsonl",
+     "research-2026-10-21-rodada3/discurso/mortalidade/sources.jsonl",
+     "research-2026-10-21-rodada3/ideologia/sources.jsonl",
+     "research-consolidado/sources.jsonl"
+    ],
+    "como": "ids cujo campo idioma difere entre registros mesmo apos fundir pt/pt-BR",
+    "comando": "python3 -I dashboard/build_dashboard.py  # funcao calcular(), chave 'idiomas_ids_com_conflito'"
+   }
+  },
+  "idiomas_empate_desfeito_pelo_consolidado": {
+   "valor": 5,
+   "origem": {
+    "arquivos": [
+     "research-2026-10-10/sources.jsonl",
+     "research-2026-10-11/sources.jsonl",
+     "research-2026-10-12-deep/sources.jsonl",
+     "research-2026-10-21-rodada3/A-textointegral/sources.jsonl",
+     "research-2026-10-21-rodada3/F2-custos/sources.jsonl",
+     "research-2026-10-21-rodada3/F3-ggb/lit/sources.jsonl",
+     "research-2026-10-21-rodada3/F3-ggb/sources.jsonl",
+     "research-2026-10-21-rodada3/F5-economia-politica/sources.jsonl",
+     "research-2026-10-21-rodada3/F6-asia-africa/sources.jsonl",
+     "research-2026-10-21-rodada3/F8-literatura/sources.jsonl",
+     "research-2026-10-21-rodada3/GGB-completo/perfil/sources.jsonl",
+     "research-2026-10-21-rodada3/GGB-completo/series/sources.jsonl",
+     "research-2026-10-21-rodada3/discurso/governos/sources.jsonl",
+     "research-2026-10-21-rodada3/discurso/midia/sources.jsonl",
+     "research-2026-10-21-rodada3/discurso/mortalidade/sources.jsonl",
+     "research-2026-10-21-rodada3/ideologia/sources.jsonl",
+     "research-consolidado/sources.jsonl"
+    ],
+    "como": "empates na maioria, desfeitos pelo registro do research-consolidado",
+    "comando": "python3 -I dashboard/build_dashboard.py  # funcao calcular(), chave 'idiomas_empate_desfeito_pelo_consolidado'"
+   }
+  },
+  "tipos": {
+   "valor": {
+    "per_q1": 61,
+    "per_q2": 10,
+    "per_q34": 3,
+    "per_semq": 252,
+    "oficial": 280,
+    "preprint": 22,
+    "ong": 64,
+    "imprensa": 32,
+    "dado": 46,
+    "livro": 6,
+    "enciclopedia": 27,
+    "nao_classificado": 26
+   },
+   "origem": {
+    "arquivos": [
+     "research-2026-10-10/sources.jsonl",
+     "research-2026-10-11/sources.jsonl",
+     "research-2026-10-12-deep/sources.jsonl",
+     "research-2026-10-21-rodada3/A-textointegral/sources.jsonl",
+     "research-2026-10-21-rodada3/F2-custos/sources.jsonl",
+     "research-2026-10-21-rodada3/F3-ggb/lit/sources.jsonl",
+     "research-2026-10-21-rodada3/F3-ggb/sources.jsonl",
+     "research-2026-10-21-rodada3/F5-economia-politica/sources.jsonl",
+     "research-2026-10-21-rodada3/F6-asia-africa/sources.jsonl",
+     "research-2026-10-21-rodada3/F8-literatura/sources.jsonl",
+     "research-2026-10-21-rodada3/GGB-completo/perfil/sources.jsonl",
+     "research-2026-10-21-rodada3/GGB-completo/series/sources.jsonl",
+     "research-2026-10-21-rodada3/discurso/governos/sources.jsonl",
+     "research-2026-10-21-rodada3/discurso/midia/sources.jsonl",
+     "research-2026-10-21-rodada3/discurso/mortalidade/sources.jsonl",
+     "research-2026-10-21-rodada3/ideologia/sources.jsonl",
+     "research-consolidado/sources.jsonl",
+     "DOSSIE-CONSOLIDADO-2026-10-12.md"
+    ],
+    "como": "classificar() por canal + id_kind + prefixo de DOI + host; quartil de verificacao-*.csv e tabelas dos dossies",
+    "comando": "python3 -I dashboard/build_dashboard.py  # funcao calcular(), chave 'tipos'"
+   }
+  },
+  "faixas_ano": {
+   "valor": {
+    "ate2009": 57,
+    "2010_14": 53,
+    "2015_19": 151,
+    "2020_24": 297,
+    "2025_26": 240,
+    "sem_ano": 31
+   },
+   "origem": {
+    "arquivos": [
+     "research-2026-10-10/sources.jsonl",
+     "research-2026-10-11/sources.jsonl",
+     "research-2026-10-12-deep/sources.jsonl",
+     "research-2026-10-21-rodada3/A-textointegral/sources.jsonl",
+     "research-2026-10-21-rodada3/F2-custos/sources.jsonl",
+     "research-2026-10-21-rodada3/F3-ggb/lit/sources.jsonl",
+     "research-2026-10-21-rodada3/F3-ggb/sources.jsonl",
+     "research-2026-10-21-rodada3/F5-economia-politica/sources.jsonl",
+     "research-2026-10-21-rodada3/F6-asia-africa/sources.jsonl",
+     "research-2026-10-21-rodada3/F8-literatura/sources.jsonl",
+     "research-2026-10-21-rodada3/GGB-completo/perfil/sources.jsonl",
+     "research-2026-10-21-rodada3/GGB-completo/series/sources.jsonl",
+     "research-2026-10-21-rodada3/discurso/governos/sources.jsonl",
+     "research-2026-10-21-rodada3/discurso/midia/sources.jsonl",
+     "research-2026-10-21-rodada3/discurso/mortalidade/sources.jsonl",
+     "research-2026-10-21-rodada3/ideologia/sources.jsonl",
+     "research-consolidado/sources.jsonl"
+    ],
+    "como": "campo ano (moda entre registros do id)",
+    "comando": "python3 -I dashboard/build_dashboard.py  # funcao calcular(), chave 'faixas_ano'"
+   }
+  },
+  "funil": {
+   "valor": {
+    "registradas": 829,
+    "lido": 79,
+    "q1_lido": 50,
+    "q1_usado": 46
+   },
+   "origem": {
+    "arquivos": [
+     "research-2026-10-21-rodada3/A-textointegral/verificacao-chrome.csv",
+     "research-2026-10-21-rodada3/A-textointegral/verificacao-lote1.csv",
+     "research-2026-10-21-rodada3/A-textointegral/verificacao-lote2.csv",
+     "research-2026-10-21-rodada3/A-textointegral/verificacao-lote3.csv",
+     "research-2026-10-21-rodada3/A-textointegral/verificacao-lote4.csv",
+     "research-2026-10-21-rodada3/A-textointegral/entregues/verificacao-G1.csv",
+     "research-2026-10-21-rodada3/A-textointegral/entregues/verificacao-G2.csv",
+     "research-2026-10-21-rodada3/A-textointegral/entregues/verificacao-G3.csv",
+     "research-2026-10-21-rodada3/A-textointegral/entregues/verificacao-G4.csv",
+     "research-2026-10-21-rodada3/A-textointegral/DOIS-CITADOS.json"
+    ],
+    "como": "por DOI: lido = algum veredito != SEM_TEXTO_INTEGRAL; Q1 = quartil_sjr começa em Q1 (ou tabela dos dossies); usado = veredito CONFIRMADO/CONFIRMADO_COM_RESSALVA/CONTRADITO; tudo interseccionado com os DOIs do ledger",
+    "comando": "python3 -I dashboard/build_dashboard.py  # funcao calcular(), chave 'funil'"
+   }
+  },
+  "afirmacoes_verificadas_linhas": {
+   "valor": 203,
+   "origem": {
+    "arquivos": [
+     "research-2026-10-21-rodada3/A-textointegral/verificacao-chrome.csv",
+     "research-2026-10-21-rodada3/A-textointegral/verificacao-lote1.csv",
+     "research-2026-10-21-rodada3/A-textointegral/verificacao-lote2.csv",
+     "research-2026-10-21-rodada3/A-textointegral/verificacao-lote3.csv",
+     "research-2026-10-21-rodada3/A-textointegral/verificacao-lote4.csv",
+     "research-2026-10-21-rodada3/A-textointegral/entregues/verificacao-G1.csv",
+     "research-2026-10-21-rodada3/A-textointegral/entregues/verificacao-G2.csv",
+     "research-2026-10-21-rodada3/A-textointegral/entregues/verificacao-G3.csv",
+     "research-2026-10-21-rodada3/A-textointegral/entregues/verificacao-G4.csv"
+    ],
+    "como": "linhas dos 9 CSVs de verificacao (uma por afirmacao do dossie x DOI)",
+    "comando": "python3 -I dashboard/build_dashboard.py  # funcao calcular(), chave 'afirmacoes_verificadas_linhas'"
+   }
+  },
+  "conferencia_tipo_dossie": {
+   "valor": {
+    "conferidos": 42,
+    "sem_linha_no_registro": 1,
+    "divergencias": []
+   },
+   "origem": {
+    "arquivos": [
+     "DOSSIE-CONSOLIDADO-2026-10-12.md"
+    ],
+    "como": "DOIs/URLs das secoes 5.1, 5.2 e 5.3 do dossie consolidado: a classe do script tem de coincidir com a do dossie",
+    "comando": "python3 -I dashboard/build_dashboard.py  # funcao calcular(), chave 'conferencia_tipo_dossie'"
+   }
+  },
+  "pns_2019": {
+   "valor": {
+    "física": {
+     "prev_grupo": 0.14695925573130156,
+     "prev_ref": 0.03824548307977289,
+     "rp": 3.842525806897828,
+     "ic_lo": 2.917235898377948,
+     "ic_hi": 5.061299494115472
+    },
+    "sexual": {
+     "prev_grupo": 0.048560673343497236,
+     "prev_ref": 0.006769655638542468,
+     "rp": 7.173285605108346,
+     "ic_lo": 4.569538403296702,
+     "ic_hi": 11.260661762976225
+    },
+    "qualquer": {
+     "prev_grupo": 0.4163276184404423,
+     "prev_ref": 0.17613551445900644,
+     "rp": 2.363677874500079,
+     "ic_lo": 2.107506430340704,
+     "ic_hi": 2.650987448469142
+    }
+   },
+   "origem": {
+    "arquivos": [
+     "dados/pns/seguro_pns2019.csv"
+    ],
+    "como": "linhas bloco=nivel, grupo LGB+ (prev_grupo, prev_ref=heterossexual, rp, ic)",
+    "comando": "python3 -I dashboard/build_dashboard.py  # funcao calcular(), chave 'pns_2019'"
+   }
+  },
+  "ggb_cobertura": {
+   "valor": {
+    "2023": {
+     "num": {
+      "N0": {
+       "n": 257,
+       "cob": [
+        0.2290129374325045,
+        0.08121026150088813,
+        0.05963878578971472
+       ]
+      },
+      "N1": {
+       "n": 221,
+       "cob": [
+        0.19693330417347663,
+        0.06983450502605555,
+        0.051284714628509545
+       ]
+      },
+      "N2": {
+       "n": 94,
+       "cob": [
+        0.08376348684301721,
+        0.02970336412872951,
+        0.02181340803203573
+       ]
+      }
+     },
+     "esperado": {
+      "1.0": 1122.2073428744345,
+      "2.82": 3164.624706905905,
+      "3.84": 4309.276196637828
+     }
+    },
+    "2024": {
+     "num": {
+      "N0": {
+       "n": 291,
+       "cob": [
+        0.28736133883594284,
+        0.1019011839843769,
+        0.07483368198852679
+       ]
+      },
+      "N1": {
+       "n": 269,
+       "cob": [
+        0.2656364266215417,
+        0.09419731440480202,
+        0.06917615276602648
+       ]
+      },
+      "N2": {
+       "n": 167,
+       "cob": [
+        0.16491183362749987,
+        0.058479373626772996,
+        0.04294579000716142
+       ]
+      }
+     },
+     "esperado": {
+      "1.0": 1012.6623197775901,
+      "2.82": 2855.707741772804,
+      "3.84": 3888.623307945946
+     }
+    }
+   },
+   "origem": {
+    "arquivos": [
+     "dados/ggb/c08_numeradores.csv",
+     "dados/ggb/cobertura_implicita.csv"
+    ],
+    "como": "desfecho=agressao, prevalencia 1,89%, numeradores N0/N1/N2, 2023 e 2024 (2025 e proxy, fora); RR 1,0 / 2,82 / 3,84",
+    "comando": "python3 -I dashboard/build_dashboard.py  # funcao calcular(), chave 'ggb_cobertura'"
+   }
+  },
+  "sim_taxa_padronizada_2022_24": {
+   "valor": {
+    "Mulheres não negras": {
+     "media": 2.6033333333333335,
+     "min": 2.51,
+     "max": 2.68
+    },
+    "Mulheres negras": {
+     "media": 4.33,
+     "min": 4.11,
+     "max": 4.52
+    },
+    "Homens não negros": {
+     "media": 19.99,
+     "min": 18.69,
+     "max": 20.91
+    },
+    "Homens negros": {
+     "media": 51.72666666666667,
+     "min": 48.03,
+     "max": 54.49
+    }
+   },
+   "origem": {
+    "arquivos": [
+     "dados/sim/asr_brasil.csv"
+    ],
+    "como": "media simples das taxas padronizadas por idade (agressao X85-Y09) de 2022, 2023, 2024; reproduz asr_brasil.md secao 4",
+    "comando": "python3 -I dashboard/build_dashboard.py  # funcao calcular(), chave 'sim_taxa_padronizada_2022_24'"
+   }
+  },
+  "discurso_parlamento": {
+   "valor": {
+    "v1": {
+     "F1": 23,
+     "F2": 161,
+     "F3": 692,
+     "F4": 4
+    },
+    "v2": {
+     "F1": 14,
+     "F2": 56,
+     "F3": 148,
+     "F4": 2
+    },
+    "denominador": 258011,
+    "afirma": {
+     "F1": 14,
+     "F2": 49,
+     "F3": 33,
+     "F4": 2
+    },
+    "amostra_n": {
+     "F1": 14,
+     "F2": 56,
+     "F3": 60,
+     "F4": 2
+    },
+    "est_f3": {
+     "k": 33,
+     "n": 60,
+     "N": 148,
+     "est": 81.4,
+     "lo": 62.887737532492615,
+     "hi": 99.02168829643398
+    },
+    "itens_codificados": 871,
+    "kappa_postura": {
+     "F2": 0.73,
+     "F3": 0.43
+    }
+   },
+   "origem": {
+    "arquivos": [
+     "research-2026-10-21-rodada3/discurso/midia/contagens.csv",
+     "research-2026-10-21-rodada3/discurso/midia/amostra_codificada.csv"
+    ],
+    "como": "soma anual Camara+Senado por familia (v1 literal e v2); AFIRMA+ATRIBUI na amostra Parlamento; F3 por Wilson 95% x N (censo em F1/F2/F4)",
+    "comando": "python3 -I dashboard/build_dashboard.py  # funcao calcular(), chave 'discurso_parlamento'"
+   }
+  },
+  "kappa_segundo_codificador": {
+   "valor": {
+    "F2": 0.73,
+    "F3": 0.43
+   },
+   "origem": {
+    "arquivos": [
+     "research-2026-10-21-rodada3/escrutinio/simetria/concordancia_C27.csv"
+    ],
+    "como": "kappa de postura (todos) do 2o codificador (Grok) em F2 e F3 do Parlamento; F3 < 0,60 => indicativo",
+    "comando": "python3 -I dashboard/build_dashboard.py  # funcao calcular(), chave 'kappa_segundo_codificador'"
+   }
+  },
+  "governos_painel": {
+   "valor": {
+    "tabela": {
+     "tx_total": {
+      "b": 0.0009,
+      "ep": 0.0121,
+      "lo": -0.0228,
+      "hi": 0.0246,
+      "lo_pct": -10.8,
+      "hi_pct": 13.1,
+      "lo_pct_recalc": -10.77420441175917,
+      "hi_pct_recalc": 13.088442094748931,
+      "n": 351
+     },
+     "tx_homens": {
+      "b": 0.0005,
+      "ep": 0.0125,
+      "lo": -0.024,
+      "hi": 0.0251,
+      "lo_pct": -11.3,
+      "hi_pct": 13.4,
+      "lo_pct_recalc": -11.307956328284252,
+      "hi_pct_recalc": 13.371516896052649,
+      "n": 351
+     },
+     "tx_mulheres": {
+      "b": -0.0007,
+      "ep": 0.0105,
+      "lo": -0.0213,
+      "hi": 0.0199,
+      "lo_pct": -10.1,
+      "hi_pct": 10.5,
+      "lo_pct_recalc": -10.102495183876858,
+      "hi_pct_recalc": 10.461847073995312,
+      "n": 351
+     },
+     "tx_negros": {
+      "b": -0.007,
+      "ep": 0.0146,
+      "lo": -0.0356,
+      "hi": 0.0215,
+      "lo_pct": -16.3,
+      "hi_pct": 11.3,
+      "lo_pct_recalc": -16.305757651123187,
+      "hi_pct_recalc": 11.349086074653613,
+      "n": 351
+     },
+     "tx_nao_negros": {
+      "b": -0.0016,
+      "ep": 0.0171,
+      "lo": -0.0352,
+      "hi": 0.032,
+      "lo_pct": -16.1,
+      "hi_pct": 17.3,
+      "lo_pct_recalc": -16.138201666292606,
+      "hi_pct_recalc": 17.35108709918103,
+      "n": 351
+     },
+     "tx_arma": {
+      "b": 0.0009,
+      "ep": 0.0185,
+      "lo": -0.0353,
+      "hi": 0.0371,
+      "lo_pct": -16.2,
+      "hi_pct": 20.4,
+      "lo_pct_recalc": -16.180122084481564,
+      "hi_pct_recalc": 20.382019977513433,
+      "n": 351
+     }
+    },
+    "k": 5,
+    "base": "PT 2,97 -> DEM/PL ~8",
+    "n_uf_anos": 351
+   },
+   "origem": {
+    "arquivos": [
+     "dados/painel/c03_event_pesos_resultados.md",
+     "dados/painel/resultados_tse_brc.md",
+     "dados/painel/painel_uf_ano_tse_brc.csv",
+     "research-2026-10-21-rodada3/escrutinio/reanalise/RESULTADOS.md"
+    ],
+    "como": "limites exatos 100*[exp(k*limite)-1] impressos pela reanalise C03 (secao 1), k lido do cabecalho; recalculados aqui a partir do IC de b com 4 casas e conferidos a +-0,06",
+    "comando": "python3 -I dashboard/build_dashboard.py  # funcao calcular(), chave 'governos_painel'"
+   }
+  },
+  "dias": {
+   "valor": 14,
+   "origem": {
+    "arquivos": [],
+    "como": "(2026-10-23 - 2026-10-10) + 1 dias; datas do registro do projeto; ts dos ledgers entre 2026-10-11 e 2026-10-23",
+    "comando": "python3 -c \"import datetime as d; print((d.date(2026,10,23)-d.date(2026,10,10)).days+1)\""
+   }
+  },
+  "scripts": {
+   "valor": 139,
+   "origem": {
+    "arquivos": [],
+    "como": "find PROJ -name '*.py' (sem __pycache__ e sem fontes/, que e material baixado)",
+    "comando": "find . -name '*.py' -not -path '*/__pycache__/*' -not -path 'fontes/*' | wc -l",
+    "lista": [
+     "dados/anuario/extrai_anuario_lgbtfobia.py",
+     "dados/concordancia/concordancia_sinan_anuario.py",
+     "dados/concordancia/concordancia_v2.py",
+     "dados/ggb/cobertura_implicita.py",
+     "dados/ggb/ggb_c08_numeradores.py",
+     "dados/painel/painel_c02_indet.py",
+     "dados/painel/painel_c03_event_pesos.py",
+     "dados/painel/painel_diagnosticos.py",
+     "dados/painel/painel_f8.py",
+     "dados/pns/pns_c05_razao_direta.py",
+     "dados/pns/seguro_pns2019.py",
+     "dados/scripts/governadores.py",
+     "dados/scripts/governadores_parse.py",
+     "dados/scripts/governadores_partido_tse.py",
+     "dados/scripts/governadores_tse.py",
+     "dados/scripts/ideologia.py",
+     "dados/scripts/tabnet_sim_uf.py",
+     "dados/sim/agrega_sim.py",
+     "dados/sim/contexto_local.py",
+     "dados/sim/padroniza_idade.py",
+     "dados/sim/projecao_grupos.py",
+     "dados/sinan/completude_sinan.py",
+     "dados/sinan/sensibilidade_pns_sinan.py",
+     "dados/sinan/serie_campo55_uf_ano.py",
+     "dados/sinan/serie_tabelas.py",
+     "dados/sinan/sim_adultos_18mais.py",
+     "dados/sinan/triangulacao_pns_sinan.py",
+     "dados/verificacao_independente.py",
+     "research-2026-10-21-rodada3/A-textointegral/_lote4_aquisicao/fetch_legit.py",
+     "research-2026-10-21-rodada3/A-textointegral/entregues/G1-replicacao-ferguson-malouff.py",
+     "research-2026-10-21-rodada3/A-textointegral/entregues/aplicar_rodada5.py",
+     "research-2026-10-21-rodada3/A-textointegral/entregues/aplicar_rodada6.py",
+     "research-2026-10-21-rodada3/F2-custos/cenarios_custo.py",
+     "research-2026-10-21-rodada3/F2-custos/custos_fontes.py",
+     "research-2026-10-21-rodada3/F2-custos/deff_pns2019.py",
+     "research-2026-10-21-rodada3/F2-custos/emite_ledger.py",
+     "research-2026-10-21-rodada3/F2-custos/pncp_busca.py",
+     "research-2026-10-21-rodada3/F2-custos/ted_api.py",
+     "research-2026-10-21-rodada3/F3-ggb/scripts/s01_parse_ggb2019.py",
+     "research-2026-10-21-rodada3/F3-ggb/scripts/s02_fetch_fontes.py",
+     "research-2026-10-21-rodada3/F3-ggb/scripts/s02b_wayback_retry.py",
+     "research-2026-10-21-rodada3/F3-ggb/scripts/s03_sorteio.py",
+     "research-2026-10-21-rodada3/F3-ggb/scripts/s04_extrair_texto.py",
+     "research-2026-10-21-rodada3/F3-ggb/scripts/s05_visualiza_lote.py",
+     "research-2026-10-21-rodada3/F3-ggb/scripts/s05b_frases.py",
+     "research-2026-10-21-rodada3/F3-ggb/scripts/s06_pacote_codificador_B.py",
+     "research-2026-10-21-rodada3/F3-ggb/scripts/s08_captura_recaptura.py",
+     "research-2026-10-21-rodada3/F3-ggb/scripts/s09_uf_series.py",
+     "research-2026-10-21-rodada3/F3-ggb/scripts/s10_duplicatas.py",
+     "research-2026-10-21-rodada3/F3-ggb/scripts/s11_validacao.py",
+     "research-2026-10-21-rodada3/F3-ggb/scripts/s12_metodologia_paginas.py",
+     "research-2026-10-21-rodada3/F3-ggb/scripts/s13_sensibilidade_manchete.py",
+     "research-2026-10-21-rodada3/F3-ggb/scripts/s14_leak_check.py",
+     "research-2026-10-21-rodada3/F5-economia-politica/scripts/emite_ledger_f5.py",
+     "research-2026-10-21-rodada3/F5-economia-politica/scripts/h1_00_verifica_citacoes_programas.py",
+     "research-2026-10-21-rodada3/F5-economia-politica/scripts/h1_01_tabnet_sim_1996_2024.py",
+     "research-2026-10-21-rodada3/F5-economia-politica/scripts/h1_02_parse_atlas_td.py",
+     "research-2026-10-21-rodada3/F5-economia-politica/scripts/h1_03_analise.py",
+     "research-2026-10-21-rodada3/F5-economia-politica/scripts/h1_04_exposicao_2023_exploratorio.py",
+     "research-2026-10-21-rodada3/F5-economia-politica/scripts/h2_01_estadic_lgbt.py",
+     "research-2026-10-21-rodada3/F5-economia-politica/scripts/h2_02_analise.py",
+     "research-2026-10-21-rodada3/F5-economia-politica/scripts/h2_03_delegacias_proxy.py",
+     "research-2026-10-21-rodada3/F5-economia-politica/scripts/h3_analise.py",
+     "research-2026-10-21-rodada3/F5-economia-politica/scripts/h4_lapop_confianca_x_ideologia.py",
+     "research-2026-10-21-rodada3/F5-economia-politica/scripts/h5_01_orcamento.py",
+     "research-2026-10-21-rodada3/F5-economia-politica/scripts/h5_02_series_chave.py",
+     "research-2026-10-21-rodada3/F5-economia-politica/scripts/h5_03_acoes_lgbt_rdf.py",
+     "research-2026-10-21-rodada3/F5-economia-politica/scripts/h5_04_linha_do_tempo.py",
+     "research-2026-10-21-rodada3/F5-economia-politica/scripts/h5_05_acoes_lgbt_cgu.py",
+     "research-2026-10-21-rodada3/F6-asia-africa/raw/_tools/fp.py",
+     "research-2026-10-21-rodada3/F6-asia-africa/raw/_tools/h2t.py",
+     "research-2026-10-21-rodada3/F8-literatura/aquisicao-out/adquirir.py",
+     "research-2026-10-21-rodada3/F8-literatura/aquisicao-out/consolidar.py",
+     "research-2026-10-21-rodada3/F8-literatura/aquisicao-out/delegado-download.py",
+     "research-2026-10-21-rodada3/F8-literatura/aquisicao-out2/adquirir.py",
+     "research-2026-10-21-rodada3/F8-literatura/aquisicao-out3/adquirir-publicos.py",
+     "research-2026-10-21-rodada3/F8-literatura/scripts/build_readme.py",
+     "research-2026-10-21-rodada3/F8-literatura/scripts/check_quotes.py",
+     "research-2026-10-21-rodada3/F8-literatura/scripts/emit_ledger.py",
+     "research-2026-10-21-rodada3/F8-literatura/scripts/enum_search.py",
+     "research-2026-10-21-rodada3/F8-literatura/scripts/rows.py",
+     "research-2026-10-21-rodada3/F8-literatura/scripts/screen_openalex.py",
+     "research-2026-10-21-rodada3/GGB-completo/perfil/scripts/build_md.py",
+     "research-2026-10-21-rodada3/GGB-completo/perfil/scripts/build_perfil.py",
+     "research-2026-10-21-rodada3/GGB-completo/perfil/scripts/claims.py",
+     "research-2026-10-21-rodada3/GGB-completo/perfil/scripts/gp.py",
+     "research-2026-10-21-rodada3/GGB-completo/perfil/scripts/html2txt.py",
+     "research-2026-10-21-rodada3/GGB-completo/series/scripts/s01_fetch_tdor.py",
+     "research-2026-10-21-rodada3/GGB-completo/series/scripts/s02_fetch_tmm.py",
+     "research-2026-10-21-rodada3/GGB-completo/series/scripts/s03_sim_2000_2009.py",
+     "research-2026-10-21-rodada3/GGB-completo/series/scripts/s04_painel.py",
+     "research-2026-10-21-rodada3/GGB-completo/series/scripts/s05_digitaliza_ggb.py",
+     "research-2026-10-21-rodada3/GGB-completo/series/scripts/s06_analises.py",
+     "research-2026-10-21-rodada3/GGB-completo/series/scripts/s07_emit_sources.py",
+     "research-2026-10-21-rodada3/GGB-completo/series/scripts/s08_dep_tdor.py",
+     "research-2026-10-21-rodada3/discurso/governos/scripts/build_brasil.py",
+     "research-2026-10-21-rodada3/discurso/governos/scripts/build_paises.py",
+     "research-2026-10-21-rodada3/discurso/governos/scripts/build_u3.py",
+     "research-2026-10-21-rodada3/discurso/governos/scripts/eixo_vparty.py",
+     "research-2026-10-21-rodada3/discurso/governos/scripts/emit_all.py",
+     "research-2026-10-21-rodada3/discurso/governos/scripts/resumo_u3.py",
+     "research-2026-10-21-rodada3/discurso/governos/scripts/tabela_md.py",
+     "research-2026-10-21-rodada3/discurso/midia/scripts/amostra_prepara.py",
+     "research-2026-10-21-rodada3/discurso/midia/scripts/analise_parlamento.py",
+     "research-2026-10-21-rodada3/discurso/midia/scripts/camara_baixar.py",
+     "research-2026-10-21-rodada3/discurso/midia/scripts/camara_recupera.py",
+     "research-2026-10-21-rodada3/discurso/midia/scripts/camara_recupera_mes.py",
+     "research-2026-10-21-rodada3/discurso/midia/scripts/cod.py",
+     "research-2026-10-21-rodada3/discurso/midia/scripts/consolida.py",
+     "research-2026-10-21-rodada3/discurso/midia/scripts/dicionario.py",
+     "research-2026-10-21-rodada3/discurso/midia/scripts/dicionario_v1_preregistrado.py",
+     "research-2026-10-21-rodada3/discurso/midia/scripts/dicionario_v2.py",
+     "research-2026-10-21-rodada3/discurso/midia/scripts/gdelt_cliente.py",
+     "research-2026-10-21-rodada3/discurso/midia/scripts/gdelt_rodar.py",
+     "research-2026-10-21-rodada3/discurso/midia/scripts/gn_rss.py",
+     "research-2026-10-21-rodada3/discurso/midia/scripts/mostra.py",
+     "research-2026-10-21-rodada3/discurso/midia/scripts/openalex_contar.py",
+     "research-2026-10-21-rodada3/discurso/midia/scripts/resumo_tabelas.py",
+     "research-2026-10-21-rodada3/discurso/midia/scripts/senado_baixar.py",
+     "research-2026-10-21-rodada3/discurso/midia/scripts/wikipedia_contar.py",
+     "research-2026-10-21-rodada3/discurso/mortalidade/scripts/build_estudos.py",
+     "research-2026-10-21-rodada3/discurso/mortalidade/scripts/rows.py",
+     "research-2026-10-21-rodada3/discurso/mortalidade/scripts/verifica_trechos.py",
+     "research-2026-10-21-rodada3/discurso/mortalidade/sim_campos.py",
+     "research-2026-10-21-rodada3/escrutinio/_build_triagem.py",
+     "research-2026-10-21-rodada3/escrutinio/rodar_externos.py",
+     "research-2026-10-21-rodada3/escrutinio/simetria/scripts/analise_C27.py",
+     "research-2026-10-21-rodada3/escrutinio/simetria/scripts/baixar_C18.py",
+     "research-2026-10-21-rodada3/escrutinio/simetria/scripts/baseline_C27.py",
+     "research-2026-10-21-rodada3/escrutinio/simetria/scripts/eventos_C18.py",
+     "research-2026-10-21-rodada3/escrutinio/simetria/scripts/fisher_C27.py",
+     "research-2026-10-21-rodada3/escrutinio/simetria/scripts/mostrar_C18.py",
+     "research-2026-10-21-rodada3/escrutinio/simetria/scripts/prep_C27.py",
+     "research-2026-10-21-rodada3/escrutinio/simetria/scripts/rodar_C27.py",
+     "research-2026-10-21-rodada3/escrutinio/simetria/scripts/tabela_C18.py",
+     "research-2026-10-21-rodada3/ideologia/scripts/build_ideologia.py",
+     "research-2026-10-21-rodada3/ideologia/scripts/gerar_mapeamento_md.py",
+     "research-2026-10-21-rodada3/ideologia/scripts/sensibilidade_twfe.py",
+     "simulacao/sim_identificabilidade.py"
+    ]
+   }
+  },
+  "revisores": {
+   "valor": 4,
+   "origem": {
+    "arquivos": [
+     "research-2026-10-21-rodada3/escrutinio/revisao_agy.md",
+     "research-2026-10-21-rodada3/escrutinio/revisao_codex.md",
+     "research-2026-10-21-rodada3/escrutinio/revisao_grok.md",
+     "research-2026-10-21-rodada3/escrutinio/revisao_opus.md"
+    ],
+    "como": "ls escrutinio/revisao_*.md (agy, codex, grok, opus)",
+    "comando": "ls research-2026-10-21-rodada3/escrutinio/revisao_*.md | wc -l"
+   }
+  },
+  "pdfs": {
+   "valor": 379,
+   "origem": {
+    "arquivos": [],
+    "como": "sha256 distintos de *.pdf em fontes/ (exceto q1-textointegral/discurso); 422 arquivos no disco",
+    "comando": "find fontes -iname '*.pdf' -not -path 'fontes/q1-textointegral/discurso/*' -exec shasum -a 256 {} + | cut -d' ' -f1 | sort -u | wc -l"
+   }
+  },
+  "textos_integrais": {
+   "valor": 84,
+   "origem": {
+    "arquivos": [
+     "research-2026-10-21-rodada3/A-textointegral/verificacao-chrome.csv",
+     "research-2026-10-21-rodada3/A-textointegral/verificacao-lote1.csv",
+     "research-2026-10-21-rodada3/A-textointegral/verificacao-lote2.csv",
+     "research-2026-10-21-rodada3/A-textointegral/verificacao-lote3.csv",
+     "research-2026-10-21-rodada3/A-textointegral/verificacao-lote4.csv",
+     "research-2026-10-21-rodada3/A-textointegral/entregues/verificacao-G1.csv",
+     "research-2026-10-21-rodada3/A-textointegral/entregues/verificacao-G2.csv",
+     "research-2026-10-21-rodada3/A-textointegral/entregues/verificacao-G3.csv",
+     "research-2026-10-21-rodada3/A-textointegral/entregues/verificacao-G4.csv"
+    ],
+    "como": "DOIs com veredito != SEM_TEXTO_INTEGRAL em algum CSV de verificacao (inclui os sem linha no ledger)",
+    "comando": "python3 -I dashboard/build_dashboard.py  # funcao calcular(), chave 'textos_integrais'"
+   }
+  },
+  "agentes": {
+   "valor": 15,
+   "origem": {
+    "arquivos": [
+     "research-2026-10-10/sources.jsonl",
+     "research-2026-10-11/sources.jsonl",
+     "research-2026-10-12-deep/sources.jsonl",
+     "research-2026-10-21-rodada3/A-textointegral/sources.jsonl",
+     "research-2026-10-21-rodada3/F2-custos/sources.jsonl",
+     "research-2026-10-21-rodada3/F3-ggb/lit/sources.jsonl",
+     "research-2026-10-21-rodada3/F3-ggb/sources.jsonl",
+     "research-2026-10-21-rodada3/F5-economia-politica/sources.jsonl",
+     "research-2026-10-21-rodada3/F6-asia-africa/sources.jsonl",
+     "research-2026-10-21-rodada3/F8-literatura/sources.jsonl",
+     "research-2026-10-21-rodada3/GGB-completo/perfil/sources.jsonl",
+     "research-2026-10-21-rodada3/GGB-completo/series/sources.jsonl",
+     "research-2026-10-21-rodada3/discurso/governos/sources.jsonl",
+     "research-2026-10-21-rodada3/discurso/midia/sources.jsonl",
+     "research-2026-10-21-rodada3/discurso/mortalidade/sources.jsonl",
+     "research-2026-10-21-rodada3/ideologia/sources.jsonl",
+     "research-consolidado/sources.jsonl"
+    ],
+    "como": "valores distintos do campo origem dos ledgers (piso: so quem gravou fonte)",
+    "comando": "python3 -I dashboard/build_dashboard.py  # funcao calcular(), chave 'agentes'",
+    "lista": [
+     "biomed-evidence",
+     "factual-context",
+     "paper-deep-dive",
+     "rodada3-A-lote3",
+     "rodada3-F2",
+     "rodada3-F3",
+     "rodada3-F5",
+     "rodada3-F6-asia-africa",
+     "rodada3-F8-literatura",
+     "rodada3-GGB-perfil",
+     "rodada3-GGB-series",
+     "rodada3-discurso-governos",
+     "rodada3-discurso-mortalidade",
+     "rodada3-ideologia",
+     "rodada3-midia"
+    ]
+   }
+  },
+  "analises": {
+   "valor": 12,
+   "origem": {
+    "arquivos": [],
+    "como": "arquivos .md fora de fontes/ cujo cabecalho diz 'gerado por <script>.py'",
+    "comando": "python3 -I dashboard/build_dashboard.py  # funcao calcular(), chave 'analises'",
+    "lista": [
+     "dados/concordancia/concordancia_v2.md",
+     "dados/ggb/c08_numeradores.md",
+     "dados/ggb/cobertura_implicita.md",
+     "dados/painel/c02_indet_resultados.md",
+     "dados/painel/c03_event_pesos_resultados.md",
+     "dados/painel/diagnosticos.md",
+     "dados/pns/c05_razao_direta.md",
+     "dados/pns/seguro_pns2019.md",
+     "dados/sim/asr_brasil.md",
+     "dados/sim/projecao_grupos.md",
+     "dados/sinan/triangulacao_pns_sinan.md",
+     "research-2026-10-21-rodada3/ideologia/sensibilidade_twfe.md"
+    ]
+   }
+  },
+  "observacoes": {
+   "valor": 4300995,
+   "origem": {
+    "arquivos": [
+     "dados/sim/asr_brasil.csv",
+     "dados/sinan/serie_campo55_uf_ano.csv"
+    ],
+    "como": "obitos SIM por agressao 2010-24 (Brasil) + notificacoes Sinan interpessoais 2015-25 (sem a linha BR) + falas varridas + itens codificados",
+    "comando": "python3 -I dashboard/build_dashboard.py  # funcao calcular(), chave 'observacoes'"
+   }
+  },
+  "itens_codificados": {
+   "valor": 871,
+   "origem": {
+    "arquivos": [
+     "research-2026-10-21-rodada3/discurso/midia/amostra_codificada.csv"
+    ],
+    "como": "linhas de amostra_codificada.csv",
+    "comando": "python3 -I dashboard/build_dashboard.py  # funcao calcular(), chave 'itens_codificados'"
+   }
+  },
+  "uf_anos": {
+   "valor": 351,
+   "origem": {
+    "arquivos": [
+     "dados/painel/painel_uf_ano_tse_brc.csv"
+    ],
+    "como": "linhas do painel principal",
+    "comando": "python3 -I dashboard/build_dashboard.py  # funcao calcular(), chave 'uf_anos'"
+   }
+  }
+ },
+ "paineis": {
+  "p1": {
+   "componente": "CountryBarsChart",
+   "datasets": [
+    "lgbt-violencia-fontes-idiomas"
+   ],
+   "ordem": 1
+  },
+  "p2": {
+   "componente": "CountryBarsChart",
+   "datasets": [
+    "lgbt-violencia-fontes-tipos"
+   ],
+   "ordem": 2
+  },
+  "p3": {
+   "componente": "FunnelChart",
+   "datasets": [
+    "lgbt-violencia-funil-evidencia"
+   ],
+   "ordem": 3
+  },
+  "p4": {
+   "componente": "CountryBarsChart",
+   "datasets": [
+    "lgbt-violencia-pns-2019"
+   ],
+   "ordem": 4
+  },
+  "p5": {
+   "componente": "CountryBarsChart",
+   "datasets": [
+    "lgbt-violencia-ggb-cobertura"
+   ],
+   "ordem": 5
+  },
+  "p6": {
+   "componente": "CountryBarsChart",
+   "datasets": [
+    "lgbt-violencia-sim-taxa"
+   ],
+   "ordem": 6
+  },
+  "p7": {
+   "componente": "CountryBarsChart",
+   "datasets": [
+    "lgbt-violencia-circulacao"
+   ],
+   "ordem": 7
+  },
+  "p8": {
+   "componente": "CountryBarsChart",
+   "datasets": [
+    "lgbt-violencia-governos"
+   ],
+   "ordem": 8
+  }
+ },
+ "datasets_ptbr": {
+  "countryBars": {
+   "lgbt-violencia-fontes-idiomas": {
+    "max": 500,
+    "groups": [
+     {
+      "label": "Fontes únicas por idioma",
+      "color": "#60a5fa",
+      "items": [
+       {
+        "name": "Inglês",
+        "value": 377,
+        "valueLabel": "377 (45,5%)"
+       },
+       {
+        "name": "Português",
+        "value": 288,
+        "valueLabel": "288 (34,7%)"
+       },
+       {
+        "name": "Espanhol",
+        "value": 108,
+        "valueLabel": "108 (13,0%)"
+       },
+       {
+        "name": "Francês",
+        "value": 29,
+        "valueLabel": "29 (3,5%)"
+       },
+       {
+        "name": "Alemão",
+        "value": 17,
+        "valueLabel": "17 (2,1%)"
+       },
+       {
+        "name": "Japonês",
+        "value": 5,
+        "valueLabel": "5 (0,6%)"
+       },
+       {
+        "name": "Coreano",
+        "value": 2,
+        "valueLabel": "2 (0,2%)"
+       },
+       {
+        "name": "Indonésio",
+        "value": 1,
+        "valueLabel": "1 (0,1%)"
+       },
+       {
+        "name": "Turco",
+        "value": 1,
+        "valueLabel": "1 (0,1%)"
+       },
+       {
+        "name": "Chinês",
+        "value": 1,
+        "valueLabel": "1 (0,1%)"
+       }
+      ]
+     }
+    ]
+   },
+   "lgbt-violencia-fontes-tipos": {
+    "max": 400,
+    "groups": [
+     {
+      "label": "Por tipo de fonte",
+      "color": "#a48f65",
+      "items": [
+       {
+        "name": "Periódico Q1",
+        "value": 61,
+        "valueLabel": "61 (7,4%)"
+       },
+       {
+        "name": "Periódico Q2",
+        "value": 10,
+        "valueLabel": "10 (1,2%)"
+       },
+       {
+        "name": "Periódico Q3-Q4",
+        "value": 3,
+        "valueLabel": "3 (0,4%)"
+       },
+       {
+        "name": "Periódico sem Q",
+        "value": 252,
+        "valueLabel": "252 (30,4%)"
+       },
+       {
+        "name": "Oficial",
+        "value": 280,
+        "valueLabel": "280 (33,8%)"
+       },
+       {
+        "name": "Preprint/WP/tese",
+        "value": 22,
+        "valueLabel": "22 (2,7%)"
+       },
+       {
+        "name": "ONG / sociedade",
+        "value": 64,
+        "valueLabel": "64 (7,7%)"
+       },
+       {
+        "name": "Imprensa",
+        "value": 32,
+        "valueLabel": "32 (3,9%)"
+       },
+       {
+        "name": "Dado / microdado",
+        "value": 46,
+        "valueLabel": "46 (5,5%)"
+       },
+       {
+        "name": "Livro",
+        "value": 6,
+        "valueLabel": "6 (0,7%)"
+       },
+       {
+        "name": "Enciclopédia",
+        "value": 27,
+        "valueLabel": "27 (3,3%)"
+       },
+       {
+        "name": "Não classificado",
+        "value": 26,
+        "valueLabel": "26 (3,1%)"
+       }
+      ]
+     },
+     {
+      "label": "Por período de publicação",
+      "color": "#60a5fa",
+      "items": [
+       {
+        "name": "até 2009",
+        "value": 57,
+        "valueLabel": "57 (6,9%)"
+       },
+       {
+        "name": "2010 a 2014",
+        "value": 53,
+        "valueLabel": "53 (6,4%)"
+       },
+       {
+        "name": "2015 a 2019",
+        "value": 151,
+        "valueLabel": "151 (18,2%)"
+       },
+       {
+        "name": "2020 a 2024",
+        "value": 297,
+        "valueLabel": "297 (35,8%)"
+       },
+       {
+        "name": "2025 em diante",
+        "value": 240,
+        "valueLabel": "240 (29,0%)"
+       },
+       {
+        "name": "sem ano",
+        "value": 31,
+        "valueLabel": "31 (3,7%)"
+       }
+      ]
+     }
+    ]
+   },
+   "lgbt-violencia-pns-2019": {
+    "max": 80,
+    "groups": [
+     {
+      "label": "LGB+",
+      "color": "#a48f65",
+      "items": [
+       {
+        "name": "Violência física",
+        "value": 14.7,
+        "valueLabel": "14,70% · RP 3,84 (IC95% 2,92–5,06)",
+        "emphasis": true
+       },
+       {
+        "name": "Violência sexual",
+        "value": 4.86,
+        "valueLabel": "4,86% · RP 7,17 (IC95% 4,57–11,26)",
+        "emphasis": true
+       },
+       {
+        "name": "Qualquer violência",
+        "value": 41.63,
+        "valueLabel": "41,63% · RP 2,36 (IC95% 2,11–2,65)",
+        "emphasis": true
+       }
+      ]
+     },
+     {
+      "label": "Heterossexuais",
+      "color": "#64748b",
+      "items": [
+       {
+        "name": "Violência física",
+        "value": 3.82,
+        "valueLabel": "3,82%"
+       },
+       {
+        "name": "Violência sexual",
+        "value": 0.68,
+        "valueLabel": "0,68%"
+       },
+       {
+        "name": "Qualquer violência",
+        "value": 17.61,
+        "valueLabel": "17,61%"
+       }
+      ]
+     }
+    ]
+   },
+   "lgbt-violencia-ggb-cobertura": {
+    "max": 8000,
+    "groups": [
+     {
+      "label": "Ano 2023",
+      "color": "#60a5fa",
+      "items": [
+       {
+        "name": "N0 total do GGB",
+        "value": 257,
+        "valueLabel": "257 (22,9% do esperado)",
+        "emphasis": true
+       },
+       {
+        "name": "N1 homic. + latroc.",
+        "value": 221,
+        "valueLabel": "221 (19,7% do esperado)"
+       },
+       {
+        "name": "N2 N1 sem trans",
+        "value": 94,
+        "valueLabel": "94 (8,4% do esperado)"
+       },
+       {
+        "name": "Esperado, RR 1,00",
+        "value": 1122,
+        "valueLabel": "1.122"
+       },
+       {
+        "name": "Esperado, RR 2,82",
+        "value": 3165,
+        "valueLabel": "3.165 (N0 8,1%; N2 3,0%)"
+       },
+       {
+        "name": "Esperado, RR 3,84",
+        "value": 4309,
+        "valueLabel": "4.309 (N0 6,0%; N2 2,2%)"
+       }
+      ]
+     },
+     {
+      "label": "Ano 2024",
+      "color": "#60a5fa",
+      "items": [
+       {
+        "name": "N0 total do GGB",
+        "value": 291,
+        "valueLabel": "291 (28,7% do esperado)",
+        "emphasis": true
+       },
+       {
+        "name": "N1 homic. + latroc.",
+        "value": 269,
+        "valueLabel": "269 (26,6% do esperado)"
+       },
+       {
+        "name": "N2 N1 sem trans",
+        "value": 167,
+        "valueLabel": "167 (16,5% do esperado)"
+       },
+       {
+        "name": "Esperado, RR 1,00",
+        "value": 1013,
+        "valueLabel": "1.013"
+       },
+       {
+        "name": "Esperado, RR 2,82",
+        "value": 2856,
+        "valueLabel": "2.856 (N0 10,2%; N2 5,8%)"
+       },
+       {
+        "name": "Esperado, RR 3,84",
+        "value": 3889,
+        "valueLabel": "3.889 (N0 7,5%; N2 4,3%)"
+       }
+      ]
+     }
+    ]
+   },
+   "lgbt-violencia-sim-taxa": {
+    "max": 80,
+    "groups": [
+     {
+      "label": "Agressões por 100 mil habitantes",
+      "color": "#60a5fa",
+      "items": [
+       {
+        "name": "Mulheres não negras",
+        "value": 2.6,
+        "valueLabel": "2,6 por 100 mil"
+       },
+       {
+        "name": "Mulheres negras",
+        "value": 4.3,
+        "valueLabel": "4,3 por 100 mil"
+       },
+       {
+        "name": "Homens não negros",
+        "value": 20.0,
+        "valueLabel": "20,0 por 100 mil"
+       },
+       {
+        "name": "Homens negros",
+        "value": 51.7,
+        "valueLabel": "51,7 por 100 mil"
+       }
+      ]
+     }
+    ]
+   },
+   "lgbt-violencia-circulacao": {
+    "max": 800,
+    "groups": [
+     {
+      "label": "Dicionário literal (v1), antes da correção",
+      "color": "#64748b",
+      "items": [
+       {
+        "name": "F1 morrem mais",
+        "value": 23,
+        "valueLabel": "23"
+       },
+       {
+        "name": "F2 mais mata",
+        "value": 161,
+        "valueLabel": "161"
+       },
+       {
+        "name": "F3 governo mata",
+        "value": 692,
+        "valueLabel": "692"
+       },
+       {
+        "name": "F4 não existe",
+        "value": 4,
+        "valueLabel": "4"
+       }
+      ]
+     },
+     {
+      "label": "Dicionário corrigido (v2): falas com a frase",
+      "color": "#a48f65",
+      "items": [
+       {
+        "name": "F1 morrem mais",
+        "value": 14,
+        "valueLabel": "14",
+        "emphasis": true
+       },
+       {
+        "name": "F2 mais mata",
+        "value": 56,
+        "valueLabel": "56",
+        "emphasis": true
+       },
+       {
+        "name": "F3 governo mata",
+        "value": 148,
+        "valueLabel": "148",
+        "emphasis": true
+       },
+       {
+        "name": "F4 não existe",
+        "value": 2,
+        "valueLabel": "2",
+        "emphasis": true
+       }
+      ]
+     },
+     {
+      "label": "Dessas, afirmam ou relatam a alegação",
+      "color": "#60a5fa",
+      "items": [
+       {
+        "name": "F1 morrem mais",
+        "value": 14,
+        "valueLabel": "14 (todas lidas)"
+       },
+       {
+        "name": "F2 mais mata",
+        "value": 49,
+        "valueLabel": "49 (todas lidas; 2º codificador κ 0,73)"
+       },
+       {
+        "name": "F3 governo mata",
+        "value": 81,
+        "valueLabel": "≈81 (IC95% 63–99; indicativo, κ 0,43)"
+       },
+       {
+        "name": "F4 não existe",
+        "value": 2,
+        "valueLabel": "2 (todas lidas)"
+       }
+      ]
+     }
+    ]
+   },
+   "lgbt-violencia-governos": {
+    "max": 40,
+    "groups": [
+     {
+      "label": "Queda máxima compatível com o IC95% (%)",
+      "color": "#a48f65",
+      "items": [
+       {
+        "name": "Total",
+        "value": 10.8,
+        "valueLabel": "-10,8% · b +0,0009"
+       },
+       {
+        "name": "Homens",
+        "value": 11.3,
+        "valueLabel": "-11,3% · b +0,0005"
+       },
+       {
+        "name": "Mulheres",
+        "value": 10.1,
+        "valueLabel": "-10,1% · b -0,0007"
+       },
+       {
+        "name": "Negros",
+        "value": 16.3,
+        "valueLabel": "-16,3% · b -0,0070"
+       },
+       {
+        "name": "Não negros",
+        "value": 16.1,
+        "valueLabel": "-16,1% · b -0,0016"
+       },
+       {
+        "name": "Arma de fogo",
+        "value": 16.2,
+        "valueLabel": "-16,2% · b +0,0009"
+       }
+      ]
+     },
+     {
+      "label": "Alta máxima compatível com o IC95% (%)",
+      "color": "#60a5fa",
+      "items": [
+       {
+        "name": "Total",
+        "value": 13.1,
+        "valueLabel": "+13,1% · IC de b -0,0228 a +0,0246"
+       },
+       {
+        "name": "Homens",
+        "value": 13.4,
+        "valueLabel": "+13,4% · IC de b -0,0240 a +0,0251"
+       },
+       {
+        "name": "Mulheres",
+        "value": 10.5,
+        "valueLabel": "+10,5% · IC de b -0,0213 a +0,0199"
+       },
+       {
+        "name": "Negros",
+        "value": 11.3,
+        "valueLabel": "+11,3% · IC de b -0,0356 a +0,0215"
+       },
+       {
+        "name": "Não negros",
+        "value": 17.3,
+        "valueLabel": "+17,3% · IC de b -0,0352 a +0,0320"
+       },
+       {
+        "name": "Arma de fogo",
+        "value": 20.4,
+        "valueLabel": "+20,4% · IC de b -0,0353 a +0,0371"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "funnel": {
+   "lgbt-violencia-funil-evidencia": {
+    "steps": [
+     {
+      "label": "Fontes registradas",
+      "sublabel": "829 fontes únicas, de qualquer tipo",
+      "color": "#60a5fa",
+      "value": 829
+     },
+     {
+      "label": "Texto integral lido",
+      "sublabel": "79 (9,5%) artigos com DOI no registro, conferidos contra o dossiê",
+      "color": "#a48f65",
+      "value": 79
+     },
+     {
+      "label": "Dessas, em periódico Q1",
+      "sublabel": "50 (63,3% das lidas)",
+      "color": "#fbbf24",
+      "value": 50
+     },
+     {
+      "label": "Q1 e usadas em alguma conclusão",
+      "sublabel": "46 (92,0% das Q1 lidas) confirmam ou corrigem ao menos uma afirmação do dossiê",
+      "color": "#d4d4d8",
+      "value": 46
+     }
+    ]
+   }
+  }
+ },
+ "legendas_ptbr": {
+  "p1": {
+   "title": "Fontes registradas por idioma",
+   "subtitle": "829 fontes únicas em 10 idiomas",
+   "source": "Fonte: registros de fontes do projeto, de 10 a 23 de outubro de 2026; uma contagem por fonte única.",
+   "description": "Barras horizontais com as 829 fontes únicas por idioma: inglês 377, português 288, espanhol 108 e 56 fontes em outros 7 idiomas."
+  },
+  "p2": {
+   "title": "O que são as fontes",
+   "subtitle": "Tipo e período de publicação; cada bloco soma 829",
+   "source": "Fonte: registros do projeto; tipo por canal, DOI e domínio; quartil SJR só onde conferido.",
+   "description": "Dois blocos de barras, cada um somando 829 fontes. Por tipo: 280 oficiais, 326 em periódicos (61 com quartil Q1 conferido), 64 de ONGs e 26 sem classificação. Por período: 537 publicadas de 2020 em diante."
+  },
+  "p3": {
+   "title": "Do que foi achado ao que sustenta uma conclusão",
+   "subtitle": "Escala linear: a lasca é o dado",
+   "source": "Fonte: verificações de texto integral dos artigos com DOI; Q1 = melhor quartil SJR conferido.",
+   "description": "Funil em escala linear: 829 fontes registradas, 79 com texto integral lido, 50 delas em periódico Q1 e 46 usadas em alguma conclusão."
+  },
+  "p4": {
+   "title": "Violência sofrida em 12 meses, PNS 2019",
+   "subtitle": "Adultos LGB+ e heterossexuais; RP = razão de prevalências",
+   "source": "Fonte: IBGE, PNS 2019 (microdados), desenho amostral completo; reproduz Vasconcelos et al. 2023.",
+   "description": "Barras horizontais com a violência sofrida em 12 meses. Física: 14,70% entre LGB+ e 3,82% entre heterossexuais. Sexual: 4,86% e 0,68%. Qualquer violência: 41,63% e 17,61%."
+  },
+  "p5": {
+   "title": "Quantas mortes o registro do GGB cobre",
+   "subtitle": "Contagem do GGB em três recortes contra o esperado: risco igual (RR 1,00) ou o da violência física na PNS (RR 2,82; 3,84)",
+   "source": "Fonte: GGB, SIM/DATASUS e PNS 2019; exercício de escala (1,89% da população adulta), não é estimativa de mortes.",
+   "description": "Barras horizontais. N0 é o total declarado pelo GGB; N1, só homicídio e latrocínio; N2, N1 sem as pessoas trans. Sob risco igual ao dos pares, o GGB cobria 22,9% (N0), 19,7% (N1) e 8,4% (N2) do esperado em 2023, e 28,7%, 26,6% e 16,5% em 2024; com RR 2,82 ou 3,84, no máximo 10,2%."
+  },
+  "p6": {
+   "title": "Taxa de homicídio por idade, quatro grupos",
+   "subtitle": "Por 100 mil, padronizada por idade, média de 2022 a 2024",
+   "source": "Fonte: SIM/DATASUS (X85-Y09) e IBGE; não há campo de orientação sexual no atestado de óbito.",
+   "description": "Barras horizontais com a taxa de agressões padronizada por idade: de 2,6 por 100 mil entre mulheres não negras a 51,7 entre homens negros, razão de 19,9 para 1."
+  },
+  "p7": {
+   "title": "Quatro frases sobre mortes de LGBT no Parlamento",
+   "subtitle": "Câmara e Senado, 2015 a 2026, 258.011 falas varridas",
+   "source": "Fonte: Câmara e Senado, falas varridas por dicionário; leitura por dois codificadores (outra família de IA); F3 é estimativa indicativa.",
+   "description": "Barras horizontais em três blocos. F1: gays morrem mais; F2: o Brasil é o país que mais mata; F3: governo de direita mata ou persegue; F4: homofobia não existe ou o dado é inventado. Com o dicionário literal: 23, 161, 692 e 4 falas; com o corrigido: 14, 56, 148 e 2; afirmam ou relatam: 14, 49, cerca de 81 (estimativa) e 2. Um segundo codificador, de outra família de IA, concorda em F2 (κ 0,73) e só de forma indicativa em F3 (κ 0,43)."
+  },
+  "p8": {
+   "title": "O que o painel de governos consegue excluir",
+   "subtitle": "351 UF-anos, 2012 a 2024; troca de 5 pontos na escala do escore, do PT para DEM/PL",
+   "source": "Fonte: SIM/DATASUS, TSE, escore BRC de ideologia; painel exploratório com efeitos fixos, não causal; limites 100[exp(k·limite)−1].",
+   "description": "Barras horizontais com os limites do IC95%, em por cento da taxa, para uma troca de 5 pontos: total entre -10,8% e +13,1%, mulheres entre -10,1% e +10,5%, arma de fogo entre -16,2% e +20,4%. Nenhum coeficiente se distingue de zero; o event study sobre trocas de governo foi inconclusivo.",
+   "legenda": "Nulo não é ausência de efeito: o painel exclui só quedas maiores que 10,1% a 16,3% e altas maiores que 10,5% a 20,4%; e o event study sobre trocas de governo foi inconclusivo."
+  }
+ },
+ "kpis_ptbr": [
+  {
+   "id": "dias",
+   "label": "dias de projeto",
+   "valor": "14",
+   "nota": "de 10 a 23 de outubro de 2026"
+  },
+  {
+   "id": "fontes",
+   "label": "fontes únicas registradas",
+   "valor": "829",
+   "nota": "1.569 linhas em 17 registros, sem repetição"
+  },
+  {
+   "id": "idiomas",
+   "label": "idiomas das fontes",
+   "valor": "10",
+   "nota": "pt e pt-BR somados"
+  },
+  {
+   "id": "scripts",
+   "label": "scripts em Python",
+   "valor": "139",
+   "nota": "do projeto; fora do material baixado"
+  },
+  {
+   "id": "revisores",
+   "label": "revisores hostis",
+   "valor": "4",
+   "nota": "modelos de IA diferentes, cada um com uma revisão escrita"
+  },
+  {
+   "id": "pdfs",
+   "label": "PDFs arquivados",
+   "valor": "379",
+   "nota": "arquivos distintos (por hash)"
+  },
+  {
+   "id": "textos",
+   "label": "textos integrais lidos",
+   "valor": "84",
+   "nota": "artigos com DOI conferidos contra o dossiê; 5 sem linha no registro de fontes"
+  },
+  {
+   "id": "agentes",
+   "label": "agentes que registraram fontes",
+   "valor": "15",
+   "nota": "frentes de pesquisa distintas; é piso"
+  },
+  {
+   "id": "analises",
+   "label": "análises reproduzíveis",
+   "valor": "12",
+   "nota": "resultados gerados por script"
+  },
+  {
+   "id": "obs",
+   "label": "registros analisados",
+   "valor": "4.300.995",
+   "nota": "779.914 óbitos (SIM) + 3.262.199 notificações (Sinan) + 258.011 falas + 871 itens codificados"
+  }
+ ],
+ "verificacao_funil_dois": {
+  "dois_verificados": 97,
+  "dois_no_ledger": 92,
+  "citados_dossie": 93,
+  "citados_no_ledger": 89,
+  "lido_nao_registrado": 5,
+  "linhas": 203,
+  "vereditos": {
+   "SEM_TEXTO_INTEGRAL": 68,
+   "CONFIRMADO_COM_RESSALVA": 61,
+   "CONFIRMADO": 46,
+   "CONTRADITO": 4,
+   "SEM_AFIRMACAO": 19,
+   "NAO_ENCONTRADO": 5
+  },
+  "verificados_fora_dos_citados": 4
+ },
+ "quartil_cobertura": {
+  "csv": 76,
+  "total_dois_com_quartil": 77
+ },
+ "p8_base": {
+  "k_pontos": 5,
+  "base_lida_do_cabecalho": "PT 2,97 -> DEM/PL ~8",
+  "formula": "100*(exp(k*limite_IC95_de_b)-1)"
+ },
+ "locales": {
+  "labels_json": [
+   "labels.en.json",
+   "labels.es.json",
+   "labels.it.json",
+   "labels.he.json"
+  ],
+  "chaves_por_locale": 134,
+  "datasets_por_locale": {
+   "ids": 40,
+   "esperado": 40
+  },
+  "mdx": {
+   "pt-br": {
+    "tags": 8,
+    "ids_ok": true
+   },
+   "en": {
+    "tags": 8,
+    "ids_ok": true
+   },
+   "es": {
+    "tags": 8,
+    "ids_ok": true
+   },
+   "it": {
+    "tags": 8,
+    "ids_ok": true
+   },
+   "he": {
+    "tags": 8,
+    "ids_ok": true
+   }
+  },
+  "avisos_kpi_no_mdx": []
+ },
+ "conferencia_titulo": {
+  "fontes_titulo": 826,
+  "scripts_titulo": 127,
+  "revisores_titulo": 4,
+  "dias_titulo": 14,
+  "idiomas_titulo": 10
+ },
+ "verificacao_forma": {
+  "ok": true,
+  "avisos": [],
+  "tsc": "tsc --strict do site, sobre copia em pasta temporaria: sem erros"
+ }
+}

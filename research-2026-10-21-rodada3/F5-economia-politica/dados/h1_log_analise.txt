@@ -1,0 +1,41 @@
+y1_mvci_share 0 4 {'desfecho': 'y1_mvci_share', 'lag': 0, 'H': 4, 'n_tratadas': 7, 'att': 0.0025, 'ic95_boot_lo': np.float64(-0.0315), 'ic95_boot_hi': np.float64(0.0368), 'p_randomizacao': 0.9153, 'nulo_p2_5': -0.0449, 'nulo_p97_5': 0.0443, 'sd_nulo': 0.0226, 'mde_80pct': 0.0632}
+y1_mvci_share 1 4 {'desfecho': 'y1_mvci_share', 'lag': 1, 'H': 4, 'n_tratadas': 7, 'att': 0.0109, 'ic95_boot_lo': np.float64(-0.0259), 'ic95_boot_hi': np.float64(0.0479), 'p_randomizacao': 0.6654, 'nulo_p2_5': -0.0514, 'nulo_p97_5': 0.0475, 'sd_nulo': 0.0251, 'mde_80pct': 0.0704}
+y1_mvci_share 0 7 {'desfecho': 'y1_mvci_share', 'lag': 0, 'H': 7, 'n_tratadas': 7, 'att': 0.0113, 'ic95_boot_lo': np.float64(-0.0243), 'ic95_boot_hi': np.float64(0.0484), 'p_randomizacao': 0.6561, 'nulo_p2_5': -0.0499, 'nulo_p97_5': 0.0463, 'sd_nulo': 0.0249, 'mde_80pct': 0.0696}
+y1_mvci_share 1 7 {'desfecho': 'y1_mvci_share', 'lag': 1, 'H': 7, 'n_tratadas': 7, 'att': 0.014, 'ic95_boot_lo': np.float64(-0.0273), 'ic95_boot_hi': np.float64(0.0545), 'p_randomizacao': 0.6102, 'nulo_p2_5': -0.0554, 'nulo_p97_5': 0.0502, 'sd_nulo': 0.0271, 'mde_80pct': 0.076}
+    k  n_ufs    att     lo     hi
+0  -5      7  0.020 -0.086  0.132
+1  -4      7  0.024 -0.055  0.091
+2  -3      7  0.003 -0.069  0.063
+3  -2      7  0.019 -0.017  0.061
+4   0      7  0.021 -0.004  0.045
+5   1      7  0.002 -0.054  0.051
+6   2      7  0.012 -0.024  0.040
+7   3      7  0.020 -0.020  0.052
+8   4      7  0.055 -0.009  0.115
+9   5      7  0.026 -0.061  0.092
+10  6      7  0.023 -0.052  0.083
+11  7      7  0.040 -0.036  0.108
+TWFE y1_mvci_share {'b': 0.04889909398254769, 't': 1.1384454771863615, 'p_wild': 0.29852985298529855, 'n_anos': 29, 'anos': '1996-2024'}
+y2_ocultos_share_TD3015 0 4 {'desfecho': 'y2_ocultos_share_TD3015', 'lag': 0, 'H': 4, 'n_tratadas': 7, 'att': -0.0071, 'ic95_boot_lo': np.float64(-0.0237), 'ic95_boot_hi': np.float64(0.0095), 'p_randomizacao': 0.6635, 'nulo_p2_5': -0.0328, 'nulo_p97_5': 0.03, 'sd_nulo': 0.0159, 'mde_80pct': 0.0444}
+y2_ocultos_share_TD3015 1 4 {'desfecho': 'y2_ocultos_share_TD3015', 'lag': 1, 'H': 4, 'n_tratadas': 7, 'att': -0.0081, 'ic95_boot_lo': np.float64(-0.0308), 'ic95_boot_hi': np.float64(0.0158), 'p_randomizacao': 0.6513, 'nulo_p2_5': -0.0374, 'nulo_p97_5': 0.0302, 'sd_nulo': 0.0171, 'mde_80pct': 0.048}
+y2_ocultos_share_TD3015 0 7 {'desfecho': 'y2_ocultos_share_TD3015', 'lag': 0, 'H': 7, 'n_tratadas': 7, 'att': -0.0056, 'ic95_boot_lo': np.float64(-0.0285), 'ic95_boot_hi': np.float64(0.0183), 'p_randomizacao': 0.7648, 'nulo_p2_5': -0.0366, 'nulo_p97_5': 0.0293, 'sd_nulo': 0.0171, 'mde_80pct': 0.0479}
+y2_ocultos_share_TD3015 1 7 {'desfecho': 'y2_ocultos_share_TD3015', 'lag': 1, 'H': 7, 'n_tratadas': 7, 'att': -0.0079, 'ic95_boot_lo': np.float64(-0.0356), 'ic95_boot_hi': np.float64(0.0222), 'p_randomizacao': 0.6877, 'nulo_p2_5': -0.04, 'nulo_p97_5': 0.0334, 'sd_nulo': 0.0188, 'mde_80pct': 0.0526}
+    k  n_ufs    att     lo     hi
+0  -5      7  0.000 -0.067  0.071
+1  -4      7  0.001 -0.049  0.043
+2  -3      7 -0.009 -0.064  0.036
+3  -2      7  0.006 -0.009  0.024
+4   0      7  0.010  0.000  0.020
+5   1      7 -0.017 -0.075  0.023
+6   2      7 -0.011 -0.058  0.019
+7   3      7 -0.013 -0.062  0.018
+8   4      7  0.006 -0.050  0.047
+9   5      7 -0.004 -0.073  0.044
+10  6      7 -0.015 -0.078  0.027
+11  7      7    NaN    NaN    NaN
+TWFE y2_ocultos_share_TD3015 {'b': 0.00505317953051587, 't': 0.18794014149982163, 'p_wild': 0.8635863586358636, 'n_anos': 26, 'anos': '1996-2021'}
+ROB sem_MG {'desfecho': 'y1_sem_MG', 'lag': 0, 'H': 4, 'n_tratadas': 6, 'att': 0.0186, 'ic95_boot_lo': np.float64(-0.0067), 'ic95_boot_hi': np.float64(0.0457), 'p_randomizacao': 0.3643, 'nulo_p2_5': -0.0431, 'nulo_p97_5': 0.0382, 'sd_nulo': 0.0207, 'mde_80pct': 0.0581}
+ROB sem_ES {'desfecho': 'y1_sem_ES', 'lag': 0, 'H': 4, 'n_tratadas': 6, 'att': -0.0055, 'ic95_boot_lo': np.float64(-0.0397), 'ic95_boot_hi': np.float64(0.0311), 'p_randomizacao': 0.8217, 'nulo_p2_5': -0.0492, 'nulo_p97_5': 0.0498, 'sd_nulo': 0.0246, 'mde_80pct': 0.0688}
+ROB so_meta_formal(PE,RJ,BA,PB,CE) {'desfecho': 'y1_so_meta_formal(PE,RJ,BA,PB,CE)', 'lag': 0, 'H': 4, 'n_tratadas': 5, 'att': 0.0123, 'ic95_boot_lo': np.float64(-0.015), 'ic95_boot_hi': np.float64(0.0387), 'p_randomizacao': 0.5665, 'nulo_p2_5': -0.0456, 'nulo_p97_5': 0.0411, 'sd_nulo': 0.022, 'mde_80pct': 0.0615}
+ROB sem_RJ {'desfecho': 'y1_sem_RJ', 'lag': 0, 'H': 4, 'n_tratadas': 6, 'att': -0.0006, 'ic95_boot_lo': np.float64(-0.0369), 'ic95_boot_hi': np.float64(0.0383), 'p_randomizacao': 0.9768, 'nulo_p2_5': -0.048, 'nulo_p97_5': 0.0467, 'sd_nulo': 0.0238, 'mde_80pct': 0.0665}
+ROB sem 2023-24 {'desfecho': 'y1_sem_2023_2024', 'lag': 0, 'H': 4, 'n_tratadas': 7, 'att': 0.0025, 'ic95_boot_lo': np.float64(-0.0304), 'ic95_boot_hi': np.float64(0.0367), 'p_randomizacao': 0.9087, 'nulo_p2_5': -0.045, 'nulo_p97_5': 0.0451, 'sd_nulo': 0.0224, 'mde_80pct': 0.0629}

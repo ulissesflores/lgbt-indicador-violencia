@@ -1,0 +1,6 @@
+id,estrato,familia,universo,o_postura,s_postura,o_fonte,s_fonte,s_fonte_nomeada
+c712aec34162,F2-Parlamento,F2,Parlamento,ATRIBUI,AFIRMA,secundaria_ONG,primaria_verificavel,"Relatório sobre Violência Homofóbica no Brasil de 2012, do Disque Defesa Homossexual - DDH"
+a417c9a04d26,F3-Parlamento,F3,Parlamento,MENCIONA,MENCIONA,nenhuma,primaria_verificavel,Organização Mundial de Saúde - OMS
+170f178f2713,F3-Parlamento,F3,Parlamento,AFIRMA,AFIRMA,nenhuma,primaria_verificavel,Atlas da Violência de 2020
+9a0ec0aad216,Outras-100,F1,OpenAlex,AFIRMA,AFIRMA,primaria_verificavel,nenhuma,
+8a122f580002,Outras-100,F1,OpenAlex,AFIRMA,MENCIONA,primaria_verificavel,nenhuma,

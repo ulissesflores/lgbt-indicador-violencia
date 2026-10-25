@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="535.12pt" height="380.261pt" viewBox="0 0 535.12 380.261" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.9, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 380.261 
+L 535.12 380.261 
+L 535.12 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 124.72 223.776 
+L 526.48 223.776 
+L 526.48 63 
+L 124.72 63 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 124.72 223.776 
+L 124.72 63 
+" clip-path="url(#p73ccee8c6d)" style="fill: none; stroke: #d9d8d3; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2">
+      <defs>
+       <path id="m3df62e9e97" d="M 0 0 
+L 0 3.5 
+" style="stroke: #5b5a55; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m3df62e9e97" x="124.72" y="223.776" style="fill: #5b5a55; stroke: #5b5a55; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #5b5a55" x="124.72" y="236.85475" transform="rotate(-0 124.72 236.85475)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 189.0016 223.776 
+L 189.0016 63 
+" clip-path="url(#p73ccee8c6d)" style="fill: none; stroke: #d9d8d3; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m3df62e9e97" x="189.0016" y="223.776" style="fill: #5b5a55; stroke: #5b5a55; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #5b5a55" x="189.0016" y="236.85475" transform="rotate(-0 189.0016 236.85475)">200</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 253.2832 223.776 
+L 253.2832 63 
+" clip-path="url(#p73ccee8c6d)" style="fill: none; stroke: #d9d8d3; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m3df62e9e97" x="253.2832" y="223.776" style="fill: #5b5a55; stroke: #5b5a55; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #5b5a55" x="253.2832" y="236.85475" transform="rotate(-0 253.2832 236.85475)">400</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 317.5648 223.776 
+L 317.5648 63 
+" clip-path="url(#p73ccee8c6d)" style="fill: none; stroke: #d9d8d3; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m3df62e9e97" x="317.5648" y="223.776" style="fill: #5b5a55; stroke: #5b5a55; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #5b5a55" x="317.5648" y="236.85475" transform="rotate(-0 317.5648 236.85475)">600</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 381.8464 223.776 
+L 381.8464 63 
+" clip-path="url(#p73ccee8c6d)" style="fill: none; stroke: #d9d8d3; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m3df62e9e97" x="381.8464" y="223.776" style="fill: #5b5a55; stroke: #5b5a55; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #5b5a55" x="381.8464" y="236.85475" transform="rotate(-0 381.8464 236.85475)">800</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_11">
+      <path d="M 446.128 223.776 
+L 446.128 63 
+" clip-path="url(#p73ccee8c6d)" style="fill: none; stroke: #d9d8d3; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m3df62e9e97" x="446.128" y="223.776" style="fill: #5b5a55; stroke: #5b5a55; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #5b5a55" x="446.128" y="236.85475" transform="rotate(-0 446.128 236.85475)">1000</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_13">
+      <path d="M 510.4096 223.776 
+L 510.4096 63 
+" clip-path="url(#p73ccee8c6d)" style="fill: none; stroke: #d9d8d3; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#m3df62e9e97" x="510.4096" y="223.776" style="fill: #5b5a55; stroke: #5b5a55; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #5b5a55" x="510.4096" y="236.85475" transform="rotate(-0 510.4096 236.85475)">1200</text>
+     </g>
+    </g>
+    <g id="text_8">
+     <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1f1f1e" x="325.6" y="248.977172" transform="rotate(-0 325.6 248.977172)">Número de fontes (escala linear)</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_15">
+      <defs>
+       <path id="m8f0416909c" d="M 0 0 
+L -3.5 0 
+" style="stroke: #5b5a55; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m8f0416909c" x="124.72" y="82.824464" style="fill: #5b5a55; stroke: #5b5a55; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #5b5a55" x="117.72" y="86.2238" transform="rotate(-0 117.72 86.2238)">Fontes únicas registradas</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#m8f0416909c" x="124.72" y="123.200155" style="fill: #5b5a55; stroke: #5b5a55; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(41.833594 122.316288)">Texto integral lido</text>
+      <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(42.364844 131.834428)">(artigos com DOI)</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_17">
+      <g>
+       <use xlink:href="#m8f0416909c" x="124.72" y="163.575845" style="fill: #5b5a55; stroke: #5b5a55; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(29.430234 162.861978)">Lidas e em periódico</text>
+      <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(23.725937 172.380119)">de primeira linha (Q1)</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#m8f0416909c" x="124.72" y="203.951536" style="fill: #5b5a55; stroke: #5b5a55; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(42.47375 202.995286)">Q1 lidas e usadas</text>
+      <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(24.444453 212.687145)">em alguma conclusão</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 124.72 95.340928 
+L 391.167232 95.340928 
+L 391.167232 70.308 
+L 124.72 70.308 
+z
+" clip-path="url(#p73ccee8c6d)" style="fill: #6b3fa0"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 124.72 135.716619 
+L 150.111232 135.716619 
+L 150.111232 110.683691 
+L 124.72 110.683691 
+z
+" clip-path="url(#p73ccee8c6d)" style="fill: #6b3fa0"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 124.72 176.092309 
+L 140.7904 176.092309 
+L 140.7904 151.059381 
+L 124.72 151.059381 
+z
+" clip-path="url(#p73ccee8c6d)" style="fill: #6b3fa0"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 124.72 216.468 
+L 139.504768 216.468 
+L 139.504768 191.435072 
+L 124.72 191.435072 
+z
+" clip-path="url(#p73ccee8c6d)" style="fill: #6b3fa0"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 124.72 223.776 
+L 124.72 63 
+" style="fill: none; stroke: #5b5a55; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 124.72 223.776 
+L 526.48 223.776 
+" style="fill: none; stroke: #5b5a55; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f1f1e" x="394.381312" y="85.169933" transform="rotate(-0 394.381312 85.169933)">829  (100,0% das registradas)</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f1f1e" x="153.325312" y="125.545623" transform="rotate(-0 153.325312 125.545623)">79  (9,5% das registradas)</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f1f1e" x="144.00448" y="165.921314" transform="rotate(-0 144.00448 165.921314)">50  (6,0% das registradas)</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f1f1e" x="142.718848" y="206.297005" transform="rotate(-0 142.718848 206.297005)">46  (5,5% das registradas)</text>
+   </g>
+   <g id="patch_9">
+    <path d="M 296.631988 153.609381 
+Q 222.13054 125.766424 143.102579 135.942539 
+" style="fill: none; stroke: #5b5a55; stroke-width: 1.3; stroke-linecap: round"/>
+    <path d="M 146.691847 137.194399 
+L 143.102579 135.942539 
+L 146.257628 133.822241 
+" style="fill: none; stroke: #5b5a55; stroke-width: 1.3; stroke-linecap: round"/>
+   </g>
+   <g id="text_17">
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(262.92544 163.113825)">o funil afunila rápido:</text>
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(262.92544 173.039966)">ler por inteiro é o gargalo</text>
+   </g>
+  </g>
+  <g id="patch_10">
+   <path d="M 14.4 358.616 
+L 520.72 358.616 
+Q 526.48 358.616 526.48 352.856 
+L 526.48 268.616 
+Q 526.48 262.856 520.72 262.856 
+L 14.4 262.856 
+Q 8.64 262.856 8.64 268.616 
+L 8.64 352.856 
+Q 8.64 358.616 14.4 358.616 
+z
+" style="fill: #f3f2ee; stroke: #d9d8d3; stroke-width: 0.8; stroke-linejoin: miter"/>
+  </g>
+  <g id="text_18">
+   <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(8.64 18.238125)">Das 829 fontes registradas, só 46 são artigos de primeira linha lidos</text>
+   <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(8.64 31.561313)">por inteiro e usados em conclusões</text>
+  </g>
+  <g id="text_19">
+   <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5b5a55" x="8.64" y="48.078625" transform="rotate(-0 8.64 48.078625)">Fontes únicas do projeto, de 10 a 23 de outubro de 2026, em quatro etapas</text>
+  </g>
+  <g id="text_20">
+   <text style="font-weight: 700; font-size: 8.6px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f1f1e" x="18" y="276.590656" transform="rotate(-0 18 276.590656)">Como ler</text>
+  </g>
+  <g id="text_21">
+   <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(18 288.854719)">Cada barra é quantas fontes sobraram depois de um filtro mais exigente. A primeira é tudo o que foi</text>
+   <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(18 298.299351)">registrado; a última é só o que foi lido por inteiro, está num periódico de primeira linha e sustentou alguma</text>
+   <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(18 307.521737)">conclusão. A queda mostra por que o paper separa o que leu do que apenas encontrou.</text>
+  </g>
+  <g id="text_22">
+   <text style="font-weight: 700; font-size: 8.6px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f1f1e" x="18" y="325.262656" transform="rotate(-0 18 325.262656)">Termos</text>
+  </g>
+  <g id="text_23">
+   <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(18 337.526719)">fonte única = mesmo DOI ou endereço, contado uma vez · Q1 = o melhor quarto dos periódicos da área, segundo o</text>
+   <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(18 346.971351)">ranking SJR · texto integral = o artigo inteiro foi lido, não só o resumo</text>
+  </g>
+  <g id="text_24">
+   <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5b5a55" x="8.64" y="369.73475" transform="rotate(-0 8.64 369.73475)">Fonte: paper/figures/fontes/dashboard_extrato.json (origem dashboard/dashboard_dados.publico.json).</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p73ccee8c6d">
+   <rect x="124.72" y="63" width="401.76" height="160.776"/>
+  </clipPath>
+ </defs>
+</svg>

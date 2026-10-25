@@ -1,0 +1,9 @@
+2007 ok 48 acoes
+2008 ok 56 acoes
+2009 ok 54 acoes
+2010 ok 52 acoes
+2011 ok 57 acoes
+2012 ok 49 acoes
+2013 ok 17 acoes
+2108 linhas -> research-2026-10-21-rodada3/F5-economia-politica/dados/h5_orcamento_acoes.csv
+FIM

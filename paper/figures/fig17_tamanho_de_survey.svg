@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="518.986694pt" height="443.72325pt" viewBox="0 0 518.986694 443.72325" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.9, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 443.72325 
+L 518.986694 443.72325 
+L 518.986694 -0 
+L 0 -0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 153.52 247.608 
+L 506.032 247.608 
+L 506.032 74.16 
+L 153.52 74.16 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 153.52 247.608 
+L 153.52 74.16 
+" clip-path="url(#p0603f027b3)" style="fill: none; stroke: #d9d8d3; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2">
+      <defs>
+       <path id="m3df62e9e97" d="M 0 0 
+L 0 3.5 
+" style="stroke: #5b5a55; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m3df62e9e97" x="153.52" y="247.608" style="fill: #5b5a55; stroke: #5b5a55; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #5b5a55" x="153.52" y="260.68675" transform="rotate(-0 153.52 260.68675)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 221.310769 247.608 
+L 221.310769 74.16 
+" clip-path="url(#p0603f027b3)" style="fill: none; stroke: #d9d8d3; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m3df62e9e97" x="221.310769" y="247.608" style="fill: #5b5a55; stroke: #5b5a55; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #5b5a55" x="221.310769" y="260.68675" transform="rotate(-0 221.310769 260.68675)">100</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 289.101538 247.608 
+L 289.101538 74.16 
+" clip-path="url(#p0603f027b3)" style="fill: none; stroke: #d9d8d3; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m3df62e9e97" x="289.101538" y="247.608" style="fill: #5b5a55; stroke: #5b5a55; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #5b5a55" x="289.101538" y="260.68675" transform="rotate(-0 289.101538 260.68675)">200</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 356.892308 247.608 
+L 356.892308 74.16 
+" clip-path="url(#p0603f027b3)" style="fill: none; stroke: #d9d8d3; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m3df62e9e97" x="356.892308" y="247.608" style="fill: #5b5a55; stroke: #5b5a55; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #5b5a55" x="356.892308" y="260.68675" transform="rotate(-0 356.892308 260.68675)">300</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 424.683077 247.608 
+L 424.683077 74.16 
+" clip-path="url(#p0603f027b3)" style="fill: none; stroke: #d9d8d3; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m3df62e9e97" x="424.683077" y="247.608" style="fill: #5b5a55; stroke: #5b5a55; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #5b5a55" x="424.683077" y="260.68675" transform="rotate(-0 424.683077 260.68675)">400</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_11">
+      <path d="M 492.473846 247.608 
+L 492.473846 74.16 
+" clip-path="url(#p0603f027b3)" style="fill: none; stroke: #d9d8d3; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m3df62e9e97" x="492.473846" y="247.608" style="fill: #5b5a55; stroke: #5b5a55; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #5b5a55" x="492.473846" y="260.68675" transform="rotate(-0 492.473846 260.68675)">500</text>
+     </g>
+    </g>
+    <g id="text_7">
+     <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1f1f1e" x="329.776" y="272.809172" transform="rotate(-0 329.776 272.809172)">Adultos entrevistados ou triados por rodada (milhares)</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_13">
+      <defs>
+       <path id="m8f0416909c" d="M 0 0 
+L -3.5 0 
+" style="stroke: #5b5a55; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m8f0416909c" x="153.52" y="92.865176" style="fill: #5b5a55; stroke: #5b5a55; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #5b5a55" x="146.52" y="96.094512" transform="rotate(-0 146.52 96.094512)">PNS 2019 (o que existe)</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#m8f0416909c" x="153.52" y="126.874588" style="fill: #5b5a55; stroke: #5b5a55; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(29.293047 125.990721)">Uma nova rodada dedicada</text>
+      <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(110.647344 135.508862)">tipo PNS</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_15">
+      <g>
+       <use xlink:href="#m8f0416909c" x="153.52" y="160.884" style="fill: #5b5a55; stroke: #5b5a55; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #5b5a55" x="146.52" y="164.113336" transform="rotate(-0 146.52 164.113336)">Módulo anual na PNAD Contínua</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#m8f0416909c" x="153.52" y="194.893412" style="fill: #5b5a55; stroke: #5b5a55; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #5b5a55" x="146.52" y="198.292748" transform="rotate(-0 146.52 198.292748)">Necessário para detectar +30%</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 153.52 102.727906 
+L 213.535846 102.727906 
+L 213.535846 83.002447 
+L 153.52 83.002447 
+z
+" clip-path="url(#p0603f027b3)" style="fill: #4b4a46"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 153.52 136.737318 
+L 230.989935 136.737318 
+L 230.989935 117.011859 
+L 153.52 117.011859 
+z
+" clip-path="url(#p0603f027b3)" style="fill: #cdbde6"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 153.52 170.746729 
+L 340.333056 170.746729 
+L 340.333056 151.021271 
+L 153.52 151.021271 
+z
+" clip-path="url(#p0603f027b3)" style="fill: #cdbde6"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 153.52 204.756141 
+L 360.929248 204.756141 
+L 360.929248 185.030682 
+L 153.52 185.030682 
+z
+" clip-path="url(#p0603f027b3)" style="fill: #6b3fa0"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 153.52 247.608 
+L 153.52 74.16 
+" style="fill: none; stroke: #5b5a55; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 153.52 247.608 
+L 506.032 247.608 
+" style="fill: none; stroke: #5b5a55; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f1f1e" x="217.603292" y="88.376689" transform="rotate(-0 217.603292 88.376689)">88.531 adultos</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5b5a55" x="217.603292" y="100.304303" transform="rotate(-0 217.603292 100.304303)">detecta mudança de 60,7% ou mais</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f1f1e" x="235.057381" y="122.386101" transform="rotate(-0 235.057381 122.386101)">114.278 adultos</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5b5a55" x="235.057381" y="134.313715" transform="rotate(-0 235.057381 134.313715)">detecta mudança de 50,7% ou mais</text>
+   </g>
+   <g id="text_16">
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f1f1e" x="344.400503" y="156.395513" transform="rotate(-0 344.400503 156.395513)">275.573 adultos</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5b5a55" x="344.400503" y="168.323126" transform="rotate(-0 344.400503 168.323126)">detecta mudança de 31,7% ou mais</text>
+   </g>
+   <g id="text_18">
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f1f1e" x="364.996694" y="190.404924" transform="rotate(-0 364.996694 190.404924)">305.955 adultos</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5b5a55" x="364.996694" y="202.332538" transform="rotate(-0 364.996694 202.332538)">detecta mudança de 30,0% ou mais</text>
+   </g>
+   <g id="patch_9">
+    <path d="M 217.102743 219.380188 
+Q 287.232827 219.380188 357.362912 219.380188 
+" style="fill: none; stroke: #5b5a55; stroke-width: 1.4; stroke-linecap: round"/>
+    <path d="M 220.702743 221.180188 
+L 217.102743 219.380188 
+L 220.702743 217.580188 
+" style="fill: none; stroke: #5b5a55; stroke-width: 1.4; stroke-linecap: round"/>
+    <path d="M 353.762912 217.580188 
+L 357.362912 219.380188 
+L 353.762912 221.180188 
+" style="fill: none; stroke: #5b5a55; stroke-width: 1.4; stroke-linecap: round"/>
+   </g>
+   <g id="text_20">
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(231.541609 231.960554)">faltam 217.424 adultos</text>
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(201.820828 241.661976)">para detectar uma variação de 30%</text>
+   </g>
+  </g>
+  <g id="patch_10">
+   <path d="M 14.4 413.12 
+L 504.586694 413.12 
+Q 510.346694 413.12 510.346694 407.36 
+L 510.346694 292.448 
+Q 510.346694 286.688 504.586694 286.688 
+L 14.4 286.688 
+Q 8.64 286.688 8.64 292.448 
+L 8.64 407.36 
+Q 8.64 413.12 14.4 413.12 
+z
+" style="fill: #f3f2ee; stroke: #d9d8d3; stroke-width: 0.8; stroke-linejoin: miter"/>
+  </g>
+  <g id="text_21">
+   <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(8.64 18.091875)">Uma PNS como a de 2019 só detecta variações de 61% na violência</text>
+   <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(8.64 31.073344)">contra LGB+; detectar 30% exige cerca de 306.000 adultos</text>
+  </g>
+  <g id="text_22">
+   <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(8.64 48.078625)">Violência física em 12 meses: tamanho de amostra de cada desenho de pesquisa e a menor mudança entre</text>
+   <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(8.64 57.9327)">rodadas que ele consegue ver</text>
+  </g>
+  <g id="text_23">
+   <text style="font-weight: 700; font-size: 8.6px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f1f1e" x="18" y="300.422656" transform="rotate(-0 18 300.422656)">Como ler</text>
+  </g>
+  <g id="text_24">
+   <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(18 312.686719)">Cada barra é quantos adultos seriam entrevistados; o texto diz a menor mudança na violência física entre</text>
+   <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(18 321.909105)">duas rodadas que esse tamanho permitiria enxergar. Para ver uma variação de 30% seriam precisos cerca de</text>
+   <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(18 331.353737)">306 mil adultos triados, porque só uma pequena fração é LGB+ e as respostas dentro de um mesmo domicílio</text>
+   <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; fill: #1f1f1e" transform="translate(18 340.411329)">se parecem.</text>
+  </g>
+  <g id="text_25">
+   <text style="font-weight: 700; font-size: 8.6px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f1f1e" x="18" y="359.318656" transform="rotate(-0 18 359.318656)">Termos</text>
+  </g>
+  <g id="text_26">
+   <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(18 371.394375)">detectar = distinguir uma mudança real de variação por acaso (poder de 80%, erro de 5%) · efeito de</text>
+   <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(18 380.839007)">desenho = 5,1: a amostra complexa vale 5,1 vezes menos que uma amostra aleatória simples do mesmo tamanho</text>
+   <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(18 390.283639)">· triar = visitar domicílios para achar adultos LGB+ · PNAD Contínua = pesquisa trimestral de domicílios</text>
+   <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(18 399.341231)">do IBGE</text>
+  </g>
+  <g id="text_27">
+   <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(8.64 424.23875)">Fonte: paper/figures/fontes/capacidade_por_opcao.csv, cenarios_n_custo.csv, n_necessario.csv (origem</text>
+   <text style="font-size: 8px; font-family: 'DejaVu Sans'; fill: #5b5a55" transform="translate(8.64 433.4195)">research-2026-10-21-rodada3/F2-custos/).</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p0603f027b3">
+   <rect x="153.52" y="74.16" width="352.512" height="173.448"/>
+  </clipPath>
+ </defs>
+</svg>

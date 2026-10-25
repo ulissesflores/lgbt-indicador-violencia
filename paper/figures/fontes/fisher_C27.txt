@@ -1,0 +1,5 @@
+primaria: F2 original 0/49 x base 2/38: p = 0.188
+primaria: F2 Grok 1/50 x base 2/38: p = 0.576
+alguma fonte: F2 original 8/49 x base 3/38: p = 0.335
+alguma fonte: F2 Grok 5/50 x base 3/38: p = 1.000
+primaria: F2 original 0/49 x F2 Grok 1/50: p = 1.000

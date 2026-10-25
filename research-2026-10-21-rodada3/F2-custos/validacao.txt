@@ -1,0 +1,17 @@
+n adultos 18+ com modulo V = 88531 ; UPAs = 8027 ; estratos = 574 ; soma pesos = 159171311
+lgb       adultos        meu=  1.89% [IC logit  1.73- 2.07]  publicado=  1.89% [ 1.73- 2.07]  dif ponto=+0.00 pp  [Vasconcelos 2023, Tab.1 (1,89%; IC 1,73-2,07)]
+fisica    LGB+           meu= 14.70% [IC logit 11.15-19.13]  publicado= 14.70% [11.16-19.12]  dif ponto=-0.00 pp  [Vasconcelos 2023 (14,70%; IC 11,16-19,12)]
+fisica    heterossexual  meu=  3.82% [IC logit  3.58- 4.09]  publicado=  3.82% [ 3.57- 4.09]  dif ponto=+0.00 pp  [Vasconcelos 2023 (3,82%; IC 3,57-4,09)]
+sexual12  LGB+           meu=  4.86% [IC logit  3.21- 7.28]  publicado=  4.86% [ 3.21- 7.28]  dif ponto=-0.00 pp  [Vasconcelos 2023 (4,86%; IC 3,21-7,28)]
+sexual12  heterossexual  meu=  0.68% [IC logit  0.56- 0.81]  publicado=  0.68% [ 0.56- 0.82]  dif ponto=-0.00 pp  [Vasconcelos 2023 (0,68%; IC 0,56-0,82)]
+qualquer  LGB+           meu= 41.63% [IC logit 37.15-46.26]  publicado= 41.63% [37.14-46.27]  dif ponto=+0.00 pp  [Vasconcelos 2023 (41,63%; IC 37,14-46,27)]
+qualquer  heterossexual  meu= 17.61% [IC logit 17.09-18.15]  publicado= 17.61% [17.08-18.16]  dif ponto=+0.00 pp  [Vasconcelos 2023 (17,61%; IC 17,08-18,16)]
+Taylor x jackknife JKn (SE): maior diferenca relativa em 71 linhas = 0.642%
+Taylor x jackknife JKn (SE) tabela regiao: maior diferenca relativa = 3.307%
+DENOMINADORES (microdado, contagem de linhas distintas):
+  domicilios_na_amostra_arquivo = 108458
+  domicilios_com_entrevista_realizada (V0015=1) = 94114
+  moradores_selecionados_15mais (V0025A=1) = 94114
+  adultos_18mais_com_modulo_V = 88531
+  domicilios_distintos_com_adulto_modulo_V = 88531
+  upas_distintas = 8031

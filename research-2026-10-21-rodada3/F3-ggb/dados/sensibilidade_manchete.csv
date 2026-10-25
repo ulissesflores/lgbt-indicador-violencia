@@ -1,0 +1,10 @@
+ano,A_manchete,B_sem_suicidio,C_homicidio_estrito,razao_B_A,razao_C_A,suicidio_pct_A,nota
+2017,445,387,,0.87,,13.0,sem detalhamento de latrocinio
+2018,420,320,,0.762,,23.8,suicidios 24% da contagem
+2019,329,297,272,0.903,0.827,9.7,homicidio publicado 297 = 272 H + 19 L + 5 atropelamento + 1 silicone
+2020,237,224,215,0.945,0.907,5.5,latrocinio separado (9)
+2021,300,276,242,0.92,0.807,8.0,34 latrocinios estao DENTRO dos 276 homicidios
+2022,256,,,,,,derivado da 'um caso a mais' em 2023; sem detalhamento publicado; Observatorio (Acontece/ANTRA/ABGLT) publicou 273
+2023,257,237,204,0.922,0.794,7.8,homicidio publicado 221 inclui latrocinio e feminicidio; tabela: 204 H + 20 S + 17 L + 16 outras
+2024,291,273,,0.938,,6.2,273 'homicidios' sem separar latrocinio/outras
+2025,257,237,204,0.922,0.794,7.8,destaque diz 237 homicidios; corpo: 204 H + 17 L + 16 outras + 20 S
