@@ -2,8 +2,8 @@
   "title": "Mortalidade e violência contra pessoas LGBT+ no Brasil: o que os dados públicos permitem afirmar — uma auditoria de fontes e indicadores, 2010–2026",
   "upload_type": "dataset",
   "version": "1.0.0",
-  "access_right": "closed",
-  "notes": "No DOI before the author's explicit authorization. access_right flips to open at the release that mints the DOI. Licenses: CC BY 4.0 (text, figures and derived data) and Apache-2.0 (code).",
+  "access_right": "open",
+  "notes": "Opened at v1.0.0-rc1 with the author's explicit authorization (2026-11-01). Licenses: CC BY 4.0 (text, figures and derived data) and Apache-2.0 (code).",
   "license": "cc-by-4.0",
   "creators": [
     {

@@ -1,5 +1,5 @@
 {
- "chain_hash": "fd37acad2156e7c9ddd67c67127bfad9c3f56194c6c099973579bac35a525bf4",
+ "chain_hash": "b7f4af26fc4fcb8c769ac0ebfc1f57d84ffc8a7f4664021ec78cf6da2b05b259",
  "n_arquivos": 785,
  "arquivos": [
   {
@@ -12,7 +12,7 @@
   },
   {
    "arquivo": ".zenodo.json",
-   "sha256": "ea9d7dac743bb706ac75eee240e2c736f443e3a71568311343c3522abb415427"
+   "sha256": "f970147bcb118d38e1feda69677fdfeabc0f0571b82423a6fdf1f2991621afed"
   },
   {
    "arquivo": "CHANGELOG.md",
@@ -1092,7 +1092,7 @@
   },
   {
    "arquivo": "manifest/SHA256SUMS.txt",
-   "sha256": "26888dbc7b53c46754249ff7ba86de28ea4116c82e59cc7c10285ffbdd4ae01e"
+   "sha256": "ad21aa7b6ac6875605926b7a6d8fd2eefc277ae1193bcc9115230024a0e2f3c5"
   },
   {
    "arquivo": "paper/figures/FIGURAS-V2.md",

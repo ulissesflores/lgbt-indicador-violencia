@@ -6,6 +6,6 @@
 fdd8e9d48b32a8bef3d0d7f226c95f665677185781f168e69562cf4b7aea0ced  paper/paper.md
 
 # Versão 0.5 do artigo, repositório 1.0.0 (pré-DOI: o PDF e o DOCX entram em docs/paper/ na versão final, já com o DOI, e seus SHA-256 voltam a esta lista)
-# Selo do repositório: fd37acad2156e7c9ddd67c67127bfad9c3f56194c6c099973579bac35a525bf4 (785 arquivos)
+# Selo do repositório: b7f4af26fc4fcb8c769ac0ebfc1f57d84ffc8a7f4664021ec78cf6da2b05b259 (785 arquivos)
 b64d8b555c5c26e30b6a99c284ded120fe3fd2671f574fd22f5f8010f555a022  paper/v05/MANUSCRITO.md
 177a1099d4b0224d8ae7fbe3188cf0c625341716af4ba54ffe5336ef5e902685  paper/v05/MATERIAL-COMPLEMENTAR.md
