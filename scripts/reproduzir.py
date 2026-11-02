@@ -26,52 +26,52 @@ from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parents[1]
 REPLICA = RAIZ / ".run" / "replica"
-R3 = "research-2026-10-21-rodada3"
+R3 = "analysis"
 
 # (script, argumentos). Só entram scripts cujas ENTRADAS estão no repositório (derivados, SIDRA,
 # Power & Zucco) e que são idempotentes.
 PASSOS = [
-    ("dados/concordancia/concordancia_v2.py", []),
-    ("dados/painel/painel_f8.py", []),
-    ("dados/painel/painel_f8.py", ["tse"]),
-    ("dados/painel/painel_f8.py", ["tse", "brc"]),
-    ("dados/painel/painel_diagnosticos.py", []),
+    ("data/concordancia/concordancia_v2.py", []),
+    ("data/painel/painel_f8.py", []),
+    ("data/painel/painel_f8.py", ["tse"]),
+    ("data/painel/painel_f8.py", ["tse", "brc"]),
+    ("data/painel/painel_diagnosticos.py", []),
     (
-        "dados/painel/painel_c02_indet.py",
+        "data/painel/painel_c02_indet.py",
         [],
     ),  # reanálise pré-registrada C02 (escrutinio/reanalise/CRITERIOS.md)
-    ("dados/painel/painel_c03_event_pesos.py", []),  # reanálise pré-registrada C03
+    ("data/painel/painel_c03_event_pesos.py", []),  # reanálise pré-registrada C03
     (
-        "dados/painel/painel_r6_ic_wild_invertido.py",
+        "data/painel/painel_r6_ic_wild_invertido.py",
         [],
     ),  # v0.3 R6: IC por inversão do wild-cluster (forma pré-registrada, R6-PREREGISTRO-FORMA.md)
     # v0.3 C09 (troca de presidente) e C10 (exposição por governo); ordem obrigatória: d1 lê d2 e a
     # estrutura; c10 lê c09_d1
-    ("dados/presidencia/c09_estrutura.py", []),
-    ("dados/presidencia/c09_d2_painel.py", []),
-    ("dados/presidencia/c09_d1_its.py", []),
-    ("dados/exposicao/c10_estrutura.py", []),
-    ("dados/exposicao/c10_exposicao.py", []),
+    ("data/presidencia/c09_estrutura.py", []),
+    ("data/presidencia/c09_d2_painel.py", []),
+    ("data/presidencia/c09_d1_its.py", []),
+    ("data/exposicao/c10_estrutura.py", []),
+    ("data/exposicao/c10_exposicao.py", []),
     # v0.3 Disque 100: séries e comparações a partir de saidas/d100_por_periodo.csv (a tabulação do
-    # microdado bruto, 13 GB, é Trilha 2: dados/disque100/README.md)
-    ("dados/disque100/scripts/d100_series.py", []),
+    # microdado bruto, 13 GB, é Trilha 2: data/disque100/README.md)
+    ("data/disque100/scripts/d100_series.py", []),
     # C05 (pns_c05_razao_direta.py) e C08 (ggb_c08_numeradores.py) leem o microdado da PNS 2019:
     # Trilha 2 (REPRODUCIBILITY.md)
-    ("dados/sim/padroniza_idade.py", []),
-    ("dados/sim/projecao_grupos.py", []),
-    ("dados/sim/contexto_local.py", []),
-    ("dados/sinan/serie_tabelas.py", []),
-    ("dados/scripts/governadores.py", []),
-    ("dados/scripts/governadores_partido_tse.py", []),
-    (f"{R3}/F3-ggb/scripts/s03_sorteio.py", []),
-    (f"{R3}/F3-ggb/scripts/s13_sensibilidade_manchete.py", []),
-    (f"{R3}/F5-economia-politica/scripts/h1_03_analise.py", []),
-    (f"{R3}/F5-economia-politica/scripts/h1_04_exposicao_2023_exploratorio.py", []),
-    (f"{R3}/F5-economia-politica/scripts/h2_02_analise.py", []),
-    (f"{R3}/GGB-completo/series/scripts/s06_analises.py", []),
-    (f"{R3}/ideologia/scripts/sensibilidade_twfe.py", []),
-    (f"{R3}/ideologia/scripts/gerar_mapeamento_md.py", []),
-    ("simulacao/sim_identificabilidade.py", ["simulacao"]),
+    ("data/sim/padroniza_idade.py", []),
+    ("data/sim/projecao_grupos.py", []),
+    ("data/sim/contexto_local.py", []),
+    ("data/sinan/serie_tabelas.py", []),
+    ("data/scripts/governadores.py", []),
+    ("data/scripts/governadores_partido_tse.py", []),
+    (f"{R3}/ggb-audit/scripts/s03_sorteio.py", []),
+    (f"{R3}/ggb-audit/scripts/s13_sensibilidade_manchete.py", []),
+    (f"{R3}/political-economy/scripts/h1_03_analise.py", []),
+    (f"{R3}/political-economy/scripts/h1_04_exposicao_2023_exploratorio.py", []),
+    (f"{R3}/political-economy/scripts/h2_02_analise.py", []),
+    (f"{R3}/ggb-series/series/scripts/s06_analises.py", []),
+    (f"{R3}/ideology/scripts/sensibilidade_twfe.py", []),
+    (f"{R3}/ideology/scripts/gerar_mapeamento_md.py", []),
+    ("analysis/simulation/sim_identificabilidade.py", ["analysis/simulation"]),
 ]
 IGNORA = {".git", ".work", ".run", "__pycache__"}
 NUM = re.compile(r"-?\d+\.\d+(?:[eE][-+]?\d+)?")
@@ -127,12 +127,12 @@ def prepara():
     if REPLICA.exists():
         shutil.rmtree(REPLICA)
     pesados = (
-        "fontes/p3-ggb",
-        "fontes/q1-textointegral",
-        "fontes/p2-sim-microdados",
-        "fontes/p2-sinan-microdados",
-        "fontes/p2-f8-governos/tse",
-        "fontes/pns2019",
+        "sources/public/p3-ggb",
+        "sources/public/q1-textointegral",
+        "sources/public/p2-sim-microdados",
+        "sources/public/p2-sinan-microdados",
+        "sources/public/p2-f8-governos/tse",
+        "sources/public/pns2019",
     )  # microdado bruto baixado pelos acquire_* (nunca copiar)
 
     def ignora(pasta, nomes):

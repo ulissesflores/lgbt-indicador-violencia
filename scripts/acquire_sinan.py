@@ -14,4 +14,4 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import _acquire as a
 
 if __name__ == "__main__":
-    sys.exit(a.principal("Sinan", "fontes/p2-sinan-microdados", "--check" in sys.argv))
+    sys.exit(a.principal("Sinan", "sources/public/p2-sinan-microdados", "--check" in sys.argv))

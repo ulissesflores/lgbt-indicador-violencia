@@ -2,11 +2,11 @@
 
 (escrutínio Astra, item T02).
 
-O painel do artigo (``dashboard/build_dashboard.py``) contou fontes, idiomas, tipos e scripts na
+O painel do artigo (``data/build_dashboard.py``) contou fontes, idiomas, tipos e scripts na
 árvore completa do projeto de origem, que não é distribuída. Este script refaz as contagens com os
 arquivos do repositório, usando as MESMAS regras de identidade, idioma e tipo (funções importadas do
 painel, sem cópia), e reconcilia com os números do painel
-(``dashboard/dashboard_dados.publico.json``).
+(``data/dashboard_dados.publico.json``).
 
 Regras (também gravadas na saída):
 
@@ -18,7 +18,8 @@ Regras (também gravadas na saída):
   com e sem ``/v1`` conta uma vez);
 - idioma: ``idioma_do_id`` do painel (pt e pt-BR fundidos; maioria; empate pelo ledger consolidado);
 - tipo: ``tipo_do_id`` do painel; quartis da planilha ``verificacao-metadados.csv`` (metadados
-  extraídos das planilhas privadas de verificação) e das tabelas dos dossiês em ``docs/dossies/``,
+  extraídos das planilhas privadas de verificação) e de
+  ``sources/quartiles-from-literature-reviews.csv``,
   nessa ordem;
 - scripts: todo ``*.py`` do conjunto; cruzado com a lista dos 139 do título (painel).
 
@@ -41,17 +42,57 @@ from pathlib import Path
 RAIZ = Path(__file__).resolve().parents[1]
 SAIDA_JSON = RAIZ / "manifest" / "INVENTARIO-PUBLICO.json"
 SAIDA_MD = RAIZ / "manifest" / "INVENTARIO-PUBLICO.md"
-PAINEL_JSON = "dashboard/dashboard_dados.publico.json"
+PAINEL_JSON = "data/dashboard_dados.publico.json"
 VERSAO = re.compile(r"/v\d+$")
-QUARTIL_DOSSIE = re.compile(r"\|\s*(10\.\d{4,9}/[^\s|]+)\s*\|\s*(Q[1-4])")
-DOSSIES = (
-    "DOSSIE-CONSOLIDADO-2026-10-12.md",
-    "DOSSIE-2026-10-11-parte2.md",
-    "DOSSIE-2026-10-10.md",
-)
 # Diretórios cujos scripts são de análise (geram ou leem dados); o resto é empacotamento do
 # repositório.
-ANALISE = ("dados/", "simulacao/", "research-")
+ANALISE = ("data/", "analysis/")
+
+
+# o painel foi contado antes da reorganização do repositório (2026-11-02): seus caminhos
+# são traduzidos para os atuais
+RENOMEADOS = (
+    ("research-2026-10-21-rodada3/F2-custos/", "analysis/survey-cost/"),
+    ("research-2026-10-21-rodada3/F3-ggb/", "analysis/ggb-audit/"),
+    ("research-2026-10-21-rodada3/GGB-completo/", "analysis/ggb-series/"),
+    ("research-2026-10-21-rodada3/discurso/", "analysis/discourse/"),
+    ("research-2026-10-21-rodada3/escrutinio/", "analysis/robustness/"),
+    ("research-2026-10-21-rodada3/F5-economia-politica/", "analysis/political-economy/"),
+    ("research-2026-10-21-rodada3/ideologia/", "analysis/ideology/"),
+    ("research-2026-10-21-rodada3/F8-literatura/", "analysis/literature/"),
+    ("research-2026-10-21-rodada3/F6-asia-africa/", "analysis/regimes-asia-africa/"),
+    ("research-2026-10-21-rodada3/A-textointegral/", "analysis/full-text/"),
+    ("research-2026-10-30-contraponto/", "analysis/counterpoint/"),
+    ("research-2026-10-24-v03/L-ledger/", "sources/ledgers/ledger-04/"),
+    ("research-2026-10-12-deep/", "sources/ledgers/ledger-03/"),
+    ("research-2026-10-11/", "sources/ledgers/ledger-02/"),
+    ("research-2026-10-10/", "sources/ledgers/ledger-01/"),
+    ("research-consolidado/", "sources/ledgers/ledger-05/"),
+    ("simulacao/", "analysis/simulation/"),
+    ("paper/figures/", "figures/"),
+    ("dashboard/", "data/"),
+    ("fontes/", "sources/public/"),
+    ("dados/", "data/"),
+)
+
+
+def caminho_atual(rel):
+    """Caminho de hoje para um caminho que o painel gravou antes da reorganização.
+
+    Parameters
+    ----------
+    rel : str
+        Caminho relativo como o painel o gravou.
+
+    Returns
+    -------
+    str
+        O mesmo arquivo na árvore atual.
+    """
+    for velho, novo in RENOMEADOS:
+        if rel.startswith(velho):
+            return novo + rel[len(velho) :]
+    return rel
 
 
 def _modulo(nome, rel):
@@ -119,7 +160,9 @@ def quartis():
     """Quartis na mesma ordem do painel: planilhas de verificação, depois tabelas dos dossiês.
 
     No repositório a planilha é ``verificacao-metadados.csv`` (só metadados extraídos das planilhas
-    privadas de verificação; mesma coluna ``quartil_sjr``) e os dossiês ficam em ``docs/dossies/``.
+    privadas de verificação; mesma coluna ``quartil_sjr``) e os quartis das revisões de
+    literatura ficam em
+    ``sources/quartiles-from-literature-reviews.csv``.
 
     Returns
     -------
@@ -127,18 +170,17 @@ def quartis():
         DOI em minúsculas -> ``"Q1"``..``"Q4"`` (primeira ocorrência vale).
     """
     q = {}
-    for arq in sorted(
-        (RAIZ / "research-2026-10-21-rodada3" / "A-textointegral").glob("verificacao-*.csv")
-    ):
+    for arq in sorted((RAIZ / "analysis" / "full-text").glob("verificacao-*.csv")):
         with open(arq, encoding="utf-8", newline="") as fh:
             for r in csv.DictReader(fh):
                 m = re.match(r"\s*Q([1-4])", r.get("quartil_sjr", ""))
                 if m:
                     q.setdefault(r["doi"].strip().lower(), "Q" + m.group(1))
-    for nome in DOSSIES:
-        for linha in (RAIZ / "docs" / "dossies" / nome).read_text(encoding="utf-8").splitlines():
-            for m in QUARTIL_DOSSIE.finditer(linha):
-                q.setdefault(m.group(1).lower(), m.group(2))
+    # quartis tirados das tabelas das revisões de literatura (só DOI e quartil, na ordem original)
+    arq_q = RAIZ / "sources" / "quartiles-from-literature-reviews.csv"
+    with open(arq_q, encoding="utf-8", newline="") as fh:
+        for r in csv.DictReader(fh):
+            q.setdefault(r["doi"], r["quartile"])
     return q
 
 
@@ -150,7 +192,7 @@ def contar(regs, painel, quart):
     regs : list of dict
         Registros de ledger (com ``_f``).
     painel : module
-        ``dashboard/build_dashboard.py`` importado.
+        ``data/build_dashboard.py`` importado.
     quart : dict
         DOI -> quartil.
 
@@ -175,7 +217,7 @@ def calcular():
         Inventário (contagens, regras, listas e reconciliação com o painel).
     """
     prov = _modulo("_prov", "make_provenance.py")
-    painel = _modulo("_painel", "dashboard/build_dashboard.py")
+    painel = _modulo("_painel", "data/build_dashboard.py")
     conjunto = prov.arquivos()
     arqs, regs = carregar_ledgers(conjunto)
     quart = quartis()
@@ -186,14 +228,14 @@ def calcular():
     versoes = sorted(sorted(v) for v in obras.values() if len(v) > 1)
     idiomas_obra = Counter(idioma[sorted(v)[0]] for v in obras.values())
     publico = json.loads((RAIZ / PAINEL_JSON).read_text(encoding="utf-8"))["numeros"]
-    lista139 = publico["scripts"]["origem"]["lista"]
+    lista139 = [caminho_atual(a) for a in publico["scripts"]["origem"]["lista"]]
     scripts = sorted(a for a in conjunto if a.endswith(".py"))
     no_repo = sorted(set(lista139) & set(scripts))
     fora = sorted(set(lista139) - set(scripts))
     extras = sorted(set(scripts) - set(lista139))
     extras_analise = [a for a in extras if a.startswith(ANALISE)]
     extras_pacote = [a for a in extras if not a.startswith(ANALISE)]
-    ledgers_painel = publico["fontes_unicas"]["origem"]["arquivos"]
+    ledgers_painel = [caminho_atual(a) for a in publico["fontes_unicas"]["origem"]["arquivos"]]
     # mesmo cálculo restrito aos ledgers que o painel contou: tem de reproduzir os números do painel
     sub_id, sub_idioma, sub_tipos = contar(
         [r for r in regs if r["_f"] in ledgers_painel], painel, quart
@@ -211,9 +253,9 @@ def calcular():
             "empate pelo ledger consolidado",
             "tipo": "tipo_do_id do painel; quartis de A-textointegral/verificacao-metadados.csv "
             "(extraída das planilhas privadas de verificação, só metadados) e das tabelas dos "
-            "dossiês em docs/dossies/, nessa ordem",
+            "sources/quartiles-from-literature-reviews.csv, nessa ordem",
             "scripts": "todo *.py do conjunto; cruzado com a lista dos 139 do título (painel); "
-            "análise = dados/, simulacao/, research-*; o resto é empacotamento do repositório",
+            "análise = data/ e analysis/; o resto é empacotamento do repositório",
         },
         "ledgers": {"n": len(arqs), "arquivos": arqs, "registros": len(regs)},
         "fontes": {

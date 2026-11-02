@@ -5,7 +5,7 @@ import re
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parents[1]
-R3 = RAIZ / "research-2026-10-21-rodada3"
+R3 = RAIZ / "analysis"
 
 
 def csv_rows(rel):

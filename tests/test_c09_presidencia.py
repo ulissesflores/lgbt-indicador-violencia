@@ -4,7 +4,7 @@ Rodar: /opt/homebrew/bin/python3.14 -m pytest -q tests/   (sem -I: o pytest est�
 import csv, hashlib, math
 from pathlib import Path
 
-RAIZ = Path(__file__).resolve().parents[1] / "dados" / "presidencia"  # no repositório: tests/ -> dados/presidencia
+RAIZ = Path(__file__).resolve().parents[1] / "data" / "presidencia"  # no repositório: tests/ -> data/presidencia
 
 
 def _csv(nome):

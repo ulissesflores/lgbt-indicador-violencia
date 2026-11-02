@@ -1,187 +1,73 @@
-# Reprodutibilidade
+# Reproducibility
 
-Este repositório distribui **derivados**, código, ledgers e pré-registros. Não distribui microdado bruto, PDF de terceiros nem dado nominal.
-Por isso a reprodução tem duas trilhas e um conjunto de coisas que não se pode refazer.
+This repository distributes **derived data**, code, source ledgers and pre-registrations. It does not distribute raw
+microdata, third-party PDFs or nominal data. Reproduction therefore has two tracks, plus a set of steps that cannot be
+re-run.
 
-## Dois selos
+## Two seals
 
-1. **Derivação reproduzível (Trilha 1).** Todo número publicado que depende só dos derivados distribuídos é recalculado por
-   `python3 -I run_all.py` e comparado com o commitado. O recálculo roda numa réplica (`.run/replica`), nunca sobre os arquivos do repositório.
-   Resultado verificado pela primeira vez em 2026-10-23 (macOS arm64, Python 3.14.8, numpy 2.4.6, pandas 3.0.2, scipy 1.17.1, matplotlib 3.10.9;
-   `requirements.lock`) e de novo a cada selo; a execução selada mais recente, com o ambiente e o pip freeze, está em `runs/` (versão 1.0.0:
-   01/11/2026, Python 3.14.10). Ver a seção "Evidência desta montagem" abaixo.
-2. **Evidência congelada, não re-rodável.** Coletas que dependem do mundo naquele dia (reportagens, páginas da Wikipédia, buscas em
-   Google News RSS/OpenAlex/GDELT, arquivos preliminares do DATASUS, leitura de PDFs) não voltam idênticas. Cada uma tem URL, data de acesso
-   e, quando houve download, SHA-256 em `manifest/MANIFESTO-FONTES.csv`; o que foi lido, codificado ou contado fica nos CSV/JSON derivados.
+1. **Reproducible derivation (Track 1).** Every published number that depends only on the distributed derived data is
+   recomputed by `python3 -I run_all.py` in a separate copy (`.run/replica`) and compared, file by file, with the
+   distributed one: identical bytes, or a difference of at most one unit in the last printed decimal place (rounding
+   between math libraries; the runner says when it accepted one).
+2. **Frozen evidence, not re-runnable.** Collections that depend on the state of the world on a given day (news, web
+   pages, search counts, preliminary DATASUS files, reading of PDFs) do not come back identical. Each has a URL, an
+   access date and, when a file was saved, a SHA-256 in `manifest/MANIFESTO-FONTES.csv`; what was read, coded or counted
+   is in the derived CSV and JSON files.
 
-O **selo de integridade** é outra coisa: `python3 -I make_provenance.py --verify` confere que cada arquivo distribuído tem o SHA-256
-registrado em `manifest/SHA256SUMS.txt` e que o `chain_hash` de `output/provenance.json` fecha.
+The **integrity seal** is a separate thing: `python3 -I make_provenance.py --verify` checks that every distributed file
+has the SHA-256 recorded in `manifest/SHA256SUMS.txt` and that the chain hash in `output/provenance.json` closes. The
+paper PDF (`docs/paper/`) is outside the seal, because the paper cites the repository; its hash is in
+`docs/paper/SHA256SUMS.txt`.
 
-**O artigo fica fora do selo (decisão de arquitetura do autor).** O repositório vem primeiro, com a cadeia de hashes, e o artigo deriva
-dele: o artigo cita a URL do repositório e o `chain_hash`, o que seria impossível se o selo cobrisse o próprio artigo. Por isso
-`make_provenance.excluido()` (regra única, usada também pelo inventário, pelos testes de privacidade e pelo auditor) deixa fora do
-conjunto selado `paper/paper.md`, `paper/AUDIT.md`, `paper/build/` (PDF, DOCX, saídas do juiz), `paper/tools/` (ferramentas de export e
-auditoria), `paper/tests/test_anexo.py` (testa o build do artigo), `paper/PAPER-SHA256.txt` e, desde a v0.5, o texto-fonte (`paper/v05/*.md`), o PDF e o DOCX publicados (`docs/paper/`) e o registro de cada execução selada (`runs/`, que grava o próprio `chain_hash`). As figuras (`paper/figures/`) e os testes
-de figura entram no selo. O primeiro commit público (`0601c65`) não contém o artigo; ele entra no segundo commit, com a versão 0.4.4
-do texto e o PDF único (`paper/build/v04/paper-v04.pdf`), e o SHA-256 do texto e do PDF fica em `paper/PAPER-SHA256.txt` (arquivo à
-parte, criado depois do PDF, fora do selo). O artigo v0.5 (`docs/paper/paper-final.pdf`, gerado por `paper/tools/build_v05.sh`) entra no commit da versão 1.0.0 final, já com o DOI de conceito (10.5281/zenodo.23873858); o pré-lançamento `v1.0.0-rc1`, que gerou o DOI, foi publicado sem o PDF, para que nenhum PDF sem o identificador ficasse público.
-
-## Trilha 1: leve (conferência dos derivados, ~6 min)
+## Track 1: light (derived data, a few minutes)
 
 ```bash
-python3 -m pip install -r requirements.txt     # numpy, pandas, scipy, matplotlib
-python3 -I run_all.py                          # integridade -> recálculo na réplica -> testes -> selo
-python3 -I run_all.py --rapido                 # sem o recálculo (segundos): integridade + testes + selo
-python3 -I scripts/reproduzir.py --only painel # só um passo do recálculo
+python3 -m pip install -r requirements.txt   # numpy, pandas, scipy, matplotlib
+python3 -I run_all.py                        # integrity -> recomputation in the replica -> tests -> seal
+python3 -I run_all.py --rapido               # without the recomputation (seconds)
+python3 -I scripts/reproduzir.py --only painel
 ```
 
-Passos do recálculo (`scripts/reproduzir.py`, 29): concordância Sinan x Anuário (`concordancia_v2.py`), painel de governos em 3 especificações e
-diagnósticos (`painel_f8.py`, `painel_diagnosticos.py`), reanálises pré-registradas C02 e C03 (`painel_c02_indet.py`, `painel_c03_event_pesos.py`),
-intervalo do painel por inversão do wild-cluster (R6, `painel_r6_ic_wild_invertido.py`), troca de presidente (C09, `dados/presidencia/c09_*.py`),
-exposição por governo (C10, `dados/exposicao/c10_*.py`), taxas padronizadas e projeção (`padroniza_idade.py`, `projecao_grupos.py`,
-`contexto_local.py`), tabelas do Sinan, curadoria de governadores, amostra e sensibilidade da manchete do GGB, DiD/event study e proxies da F5,
-séries e concordância das fontes de mortes LGBT+ (`s06_analises.py`), sensibilidade do TWFE a escores de ideologia, simulação de
-identificabilidade. Cada um é comparado, arquivo a arquivo, com o commitado: bytes idênticos, ou diferença de no máximo 1 unidade da última
-casa decimal impressa (arredondamento entre bibliotecas matemáticas; o script diz quando aceitou isso). Número impresso em precisão total
-(repr do float, 15 ou mais algarismos significativos) aceita diferença relativa de até 1e-10: nos CSV de C02 e C03 os últimos bits mudam de uma
-execução para outra NA MESMA máquina (soma em BLAS multithread, Accelerate no macOS), sem mudar nenhum número arredondado dos .md.
+The recomputation (`scripts/reproduzir.py`) covers the governor panel and its diagnostics, the pre-registered
+re-analyses, the inverted wild-cluster interval, the president change and exposure analyses, age-standardised rates and
+projections, the notification tables, the governor curation, the list sample and headline sensitivity, the series and
+agreement of the LGBT+ death sources, the ideology-score sensitivity and the identifiability simulation.
 
-Semente: 20261021 (bootstraps, permutações, wild-cluster, Monte Carlo), 20261011 (simulação), outras declaradas no topo de cada script.
-Com semente fixa e a mesma versão do numpy a saída é idêntica byte a byte (observado aqui para todos os passos acima, exceto os CSV em
-precisão total de C02 e C03, que ficam dentro da tolerância relativa de 1e-10).
+## Track 2: from the official microdata (heavy, on demand)
 
-Verificação independente (outra álgebra, outra biblioteca): `dados/verificacao_independente.py` recalcula a correlação parcial de Spearman
-(inversa da matriz de correlação), o IC da parcela LGB+ implícita na PNS (método delta em vez de Monte Carlo) e o painel TWFE (MQO com todas as
-dummies explícitas e CR1 direto) e confere com os arquivos gerados e com o texto dos dossiês. Roda como teste (`tests/test_integridade.py`).
+These scripts download from the official source and **check the expected SHA-256** (from the manifest); a mismatch means
+a different release from the one used. Files go to `sources/public/` and are ignored by git.
 
-## Matriz de reprodução
+| Source | Download script | Size | Scripts that use it |
+|---|---|---|---|
+| SIM/DATASUS, DOBR2010–2024 (deaths by residence) | `scripts/acquire_sim.py` | ~1.6 GB | `data/sim/agrega_sim.py`, `data/sinan/sim_adultos_18mais.py` |
+| Sinan/DATASUS, VIOLBR15–25 | `scripts/acquire_sinan.py` | ~300 MB | `data/sinan/serie_campo55_uf_ano.py`, `completude_sinan.py`, `triangulacao_pns_sinan.py` |
+| PNS 2019 microdata and layout (IBGE) | `scripts/acquire_pns2019.py` | ~30 MB (455 MB unzipped) | `data/pns/seguro_pns2019.py`, `data/pns/agressor_risco_pns2019.py`, `data/pns/pns_c05_razao_direta.py`, `data/ggb/cobertura_implicita.py`, `data/ggb/ggb_c08_numeradores.py`, `analysis/survey-cost/deff_pns2019.py`, `analysis/survey-cost/cenarios_custo.py` |
+| TSE, consulta_cand 2010/2014/2018/2022 | `scripts/acquire_tse.py` | 4 zips | `data/scripts/governadores_tse.py` |
 
-Três situações, sem mistura: **recalcula** (o script roda a partir do que está aqui e o resultado é comparado byte a byte com o publicado),
-**só confere** (o número publicado é relido e conferido por teste ou por outra conta, mas o cálculo original exige algo que não está aqui) e
-**não se refaz** (depende do mundo naquele dia ou de dado nominal).
+DATASUS `.dbc` files need `pyreaddbc` and `dbfread` (separate environment; not in `requirements.txt`). Preliminary
+DATASUS files (SIM 2023–2024, recent Sinan) are regenerated at the source: the manifest hash identifies the release used.
 
-| Etapa | Entrada | Saída | Situação | Como |
-| --- | --- | --- | --- | --- |
-| Concordância saúde x polícia, painel de governos (3 especificações + diagnósticos), C02, C03, R6 | `dados/sinan`, `dados/anuario`, `dados/painel`, `dados/ideologia`, SIDRA, Power & Zucco | `dados/concordancia/`, `dados/painel/` | recalcula | `scripts/reproduzir.py` |
-| **C09** troca de presidente (estrutura, D2 painel, D1 série nacional) | `dados/painel`, `dados/ideologia`, `dados/sim`, `dados/atlas_uf_series.csv`, SIDRA, Power & Zucco, `dados/presidencia/presidentes_2007_2024.csv` | `dados/presidencia/` | recalcula | `scripts/reproduzir.py` (3 passos, ~35 s) |
-| **C10** exposição por governo (estrutura, E1 federal, E2 estadual) | as mesmas + `dados/presidencia/` | `dados/exposicao/` | recalcula | `scripts/reproduzir.py` (2 passos) |
-| **Disque 100** séries e comparações (a partir de `saidas/d100_por_periodo.csv`) | `dados/disque100/saidas/`, `dados/disque100/entradas/`, `dados/sinan`, `dados/anuario`, SIDRA | `dados/disque100/saidas/d100_*.csv` | recalcula (6 saídas, byte a byte) | `scripts/reproduzir.py` (1 passo, `d100_series.py`) |
-| **Disque 100** tabulação dos 23 microdados (14 GB) | os 23 CSV de `dadosabertos.mdh.gov.br`, baixados por `dados/disque100/scripts/baixar.py` (sha256 em `saidas/catalogo.tsv`) | `d100_por_periodo.csv` | só confere (feita no projeto do autor; o bruto não é distribuído nem baixado na réplica) | `dados/disque100/tests` (63 testes sobre as saídas e sobre as regras, em arquivos sintéticos) |
-| Taxas padronizadas, projeção, contexto local, tabelas do Sinan, governadores (curadoria), F3/F5/GGB/ideologia, simulação | derivados de `dados/` e das frentes | idem | recalcula | `scripts/reproduzir.py` |
-| Números publicados e valores desenhados nas figuras | todos os derivados | asserções | só confere | `pytest -q` (`tests/`, `paper/tests/`) |
-| Verificação independente (Spearman parcial, IC delta, TWFE explícito) | derivados | asserções | só confere (outra álgebra) | `dados/verificacao_independente.py` |
-| Inventário de fontes, idiomas, tipos e scripts | 20 ledgers, `verificacao-metadados.csv`, dossiês, `dashboard/dashboard_dados.publico.json` | `manifest/INVENTARIO-PUBLICO.{md,json}` | recalcula (e reproduz o painel com os 17 ledgers dele) | `scripts/inventario_publico.py --check` |
-| PNS 2019 (C05, C08, cobertura, poder) | microdado do IBGE | `dados/pns/`, `dados/ggb/` | recalcula sob demanda (Trilha 2) | `scripts/acquire_pns2019.py` + scripts |
-| SIM e Sinan agregados | microdado do DATASUS | `dados/sim/`, `dados/sinan/` | só confere (aquisição e hash testados; re-agregação não reexecutada nesta montagem) | `scripts/acquire_{sim,sinan}.py` |
-| Universo nominal do GGB 2019, captura-recaptura, validação das 160 fontes | lista nominal + sal (não publicados) | `research-2026-10-21-rodada3/F3-ggb/dados/` | não se refaz aqui | lógica auditável em `s01`-`s14` |
-| Notícias, buscas, Wikipédia, GDELT, leitura de PDFs, painel de contagens | o mundo na data da coleta; árvore privada | contagens, ledgers, `dashboard/` | não se refaz | URL, data e sha256 no manifesto |
-| Export do artigo (DOCX/PDF) e juiz da rubrica | Microsoft Word, canon da casa, CLI de modelo | PDF e DOCX da v0.5 em `docs/paper/`; PDF da v0.4.4 em `paper/build/v04/`; vereditos do juiz em `paper/build/juiz/` | não se refaz aqui (ferramenta do autor: `paper/tools/build_v05.sh`) | ver a seção Artigo |
+## What cannot be re-run
 
-Ambientes exercidos: macOS arm64 com Python 3.14.8 (selo e réplica) e, na v0.3, a suíte de testes também em Python 3.12 e 3.13 (venv
-descartável, mesmas versões mínimas de `requirements.txt`; ver a seção Evidência). A CI do GitHub (Linux) continua não exercida.
+| Step | Why | What the repository holds |
+|---|---|---|
+| Nominal 2019 Grupo Gay da Bahia list (329 cases), its source links, the 160-case verification and the third reading of coder disagreements | needs the nominal list and the news texts, which are not published (victims' privacy) | 10-hex salted ids, state, category, domain, coding, adjudication and results in `analysis/ggb-audit/` |
+| Media and discourse (Google News RSS, OpenAlex, Wikipedia, GDELT, Chamber, Senate) | searches and counts depend on the day; news text belongs to third parties | counts per query and year with date and SHA-256 of the raw file; coded sample without the text |
+| Literature reading | restricted or copyrighted PDFs | ledgers, screening tables, short verbatim excerpts with page and PDF SHA-256 |
+| Governors (Wikipedia) | manual curation of 27 pages | `data/scripts/mandatos_wiki.json`, `data/governadores_uf_2011_2026*.csv` and the check against TSE |
+| Political economy (Atlas, budget, LAPOP, ESTADIC) | official PDFs and spreadsheets downloaded on given days | derived series in `analysis/political-economy/dados/`, SHA-256 of the raw files, parsing scripts |
+| Expert ideology survey | third-party microdata | derived scores and party mapping; Power & Zucco (CC0) included |
 
-## Trilha 2: do microdado oficial (pesada, sob demanda)
+## Pre-registrations
 
-Os scripts abaixo baixam do órgão oficial e **conferem o SHA-256 esperado** (de `manifest/MANIFESTO-FONTES.csv`); divergência = versão diferente da usada.
-O destino é `fontes/` (ignorado pelo git).
+`preregistrations/{governos,mortalidade,midia}/` hold the original text, the hash recorded **before** data collection,
+the recording time and later addenda. `data/presidencia/PREREGISTRO-C09.md`, `data/exposicao/PREREGISTRO-C10.md`,
+`data/painel/R6-PREREGISTRO-FORMA.md`, `data/disque100/PREREGISTRO-D100.md` and the criteria in
+`analysis/robustness/reanalise/CRITERIOS.md` and `analysis/robustness/simetria/CRITERIOS.md` follow the same rule. The tests
+recompute every hash. These files are kept byte for byte, so some still carry folder names of the working project.
 
-| Fonte | Script de aquisição | Tamanho | Scripts que a consomem |
-| --- | --- | --- | --- |
-| SIM/DATASUS, DOBR2010-2024 (óbitos por residência) | `scripts/acquire_sim.py` | ~1,6 GB | `dados/sim/agrega_sim.py` (gera `sim_agressoes_agregado.csv`), `dados/sinan/sim_adultos_18mais.py` |
-| Sinan/DATASUS, VIOLBR15-25 | `scripts/acquire_sinan.py` | ~300 MB | `dados/sinan/serie_campo55_uf_ano.py`, `completude_sinan.py`, `triangulacao_pns_sinan.py` |
-| PNS 2019, microdados e layout (IBGE) | `scripts/acquire_pns2019.py` | ~30 MB (455 MB descompactado) | `dados/pns/seguro_pns2019.py`, `dados/pns/pns_c05_razao_direta.py` (C05), `dados/ggb/cobertura_implicita.py`, `dados/ggb/ggb_c08_numeradores.py` (C08), `research-2026-10-21-rodada3/F2-custos/deff_pns2019.py` |
-| TSE, consulta_cand 2010/2014/2018/2022 | `scripts/acquire_tse.py` | 4 zips | `dados/scripts/governadores_tse.py` |
-
-`.dbc` do DATASUS exige `pyreaddbc` e `dbfread` (ambiente à parte; não estão em `requirements.txt`).
-Arquivos **preliminares** do DATASUS (SIM 2023-2024, Sinan recente) são regerados pela origem: o hash do manifesto identifica a versão
-usada; se o seu download divergir, os números de 2023-2025 podem diferir sem que haja erro de código.
-
-## O que NÃO pode ser re-rodado (e onde isso aparece)
-
-| Etapa | Por quê | O que há no repositório |
-| --- | --- | --- |
-| Universo nominal do GGB 2019 (329 casos), pareamento com o TDoR, captura-recaptura, validação das 160 fontes | exige a lista nominal e o sal do hash, **que não são publicados** (privacidade das vítimas) | ids de 10 hex (sha256 com sal não publicado), UF, categoria, domínio, codificação e resultados em `research-2026-10-21-rodada3/F3-ggb/dados/`; scripts `s01`-`s14` para auditoria da lógica |
-| Fontes de notícia da amostra do GGB (links) | 31 de 160 links já estavam mortos (404) ao serem lidos; o web muda | tabela de recuperação e motivo da não recuperação em `F3-ggb/dados/` |
-| Mídia e discurso (Google News RSS, OpenAlex, Wikipédia, GDELT, Câmara, Senado) | buscas e contagens dependem do dia; texto de notícia é de terceiros | contagens por consulta/ano com data e SHA-256 do bruto (`contagens.csv`, `SHA256SUMS-brutos.txt`), amostra codificada sem o texto (só `trecho_sha256`; o trecho do Parlamento fica) |
-| Leitura de literatura (F8, mortalidade, falsas alegações) | leitura de PDFs de acesso restrito ou protegido por direito autoral | ledgers (`sources.jsonl`, 571 registros no consolidado), planilhas de triagem, trechos verbatim curtos com página e SHA-256 do PDF; marcas ✅/⚠️/🚫 nos dossiês |
-| Governadores (Wikipédia) | curadoria manual de 27 páginas; parser automático foi descartado por erro | `mandatos_wiki.json`, `governadores_uf_2011_2026*.csv` e a validação contra o TSE (`governadores_tse_validacao.md`) |
-| F5 (economia política: Atlas, orçamento, LAPOP, ESTADIC) | dependem de PDFs/planilhas oficiais baixados em 2026-10-21/22 | séries derivadas em `F5-economia-politica/dados/`, `SHA256SUMS.txt` dos brutos, scripts de parsing |
-| `ideologia/` (survey de especialistas Bolognesi et al.) | microdado de terceiros | escores derivados e mapeamento de partidos; Power & Zucco (CC0) incluído |
-
-## Pré-registros
-
-`docs/PRE-REGISTROS/{governos,mortalidade,midia}/`: texto original, hash gravado **antes** da coleta, hora de gravação e adendo posterior (quando houve).
-Os testes recomputam esses hashes (`tests/test_integridade.py`). As reanálises da revisão hostil têm critérios próprios, gravados antes de
-qualquer script novo: `research-2026-10-21-rodada3/escrutinio/reanalise/CRITERIOS.md` (sha256 em `CRITERIOS.sha256`, conferido em
-`tests/test_reanalises_publicadas.py`); a busca simétrica, em `escrutinio/simetria/CRITERIOS.md` e adendos datados (`SHA256SUMS-pre-execucao.txt`). O pré-registro de mídia teve um desvio declarado: a contagem corrigida do
-Parlamento (14/56/148/2) difere do dicionário pré-registrado (23/161/692/4); o texto original e a emenda estão lado a lado.
-Um caminho de pasta do projeto privado permanece em `docs/PRE-REGISTROS/midia/PRE-REGISTRO*.md` (linha 76) e em
-`research-2026-10-21-rodada3/escrutinio/reanalise/CRITERIOS.md` (linha 3): reescrevê-los quebraria o hash gravado. Pelo mesmo motivo os
-pré-registros guardam termos de operação do projeto (glossário em `docs/INDEX.md`).
-
-Na v0.3 entram mais três: `dados/presidencia/PREREGISTRO-C09.md` (C09), `dados/exposicao/PREREGISTRO-C10.md` (C10) e
-`dados/painel/R6-PREREGISTRO-FORMA.md` (forma do intervalo por inversão do wild-cluster). Nos dois primeiros, a 1ª linha do `.sha256` é o
-hash do corpo até a seção de adendos, de modo que adendos datados não mudam o hash; os testes `tests/test_c09_presidencia.py`,
-`tests/test_c10_exposicao.py` e `tests/test_correcoes_v03.py` o recomputam.
-O pré-registro do Disque 100 (`dados/disque100/PREREGISTRO-D100.md`) vale a mesma regra: o `.sha256` guarda o hash do corpo até a linha dos adendos e o de `scripts/d100_comum.py` (as regras de classificação); `python3 -I dados/disque100/scripts/d100_selo.py` o confere.
-
-**O que o hash prova e o que não prova.** O hash verifica correspondência de conteúdo: o texto lido hoje é o mesmo que gerou o hash
-gravado. A anterioridade (que o texto existia antes de os dados serem vistos) depende de evidência temporal independente; sem carimbo
-externo, a hora gravada no `.sha256` é declaração do protocolo do autor, conferível só pela coerência com o resto do registro. Registro
-externo (OSF, carimbo de tempo) está no `ROADMAP.md`.
-
-## Alterações em relação aos arquivos do projeto privado
-
-`manifest/MODIFICACOES.tsv` lista cada arquivo alterado, com o SHA-256 original e o publicado. As alterações são só: (i) caminho absoluto -> `REPO_ROOT`
-(variável de ambiente; sem ela, a raiz do repositório), (ii) remoção de texto de terceiros da amostra de mídia, (iii) e-mail pessoal -> placeholder
-em 3 scripts de coleta, (iv) dossiês lidos de `docs/dossies/` por `verificacao_independente.py`, (v) linguagem interna de operação (nomes
-de agentes e ferramentas, números de pedido, papéis) trocada por termos neutros, também nos nomes de pastas não distribuídas citadas
-(`fila-aquisicao`, `aquisicao-out`), sempre igual no script gerador e na saída, (vi) trecho verbatim de imprensa/academia removido de
-`escrutinio/simetria/eventos_C18.csv` (fica `trecho_sha256`), (vii) caminho de CLI de modelo de linguagem trocado por variável de ambiente
-(`GROK_BIN`, `AGY_BIN`) nos scripts que chamam esses modelos, marcados como ferramenta do autor. A lógica e os números não foram tocados. Os
-`SHA256SUMS*` que vieram dentro das pastas das frentes e de `dados/` (por exemplo `dados/{painel,pns,ggb}/SHA256SUMS-reanalise.txt`, cujos scripts
-ganharam o cabeçalho `REPO_ROOT`) descrevem os arquivos **privados** de origem e não conferem com `shasum -c` nos arquivos alterados; o manifesto da
-raiz é o que vale para este repositório. Pelo mesmo motivo, `escrutinio/_build_triagem.py` não regera `TRIAGEM.csv/.md` byte a byte (a execução
-original embutiu caminhos absolutos, depois trocados nos dois lados).
-
-## Artigo (`paper/`)
-
-| Parte | Neste commit? | Roda no clone? | Como |
-| --- | --- | --- | --- |
-| Testes de figura (`paper/tests/test_figuras.py`) | sim, no selo | sim | `pytest -q` (ou `run_all.py`): reabre as fontes copiadas, confere com `dados/` e com `dashboard/dashboard_dados.publico.json` |
-| Figuras (`paper/figures/make_figures.py`) | sim, no selo | sim (matplotlib) | determinístico; `figures/SHA256SUMS` |
-| Texto do artigo, PDF, auditoria e ferramentas de export (`paper/paper.md`, `paper/build/v04/paper-v04.pdf`, `paper/tools/`, `paper/AUDIT.md`, `paper/tests/test_anexo.py`; vereditos do juiz em `paper/build/juiz/rodada-v4-*.json` e, a partir da v4-3, `rodada-v4-*.md`) | sim (segundo commit), fora do selo; DOCX, logs e páginas renderizadas ficam fora do git | export e juiz: não (ferramenta do autor: pandoc, Microsoft Word, CLI de modelo pela assinatura do autor) | verificação de referências, densidade, E-E-A-T, `crivo_texto.py` e `test_anexo.py` rodam no clone |
-| Artigo v0.5: PDF e DOCX (`docs/paper/paper-final.{pdf,docx}`), texto-fonte e pareceres (`paper/v05/`), montagem (`paper/tools/build_v05.sh`, `monta_fonte_v05.py`) | sim, fora do selo (as figuras de `paper/v05/figures/` e o README da pasta entram) | montagem: não (Microsoft Word); o texto-fonte e os hashes, sim | `shasum -a 256 -c paper/PAPER-SHA256.txt`; o validador da casa (`validate_canon.py`) e o crivo (`paper/tools/crivo_docx.py`) foram rodados pelo autor |
-| Hash do texto e do PDF final (`paper/PAPER-SHA256.txt`) | sim (segundo commit), fora do selo: criado depois do PDF final | sim | `shasum -a 256 -c` sobre o arquivo |
-
-Com o artigo no repositório (segundo commit), `scripts/auditar_publicacao.py --check literatura` confere os ledgers, a planilha de verificação
-e o artigo contra o ledger; no primeiro commit essa conferência era "NÃO EXERCIDA". Depois do primeiro commit, o histórico do git é o registro de mudanças;
-`manifest/MODIFICACOES.tsv` registra só a sincronização com o projeto de origem: no segundo commit voltam as linhas das ferramentas
-do artigo e entram as cópias de `docs/revisao/`; o texto e a auditoria do artigo não têm linha, porque mudam depois do selo (citam o
-`chain_hash`) e têm o SHA-256 em `paper/PAPER-SHA256.txt`.
-
-## Evidência desta montagem
-
-Na versão 1.0.0 (2026-11-01), as análises que dependem do microdado da PNS 2019 (`dados/pns/agressor_risco_pns2019.py`, inclusive a Tabela
-C12 e a coluna com cônjuge no domicílio da Tabela C10) e o dimensionamento com a fração de cada modo (`research-2026-10-21-rodada3/F2-custos/
-cenarios_custo.py`, Tabela K2) foram rodados contra a cópia local das fontes; neste repositório eles são conferidos pelos testes de
-`tests/test_numeros_v05.py` contra os arquivos derivados, e não recalculados pela Trilha 1. A terceira leitura dos desacordos do GGB
-(`research-2026-10-21-rodada3/F3-ggb/scripts/s15_terceiro_codificador.py`) usa as matérias com nome, que não são distribuídas; a decisão
-fica em `research-2026-10-21-rodada3/F3-ggb/dados/adjudicacao.json`.
-
-Ver `BUILD-STATE.md` (local, não versionado) e a saída de `python3 -I run_all.py`. Em 2026-10-23, C05 e C08 foram rodadas contra uma cópia
-local do microdado da PNS 2019 (o mesmo arquivo do IBGE usado na pesquisa, não baixado de novo nesta etapa) e reproduziram as quatro saídas byte a byte.
-Trilha 2 exercida de ponta a ponta (download + hash + recálculo) só para a **PNS 2019**: `acquire_pns2019.py` baixou do IBGE (SHA-256 conferido) e `seguro_pns2019.py` e
-`cobertura_implicita.py` reproduziram os 4 derivados byte a byte. Para SIM e Sinan só a aquisição de amostra (VIOLBR16, dicionário PNS) e o hash foram testados; o recálculo a partir do
-microdado bruto do SIM e do Sinan **não** foi reexecutado. A CI do GitHub não havia sido exercida antes do commit inicial: o primeiro resultado é o da aba Actions desse commit (Linux, Python 3.12 e 3.13).
-
-Na v0.3 (2026-10-24): recálculo completo (28 passos, incluindo C09, C10 e R6) em Python 3.12.12 com numpy 2.5.4, pandas 3.1.0, scipy 1.18.1 e
-matplotlib 3.11.2, versões mais novas que as do `requirements.lock`: 54 arquivos idênticos byte a byte, 2 equivalentes numéricos (os CSV de
-precisão total de C02 e C03), 0 divergência. Em Python 3.14.8 (ambiente do lock), `--only dados/`: 35 idênticos, 2 equivalentes, 0 divergência.
-A suíte de testes rodou em 3.12, 3.13 e 3.14 (contagens no relatório da versão). Python 3.11 não é suportado: um script de pesquisa
-(`research-2026-10-21-rodada3/discurso/governos/scripts/tabela_md.py`) usa sintaxe de f-string que só compila a partir da 3.12.
-
-Na v0.4 (2026-10-25, selo `5cf914b0…`, 721 arquivos): recálculo de 60 arquivos idênticos e 2 equivalentes numéricos, 0 divergência; testes 110/110.
-Na v0.4.1 e de novo na v0.4.2 (2026-10-25; selo vigente em `output/hash-chain.md`): recálculo dos 29 passos em Python 3.14.8 (numpy 2.4.6, pandas 3.0.2, scipy 1.17.1,
-matplotlib 3.10.9), 60 idênticos, 2 equivalentes, 0 divergência, cerca de 310 a 320 s; testes 114/114 na árvore do autor (os 4 novos conferem o texto
-vigente do artigo contra os arquivos de dados, em `paper/tests/test_anexo.py`); num clone, 111/111 e 3 pulados.
+**What the hash proves.** It proves that the text read today is the text that produced the recorded hash. That the text
+existed before the data were seen rests on the recorded time, which, without an external timestamp, is the author's
+declaration.

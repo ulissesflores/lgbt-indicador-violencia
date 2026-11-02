@@ -2,7 +2,7 @@
 
 Mesmo estilo de ``test_numeros_publicados.py``: só biblioteca padrão, nada de microdado bruto, e
 cada função ``test_*`` roda sem argumento (compatível com pytest e com ``python run_all.py``).
-Os valores esperados são os publicados em ``paper/v05/``; a fonte de cada um é o arquivo citado
+Os valores esperados são os publicados no artigo; a fonte de cada um é o arquivo citado
 na função.
 """
 
@@ -15,7 +15,7 @@ from decimal import ROUND_HALF_UP, Decimal
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from _util import RAIZ, celulas, csv_rows, texto  # noqa: E402
 
-LIHS = "research-2026-10-30-contraponto"
+LIHS = "analysis/counterpoint"
 LIHS_CSV = RAIZ / LIHS / "dados" / "lihs-checagem-ggb2016.csv"
 LIHS_META = f"{LIHS}/dados/lihs-checagem-ggb2016.META.md"
 SHA_LIHS = "0dc25783bfc422ec635826009fbdfbda4efc41ecd7dca0fa05fc469a9179d5ad"
@@ -61,10 +61,9 @@ def test_lihs_planilha_nominal_nao_e_distribuida():
 
 
 def test_lihs_sha256_gravado_em_todos_os_lugares():
-    """O SHA-256 da planilha é o mesmo no META, na frente A e na nota do Material Complementar."""
+    """O SHA-256 da planilha é o mesmo no META e na frente A."""
     assert SHA_LIHS in texto(LIHS_META)
     assert SHA_LIHS in texto(f"{LIHS}/frente-A-brasil.md")
-    assert SHA_LIHS in texto("paper/v05/MATERIAL-COMPLEMENTAR.md")
 
 
 def test_lihs_tabulacao_motivacao_homof_347_casos():
@@ -80,9 +79,6 @@ def test_lihs_tabulacao_motivacao_homof_347_casos():
     }
     assert cont == esperado
     assert sum(cont.values()) == 347
-    briefing = texto(f"{LIHS}/briefing.md")  # a síntese cita as mesmas contagens
-    assert "| Sim | 31 | 8,9% |" in briefing
-    assert "| Inconclusivo | 159 | 45,8% |" in briefing
 
 
 # ------------------------------------------- homicídio por governo (taxa padronizada por idade)
@@ -123,7 +119,7 @@ def _d(*valores):
 
 def test_homicidio_por_governo_asr_brasil():
     """Em ``asr_brasil.csv`` (2 casas), 7 das 8 variações publicadas batem; a 8ª está abaixo."""
-    f = "dados/sim/asr_brasil.csv"
+    f = "data/sim/asr_brasil.csv"
     assert _variacoes(f, "grupo", "agressao") == _d("11.1", "-4.2", "-21.0", "-10.6")
     # agressao+indet: Dilma, Temer e Lula batem. Bolsonaro, 34,09 -> 29,44, dá -13,64 nas 2 casas;
     # o -13,7 publicado sai da precisão cheia (teste seguinte). O valor não é ajustado aqui.
@@ -133,7 +129,7 @@ def test_homicidio_por_governo_asr_brasil():
 
 def test_homicidio_por_governo_precisao_cheia():
     """Na série de precisão cheia (``c10_e1_serie_longo.csv``), as 8 publicadas, com -13,7."""
-    f = "dados/exposicao/c10_e1_serie_longo.csv"
+    f = "data/exposicao/c10_e1_serie_longo.csv"
     assert _variacoes(f, "serie", "agressao") == _d("11.1", "-4.2", "-21.0", "-10.6")
     assert _variacoes(f, "serie", "agressao+indet") == _d("7.9", "-0.4", "-13.7", "-6.1")
 
@@ -142,12 +138,12 @@ def test_asr_brasil_e_a_serie_de_precisao_cheia_dizem_o_mesmo():
     """``asr_brasil.csv`` é a série de precisão cheia arredondada a 2 casas (Brasil, 30 pontos)."""
     cheia = {
         (r["desfecho"], r["ano"]): Decimal(r["taxa_padronizada"])
-        for r in csv_rows("dados/exposicao/c10_e1_serie_longo.csv")
+        for r in csv_rows("data/exposicao/c10_e1_serie_longo.csv")
         if r["serie"] == "Brasil"
     }
     arred = {
         (r["desfecho"], r["ano"]): Decimal(r["taxa_padronizada"])
-        for r in csv_rows("dados/sim/asr_brasil.csv")
+        for r in csv_rows("data/sim/asr_brasil.csv")
         if r["grupo"] == "Brasil"
     }
     assert len(arred) == 30 and arred.keys() == cheia.keys()
@@ -158,7 +154,7 @@ def test_asr_brasil_e_a_serie_de_precisao_cheia_dizem_o_mesmo():
 def test_fatia_indeterminada_18_0_em_2018_e_30_1_em_2024():
     """Indeterminadas / (agressão + indeterminadas): 18,0% em 2018 e 30,1% em 2024."""
     n = {}
-    for r in csv_rows("dados/sim/sim_agressoes_agregado.csv"):  # óbitos do SIM por ano e grupo
+    for r in csv_rows("data/sim/sim_agressoes_agregado.csv"):  # óbitos do SIM por ano e grupo
         chave = (int(r["ano"]), r["grupo"])
         n[chave] = n.get(chave, 0) + int(r["n"])
 
@@ -170,12 +166,12 @@ def test_fatia_indeterminada_18_0_em_2018_e_30_1_em_2024():
     assert fatia(2018) == Decimal("18.0") and fatia(2024) == Decimal("30.1")
     saida = {  # a mesma razão, na saída que o relatório cita
         int(r["ano"]): r["razao_indet_brasil_pct"]
-        for r in csv_rows("dados/exposicao/c10_e1_serie_longo.csv")
+        for r in csv_rows("data/exposicao/c10_e1_serie_longo.csv")
         if r["serie"] == "Brasil"
     }
     assert _meio_para_cima(saida[2018]) == Decimal("18.0")
     assert _meio_para_cima(saida[2024]) == Decimal("30.1")
-    rel = texto("dados/exposicao/RELATORIO-EXPOSICAO.md")
+    rel = texto("data/exposicao/RELATORIO-EXPOSICAO.md")
     assert "18,0% (2018)" in rel and "30,1% (2024)" in rel
 
 
@@ -184,11 +180,11 @@ def test_pns_mora_com_conjuge_29_49_lgb_e_62_39_het():
     """Moram com cônjuge no domicílio: 29,49% dos adultos LGB+ e 62,39% dos heterossexuais."""
     # neste bloco a coluna "het" guarda a proporção do grupo inteiro e "lgb", a dos solteiros
     # (agressor_risco_pns2019.py grava [rótulo, total, solteiros, ...])
-    linhas = csv_rows("dados/pns/agressor_risco_pns2019.csv")
+    linhas = csv_rows("data/pns/agressor_risco_pns2019.csv")
     r = {x["rotulo"]: x for x in linhas if x["bloco"] == "mora_conjuge"}
     pct = {g: _meio_para_cima(100 * Decimal(r[g]["het"]), "0.01") for g in r}
     assert pct == {"LGB+": Decimal("29.49"), "heterossexuais": Decimal("62.39")}
-    md = texto("dados/pns/agressor_risco_pns2019.md")  # a seção 7 do relatório diz o mesmo
+    md = texto("data/pns/agressor_risco_pns2019.md")  # a seção 7 do relatório diz o mesmo
     assert "## 7. Mora com cônjuge" in md
     assert "LGB+: moram com cônjuge 29,49%" in md
     assert "heterossexuais: moram com cônjuge 62,39%" in md
@@ -202,7 +198,7 @@ def test_pns_razao_por_agressor_com_conjuge_no_domicilio():
     """
     r = {
         x["rotulo"]: x
-        for x in csv_rows("dados/pns/agressor_risco_pns2019.csv")
+        for x in csv_rows("data/pns/agressor_risco_pns2019.csv")
         if x["bloco"] == "rp_ajustada_agressor_conjuge"
     }
     arred = {
@@ -222,13 +218,13 @@ def test_pns_razao_por_agressor_com_conjuge_no_domicilio():
     }
     assert (
         "| Familiar | 6,22 (3,26 a 11,90) | 4,79 (2,58 a 8,90) | 4,43 (2,38 a 8,26) | "
-        "4,31 (2,33 a 7,99) | 85913 |" in texto("dados/pns/agressor_risco_pns2019.md")
+        "4,31 (2,33 a 7,99) | 85913 |" in texto("data/pns/agressor_risco_pns2019.md")
     )
 
 
 def test_pns_razoes_sem_cor_ignorada_mudam_no_maximo_0_02():
     """Sem os 9 adultos de cor ou raça ignorada (8 het, 1 LGB+), as razões mudam até 0,02."""
-    md = texto("dados/pns/agressor_risco_pns2019.md")
+    md = texto("data/pns/agressor_risco_pns2019.md")
     assert "8 heterossexuais e 1 LGB+ na amostra" in md
     linhas = [
         x for x in md.split("## 8.")[1].splitlines() if x.startswith("| ") and "Desfecho" not in x
@@ -252,7 +248,7 @@ def test_custo_fracao_lgb_por_modo_tabela_k2():
     """
     r = {
         (x["opcao"][0], x["fracao"]): x
-        for x in csv_rows("research-2026-10-21-rodada3/F2-custos/opcoes_por_modo.csv")
+        for x in csv_rows("analysis/survey-cost/opcoes_por_modo.csv")
     }
     pnad = {
         f: (x["pi_lgb"], x["n_lgb"], x["mde_fisica"], x["mde_qualquer"])
@@ -265,9 +261,7 @@ def test_custo_fracao_lgb_por_modo_tabela_k2():
         "modulo preenchido pelo proprio morador": ("0.0326", "8976", "0.238", "0.093"),
     }
     # a linha "todos os modos" repete a Tabela 6 (opcoes_resumo.csv): só a fração muda
-    res = {
-        x["opcao"]: x for x in csv_rows("research-2026-10-21-rodada3/F2-custos/opcoes_resumo.csv")
-    }
+    res = {x["opcao"]: x for x in csv_rows("analysis/survey-cost/opcoes_resumo.csv")}
     for (o, f), x in r.items():
         if f == "PNS 2019, todos os modos":
             base = [v for k, v in res.items() if k.startswith(o + ".")][0]
@@ -285,30 +279,21 @@ def test_ggb_terceira_leitura_dos_desacordos_muda_so_um_caso():
     """
     import json
 
-    a = json.loads(texto("research-2026-10-21-rodada3/F3-ggb/dados/adjudicacao.json"))
+    a = json.loads(texto("analysis/ggb-audit/dados/adjudicacao.json"))
     assert (
         a["conferido_pelo_autor"] is True
         and a["codificador_C"]["modelo_registrado"] == "gpt-6-astra"
     )
     muda = {(x["caso"], x["variavel"]): x["final"] for x in a["desacordos"] if x["final"] != x["A"]}
     assert muda == {("1", "desfecho"): "ND", ("159", "morte"): "S", ("159", "tipo"): "H"}
-    v = json.loads(texto("research-2026-10-21-rodada3/F3-ggb/dados/validacao_resumo.json"))
+    v = json.loads(texto("analysis/ggb-audit/dados/validacao_resumo.json"))
     assert (
         v["morte_violenta"],
         v["verificavel_estrito"],
         v["motivo_entre_morte_violenta_confirmada"]["U"],
     ) == (74, 50, 36)
-    k = json.loads(
-        texto("research-2026-10-21-rodada3/F3-ggb/dados/kappa.json")
-    )  # o kappa continua A original x B
+    k = json.loads(texto("analysis/ggb-audit/dados/kappa.json"))  # o kappa continua A original x B
     assert (k["morte"]["kappa"], k["lgbt"]["kappa"], len(k["desacordos"])) == (0.462, 0.912, 6)
-    assert texto("research-2026-10-21-rodada3/F3-ggb/planilha_codificacao.csv") == texto(
-        "research-2026-10-21-rodada3/F3-ggb/dados/codificacao_A.csv"
+    assert texto("analysis/ggb-audit/planilha_codificacao.csv") == texto(
+        "analysis/ggb-audit/dados/codificacao_A.csv"
     )
-
-
-def test_secao_2_6_traz_o_resultado_da_terceira_leitura():
-    """A seção 2.6 traz o resultado da terceira leitura, e não a frase antiga."""
-    ms = texto("paper/v05/MANUSCRITO.md")
-    assert "O efeito dos desacordos sobre as contagens não foi estimado" not in ms
-    assert "as mortes violentas confirmadas passaram de 73 para 74" in ms

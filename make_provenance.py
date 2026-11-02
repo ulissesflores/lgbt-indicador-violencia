@@ -11,14 +11,10 @@ Uso:
 O que entra: todo arquivo versionável sob a raiz, exceto o próprio selo (output/provenance.json,
 output/hash-chain.md), BUILD-STATE.md, caches, .git, .work e .run, e o que o .gitignore exclui por
 regra (microdado bruto, dados nominais).
-O artigo NÃO entra: o repositório vem primeiro e o artigo deriva dele (cita a URL e o chain_hash
-deste selo), então o selo não pode cobrir o próprio artigo. Ficam fora do selo ``paper/paper.md``,
-``paper/AUDIT.md``, ``paper/build/`` (PDF, DOCX, saídas do juiz), ``paper/tools/`` (ferramentas de
-export e auditoria do artigo), ``paper/tests/test_anexo.py`` (testa o build do artigo) e
-``paper/PAPER-SHA256.txt`` (hash do PDF final, gravado depois). O texto da v0.5 (os cinco ``.md`` e
-``SHA256SUMS.txt`` de ``paper/v05/``) segue a mesma regra. As figuras (``paper/figures/``,
-``paper/v05/figures/``), o README de ``paper/v05/`` e os testes de figura ENTRAM: são derivados
-dos dados do repositório.
+O artigo NÃO entra: o repositório vem primeiro e o artigo deriva dele (cita o DOI e o chain_hash
+deste selo), então o selo não pode cobrir o próprio artigo. Ficam fora do selo o PDF publicado
+(``docs/paper/``) e a oficina local do artigo (``paper/``, fora do git). As figuras (``figures/``)
+entram: são derivadas dos dados do repositório.
 Entra byte a byte: a conferência de que os scripts RECALCULAM os derivados (e batem com o commitado)
 é outra etapa (scripts/reproduzir.py), porque o recálculo pode diferir na última casa binária entre
 sistemas; o selo cobre o que está publicado, não o que a máquina de quem confere recalcula.
@@ -47,33 +43,20 @@ EXCLUI_DIRS = {
 }
 # microdado bruto baixado pelos scripts acquire_* (ignorado pelo git): nunca entra no selo
 EXCLUI_PREFIXOS = (
-    "fontes/p3-ggb/",
-    "fontes/q1-textointegral/",
-    "fontes/p2-sim-microdados/",
-    "fontes/p2-sinan-microdados/",
-    "fontes/p2-f8-governos/tse/",
-    "fontes/pns2019/",
+    "sources/public/p3-ggb/",
+    "sources/public/q1-textointegral/",
+    "sources/public/p2-sim-microdados/",
+    "sources/public/p2-sinan-microdados/",
+    "sources/public/p2-f8-governos/tse/",
+    "sources/public/pns2019/",
 )
-RAW_LOCAIS = re.compile(r"(^raw/)|(/dados/raw/)|(/ideologia/raw/)|(/F6-asia-africa/raw/)")
-# Artigo e o que só existe para construí-lo: fora do selo, para sempre (o artigo cita o selo, não o
-# integra). Entram no git num commit posterior; o hash do PDF final vai a paper/PAPER-SHA256.txt.
-# docs/paper/: PDF e DOCX publicados do artigo (norma Codex Hash); runs/: registro de cada
-# execucao selada, que grava o proprio chain_hash (dentro do selo seria circular)
-EXCLUI_PAPER_DIRS = ("paper/build/", "paper/tools/", "docs/paper/", "runs/")
-EXCLUI_PAPER_ARQ = {
-    "paper/paper.md",
-    "paper/AUDIT.md",
-    "paper/PAPER-SHA256.txt",
-    "paper/tests/test_anexo.py",
-    # v0.5: o Material Complementar cita o selo da versão anterior, então o texto da v0.5 fica fora
-    # como paper/paper.md; as figuras e o README de paper/v05/ entram
-    "paper/v05/MANUSCRITO.md",
-    "paper/v05/MATERIAL-COMPLEMENTAR.md",
-    "paper/v05/QUADRO-E2.md",
-    "paper/v05/referencias.md",
-    "paper/v05/referencias-mc.md",
-    "paper/v05/SHA256SUMS.txt",
-}
+RAW_LOCAIS = re.compile(
+    r"(^raw/)|(^data/raw/)|(/dados/raw/)|(/ideology/raw/)|(/regimes-asia-africa/raw/)"
+)
+# Artigo: fora do selo (o artigo cita o selo, não o integra). docs/paper/: PDF publicado e seu
+# SHA256SUMS.txt; paper/: oficina local do artigo, fora do git
+EXCLUI_PAPER_DIRS = ("paper/", "docs/paper/")
+EXCLUI_PAPER_ARQ: set[str] = set()
 EXCLUI_ARQ = {"BUILD-STATE.md", ".DS_Store", "output/provenance.json", "output/hash-chain.md"}
 SOMAS = "manifest/SHA256SUMS.txt"
 

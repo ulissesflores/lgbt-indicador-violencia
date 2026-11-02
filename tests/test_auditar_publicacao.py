@@ -97,9 +97,9 @@ def test_inventario_confere_e_reproduz_o_painel():
     ]
     assert (
         inv["scripts"]["lista_do_titulo"] == 139
-        and inv["scripts"]["da_lista_no_repositorio"] == 128
+        and inv["scripts"]["da_lista_no_repositorio"] == 126
     )
-    assert len(inv["scripts"]["da_lista_fora_do_repositorio"]) == 11
+    assert len(inv["scripts"]["da_lista_fora_do_repositorio"]) == 13
     assert inv["reconciliacao_painel"]["ledgers_do_painel_ausentes_no_repositorio"] == []
 
 
@@ -138,18 +138,18 @@ def test_auditor_falha_com_erro_plantado():
     """
     with tempfile.TemporaryDirectory() as tmp:
         c = _copia(tmp)
-        readme = c / "dados" / "README.md"
+        readme = c / "data" / "README.md"
         readme.write_text(
             readme.read_text(encoding="utf-8") + "\n/" + "Users/fulano/pasta\n", encoding="utf-8"
         )
         assert _rodar(c, "privacidade")[0] == 1
-        ver = c / "research-2026-10-21-rodada3" / "A-textointegral" / "verificacao-metadados.csv"
+        ver = c / "analysis" / "full-text" / "verificacao-metadados.csv"
         linhas = ver.read_text(encoding="utf-8").splitlines()
         k = next(i for i, x in enumerate(linhas) if ",sim,CONFIRMADO," in x)
         linhas[k] = linhas[k].replace(",sim,CONFIRMADO,", ",nao,CONFIRMADO,")
         ver.write_text("\n".join(linhas) + "\n", encoding="utf-8")
         assert _rodar(c, "literatura")[0] == 1
-        (c / "dados" / "script_novo.py").write_text('"""Script plantado."""\n', encoding="utf-8")
+        (c / "data" / "script_novo.py").write_text('"""Script plantado."""\n', encoding="utf-8")
         assert _rodar(c, "inventario")[0] == 1
         # versão divergente entre os metadados (com 1.0.0, acesso aberto é o passo previsto da rc1)
         z = c / ".zenodo.json"

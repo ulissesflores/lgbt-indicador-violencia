@@ -1,8 +1,8 @@
 """Trava os números das quatro reanálises pré-registradas (C02, C03, C05, C08) que o artigo e o dossiê publicam.
 
-Critérios escritos antes de rodar: research-2026-10-21-rodada3/escrutinio/reanalise/CRITERIOS.md (sha256 gravado em CRITERIOS.sha256).
-Lê os CSV gerados pelos scripts (dados/painel/painel_c02_indet.py, painel_c03_event_pesos.py, dados/pns/pns_c05_razao_direta.py,
-dados/ggb/ggb_c08_numeradores.py). C02 e C03 são recalculados por scripts/reproduzir.py; C05 e C08 leem o microdado da PNS (Trilha 2).
+Critérios escritos antes de rodar: analysis/robustness/reanalise/CRITERIOS.md (sha256 gravado em CRITERIOS.sha256).
+Lê os CSV gerados pelos scripts (data/painel/painel_c02_indet.py, painel_c03_event_pesos.py, data/pns/pns_c05_razao_direta.py,
+data/ggb/ggb_c08_numeradores.py). C02 e C03 são recalculados por scripts/reproduzir.py; C05 e C08 leem o microdado da PNS (Trilha 2).
 Tolerâncias: arredondamento do número impresso no artigo.
 """
 import hashlib
@@ -18,16 +18,16 @@ pct = lambda x: 100 * (math.exp(float(x)) - 1)
 
 
 def _c02(grupo, desfecho):
-    for r in csv_rows("dados/painel/c02_indet_resultados.csv"):
+    for r in csv_rows("data/painel/c02_indet_resultados.csv"):
         if r["grupo"] == grupo and r["desfecho"] == desfecho:
             return r
     raise AssertionError((grupo, desfecho))
 
 
 def test_criterios_da_reanalise_com_hash_gravado_antes():
-    gravado = [ln.split()[0] for ln in texto(f"{R3}/escrutinio/reanalise/CRITERIOS.sha256").splitlines()
+    gravado = [ln.split()[0] for ln in texto(f"{R3}/robustness/reanalise/CRITERIOS.sha256").splitlines()
                if ln.strip() and not ln.startswith("#") and ln.split()[-1] == "CRITERIOS.md"][0]
-    real = hashlib.sha256((R3 / "escrutinio" / "reanalise" / "CRITERIOS.md").read_bytes()).hexdigest()
+    real = hashlib.sha256((R3 / "robustness" / "reanalise" / "CRITERIOS.md").read_bytes()).hexdigest()
     assert real == gravado == "c3113104e6932d93a68e55f7567517275ad859582423f5cdf8e59b3e91661053"
 
 
@@ -55,11 +55,11 @@ def test_c03_conversao_exata_dos_limites():
     for g, (lo, hi) in esperado.items():
         assert perto(pct5(reg[g]["ic_lo"]), lo, 0.05) and perto(pct5(reg[g]["ic_hi"]), hi, 0.05), g
     assert "| tx_arma | +0.0009 | 0.0185 | [-0.0353; +0.0371] | [-17.7; +18.5] | [-16.2; +20.4] | [+1.5; +1.8] |" in \
-        texto("dados/painel/c03_event_pesos_resultados.md")
+        texto("data/painel/c03_event_pesos_resultados.md")
 
 
 def test_c03_estudo_de_eventos_cai_nas_duas_direcoes():
-    linhas = {(r["direcao"], r["desfecho"]): r for r in csv_rows("dados/painel/c03_event_pesos_resultados.csv")
+    linhas = {(r["direcao"], r["desfecho"]): r for r in csv_rows("data/painel/c03_event_pesos_resultados.csv")
               if r["painel"] == "BRC (principal)" and r["desenho"] == "estrito"}
     ed = linhas[("esquerda->direita", "tx_total")]
     de = linhas[("direita->esquerda", "tx_total")]
@@ -70,12 +70,12 @@ def test_c03_estudo_de_eventos_cai_nas_duas_direcoes():
 
 
 def test_c03_pesos_do_twfe():
-    assert "- Observações com eps < 0: 46.2%" in texto("dados/painel/c03_event_pesos_resultados.md")
+    assert "- Observações com eps < 0: 46.2%" in texto("data/painel/c03_event_pesos_resultados.md")
 
 
 # ------------------------------------------------------------------ C05: parcela LGB+ entre vítimas, direto no microdado da PNS
 def test_c05_razao_direta_pns():
-    r = [x for x in csv_rows("dados/pns/c05_razao_direta.csv") if x["base"].startswith("(b)") and x["corte"] == "total"][0]
+    r = [x for x in csv_rows("data/pns/c05_razao_direta.csv") if x["base"].startswith("(b)") and x["corte"] == "total"][0]
     assert r["n_vit"] == "3291" and r["n_lgb"] == "179"
     assert perto(r["R"], 7.1, 0.05) and perto(r["lo"], 5.1, 0.05) and perto(r["hi"], 9.1, 0.05)
     assert perto(float(r["se_taylor"]) / float(r["se_jk"]), 1.00, 0.005)  # Taylor e jackknife concordam
@@ -84,7 +84,7 @@ def test_c05_razao_direta_pns():
 
 # ------------------------------------------------------------------ C08: cobertura implícita do GGB com numeradores comparáveis
 def test_c08_numeradores_e_cobertura():
-    c = {(r["ano"], r["numerador"]): r for r in csv_rows("dados/ggb/c08_numeradores.csv")
+    c = {(r["ano"], r["numerador"]): r for r in csv_rows("data/ggb/c08_numeradores.csv")
          if r["desfecho"] == "agressao" and r["prevalencia"] == "1,89%" and r["proxy"] == "False"}
     assert (c[("2023", "N1")]["n"], c[("2024", "N1")]["n"], c[("2023", "N2")]["n"], c[("2024", "N2")]["n"]) == ("221", "269", "94", "167")
     esperado = {("2023", "N0"): 22.9, ("2023", "N1"): 19.7, ("2023", "N2"): 8.4, ("2024", "N0"): 28.7, ("2024", "N1"): 26.6, ("2024", "N2"): 16.5}

@@ -45,7 +45,7 @@ from pathlib import Path
 
 OK, FALHOU, NAO_EXERCIDO = 0, 1, 2
 VEREDITO_LIDO = {"CONFIRMADO", "CONFIRMADO_COM_RESSALVA", "CONTRADITO"}
-VERIFICACAO = "research-2026-10-21-rodada3/A-textointegral/verificacao-metadados.csv"
+VERIFICACAO = "analysis/full-text/verificacao-metadados.csv"
 
 
 def _modulo(nome, arq):
@@ -210,7 +210,7 @@ def check_inventario(raiz):
     inv = json.loads((raiz / "manifest" / "INVENTARIO-PUBLICO.json").read_text(encoding="utf-8"))
     readme = (raiz / "README.md").read_text(encoding="utf-8")
     citados = {
-        "identificadores": f"{inv['fontes']['identificadores_unicos']} identificadores",
+        "identificadores": f"{inv['fontes']['identificadores_unicos']} identifiers",
         "ledgers": f"{inv['ledgers']['n']} ledgers",
         "scripts": f"{inv['scripts']['no_repositorio']} scripts",
     }

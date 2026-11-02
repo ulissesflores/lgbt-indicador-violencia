@@ -1,6 +1,6 @@
 """Baixa e confere a PNS 2019 (microdados + dicionário/layout).
 
-Prepara os arquivos que dados/pns/seguro_pns2019.py lê.
+Prepara os arquivos que data/pns/seguro_pns2019.py lê.
 
 Uso: python3 -I scripts/acquire_pns2019.py [--check]
 Destino: $REPO_ROOT/fontes/q1-textointegral/F2/pns2019/ (ignorado pelo git). Hash esperado:
@@ -17,7 +17,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import _acquire as a
 
-PASTA = "fontes/q1-textointegral/F2/pns2019"
+PASTA = "sources/public/q1-textointegral/F2/pns2019"
 
 if __name__ == "__main__":
     so = "--check" in sys.argv

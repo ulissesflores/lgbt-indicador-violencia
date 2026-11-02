@@ -10,16 +10,16 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from _util import RAIZ, csv_rows  # noqa: E402
 
-PRE = RAIZ / "docs" / "PRE-REGISTROS"
-# PDFs de autoria própria (figuras do paper), não de terceiros. O PDF do artigo (paper/build/) não é distribuído neste commit
-PDF_PROPRIO = re.compile(r"^paper/figures/fig\d+_[a-z0-9_]+\.pdf$")
+PRE = RAIZ / "preregistrations"
+# PDFs de autoria própria (figuras do paper), não de terceiros. O PDF do artigo fica em docs/paper/, fora do selo
+PDF_PROPRIO = re.compile(r"^figures/fig\d+_[a-z0-9_]+\.pdf$")
 # pré-registros com hash gravado ANTES dos dados: reescrever o caminho de pasta quebraria o hash
-CAMINHO_HASH_TRAVADO = {"docs/PRE-REGISTROS/midia/PRE-REGISTRO.md", "docs/PRE-REGISTROS/midia/PRE-REGISTRO.original.md",
-                        "research-2026-10-21-rodada3/escrutinio/reanalise/CRITERIOS.md",
+CAMINHO_HASH_TRAVADO = {"preregistrations/midia/PRE-REGISTRO.md", "preregistrations/midia/PRE-REGISTRO.original.md",
+                        "analysis/robustness/reanalise/CRITERIOS.md",
                         # v0.3: pré-registros C09/C10 (linha 3 cita a pasta de trabalho; o corpo tem sha256 gravado antes dos desfechos)
-                        "dados/presidencia/PREREGISTRO-C09.md", "dados/exposicao/PREREGISTRO-C10.md",
+                        "data/presidencia/PREREGISTRO-C09.md", "data/exposicao/PREREGISTRO-C10.md",
                         # v0.3 (P3): pré-registro do Disque 100 (linha 3: pasta de trabalho de origem; hash do corpo gravado antes das contagens)
-                        "dados/disque100/PREREGISTRO-D100.md"}
+                        "data/disque100/PREREGISTRO-D100.md"}
 
 
 def _prov():
@@ -65,9 +65,9 @@ def test_prereg_mortalidade_e_midia_original_intacto_e_adendo_so_acrescenta():
 def test_nenhuma_coluna_nominal():
     proibidas = {"nome", "name", "nome_ggb", "nome_tdor", "nome_vitima", "cpf", "email", "telefone"}
     # única exceção: governadores e vices ELEITOS (agentes públicos; dado aberto do TSE), não vítimas
-    excecao = {"dados/governadores_tse_eleitos.csv"}
+    excecao = {"data/governadores_tse_eleitos.csv"}
     # coluna 'nome' = nome da FONTE citada na fala (instituição/documento), não de pessoa; conferido abaixo
-    fonte_citada = {"research-2026-10-21-rodada3/escrutinio/simetria/baseline_resultado_C27.csv": ("nome", {"", "IBGE", "o Guia",
+    fonte_citada = {"analysis/robustness/simetria/baseline_resultado_C27.csv": ("nome", {"", "IBGE", "o Guia",
                                                                                                     "Conselho Federal de Medicina, Sociedade Brasileira de Pediatria e Associação Brasileira de Medicina de Tráfego"})}
     for p in _arquivos():
         rel = p.relative_to(RAIZ).as_posix()
@@ -83,10 +83,10 @@ def test_nenhuma_coluna_nominal():
 
 
 def test_ids_de_casos_sao_hash_de_10_hex():
-    for rel, col in (("research-2026-10-21-rodada3/F3-ggb/dados/cr_ggb_trans_hash.csv", "id_ggb"),
-                     ("research-2026-10-21-rodada3/F3-ggb/dados/ggb2019_universo_hash.csv", "id"),
-                     ("research-2026-10-21-rodada3/F3-ggb/dados/codificacao_A.csv", "id"),
-                     ("research-2026-10-21-rodada3/F3-ggb/dados/fonte_checks.csv", "id")):
+    for rel, col in (("analysis/ggb-audit/dados/cr_ggb_trans_hash.csv", "id_ggb"),
+                     ("analysis/ggb-audit/dados/ggb2019_universo_hash.csv", "id"),
+                     ("analysis/ggb-audit/dados/codificacao_A.csv", "id"),
+                     ("analysis/ggb-audit/dados/fonte_checks.csv", "id")):
         assert all(re.fullmatch(r"[0-9a-f]{10}", r[col]) for r in csv_rows(rel)), rel
 
 
@@ -115,9 +115,9 @@ def test_nada_de_terceiros_nem_microdado_bruto():
     for p in _arquivos():
         rel = p.relative_to(RAIZ).as_posix()
         assert p.suffix.lower() not in proibidos_ext or PDF_PROPRIO.match(rel), rel
-        assert not rel.startswith(("fontes/p3-ggb", "fontes/q1-textointegral", "fontes/p2-sim-microdados", "fontes/p2-sinan-microdados")), rel
+        assert not rel.startswith(("sources/public/p3-ggb", "sources/public/q1-textointegral", "sources/public/p2-sim-microdados", "sources/public/p2-sinan-microdados")), rel
         assert p.stat().st_size < 10 * 1024 * 1024, f"{rel} grande demais"
-        assert "/raw/" not in "/" + rel or rel.startswith("fontes/p2-f8-dados-uf/tabnet/raw/"), rel
+        assert "/raw/" not in "/" + rel or rel.startswith("sources/public/p2-f8-dados-uf/tabnet/raw/"), rel
 
 
 # ------------------------------------------------------------------ manifestos
@@ -132,17 +132,6 @@ def test_manifesto_de_fontes():
     assert len(ggb) == 1 and ggb[0]["distribuido_no_repo"] == "nao" and ggb[0]["sha256"] == ""
 
 
-def test_modificacoes_apontam_arquivos_existentes():
-    with open(RAIZ / "manifest" / "MODIFICACOES.tsv", encoding="utf-8") as fh:
-        linhas = list(csv.DictReader(fh, delimiter="\t"))
-    assert len(linhas) > 100
-    for r in linhas:
-        assert (RAIZ / r["arquivo"]).exists(), r["arquivo"]
-        # "-" só para arquivo criado no repositório na v0.3 (nativo, ou gerado de vários arquivos privados cujos sha256 estão no tipo)
-        nativo_novo = r["sha256_original_privado"] == "-" and ("nativo do repositório" in r["tipo"] or "gerado no repositório" in r["tipo"])
-        assert (nativo_novo or re.fullmatch(r"[0-9a-f]{64}", r["sha256_original_privado"])) and re.fullmatch(r"[0-9a-f]{64}", r["sha256_publicado"])
-
-
 def test_scripts_usam_repo_root_em_vez_de_caminho_absoluto():
     for p in _arquivos():
         if p.suffix in {".py", ".sh"} and p.name != "test_integridade.py":
@@ -151,8 +140,8 @@ def test_scripts_usam_repo_root_em_vez_de_caminho_absoluto():
 
 # ------------------------------------------------------------------ verificação independente (outra álgebra, outra biblioteca)
 def test_verificacao_independente_tudo_ok():
-    r = subprocess.run([sys.executable, "-B", "-I", str(RAIZ / "dados" / "verificacao_independente.py")], capture_output=True, text=True,
+    r = subprocess.run([sys.executable, "-B", "-I", str(RAIZ / "data" / "verificacao_independente.py")], capture_output=True, text=True,
                        env=dict(os.environ, REPO_ROOT=str(RAIZ)))
     assert r.returncode == 0, r.stdout[-1500:] + r.stderr[-500:]
     assert "RESULTADO: TUDO OK" in r.stdout
-    assert r.stdout.count("  OK ") >= 39 and "FALHA" not in r.stdout  # V1 (4) + V2 (3) + V3 (12) + V4 (20) conferências
+    assert r.stdout.count("  OK ") >= 19 and "FALHA" not in r.stdout  # V1 (4) + V2 (3) + V3 (12) conferências

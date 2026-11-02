@@ -14,33 +14,15 @@ BUILD-STATE.md
 **/dados/raw/
 **/ideologia/raw/
 **/F6-asia-africa/raw/
-fontes/p3-ggb/
-fontes/q1-textointegral/
-fontes/p2-sim-microdados/
-fontes/p2-sinan-microdados/
-fontes/p2-f8-governos/tse/
-fontes/pns2019/
+sources/public/p3-ggb/
+sources/public/q1-textointegral/
+sources/public/p2-sim-microdados/
+sources/public/p2-sinan-microdados/
+sources/public/p2-f8-governos/tse/
+sources/public/pns2019/
 *.dbc
 *.dbf
-# juiz da rubrica do paper: prompts e respostas cruas (caminhos locais, ids de sessão) ficam fora; os vereditos rodada-N.json ficam
-paper/build/juiz/*.prompt.txt
-paper/build/juiz/*.raw.txt
-paper/build/juiz/*.stdout.txt
-paper/build/juiz/rodada-1.json
-paper/build/juiz/rodada-9.json
-paper/build/fig-embed/
-paper/build/juiz/rodada-v2-1.json
-# Disque 100: os 23 CSV brutos (13 GB) são baixados por dados/disque100/scripts/baixar.py e nunca versionados
-dados/disque100/raw/
-# artigo (v0.4.1 e v0.4.2): de paper/build/ entram no git só o PDF final e os vereditos das rodadas do juiz da v0.4 (rodada-v4-*.json e,
-# a partir da v4-3, o resumo legível rodada-v4-*.md);
-# DOCX, área de trabalho do export, páginas renderizadas, logs, testes do pipeline e PDFs da v0.3 ficam fora
-paper/build/*
-!paper/build/v04/
-paper/build/v04/*
-!paper/build/v04/paper-v04.pdf
-!paper/build/juiz/
-paper/build/juiz/*
-!paper/build/juiz/rodada-v4-*.json
-!paper/build/juiz/rodada-v4-*.md
-paper/tools/__pycache__/
+# Disque 100: os 23 CSV brutos (13 GB) são baixados por data/disque100/scripts/baixar.py e nunca versionados
+data/disque100/raw/
+# oficina local do artigo (texto-fonte e ferramentas de build): fora do repositório
+/paper/

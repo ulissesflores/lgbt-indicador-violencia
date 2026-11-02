@@ -4,7 +4,7 @@ Rodar: /opt/homebrew/bin/python3.14 -B -m pytest -q -p no:cacheprovider tests/  
 import csv, collections, hashlib
 from pathlib import Path
 
-RAIZ = Path(__file__).resolve().parents[1] / "dados" / "exposicao"  # no repositório: tests/ -> dados/exposicao
+RAIZ = Path(__file__).resolve().parents[1] / "data" / "exposicao"  # no repositório: tests/ -> data/exposicao
 DADOS = RAIZ.parent
 
 

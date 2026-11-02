@@ -14,4 +14,4 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import _acquire as a
 
 if __name__ == "__main__":
-    sys.exit(a.principal("TSE", "fontes/p2-f8-governos/tse", "--check" in sys.argv))
+    sys.exit(a.principal("TSE", "sources/public/p2-f8-governos/tse", "--check" in sys.argv))

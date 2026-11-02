@@ -1,6 +1,6 @@
 # Inventário público (gerado por `scripts/inventario_publico.py`; não editar à mão)
 
-sha256 de `manifest/INVENTARIO-PUBLICO.json`: `5d5f82aada816380bef98fff76f077ace4f3a5c33738f86920230a5d539a1e3a`
+sha256 de `manifest/INVENTARIO-PUBLICO.json`: `71ef65bb1179771aa77b33f4c7e0a5d2f971b9fbe9bb55af95cd724d23c877ac`
 
 Contado só com os arquivos deste repositório (o mesmo conjunto do selo), com as regras de identidade, idioma e tipo do painel do artigo.
 
@@ -11,7 +11,7 @@ Contado só com os arquivos deste repositório (o mesmo conjunto do selo), com a
 | Fontes únicas (identificadores) | 1025 | 829 |
 | Obras distintas (sem sufixo de versão) | 1024 | - |
 | Idiomas | 11 | 10 |
-| Scripts Python | 175 | 139 |
+| Scripts Python | 172 | 139 |
 
 ## Regras
 
@@ -20,8 +20,8 @@ Contado só com os arquivos deste repositório (o mesmo conjunto do selo), com a
 - **fonte_unica**: chave_id do painel: DOI minúsculo; URL minúscula sem barra final; URL doi.org vira DOI
 - **obra_distinta**: fonte única sem o sufixo /vN de DOI (mesmo preprint com e sem versão conta uma vez)
 - **idioma**: idioma_do_id do painel: pt e pt-BR fundidos; maioria entre registros; empate pelo ledger consolidado
-- **tipo**: tipo_do_id do painel; quartis de A-textointegral/verificacao-metadados.csv (extraída das planilhas privadas de verificação, só metadados) e das tabelas dos dossiês em docs/dossies/, nessa ordem
-- **scripts**: todo *.py do conjunto; cruzado com a lista dos 139 do título (painel); análise = dados/, simulacao/, research-*; o resto é empacotamento do repositório
+- **tipo**: tipo_do_id do painel; quartis de A-textointegral/verificacao-metadados.csv (extraída das planilhas privadas de verificação, só metadados) e das tabelas dos sources/quartiles-from-literature-reviews.csv, nessa ordem
+- **scripts**: todo *.py do conjunto; cruzado com a lista dos 139 do título (painel); análise = data/ e analysis/; o resto é empacotamento do repositório
 
 ## Fontes por idioma (identificadores únicos)
 
@@ -66,67 +66,70 @@ Diferenças de tipo vêm só das fontes novas da v0.3 (ledgers posteriores ao pa
 
 ## Scripts
 
-- Lista do título (painel): 139; no repositório: 128; fora: 11 (aquisição e ferramentas de lote, que leem material de terceiros não distribuído).
-  - `research-2026-10-21-rodada3/A-textointegral/_lote4_aquisicao/fetch_legit.py`
-  - `research-2026-10-21-rodada3/A-textointegral/entregues/G1-replicacao-ferguson-malouff.py`
-  - `research-2026-10-21-rodada3/A-textointegral/entregues/aplicar_rodada5.py`
-  - `research-2026-10-21-rodada3/A-textointegral/entregues/aplicar_rodada6.py`
-  - `research-2026-10-21-rodada3/F6-asia-africa/raw/_tools/fp.py`
-  - `research-2026-10-21-rodada3/F6-asia-africa/raw/_tools/h2t.py`
-  - `research-2026-10-21-rodada3/F8-literatura/aquisicao-out/adquirir.py`
-  - `research-2026-10-21-rodada3/F8-literatura/aquisicao-out/consolidar.py`
-  - `research-2026-10-21-rodada3/F8-literatura/aquisicao-out/delegado-download.py`
-  - `research-2026-10-21-rodada3/F8-literatura/aquisicao-out2/adquirir.py`
-  - `research-2026-10-21-rodada3/F8-literatura/aquisicao-out3/adquirir-publicos.py`
-- Fora da lista, de análise (24): criados depois do painel (v0.3) ou em pastas de dados.
-  - `dados/disque100/fig_disque_v05.py`
-  - `dados/disque100/scripts/baixar.py`
-  - `dados/disque100/scripts/d100_catalogo.py`
-  - `dados/disque100/scripts/d100_comum.py`
-  - `dados/disque100/scripts/d100_dicionario.py`
-  - `dados/disque100/scripts/d100_estrutura.py`
-  - `dados/disque100/scripts/d100_selo.py`
-  - `dados/disque100/scripts/d100_series.py`
-  - `dados/disque100/scripts/d100_tabular.py`
-  - `dados/disque100/tests/test_d100_regras.py`
-  - `dados/disque100/tests/test_d100_saidas.py`
-  - `dados/exposicao/c10_estrutura.py`
-  - `dados/exposicao/c10_exposicao.py`
-  - `dados/exposicao/fig_caminho_v05.py`
-  - `dados/exposicao/fig_series_por_governo.py`
-  - `dados/painel/painel_r6_ic_wild_invertido.py`
-  - `dados/pns/agressor_risco_pns2019.py`
-  - `dados/pns/fig_agressor_pns2019.py`
-  - `dados/pns/fig_pns_v05.py`
-  - `dados/presidencia/c09_d1_its.py`
-  - `dados/presidencia/c09_d2_painel.py`
-  - `dados/presidencia/c09_estrutura.py`
-  - `research-2026-10-21-rodada3/F3-ggb/scripts/s15_terceiro_codificador.py`
-  - `research-2026-10-21-rodada3/escrutinio/simetria/scripts/r7_parlamento_sensibilidade.py`
-- Fora da lista, de empacotamento (23): (raiz) 2; dashboard 1; paper 2; scripts 9; tests 9.
+- Lista do título (painel): 139; no repositório: 126; fora: 13 (aquisição e ferramentas de lote, que leem material de terceiros não distribuído).
+  - `analysis/full-text/_lote4_aquisicao/fetch_legit.py`
+  - `analysis/full-text/entregues/G1-replicacao-ferguson-malouff.py`
+  - `analysis/full-text/entregues/aplicar_rodada5.py`
+  - `analysis/full-text/entregues/aplicar_rodada6.py`
+  - `analysis/literature/aquisicao-out/adquirir.py`
+  - `analysis/literature/aquisicao-out/consolidar.py`
+  - `analysis/literature/aquisicao-out/delegado-download.py`
+  - `analysis/literature/aquisicao-out2/adquirir.py`
+  - `analysis/literature/aquisicao-out3/adquirir-publicos.py`
+  - `analysis/regimes-asia-africa/raw/_tools/fp.py`
+  - `analysis/regimes-asia-africa/raw/_tools/h2t.py`
+  - `analysis/robustness/_build_triagem.py`
+  - `analysis/robustness/rodar_externos.py`
+- Fora da lista, de análise (25): criados depois do painel (v0.3) ou em pastas de dados.
+  - `analysis/ggb-audit/scripts/s15_terceiro_codificador.py`
+  - `analysis/robustness/simetria/scripts/r7_parlamento_sensibilidade.py`
+  - `data/build_dashboard.py`
+  - `data/disque100/fig_disque_v05.py`
+  - `data/disque100/scripts/baixar.py`
+  - `data/disque100/scripts/d100_catalogo.py`
+  - `data/disque100/scripts/d100_comum.py`
+  - `data/disque100/scripts/d100_dicionario.py`
+  - `data/disque100/scripts/d100_estrutura.py`
+  - `data/disque100/scripts/d100_selo.py`
+  - `data/disque100/scripts/d100_series.py`
+  - `data/disque100/scripts/d100_tabular.py`
+  - `data/disque100/tests/test_d100_regras.py`
+  - `data/disque100/tests/test_d100_saidas.py`
+  - `data/exposicao/c10_estrutura.py`
+  - `data/exposicao/c10_exposicao.py`
+  - `data/exposicao/fig_caminho_v05.py`
+  - `data/exposicao/fig_series_por_governo.py`
+  - `data/painel/painel_r6_ic_wild_invertido.py`
+  - `data/pns/agressor_risco_pns2019.py`
+  - `data/pns/fig_agressor_pns2019.py`
+  - `data/pns/fig_pns_v05.py`
+  - `data/presidencia/c09_d1_its.py`
+  - `data/presidencia/c09_d2_painel.py`
+  - `data/presidencia/c09_estrutura.py`
+- Fora da lista, de empacotamento (21): (raiz) 2; figures 1; scripts 8; tests 10.
 
 ## Ledgers
 
-- `dados/regimes/sources.jsonl`
-- `research-2026-10-10/sources.jsonl`
-- `research-2026-10-11/sources.jsonl`
-- `research-2026-10-12-deep/sources.jsonl`
-- `research-2026-10-21-rodada3/A-textointegral/sources.jsonl`
-- `research-2026-10-21-rodada3/F2-custos/sources.jsonl`
-- `research-2026-10-21-rodada3/F3-ggb/lit/sources.jsonl`
-- `research-2026-10-21-rodada3/F3-ggb/sources.jsonl`
-- `research-2026-10-21-rodada3/F5-economia-politica/sources.jsonl`
-- `research-2026-10-21-rodada3/F6-asia-africa/sources.jsonl`
-- `research-2026-10-21-rodada3/F8-literatura/sources.jsonl`
-- `research-2026-10-21-rodada3/GGB-completo/perfil/sources.jsonl`
-- `research-2026-10-21-rodada3/GGB-completo/series/sources.jsonl`
-- `research-2026-10-21-rodada3/discurso/governos/sources.jsonl`
-- `research-2026-10-21-rodada3/discurso/midia/sources.jsonl`
-- `research-2026-10-21-rodada3/discurso/mortalidade/sources.jsonl`
-- `research-2026-10-21-rodada3/ideologia/sources.jsonl`
-- `research-2026-10-24-v03/L-ledger/sources.jsonl`
-- `research-2026-10-30-contraponto/sources.jsonl`
-- `research-consolidado/sources.jsonl`
+- `analysis/counterpoint/sources.jsonl`
+- `analysis/discourse/governos/sources.jsonl`
+- `analysis/discourse/midia/sources.jsonl`
+- `analysis/discourse/mortalidade/sources.jsonl`
+- `analysis/full-text/sources.jsonl`
+- `analysis/ggb-audit/lit/sources.jsonl`
+- `analysis/ggb-audit/sources.jsonl`
+- `analysis/ggb-series/perfil/sources.jsonl`
+- `analysis/ggb-series/series/sources.jsonl`
+- `analysis/ideology/sources.jsonl`
+- `analysis/literature/sources.jsonl`
+- `analysis/political-economy/sources.jsonl`
+- `analysis/regimes-asia-africa/sources.jsonl`
+- `analysis/survey-cost/sources.jsonl`
+- `data/regimes/sources.jsonl`
+- `sources/ledgers/ledger-01/sources.jsonl`
+- `sources/ledgers/ledger-02/sources.jsonl`
+- `sources/ledgers/ledger-03/sources.jsonl`
+- `sources/ledgers/ledger-04/sources.jsonl`
+- `sources/ledgers/ledger-05/sources.jsonl`
 
-Posteriores ao painel: `dados/regimes/sources.jsonl`, `research-2026-10-24-v03/L-ledger/sources.jsonl`, `research-2026-10-30-contraponto/sources.jsonl`.
+Posteriores ao painel: `analysis/counterpoint/sources.jsonl`, `data/regimes/sources.jsonl`, `sources/ledgers/ledger-04/sources.jsonl`.
 Do painel e ausentes aqui: nenhum.

@@ -39,8 +39,7 @@ jobs:
       - run: pipx run interrogate run_all.py make_provenance.py scripts/ tests/test_auditar_publicacao.py
   lint-pesquisa:
     runs-on: ubuntu-latest
-    # informativo: scripts de pesquisa copiados do projeto de origem; reformatá-los quebraria a correspondência registrada em
-    # manifest/MODIFICACOES.tsv e mudaria arquivos cobertos pelo selo sem mudar lógica (ver pyproject.toml)
+    # informativo: scripts de pesquisa; reformatá-los mudaria arquivos cobertos pelo selo sem mudar lógica
     continue-on-error: true
     steps:
       - uses: actions/checkout@v4

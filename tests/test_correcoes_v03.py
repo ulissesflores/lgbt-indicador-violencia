@@ -17,7 +17,7 @@ CONTAGENS = ("n_interpessoal", "m_ign_branco", "m_nao_se_aplica", "m_lgbtfobia",
 
 # ------------------------------------------------------------------ R2: soma das 27 UFs = BR
 def _sinan():
-    return csv_rows("dados/sinan/serie_campo55_uf_ano.csv")
+    return csv_rows("data/sinan/serie_campo55_uf_ano.csv")
 
 
 def test_r2_soma_das_27_ufs_igual_a_linha_br_em_todas_as_colunas():
@@ -34,14 +34,14 @@ def test_r2_soma_das_27_ufs_igual_a_linha_br_em_todas_as_colunas():
 
 def test_r2_serie_auxiliar_usa_o_total_nacional_sem_duplicar():
     br = {r["ano"]: int(r["m_lgbtfobia"]) for r in _sinan() if r["uf"] == "BR"}
-    ser = {r["ano"]: r["sinan_lgbtfobia_n"] for r in csv_rows("research-2026-10-21-rodada3/F3-ggb/dados/serie_ggb_vs_cobertura.csv")}
+    ser = {r["ano"]: r["sinan_lgbtfobia_n"] for r in csv_rows("analysis/ggb-audit/dados/serie_ggb_vs_cobertura.csv")}
     for a, v in br.items():
         assert int(ser[a]) == v, (a, ser[a], v)
     assert (br["2023"], br["2024"], br["2025"]) == (2173, 2264, 2410)
     # controle negativo: somar TODAS as linhas (o erro antigo) dá o dobro, e o teste acima o reprovaria
     todas = sum(int(r["m_lgbtfobia"]) for r in _sinan() if r["ano"] == "2023")
     assert todas == 2 * br["2023"] == 4346 and todas != int(ser["2023"])
-    assert 'if r["uf"] == "BR"' in texto("research-2026-10-21-rodada3/F3-ggb/scripts/s09_uf_series.py")
+    assert 'if r["uf"] == "BR"' in texto("analysis/ggb-audit/scripts/s09_uf_series.py")
 
 
 # ------------------------------------------------------------------ R1: 1.554 observados, MDE 60,7%, 305.955 adultos
@@ -60,9 +60,9 @@ def _mde(p1, n_eff):
 
 
 def test_r1_pns_2019_observada_tem_1554_lgb_e_detecta_60_7_por_cento():
-    g = [r for r in csv_rows("research-2026-10-21-rodada3/F2-custos/deff_pns2019.csv") if r["indicador"] == "fisica" and r["dominio"] == "LGB+"][0]
+    g = [r for r in csv_rows("analysis/survey-cost/deff_pns2019.csv") if r["indicador"] == "fisica" and r["dominio"] == "LGB+"][0]
     assert g["n"] == "1554"
-    cap = {r["indicador"]: r for r in csv_rows("research-2026-10-21-rodada3/F2-custos/capacidade_por_opcao.csv") if r["opcao"].startswith("B'")}
+    cap = {r["indicador"]: r for r in csv_rows("analysis/survey-cost/capacidade_por_opcao.csv") if r["opcao"].startswith("B'")}
     assert {r["n_lgb"] for r in cap.values()} == {"1554"}
     mde = _mde(float(g["est"]), 1554 / float(g["deff"]))
     assert round(mde, 3) == float(cap["fisica"]["mde_deff_medido"]) == 0.607
@@ -70,34 +70,34 @@ def test_r1_pns_2019_observada_tem_1554_lgb_e_detecta_60_7_por_cento():
 
 
 def test_r1_adultos_a_triar_arredondados_uma_vez():
-    nec = [r for r in csv_rows("research-2026-10-21-rodada3/F2-custos/n_necessario.csv")
+    nec = [r for r in csv_rows("analysis/survey-cost/n_necessario.csv")
            if r["indicador"] == "fisica" and r["mudanca_rel"] == "0.3" and r["sobreamostra_k"] == "1"][0]
-    cen = [r for r in csv_rows("research-2026-10-21-rodada3/F2-custos/cenarios_n_custo.csv")
+    cen = [r for r in csv_rows("analysis/survey-cost/cenarios_n_custo.csv")
            if r["indicador"] == "fisica" and r["mudanca_rel"] == "0.3" and r["deff_base"] == "deff medido"][0]
     assert cen["adultos_a_triar"] == nec["n_total_por_rodada"] == "305955" and cen["n_lgb_necessario"] == nec["n_lgb_desenho_por_rodada"] == "5787"
-    pi = float([r for r in csv_rows("research-2026-10-21-rodada3/F2-custos/deff_pns2019.csv") if r["indicador"] == "lgb"][0]["est"])
+    pi = float([r for r in csv_rows("analysis/survey-cost/deff_pns2019.csv") if r["indicador"] == "lgb"][0]["est"])
     assert math.ceil(5787 / pi) == 305993                                   # controle: o arredondamento duplo antigo dá outro número
 
 
 # ------------------------------------------------------------------ R4: N2 é cenário; faixas pelas marginais do GGB
 def test_r4_n2_nao_e_limite_e_o_contraexemplo_de_2024_vale():
-    c = {(r["ano"], r["cenario"][:22]): int(r["n"]) for r in csv_rows("dados/ggb/c08_cenarios_marginais.csv")}
+    c = {(r["ano"], r["cenario"][:22]): int(r["n"]) for r in csv_rows("data/ggb/c08_cenarios_marginais.csv")}
     assert c[("2024", "contraexemplo do Astra")] == 269 - (96 + 6 - 3) - 6 == 164 < 167
-    mins = {a: int(r["n"]) for r in csv_rows("dados/ggb/c08_cenarios_marginais.csv") for a in [r["ano"]] if "mínimo compatível com" in r["cenario"]}
-    maxs = {a: int(r["n"]) for r in csv_rows("dados/ggb/c08_cenarios_marginais.csv") for a in [r["ano"]] if "máximo compatível com" in r["cenario"]}
+    mins = {a: int(r["n"]) for r in csv_rows("data/ggb/c08_cenarios_marginais.csv") for a in [r["ano"]] if "mínimo compatível com" in r["cenario"]}
+    maxs = {a: int(r["n"]) for r in csv_rows("data/ggb/c08_cenarios_marginais.csv") for a in [r["ano"]] if "máximo compatível com" in r["cenario"]}
     assert (mins["2023"], maxs["2023"], mins["2024"], maxs["2024"]) == (100, 118, 164, 168)
     assert 94 < mins["2023"] and mins["2024"] < 167 <= maxs["2024"]       # N2 abaixo da faixa em 2023, dentro em 2024: não é limite
-    py = texto("dados/ggb/ggb_c08_numeradores.py")
+    py = texto("data/ggb/ggb_c08_numeradores.py")
     assert "N2 é LIMITE INFERIOR do numerador cis LGB:" not in py and "CENÁRIO DE SUBTRAÇÃO" in py
-    assert "fora do denominador PNS)" not in texto("dados/ggb/cobertura_implicita.md")
+    assert "fora do denominador PNS)" not in texto("data/ggb/cobertura_implicita.md")
 
 
 # ------------------------------------------------------------------ R6: IC por inversão do wild-cluster (forma pré-registrada)
 def test_r6_preregistro_intacto_e_intervalos_contem_zero():
-    linha = texto("dados/painel/R6-PREREGISTRO-FORMA.sha256").split()
-    assert hashlib.sha256((RAIZ / "dados/painel/R6-PREREGISTRO-FORMA.md").read_bytes()).hexdigest() == linha[0]
-    r6 = {r["grupo"]: r for r in csv_rows("dados/painel/r6_ic_wild_invertido.csv")}
-    c02 = {r["grupo"]: r for r in csv_rows("dados/painel/c02_indet_resultados.csv") if r["desfecho"] == "registrado_ln"}
+    linha = texto("data/painel/R6-PREREGISTRO-FORMA.sha256").split()
+    assert hashlib.sha256((RAIZ / "data/painel/R6-PREREGISTRO-FORMA.md").read_bytes()).hexdigest() == linha[0]
+    r6 = {r["grupo"]: r for r in csv_rows("data/painel/r6_ic_wild_invertido.csv")}
+    c02 = {r["grupo"]: r for r in csv_rows("data/painel/c02_indet_resultados.csv") if r["desfecho"] == "registrado_ln"}
     assert set(r6) == set(c02) and len(r6) == 6
     pct = lambda b: 100 * (math.exp(5 * b) - 1)
     for g, r in r6.items():
@@ -119,8 +119,8 @@ def _fisher(a, n1, b, n2):
 
 
 def test_r7_fisher_das_duas_codificacoes():
-    r7 = {(r["variavel"], r["a"], r["n1"]): r for r in csv_rows("research-2026-10-21-rodada3/escrutinio/simetria/r7_parlamento_sensibilidade.csv")}
+    r7 = {(r["variavel"], r["a"], r["n1"]): r for r in csv_rows("analysis/robustness/simetria/r7_parlamento_sensibilidade.csv")}
     assert round(float(r7[("fonte primária", "0", "49")]["p_fisher"]), 4) == round(_fisher(0, 49, 2, 38), 4) == 0.1879
     assert round(float(r7[("fonte primária", "1", "49")]["p_fisher"]), 4) == round(_fisher(1, 49, 2, 38), 4) == 0.5784
     assert r7[("fonte nomeada (qualquer fonte)", "8", "49")]["b"] == "3"
-    assert "não codificada" in texto("research-2026-10-21-rodada3/escrutinio/simetria/r7_parlamento_sensibilidade.md")
+    assert "não codificada" in texto("analysis/robustness/simetria/r7_parlamento_sensibilidade.md")

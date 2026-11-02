@@ -1,10 +1,10 @@
 {
   "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
   "@type": "SoftwareSourceCode",
-  "name": "Mortalidade e violência contra pessoas LGBT+ no Brasil: o que os dados públicos permitem afirmar — uma auditoria de fontes e indicadores, 2010–2026",
+  "name": "Mortality and violence against LGBT+ people in Brazil: what public data allow us to claim — an audit of sources and indicators, 2010–2026",
   "identifier": "https://doi.org/10.5281/zenodo.23873858",
-  "description": "Repositório do artigo \"Mortalidade e violência contra pessoas LGBT+ no Brasil: o que os dados públicos permitem afirmar\" (versão 0.5 do texto; PDF em docs/paper/paper-final.pdf, padrão Codex Hash e APA 7, com os Apêndices A a M). Reúne os dados derivados e o código que recalculam os números publicados: reanálise da PNS 2019 (violência relatada por orientação sexual, quem agrediu, estado civil e coabitação), taxas do SIM padronizadas por idade, campo de motivação do Sinan, boletins e Disque 100, conferência de 160 casos da lista do GGB e checagem da LiHS, séries por período de governo, poder e custo de um levantamento, pré-registros datados com hash, os pareceres de três modelos de linguagem com as respostas, e testes que travam os números. Nenhum dado nominal, nenhum PDF de terceiros e nenhum microdado bruto são distribuídos: o manifesto traz URL e data de acesso de cada fonte e, quando houve arquivo salvo, o SHA-256.",
-  "version": "1.0.0",
+  "description": "Data, code and verification material for the article “Mortalidade e violência contra pessoas LGBT+ no Brasil: o que os dados públicos permitem afirmar” (Portuguese; English, Spanish and Italian translations to follow). It holds the derived data and the code that recompute every number in the article: a re-analysis of the 2019 Brazilian National Health Survey (violence reported by sexual orientation, who the aggressor was, marital status and cohabitation), age-standardised homicide rates from the Mortality Information System, the motive field of violence notifications, police reports and the Disque 100 hotline, an audit of 160 cases from the Grupo Gay da Bahia list, homicide series by government period, and the statistical power and cost of a victimisation survey. It also holds dated pre-registrations with their SHA-256, tests that lock the published numbers, and a SHA-256 chain that seals the whole distribution. No nominal data, third-party PDFs or raw microdata are distributed: the source manifest gives the URL and access date of every source and, when a file was saved, its SHA-256.",
+  "version": "1.1.0",
   "license": [
     "https://spdx.org/licenses/Apache-2.0",
     "https://spdx.org/licenses/CC-BY-4.0"
@@ -26,16 +26,17 @@
     }
   ],
   "keywords": [
-    "LGBTfobia",
-    "violência",
-    "Brasil",
-    "indicadores",
-    "reprodutibilidade",
-    "hash-chain",
-    "pré-registro"
+    "LGBT+",
+    "violence",
+    "mortality",
+    "Brazil",
+    "public statistics",
+    "underreporting",
+    "reproducibility",
+    "pre-registration"
   ],
   "relatedLink": [
     "https://ulissesflores.com"
   ],
-  "dateModified": "2026-11-01"
+  "dateModified": "2026-11-02"
 }

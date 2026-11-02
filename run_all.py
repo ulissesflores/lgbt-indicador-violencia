@@ -39,9 +39,7 @@ def rodar_testes():
         (passaram, total sem os pulados, pulados).
     """
     ok = total = pulados = 0
-    for arq in sorted(
-        [*(RAIZ / "tests").glob("test_*.py"), *(RAIZ / "paper" / "tests").glob("test_*.py")]
-    ):
+    for arq in sorted([*(RAIZ / "tests").glob("test_*.py")]):
         mod = runpy.run_path(str(arq))
         for nome, fn in mod.items():
             if nome.startswith("test_") and callable(fn):
