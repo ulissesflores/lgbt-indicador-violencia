@@ -1,7 +1,7 @@
 # Artigo v0.5: Mortalidade e violência contra pessoas LGBT+ no Brasil
 
-Texto da versão 0.5 do artigo, com os Apêndices B a M (o antigo Material Complementar) e o quadro de afirmações. O PDF,
-no padrão Codex Hash e em APA 7, entra em `docs/paper/paper-final.pdf` na versão 1.0.0 final, já com o DOI (gerado por `paper/tools/build_v05.sh`). O repositório vem primeiro e o artigo deriva dele: todo
+Texto da versão 0.5 do artigo, com os Apêndices B a M (o antigo Material Complementar) e o quadro de afirmações. O PDF publicado,
+no padrão Codex Hash e em APA 7, está em `docs/paper/paper-final.pdf` (gerado por `paper/tools/build_v05.sh`). O repositório vem primeiro e o artigo deriva dele: todo
 número do texto tem arquivo que o produz em `dados/` (o quadro `QUADRO-E2.md` liga cada afirmação ao arquivo, e `tests/test_numeros_v05.py`
 trava os números novos de LiHS, variação da taxa por governo, causa indeterminada e coabitação; os demais números vêm dos arquivos de `dados/` e de seus testes).
 

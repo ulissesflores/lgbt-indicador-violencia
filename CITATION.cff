@@ -13,6 +13,14 @@ authors:
     affiliation: "Codex Hash Research Laboratory"
 type: dataset
 version: 1.0.0
+doi: "10.5281/zenodo.23873858"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23873858"
+    description: "DOI de conceito (todas as versões)"
+  - type: doi
+    value: "10.5281/zenodo.23873859"
+    description: "DOI do pré-lançamento v1.0.0-rc1 (sem o PDF do artigo)"
 date-released: 2026-11-01
 license:
   - Apache-2.0

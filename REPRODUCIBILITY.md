@@ -24,7 +24,7 @@ conjunto selado `paper/paper.md`, `paper/AUDIT.md`, `paper/build/` (PDF, DOCX, s
 auditoria), `paper/tests/test_anexo.py` (testa o build do artigo), `paper/PAPER-SHA256.txt` e, desde a v0.5, o texto-fonte (`paper/v05/*.md`), o PDF e o DOCX publicados (`docs/paper/`) e o registro de cada execução selada (`runs/`, que grava o próprio `chain_hash`). As figuras (`paper/figures/`) e os testes
 de figura entram no selo. O primeiro commit público (`0601c65`) não contém o artigo; ele entra no segundo commit, com a versão 0.4.4
 do texto e o PDF único (`paper/build/v04/paper-v04.pdf`), e o SHA-256 do texto e do PDF fica em `paper/PAPER-SHA256.txt` (arquivo à
-parte, criado depois do PDF, fora do selo). O texto-fonte do artigo v0.5 (`paper/v05/`) entra no commit que dispara o DOI; o PDF e o DOCX (`docs/paper/paper-final.{pdf,docx}`, gerados por `paper/tools/build_v05.sh`) entram só no commit da versão 1.0.0 final, já com o DOI, para que nenhum PDF sem o identificador fique público.
+parte, criado depois do PDF, fora do selo). O artigo v0.5 (`docs/paper/paper-final.pdf`, gerado por `paper/tools/build_v05.sh`) entra no commit da versão 1.0.0 final, já com o DOI de conceito (10.5281/zenodo.23873858); o pré-lançamento `v1.0.0-rc1`, que gerou o DOI, foi publicado sem o PDF, para que nenhum PDF sem o identificador ficasse público.
 
 ## Trilha 1: leve (conferência dos derivados, ~6 min)
 

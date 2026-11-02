@@ -44,5 +44,3 @@ paper/build/juiz/*
 !paper/build/juiz/rodada-v4-*.json
 !paper/build/juiz/rodada-v4-*.md
 paper/tools/__pycache__/
-# PDF e DOCX do artigo v0.5: entram só no commit da versão 1.0.0 final, já com o DOI (decisão do autor, 2026-11-01)
-docs/paper/

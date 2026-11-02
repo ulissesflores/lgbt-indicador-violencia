@@ -11,7 +11,7 @@
 ![python](https://img.shields.io/badge/python-3.12%2B-blue)
 ![tests](https://img.shields.io/badge/tests-pytest_%2B_run__all-brightgreen)
 ![reproducible](https://img.shields.io/badge/reproducible-SHA--256_chain-success)
-![doi](https://img.shields.io/badge/DOI-a_ser_atribu%C3%ADdo-lightgrey)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23873858.svg)](https://doi.org/10.5281/zenodo.23873858)
 
 </div>
 
@@ -28,11 +28,11 @@
 > denominador de survey não casam. (7) Nenhum dos 72 coeficientes do painel de governadores (351 UF-anos) é distinguível de zero; o teste
 > de falsificação com causa indeterminada também é nulo, e o estudo de eventos é inconclusivo (a taxa cai depois de trocas nos dois sentidos).
 
-Artigo (texto v0.5; repositório 1.0.0): o repositório vem primeiro e o artigo deriva dele. O PDF (padrão Codex Hash, APA 7, com os Apêndices A a M; DOCX ao lado) entra em `docs/paper/` na versão 1.0.0 final, já com o DOI deste depósito; até lá, o texto-fonte está em [`paper/v05/`](paper/v05/); ambos citam a URL deste repositório e ficam FORA do selo, com o SHA-256 em `paper/PAPER-SHA256.txt` (ver [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md)). A versão anterior do artigo (0.4.4) continua em `paper/paper.md` e `paper/build/v04/paper-v04.pdf`, com a auditoria em [`paper/AUDIT.md`](paper/AUDIT.md) · dossiê técnico: [`docs/dossies/DOSSIE-CONSOLIDADO-2026-10-12.md`](docs/dossies/DOSSIE-CONSOLIDADO-2026-10-12.md) · *English: public repository of a study of what Brazilian public data can and cannot say about violence and mortality among LGBT+ people; derived data, code, dated pre-registrations with hashes and tests that lock the published numbers. No names, no third-party PDFs, no raw microdata.*
+Artigo (texto v0.5; repositório 1.0.0): o repositório vem primeiro e o artigo deriva dele. O PDF publicado é [`docs/paper/paper-final.pdf`](docs/paper/paper-final.pdf) (padrão Codex Hash, APA 7, com os Apêndices A a M; DOCX ao lado), e o texto-fonte está em [`paper/v05/`](paper/v05/); ambos citam a URL deste repositório e ficam FORA do selo, com o SHA-256 em `paper/PAPER-SHA256.txt` (ver [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md)). A versão anterior do artigo (0.4.4) continua em `paper/paper.md` e `paper/build/v04/paper-v04.pdf`, com a auditoria em [`paper/AUDIT.md`](paper/AUDIT.md) · dossiê técnico: [`docs/dossies/DOSSIE-CONSOLIDADO-2026-10-12.md`](docs/dossies/DOSSIE-CONSOLIDADO-2026-10-12.md) · *English: public repository of a study of what Brazilian public data can and cannot say about violence and mortality among LGBT+ people; derived data, code, dated pre-registrations with hashes and tests that lock the published numbers. No names, no third-party PDFs, no raw microdata.*
 
 ## O que há de novo na v0.5 (2026-10-31)
 
-- **Texto novo do artigo**, com dois eixos (o que os dados mostram e o que não mostram), o quadro de 25 frases do debate (Tabela 2) e a mesma régua para os dois lados; o PDF entra na versão 1.0.0 final, com o DOI.
+- **Texto novo do artigo**, com dois eixos (o que os dados mostram e o que não mostram), o quadro de 25 frases do debate (Tabela 2) e a mesma régua para os dois lados; PDF em [`docs/paper/paper-final.pdf`](docs/paper/paper-final.pdf).
 - **Análises novas da PNS 2019** (feitas depois de ver os resultados e declaradas assim): quem agrediu e o risco por tipo de agressor, estado civil, coabitação e modo de preenchimento (`dados/pns/agressor_risco_pns2019.py`).
 - **Séries por período de governo** (Figura 8; `dados/exposicao/fig_series_por_governo.py`) e **checagem crítica da lista do GGB** pela LiHS ([`research-2026-10-30-contraponto/`](research-2026-10-30-contraponto/)).
 - **Revisão por três modelos de linguagem** (GPT-6 Astra, Gemini 4 Argon e Grok 4.7), com os três lendo o texto e este repositório, em quatro rodadas e uma rodada de pré-publicação; pareceres e respostas em [`paper/v05/revisao/`](paper/v05/revisao/).
@@ -269,7 +269,7 @@ reproduzir (o recálculo das séries roda na réplica; a tabulação dos 14 GB d
 
 | Peça | Onde | Observação |
 | --- | --- | --- |
-| Artigo científico (PT-BR), versão 0.5 (a deste depósito) | texto-fonte em [`paper/v05/`](paper/v05/); o PDF e o DOCX (um PDF, com os Apêndices A a M) entram em `docs/paper/` na versão 1.0.0 final, já com o DOI | deriva deste repositório (cita a URL); fora do selo; SHA-256 do texto em `paper/PAPER-SHA256.txt` (o do PDF e do DOCX entra com eles); gerado por `paper/tools/build_v05.sh` |
+| Artigo científico (PT-BR), versão 0.5 (a deste depósito) | [`docs/paper/paper-final.pdf`](docs/paper/paper-final.pdf) e `paper-final.docx` (um PDF, com os Apêndices A a M); texto-fonte em [`paper/v05/`](paper/v05/) | deriva deste repositório (cita a URL); fora do selo; SHA-256 do PDF, do DOCX e do texto em `paper/PAPER-SHA256.txt`; gerado por `paper/tools/build_v05.sh` |
 | Artigo, versão anterior (0.4.4) | [`paper/paper.md`](paper/paper.md) e [`paper/build/v04/paper-v04.pdf`](paper/build/v04/paper-v04.pdf) | mantida para o histórico; auditoria em `paper/AUDIT.md` |
 | Revisão externa da v0.2 e respostas | [`O que há de novo na v0.3`](#o-que-há-de-novo-na-v03-2026-10-24), `manifest/MODIFICACOES.tsv` (linhas `v0.3-R` e `v0.3-S`) | cada ataque conferido no arquivo; correção com o número antigo ao lado, ou "não procede" |
 | Figuras do artigo | [`paper/figures/`](paper/figures/) (`make_figures.py`, valores desenhados, cópias das fontes com sha256) | `paper/tests/test_figuras.py` reabre as fontes com parser próprio e confere cada barra e intervalo |
@@ -402,11 +402,12 @@ O repositório (dados derivados, código e testes):
   title   = {Mortalidade e viol{\^e}ncia contra pessoas LGBT+ no Brasil: o que os dados p{\'u}blicos permitem afirmar --- uma auditoria de fontes e indicadores, 2010--2026},
   year    = {2026},
   version = {1.0.0},
-  url     = {https://github.com/ulissesflores/lgbt-indicador-violencia}
+  doi     = {10.5281/zenodo.23873858},
+  url     = {https://doi.org/10.5281/zenodo.23873858}
 }
 ```
 
-Sem DOI nesta versão (a ser atribuído no release); o DOI de conceito entrará aqui, no `CITATION.cff`, no `codemeta.json` e no `.zenodo.json` depois da publicação. Ver [`CITATION.cff`](CITATION.cff).
+DOI de conceito (leva sempre à versão mais recente): [10.5281/zenodo.23873858](https://doi.org/10.5281/zenodo.23873858). O pré-lançamento `v1.0.0-rc1`, que gerou o DOI sem o PDF do artigo, tem o DOI de versão [10.5281/zenodo.23873859](https://doi.org/10.5281/zenodo.23873859). Ver [`CITATION.cff`](CITATION.cff).
 
 ## Licença
 

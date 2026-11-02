@@ -1,5 +1,5 @@
 {
- "chain_hash": "b7f4af26fc4fcb8c769ac0ebfc1f57d84ffc8a7f4664021ec78cf6da2b05b259",
+ "chain_hash": "3449e47aa19875b5c33feb8fc5eab9bd63f20c2f8f8e2d7bd263e0b0937d8cfe",
  "n_arquivos": 785,
  "arquivos": [
   {
@@ -8,7 +8,7 @@
   },
   {
    "arquivo": ".gitignore",
-   "sha256": "168f930d31f0818e4cda66f8eff1a2b89ce2f8cf1b7fe1a1d9eca1034bd7ec05"
+   "sha256": "21fa3d8481b3c31cc4f4f55606d4f6c9b546e893330026745dfff7115f2f15f2"
   },
   {
    "arquivo": ".zenodo.json",
@@ -16,11 +16,11 @@
   },
   {
    "arquivo": "CHANGELOG.md",
-   "sha256": "33d611702d38f7e687528c5f5e247b656d881ab14c9e68bc11e57710de6c4b61"
+   "sha256": "32f47aaab692e2fb310195205bb2b93f7f1dae9d0ecd73d3f448b7b67d545a8e"
   },
   {
    "arquivo": "CITATION.cff",
-   "sha256": "77f817603e2fe937e55e1e5cd91c2c400f345b0c15243dee26e6f3b1ac187c93"
+   "sha256": "61d4998c02ce84a03657ad62f84564c70be1a275d5ed69c61bfe732bd582d4f0"
   },
   {
    "arquivo": "LICENSE",
@@ -40,11 +40,11 @@
   },
   {
    "arquivo": "README.md",
-   "sha256": "39be28a1489d13f32688325ad3478f2348ff0f61e0e0f877facbe963b520d142"
+   "sha256": "0a8401dfc5934b577f10976c539bf02c64bcc29cbd79f8003ff387eb2066ad9c"
   },
   {
    "arquivo": "REPRODUCIBILITY.md",
-   "sha256": "e586241b066b71e63b92c7b52a6665d8df6988d99bd45569988dedeff2739579"
+   "sha256": "0e7f6824e01cc5d7be67c17ca299d18674aaa2341ff0168e30880008663a17e8"
   },
   {
    "arquivo": "ROADMAP.md",
@@ -52,7 +52,7 @@
   },
   {
    "arquivo": "codemeta.json",
-   "sha256": "1271c194b7c7df4ac0aa327fcabe76981d84478aeb077e3d96078a45f2318aa2"
+   "sha256": "b8248de8b722595bfc3c89141c6923bdf74ce381514597b8e0d7e62aafabf874"
   },
   {
    "arquivo": "dados/README.md",
@@ -1092,7 +1092,7 @@
   },
   {
    "arquivo": "manifest/SHA256SUMS.txt",
-   "sha256": "ad21aa7b6ac6875605926b7a6d8fd2eefc277ae1193bcc9115230024a0e2f3c5"
+   "sha256": "105f0e56f1ff4f5f2e77a31c9fe657c98ab79075d157989ba4d2c0710d11498b"
   },
   {
    "arquivo": "paper/figures/FIGURAS-V2.md",
@@ -1640,7 +1640,7 @@
   },
   {
    "arquivo": "paper/v05/README.md",
-   "sha256": "44dcf395f914be6556c6524d7a79955ace7f8503ef0e79e5e72d827bbb040f30"
+   "sha256": "e057f4bd4295a8b77b5982fce0860bd28f6d181ba1a7d543dcb44d7a04e767a8"
   },
   {
    "arquivo": "paper/v05/figures/fig10_identificabilidade.png",
@@ -3064,7 +3064,7 @@
   },
   {
    "arquivo": "scripts/auditar_publicacao.py",
-   "sha256": "716ceec3d1c03ed650b469dfbb86c77645500e110c91a60a24ff6290271812b9"
+   "sha256": "ea21eff28bb18f1beb50550b23f27733324409848f7758574beaef9a6c6ce4e3"
   },
   {
    "arquivo": "scripts/inventario_publico.py",

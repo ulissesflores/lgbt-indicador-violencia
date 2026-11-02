@@ -330,6 +330,8 @@ def check_release(raiz, final=False):
             ".zenodo.json: access_right deveria ser 'closed' (até o aval) ou 'open' (commit da rc1)"
         )
     cab_cff = (raiz / "CITATION.cff").read_text(encoding="utf-8").split("references:")[0]
+    # depois que a rc1 gerou o DOI, ele entra nos metadados: a partir daí a conferência é a final
+    final = final or bool(re.search(r"10\.5281/zenodo\.\d+", cab_cff))
     if final:
         # depois do DOI: o identificador do Zenodo nos metadados e no README, com acesso aberto
         doi = re.search(r"10\.5281/zenodo\.\d+", cab_cff)
@@ -355,13 +357,18 @@ def check_release(raiz, final=False):
             f"sem DOI próprio; access_right '{zen.get('access_right')}' "
             "(vira 'open' no commit da rc1, com o aval do autor)"
         )
-    etapa = "final" if final else "pré-release"
-    msgs.append(
-        f"NÃO EXERCIDO ({etapa}): ainda não há repositório público, toggle do Zenodo, "
-        "release rc1 nem DOI; "
-        "a sequência repositório -> Zenodo -> rc1 -> DOI -> final "
-        "só pode ser conferida depois do aval do autor"
-    )
+    if final:
+        msgs.append(
+            "NÃO EXERCIDO (final): a release e o depósito no Zenodo são conferidos fora deste "
+            "script (gh release view; API do Zenodo e resolução do DOI por CSL)"
+        )
+    else:
+        msgs.append(
+            "NÃO EXERCIDO (pré-release): ainda não há repositório público, toggle do Zenodo, "
+            "release rc1 nem DOI; "
+            "a sequência repositório -> Zenodo -> rc1 -> DOI -> final "
+            "só pode ser conferida depois do aval do autor"
+        )
     return NAO_EXERCIDO, msgs
 
 

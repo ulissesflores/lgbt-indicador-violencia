@@ -5,7 +5,10 @@
 7a63b6fb4042ac29827ee56f68508bf580f56c828abe3a768d81502288159445  paper/build/v04/paper-v04.pdf
 fdd8e9d48b32a8bef3d0d7f226c95f665677185781f168e69562cf4b7aea0ced  paper/paper.md
 
-# Versão 0.5 do artigo, repositório 1.0.0 (pré-DOI: o PDF e o DOCX entram em docs/paper/ na versão final, já com o DOI, e seus SHA-256 voltam a esta lista)
-# Selo do repositório: b7f4af26fc4fcb8c769ac0ebfc1f57d84ffc8a7f4664021ec78cf6da2b05b259 (785 arquivos)
-b64d8b555c5c26e30b6a99c284ded120fe3fd2671f574fd22f5f8010f555a022  paper/v05/MANUSCRITO.md
+# Versão 0.5 do artigo, repositório 1.0.0, DOI de conceito 10.5281/zenodo.23873858 (citado no próprio PDF)
+# Selo do repositório: 3449e47aa19875b5c33feb8fc5eab9bd63f20c2f8f8e2d7bd263e0b0937d8cfe (785 arquivos)
+# PDF no padrão Codex Hash, gerado pelo Microsoft Word por paper/tools/build_v05.sh; 168 páginas; 2953561 bytes
+a87689e4f4006c88a18f7030238b1656113cf5b4ed32c12599b1057e84039073  docs/paper/paper-final.pdf
+308e335409416f69d0ffc35dad05149d4e3c32575310671e3d8b3f279e8d27f1  docs/paper/paper-final.docx
+ab0a3fe0ce90f4f765169feac0e280d2c6a6f59f7da8384d3bc0137676366fd2  paper/v05/MANUSCRITO.md
 177a1099d4b0224d8ae7fbe3188cf0c625341716af4ba54ffe5336ef5e902685  paper/v05/MATERIAL-COMPLEMENTAR.md

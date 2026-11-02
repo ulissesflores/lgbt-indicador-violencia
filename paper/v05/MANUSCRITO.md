@@ -404,7 +404,7 @@ Alguns passos dependem só de dados que já estão a caminho. A Pesquisa Naciona
 
 ## Disponibilidade de dados e código
 
-Os dados derivados, o código, os protocolos com suas impressões digitais e o material dos Apêndices B a M estão no repositório público do estudo, versão 1.0.0 (Flores, 2026). A ligação entre cada caso do GGB e sua notícia é a exceção, porque exige a lista nominal. O identificador permanente do depósito será atribuído na publicação dessa versão. Os microdados oficiais não são redistribuídos, mas os scripts do repositório os baixam das fontes e conferem cada arquivo. As listas nominais de vítimas não são distribuídas, por privacidade.
+Os dados derivados, o código, os protocolos com suas impressões digitais e o material dos Apêndices B a M estão no repositório público do estudo, versão 1.0.0 (Flores, 2026). A ligação entre cada caso do GGB e sua notícia é a exceção, porque exige a lista nominal. O depósito tem o identificador permanente https://doi.org/10.5281/zenodo.23873858, que leva sempre à versão mais recente. Os microdados oficiais não são redistribuídos, mas os scripts do repositório os baixam das fontes e conferem cada arquivo. As listas nominais de vítimas não são distribuídas, por privacidade.
 
 ## Referências
 
@@ -470,7 +470,7 @@ Ferguson, C. E., & Malouff, J. M. (2016). Assessing police classifications of se
 
 Fernández Turuelo, M. (2024). Homosexuales inductores del delito: Peligrosidad social y protección de la comunidad en el Valladolid tardofranquista (1971-1972). *Revista Historia Autónoma*, *24*, 111–132. https://doi.org/10.15366/rha2024.24.006
 
-Flores, C. U. (2026). *Dados de replicação, código e material complementar para: Mortalidade e violência contra pessoas LGBT+ no Brasil: O que os dados públicos permitem afirmar* (Versão 1.0.0) [Conjunto de dados e software]. Codex Hash Research Laboratory. https://github.com/ulissesflores/lgbt-indicador-violencia
+Flores, C. U. (2026). *Dados de replicação, código e material complementar para: Mortalidade e violência contra pessoas LGBT+ no Brasil: O que os dados públicos permitem afirmar* (Versão 1.0.0) [Conjunto de dados e software]. Codex Hash Research Laboratory. https://doi.org/10.5281/zenodo.23873858
 
 Fórum Brasileiro de Segurança Pública. (2026). *Anuário Brasileiro de Segurança Pública 2026*. https://forumseguranca.org.br/wp-content/uploads/2026/07/anuario-2026.pdf
 

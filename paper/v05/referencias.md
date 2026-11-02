@@ -60,7 +60,7 @@ Ferguson, C. E., & Malouff, J. M. (2016). Assessing police classifications of se
 
 Fernández Turuelo, M. (2024). Homosexuales inductores del delito: Peligrosidad social y protección de la comunidad en el Valladolid tardofranquista (1971-1972). *Revista Historia Autónoma*, *24*, 111–132. https://doi.org/10.15366/rha2024.24.006
 
-Flores, C. U. (2026). *Dados de replicação, código e material complementar para: Mortalidade e violência contra pessoas LGBT+ no Brasil: O que os dados públicos permitem afirmar* (Versão 1.0.0) [Conjunto de dados e software]. Codex Hash Research Laboratory. https://github.com/ulissesflores/lgbt-indicador-violencia
+Flores, C. U. (2026). *Dados de replicação, código e material complementar para: Mortalidade e violência contra pessoas LGBT+ no Brasil: O que os dados públicos permitem afirmar* (Versão 1.0.0) [Conjunto de dados e software]. Codex Hash Research Laboratory. https://doi.org/10.5281/zenodo.23873858
 
 Fórum Brasileiro de Segurança Pública. (2026). *Anuário Brasileiro de Segurança Pública 2026*. https://forumseguranca.org.br/wp-content/uploads/2026/07/anuario-2026.pdf
 

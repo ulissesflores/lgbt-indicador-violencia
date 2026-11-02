@@ -2,7 +2,10 @@
 
 Formato: Keep a Changelog; versionamento semântico. Versão `0.x` até o commit que prepara o DOI, que leva a `1.0.0`: nenhum release do GitHub antes do aval do autor.
 
-## [1.0.0] - não lançada (artigo v0.5; 2026-10-30 a 2026-11-01)
+## [1.0.0] - 2026-11-01 (artigo v0.5)
+
+DOI de conceito: https://doi.org/10.5281/zenodo.23873858. O pré-lançamento `v1.0.0-rc1` (DOI 10.5281/zenodo.23873859) gerou o identificador sem o PDF do
+artigo; o PDF e o DOCX, já com o DOI, entram nesta versão final.
 
 ### Acrescentado (2026-11-01, decisão do autor: análises que os revisores pediram e o texto declarava como não feitas)
 
