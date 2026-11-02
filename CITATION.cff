@@ -1,18 +1,10 @@
 cff-version: 1.2.0
 message: "Se usar estes dados ou este código, cite assim. / If you use this data or code, please cite it as below."
-title: "Violência motivada por LGBTfobia no Brasil: o que os dados públicos sustentam (dados derivados, código, pré-registros e testes)"
+title: "Mortalidade e violência contra pessoas LGBT+ no Brasil: o que os dados públicos permitem afirmar — uma auditoria de fontes e indicadores, 2010–2026"
 abstract: >-
-  Companion público da pesquisa sobre a existência de um indicador confiável de violência motivada por LGBTfobia no Brasil.
-  Reúne os dados derivados e o código que recalculam os números publicados: taxas de agressão padronizadas por idade (SIM, 2010-2024)
-  por sexo e raça; violência autorrelatada por orientação sexual (PNS 2019); campo de motivação do Sinan (2015-2025);
-  concordância entre registros de saúde e polícia por UF; painel UF x ano de ideologia de governadores; cobertura implícita e
-  validação da contagem do Grupo Gay da Bahia; poder e custo de um survey; ledgers de fontes e pré-registros datados com hash;
-  as quatro revisões hostis com a triagem de cada ataque e as reanálises pré-registradas.
-  Na v0.3: troca de presidente (C09) e exposição por governo sem atribuição de causa (C10), ambas pré-registradas;
-  correções do escrutínio externo com o número anterior registrado; inventário público de fontes e scripts refeito do próprio repositório.
-  Nenhum dado nominal, nenhum PDF de terceiros e nenhum microdado bruto são distribuídos: o manifesto traz URL, data e SHA-256
-  de cada fonte e scripts de aquisição. English: public companion repository for a study of whether a reliable indicator of
-  anti-LGBT violence exists in Brazil; derived data, code, dated pre-registrations with hashes, and tests that lock every published number.
+  Repositório do artigo "Mortalidade e violência contra pessoas LGBT+ no Brasil: o que os dados públicos permitem afirmar" (versão 0.5 do texto; PDF em docs/paper/paper-final.pdf, padrão Codex Hash e APA 7, com os Apêndices A a M). Reúne os dados derivados e o código que recalculam os números publicados: reanálise da PNS 2019 (violência relatada por orientação sexual, quem agrediu, estado civil e coabitação), taxas do SIM padronizadas por idade, campo de motivação do Sinan, boletins e Disque 100, conferência de 160 casos da lista do GGB e checagem da LiHS, séries por período de governo, poder e custo de um levantamento, pré-registros datados com hash, os pareceres de três modelos de linguagem com as respostas, e testes que travam os números. Nenhum dado nominal, nenhum PDF de terceiros e nenhum microdado bruto são distribuídos: o manifesto traz URL e data de acesso de cada fonte e, quando houve arquivo salvo, o SHA-256.
+  English: public repository of a study of what Brazilian public data can and cannot say about violence and mortality
+  among LGBT+ people; derived data, code, dated pre-registrations with hashes, reviewer reports, and tests that lock the published numbers.
 authors:
   - family-names: Flores
     given-names: Carlos Ulisses
@@ -20,8 +12,8 @@ authors:
     website: "https://ulissesflores.com"
     affiliation: "Codex Hash Research Laboratory"
 type: dataset
-version: 0.1.0
-date-released: 2026-10-23
+version: 1.0.0
+date-released: 2026-11-01
 license:
   - Apache-2.0
   - CC-BY-4.0

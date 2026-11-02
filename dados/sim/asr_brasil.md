@@ -22,7 +22,7 @@ Padrão: população do Brasil 2022 (17 faixas). Denominador: Censo 2010/2022 co
 |---|---|---|
 | homens / mulheres (padronizado) | 10.8 | taxas 38.8 e 3.6 por 100 mil |
 | negros / não negros (padronizado, raça ignorada redistribuída) | 2.56 | taxas 27.9 e 10.9 |
-| negros / não negros: limite inferior (raça ignorada descartada) | 2.56 | |
+| negros / não negros: cenário (raça ignorada descartada) | 2.56 | |
 | negros / não negros: extremo A (toda raça ignorada -> negros) | 2.60 | cota máxima possível a favor de negros mais expostos |
 | negros / não negros: extremo B (toda raça ignorada -> não negros) | 2.42 | cota mínima |
 | Homens negros / Mulheres não negras (padronizado) | 19.9 | taxas 51.7 e 2.6 |

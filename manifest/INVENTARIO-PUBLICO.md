@@ -1,17 +1,17 @@
 # Inventário público (gerado por `scripts/inventario_publico.py`; não editar à mão)
 
-sha256 de `manifest/INVENTARIO-PUBLICO.json`: `bf1ccc7d1125e85e06cbdc2b0529ba8701e1d4c29c35c05d8d0bb07608d0cc85`
+sha256 de `manifest/INVENTARIO-PUBLICO.json`: `5d5f82aada816380bef98fff76f077ace4f3a5c33738f86920230a5d539a1e3a`
 
 Contado só com os arquivos deste repositório (o mesmo conjunto do selo), com as regras de identidade, idioma e tipo do painel do artigo.
 
 | Item | Repositório | Painel do artigo (árvore privada, até 2026-10-23) |
 | --- | --- | --- |
-| Ledgers `sources.jsonl` | 18 | 17 |
-| Registros nos ledgers | 1599 | 1569 |
-| Fontes únicas (identificadores) | 853 | 829 |
-| Obras distintas (sem sufixo de versão) | 852 | - |
-| Idiomas | 10 | 10 |
-| Scripts Python | 166 | 139 |
+| Ledgers `sources.jsonl` | 20 | 17 |
+| Registros nos ledgers | 1783 | 1569 |
+| Fontes únicas (identificadores) | 1025 | 829 |
+| Obras distintas (sem sufixo de versão) | 1024 | - |
+| Idiomas | 11 | 10 |
+| Scripts Python | 175 | 139 |
 
 ## Regras
 
@@ -27,14 +27,15 @@ Contado só com os arquivos deste repositório (o mesmo conjunto do selo), com a
 
 | Idioma | n |
 | --- | --- |
-| en | 388 |
-| pt | 301 |
-| es | 108 |
+| en | 510 |
+| pt | 339 |
+| es | 116 |
 | fr | 29 |
-| de | 17 |
+| de | 20 |
 | ja | 5 |
 | ko | 2 |
 | id | 1 |
+| ro | 1 |
 | tr | 1 |
 | zh-Hans | 1 |
 
@@ -45,19 +46,19 @@ Contado só com os arquivos deste repositório (o mesmo conjunto do selo), com a
 | per_q1 | 61 | 61 |
 | per_q2 | 10 | 10 |
 | per_q34 | 3 | 3 |
-| per_semq | 254 | 252 |
-| oficial | 296 | 280 |
+| per_semq | 332 | 252 |
+| oficial | 305 | 280 |
 | preprint | 22 | 22 |
-| ong | 64 | 64 |
-| imprensa | 32 | 32 |
+| ong | 71 | 64 |
+| imprensa | 39 | 32 |
 | dado | 46 | 46 |
-| livro | 6 | 6 |
+| livro | 11 | 6 |
 | enciclopedia | 27 | 27 |
-| nao_classificado | 32 | 26 |
+| nao_classificado | 98 | 26 |
 
 Diferenças de tipo vêm só das fontes novas da v0.3 (ledgers posteriores ao painel, abaixo).
 
-**Reconciliação.** O mesmo cálculo, restrito aos 17 ledgers que o painel contou, dá 1569 registros, 829 identificadores, 10 idiomas e a mesma contagem por tipo: **igual ao painel em tudo**. Os 24 identificadores a mais vêm dos ledgers posteriores ao painel.
+**Reconciliação.** O mesmo cálculo, restrito aos 17 ledgers que o painel contou, dá 1569 registros, 829 identificadores, 10 idiomas e a mesma contagem por tipo: **igual ao painel em tudo**. Os 196 identificadores a mais vêm dos ledgers posteriores ao painel.
 
 ## Pares de versão fundidos em obra única
 
@@ -77,7 +78,8 @@ Diferenças de tipo vêm só das fontes novas da v0.3 (ledgers posteriores ao pa
   - `research-2026-10-21-rodada3/F8-literatura/aquisicao-out/delegado-download.py`
   - `research-2026-10-21-rodada3/F8-literatura/aquisicao-out2/adquirir.py`
   - `research-2026-10-21-rodada3/F8-literatura/aquisicao-out3/adquirir-publicos.py`
-- Fora da lista, de análise (17): criados depois do painel (v0.3) ou em pastas de dados.
+- Fora da lista, de análise (24): criados depois do painel (v0.3) ou em pastas de dados.
+  - `dados/disque100/fig_disque_v05.py`
   - `dados/disque100/scripts/baixar.py`
   - `dados/disque100/scripts/d100_catalogo.py`
   - `dados/disque100/scripts/d100_comum.py`
@@ -90,15 +92,22 @@ Diferenças de tipo vêm só das fontes novas da v0.3 (ledgers posteriores ao pa
   - `dados/disque100/tests/test_d100_saidas.py`
   - `dados/exposicao/c10_estrutura.py`
   - `dados/exposicao/c10_exposicao.py`
+  - `dados/exposicao/fig_caminho_v05.py`
+  - `dados/exposicao/fig_series_por_governo.py`
   - `dados/painel/painel_r6_ic_wild_invertido.py`
+  - `dados/pns/agressor_risco_pns2019.py`
+  - `dados/pns/fig_agressor_pns2019.py`
+  - `dados/pns/fig_pns_v05.py`
   - `dados/presidencia/c09_d1_its.py`
   - `dados/presidencia/c09_d2_painel.py`
   - `dados/presidencia/c09_estrutura.py`
+  - `research-2026-10-21-rodada3/F3-ggb/scripts/s15_terceiro_codificador.py`
   - `research-2026-10-21-rodada3/escrutinio/simetria/scripts/r7_parlamento_sensibilidade.py`
-- Fora da lista, de empacotamento (21): (raiz) 2; dashboard 1; paper 2; scripts 8; tests 8.
+- Fora da lista, de empacotamento (23): (raiz) 2; dashboard 1; paper 2; scripts 9; tests 9.
 
 ## Ledgers
 
+- `dados/regimes/sources.jsonl`
 - `research-2026-10-10/sources.jsonl`
 - `research-2026-10-11/sources.jsonl`
 - `research-2026-10-12-deep/sources.jsonl`
@@ -116,7 +125,8 @@ Diferenças de tipo vêm só das fontes novas da v0.3 (ledgers posteriores ao pa
 - `research-2026-10-21-rodada3/discurso/mortalidade/sources.jsonl`
 - `research-2026-10-21-rodada3/ideologia/sources.jsonl`
 - `research-2026-10-24-v03/L-ledger/sources.jsonl`
+- `research-2026-10-30-contraponto/sources.jsonl`
 - `research-consolidado/sources.jsonl`
 
-Posteriores ao painel: `research-2026-10-24-v03/L-ledger/sources.jsonl`.
+Posteriores ao painel: `dados/regimes/sources.jsonl`, `research-2026-10-24-v03/L-ledger/sources.jsonl`, `research-2026-10-30-contraponto/sources.jsonl`.
 Do painel e ausentes aqui: nenhum.

@@ -1,9 +1,9 @@
 {
-  "title": "Violência motivada por LGBTfobia no Brasil: o que os dados públicos sustentam (dados derivados, código, pré-registros e testes)",
+  "title": "Mortalidade e violência contra pessoas LGBT+ no Brasil: o que os dados públicos permitem afirmar — uma auditoria de fontes e indicadores, 2010–2026",
   "upload_type": "dataset",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "access_right": "closed",
-  "notes": "No DOI before the author's explicit authorization. access_right flips to open at the release that mints the DOI.",
+  "notes": "No DOI before the author's explicit authorization. access_right flips to open at the release that mints the DOI. Licenses: CC BY 4.0 (text, figures and derived data) and Apache-2.0 (code).",
   "license": "cc-by-4.0",
   "creators": [
     {
@@ -12,7 +12,7 @@
       "affiliation": "Codex Hash Research Laboratory"
     }
   ],
-  "description": "Dados derivados, código, pré-registros datados com hash e testes que travam os números publicados. Sem dado nominal, sem PDF de terceiros, sem microdado bruto (manifesto com URL, data e SHA-256). Inclui as quatro revisões hostis com a triagem de cada ataque, as reanálises pré-registradas e, na v0.3, a troca de presidente (C09) e a exposição por governo sem atribuição de causa (C10).",
+  "description": "Repositório do artigo \"Mortalidade e violência contra pessoas LGBT+ no Brasil: o que os dados públicos permitem afirmar\" (versão 0.5 do texto; PDF em docs/paper/paper-final.pdf, padrão Codex Hash e APA 7, com os Apêndices A a M). Reúne os dados derivados e o código que recalculam os números publicados: reanálise da PNS 2019 (violência relatada por orientação sexual, quem agrediu, estado civil e coabitação), taxas do SIM padronizadas por idade, campo de motivação do Sinan, boletins e Disque 100, conferência de 160 casos da lista do GGB e checagem da LiHS, séries por período de governo, poder e custo de um levantamento, pré-registros datados com hash, os pareceres de três modelos de linguagem com as respostas, e testes que travam os números. Nenhum dado nominal, nenhum PDF de terceiros e nenhum microdado bruto são distribuídos: o manifesto traz URL e data de acesso de cada fonte e, quando houve arquivo salvo, o SHA-256.",
   "keywords": [
     "LGBTfobia",
     "violência",

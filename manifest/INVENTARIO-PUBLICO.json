@@ -9,8 +9,9 @@
   "scripts": "todo *.py do conjunto; cruzado com a lista dos 139 do título (painel); análise = dados/, simulacao/, research-*; o resto é empacotamento do repositório"
  },
  "ledgers": {
-  "n": 18,
+  "n": 20,
   "arquivos": [
+   "dados/regimes/sources.jsonl",
    "research-2026-10-10/sources.jsonl",
    "research-2026-10-11/sources.jsonl",
    "research-2026-10-12-deep/sources.jsonl",
@@ -28,13 +29,14 @@
    "research-2026-10-21-rodada3/discurso/mortalidade/sources.jsonl",
    "research-2026-10-21-rodada3/ideologia/sources.jsonl",
    "research-2026-10-24-v03/L-ledger/sources.jsonl",
+   "research-2026-10-30-contraponto/sources.jsonl",
    "research-consolidado/sources.jsonl"
   ],
-  "registros": 1599
+  "registros": 1783
  },
  "fontes": {
-  "identificadores_unicos": 853,
-  "obras_distintas": 852,
+  "identificadores_unicos": 1025,
+  "obras_distintas": 1024,
   "pares_de_versao": [
    [
     "doi:10.21203/rs.3.rs-2864681",
@@ -42,47 +44,49 @@
    ]
   ],
   "por_idioma_identificador": {
-   "en": 388,
-   "pt": 301,
-   "es": 108,
+   "en": 510,
+   "pt": 339,
+   "es": 116,
    "fr": 29,
-   "de": 17,
+   "de": 20,
    "ja": 5,
    "ko": 2,
    "id": 1,
+   "ro": 1,
    "tr": 1,
    "zh-Hans": 1
   },
   "por_idioma_obra": {
-   "en": 387,
-   "pt": 301,
-   "es": 108,
+   "en": 509,
+   "pt": 339,
+   "es": 116,
    "fr": 29,
-   "de": 17,
+   "de": 20,
    "ja": 5,
    "ko": 2,
    "id": 1,
+   "ro": 1,
    "tr": 1,
    "zh-Hans": 1
   },
-  "idiomas": 10,
+  "idiomas": 11,
   "por_tipo": {
    "per_q1": 61,
    "per_q2": 10,
    "per_q34": 3,
-   "per_semq": 254,
-   "oficial": 296,
+   "per_semq": 332,
+   "oficial": 305,
    "preprint": 22,
-   "ong": 64,
-   "imprensa": 32,
+   "ong": 71,
+   "imprensa": 39,
    "dado": 46,
-   "livro": 6,
+   "livro": 11,
    "enciclopedia": 27,
-   "nao_classificado": 32
+   "nao_classificado": 98
   }
  },
  "scripts": {
-  "no_repositorio": 166,
+  "no_repositorio": 175,
   "lista_do_titulo": 139,
   "da_lista_no_repositorio": 128,
   "da_lista_fora_do_repositorio": [
@@ -99,6 +103,7 @@
    "research-2026-10-21-rodada3/F8-literatura/aquisicao-out3/adquirir-publicos.py"
   ],
   "fora_da_lista_analise": [
+   "dados/disque100/fig_disque_v05.py",
    "dados/disque100/scripts/baixar.py",
    "dados/disque100/scripts/d100_catalogo.py",
    "dados/disque100/scripts/d100_comum.py",
@@ -111,19 +116,25 @@
    "dados/disque100/tests/test_d100_saidas.py",
    "dados/exposicao/c10_estrutura.py",
    "dados/exposicao/c10_exposicao.py",
+   "dados/exposicao/fig_caminho_v05.py",
+   "dados/exposicao/fig_series_por_governo.py",
    "dados/painel/painel_r6_ic_wild_invertido.py",
+   "dados/pns/agressor_risco_pns2019.py",
+   "dados/pns/fig_agressor_pns2019.py",
+   "dados/pns/fig_pns_v05.py",
    "dados/presidencia/c09_d1_its.py",
    "dados/presidencia/c09_d2_painel.py",
    "dados/presidencia/c09_estrutura.py",
+   "research-2026-10-21-rodada3/F3-ggb/scripts/s15_terceiro_codificador.py",
    "research-2026-10-21-rodada3/escrutinio/simetria/scripts/r7_parlamento_sensibilidade.py"
   ],
-  "fora_da_lista_empacotamento": 21,
+  "fora_da_lista_empacotamento": 23,
   "empacotamento_por_pasta": {
    "(raiz)": 2,
    "dashboard": 1,
    "paper": 2,
-   "scripts": 8,
-   "tests": 8
+   "scripts": 9,
+   "tests": 9
   }
  },
  "reconciliacao_painel": {
@@ -168,7 +179,9 @@
   },
   "ledgers_do_painel_ausentes_no_repositorio": [],
   "ledgers_do_repositorio_posteriores_ao_painel": [
-   "research-2026-10-24-v03/L-ledger/sources.jsonl"
+   "dados/regimes/sources.jsonl",
+   "research-2026-10-24-v03/L-ledger/sources.jsonl",
+   "research-2026-10-30-contraponto/sources.jsonl"
   ]
  }
 }

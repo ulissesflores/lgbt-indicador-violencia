@@ -1,6 +1,6 @@
 [project]
 name = "lgbt-indicador-violencia"
-version = "0.1.0"
+version = "1.0.0"
 description = "Existe indicador confiável de violência motivada por LGBTfobia no Brasil? Dados derivados, código, pré-registros e testes que travam os números publicados"
 requires-python = ">=3.12"
 license = "Apache-2.0 AND CC-BY-4.0"

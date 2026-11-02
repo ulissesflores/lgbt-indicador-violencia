@@ -15,8 +15,10 @@ O artigo NÃO entra: o repositório vem primeiro e o artigo deriva dele (cita a 
 deste selo), então o selo não pode cobrir o próprio artigo. Ficam fora do selo ``paper/paper.md``,
 ``paper/AUDIT.md``, ``paper/build/`` (PDF, DOCX, saídas do juiz), ``paper/tools/`` (ferramentas de
 export e auditoria do artigo), ``paper/tests/test_anexo.py`` (testa o build do artigo) e
-``paper/PAPER-SHA256.txt`` (hash do PDF final, gravado depois). As figuras (``paper/figures/``) e
-os testes de figura ENTRAM: são derivados dos dados do repositório.
+``paper/PAPER-SHA256.txt`` (hash do PDF final, gravado depois). O texto da v0.5 (os cinco ``.md`` e
+``SHA256SUMS.txt`` de ``paper/v05/``) segue a mesma regra. As figuras (``paper/figures/``,
+``paper/v05/figures/``), o README de ``paper/v05/`` e os testes de figura ENTRAM: são derivados
+dos dados do repositório.
 Entra byte a byte: a conferência de que os scripts RECALCULAM os derivados (e batem com o commitado)
 é outra etapa (scripts/reproduzir.py), porque o recálculo pode diferir na última casa binária entre
 sistemas; o selo cobre o que está publicado, não o que a máquina de quem confere recalcula.
@@ -55,12 +57,22 @@ EXCLUI_PREFIXOS = (
 RAW_LOCAIS = re.compile(r"(^raw/)|(/dados/raw/)|(/ideologia/raw/)|(/F6-asia-africa/raw/)")
 # Artigo e o que só existe para construí-lo: fora do selo, para sempre (o artigo cita o selo, não o
 # integra). Entram no git num commit posterior; o hash do PDF final vai a paper/PAPER-SHA256.txt.
-EXCLUI_PAPER_DIRS = ("paper/build/", "paper/tools/")
+# docs/paper/: PDF e DOCX publicados do artigo (norma Codex Hash); runs/: registro de cada
+# execucao selada, que grava o proprio chain_hash (dentro do selo seria circular)
+EXCLUI_PAPER_DIRS = ("paper/build/", "paper/tools/", "docs/paper/", "runs/")
 EXCLUI_PAPER_ARQ = {
     "paper/paper.md",
     "paper/AUDIT.md",
     "paper/PAPER-SHA256.txt",
     "paper/tests/test_anexo.py",
+    # v0.5: o Material Complementar cita o selo da versão anterior, então o texto da v0.5 fica fora
+    # como paper/paper.md; as figuras e o README de paper/v05/ entram
+    "paper/v05/MANUSCRITO.md",
+    "paper/v05/MATERIAL-COMPLEMENTAR.md",
+    "paper/v05/QUADRO-E2.md",
+    "paper/v05/referencias.md",
+    "paper/v05/referencias-mc.md",
+    "paper/v05/SHA256SUMS.txt",
 }
 EXCLUI_ARQ = {"BUILD-STATE.md", ".DS_Store", "output/provenance.json", "output/hash-chain.md"}
 SOMAS = "manifest/SHA256SUMS.txt"

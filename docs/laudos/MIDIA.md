@@ -57,14 +57,14 @@ F1 0 (3 frases PT, 1 EN, 1 ES); F2 9 (pt 8, en 1: "país que mais mata" em Apolo
 Controle positivo EN ("homophobia", 2017-2026): 53.861 artigos em 2017 e 4.888 em 2025, mas o total monitorado cai de 227,8 M para 56,0 M no mesmo filtro: contagem bruta de GDELT não é tendência. PT: `sourcelang:portuguese` devolveu `{}`. Ver `_gdelt_resultados.jsonl`, `gdelt_sonda.log`.
 
 ## 4. Amostra codificada (`amostra_codificada.csv`, 871 itens, semente 20261022; 1 codificador; recodificação de 20: 19 iguais, não cega)
-AFIRMA+ATRIBUI = o texto afirma ou relata a alegação; N estimado = N do universo x proporção (IC95 de Wilson). "Fonte primária" = documento/dado com nome e ano localizável; "GGB/ANTRA/TGEU/ONU" = nomeado no trecho.
+AFIRMA+ATRIBUI = o texto afirma ou relata a alegação; N estimado = N do universo x proporção (IC95 de Wilson); nas linhas de censo, o N estimado é a própria contagem, sem intervalo. "Fonte primária" = documento/dado com nome e ano localizável; "GGB/ANTRA/TGEU/ONU" = nomeado no trecho.
 | fam | universo | N | amostra | afirma+atribui | N estimado [IC95] | rebate | primária | cita GGB/ANTRA/TGEU/ONU |
 |---|---|---|---|---|---|---|---|---|
 | F1 | Parlamento | 14 | 14 (censo) | 14 | 14 | 0 | 0/14 | 0/14 |
 | F1 | imprensa pt (título) | 145 | 60 | 2 | 5 [1-16] | 0 | 0/2 | 0/2 |
 | F1 | imprensa mundo (título) | 691 | 60 | 5 | 58 [25-125] | 1 | 1/5 | 0/5 |
 | F1 | OpenAlex | 5535 | 60 | 4 | 369 [145-881] | 0 | 4/4 (o próprio estudo) | 0/4 |
-| F2 | Parlamento | 56 | 56 (censo) | 49 | 49 [43-53] | 2 | 0/49 | 7/49 |
+| F2 | Parlamento | 56 | 56 (censo) | 49 | 49 | 2 | 0/49 | 7/49 |
 | F2 | imprensa pt (título) | 1005 | 60 | 13 | 218 [132-338] | 1 | 0/13 | 0/13 |
 | F2 | imprensa mundo (título) | 164 | 60 | 8 | 22 [11-40] | 0 | 0/8 | 1/8 |
 | F2 | OpenAlex | 270 | 60 | 11 | 50 [29-81] | 0 | 0/11 | 7/11 |
@@ -73,6 +73,7 @@ AFIRMA+ATRIBUI = o texto afirma ou relata a alegação; N estimado = N do univer
 | F3 | imprensa pt (título) | 566 | 60 | 0 | 0 [0-34] | 0 | n/a | n/a |
 | F3 | imprensa mundo (título) | 361 | 60 | 7 | 42 [21-80] | 0 | 0/7 | 0/7 |
 | F3 | OpenAlex | 622 | 60 | 5 | 52 [22-112] | 0 | 1/5 | 0/5 |
+| F3 | Wikipédia | 197 | 60 | 1 | 3 [1-17] | 1 | 0/1 | 0/1 |
 | F4 | Parlamento | 2 | 2 (censo) | 2 | 2 | 0 | 0/2 | 0/2 |
 | F4 | imprensa pt (título) | 140 | 60 | 3 | 7 [2-19] | 2 | 0/3 | 0/3 |
 | F4 | OpenAlex / imprensa mundo | 369 / 10 | 60 / 10 | 0 / 0 | 0 [0-22] / 0 | 0 | n/a | n/a |

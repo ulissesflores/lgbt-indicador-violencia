@@ -6,8 +6,11 @@ le de volta os valores DOS PROPRIOS ARTISTAS do matplotlib (largura das barras, 
 de erro, posicao dos quadrados) e grava em `valores_plotados.json`; `tests/test_figuras.py` confere esses
 valores contra os arquivos de origem com um parser independente.
 
-PADRAO VISUAL (v0.2). Toda figura passa por `moldura()`: titulo-conclusao em negrito, subtitulo (o que esta
-plotado), cartao "Como ler" (linguagem comum), notas de termos tecnicos e rodape "Fonte:". Cores: dicionario
+PADRAO VISUAL. Regra APA do pipeline do artigo: titulo, legenda, nota e fonte ficam NO DOCUMENTO (titulo acima
+da figura; "Nota." e "Fonte:" abaixo), nunca duplicados dentro da imagem. Por isso `moldura()` nao desenha nada:
+guarda o titulo-conclusao, o subtitulo, o texto "Como ler", os termos e a fonte de cada figura em
+`textos_fora_da_imagem.json` (a "Nota." do artigo deriva do "Como ler"). Dentro da imagem ficam so o grafico e as
+chaves de leitura (rotulos, anotacoes, legendas de cor, titulos de painel). Cores: dicionario
 unico `PALETA` com nome semantico. Azul e laranja SO significam LGB+ e heterossexuais; estatistica (razao
 bruta/ajustada, cenarios, estimativas) usa roxo/cinza-escuro e a FORMA do marcador (vazado = bruta, cheio =
 ajustada); sexo usa verde-azulado e dourado; veredito, prioridade e fonte tem escalas proprias.
@@ -65,6 +68,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
 import numpy as np  # noqa: E402
 from matplotlib.patches import FancyBboxPatch, Rectangle  # noqa: E402
+from matplotlib.ticker import ScalarFormatter  # noqa: E402
 
 AQUI = Path(__file__).resolve().parent
 FONTES = AQUI / "fontes"
@@ -138,9 +142,22 @@ def ler_csv(nome: str) -> list[dict]:
     return list(csv.DictReader(open(FONTES / nome, encoding="utf-8")))
 
 
+class _Virgula(ScalarFormatter):
+    """Rotulo numerico de eixo com virgula decimal (PT-BR): 0,25 e nao 0.25."""
+
+    def __call__(self, x, pos=None):
+        return super().__call__(x, pos).replace(".", ",")
+
+
 def salvar(fig, nome: str) -> None:
-    """Grava PDF, SVG e PNG (300 dpi, para o DOCX) sem data nos metadados."""
+    """Grava PDF, SVG e PNG (300 dpi, para o DOCX) sem data nos metadados; eixos numericos com virgula decimal."""
+    for ax in fig.axes:
+        for eixo in (ax.xaxis, ax.yaxis):
+            if type(eixo.get_major_formatter()) is ScalarFormatter:
+                eixo.set_major_formatter(_Virgula())
     kw = {"bbox_inches": "tight", "pad_inches": 0.12}
+    TEXTOS[nome] = dict(_PENDENTE)
+    _PENDENTE.clear()
     fig.savefig(AQUI / f"{nome}.pdf", metadata={"CreationDate": None, "ModDate": None}, **kw)
     fig.savefig(AQUI / f"{nome}.svg", metadata={"Date": None}, **kw)
     fig.savefig(AQUI / f"{nome}.png", dpi=300, metadata={"Software": None}, **kw)
@@ -153,49 +170,20 @@ def erros_de(eb) -> list[list[float]]:
     return [[float(s[0][0]), float(s[1][0])] for s in segs]
 
 
-# ---------------------------------------------------------------- moldura padrao (G2, G3, G4)
-CPI_CORPO, CPI_TITULO, CPI_SUB = 16.0, 9.8, 15.0     # caracteres por polegada (DejaVu Sans, 8,2 / 12 / 8,8 pt)
-
-
-def _quebra(txt: str, largura_in: float, cpi: float) -> list[str]:
-    return textwrap.wrap(txt, max(20, int(largura_in * cpi)))
-
-
+# ---------------------------------------------------------------- moldura: textos fora da imagem (regra APA)
 def moldura(fig, titulo: str, subtitulo: str, como_ler: str, termos: str, fonte: str) -> None:
-    """Titulo-conclusao + subtitulo no alto; cartao 'Como ler' + termos + rodape 'Fonte:' embaixo.
+    """Registra titulo-conclusao, subtitulo, 'Como ler', termos e fonte da figura SEM desenha-los.
 
-    Mede o conteudo ja desenhado (get_tightbbox) e empilha a moldura fora dele. As posicoes sao
-    calculadas em polegadas e convertidas para fracao da figura (transFigure), porque o
-    `bbox_inches='tight'` do `salvar` desloca transFigure e nao desloca coordenadas em polegadas.
-    Texto da moldura >= 8 pt.
+    Regra APA do artigo: esses textos ficam no documento (titulo acima; Nota e Fonte abaixo), e a imagem
+    leva so o grafico com as suas chaves de leitura. `salvar()` grava o registro pendente em
+    `textos_fora_da_imagem.json`, com o nome do arquivo da figura.
     """
-    fig.canvas.draw()
-    tb = fig.get_tightbbox(fig.canvas.get_renderer())
-    x0, y0, y1 = float(tb.x0), float(tb.y0), float(tb.y1)
-    W, H = fig.get_size_inches()
-    w = max(float(tb.x1) - x0, 6.9)
-    fx = lambda v: v / W   # noqa: E731
-    fy = lambda v: v / H   # noqa: E731
-    lt, ls, lc = _quebra(titulo, w, CPI_TITULO), _quebra(subtitulo, w, CPI_SUB), _quebra(como_ler, w - 0.3, CPI_CORPO)
-    ln = _quebra(termos, w - 0.3, CPI_CORPO) if termos else []
-    ht, hs, hl = 0.205 * len(lt), 0.155 * len(ls), 0.142
-    topo = y1 + 0.14 + hs + 0.05 + ht
-    fig.text(fx(x0), fy(topo), "\n".join(lt), ha="left", va="top", fontsize=12, fontweight="bold", color=INK, linespacing=1.15)
-    fig.text(fx(x0), fy(topo - ht - 0.04), "\n".join(ls), ha="left", va="top", fontsize=8.8, color=INK2)
-    hcard = 0.1 + 0.17 + hl * len(lc) + (0.08 + 0.17 + hl * len(ln) if ln else 0) + 0.1
-    ytop = y0 - 0.16
-    r = 0.08
-    fig.add_artist(FancyBboxPatch((fx(x0), fy(ytop - hcard)), fx(w), fy(hcard), boxstyle=f"round,pad=0,rounding_size={r / W}",
-                                  mutation_aspect=W / H, transform=fig.transFigure, fc=PALETA["card"], ec=PALETA["card_borda"], lw=0.8))
-    y = ytop - 0.1
-    fig.text(fx(x0 + 0.13), fy(y), "Como ler", ha="left", va="top", fontsize=8.6, fontweight="bold", color=INK)
-    fig.text(fx(x0 + 0.13), fy(y - 0.17), "\n".join(lc), ha="left", va="top", fontsize=8.2, color=INK, linespacing=1.18)
-    if ln:
-        y2 = y - 0.17 - hl * len(lc) - 0.08
-        fig.text(fx(x0 + 0.13), fy(y2), "Termos", ha="left", va="top", fontsize=8.6, fontweight="bold", color=INK)
-        fig.text(fx(x0 + 0.13), fy(y2 - 0.17), "\n".join(ln), ha="left", va="top", fontsize=8.2, color=INK2, linespacing=1.18)
-    fig.text(fx(x0), fy(ytop - hcard - 0.07), "\n".join(_quebra("Fonte: " + fonte, w, CPI_CORPO + 0.8)), ha="left", va="top", fontsize=8,
-             color=INK2)
+    _PENDENTE.clear()
+    _PENDENTE.update(titulo_conclusao=titulo, subtitulo=subtitulo, como_ler=como_ler, termos=termos, fonte=fonte)
+
+
+_PENDENTE: dict = {}
+TEXTOS: dict = {}
 
 
 def seta(ax, texto: str, alvo: tuple, ponto_texto: tuple, **kw) -> None:
@@ -325,8 +313,11 @@ def ler_c08() -> list[dict]:
 def figura2() -> None:
     """Cobertura implicita (n / esperado) por ano, numerador e cenario de risco relativo."""
     rows = ler_c08()
-    nomes = {"N0": "total declarado", "N1": "numerador A: homicídios e latrocínios", "N2": "numerador B: cenário de subtração (sem pessoas trans)"}
-    fig = plt.figure(figsize=(7.2, 4.4))
+    # rotulos em ate 3 linhas curtas: com o rotulo numa linha so a figura passava de 10 polegadas e, na largura unica do
+    # artigo (14 cm), o texto encolhia para menos de 5 pt
+    nomes = {"N0": "total declarado", "N1": "numerador A: homicídios\ne latrocínios", "N2": "numerador B: cenário de\nsubtração (sem pessoas trans)"}
+    fig = plt.figure(figsize=(7.2, 4.8))
+    fig.subplots_adjust(left=0.31, right=0.97)
     ax = fig.add_subplot(111)
     h = 0.27
     rrs = [("cob_RR1.0", "risco igual ao dos pares", PALETA["estat_esc"]),
@@ -394,7 +385,9 @@ def figura3() -> None:
     grupos = ["total", "homens", "mulheres", "negros", "nao_negros", "arma"]
     nomes = {"total": "Total", "homens": "Homens", "mulheres": "Mulheres", "negros": "Negros",
              "nao_negros": "Não negros", "arma": "Arma de fogo"}
-    fig, (a, b) = plt.subplots(2, 1, figsize=(7.2, 6.9), gridspec_kw={"height_ratios": [1.3, 1], "hspace": 0.62})
+    F3 = 9.5  # E5: menor corpo desta figura (cerca de 7 pol impressas a 14 cm -> >= 7 pt)
+    fig, (a, b) = plt.subplots(2, 1, figsize=(6.9, 7.5), gridspec_kw={"height_ratios": [1.12, 1], "hspace": 0.62})
+    fig.subplots_adjust(left=0.30, right=0.97, top=0.95, bottom=0.085)
     y = list(range(len(grupos)))[::-1]
     off = 0.15
     VALORES["fig3"] = {}
@@ -409,26 +402,29 @@ def figura3() -> None:
         VALORES["fig3"][desf] = {"grupos": gs, "pontos": [float(v) for v in eb.lines[0].get_xdata()], "ic": erros_de(eb)}
         if desf == "registrado_ln":
             for g, (l_, h_), yv in zip(gs, erros_de(eb), yy):
-                a.annotate(f"{br(l_)}% a +{br(h_)}%", (h_, yv), xytext=(5, -3), textcoords="offset points", fontsize=MIN_PT, color=INK)
+                a.annotate(f"{br(l_)}% a +{br(h_)}%", (h_, yv), xytext=(5, -3), textcoords="offset points", fontsize=F3, color=INK)
     a.axvline(0, color=INK2, lw=0.9, ls="--")
-    a.set_yticks(y, [nomes[g] for g in grupos], fontsize=9)
-    a.set_xlim(-24, 40)
-    a.tick_params(axis="x", labelsize=MIN_PT)
-    a.set_xlabel("Variação da taxa ao trocar o governador do PT por DEM ou PL (5 pontos de ideologia), %", fontsize=MIN_PT)
+    a.set_yticks(y, [nomes[g] for g in grupos], fontsize=F3 + 0.5)
+    a.set_xlim(-24, 46)
+    a.tick_params(axis="x", labelsize=F3)
+    a.set_xlabel("Variação da taxa ao trocar o governador do PT\npor DEM ou PL (5 pontos de ideologia), %", fontsize=F3)
     a.grid(axis="x", color=GRADE, lw=0.6)
     a.set_axisbelow(True)
-    a.legend(frameon=False, fontsize=MIN_PT, loc="upper center", bbox_to_anchor=(0.45, -0.2), ncol=2)
-    a.set_title("(a) Painel por estado e ano", loc="left", fontsize=9.5, fontweight="bold", color=INK)
-    seta(a, "a faixa inclui zero:\nnão se enxerga efeito", (0.6, y[0] + off + 0.25), (15, y[0] + 0.85), va="center")
+    a.legend(frameon=False, fontsize=F3, loc="upper center", bbox_to_anchor=(0.38, -0.28), ncol=2, columnspacing=1.0, handletextpad=0.4)
+    a.set_ylim(-0.6, y[0] + 1.6)
+    a.set_title("(a) Painel por estado e ano", loc="left", fontsize=F3 + 1, fontweight="bold", color=INK)
+    a.annotate("a faixa inclui zero:\nnão se distingue de zero", xy=(0.6, y[0] + off + 0.25), xytext=(9, y[0] + 1.05), fontsize=F3, color=INK,
+               fontweight="bold", va="center", arrowprops={"arrowstyle": "->", "color": INK2, "lw": 1.3, "shrinkA": 2, "shrinkB": 3,
+                                                          "connectionstyle": "arc3,rad=0.15"})
 
     c03 = ler_c03()
-    lado = {"esquerda->direita": "de esquerda para direita", "direita->esquerda": "de direita para esquerda"}
+    lado = {"esquerda->direita": "deslocamento para a direita", "direita->esquerda": "deslocamento para a esquerda"}  # sinal do escore, não troca de bloco (AST-03, r5)
     jan = {"estrito": "janela completa", "truncado": "janela curta"}
     rot_ev, pts, lo, hi = [], [], [], []
     for r in c03:
         p = float(r["p_antecipacoes"])
-        aviso = f"já mudava antes da troca (p = {br(p, 3)})" if p < 0.05 else f"sem mudança antes da troca (p = {br(p, 2)})"
-        rot_ev.append(f"{lado[r['direcao']]}, {jan[r['desenho']]}\n{r['n_eventos']} trocas; {aviso}")
+        aviso = f"já mudava antes (p = {br(p, 3)})" if p < 0.05 else f"mudança anterior não detectada (p = {br(p, 2)})"  # não significância não prova ausência (AST-R2-09)
+        rot_ev.append(f"{lado[r['direcao']]}\n{jan[r['desenho']]}, {r['n_eventos']} trocas\n{aviso}")
         m, l_, h_ = (100 * (math.exp(float(r[k])) - 1) for k in ("media_pos", "media_pos_lo", "media_pos_hi"))
         pts.append(m), lo.append(m - l_), hi.append(h_ - m)
     yb = list(range(len(c03)))[::-1]
@@ -436,16 +432,16 @@ def figura3() -> None:
     VALORES["fig3"]["event_study"] = {"rotulos": [f"{r['desenho']}|{r['direcao']}" for r in c03],
                                       "pontos": [float(v) for v in eb.lines[0].get_xdata()], "ic": erros_de(eb)}
     for xv, yv in zip(pts, yb):
-        b.annotate(f"{br(xv)}%", (xv, yv), xytext=(0, 7), textcoords="offset points", fontsize=MIN_PT, color=INK, ha="center")
+        b.annotate(f"{br(xv)}%", (xv, yv), xytext=(0, 7), textcoords="offset points", fontsize=F3, color=INK, ha="center")
     b.axvline(0, color=INK2, lw=0.9, ls="--")
-    b.set_yticks(yb, rot_ev, fontsize=MIN_PT)
+    b.set_yticks(yb, rot_ev, fontsize=F3)
     b.set_xlim(-40, 10)
     b.set_ylim(-0.6, 3.75)
-    b.tick_params(axis="x", labelsize=MIN_PT)
-    b.set_xlabel("Variação média da taxa nos anos depois da troca, comparada a estados sem troca (%)", fontsize=MIN_PT)
+    b.tick_params(axis="x", labelsize=F3)
+    b.set_xlabel("Variação média da taxa depois da troca,\ncomparada a estados sem troca (%)", fontsize=F3)
     b.grid(axis="x", color=GRADE, lw=0.6)
     b.set_axisbelow(True)
-    b.set_title("(b) Antes e depois de uma troca de lado: sinais contraditórios", loc="left", fontsize=9.5, fontweight="bold", color=INK)
+    b.set_title("(b) Deslocamento do escore: a mesma queda nos dois sentidos", loc="left", fontsize=F3 + 1, fontweight="bold", color=INK)
     t = c02[("total", "registrado_ln")]
     moldura(fig, f"O painel de governadores só descarta efeitos fora de {br(pct5(t[1]))}% a +{br(pct5(t[2]))}% na taxa de homicídios; dentro dessa faixa não distingue nada",
             "Variação da taxa de morte por agressão ao trocar o partido do governador, por grupo (a) e em trocas reais de lado (b)",
@@ -604,7 +600,7 @@ ESTILO_VEREDITO = {
 }
 ROTULO_VEREDITO = {"sem veredito": "sem veredito (só descrito)"}
 PERGUNTAS_MAPA = {"L1": "LGB+ sofrem mais violência não letal que heterossexuais?",
-                  "L2": "Gays morrem mais que héteros?",
+                  "L2": "LGBT+ morrem mais que as demais pessoas?",
                   "L3": "Mulheres e negros: dá para saber?"}
 
 
@@ -618,7 +614,7 @@ def figura7() -> None:
     fig = plt.figure(figsize=(larg, alt))
     ax = fig.add_axes([0, 0, 1, 1])
     ax.set_xlim(0, larg), ax.set_ylim(alt, 0), ax.axis("off")
-    nomes_n = {"N1": "N1\nincidência", "N2": "N2 disparidade\nresidual", "N3": "N3\ncontexto", "N4": "N4\nmotivação"}
+    nomes_n = {"N1": "N1\nocorrência", "N2": "N2 disparidade\nresidual", "N3": "N3\ncontexto", "N4": "N4\nmotivação"}
     for j, n in enumerate(("N1", "N2", "N3", "N4")):
         x = x_rot + j * (w_col + gap)
         ax.text(x + w_col / 2, 0.02, nomes_n[n], ha="center", va="top", fontsize=9, fontweight="bold", color=INK)
@@ -638,25 +634,26 @@ def figura7() -> None:
             ax.text(x + 0.09, y + 0.07, simb, ha="left", va="top", fontsize=13, color=borda, fontweight="bold")
             rot_txt = ax.text(x + 0.31, y + 0.09, "\n".join(textwrap.wrap(rotulo, 15)), ha="left", va="top", fontsize=MIN_PT,
                               fontweight="bold", color=INK)
-            ax.text(x + 0.09, y + h_cel - 0.07, "\n".join(textwrap.wrap(r["texto_curto"], 20)), ha="left", va="bottom",
+            ax.text(x + 0.09, y + h_cel - 0.07, "\n".join(textwrap.wrap(r["texto_curto"].replace("o paper", "o artigo"), 20)), ha="left", va="bottom",
                     fontsize=MIN_PT, color=INK2)
             VALORES["fig7"]["celulas"][f"{lin}|{n}"] = {
                 "rotulo_exibido": rot_txt.get_text().replace("\n", " "), "fundo": matplotlib.colors.to_hex(caixa.get_facecolor())}
     y = topo + 3 * (h_cel + gap) + 0.12
     x = x_rot
-    for cat, (borda, fundo, simb) in ESTILO_VEREDITO.items():
+    usadas = {r["categoria"] for k, r in cel.items()}  # E5: a legenda lista só as categorias desenhadas
+    for cat, (borda, fundo, simb) in ((c, e) for c, e in ESTILO_VEREDITO.items() if c in usadas):
         ax.add_patch(FancyBboxPatch((x, y - 0.02), 0.2, 0.2, boxstyle="round,pad=0,rounding_size=0.03", fc=fundo, ec=borda, lw=1.1))
         ax.text(x + 0.1, y + 0.08, simb, ha="center", va="center", fontsize=MIN_PT, color=borda, fontweight="bold")
         txt = {"sustentada": "sustentada", "parcial": "parcial", "não sustentada pelo que foi medido": "não sustentada",
                "não testável": "não testável", "sem veredito": "só descrito"}[cat]
         ax.text(x + 0.27, y + 0.08, txt, fontsize=MIN_PT, color=INK, va="center")
         x += 0.32 + 0.072 * len(txt) + 0.1
-    moldura(fig, "No Brasil, só a violência não letal contra LGB+ e as mortes de mulheres e negros são medidas; “gays morrem mais?” não é testável com o dado público, e fora do país só vale para mortalidade geral",
+    moldura(fig, "No Brasil, só a violência não letal contra LGB+ e as mortes de mulheres e negros são medidas; “pessoas LGBT+ morrem mais?” não é testável com o dado público, e fora do país só vale para mortalidade geral",
             "Resposta do paper a cada pergunta, para o Brasil, em cada nível (N1 a N4); cor e símbolo dizem a força da evidência",
             "Cada linha é uma pergunta; cada coluna, um jeito de olhar para ela, de “quantos?” (N1) a “por quê?” (N4). Verde com ✓: o dado sustenta a resposta. "
-            "Cinza com ?: não há dado que permita testar. Vinho com ✗: os dados lidos não alcançam a afirmação. Cinza claro: o paper só descreve, sem dar veredito.",
+            "Cinza com ?: não há dado que permita testar; na coluna N4, nenhuma fração nacional foi estimada, o que não afirma nem nega a motivação dos agressores. Cinza claro: o artigo só descreve, sem dar veredito.",
             "não letal = violência que não matou · letal = morte · N2 = a diferença persiste depois de descontar idade, cor, instrução e região? · "
-            "“sem veredito” = há números descritivos, mas o paper não classifica a célula · N4 “não sustentada pelo que foi medido” = fração nacional não estimada · fora do Brasil, “gays morrem mais?” é sustentada para mortalidade geral em populações definidas pela regra ampliada do adendo de 24/10 sobre o quartil Q1 (pela regra original seria “parcial”), sem razão de homicídio · RP = quantas vezes mais",
+            "“sem veredito” = há números descritivos, mas o paper não classifica a célula · N4 “não testável” = fração nacional não estimada: nenhum dado nacional permite estimá-la · fora do Brasil, “pessoas LGBT+ morrem mais?” é sustentada para mortalidade geral em populações definidas pela regra ampliada do adendo de 24/10 sobre o quartil Q1 (pela regra original seria “parcial”), sem razão de homicídio · RP = quantas vezes mais",
             "paper/figures/fontes/vereditos_tabela1_tabela5.tsv: cada célula cita um trecho literal da Tabela 1 e das seções 3 e 4 do paper v0.1; a categoria é a classificação desta figura.")
     salvar(fig, "fig7_mapa_de_respostas")
 
@@ -743,17 +740,17 @@ def figura9() -> None:
     ax.legend(handles=[Rectangle((0, 0), 1, 1, fc=PALETA["excl"]), Rectangle((0, 0), 1, 1, fc=PALETA["estat_cl"]), pts[0]],
               labels=["excluído pelos dados", "compatível com os dados", "melhor estimativa"], frameon=False, fontsize=MIN_PT,
               loc="upper center", bbox_to_anchor=(0.5, -0.17), ncol=3)
-    seta(ax, "o painel não enxerga\nefeitos menores que isto", (lims[0][1] + 0.3, y[0] + 0.3), (17, y[0] + 1.05), va="center")
+    seta(ax, "faixa compatível\ncom os dados", (lims[0][1] + 0.3, y[0] + 0.3), (17, y[0] + 1.05), va="center")
     ax.set_ylim(-0.6, 6.3)
     VALORES["fig9"] = {"grupos": grupos,
                        "ic": [[float(p.get_x()), float(p.get_x() + p.get_width())] for p in azuis],
                        "pontos": [float(q.get_xdata()[0]) for q in pts]}
     minimo = min(min(-lo, hi) for lo, hi in lims)
     maximo = max(max(-lo, hi) for lo, hi in lims)
-    moldura(fig, f"O painel de governadores só enxergaria efeitos maiores que {br(minimo)}% a {br(maximo)}% na taxa de homicídios; abaixo disso, não diz nada",
+    moldura(fig, f"No painel de governadores, as variações da taxa de homicídios compatíveis com os dados chegam a {br(minimo)}% a {br(maximo)}%, conforme o grupo e o sentido, e todos os intervalos incluem zero",
             "Faixa de variação da taxa registrada de morte por agressão compatível com os dados, por grupo, numa troca de PT por DEM ou PL",
             "A barra roxa clara é o que os dados ainda permitem: do que seria uma queda ao que seria uma alta. O cinza é o que o painel exclui. "
-            "Como a barra sempre inclui zero, o resultado é “não sei se houve efeito”, e não “não houve efeito”: efeitos pequenos passam despercebidos.",
+            "Como a barra sempre inclui zero, o resultado é “não sei se houve efeito”, e não “não houve efeito”: efeitos pequenos, dentro da barra clara, continuam compatíveis com os dados.",
             "intervalo normal (a inversão do bootstrap wild-cluster, na Tabela 6 do paper, é um pouco mais larga) · painel = 351 combinações de estado e ano, 2012-2024 · 5 pontos de ideologia = distância média entre o PT (2,97) e DEM ou PL (cerca de 8) numa escala de 0 a 10 · "
             "exploratório: não prova causa · base: a taxa registrada, que pode esconder mortes de causa indeterminada",
             "paper/figures/fontes/c02_indet_resultados.csv (origem dados/painel/c02_indet_resultados.csv); IC95% com erro-padrão agrupado por estado.")
@@ -873,14 +870,14 @@ def figura11() -> None:
     a, b = fig.add_subplot(gs[0]), fig.add_subplot(gs[1])
     y = list(range(4))[::-1]
     fam = [f for f, _ in FAMILIAS]
-    ghost = a.barh(y, [d["v1"][f] for f in fam], height=0.72, color=PALETA["excl"], label="primeira busca (palavras demais)")
-    sol = a.barh(y, [d["v2"][f] for f in fam], height=0.4, color=PALETA["estat"], label="busca corrigida (a que vale)")
+    ghost = a.barh(y, [d["v1"][f] for f in fam], height=0.72, color=PALETA["excl"], label="dicionário pré-registrado (casa palavras demais)")
+    sol = a.barh(y, [d["v2"][f] for f in fam], height=0.4, color=PALETA["estat"], label="dicionário revisto (contagem usada)")
     for f, yy in zip(fam, y):
         a.text(d["v1"][f] + 12, yy, f"{d['v1'][f]}", va="center", fontsize=MIN_PT, color=INK2)
         v2 = d["v2"][f]
         a.text(1.04, yy, f"{v2} falas  ({br(10000 * v2 / d['denominador'])} por 10 mil)", transform=a.get_yaxis_transform(),
                va="center", fontsize=MIN_PT + 0.5, color=INK, fontweight="bold")
-    a.text(1.04, 1.02, "busca corrigida", transform=a.transAxes, fontsize=MIN_PT + 0.5, color=INK, fontweight="bold", va="bottom")
+    a.text(1.04, 1.02, "dicionário revisto", transform=a.transAxes, fontsize=MIN_PT + 0.5, color=INK, fontweight="bold", va="bottom")
     a.set_yticks(y, [f"{f}  “{n}”" for f, n in FAMILIAS], fontsize=9)
     a.set_xlim(0, 800), a.tick_params(axis="x", labelsize=MIN_PT)
     a.set_xlabel("Falas encontradas na Câmara e no Senado", fontsize=MIN_PT + 0.5)
@@ -1065,13 +1062,13 @@ def figura13() -> None:
     ax.set_xlabel("LGB+ entre as vítimas adultas de violência física (%)", fontsize=MIN_PT + 0.5)
     ax.tick_params(axis="x", labelsize=MIN_PT)
     ax.grid(axis="x", color=GRADE, lw=0.6), ax.set_axisbelow(True)
-    seta(ax, f"para o Sinan igualar a PNS, as fichas sem\nresposta precisariam ter {br(t['necessaria'][2023], 1)}% de LGB+", (t["sinan"][2023]["melhor"] - 0.8, y[3] + 0.12), (7.5, y[3] + 0.5), va="center", ha="left")
+    # E5 (A2-02): sem a seta "para o Sinan igualar a PNS" -- as duas parcelas descrevem universos diferentes
     ax.text(1.03, 1.03, "estimativa [faixa]", transform=ax.transAxes, fontsize=MIN_PT + 0.5, fontweight="bold", color=INK, va="bottom")
     VALORES["fig13"] = {"pontos": pts, "ic": ics, "lgb_pop": t["lgb_pop"]}
     moldura(fig, f"LGB+ são cerca de {br(t['direto'][0], 0)}% das vítimas de violência física na pesquisa de população e {br(t['sinan'][2023]['pct'], 0)}% nas fichas de saúde, ambos bem acima de {br(t['lgb_pop'], 2)}% da população",
             "Parcela de LGB+ entre adultos que sofreram violência física, vista por duas janelas: a pesquisa de domicílios (PNS) e as notificações dos serviços de saúde (Sinan)",
-            "Cada linha é uma estimativa da mesma pergunta: de cada 100 vítimas adultas de violência física, quantas são LGB+? A linha tracejada mostra a parcela de LGB+ na população. "
-            "As duas janelas concordam no sentido (LGB+ aparecem mais entre vítimas do que na população) e discordam na magnitude; no Sinan, a barra fina mostra o intervalo possível "
+            "Cada linha é a parcela de LGB+ entre vítimas adultas de violência física num universo diferente: pessoas vitimadas, na pesquisa de domicílios, e notificações elegíveis, nas fichas de saúde. "
+            "A linha tracejada mostra a parcela de LGB+ na população. As duas parcelas ficam acima dela e diferem em magnitude; uma não valida nem contradiz a outra; no Sinan, a barra fina mostra o intervalo possível "
             "quando um quarto das fichas não tem orientação registrada.",
             "PNS = pesquisa de domicílios do IBGE (amostra) · Sinan = sistema de notificação de violência dos serviços de saúde (quem procurou atendimento, não amostra) · "
             "orientação válida = ficha em que a orientação sexual foi preenchida · pior/melhor caso = se nenhuma ou todas as fichas sem resposta fossem de LGB+ · "
@@ -1199,7 +1196,7 @@ def figura15() -> None:
                     label="faixa compatível com os dados (IC95%)")
     ln, = ax.plot(xx, 100 * (np.exp(b * xx) - 1), "-", color=PALETA["estat"], lw=2.4, label="reta estimada")
     ax.axhline(0, color=INK2, lw=0.8, ls="--")
-    ax.set_xlabel("Ideologia do governador, comparada à média do próprio estado e do ano (pontos, de 0 = esquerda a 10 = direita)", fontsize=MIN_PT)
+    ax.set_xlabel("Ideologia do governador, comparada à média do próprio estado e do ano\n(pontos, de 0 = esquerda a 10 = direita)", fontsize=MIN_PT)
     ax.set_ylabel("Taxa de homicídio, comparada à média\ndo estado e do ano (%)", fontsize=MIN_PT + 0.3)
     ax.tick_params(labelsize=MIN_PT)
     ax.grid(color=GRADE, lw=0.6), ax.set_axisbelow(True)
@@ -1283,7 +1280,8 @@ def figura17() -> None:
     bars = ax.barh(y, [n / 1000 for _, n, _, _ in linhas], height=0.58, color=[c for *_, c in linhas])
     for (rot, n, mde, c), yy in zip(linhas, y):
         ax.text(n / 1000 + 6, yy + 0.08, f"{miles(n)} adultos", va="bottom", fontsize=MIN_PT + 0.5, color=INK, fontweight="bold")
-        ax.text(n / 1000 + 6, yy - 0.04, f"detecta mudança de {br(100 * mde, 1)}% ou mais", va="top", fontsize=MIN_PT, color=INK2)
+        # o cálculo só procura aumento relativo, com 80% de poder (AST-06)
+        ax.text(n / 1000 + 6, yy - 0.04, f"80% de poder para aumento de {br(100 * mde, 1)}% ou mais", va="top", fontsize=MIN_PT, color=INK2)
     ax.set_yticks(y, [r for r, *_ in linhas], fontsize=MIN_PT + 0.5)
     ax.set_xlim(0, 520)
     ax.tick_params(axis="x", labelsize=MIN_PT)
@@ -1293,13 +1291,13 @@ def figura17() -> None:
     ax.set_ylim(-1.55, 3.55)
     ax.annotate("", xy=(int(need["adultos_a_triar"]) / 1000, -0.72), xytext=(int(cap["B'"]["adultos"]) / 1000, -0.72),
                 arrowprops={"arrowstyle": "<->", "color": INK2, "lw": 1.4})
-    ax.text((int(need["adultos_a_triar"]) + int(cap["B'"]["adultos"])) / 2000, -0.9, f"faltam {miles(falta)} adultos\npara detectar uma variação de 30%",
+    ax.text((int(need["adultos_a_triar"]) + int(cap["B'"]["adultos"])) / 2000, -0.9, f"faltam {miles(falta)} adultos\npara detectar aumento de 30%",
             ha="center", va="top", fontsize=MIN_PT + 0.5, color=INK, fontweight="bold")
     VALORES["fig17"] = {"rotulos": [r for r, *_ in linhas], "adultos_mil": [float(p.get_width()) for p in bars], "mde": [m for *_, m, _ in linhas], "deff": deff}
     moldura(fig, f"Uma PNS como a de 2019 só detecta variações de {br(100 * linhas[0][2], 0)}% na violência contra LGB+; detectar 30% exige cerca de {miles(round(int(need['adultos_a_triar']), -3))} adultos",
             "Violência física em 12 meses: tamanho de amostra de cada desenho de pesquisa e a menor mudança entre rodadas que ele consegue ver",
             "Cada barra é quantos adultos seriam entrevistados; o texto diz a menor mudança na violência física entre duas rodadas que esse tamanho permitiria enxergar. "
-            "Para ver uma variação de 30% seriam precisos cerca de 306 mil adultos triados, porque só uma pequena fração é LGB+ e as respostas dentro de um mesmo domicílio se parecem.",
+            "Para ver uma variação de 30% seriam precisos cerca de 306 mil adultos triados, porque só uma pequena fração dos adultos é LGB+ e a amostra é sorteada por conglomerados, com pesos desiguais.",
             f"detectar = distinguir uma mudança real de variação por acaso (poder de 80%, erro de 5%) · efeito de desenho = {br(deff, 1)}: a amostra complexa vale {br(deff, 1)} vezes menos que uma amostra aleatória simples do mesmo tamanho · "
             "triar = visitar domicílios para achar adultos LGB+ · PNAD Contínua = pesquisa trimestral de domicílios do IBGE",
             "paper/figures/fontes/capacidade_por_opcao.csv, cenarios_n_custo.csv, n_necessario.csv (origem research-2026-10-21-rodada3/F2-custos/).")
@@ -1346,7 +1344,7 @@ def figura18() -> None:
     moldura(fig, f"Em {br(ign[-1], 0)}% das notificações de {anos[-1]} o motivo da violência ficou ignorado ou em branco, e LGBTfobia aparece em só {br(lgbt[-1], 1)}%: o registro não mede incidência",
             f"Notificações de violência interpessoal nos serviços de saúde (Sinan), Brasil, {anos[0]} a {anos[-1]}: motivo registrado na ficha",
             "Cada coluna soma 100% das notificações do ano. O cinza-escuro é o campo “motivo” deixado ignorado ou em branco; o roxo é a LGBTfobia, que mal aparece (painel b, ampliado). "
-            "Como a maior parte das fichas não diz o motivo e o preenchimento muda de um ano para o outro, o número de casos registrados como LGBTfobia não mostra quanta violência acontece.",
+            "Como o motivo fica sem informação útil em 42% a 53% das fichas, conforme o ano, e o preenchimento muda de um ano para o outro, o número de casos registrados como LGBTfobia não mostra quanta violência acontece.",
             "Sinan = Sistema de Informação de Agravos de Notificação, dos serviços de saúde · notificação = ficha preenchida quando alguém atendido sofreu violência · "
             "“não se aplica” = a ficha marca que o campo não cabe ao caso · incidência = quantos casos acontecem de verdade",
             "paper/figures/fontes/serie_campo55_uf_ano.csv (origem dados/sinan/), linha Brasil.")
@@ -1420,10 +1418,10 @@ def figura20() -> None:
     anos = sorted(ser["agressao"])
     la, = a.plot(anos, [ser["agressao"][x] for x in anos], "-o", color=PALETA["estat"], lw=2.4, ms=4.5, label="agressão (X85-Y09)")
     li, = a.plot(anos, [ser["agressao+indet"][x] for x in anos], "--", color=PALETA["ref"], lw=1.8, label="agressão + causa indeterminada")
-    quem = {2016: "Temer assume", 2019: "Bolsonaro assume", 2023: "Lula assume"}
+    quem = {2016: "Temer\nassume", 2019: "Bolsonaro\nassume", 2023: "Lula\nassume"}   # em duas linhas: o rotulo nao cruza a linha da troca seguinte
     for t, nome in quem.items():
         a.axvline(t, color=INK2, lw=1, ls=":")
-        a.text(t + 0.15, 42.2 if t != 2019 else 40.3, f"{t}: {nome}", fontsize=MIN_PT, color=INK, va="top", ha="left")
+        a.text(t + 0.15, 42.2, f"{t}: {nome}", fontsize=MIN_PT, color=INK, va="top", ha="left")
     a.set_ylim(15, 42.6), a.set_xlim(2009.6, 2024.8)
     a.set_xticks(range(2010, 2025, 2))
     a.tick_params(labelsize=MIN_PT)
@@ -1431,7 +1429,7 @@ def figura20() -> None:
     a.grid(axis="y", color=GRADE, lw=0.6), a.set_axisbelow(True)
     a.legend(frameon=False, fontsize=MIN_PT, loc="lower right")
     seta(a, "a queda já começou em 2018,\nantes da troca de 2019", (2018, ser["agressao"][2018] - 0.4), (2010.2, 19.0), va="center", ha="left")
-    a.set_title("(a) A taxa nacional cai desde 2017", loc="left", fontsize=9.5, fontweight="bold", color=INK, x=-0.45)
+    a.set_title("(a) A taxa nacional cai a partir de 2018", loc="left", fontsize=9.5, fontweight="bold", color=INK, x=-0.45)
     linhas = []
     for t in (2016, 2019, 2023):
         linhas.append((t, "troca", d1[t]["pct"], d1[t]["pct_lo"], d1[t]["pct_hi"]))
@@ -1444,7 +1442,7 @@ def figura20() -> None:
         else:
             eb = b.errorbar([v], [yy], xerr=[[v - lo], [hi - v]], fmt="o", ms=7, mfc="white", mec=PALETA["ref"], mew=1.7, color=PALETA["ref"], ecolor=PALETA["ref"], elinewidth=1.8, capsize=3)
         pts.append(float(eb.lines[0].get_xdata()[0])), ics.append(erros_de(eb)[0])
-        rotulos.append(f"{t}: troca" if tipo == "troca" else f"{d1[t]['placebo_quebra']}: placebo (troca de controle)")
+        rotulos.append(f"{t}: troca" if tipo == "troca" else f"{d1[t]['placebo_quebra']}: quebra um ano antes")
         b.text(1.03, yy, f"{br(v)}%  [{br(lo)}; {br(hi)}]", transform=b.get_yaxis_transform(), va="center", fontsize=MIN_PT + 0.5, color=INK,
                fontweight="bold" if tipo == "troca" else "normal")
     b.set_yticks(y, rotulos, fontsize=MIN_PT + 0.5)
@@ -1459,19 +1457,20 @@ def figura20() -> None:
     b.set_xlabel("Variação de nível da taxa depois da troca, %", fontsize=MIN_PT + 0.3)
     b.grid(axis="x", color=GRADE, lw=0.6), b.set_axisbelow(True)
     b.legend(frameon=False, fontsize=MIN_PT, loc="upper center", bbox_to_anchor=(0.5, -0.17))
-    seta(b, f"o placebo de 2018\ncai {br(abs(d1[2019]['placebo_pct']))}%, mais que\na troca de 2019", (d1[2019]["placebo_pct_hi"] + 1.0, y[3]), (6, y[3]), va="center", ha="left")
+    seta(b, f"quebra em 2018:\nqueda de {br(abs(d1[2019]['placebo_pct']))}%;\ndepende da data", (d1[2019]["placebo_pct_hi"] + 1.0, y[3]), (6, y[3]), va="center", ha="left")
     b.text(1.03, 1.03, "variação [IC95%]", transform=b.transAxes, fontsize=MIN_PT + 0.5, fontweight="bold", color=INK, va="bottom")
-    b.set_title("(b) Cada troca x uma troca de controle um ano antes", loc="left", fontsize=9.5, fontweight="bold", color=INK, x=-0.45)
+    # sensibilidade à data, com a série inteira, e não estimativa anterior à posse (AST-R2-01)
+    b.set_title("(b) Cada troca x a mesma conta com a quebra um ano antes", loc="left", fontsize=9.5, fontweight="bold", color=INK, x=-0.45)
     VALORES["fig20"] = {"anos": anos, "agressao": [float(v) for v in la.get_ydata()], "agressao_indet": [float(v) for v in li.get_ydata()],
                         "quebras": [t for t, *_ in linhas], "tipos": [x[1] for x in linhas], "pontos": pts, "ic": ics,
                         "mde": [[float(m[0]), float(m[1])] for m in mn]}
     ai = {r["quebra"]: float(r["pct"]) for r in ler_csv("c09_d1_resultados.csv") if r["serie"] == "Brasil" and r["desfecho"] == "agressao+indet"}
-    moldura(fig, f"A queda de {br(abs(d1[2019]['pct']), 0)}% na taxa nacional em 2019 já aparece em 2018, num placebo, uma troca de controle um ano antes ({br(d1[2019]['placebo_pct'])}%): os dados não a atribuem ao presidente",
-            "Taxa nacional de morte por agressão, 2010-2024, e a variação de nível em cada troca de presidente (2016, 2019, 2023), comparada a um placebo um ano antes",
+    moldura(fig, f"A queda de {br(abs(d1[2019]['pct']), 0)}% na taxa nacional em 2019 também aparece com a quebra deslocada para 2018 ({br(d1[2019]['placebo_pct'])}%), e a taxa já caía de 2017 para 2018: os dados não a atribuem ao presidente",
+            "Taxa nacional de morte por agressão, 2010-2024, e a variação de nível em cada troca de presidente (2016, 2019, 2023), comparada à mesma conta com as quebras um ano antes",
             "Em (a), a linha roxa é a taxa por 100 mil; as linhas pontilhadas marcam as trocas. Em (b), cada quadrado roxo é a mudança de nível estimada depois da troca e o círculo vazado é a mesma conta "
-            "feita um ano antes, quando nada mudou: se o círculo mostra queda parecida, a queda não pode ser creditada à troca. Os traços pretos mostram o menor efeito que a análise conseguiria ver; "
-            "como as barras são largas, o resultado é “não distinguível de zero, com poder baixo”, e não “não há efeito”.",
-            f"nível = salto da taxa no ano da troca · placebo = a mesma conta num ano em que não houve troca · IC95% = faixa de incerteza · efeito mínimo detectável = menor efeito que a análise veria com 80% de chance · "
+            "com as quebras deslocadas um ano para trás e a série inteira: queda parecida mostra que a estimativa depende da data. Os traços pretos mostram o menor efeito que a análise conseguiria ver; "
+            "a queda de 2019 é distinguível de zero, mas a conta com a quebra em 2018 também cai, e a taxa já caía de 2017 para 2018, por isso a queda não é atribuível à troca; 2016 e 2023 não se distinguem de zero, com poder baixo.",
+            f"nível = salto da taxa no ano da troca · quebra um ano antes = a mesma conta com as datas deslocadas, ajustada à série inteira · IC95% = faixa de incerteza · efeito mínimo detectável = menor efeito que a análise veria com 80% de chance · "
             f"só 15 pontos (2010-2024) e a análise é descritiva, não causal · somando as mortes de causa indeterminada, a queda de 2019 é {br(ai['2019'])}% · o óbito não registra orientação sexual: nada aqui é sobre violência contra LGBT+",
             "paper/figures/fontes/c09_d1_resultados.csv e asr_brasil.csv (origens research-2026-10-24-presidencia/ e dados/sim/); RELATORIO-C09.md; pré-registro PREREGISTRO-C09.")
     salvar(fig, "fig20_serie_nacional_trocas")
@@ -1529,14 +1528,14 @@ def figura21() -> None:
     ax.legend(frameon=False, fontsize=MIN_PT, loc="upper center", bbox_to_anchor=(0.5, -0.07), ncol=1)
     ax.text(1.03, 1.005, "variação [IC95%]", transform=ax.transAxes, fontsize=MIN_PT + 0.5, fontweight="bold", color=INK, va="bottom")
     prim = por[("primaria", "total")]
-    seta(ax, "só efeitos além dos traços\npretos seriam detectados", (float(por[("S7_copartidarismo", "total")]["mde_pos"]), ys[5] - 0.3), (26, ys[5] - 1.05), va="center", ha="left")
+    seta(ax, "além dos traços pretos,\npoder de 80% ou mais", (float(por[("S7_copartidarismo", "total")]["mde_pos"]), ys[5] - 0.3), (26, ys[5] - 1.05), va="center", ha="left")
     todas = ler_d2()
     VALORES["fig21"] = {"linhas": [f"{a}|{g}" for a, g in ordem], "pontos": pts, "ic": ics, "mde": mdes, "n_estimativas": len(todas),
                         "n_distinguiveis": sum(r["distinguivel"] != "False" for r in todas)}
-    moldura(fig, f"Nenhuma das {len(todas)} estimativas da interação entre a ideologia do governador e a do presidente se distingue de zero, mas o painel só veria efeitos de cerca de {br(abs(float(prim['mde_neg'])), 0)}% para menos ou {br(float(prim['mde_pos']), 0)}% para mais",
+    moldura(fig, f"Nenhuma das {len(todas)} estimativas da interação entre a ideologia do governador e a do presidente se distingue de zero, e o painel só teria 80% de poder para efeitos de cerca de {br(abs(float(prim['mde_neg'])), 0)}% para menos ou {br(float(prim['mde_pos']), 0)}% para mais",
             "Interação entre os escores de ideologia do governador e do presidente (principal) e variações, na taxa de homicídio; 351 combinações de estado e ano (2012-2024); 16 análises em %",
             f"Cada quadrado é a melhor estimativa e a barra é a faixa compatível com os dados; todas as barras passam por zero, então o painel não consegue dizer se a interação mudou a taxa. "
-            f"Os traços pretos mostram o menor efeito que a análise detectaria com 80% de chance ({br(float(prim['mde_neg']))}% e +{br(float(prim['mde_pos']))}% na principal): efeitos menores passariam despercebidos. "
+            f"Os traços pretos mostram o menor efeito que a análise detectaria com 80% de chance ({br(float(prim['mde_neg']))}% e +{br(float(prim['mde_pos']))}% na principal): efeitos menores têm chance de detecção abaixo de 80%; a barra, e não o traço, mostra os valores compatíveis com os dados. "
             "O resultado é “não distinguível de zero, com poder baixo”; não é prova de que o presidente não importa.",
             "interação = produto do escore de ideologia do governador (0 a 10) pelo do presidente: mede se o efeito de um depende do outro; “distância entre governador e presidente” e “mesmo partido” são variações separadas · o efeito do presidente em si não é identificável: o efeito de ano o absorve, só a interação aparece · "
             "IC95% = faixa de incerteza (erro-padrão agrupado por estado) · efeito mínimo detectável = menor efeito que a análise veria com 80% de chance · 27 estados e 3 trocas de presidente · "
@@ -1562,26 +1561,28 @@ def figura22() -> None:
     e1 = ler_e1()
     por = {(r["governo"], r["desfecho"]): r for r in e1}
     govs = ["Dilma Rousseff", "Michel Temer", "Jair Bolsonaro", "Luiz Inácio Lula da Silva"]
-    fig = plt.figure(figsize=(7.2, 7.3))
-    a = fig.add_axes([0.30, 0.67, 0.66, 0.30])
-    b = fig.add_axes([0.30, 0.08, 0.44, 0.50])
+    F22 = 9.5  # E5: menor corpo desta figura (cerca de 7,2 pol impressas a 14 cm -> 7,2 pt)
+    fig = plt.figure(figsize=(7.0, 7.2))
+    a = fig.add_axes([0.13, 0.70, 0.84, 0.27])
+    b = fig.add_axes([0.38, 0.075, 0.30, 0.525])
     anos = sorted(ser["agressao"])
     # faixas por governo (limites a partir da fracao de cada ano; 2016 dividido Dilma/Temer)
     lim = {"Dilma": (2010.5, 2015.5 + 0.361), "Temer": (2015.5 + 0.361, 2018.5), "Bolsonaro": (2018.5, 2022.5), "Lula": (2022.5, 2024.5)}
     assert "Dilma Rousseff 0.361" in gov_ano[2016]   # a fracao 0,361 de 2016 vem do arquivo
     for k, (nome, (x0, x1)) in enumerate(lim.items()):
         a.axvspan(x0, x1, color=PALETA["card"] if k % 2 == 0 else "white", zorder=0)
-        a.text((x0 + x1) / 2, 41.2, nome, ha="center", va="top", fontsize=MIN_PT, fontweight="bold", color=INK)
+        a.text((x0 + x1) / 2, 41.2, nome, ha="center", va="top", fontsize=F22, fontweight="bold", color=INK)
     la, = a.plot(anos, [ser["agressao"][x] for x in anos], "-o", color=PALETA["estat"], lw=2.4, ms=4.5, label="agressão (X85-Y09)")
     li, = a.plot(anos, [ser["agressao+indet"][x] for x in anos], "--", color=PALETA["ref"], lw=1.8, label="agressão + causa indeterminada")
     a.set_ylim(15, 42), a.set_xlim(2009.6, 2024.6)
     a.set_xticks(range(2010, 2025, 2))
-    a.tick_params(labelsize=MIN_PT)
-    a.set_ylabel("Mortes por agressão por 100 mil,\nigual padrão de idade", fontsize=MIN_PT + 0.3)
+    a.tick_params(labelsize=F22)
+    a.set_ylabel("Mortes por 100 mil,\npadronizada por idade", fontsize=F22)
     a.grid(axis="y", color=GRADE, lw=0.6), a.set_axisbelow(True)
-    a.legend(frameon=False, fontsize=MIN_PT, loc="lower right")
-    seta(a, "a queda começou em 2018,\nainda com Temer", (2018, ser["agressao"][2018] - 0.5), (2010.6, 19.2), va="center", ha="left")
-    a.set_title("(a) A taxa nacional por governo", loc="left", fontsize=9.5, fontweight="bold", color=INK, x=-0.45)
+    a.legend(frameon=False, fontsize=F22, loc="lower right")
+    a.annotate("a queda começou\nem 2018", xy=(2018, ser["agressao"][2018] - 0.5), xytext=(2010.6, 19.2), fontsize=F22, color=INK, fontweight="bold",
+               va="center", ha="left", arrowprops={"arrowstyle": "->", "color": INK2, "lw": 1.3, "shrinkA": 2, "shrinkB": 3, "connectionstyle": "arc3,rad=0.15"})
+    a.set_title("(a) A taxa nacional por governo", loc="left", fontsize=F22 + 1, fontweight="bold", color=INK, x=-0.1)
     # (b)
     linhas, y, yy = [], [], 0.0
     for g in govs:
@@ -1595,17 +1596,17 @@ def figura22() -> None:
     for kind, g, y0 in linhas:
         if kind == "cab":
             nome, a0, a1, _ = g
-            b.text(-1.0, y0, f"{nome}: {a0} → {a1}", transform=b.get_yaxis_transform(), fontsize=MIN_PT + 0.5, fontweight="bold", color=INK, ha="left", va="center")
+            b.text(-1.22, y0, f"{nome}: {a0} → {a1}", transform=b.get_yaxis_transform(), fontsize=F22 + 0.5, fontweight="bold", color=INK, ha="left", va="center")
             continue
         r = por.get((g, kind)) if kind != "pre" else por[(g, "agressao")]
         if kind == "pre":
             if r["pre_var_pct"] == "":
-                b.text(1.03, y0, "n/d (sem dado antes de 2010)", transform=b.get_yaxis_transform(), va="center", fontsize=MIN_PT, color=INK2)
+                b.text(1.03, y0, "n/d (série desde 2010)", transform=b.get_yaxis_transform(), va="center", fontsize=F22, color=INK2)
                 continue
             v = float(r["pre_var_pct"])
             m = b.plot([v], [y0], "D", mfc="white", mec=PALETA["ref"], mew=1.6, ms=6.5)[0]
             pts.append(float(m.get_xdata()[0])), ics.append(None), tip.append("pre"), gvs.append(g)
-            b.text(1.03, y0, f"{br(v)}%  (contexto, {r['pre_de']} → {int(r['ano_base'])})", transform=b.get_yaxis_transform(), va="center", fontsize=MIN_PT, color=INK2)
+            b.text(1.03, y0, f"{br(v)}%  ({r['pre_de']} → {int(r['ano_base'])})", transform=b.get_yaxis_transform(), va="center", fontsize=F22, color=INK2)
             continue
         v, lo, hi = float(r["var_pct"]), float(r["var_pct_lo"]), float(r["var_pct_hi"])
         if kind == "agressao":
@@ -1613,28 +1614,28 @@ def figura22() -> None:
         else:
             eb = b.errorbar([v], [y0], xerr=[[v - lo], [hi - v]], fmt="o", ms=6.5, mfc="white", mec=PALETA["ref"], mew=1.6, color=PALETA["ref"], ecolor=PALETA["ref"], elinewidth=1.6, capsize=3)
         pts.append(float(eb.lines[0].get_xdata()[0])), ics.append(erros_de(eb)[0]), tip.append(kind), gvs.append(g)
-        b.text(1.03, y0, f"{br(v)}%  [{br(lo)}; {br(hi)}]", transform=b.get_yaxis_transform(), va="center", fontsize=MIN_PT + 0.5, color=INK,
+        b.text(1.03, y0, f"{br(v)}%  [{br(lo)}; {br(hi)}]", transform=b.get_yaxis_transform(), va="center", fontsize=F22, color=INK,
                fontweight="bold" if kind == "agressao" else "normal")
-    rot = {"agressao": "agressão", "agressao+indet": "+ causa indeterminada", "pre": "3 anos antes da posse"}
-    b.set_yticks([y0 for k, g, y0 in linhas if k != "cab"], [rot[k] for k, g, y0 in linhas if k != "cab"], fontsize=MIN_PT)
+    rot = {"agressao": "agressão", "agressao+indet": "+ indeterminada", "pre": "3 anos antes da posse"}
+    b.set_yticks([y0 for k, g, y0 in linhas if k != "cab"], [rot[k] for k, g, y0 in linhas if k != "cab"], fontsize=F22)
     b.axvline(0, color=INK2, lw=0.9, ls="--")
     b.set_xlim(-30, 22), b.set_ylim(yy + 0.3, 0.2)
-    b.tick_params(axis="x", labelsize=MIN_PT)
-    b.set_xlabel("Variação da taxa do ano-base ao último ano do governo, %", fontsize=MIN_PT + 0.3)
+    b.tick_params(axis="x", labelsize=F22)
+    b.set_xlabel("Variação da taxa do ano-base\nao último ano do governo, %", fontsize=F22)
     b.grid(axis="x", color=GRADE, lw=0.6), b.set_axisbelow(True)
-    b.text(1.03, 1.0, "variação [intervalo de contagem]", transform=b.transAxes, fontsize=MIN_PT + 0.5, fontweight="bold", color=INK, va="bottom")
-    b.set_title("(b) Quanto a taxa variou em cada governo", loc="left", fontsize=9.5, fontweight="bold", color=INK, x=-0.45)
+    b.text(1.03, 1.0, "variação\n[intervalo de contagem]", transform=b.transAxes, fontsize=F22, fontweight="bold", color=INK, va="bottom")
+    b.set_title("(b) Quanto a taxa variou em cada governo", loc="left", fontsize=F22 + 1, fontweight="bold", color=INK, x=-1.22)
     bol, bol_i = por[("Jair Bolsonaro", "agressao")], por[("Jair Bolsonaro", "agressao+indet")]
     VALORES["fig22"] = {"anos": anos, "agressao": [float(v) for v in la.get_ydata()], "agressao_indet": [float(v) for v in li.get_ydata()],
                         "governos": gvs, "tipos": tip, "pontos": pts, "ic": ics, "limites": {k: [float(v[0]), float(v[1])] for k, v in lim.items()}}
-    moldura(fig, f"A taxa nacional caiu {br(abs(float(bol['var_pct'])))}% entre {bol['ano_base']} e {bol['ano_fim']} ({br(abs(float(bol_i['var_pct'])))}% somando causa indeterminada); a queda começou em 2018, ainda com Temer; isto não é prova de causa",
+    moldura(fig, f"A taxa nacional caiu {br(abs(float(bol['var_pct'])))}% entre {bol['ano_base']} e {bol['ano_fim']} ({br(abs(float(bol_i['var_pct'])))}% somando causa indeterminada); a queda começou em 2018; isto não é prova de causa",
             "Taxa nacional de morte por agressão, padronizada por idade, por governo (2010-2024), e variação do ano anterior à posse ao último ano inteiro de cada governo",
             "Em (a), cada faixa cinza ou branca é um governo e a linha roxa é a taxa por 100 mil. Em (b), cada quadrado roxo é quanto a taxa variou do ano anterior à posse ao último ano inteiro do governo; "
             "o círculo vazado faz a mesma conta somando as mortes de causa indeterminada; o losango mostra o que a taxa vinha fazendo nos 3 anos antes da posse, só como contexto. "
             "Isto é exposição: mostra o que aconteceu enquanto cada governo estava no cargo, não que o governo causou a mudança.",
             "taxa padronizada por idade = taxa recalculada como se a população tivesse sempre a mesma distribuição de idades · causa indeterminada = óbito cuja causa não foi definida (CID-10 Y10-Y34); "
             "sua fração sobe de 14% (2015) para 30% (2024), então a queda somando-as é sempre menor · intervalo de contagem = só a incerteza do número de mortes, não mede tendência nem causa · "
-            "2016 é dividido entre Dilma (até 11/05) e Temer · Lula está em curso (2 de 4 anos; denominadores de 2023-24 estimados) · o governo Lula de 2007-10 não aparece: o SIM em disco começa em 2010 · o óbito não registra orientação sexual",
+            "2016 é dividido entre Dilma (até 11/05) e Temer · Lula está em curso (2 de 4 anos; denominadores de 2023-24 estimados) · o governo Lula de 2007-10 não aparece: a série usada começa em 2010, ano do Censo que ancora os denominadores · o óbito não registra orientação sexual",
             "paper/figures/fontes/c10_e1_federal.csv e c10_e1_serie_longo.csv, RELATORIO-EXPOSICAO.md (origem research-2026-10-24-exposicao/); pré-registro PREREGISTRO-C10 gravado antes dos desfechos.")
     salvar(fig, "fig22_taxa_nacional_por_governo")
 
@@ -1752,9 +1753,9 @@ def figura24() -> None:
     faixas = [
         ("PNS", "fonte_b", "pergunta direto à pessoa", None, None, None, f"{br(pns['lgb'], 2)}% x {br(pns['het'], 2)}%"),
         ("Sinan", "fonte_a", None, "procura serviço de saúde", "ficha de notificação", "profissional anota a orientação e o motivo",
-         f"sem motivo útil: {br(f_ini)}% (2015) → {br(f_lo)}% a {br(f_hi)}% (2023-25)"),
+         f"{br(f_ini, 0)}% sem motivo útil em 2015; {br(f_lo, 0)}% a {br(f_hi, 0)}% em 2023-25"),
         ("BO (Anuário)", "fonte_a", None, "vai à polícia", "boletim de ocorrência", "a polícia dá o enquadramento penal", f"{miles(bo0)} → {miles(bo1)} (2022-2025)"),
-        ("Disque 100", "fonte_a", None, "liga e denuncia", "registro da denúncia", "o atendente classifica†", "só contagem de registros (Figura 27)"),
+        ("Disque 100", "fonte_a", None, "liga e denuncia", "registro da denúncia", "o atendente classifica†", "só contagem de registros"),   # sem numero de figura: a numeracao e a do artigo
         ("SIM", "fonte_a", None, "morre", "declaração de óbito", "causa da morte, sim; orientação: nenhum campo", "sem número de LGBT+"),
         ("GGB e ANTRA", "ref", None, "vira notícia", "matéria", "quem coleta decide “é LGBT+” e o motivo", f"{ggb[2023]}, {ggb[2024]} e {ggb[2025]} (2023-2025)"),
     ]
@@ -1782,13 +1783,13 @@ def figura24() -> None:
             ax.annotate("", xy=(cx[4], y + rh / 2), xytext=(cx[3] + wc, y + rh / 2), arrowprops={"arrowstyle": "->", "color": ec, "lw": 1.4})
             if nome == "SIM":
                 ax.text(cx[3] + wc - 0.13, y + 0.13, "✗", ha="center", va="center", fontsize=17, color=PALETA["nao"], fontweight="bold")
-        _caixa(ax, cx[4], y, wc, rh, e5, ec, "white", bold=True, cpl=13 if len(e5) < 28 else 17)
+        _caixa(ax, cx[4], y, wc, rh, e5, ec, "white", bold=True, cpl=13 if len(e5) < 28 else 15)
         VALORES["fig24"]["faixas"][nome] = e5
     yb = y0 + 6 * (rh + 0.1) + 0.02
     ax.text(0.1, yb + 0.28, "Quem fica de fora", ha="left", va="center", fontsize=MIN_PT + 0.8, fontweight="bold", color=INK)
     for k, txt in ((1, "quem não procurou serviço e quem não registrou"), (2, "o que não virou notícia"), (3, "o que ninguém anotou")):
         _caixa(ax, cx[k], yb, wc, 0.62, txt, PALETA["sv"], "white", cpl=15, tc=INK2)
-    ax.text(0.05, yb + 0.82, "TSE/BRC classificam governos; Câmara e Senado registram o que se diz. Nenhuma das duas mede violência.\n† não descrito no paper", ha="left", va="center", fontsize=MIN_PT, color=INK2)
+    ax.text(0.05, yb + 0.82, "O TSE e o escore de ideologia dos partidos classificam governos; Câmara e Senado registram o que se diz.\nNenhum dos dois mede violência. † etapa não descrita neste artigo", ha="left", va="center", fontsize=MIN_PT, color=INK2)
     VALORES["fig24"]["numeros"] = {"pns": [pns["lgb"], pns["het"]], "campo55": [f_ini, f_lo, f_hi], "bo": [bo0, bo1], "ggb": [ggb[2023], ggb[2024], ggb[2025]]}
     moldura(fig, "Cada fonte enxerga um pedaço diferente do caminho que o dado percorre; nenhuma mostra a violência inteira",
             "De um fato de violência até o número publicado: onde cada fonte do projeto entra e quem fica de fora em cada etapa",
@@ -1796,7 +1797,7 @@ def figura24() -> None:
             "A seta tracejada da PNS mostra que ela pergunta direto à pessoa e por isso não depende de ela ter procurado ajuda. O ✗ no SIM marca o ponto em que a informação de orientação sexual deixa de existir. "
             "A figura é um esquema: a largura das etapas não representa quantidade de casos.",
             "SIM = Sistema de Informações sobre Mortalidade (Ministério da Saúde) · Sinan = ficha de notificação de violência preenchida em serviço de saúde · BO = boletim de ocorrência, reunido no Anuário Brasileiro de Segurança Pública · "
-            "GGB = Grupo Gay da Bahia · ANTRA = Associação Nacional de Travestis e Transexuais · PNS = Pesquisa Nacional de Saúde, do IBGE · Disque 100 = canal de denúncias do governo federal · TSE/BRC = Justiça Eleitoral e escore de ideologia dos partidos",
+            "GGB = Grupo Gay da Bahia · ANTRA = Associação Nacional de Travestis e Transexuais · PNS = Pesquisa Nacional de Saúde, do IBGE · Disque 100 = canal de denúncias do governo federal · TSE = Justiça Eleitoral · escore de ideologia = nota de 0 a 10 dada por especialistas a cada partido",
             "paper/figures/fontes/seguro_pns2019.csv, serie_campo55_uf_ano.csv, anuario_lgbtfobia_uf_ano_v2.csv, serie_ggb_vs_cobertura.csv; desenho conforme o guia de leitura (G1) e a Tabela 3 do paper.")
     salvar(fig, "fig24_caminho_do_dado")
 
@@ -1806,17 +1807,22 @@ def ler_estudos() -> dict:
     return {r["id"]: r for r in ler_tsv("estudos_mortalidade.tsv")}
 
 
+def _quebra_barra(txt: str, n: int) -> str:
+    """Quebra em linhas de ate n caracteres, podendo quebrar depois de '/' (sem partir palavra: 'LGB+/heterossexuais')."""
+    return "\n".join(ln.replace("/ ", "/") for ln in textwrap.wrap(txt.replace("/", "/ "), n, break_long_words=False))
+
+
 def figura25() -> None:
     """Mapa da evidencia internacional de mortalidade: uma linha por estudo, cada painel com a sua propria medida."""
     E = ler_estudos()
     fl = lambda k, f="valor": float(E[k][f])   # noqa: E731
-    W, H = 7.4, 8.9
+    W, H = 8.3, 7.85   # razao altura/largura <= 1 para caber a 14 cm com rotulo, titulo e Nota na mesma pagina
     fig = plt.figure(figsize=(W, H))
     tx = fig.add_axes([0, 0, 1, 1]); tx.set_xlim(0, W), tx.set_ylim(H, 0), tx.axis("off")
-    xc = [0.05, 1.3, 2.6]
+    xc = [0.05, 1.3, 2.8]
     for x, t in zip(xc, ("Estudo", "População e país", "Causa e medida")):
         tx.text(x, 0.08, t, ha="left", va="center", fontsize=MIN_PT + 0.5, fontweight="bold", color=INK)
-    tx.text(4.1, 0.08, "Resultado (escala própria em cada linha)", ha="left", va="center", fontsize=MIN_PT + 0.5, fontweight="bold", color=INK)
+    tx.text(4.9, 0.08, "Resultado (escala própria em cada linha)", ha="left", va="center", fontsize=MIN_PT + 0.5, fontweight="bold", color=INK)
     linhas = [
         ("ONS 2026", ["NÃO É BRASIL", "NÃO É HOMICÍDIO"], "Pessoas de 16 anos ou mais, Censo 2021 ligado aos óbitos; Inglaterra e País de Gales",
          "Todas as causas. Razão LGB+/heterossexuais, padronizada por idade"),
@@ -1828,18 +1834,20 @@ def figura25() -> None:
         ("Zachry 2025", ["NÃO É BRASIL", "SEM RAZÃO COMBINADA"], "Revisão sistemática de estudos de minorias sexuais e de gênero, vários países", f"Mortalidade, por estudo. {int(fl('zach25_homicidio'))} estudos têm homicídio como desfecho, direções divergentes"),
         ("McLellan 2026", ["NÃO É BRASIL", "NÃO É HOMICÍDIO"], "Adultos trans e de gênero diverso, metanálise de 94 estudos, vários países", "Violência física ou sexual ao longo da vida (prevalência). Homicídio: nenhum estudo reportou prevalência"),
     ]
-    top, rh = 0.55, 1.17
+    top, rh = 0.5, 1.0
     VALORES["fig25"] = {"paineis": {}}
     fs = MIN_PT
     for i, (nome, tags, pop, causa) in enumerate(linhas):
         y = top + i * rh
-        tx.add_patch(Rectangle((0.02, y), W - 0.04, rh - 0.06, fc=PALETA["card"] if i % 2 == 0 else "white", ec="none", zorder=0))
+        # fundo branco (regra do autor: nada de faixa cinza); filete fino separa as linhas sob as colunas de texto
+        if i:
+            tx.plot([0.02, 0.55 * W], [y - 0.03, y - 0.03], color="#B0B0B0", lw=0.5, zorder=0)  # só sob as colunas de texto: o rótulo do eixo de cada painel fica abaixo da fronteira
         tx.text(xc[0], y + 0.12, nome, ha="left", va="center", fontsize=MIN_PT + 0.8, fontweight="bold", color=INK)
         for j, tg in enumerate(tags):
             tx.text(xc[0], y + 0.36 + 0.4 * j, "\n".join(textwrap.wrap(tg, 9)), ha="left", va="center", fontsize=MIN_PT, fontweight="bold", color=PALETA["estat"] if tg == "É BRASIL" else PALETA["nao"])
-        tx.text(xc[1], y + 0.08, "\n".join(textwrap.wrap(pop, 16)), ha="left", va="top", fontsize=MIN_PT, color=INK)
-        tx.text(xc[2], y + 0.08, "\n".join(textwrap.wrap(causa, 16)), ha="left", va="top", fontsize=MIN_PT, color=INK2)
-        ax = fig.add_axes([5.5 / W, 1 - (y + rh - 0.3) / H, 1.55 / W, 0.6 / H])
+        tx.text(xc[1], y + 0.08, _quebra_barra(pop, 21), ha="left", va="top", fontsize=MIN_PT, color=INK)
+        tx.text(xc[2], y + 0.08, _quebra_barra(causa, 21), ha="left", va="top", fontsize=MIN_PT, color=INK2)
+        ax = fig.add_axes([6.55 / W, 1 - (y + rh - 0.3) / H, 1.6 / W, 0.5 / H])
         ax.tick_params(labelsize=fs)
         ax.spines["left"].set_visible(False), ax.tick_params(axis="y", length=0)
         ax.grid(axis="x", color=GRADE, lw=0.6), ax.set_axisbelow(True)
@@ -1908,8 +1916,8 @@ def figura25() -> None:
             ax.set_xlim(0, 100), ax.set_ylim(-0.7, 0.7)
             ax.set_xlabel("% com violência na vida", fontsize=fs)
             VALORES["fig25"]["paineis"][nome] = [(float(eb.lines[0].get_xdata()[0]), erros_de(eb)[0]), fl("mcl26_homicidio")]
-    moldura(fig, "Fora do Brasil, a mortalidade geral de pessoas LGB+ e trans aparece maior em estudos bem definidos, mas nenhum estudo lido dá razão de homicídio por orientação sexual",
-            "Sete estudos de mortalidade e violência publicados entre 2023 e 2026: o que cada um mede, em quem e em que país",
+    moldura(fig, "Fora do Brasil, a mortalidade geral de pessoas LGB+ e trans aparece maior em populações bem definidas; nenhuma fonte lida dá razão de homicídio por orientação sexual, e o estudo brasileiro não tem denominador",
+            "Evidência brasileira e internacional de mortalidade e violência publicada entre 2023 e 2026: o que cada estudo mede, em quem e em que país",
             "Cada linha é um estudo e cada painel tem a sua própria escala: as medidas são diferentes (razão de taxas, taxa por 100 mil, fator de aceleração, contagem de estudos) e por isso não se comparam entre si, nem formam um único “risco”. "
             "Os rótulos em vinho avisam o que o estudo NÃO é: não é Brasil, não é homicídio. Só o estudo de Luis (2026) é brasileiro e não traz taxa, por falta de denominador.",
             "razão de taxas = quantas vezes a mortalidade de um grupo é maior que a do outro, depois de igualar as idades · LGB+ = lésbicas, gays, bissexuais e outras orientações · fator de aceleração = menor que 1 quer dizer que o tempo até o óbito é mais curto · "
@@ -1937,7 +1945,7 @@ def figura26() -> None:
     bars = a.barh(y, [e[0] for e in etapas], height=0.62, left=[-e[0] / 2 for e in etapas], color=[PALETA["estat"] if i in (0, 4) else PALETA["estat_cl"] for i in range(5)])
     for (n, rot), yy in zip(etapas, y):
         a.text(0, yy, f"{n}", ha="center", va="center", fontsize=11, fontweight="bold", color="white" if n in (n0, n4) else INK)
-        a.text(-149, yy, "\n".join(textwrap.wrap(rot, 26)), ha="left", va="center", fontsize=MIN_PT, color=INK, clip_on=False, transform=a.transData)
+        a.text(-149, yy, "\n".join(textwrap.wrap(rot, 20)), ha="left", va="center", fontsize=MIN_PT, color=INK, clip_on=False, transform=a.transData)
     for yy, s_ in zip(y, saidas):
         if s_:
             a.text(86, yy - 0.5, "\n".join(textwrap.wrap(s_, 42)), ha="left", va="center", fontsize=MIN_PT, color=INK2, clip_on=False)
@@ -2113,6 +2121,7 @@ def main() -> None:
     for f in figs:
         f()
     (AQUI / "valores_plotados.json").write_text(json.dumps(VALORES, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    (AQUI / "textos_fora_da_imagem.json").write_text(json.dumps(TEXTOS, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
     arquivos = sorted(p for p in AQUI.iterdir() if p.suffix in {".pdf", ".svg", ".png", ".json", ".py"}) + \
         sorted(p for p in FONTES.iterdir() if p.is_file())
     linhas = [f"{hashlib.sha256(p.read_bytes()).hexdigest()}  {p.relative_to(AQUI)}" for p in arquivos]

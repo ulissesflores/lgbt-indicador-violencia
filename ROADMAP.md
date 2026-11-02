@@ -14,5 +14,5 @@ Próxima versão honesta, por ordem:
 6. **Índice de afirmações** (`manifest/CLAIMS.csv`): cada afirmação central ligada a população, período, arquivo, teste e limitação.
 7. **Escrutínio externo do repositório**: reprodução do zero em máquina limpa e revisão por pessoa de fora; achados viram issues.
 8. **Figuras dos dados (não só do artigo) como código**, como `paper/figures/make_figures.py`.
-9. **Artigo derivado do repositório**: entra num commit posterior, citando a URL e o `chain_hash` daqui, com o sha256 do PDF em `paper/PAPER-SHA256.txt` (fora do selo).
-10. **Versão 1.0.0** só imediatamente antes do primeiro release que cunha o DOI.
+9. **Artigo derivado do repositório**: feito (v0.4.4 em `paper/`; v0.5 em `docs/paper/` e `paper/v05/`), com o SHA-256 do PDF em `paper/PAPER-SHA256.txt` (fora do selo).
+10. **Versão 1.0.0**: aplicada nos metadados no commit que prepara o primeiro release (rc1), o que cunha o DOI; depois do DOI, ele entra nos arquivos e no artigo e sai a 1.0.0 final.

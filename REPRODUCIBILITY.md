@@ -7,8 +7,9 @@ Por isso a reprodução tem duas trilhas e um conjunto de coisas que não se pod
 
 1. **Derivação reproduzível (Trilha 1).** Todo número publicado que depende só dos derivados distribuídos é recalculado por
    `python3 -I run_all.py` e comparado com o commitado. O recálculo roda numa réplica (`.run/replica`), nunca sobre os arquivos do repositório.
-   Resultado verificado em 2026-10-23, macOS arm64, Python 3.14.8, numpy 2.4.6, pandas 3.0.2, scipy 1.17.1, matplotlib 3.10.9
-   (`requirements.lock`): ver a seção "Evidência desta montagem" abaixo.
+   Resultado verificado pela primeira vez em 2026-10-23 (macOS arm64, Python 3.14.8, numpy 2.4.6, pandas 3.0.2, scipy 1.17.1, matplotlib 3.10.9;
+   `requirements.lock`) e de novo a cada selo; a execução selada mais recente, com o ambiente e o pip freeze, está em `runs/` (versão 1.0.0:
+   01/11/2026, Python 3.14.10). Ver a seção "Evidência desta montagem" abaixo.
 2. **Evidência congelada, não re-rodável.** Coletas que dependem do mundo naquele dia (reportagens, páginas da Wikipédia, buscas em
    Google News RSS/OpenAlex/GDELT, arquivos preliminares do DATASUS, leitura de PDFs) não voltam idênticas. Cada uma tem URL, data de acesso
    e, quando houve download, SHA-256 em `manifest/MANIFESTO-FONTES.csv`; o que foi lido, codificado ou contado fica nos CSV/JSON derivados.
@@ -20,9 +21,10 @@ registrado em `manifest/SHA256SUMS.txt` e que o `chain_hash` de `output/provenan
 dele: o artigo cita a URL do repositório e o `chain_hash`, o que seria impossível se o selo cobrisse o próprio artigo. Por isso
 `make_provenance.excluido()` (regra única, usada também pelo inventário, pelos testes de privacidade e pelo auditor) deixa fora do
 conjunto selado `paper/paper.md`, `paper/AUDIT.md`, `paper/build/` (PDF, DOCX, saídas do juiz), `paper/tools/` (ferramentas de export e
-auditoria), `paper/tests/test_anexo.py` (testa o build do artigo) e `paper/PAPER-SHA256.txt`. As figuras (`paper/figures/`) e os testes
-de figura entram no selo. O primeiro commit público não contém o artigo; ele entra num commit posterior, final, e o sha256 do PDF final
-será gravado em `paper/PAPER-SHA256.txt` (arquivo à parte, criado depois do PDF, fora do selo).
+auditoria), `paper/tests/test_anexo.py` (testa o build do artigo), `paper/PAPER-SHA256.txt` e, desde a v0.5, o texto-fonte (`paper/v05/*.md`), o PDF e o DOCX publicados (`docs/paper/`) e o registro de cada execução selada (`runs/`, que grava o próprio `chain_hash`). As figuras (`paper/figures/`) e os testes
+de figura entram no selo. O primeiro commit público (`0601c65`) não contém o artigo; ele entra no segundo commit, com a versão 0.4.4
+do texto e o PDF único (`paper/build/v04/paper-v04.pdf`), e o SHA-256 do texto e do PDF fica em `paper/PAPER-SHA256.txt` (arquivo à
+parte, criado depois do PDF, fora do selo). O texto-fonte do artigo v0.5 (`paper/v05/`) entra no commit que dispara o DOI; o PDF e o DOCX (`docs/paper/paper-final.{pdf,docx}`, gerados por `paper/tools/build_v05.sh`) entram só no commit da versão 1.0.0 final, já com o DOI, para que nenhum PDF sem o identificador fique público.
 
 ## Trilha 1: leve (conferência dos derivados, ~6 min)
 
@@ -33,7 +35,7 @@ python3 -I run_all.py --rapido                 # sem o recálculo (segundos): in
 python3 -I scripts/reproduzir.py --only painel # só um passo do recálculo
 ```
 
-Passos do recálculo (`scripts/reproduzir.py`, 28): concordância Sinan x Anuário (`concordancia_v2.py`), painel de governos em 3 especificações e
+Passos do recálculo (`scripts/reproduzir.py`, 29): concordância Sinan x Anuário (`concordancia_v2.py`), painel de governos em 3 especificações e
 diagnósticos (`painel_f8.py`, `painel_diagnosticos.py`), reanálises pré-registradas C02 e C03 (`painel_c02_indet.py`, `painel_c03_event_pesos.py`),
 intervalo do painel por inversão do wild-cluster (R6, `painel_r6_ic_wild_invertido.py`), troca de presidente (C09, `dados/presidencia/c09_*.py`),
 exposição por governo (C10, `dados/exposicao/c10_*.py`), taxas padronizadas e projeção (`padroniza_idade.py`, `projecao_grupos.py`,
@@ -52,7 +54,7 @@ Verificação independente (outra álgebra, outra biblioteca): `dados/verificaca
 (inversa da matriz de correlação), o IC da parcela LGB+ implícita na PNS (método delta em vez de Monte Carlo) e o painel TWFE (MQO com todas as
 dummies explícitas e CR1 direto) e confere com os arquivos gerados e com o texto dos dossiês. Roda como teste (`tests/test_integridade.py`).
 
-## Matriz de reprodução (v0.3)
+## Matriz de reprodução
 
 Três situações, sem mistura: **recalcula** (o script roda a partir do que está aqui e o resultado é comparado byte a byte com o publicado),
 **só confere** (o número publicado é relido e conferido por teste ou por outra conta, mas o cálculo original exige algo que não está aqui) e
@@ -68,12 +70,12 @@ Três situações, sem mistura: **recalcula** (o script roda a partir do que est
 | Taxas padronizadas, projeção, contexto local, tabelas do Sinan, governadores (curadoria), F3/F5/GGB/ideologia, simulação | derivados de `dados/` e das frentes | idem | recalcula | `scripts/reproduzir.py` |
 | Números publicados e valores desenhados nas figuras | todos os derivados | asserções | só confere | `pytest -q` (`tests/`, `paper/tests/`) |
 | Verificação independente (Spearman parcial, IC delta, TWFE explícito) | derivados | asserções | só confere (outra álgebra) | `dados/verificacao_independente.py` |
-| Inventário de fontes, idiomas, tipos e scripts | 18 ledgers, `verificacao-metadados.csv`, dossiês, `dashboard/dashboard_dados.publico.json` | `manifest/INVENTARIO-PUBLICO.{md,json}` | recalcula (e reproduz o painel com os 17 ledgers dele) | `scripts/inventario_publico.py --check` |
+| Inventário de fontes, idiomas, tipos e scripts | 20 ledgers, `verificacao-metadados.csv`, dossiês, `dashboard/dashboard_dados.publico.json` | `manifest/INVENTARIO-PUBLICO.{md,json}` | recalcula (e reproduz o painel com os 17 ledgers dele) | `scripts/inventario_publico.py --check` |
 | PNS 2019 (C05, C08, cobertura, poder) | microdado do IBGE | `dados/pns/`, `dados/ggb/` | recalcula sob demanda (Trilha 2) | `scripts/acquire_pns2019.py` + scripts |
 | SIM e Sinan agregados | microdado do DATASUS | `dados/sim/`, `dados/sinan/` | só confere (aquisição e hash testados; re-agregação não reexecutada nesta montagem) | `scripts/acquire_{sim,sinan}.py` |
 | Universo nominal do GGB 2019, captura-recaptura, validação das 160 fontes | lista nominal + sal (não publicados) | `research-2026-10-21-rodada3/F3-ggb/dados/` | não se refaz aqui | lógica auditável em `s01`-`s14` |
 | Notícias, buscas, Wikipédia, GDELT, leitura de PDFs, painel de contagens | o mundo na data da coleta; árvore privada | contagens, ledgers, `dashboard/` | não se refaz | URL, data e sha256 no manifesto |
-| Export do artigo (DOCX/PDF) e juiz da rubrica | modelo DOCX, canon da casa, CLI de modelo | `paper/build/` (não distribuído neste commit) | não se refaz aqui (ferramenta do autor) | ver a seção Artigo |
+| Export do artigo (DOCX/PDF) e juiz da rubrica | Microsoft Word, canon da casa, CLI de modelo | PDF e DOCX da v0.5 em `docs/paper/`; PDF da v0.4.4 em `paper/build/v04/`; vereditos do juiz em `paper/build/juiz/` | não se refaz aqui (ferramenta do autor: `paper/tools/build_v05.sh`) | ver a seção Artigo |
 
 Ambientes exercidos: macOS arm64 com Python 3.14.8 (selo e réplica) e, na v0.3, a suíte de testes também em Python 3.12 e 3.13 (venv
 descartável, mesmas versões mínimas de `requirements.txt`; ver a seção Evidência). A CI do GitHub (Linux) continua não exercida.
@@ -148,14 +150,24 @@ original embutiu caminhos absolutos, depois trocados nos dois lados).
 | --- | --- | --- | --- |
 | Testes de figura (`paper/tests/test_figuras.py`) | sim, no selo | sim | `pytest -q` (ou `run_all.py`): reabre as fontes copiadas, confere com `dados/` e com `dashboard/dashboard_dados.publico.json` |
 | Figuras (`paper/figures/make_figures.py`) | sim, no selo | sim (matplotlib) | determinístico; `figures/SHA256SUMS` |
-| Texto do artigo, PDF, DOCX, auditoria e ferramentas de export (`paper/paper.md`, `paper/build/`, `paper/tools/`, `paper/AUDIT.md`, `paper/tests/test_anexo.py`) | não: entram depois, fora do selo | export e juiz: não (ferramenta do autor: modelo DOCX, canon da casa, pandoc, Word, CLI de modelo pela assinatura do autor) | verificação de referências, densidade e E-E-A-T rodarão no clone quando o artigo entrar |
-| Hash do PDF final (`paper/PAPER-SHA256.txt`) | não: criado depois do PDF final | sim | `shasum -a 256 -c` sobre o arquivo, fora do selo |
+| Texto do artigo, PDF, auditoria e ferramentas de export (`paper/paper.md`, `paper/build/v04/paper-v04.pdf`, `paper/tools/`, `paper/AUDIT.md`, `paper/tests/test_anexo.py`; vereditos do juiz em `paper/build/juiz/rodada-v4-*.json` e, a partir da v4-3, `rodada-v4-*.md`) | sim (segundo commit), fora do selo; DOCX, logs e páginas renderizadas ficam fora do git | export e juiz: não (ferramenta do autor: pandoc, Microsoft Word, CLI de modelo pela assinatura do autor) | verificação de referências, densidade, E-E-A-T, `crivo_texto.py` e `test_anexo.py` rodam no clone |
+| Artigo v0.5: PDF e DOCX (`docs/paper/paper-final.{pdf,docx}`), texto-fonte e pareceres (`paper/v05/`), montagem (`paper/tools/build_v05.sh`, `monta_fonte_v05.py`) | sim, fora do selo (as figuras de `paper/v05/figures/` e o README da pasta entram) | montagem: não (Microsoft Word); o texto-fonte e os hashes, sim | `shasum -a 256 -c paper/PAPER-SHA256.txt`; o validador da casa (`validate_canon.py`) e o crivo (`paper/tools/crivo_docx.py`) foram rodados pelo autor |
+| Hash do texto e do PDF final (`paper/PAPER-SHA256.txt`) | sim (segundo commit), fora do selo: criado depois do PDF final | sim | `shasum -a 256 -c` sobre o arquivo |
 
-Enquanto o artigo não estiver no repositório, `scripts/auditar_publicacao.py --check literatura` confere os ledgers e a planilha de verificação e
-declara a conferência artigo x ledger como "NÃO EXERCIDA". Depois do primeiro commit, o histórico do git é o registro de mudanças;
-`manifest/MODIFICACOES.tsv` registra só a sincronização inicial com o projeto de origem.
+Com o artigo no repositório (segundo commit), `scripts/auditar_publicacao.py --check literatura` confere os ledgers, a planilha de verificação
+e o artigo contra o ledger; no primeiro commit essa conferência era "NÃO EXERCIDA". Depois do primeiro commit, o histórico do git é o registro de mudanças;
+`manifest/MODIFICACOES.tsv` registra só a sincronização com o projeto de origem: no segundo commit voltam as linhas das ferramentas
+do artigo e entram as cópias de `docs/revisao/`; o texto e a auditoria do artigo não têm linha, porque mudam depois do selo (citam o
+`chain_hash`) e têm o SHA-256 em `paper/PAPER-SHA256.txt`.
 
 ## Evidência desta montagem
+
+Na versão 1.0.0 (2026-11-01), as análises que dependem do microdado da PNS 2019 (`dados/pns/agressor_risco_pns2019.py`, inclusive a Tabela
+C12 e a coluna com cônjuge no domicílio da Tabela C10) e o dimensionamento com a fração de cada modo (`research-2026-10-21-rodada3/F2-custos/
+cenarios_custo.py`, Tabela K2) foram rodados contra a cópia local das fontes; neste repositório eles são conferidos pelos testes de
+`tests/test_numeros_v05.py` contra os arquivos derivados, e não recalculados pela Trilha 1. A terceira leitura dos desacordos do GGB
+(`research-2026-10-21-rodada3/F3-ggb/scripts/s15_terceiro_codificador.py`) usa as matérias com nome, que não são distribuídas; a decisão
+fica em `research-2026-10-21-rodada3/F3-ggb/dados/adjudicacao.json`.
 
 Ver `BUILD-STATE.md` (local, não versionado) e a saída de `python3 -I run_all.py`. Em 2026-10-23, C05 e C08 foram rodadas contra uma cópia
 local do microdado da PNS 2019 (o mesmo arquivo do IBGE usado na pesquisa, não baixado de novo nesta etapa) e reproduziram as quatro saídas byte a byte.
@@ -168,3 +180,8 @@ matplotlib 3.11.2, versões mais novas que as do `requirements.lock`: 54 arquivo
 precisão total de C02 e C03), 0 divergência. Em Python 3.14.8 (ambiente do lock), `--only dados/`: 35 idênticos, 2 equivalentes, 0 divergência.
 A suíte de testes rodou em 3.12, 3.13 e 3.14 (contagens no relatório da versão). Python 3.11 não é suportado: um script de pesquisa
 (`research-2026-10-21-rodada3/discurso/governos/scripts/tabela_md.py`) usa sintaxe de f-string que só compila a partir da 3.12.
+
+Na v0.4 (2026-10-25, selo `5cf914b0…`, 721 arquivos): recálculo de 60 arquivos idênticos e 2 equivalentes numéricos, 0 divergência; testes 110/110.
+Na v0.4.1 e de novo na v0.4.2 (2026-10-25; selo vigente em `output/hash-chain.md`): recálculo dos 29 passos em Python 3.14.8 (numpy 2.4.6, pandas 3.0.2, scipy 1.17.1,
+matplotlib 3.10.9), 60 idênticos, 2 equivalentes, 0 divergência, cerca de 310 a 320 s; testes 114/114 na árvore do autor (os 4 novos conferem o texto
+vigente do artigo contra os arquivos de dados, em `paper/tests/test_anexo.py`); num clone, 111/111 e 3 pulados.

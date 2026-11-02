@@ -316,17 +316,45 @@ def check_release(raiz, final=False):
         ".zenodo.json": zen.get("version"),
     }
     msgs.append("versões: " + ", ".join(f"{k} {v}" for k, v in versoes.items()))
-    if len(set(versoes.values())) != 1 or not str(versoes["pyproject"]).startswith("0."):
-        falhas.append("versões divergentes ou fora de 0.x antes do DOI")
-    if zen.get("access_right") != "closed":
+    # 0.x = preparação (acesso fechado); X.Y.0 com X >= 1 = versão da rc1, que só abre o acesso
+    # no commit da rc1, com o aval do autor (o bump para 1.0.0 vem no commit anterior à rc1)
+    preparo = str(versoes["pyproject"]).startswith("0.")
+    if len(set(versoes.values())) != 1:
+        falhas.append("versões divergentes entre pyproject, CITATION.cff, codemeta e .zenodo.json")
+    if preparo and zen.get("access_right") != "closed":
         falhas.append(
             ".zenodo.json: access_right deveria ser 'closed' antes da autorização do autor"
         )
-    if "doi" in (raiz / "CITATION.cff").read_text(encoding="utf-8").split("references:")[0].lower():
+    if not preparo and zen.get("access_right") not in ("closed", "open"):
+        falhas.append(
+            ".zenodo.json: access_right deveria ser 'closed' (até o aval) ou 'open' (commit da rc1)"
+        )
+    cab_cff = (raiz / "CITATION.cff").read_text(encoding="utf-8").split("references:")[0]
+    if final:
+        # depois do DOI: o identificador do Zenodo nos metadados e no README, com acesso aberto
+        doi = re.search(r"10\.5281/zenodo\.\d+", cab_cff)
+        if not doi:
+            falhas.append("final: CITATION.cff sem o DOI do Zenodo")
+        else:
+            for nome in ("codemeta.json", "README.md"):
+                if doi.group(0) not in (raiz / nome).read_text(encoding="utf-8"):
+                    falhas.append(f"final: {nome} sem o DOI {doi.group(0)}")
+        if zen.get("access_right") != "open":
+            falhas.append("final: .zenodo.json deveria estar com access_right 'open'")
+    elif "doi" in cab_cff.lower():
         falhas.append("CITATION.cff traz DOI próprio antes do release")
     if falhas:
         return FALHOU, msgs + falhas
-    msgs.append("fase pré-DOI coerente (0.x, acesso fechado, sem DOI próprio)")
+    if final:
+        msgs.append("final: DOI presente em CITATION.cff, codemeta.json e README.md; acesso aberto")
+    elif preparo:
+        msgs.append("fase pré-DOI coerente (0.x, acesso fechado, sem DOI próprio)")
+    else:
+        msgs.append(
+            f"versão de release {versoes['pyproject']} coerente nos quatro arquivos, "
+            f"sem DOI próprio; access_right '{zen.get('access_right')}' "
+            "(vira 'open' no commit da rc1, com o aval do autor)"
+        )
     etapa = "final" if final else "pré-release"
     msgs.append(
         f"NÃO EXERCIDO ({etapa}): ainda não há repositório público, toggle do Zenodo, "

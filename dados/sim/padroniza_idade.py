@@ -155,9 +155,12 @@ def main():
     L.append(f"| negros / não negros (padronizado, raça ignorada redistribuída) | {ng/nn:.2f} | taxas {ng:.1f} e {nn:.1f} |")
     ng_x, nn_x = pooled("Negros", m_ag, ign=True), pooled("Não negros", m_ag, ign=True)
     ng_i = pooled("Negros", nr_ag); nn_i = pooled("Não negros", nr_ag)
-    L.append(f"| negros / não negros: limite inferior (raça ignorada descartada) | {ng_i/nn_i:.2f} | |")
-    L.append(f"| negros / não negros: extremo A (toda raça ignorada -> negros) | {pooled('Negros', m_ag, True)/pooled('Não negros'):.2f} | cota máxima possível a favor de negros mais expostos |")
-    L.append(f"| negros / não negros: extremo B (toda raça ignorada -> não negros) | {pooled('Negros')/pooled('Não negros', m_ag, True):.2f} | cota mínima |")
+    L.append(f"| negros / não negros: cenário (raça ignorada descartada) | {ng_i/nn_i:.2f} | |")
+    # extremos: os dois grupos partem só da raça conhecida e o ignorado entra UMA vez, no grupo escolhido (antes, até a v0.5-r5,
+    # entrava de novo sobre a base já redistribuída; parecer AST-09 da r5); o total de óbitos se conserva nos dois cenários
+    so_conhecida = {**nr_ag, **{k: v for k, v in m_ag.items() if k[2] == "ign"}}
+    L.append(f"| negros / não negros: extremo A (toda raça ignorada -> negros) | {pooled('Negros', so_conhecida, True)/pooled('Não negros', so_conhecida):.2f} | cota máxima possível a favor de negros mais expostos |")
+    L.append(f"| negros / não negros: extremo B (toda raça ignorada -> não negros) | {pooled('Negros', so_conhecida)/pooled('Não negros', so_conhecida, True):.2f} | cota mínima |")
     for (a_, b_) in (("Homens negros", "Mulheres não negras"), ("Homens não negros", "Mulheres não negras"), ("Mulheres negras", "Mulheres não negras"), ("Homens negros", "Homens não negros")):
         L.append(f"| {a_} / {b_} (padronizado) | {pooled(a_)/pooled(b_):.1f} | taxas {pooled(a_):.1f} e {pooled(b_):.1f} |")
     # kitagawa

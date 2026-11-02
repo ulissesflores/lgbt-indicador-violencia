@@ -151,6 +151,10 @@ def test_auditor_falha_com_erro_plantado():
         assert _rodar(c, "literatura")[0] == 1
         (c / "dados" / "script_novo.py").write_text('"""Script plantado."""\n', encoding="utf-8")
         assert _rodar(c, "inventario")[0] == 1
+        # versão divergente entre os metadados (com 1.0.0, acesso aberto é o passo previsto da rc1)
         z = c / ".zenodo.json"
-        z.write_text(z.read_text(encoding="utf-8").replace('"closed"', '"open"'), encoding="utf-8")
+        z.write_text(
+            z.read_text(encoding="utf-8").replace('"version": "', '"version": "9.', 1),
+            encoding="utf-8",
+        )
         assert _rodar(c, "release")[0] == 1

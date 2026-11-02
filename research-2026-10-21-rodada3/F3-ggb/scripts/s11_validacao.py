@@ -1,5 +1,6 @@
 """S11. Resultados da auditoria de validacao por amostra (GGB 2019, n=160 de N=329, AAS semente 20261021).
-Le: amostra.csv, fonte_checks.csv, fetch_log.csv, ggb2019_universo_hash.csv, codificacao_A_raw.txt, (opcional) codificacao_B.json.
+Le: amostra.csv, fonte_checks.csv, fetch_log.csv, ggb2019_universo_hash.csv, codificacao_A_raw.txt, (opcional) codificacao_B.json
+e adjudicacao.json (terceira leitura dos desacordos, aplicada só se conferida pelo autor).
 Gera: codificacao_A.csv (planilha de codificacao, ids hash), resultados.csv, validacao_resumo.json, kappa.json.
 Uso: python3.14 -I s11_validacao.py"""
 import os as _os
@@ -21,6 +22,16 @@ cod = {}
 for l in open(D/"codificacao_A_raw.txt"):
     if not l[:1].isdigit(): continue
     p = l.rstrip("\n").split("|"); cod[p[0]] = dict(zip(["ordem","corresp","morte","tipo","lgbt","base","motivo","desfecho","tipo_fonte","obs"], p))
+# 2026-11-01 (parecer AST-01 da r5; decisão do autor): os 6 casos com desacordo entre A e B foram decididos por uma
+# terceira leitura cega (s15_terceiro_codificador.py), por maioria de dois de três, e conferidos pelo autor. As contagens
+# usam o código final; o kappa continua sendo A (original) contra B.
+cod_A = {k: dict(v) for k, v in cod.items()}
+adj = D/"adjudicacao.json"
+if adj.exists() and json.load(adj.open())["conferido_pelo_autor"]:
+    for x in json.load(adj.open())["desacordos"]:
+        if cod[x["caso"]][x["variavel"]] != x["final"]:
+            cod[x["caso"]]["obs"] += f' [3a leitura: {x["variavel"]} {cod[x["caso"]][x["variavel"]]}->{x["final"]}]'
+            cod[x["caso"]][x["variavel"]] = x["final"]
 def nr_motivo(i):
     u, f = uni[i], flog[i]
     if u["fonte_tipo"] != "link": return "sem_link_no_anexo4"
@@ -94,7 +105,7 @@ for m in mt: print(m)
 bf = RAW/"saida_B.txt"
 if bf.exists():
     B = {x["caso"]: x for x in json.load(bf.open())}
-    A = {d["ordem"]: d for d in rows if d["fonte"] == "R"}
+    A = cod_A  # kappa sobre a codificação original de A, antes da terceira leitura
     ks = [k for k in B if k in A]
     def kappa(a, b):
         n_ = len(a); cats = sorted(set(a) | set(b)); po = sum(1 for x, y in zip(a, b) if x == y)/n_

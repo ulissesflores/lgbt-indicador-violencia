@@ -1,0 +1,166 @@
+{
+ "regra": "código final = o de dois dos três codificadores; três divergentes = fica A (publicado)",
+ "codificador_C": {
+  "modelo_pedido": "gpt-6-astra",
+  "modelo_registrado": "gpt-6-astra",
+  "segundos": 14,
+  "rc": 0,
+  "texto": "matéria inteira, nome mascarado; sem ver A nem B"
+ },
+ "conferido_pelo_autor": true,
+ "desacordos": [
+  {
+   "caso": "1",
+   "variavel": "lgbt",
+   "A": "S",
+   "B": "I",
+   "C": "S",
+   "final": "S",
+   "regra": "dois de três (A e C)"
+  },
+  {
+   "caso": "1",
+   "variavel": "desfecho",
+   "A": "INQ",
+   "B": "ND",
+   "C": "ND",
+   "final": "ND",
+   "regra": "dois de três (B e C)"
+  },
+  {
+   "caso": "62",
+   "variavel": "corresp",
+   "A": "P",
+   "B": "S",
+   "C": "P",
+   "final": "P",
+   "regra": "dois de três (A e C)"
+  },
+  {
+   "caso": "90",
+   "variavel": "morte",
+   "A": "I",
+   "B": "S",
+   "C": "I",
+   "final": "I",
+   "regra": "dois de três (A e C)"
+  },
+  {
+   "caso": "90",
+   "variavel": "tipo",
+   "A": "ND",
+   "B": "S",
+   "C": "ND",
+   "final": "ND",
+   "regra": "dois de três (A e C)"
+  },
+  {
+   "caso": "90",
+   "variavel": "motivo",
+   "A": "U",
+   "B": "S",
+   "C": "U",
+   "final": "U",
+   "regra": "dois de três (A e C)"
+  },
+  {
+   "caso": "91",
+   "variavel": "motivo",
+   "A": "R",
+   "B": "U",
+   "C": "R",
+   "final": "R",
+   "regra": "dois de três (A e C)"
+  },
+  {
+   "caso": "122",
+   "variavel": "corresp",
+   "A": "P",
+   "B": "S",
+   "C": "P",
+   "final": "P",
+   "regra": "dois de três (A e C)"
+  },
+  {
+   "caso": "159",
+   "variavel": "morte",
+   "A": "I",
+   "B": "S",
+   "C": "S",
+   "final": "S",
+   "regra": "dois de três (B e C)"
+  },
+  {
+   "caso": "159",
+   "variavel": "tipo",
+   "A": "ND",
+   "B": "H",
+   "C": "H",
+   "final": "H",
+   "regra": "dois de três (B e C)"
+  }
+ ],
+ "C": {
+  "1": {
+   "caso": "1",
+   "corresp": "S",
+   "morte": "S",
+   "tipo": "H",
+   "lgbt": "S",
+   "base": "I",
+   "motivo": "C",
+   "desfecho": "ND"
+  },
+  "62": {
+   "caso": "62",
+   "corresp": "P",
+   "morte": "S",
+   "tipo": "H",
+   "lgbt": "S",
+   "base": "P",
+   "motivo": "P",
+   "desfecho": "FORAGIDO"
+  },
+  "90": {
+   "caso": "90",
+   "corresp": "S",
+   "morte": "I",
+   "tipo": "ND",
+   "lgbt": "N",
+   "base": "N",
+   "motivo": "U",
+   "desfecho": "ND"
+  },
+  "91": {
+   "caso": "91",
+   "corresp": "S",
+   "morte": "S",
+   "tipo": "H",
+   "lgbt": "I",
+   "base": "X",
+   "motivo": "R",
+   "desfecho": "INQ"
+  },
+  "122": {
+   "caso": "122",
+   "corresp": "P",
+   "morte": "S",
+   "tipo": "H",
+   "lgbt": "S",
+   "base": "I",
+   "motivo": "U",
+   "desfecho": "INQ"
+  },
+  "159": {
+   "caso": "159",
+   "corresp": "S",
+   "morte": "S",
+   "tipo": "H",
+   "lgbt": "N",
+   "base": "N",
+   "motivo": "U",
+   "desfecho": "INQ"
+  }
+ },
+ "conferencia": "2026-11-01: autor conferiu a tabela dos 6 casos e escolheu aplicar a decisão de dois de três (só o caso 159 muda as contagens: morte I->S)."
+}

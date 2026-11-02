@@ -1,0 +1,79 @@
+{
+ "sha256_conferido": "f283475e8853e8cec20278a46503bd756f0f68bc288249e8cc367e9980c7f69f",
+ "dimensoes": {
+  "estrutura_formal": {
+   "pontos": 132,
+   "maximo": 150,
+   "descontos": [
+    "Subtítulo descritivo (−3/15): o subtítulo 'uma auditoria de fontes e indicadores, 2010–2026' nomeia o gênero e o recorte, mas não declara o resultado central (mortalidade não estimável; registros não identificam incidência).",
+    "Tabela presente quando exigido (−5/20): as Tabelas 1, 2, 4, 6, 8 e 10 cumprem densidade, mas a Tabela 5 tem 4 linhas × 3 colunas no piso e a Tabela 3 mistura critério substantivo com hash truncado a 16 dígitos, abaixo do que a nota da própria seção 2.4 chama de impressão digital completa.",
+    "Diagrama/figura quando aplicável (−10/20): há 28 figuras e o teste 35/35 passou, porém o corpo numera Figuras 1–28 enquanto o teste cita fig1–fig28 com nomes de arquivo que não seguem a ordem do texto (Figura 1 = fig24; Figura 3 = fig6; Figura 4 = fig1), e a Figura 5 inclui McLellan et al. (2026) na fonte sem linha correspondente na Tabela 4."
+   ]
+  },
+  "densidade_tecnica": {
+   "pontos": 190,
+   "maximo": 250,
+   "descontos": [
+    "TDI (−27/80): tools/densidade_paper.py mede TDI = 2,02 < 3 (93 termos distintos em 23.057 palavras do corpo). A régua é proporcional ao limiar: 2,02/3 × 80 = 53,9, logo 80 − 27. O próprio script lista como não encontrados no léxico termos que o texto usa por extenso ou com grafia vizinha (efeitos fixos duplos em vez de TWFE; efeito de desenho em vez de deff; Campbell (1979) sem a expressão 'Lei de Campbell'; SHA-256 em vez de sha256; ligação de registros em vez de linkage; SCImago Journal Rank em vez de SJR).",
+    "Vocabulário específico (−3/30): a quase totalidade é qualificada, mas restam usos genéricos sem métrica na frase — seção 4.2, 'objeção forte'; seção 5, 'ameaça mais séria'; seção 2.6, 'quatro camadas' sem limiar de falha além do κ < 0,60 já fixado só para codificação."
+   ]
+  },
+  "fundamentacao_teorica": {
+   "pontos": 135,
+   "maximo": 150,
+   "descontos": [
+    "Quantidade de refs (−0, mas com ressalva interna de −0): 97 parágrafos na lista (verifica_referencias.py: 97/97 citadas, 0 órfãs) superam qualquer N usual de trabalho final; não desconto.",
+    "Tipos distintos (−0): a equivalência declarada pela ferramenta cobre 5/5 tipos aplicáveis ao gênero (paper, livro, norma oficial, padrão/framework, documentação oficial de dados); o sexto item do menu de computação não se aplica.",
+    "E-E-A-T médio (−5/40): a média declarada pelo script é 83,7 ≥ 75, mas o script classifica 78 entradas da versão anterior e a lista auditada tem 97; 16 das 78 ficam abaixo de 75 (GGB 2020 = 57,5; OSCE 2018 = 62,0; Cerqueira & Coelho 2017 = 61,0; CIDH 1983 = 63,5; Comissão Nacional da Verdade 2014 = 63,5). A média passa; o desconto é pela defasagem 78 vs 97 e pela cauda abaixo do limiar, não por reprovação do critério.",
+    "Refs recentes (−0): 47/78 = 60,3% ≥ 50% na lista do script; a lista de 97 não foi remedida e não invento a fração.",
+    "Sem refs banidas (−10/15): não há Wikipedia, mas GGB (2020) e GGB (2026) são relatórios de associação privada sem autoria individual (E-E-A-T de autoria 50; scores 57,5 e 72,5), Benevides (2026)/ANTRA tem autoria 50 e score 72,5, e entram como evidência de contagem e não só como objeto auditado (seção 3.4 e Tabela 1). Flores (2026) é auto-citação do repositório companion, exceção declarada, usada como fonte de método em quase toda seção de resultado."
+   ]
+  },
+  "originalidade_tese": {
+   "pontos": 168,
+   "maximo": 200,
+   "descontos": [
+    "Tese argumentável (−8/60): a tese central — registro administrativo não identifica incidência; mortalidade LGBT+ não é estimável sem o campo no óbito — é defensável e um autor poderia discordar da regra de elegibilidade Q1 e da leitura 'não sustentada' da Hipótese 7. O desconto é porque a metade 'o que não se pode afirmar' é em larga medida o limite já declarado pelas próprias fontes (IBGE, 2022b; Ministério da Saúde, 2022), não uma tese que o dado contradiga.",
+    "Trade-off com nome próprio (−12/50): Campbell (1979) é invocado na Introdução como orientação de leitura e o texto diz explicitamente que 'não é testada'. Goodman-Bacon (2021) é citado para dizer que a decomposição 'não se aplica literalmente'. Holland (1986) e Greiner e Rubin (2011) nomeiam o problema causal, mas o trade-off operacional com nome e forma (R = I × p, com g e h não separáveis) fica na seção 3.5 sem nome de lei. Kitagawa aparece como método, não como trade-off.",
+    "Insight não-óbvio (−6/40): o aha da não identificabilidade (três histórias, mesmo produto (1+g)(1+h), soma de quadrados 0,0472) e o RR* = N/E₀ de 0,08 a 0,29 estão no texto. O desconto é porque o insight é a identidade contábil R = I × p, já implicada por Campbell (1979), e não um mecanismo novo.",
+    "Solução elegante central (−6/30): a solução proposta (levantamento de vitimização repetido + orientação no óbito, seção 4.4 e conclusão) resolve a tensão de medida, mas é a prescrição padrão de vigilância, não uma ideia única no estilo de uma construção que dissolve o conflito; o dimensionamento da Tabela 10 é engenharia de amostra, não a solução da identificabilidade."
+   ]
+  },
+  "consistencia_interna": {
+   "pontos": 74,
+   "maximo": 100,
+   "descontos": [
+    "Sem contradição entre seções (−14/40): (i) seção 3.6 abre com 'nenhum dos 72 coeficientes' e a Tabela 6 reporta intervalos que incluem zero, mas a seção 3.7 descreve variação da taxa 'em cada governo' com linguagem que o resumo traduz como 'não mostrou associação detectável' para o partido do governador e, na mesma frase, trata a variação por governo como descrição — o corpo, porém, em 4.1 julga a Hipótese 5 'não sustentada' enquanto 3.7 ainda reporta diferenças de nível cuja incerteza é só Poisson, incompatível com o erro do painel da 3.6; (ii) seção 3.2 diz que sob a regra original a afirmação de mortalidade por todas as causas é 'parcial' e sob a regra complementar é 'sustentada', enquanto o Resumo afirma a razão 1,31 como fato ('a mortalidade por todas as causas é maior') sem a ressalva das duas regras; (iii) Figura 5 cita McLellan et al. (2026) e a Tabela 4 não o inclui; McLellan estima prevalência de violência ao longo da vida, não mortalidade, e a legenda da Figura 5 o coloca entre estudos de mortalidade; (iv) seção 3.4 diz que a correlação GGB–SIM é r = 0,20 (IC −0,37 a 0,60) e logo depois que de 2017 a 2024 as séries 'caem juntas' (−34,6% e −37,3%), leitura de co-movimento que o intervalo não sustenta.",
+    "Alinhamento com claims do resumo (−6/20): o Resumo afirma '50 de 160 casos sorteados de 2019 (31,3%) são verificáveis' e o corpo (3.4) precisa: 50/160 identificam a vítima como LGBT+ entre casos com morte violenta confirmada, e 'não delimita o total nem por baixo nem por cima'; o Resumo omite o intervalo de Wilson (24,6 a 38,8) e a fração condicional de 56,8%. O Resumo diz 'não separa violência de registro' para 783 → 3.481, alinhado à 3.5. A busca de '60 consultas' e '1 de 49 falas' depende das seções 3.8 e 3.10, que o texto sustenta com os números declarados, mas o Resumo escreve 'não localizou perseguição' onde o método (2.2) exige a fórmula 'não localizado no espaço enumerado'.",
+    "Numeração coerente (−2/20): verifica_referencias.py marca 97/97 citadas e 0 órfãs. Desconto residual: a Introdução anuncia resultados nas seções 3.1 a 3.10 e a nota da Tabela 2 acrescenta 3.11 a 3.13 sem que a lista de hipóteses as cubra; a Tabela 3 trunca SHA-256 a 16 dígitos enquanto a seção 2.4 define a impressão como 64 caracteres.",
+    "Vocabulário consistente (−4/20): LGB+ / LGBT+ / LGBTfobia / 'racismo por homofobia ou transfobia' estão definidos, mas 'cobertura implícita' (nome de arquivo fig2_ggb_cobertura_implicita.png, e o script de densidade lista o termo como não encontrado) é chamada no texto ora de 'razão', ora de 'escala', ora de 'cobertura' (Figura 9: 'não estima a cobertura real'), e 'verificável' na 3.4 significa 'matéria recuperada + morte violenta + identificação LGBT+' enquanto o Resumo diz só 'verificáveis'."
+   ]
+  },
+  "correcao_factual": {
+   "pontos": 112,
+   "maximo": 150,
+   "descontos": [
+    "Claims com citação verificada (−18/60): a regra (5) desconta só inconsistência interna, afirmação sem citação, suposição não marcada ou número sem origem. Números centrais da PNS, do ONS, do SIM e do GGB têm origem declarada. Sem citação de página ou arquivo no ponto em que o número nasce: a soma de quadrados em log de 0,0472 e as três histórias 63,7% / 42,3% / 72,3% (seção 3.5, passos 3–4) citam FBSP (2026) para a série e Flores (2026) só na legenda da Figura 14, não no parágrafo do cálculo; o κ e os 216 itens (seção 2.6) não têm estimativa numérica de κ no trecho, só a regra '< 0,60 torna o resultado indicativo' (Tabela 3); '1.554 adultos LGB+' e '442 mil vítimas (±132 mil)' (3.1) remetem a Flores (2026) e Tabelas A1–A5, origem declarada — não desconto esses. Desconto os 72 coeficientes e as 9.999 reamostragens (2.5 e 3.6) quando o intervalo invertido é reportado sem o valor do coeficiente no trecho visível da abertura de 3.6, e a frase do Resumo 'não mostrou associação detectável' sem remeter ao critério de decisão (inclusão do zero nos três intervalos). Szwarcwald et al. (2025) é citado para dizer que o artigo não foi usado: claim sobre o artigo sem leitura além de título e resumo, marcado — não desconto.",
+    "Sem invenção (−12/40): a regra complementar de elegibilidade foi 'definida em 24 de outubro de 2026, depois de identificados estudos' e 'não é prospectiva' (2.2), e mesmo assim o Resumo e o veredito 'sustentada' tratam ONS (2026a), McKetta et al. (2024) e Erlangsen et al. (2023) como se a regra pré-registrada os cobrisse. A seção 3.2 separa as duas regras; o problema é o Resumo, que não separa. A expectativa de vida do ONS é 'estimativa experimental sem teste formal' (3.2) e reaparece no ataque a Hatzenbuehler como 'diferenças da ordem de um ano' sem repetir que o ONS 'tende a superestimar em nível'. A decomposição '89% a 99%' de Kitagawa (3.3) não declara a fórmula aplicada às quatro células.",
+    "Suposições marcadas (−5/25): a maior parte está marcada (risco igual, RR = 2,82 transplantado da violência não letal para morte, independência das listas 'pressuposto frágil', tendências paralelas). Não marcada como suposição a frase de que 'pessoas trans podem estar na amostra, sem identificação' elevada a limite do denominador (Tabela 1 e 3.4) sem quantidade, e a extrapolação geométrica dos denominadores de 2023–2024 cujo efeito 'não foi testado' (3.3) mesmo assim produz as taxas 2,6 / 4,3 / 20,0 / 51,7 como resultado principal da Tabela 5.",
+    "URLs acessíveis (−3/15): verifica_referencias.py dá pertencimento 97/97 em ledger ou exceção declarada, não acessibilidade HTTP. Cinco exceções (Câmara, Senado, TSE, CIDH 1983, Flores 2026) apontam para arquivo local do repositório, não para URL que o leitor abra. O critério pede URL acessível; ledger não substitui acesso. Desconto parcial, não total, porque o script marca PASS de pertencimento e as exceções são declaradas.",
+    "DOIs válidos (−0/10): 46 referências com DOI conferidas contra Crossref/DataCite (verifica_referencias.py, passo 2) e 0 achados de vocabulário; não há DOI inventado apontado pela ferramenta. Não desconto o que a ferramenta não marcou como inválido."
+   ]
+  }
+ },
+ "total": 811,
+ "achados_criticos": [
+  "TDI medido = 2,02 < 3 (densidade_paper.py, corpo de 23.057 palavras). A dimensão de densidade fica em 190 ≥ 100, então a cap dura (total ≤ 600 se densidade < 100) NÃO dispara. O déficit é real: o léxico do script não conta grafias por extenso, mas a régua manda usar a saída da ferramenta e não refazer o TDI de cabeça.",
+  "A média E-E-A-T 83,7 e a fração 60,3% ≥ 2023 referem-se às 78 entradas do script, não às 97 referências do paper.md (nota S2 da própria ferramenta). verifica_referencias.py fecha 97/97 com 0 órfãs e 46 DOIs conferidos; isso salva numeração e DOI, não autoriza tratar 83,7 como média das 97.",
+  "Contradição de veredito: o Resumo afirma mortalidade por todas as causas 'maior (razão de 1,31)' e 'não localizou perseguição', enquanto 2.2 e 3.2 condicionam o primeiro à regra complementar não prospectiva (24 out 2026) e obrigam a fórmula 'não localizado no espaço enumerado'. Sob a regra original do pré-registro o veredito de mortalidade geral é 'parcial', não 'sustentada'.",
+  "Figura 5 lista McLellan et al. (2026) entre estudos de mortalidade; a Tabela 4 não o inclui, e o próprio 3.2 diz que essa meta-análise estima prevalência de violência ao longo da vida (64,23%) e não achou estudo de prevalência de homicídio.",
+  "A não identificabilidade R = I × p está demonstrada com três histórias de mesmo ajuste (SQ log = 0,0472), mas Campbell (1979) é declarado não testado e Goodman-Bacon (2021) é declarado inaplicável: o trade-off com nome próprio fica incompleto.",
+  "Build v0.4 no mesmo sha256: PDF de 126 páginas, qpdf limpo, estilo Referencia com hanging 720 twips, 97 parágrafos de referência, crivo 0/0. Forma [instituição omitida] do export está cumprida; isso não corrige as inconsistências de conteúdo acima.",
+  "Escala de decisão da rubrica: 811 cai em 'Aceitável — revisar trechos diluídos' (700–849), abaixo do limiar [instituição omitida] de trabalho final (≥ 950) citado na própria rubrica."
+ ],
+ "veredito": "Aceitável (811/1000), abaixo do limiar de trabalho final [instituição omitida] (≥ 950) e da faixa 'Bom' (850–919). A cap dura não se aplica: densidade técnica = 190 ≥ 100. O que segura o texto é método pré-registrado, travessia figura-dado (35/35), pertencimento 97/97 e a demonstração de que a série policial não separa incidência de registro. O que impede nota de entrega é o TDI 2,02, o veredito do Resumo mais forte que a regra de elegibilidade, a Figura 5 à frente da Tabela 4, e o trade-off nomeado (Campbell, Goodman-Bacon) anunciado e em seguida desautorizado pelo próprio texto. Revisão cirúrgica do Resumo, da Figura 5 e do estatuto da regra complementar sobe a consistência e a correção factual sem reescrever o artigo.",
+ "_sha256_antes": "f283475e8853e8cec20278a46503bd756f0f68bc288249e8cc367e9980c7f69f",
+ "_sha256_depois": "f283475e8853e8cec20278a46503bd756f0f68bc288249e8cc367e9980c7f69f",
+ "_valida": true,
+ "_modelo": null
+}

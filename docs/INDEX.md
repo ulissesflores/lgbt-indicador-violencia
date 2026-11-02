@@ -6,10 +6,12 @@
 | [`laudos/`](laudos/INDEX.md) | laudos das frentes: GGB (o que é, séries), mortalidade, governos, mídia, F2 custos, F3 GGB, F5 economia política, F6 Ásia/África, F8 literatura, ideologia |
 | [`PRE-REGISTROS/`](PRE-REGISTROS/) | pré-registros de governos, mortalidade e mídia, com hash gravado antes da coleta |
 | [`briefings/`](briefings/) | briefings de pesquisa por rodada (método) |
+| [`historico-de-correcoes.md`](historico-de-correcoes.md) | histórico das revisões do texto do artigo: o que mudou entre versões, as correções numéricas com o número anterior ao lado e o que saiu do artigo e por quê (seção 8: versão 0.4.1) |
+| [`revisao/`](revisao/) | segundo exame do artigo, sobre a versão 0.4: triagem item a item do juiz de rubrica e do revisor de outra família (`S2-TRIAGEM.md`), o relatório desse revisor (`S2-ASTRA-A2.md`) e a revisão hostil de um terceiro modelo (`F-LAUDO.md`); caminhos locais trocados por caminhos relativos |
 
 Convenções dos dossiês: ✅ conferido na fonte primária · ⚠️ resumo/secundário/não revisado · 🚫 não encontrado após busca enumerada.
 
-Fora de `docs/`, no mesmo nível de documentação: [`../paper/`](../paper/) (figuras e testes de figura; o artigo entra depois, fora do selo) e
+Fora de `docs/`, no mesmo nível de documentação: [`../paper/`](../paper/) (o artigo, `paper.md` e o PDF em `build/v04/`, suas ferramentas e a auditoria `AUDIT.md`, fora do selo; figuras e testes de figura, dentro do selo) e
 [`../research-2026-10-21-rodada3/escrutinio/`](../research-2026-10-21-rodada3/escrutinio/) (revisões hostis, triagem, reanálises, simetria).
 
 ## Termos internos que ficaram em arquivos com hash gravado

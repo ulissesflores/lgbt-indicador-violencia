@@ -32,3 +32,17 @@ paper/build/fig-embed/
 paper/build/juiz/rodada-v2-1.json
 # Disque 100: os 23 CSV brutos (13 GB) são baixados por dados/disque100/scripts/baixar.py e nunca versionados
 dados/disque100/raw/
+# artigo (v0.4.1 e v0.4.2): de paper/build/ entram no git só o PDF final e os vereditos das rodadas do juiz da v0.4 (rodada-v4-*.json e,
+# a partir da v4-3, o resumo legível rodada-v4-*.md);
+# DOCX, área de trabalho do export, páginas renderizadas, logs, testes do pipeline e PDFs da v0.3 ficam fora
+paper/build/*
+!paper/build/v04/
+paper/build/v04/*
+!paper/build/v04/paper-v04.pdf
+!paper/build/juiz/
+paper/build/juiz/*
+!paper/build/juiz/rodada-v4-*.json
+!paper/build/juiz/rodada-v4-*.md
+paper/tools/__pycache__/
+# PDF e DOCX do artigo v0.5: entram só no commit da versão 1.0.0 final, já com o DOI (decisão do autor, 2026-11-01)
+docs/paper/

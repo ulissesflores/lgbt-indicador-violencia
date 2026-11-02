@@ -1,0 +1,10 @@
+opcao,fracao,pi_lgb,adultos,n_lgb,mde_fisica,mde_qualquer,custo_central_BRL
+1. Modulo PNADC (1 ano),"PNS 2019, todos os modos",0.0189,275573,5212,0.317,0.122,6848075
+1. Modulo PNADC (1 ano),modulo preenchido pelo entrevistador,0.0135,275573,3723,0.379,0.144,6848075
+1. Modulo PNADC (1 ano),modulo preenchido pelo proprio morador,0.0326,275573,8976,0.238,0.093,6848075
+2. Rodada dedicada tipo PNS (140 mil dom.),"PNS 2019, todos os modos",0.0189,114278,2161,0.507,0.19,29000468
+2. Rodada dedicada tipo PNS (140 mil dom.),modulo preenchido pelo entrevistador,0.0135,114278,1544,0.609,0.225,29000468
+2. Rodada dedicada tipo PNS (140 mil dom.),modulo preenchido pelo proprio morador,0.0326,114278,3722,0.379,0.144,29000468
+3. Painel/web probabilistico (mesmo n da opcao 2),"PNS 2019, todos os modos",0.0189,114278,2161,0.507,0.19,41990599
+3. Painel/web probabilistico (mesmo n da opcao 2),modulo preenchido pelo entrevistador,0.0135,114278,1544,0.609,0.225,41990599
+3. Painel/web probabilistico (mesmo n da opcao 2),modulo preenchido pelo proprio morador,0.0326,114278,3722,0.379,0.144,41990599

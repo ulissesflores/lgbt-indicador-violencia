@@ -1,6 +1,9 @@
 # F3 — Auditoria empírica das contagens do Grupo Gay da Bahia (GGB)
 
-Data: 2026-10-21. Frente F3 da rodada 3 do LGBT-INDICADOR. Pasta: `research-2026-10-21-rodada3/F3-ggb/`.
+Data: 2026-10-21. Frente F3 da rodada 3 do LGBT-INDICADOR.
+
+> [!NOTE]
+> **Contagens atualizadas em 2026-11-01.** Uma terceira leitura cega dos 6 desacordos da dupla codificação, decidida por dois de três e conferida pelo autor (`research-2026-10-21-rodada3/F3-ggb/dados/adjudicacao.json`), mudou um caso de morte indeterminada para homicídio. Os números vigentes são: morte violenta confirmada em 84,1% (74/88); LGBT+ não mencionado em 27,0% (20/74); motivo desconhecido em 48,6% (36/74); LGBTfobia atribuída em 4,1% (3/74). Os 50 de 160 verificáveis não mudam. O texto abaixo é o laudo de 2026-10-21, mantido como foi escrito. Pasta: `research-2026-10-21-rodada3/F3-ggb/`.
 Sem juízo de valor sobre a organização: o que segue mede o que a lista do GGB permite medir, com semente fixa e planilha rastreável.
 
 > [!IMPORTANT]

@@ -1,0 +1,11 @@
+# Impressão digital do artigo, versão 0.4.4 (fora do selo do repositório; ver REPRODUCIBILITY.md)
+# Selo do repositório do qual o artigo deriva: d1d2e4d77e2be87486b635c230d2e88025b6ac87888682e89f4dcf87942b215b (724 arquivos; output/hash-chain.md)
+# PDF gerado pelo Microsoft Word a partir do DOCX de tools/build_v04.sh (o DOCX não é distribuído); 129 páginas; 2608720 bytes
+# Conferir, da raiz do repositório: shasum -a 256 -c paper/PAPER-SHA256.txt
+7a63b6fb4042ac29827ee56f68508bf580f56c828abe3a768d81502288159445  paper/build/v04/paper-v04.pdf
+fdd8e9d48b32a8bef3d0d7f226c95f665677185781f168e69562cf4b7aea0ced  paper/paper.md
+
+# Versão 0.5 do artigo, repositório 1.0.0 (pré-DOI: o PDF e o DOCX entram em docs/paper/ na versão final, já com o DOI, e seus SHA-256 voltam a esta lista)
+# Selo do repositório: 8b85a966a99bdf1d2e3ec799304cad21124bf59938e5ed73a4bdb551109f9043 (785 arquivos)
+b64d8b555c5c26e30b6a99c284ded120fe3fd2671f574fd22f5f8010f555a022  paper/v05/MANUSCRITO.md
+177a1099d4b0224d8ae7fbe3188cf0c625341716af4ba54ffe5336ef5e902685  paper/v05/MATERIAL-COMPLEMENTAR.md

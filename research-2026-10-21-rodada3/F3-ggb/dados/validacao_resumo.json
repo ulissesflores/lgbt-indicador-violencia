@@ -13,7 +13,7 @@
  },
  "correspondem": 88,
  "correspondencia_S": 73,
- "morte_violenta": 73,
+ "morte_violenta": 74,
  "verificavel_estrito": 50,
  "verificavel_largo": 54,
  "motivo_entre_verificavel_estrito": {
@@ -27,13 +27,13 @@
  "motivo_entre_morte_violenta_confirmada": {
   "C": 13,
   "R": 13,
-  "U": 35,
+  "U": 36,
   "V": 3,
   "S": 3,
   "P": 6
  },
  "tipo_entre_morte_violenta": {
-  "H": 60,
+  "H": 61,
   "L": 10,
   "S": 3
  },
@@ -44,9 +44,9 @@
   "F": 4
  },
  "desfecho_entre_morte_violenta": {
-  "INQ": 46,
+  "ND": 6,
   "FORAGIDO": 7,
-  "ND": 5,
+  "INQ": 46,
   "PRESO": 14,
   "SUSP_MORTO": 1
  },

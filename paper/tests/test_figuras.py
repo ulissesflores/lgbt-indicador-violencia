@@ -34,6 +34,11 @@ def _v() -> dict:
     return json.loads((FIG / "valores_plotados.json").read_text(encoding="utf-8"))
 
 
+def _textos() -> dict:
+    """Titulo-conclusao, subtitulo, 'Como ler', termos e fonte de cada figura: gerados do dado, ficam FORA da imagem (regra APA)."""
+    return json.loads((FIG / "textos_fora_da_imagem.json").read_text(encoding="utf-8"))
+
+
 def _sha(p: Path) -> str:
     return hashlib.sha256(p.read_bytes()).hexdigest()
 
@@ -189,6 +194,19 @@ def test_sha256sums_das_figuras():
               "fig20_serie_nacional_trocas", "fig21_alinhamento_governador_presidente", "fig22_taxa_nacional_por_governo", "fig23_trocas_de_governador_exposicao", "fig24_caminho_do_dado",
               "fig25_mortalidade_internacional", "fig26_ggb_verificabilidade", "fig27_ggb_curva_de_hipoteses", "fig28_disque100_serie"):
         assert all((FIG / f"{n}.{ext}").exists() for ext in ("pdf", "svg", "png")), n
+
+
+def test_texto_fora_da_imagem_e_sem_processo():
+    """Regra APA do artigo: nenhuma figura desenha titulo, cartao 'Como ler' ou rodape 'Fonte:' (ficam no documento), e
+    nenhuma traz texto de processo (versao, adendo, busca corrigida). Controle positivo: os textos existem no JSON."""
+    tx = _textos()
+    proibido = ("Como ler", "Fonte:", "Termos", "v0.1", "v0.2", "v0.3", "adendo", "busca corrigida", "primeira busca", "desta versão")
+    for svg in sorted(FIG.glob("fig*.svg")):
+        corpo = svg.read_text(encoding="utf-8")
+        assert not [w for w in proibido if w in corpo], (svg.name, [w for w in proibido if w in corpo])
+        assert tx[svg.stem]["como_ler"] and tx[svg.stem]["titulo_conclusao"] and tx[svg.stem]["fonte"], svg.stem
+        assert tx[svg.stem]["titulo_conclusao"][:40] not in corpo, svg.stem                                  # o titulo-conclusao nao esta na imagem
+    assert len(tx) == 28
 
 
 # ---------------------------------------------------------------- Figuras 6 a 12 (v0.2)
@@ -766,7 +784,7 @@ def _chk_fig24(v: dict) -> None:
     assert _perto(n["pns"][0], 100 * float(p["prev_grupo"])) and _perto(n["pns"][1], 100 * float(p["prev_ref"]))
     br_ = {int(r["ano"]): float(r["pct_m_ign"]) + float(r["pct_m_na"]) for r in _csv("serie_campo55_uf_ano.csv") if r["uf"] == "BR"}
     assert _perto(n["campo55"][0], br_[2015]) and _perto(n["campo55"][1], min(br_[a] for a in (2023, 2024, 2025))) and _perto(n["campo55"][2], max(br_[a] for a in (2023, 2024, 2025)))
-    assert (round(n["campo55"][0]), round(n["campo55"][1]), round(n["campo55"][2])) == (53, 42, 44)        # paper: 53% -> 42% a 45%
+    assert (round(n["campo55"][0]), round(n["campo55"][1]), round(n["campo55"][2])) == (53, 42, 44)        # paper: 53% -> 42% a 44% (ROUND_HALF_UP)
     anu = {(r["edicao"], r["ano_dado"]): int(r["registros"]) for r in _csv("anuario_lgbtfobia_uf_ano_v2.csv") if r["uf"] == "BR" and r["registros"]}
     assert n["bo"] == [anu[("2024", "2022")], anu[("2026", "2025")]] == [783, 3481]
     ggb = {int(r["ano"]): int(r["ggb"]) for r in _csv("serie_ggb_vs_cobertura.csv") if r["ggb"]}
@@ -815,14 +833,14 @@ def _chk_fig26(v: dict) -> None:
     corr = [r for r in rec if r["corresp"] in ("S", "P")]
     mv = [r for r in corr if r["morte"] == "S"]
     estr = [r for r in mv if r["lgbt"] == "S"]
-    assert v["etapas"] == [float(x) for x in (len(cod), len(rec), len(corr), len(mv), len(estr))] == [160.0, 106.0, 88.0, 73.0, 50.0]
+    assert v["etapas"] == [float(x) for x in (len(cod), len(rec), len(corr), len(mv), len(estr))] == [160.0, 106.0, 88.0, 74.0, 50.0]
     assert v["etapas"] == [float(js[k]) for k in ("n_amostra", "recuperadas", "correspondem", "morte_violenta", "verificavel_estrito")]
     mot = {k: float(sum(1 for r in mv if r["motivo"] == k)) for k in ("U", "C", "R", "P", "S", "V")}
-    assert v["motivos"] == mot == {"U": 35.0, "C": 13.0, "R": 13.0, "P": 6.0, "S": 3.0, "V": 3.0}
+    assert v["motivos"] == mot == {"U": 36.0, "C": 13.0, "R": 13.0, "P": 6.0, "S": 3.0, "V": 3.0}
     assert sum(v["motivos"].values()) == v["etapas"][3]
     assert 100 * 50 / 160 == 31.25 and _br(100 * 50 / 160) == "31,3" and f"{100 * 50 / 160:.1f}" == "31.2"     # o teste trava o meio-para-cima (o Python puro daria 31,2)
-    svg = (FIG / "fig26_ggb_verificabilidade.svg").read_text(encoding="utf-8")
-    assert "50 (31,3%)" in svg and "31,2%" not in svg                                                         # o titulo desenhado concorda com o paper (31,3%)
+    tit = _textos()["fig26_ggb_verificabilidade"]["titulo_conclusao"]
+    assert "50 (31,3%)" in tit and "31,2%" not in tit                                                         # o titulo-conclusao gerado do dado concorda com o paper (31,3%)
     assert "31,3%" in " ".join((FONTES / "paper_v0.1.md").read_text(encoding="utf-8").split())
     assert js["motivo_nao_recuperacao"] == {"link_morto_404": 31, "dominio_inacessivel": 12, "bloqueio_ou_erro_servidor": 4, "sem_link_no_anexo4": 7}
 
@@ -868,7 +886,7 @@ def _chk_fig28(v: dict) -> None:
     assert (min(lg[:9]), max(lg[:9])) == (1331, 4787) and ca[-3:] == [551693, 637890, 550546]
     assert _br(lg[14] / lg[10]) == "6,8" and _br(ca[14] / ca[10]) == "2,9"                                          # o titulo: 6,8 e 2,9 vezes
     assert [_br(100 * lg[i] / ca[i]) for i in (10, 11, 14, 15)] == ["0,6", "1,4", "1,5", "1,9"]
-    svg = (FIG / "fig28_disque100_serie.svg").read_text(encoding="utf-8")
+    svg = (FIG / "fig28_disque100_serie.svg").read_text(encoding="utf-8") + " " + " ".join(_textos()["fig28_disque100_serie"].values())   # imagem + textos que vao ao documento
     assert "até setembro" in svg and "2026*" in svg and "não é violência" in svg                                    # 2026 rotulado como parcial
     assert "vítimas únicas não é calculável" in svg and "taxa de vitimização" not in svg
     assert "mais violência" in svg and "aumentou" not in svg.lower().replace("não aumentou", "")                    # nada de "a violencia aumentou"

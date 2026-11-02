@@ -13,7 +13,7 @@ baseline_resumo_C27.json	research-2026-10-21-rodada3/escrutinio/simetria/baselin
 fisher_C27.txt	research-2026-10-21-rodada3/escrutinio/simetria/fisher_C27.txt	bb0a128754650c764007ffcc8b455a395a60c985ace6fbf483d6eb3c2f940a13
 TRIAGEM.csv	research-2026-10-21-rodada3/escrutinio/TRIAGEM.csv	71606532dd4eb6e872b0a18bdb5ca753de1f169f0702656a77b68d944387da5f
 paper_v0.1.md	paper/paper.md congelado na v0.1 (sha256 8f6cd9f100de042849a48995f0161895ce229943c33f9a29ffb8cbfeadccb2a6); o paper.md vivo muda, esta copia nao	8f6cd9f100de042849a48995f0161895ce229943c33f9a29ffb8cbfeadccb2a6
-vereditos_tabela1_tabela5.tsv	AUTORAL: transcricao de celulas da Tabela 1 e das secoes 3-4 do paper v0.1 (paper_v0.1.md), uma linha por celula, com o trecho literal; a coluna categoria e a unica leitura do autor da figura	0533feb18c00a7feffacc6554c9fa99ca02a7d90f1ae325b4bb43327576ddb3c
+vereditos_tabela1_tabela5.tsv	AUTORAL: transcricao de celulas da Tabela 1 e das secoes 3-4 do paper v0.1 (paper_v0.1.md), uma linha por celula, com o trecho literal; a coluna categoria e a unica leitura do autor da figura	02c26b5e0498eaf1175ae6972c142b24a967adde2e3777c5a7ef4279e31c38f3
 triangulacao_pns_sinan.md	dados/sinan/triangulacao_pns_sinan.md	a04bfec0fce154e823f45b8aefe7d41115359776d8772cb1d870731589be0969
 triangulacao_pns_sinan.csv	dados/sinan/triangulacao_pns_sinan.csv	a70d4f8fb214e1eb0efc93595835ce647d1519e8e374c144850917ba523322fc
 c05_razao_direta.md	dados/pns/c05_razao_direta.md	8a14f0ccc369b9415b2e7ec03ac90951aa8d38e4779464ce0709e97d17fcbe1c
@@ -39,7 +39,7 @@ c10_e2_trocas_longo.csv	m4/pesquisas/lgbt-indicador-violencia/research-2026-10-2
 c10_e2_resumo.csv	m4/pesquisas/lgbt-indicador-violencia/research-2026-10-24-exposicao/c10_e2_resumo.csv (fora do repositório: pasta de trabalho da C10, pré-registro PREREGISTRO-C10.sha256)	3370286c18202325bdff5e499d05e46aeb08a7ddd0f50d31b950163b164b39b4
 L-RELATORIO.md	m4/pesquisas/lgbt-indicador-violencia/research-2026-10-24-v03/L-RELATORIO.md [cópia sem o prefixo de home nos caminhos; o teste compara com a origem após a mesma troca]	7600c06ad7fff617255b2419eda1e0af6cc4fc4e396068eaba1405b1778fefc8
 L-SECAO-3-3-PROPOSTA.md	m4/pesquisas/lgbt-indicador-violencia/research-2026-10-24-v03/L-SECAO-3-3-PROPOSTA.md [cópia sem o prefixo de home nos caminhos; o teste compara com a origem após a mesma troca]	81f9655ea4b641bfcce3745bd6a29b5d0bb0a75bb1ce48cbba5e13d3951702eb
-ggb_validacao_resumo.json	research-2026-10-21-rodada3/F3-ggb/dados/validacao_resumo.json (só agregados; a lista por caso, com UF e observações, não é copiada)	66ee0ba9880fd0011c5e150e3bb9379d95c50bfe81cf433c1cb0dddcb17e5e9d
+ggb_validacao_resumo.json	research-2026-10-21-rodada3/F3-ggb/dados/validacao_resumo.json (só agregados; a lista por caso, com UF e observações, não é copiada)	4ae26eb0c8c62be843990aa34ac52a33c0fb360d005c7d881d6679aed683a232
 estudos_mortalidade.tsv	AUTORAL: números de estudos de mortalidade transcritos de L-SECAO-3-3-PROPOSTA.md, uma linha por número, com o trecho literal	94405000a4e702b3f133179a0d6f5ca95338c98711d0cd40cb16e1dcea5690a1
 r7_parlamento_sensibilidade.csv	research-2026-10-21-rodada3/escrutinio/simetria/r7_parlamento_sensibilidade.csv	10bcab747a262d4b169369e03a93d23d97881462ba206131d7a16575c10d2cb3
 r7_parlamento_sensibilidade.md	research-2026-10-21-rodada3/escrutinio/simetria/r7_parlamento_sensibilidade.md	f0f7c189d7e7009658e4a773607d45da80d76e55264555f4a961ebb702d929ed

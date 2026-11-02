@@ -1,8 +1,10 @@
 <div align="center">
 
-# Existe um indicador confiável de violência motivada por LGBTfobia no Brasil?
+# Mortalidade e violência contra pessoas LGBT+ no Brasil: o que os dados públicos permitem afirmar
 
-**Não: os dados públicos brasileiros não separam incidência de registro, e nenhuma contagem de mídia, polícia ou saúde serve hoje como taxa. Este repositório entrega os dados derivados, o código e os testes que sustentam cada número dessa conclusão.**
+### Uma auditoria de fontes e indicadores, 2010–2026
+
+**Os dados públicos brasileiros não separam incidência de registro, e nenhuma contagem de mídia, polícia ou saúde serve hoje como taxa. Este repositório entrega os dados derivados, o código e os testes que sustentam cada número dessa conclusão.**
 
 ![license-code](https://img.shields.io/badge/code-Apache--2.0-blue)
 ![license-data](https://img.shields.io/badge/data%20%26%20text-CC--BY--4.0-lightgrey)
@@ -16,17 +18,25 @@
 > [!IMPORTANT]
 > **Achados.** (1) A série policial de LGBTfobia (783 -> 3.481 boletins, 2022-2025) é estruturalmente não identificável entre incidência e
 > registro: três incidências opostas (constante, +15%/ano, -5%/ano) reproduzem a série com o mesmo erro (0,0472). (2) No Sinan, o campo
-> de motivação registra LGBTfobia em 0,5% das notificações e fica ignorado/em branco/"não se aplica" em 42-45% das interpessoais.
+> de motivação registra LGBTfobia em 0,4% a 0,5% das notificações e fica sem informação útil em 42,5% a 44,5% das fichas de violência não autoprovocada (2023-2025).
 > (3) A concordância líquida de tamanho entre saúde e polícia por UF é 0,20 [-0,13; 0,50]: sem evidência de concordância.
 > (4) Pelo autorrelato da PNS 2019, adultos LGB+ declaram violência física 14,70% x 3,82% dos heterossexuais (RP 3,84; ajustada 2,82
 > [2,16; 3,68]): o risco existe e é medido por survey, não por registro. (5) Estimada direto no microdado da PNS, a parcela LGB+ entre
-> vítimas adultas de violência física é 7,1% [5,1; 9,1]; no Sinan, 4,12% (2023) e 4,08% (2024), fora do intervalo: os dois canais
-> concordam na direção e discordam na magnitude. (6) Sob risco igual ao dos pares, a contagem do GGB cobriria 22,9% (2023) e 28,7% (2024)
-> das mortes esperadas com o total declarado, e 8,4%-19,7% (2023) e 16,5%-26,6% (2024) com numeradores comparáveis: numerador de mídia e
+> vítimas adultas de violência física é 7,1% [5,1; 9,1]; no Sinan, 4,12% (2023) e 4,08% (2024): as duas parcelas, de universos
+> diferentes (pessoas vitimadas x notificações elegíveis), ficam acima da parcela LGB+ da população, e uma não valida a outra. (6) Sob risco igual ao dos pares, a contagem do GGB cobriria 22,9% (2023) e 28,7% (2024)
+> das mortes esperadas com o total declarado, e 8,4%-19,7% (2023) e 16,5%-26,6% (2024) em cenários de numerador não harmonizados: numerador de mídia e
 > denominador de survey não casam. (7) Nenhum dos 72 coeficientes do painel de governadores (351 UF-anos) é distinguível de zero; o teste
 > de falsificação com causa indeterminada também é nulo, e o estudo de eventos é inconclusivo (a taxa cai depois de trocas nos dois sentidos).
 
-Artigo: o repositório vem primeiro e o artigo deriva dele; o texto (`paper/paper.md`), o PDF e o DOCX entram num commit posterior, citam a URL e o `chain_hash` deste repositório e ficam FORA do selo (o hash do PDF final irá a `paper/PAPER-SHA256.txt`; ver [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md)) · dossiê técnico: [`docs/dossies/DOSSIE-CONSOLIDADO-2026-10-12.md`](docs/dossies/DOSSIE-CONSOLIDADO-2026-10-12.md) · *English: public companion of a study on whether a reliable indicator of anti-LGBT violence exists in Brazil; derived data, code, dated pre-registrations with hashes and tests that lock every published number. No names, no third-party PDFs, no raw microdata.*
+Artigo (texto v0.5; repositório 1.0.0): o repositório vem primeiro e o artigo deriva dele. O PDF (padrão Codex Hash, APA 7, com os Apêndices A a M; DOCX ao lado) entra em `docs/paper/` na versão 1.0.0 final, já com o DOI deste depósito; até lá, o texto-fonte está em [`paper/v05/`](paper/v05/); ambos citam a URL deste repositório e ficam FORA do selo, com o SHA-256 em `paper/PAPER-SHA256.txt` (ver [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md)). A versão anterior do artigo (0.4.4) continua em `paper/paper.md` e `paper/build/v04/paper-v04.pdf`, com a auditoria em [`paper/AUDIT.md`](paper/AUDIT.md) · dossiê técnico: [`docs/dossies/DOSSIE-CONSOLIDADO-2026-10-12.md`](docs/dossies/DOSSIE-CONSOLIDADO-2026-10-12.md) · *English: public repository of a study of what Brazilian public data can and cannot say about violence and mortality among LGBT+ people; derived data, code, dated pre-registrations with hashes and tests that lock the published numbers. No names, no third-party PDFs, no raw microdata.*
+
+## O que há de novo na v0.5 (2026-10-31)
+
+- **Texto novo do artigo**, com dois eixos (o que os dados mostram e o que não mostram), o quadro de 25 frases do debate (Tabela 2) e a mesma régua para os dois lados; o PDF entra na versão 1.0.0 final, com o DOI.
+- **Análises novas da PNS 2019** (feitas depois de ver os resultados e declaradas assim): quem agrediu e o risco por tipo de agressor, estado civil, coabitação e modo de preenchimento (`dados/pns/agressor_risco_pns2019.py`).
+- **Séries por período de governo** (Figura 8; `dados/exposicao/fig_series_por_governo.py`) e **checagem crítica da lista do GGB** pela LiHS ([`research-2026-10-30-contraponto/`](research-2026-10-30-contraponto/)).
+- **Revisão por três modelos de linguagem** (GPT-6 Astra, Gemini 4 Argon e Grok 4.7), com os três lendo o texto e este repositório, em quatro rodadas e uma rodada de pré-publicação; pareceres e respostas em [`paper/v05/revisao/`](paper/v05/revisao/).
+- O antigo Material Complementar virou os **Apêndices B a M** (rótulos antigos em `paper/v05/mapa-apendices.json`), com uma só lista de referências. Detalhe em [`CHANGELOG.md`](CHANGELOG.md).
 
 ## O que há de novo na v0.3 (2026-10-24)
 
@@ -54,8 +64,8 @@ Artigo: o repositório vem primeiro e o artigo deriva dele; o texto (`paper/pape
 
 ## O que este repositório acrescenta
 
-1. **Cada número publicado é uma asserção de teste.** `tests/` e `paper/tests/` leem os CSV/JSON derivados e travam os números-chave (o total de testes é o que `pytest -q` imprime; não há contagem digitada aqui) (PNS, painel, concordância, cobertura do GGB, taxas por sexo e raça, poder amostral, as quatro reanálises pré-registradas, C09, C10 e os valores desenhados nas figuras); mudar dado ou código sem mudar o número travado quebra o CI.
-2. **Proveniência verificável.** `run_all.py` confere o selo SHA-256 de todos os arquivos distribuídos (o artigo fica fora do selo), recalcula os derivados numa réplica (29 passos), roda os testes e fecha o `chain_hash`. `manifest/MANIFESTO-FONTES.csv` traz 876 pares (identificador, URL) de todos os 18 ledgers distribuídos, todos com URL e data de acesso e 430 com o SHA-256 do arquivo lido, e 91 arquivos brutos; os microdados oficiais têm script de aquisição com hash esperado. O inventário público ([`manifest/INVENTARIO-PUBLICO.md`](manifest/INVENTARIO-PUBLICO.md)) conta 853 identificadores únicos (852 obras distintas: um preprint aparece com e sem `/v1`) em 18 ledgers, 10 idiomas e 166 scripts Python, só com os arquivos daqui.
+1. **Os números-chave são asserções de teste.** `tests/` e `paper/tests/` leem os CSV/JSON derivados e travam os números-chave (o total de testes é o que `pytest -q` imprime; não há contagem digitada aqui) (PNS, painel, concordância, cobertura do GGB, taxas por sexo e raça, poder amostral, as quatro reanálises pré-registradas, C09, C10 e os valores desenhados nas figuras); mudar dado ou código sem mudar o número travado quebra o CI.
+2. **Proveniência verificável.** `run_all.py` confere o selo SHA-256 de todos os arquivos distribuídos (o artigo fica fora do selo), recalcula os derivados numa réplica (29 passos), roda os testes e fecha o `chain_hash`. `manifest/MANIFESTO-FONTES.csv` traz 1.048 pares (identificador, URL) de todos os 20 ledgers distribuídos, todos com URL e data de acesso e 464 com o SHA-256 do arquivo lido, e 91 arquivos brutos; os microdados oficiais têm script de aquisição com hash esperado. O inventário público ([`manifest/INVENTARIO-PUBLICO.md`](manifest/INVENTARIO-PUBLICO.md)) conta 1025 identificadores únicos (1024 obras distintas: um preprint aparece com e sem `/v1`) em 20 ledgers, 11 idiomas e 175 scripts Python, só com os arquivos daqui.
 3. **Pré-registros datados e com hash** (governos, mortalidade, mídia e os critérios das reanálises), com os desvios declarados, e **privacidade por construção**: nenhum nome de vítima, nenhum texto de terceiros, nenhum microdado bruto.
 4. **Escrutínio aberto.** As quatro revisões hostis (modelos de famílias diferentes, atacando pela direita, pela esquerda e pelo método), a triagem de cada ataque, as reanálises com critério escrito antes e a busca simétrica entre flancos estão publicadas como vieram, em [`research-2026-10-21-rodada3/escrutinio/`](research-2026-10-21-rodada3/escrutinio/).
 
@@ -66,10 +76,10 @@ Artigo: o repositório vem primeiro e o artigo deriva dele; o texto (`paper/pape
 | Existe taxa de mortes de pessoas LGBT+ no Brasil? | Não. O arquivo do SIM tem 87 campos (2023 e 2024) e o formulário da declaração de óbito, 59 variáveis: nenhum registra orientação sexual ou identidade de gênero; a contagem de mídia não tem denominador compatível | `docs/dossies/`, `dados/ggb/` |
 | E fora do Brasil? | Onde há registro oficial ligado ao censo, quem se declarou LGB+ tem mortalidade geral maior (Inglaterra e País de Gales, 2021-2024, 16 anos ou mais: 1,31 [1,28-1,33]); nenhuma fonte lida mede homicídio por orientação na população | `research-2026-10-24-v03/L-ledger/sources.jsonl` |
 | A série de BOs de LGBTfobia mede incidência? | Não é identificável (algebricamente) | `simulacao/` |
-| O Sinan resolve? | Não: LGBTfobia em 0,5% das notificações; faltante efetivo do campo 55 em 42-45% das interpessoais | `dados/sinan/` |
+| O Sinan resolve? | Não: LGBTfobia em 0,4% a 0,5% das notificações; motivo sem informação útil em 42,5% a 44,5% das fichas de violência não autoprovocada (2023-2025) | `dados/sinan/` |
 | Saúde e polícia concordam por UF? | Sem evidência de concordância líquida de tamanho (pooled 0,20 [-0,13; 0,50]) | `dados/concordancia/` |
 | LGB+ sofrem mais violência? | Sim, no autorrelato: física 14,70% x 3,82% (RP 3,84; ajustada 2,82), sexual 4,86% x 0,68% (ajustada 5,00) | `dados/pns/` |
-| Registro de saúde e survey concordam? | Na direção, não na magnitude: LGB+ = 7,1% [5,1; 9,1] das vítimas de violência física na PNS (estimativa direta) x 4,12%/4,08% no Sinan | `dados/pns/`, `dados/sinan/` |
+| Registro de saúde e survey concordam? | Descrevem universos diferentes e não se validam: LGB+ = 7,1% [5,1; 9,1] das vítimas de violência física na PNS (estimativa direta) x 4,12%/4,08% das notificações com orientação no Sinan; as duas acima de 1,89% | `dados/pns/`, `dados/sinan/` |
 | A contagem do GGB é uma taxa? | Não: cobertura implícita 22,9%/28,7% (total declarado) e 8,4% a 26,6% nos cenários de numerador (cenários, não limites: `dados/ggb/c08_numeradores.md`, seção 5), validação 2019 com 31,3% verificáveis hoje (fração verificada, não piso nem teto do total), variações anuais sem relação com o SIM (r = 0,20) | `dados/ggb/`, `research-2026-10-21-rodada3/F3-ggb`, `GGB-completo` |
 | Governador de direita/esquerda muda a taxa de homicídio? | Não detectável (IC95% cruza zero em todos os coeficientes; falsificação com causa indeterminada nula; estudo de eventos inconclusivo; poder baixo) | `dados/painel/` |
 | A troca de presidente muda a taxa? | Não detectável: 21 estimativas do painel de alinhamento, nenhuma distinguível de zero; a queda de 2019 começou em 2018 (placebo) | `dados/presidencia/` |
@@ -104,11 +114,11 @@ Saída esperada (últimas linhas):
 [~] dados/painel/c03_event_pesos_resultados.csv: numérico (<= 1 unidade da última casa; precisão total: diferença relativa <= 1e-10)
 arquivos RECALCULADOS pelos scripts e conferidos com o commitado: 60 idênticos byte a byte, 2 equivalentes numéricos, 3 figuras PNG regeneradas (informativas); 0 falha(s)/divergência(s)
 [ok] test_reanalises_publicadas.py::test_c08_numeradores_e_cobertura
-testes: 98/98 passaram (3 pulados)
+testes: 111/111 passaram (3 pulados)
 provenance verified: <chain_hash de output/provenance.json> (N arquivos)
 ```
 
-Recálculo real (28 passos) em macOS arm64 na v0.3, Python 3.12.12 com numpy 2.5.4, pandas 3.1.0, scipy 1.18.1 e matplotlib 3.11.2 (mais novos que o `requirements.lock`, que registra o ambiente 3.14.8 do selo): 296 s somando os passos. Os dois `[~]` são esperados: os CSV de C02 e C03 guardam
+Na v0.4.1 e de novo na v0.4.2 (2026-10-25), recálculo real dos 29 passos em macOS arm64 com Python 3.14.8 (numpy 2.4.6, pandas 3.0.2, scipy 1.17.1, matplotlib 3.10.9): 60 idênticos, 2 equivalentes numéricos, 0 divergência, cerca de 310 a 320 s; testes 114/114 na árvore do autor (num clone, 111/111 e 3 pulados, abaixo). Recálculo real (28 passos) em macOS arm64 na v0.3, Python 3.12.12 com numpy 2.5.4, pandas 3.1.0, scipy 1.18.1 e matplotlib 3.11.2 (mais novos que o `requirements.lock`, que registra o ambiente 3.14.8 do selo): 296 s somando os passos. Os dois `[~]` são esperados: os CSV de C02 e C03 guardam
 números em precisão total, e a soma em BLAS multithread muda os últimos bits entre execuções (ver `REPRODUCIBILITY.md`).
 
 Os 3 testes pulados comparam cópias de figura com a pasta de trabalho do autor (ausente num clone) e são contados à parte, nunca como aprovados. Só a integridade e os testes (segundos): `python3 -I run_all.py --rapido`. Detalhes, versões e o que não se refaz: [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md).
@@ -134,7 +144,7 @@ Vasconcelos et al. (2023) com divergência 0. LGB+ = 1,89% dos adultos (1,73-2,0
 | LGB+ entre as com orientação válida (Sinan) | 4,12% | 4,08% |
 | Parcela LGB+ implícita na PNS (cenário A; IC95% Monte Carlo) | 7,13% [5,43; 9,32] | idem |
 | Parcela LGB+ estimada direto no microdado da PNS (razão de totais, desenho complexo; IC95% de desenho) | 7,12% [5,11; 9,13] | idem |
-| Não respondidas que precisariam ser LGB+ para igualar a PNS | 16,5% | 16,7% |
+| Cenário aritmético, não comparação (os universos diferem): parcela LGB+ que as fichas sem resposta precisariam ter para chegar à parcela da PNS | 16,5% | 16,7% |
 
 ### 3. Concordância saúde x polícia por UF (correlação parcial de Spearman, controlando o tamanho da UF)
 
@@ -167,7 +177,7 @@ A correlação de contagens (0,53-0,74) é o tamanho da UF; descontado, o IC inc
 | 2023 | 3.025.764 | 257 | 1.122 | 23% | 8% | 6% |
 | 2024 | 3.027.156 | 291 | 1.013 | 29% | 10% | 8% |
 
-Com numeradores comparáveis (reanálise C08: homicídios + latrocínios declarados, 221 em 2023 e 269 em 2024; e esse número menos todas as
+Com cenários de numerador não harmonizados (reanálise C08: homicídios + latrocínios declarados, 221 em 2023 e 269 em 2024; e esse número menos todas as
 pessoas trans da tabela de identidade, 94 e 167), a cobertura sob risco igual fica entre 8,4% e 19,7% (2023) e entre 16,5% e 26,6% (2024). Esses são cenários, não limites: pelas marginais publicadas do GGB, os cis LGB dentro do primeiro numerador ficam entre 100 e 118 (2023) e entre 164 e 168 (2024), e a PNS 2019 não perguntou identidade de gênero (pessoas trans que declararam orientação LGB estão no denominador, sem identificação); ver `dados/ggb/c08_cenarios_marginais.csv`.
 
 Validação de uma amostra de 160 dos 329 casos de 2019: 50 verificáveis em fonte que corresponde ao caso, morte violenta e LGBT+ explícito =
@@ -185,7 +195,7 @@ Captura-recaptura (só 2019 tem duas listas públicas): N = 186 [175; 198], cobe
 | Não negros | -0,0016 | 0,0171 | [-0,035; +0,032] | 0,911 |
 | Arma de fogo | +0,0009 | 0,0185 | [-0,035; +0,037] | 0,970 |
 
-Partido de eleição (TSE) + ideologia BRC por período; especificação **escolhida depois de ver as variantes** (sem pré-especificação), as 72 variantes de
+Partido de eleição (TSE) + escore de ideologia de Bolognesi et al. por período; especificação **escolhida depois de ver as variantes** (sem pré-especificação), as 72 variantes de
 `research-2026-10-21-rodada3/ideologia/sensibilidade_twfe.md` dão o mesmo. Exploratório, não causal.
 
 Reanálises com critério escrito antes (`research-2026-10-21-rodada3/escrutinio/reanalise/CRITERIOS.md`, sha256 gravado): numa troca de 5 pontos
@@ -219,7 +229,7 @@ Para detectar +30% de violência física entre rodadas (alfa 5%, poder 80%): **3
 | Série nacional padronizada, quebra em 2019 | -17,0% [-29,5; -2,4], mas o placebo de 2018 dá -21,8% [-37,4; -2,4] | não atribuível à troca: a queda começou em 2018 |
 | Quebras de 2016 e 2023 | +2,6% [-9,1; +15,9] e -3,9% [-17,1; +11,3] | não distinguíveis de zero |
 
-O efeito do ano absorve o do presidente: só o alinhamento entre governador e presidente é identificável, com poder baixo. Nada aqui é sobre
+O efeito do ano absorve o do presidente: só a interação entre governador e presidente é estimável no painel, com poder baixo. Nada aqui é sobre
 violência contra pessoas LGBT. Arquivos: [`dados/presidencia/`](dados/presidencia/) (pré-registro, scripts, saídas, relatório).
 
 ### 10. Exposição por governo (C10, v0.3): o que a taxa fez, sem atribuir causa
@@ -251,7 +261,7 @@ O Disque 100 é o canal federal de denúncias de violações de direitos humanos
 | 2026 (até setembro) | 10.461 | denúncias | 1,9% | parcial |
 
 De 2021 a 2025 o canal inteiro foi de 222 mil a 638 mil denúncias (2,9 vezes) e o módulo LGBT de 1.367 a 9.346 (6,8 vezes): **aumento de denúncias não é
-aumento de violência**. Comparado por estado com o Sinan e o Anuário, o tamanho do estado explica a maior parte da concordância; nada é somado. Arquivos e como
+aumento de violência**. Comparado por estado com o Sinan e o Anuário, a concordância cai depois de descontar o tamanho do estado; nada é somado. Arquivos e como
 reproduzir (o recálculo das séries roda na réplica; a tabulação dos 14 GB de bruto, não): [`dados/disque100/`](dados/disque100/). Figura:
 `paper/figures/fig28_disque100_serie.png`.
 
@@ -259,9 +269,15 @@ reproduzir (o recálculo das séries roda na réplica; a tabulação dos 14 GB d
 
 | Peça | Onde | Observação |
 | --- | --- | --- |
-| Artigo científico (PT-BR) | entra num commit posterior: `paper/paper.md`, PDF e DOCX | deriva deste repositório (cita a URL e o `chain_hash`); fora do selo; o sha256 do PDF final irá a `paper/PAPER-SHA256.txt`, também fora do selo |
+| Artigo científico (PT-BR), versão 0.5 (a deste depósito) | texto-fonte em [`paper/v05/`](paper/v05/); o PDF e o DOCX (um PDF, com os Apêndices A a M) entram em `docs/paper/` na versão 1.0.0 final, já com o DOI | deriva deste repositório (cita a URL); fora do selo; SHA-256 do texto em `paper/PAPER-SHA256.txt` (o do PDF e do DOCX entra com eles); gerado por `paper/tools/build_v05.sh` |
+| Artigo, versão anterior (0.4.4) | [`paper/paper.md`](paper/paper.md) e [`paper/build/v04/paper-v04.pdf`](paper/build/v04/paper-v04.pdf) | mantida para o histórico; auditoria em `paper/AUDIT.md` |
 | Revisão externa da v0.2 e respostas | [`O que há de novo na v0.3`](#o-que-há-de-novo-na-v03-2026-10-24), `manifest/MODIFICACOES.tsv` (linhas `v0.3-R` e `v0.3-S`) | cada ataque conferido no arquivo; correção com o número antigo ao lado, ou "não procede" |
 | Figuras do artigo | [`paper/figures/`](paper/figures/) (`make_figures.py`, valores desenhados, cópias das fontes com sha256) | `paper/tests/test_figuras.py` reabre as fontes com parser próprio e confere cada barra e intervalo |
+| Segundo exame (versão 0.4) | [`docs/revisao/`](docs/revisao/) (`S2-TRIAGEM.md`, `S2-ASTRA-A2.md`, `F-LAUDO.md`) | juiz de rubrica, revisor de outra família e um terceiro modelo; triagem item a item; o que procedeu foi corrigido na 0.4.1 ([`docs/historico-de-correcoes.md`](docs/historico-de-correcoes.md), seção 8) |
+| Terceiro exame (versões 0.4.1 e 0.4.2), com leitura integral comprovada | [`paper/AUDIT.md`](paper/AUDIT.md) e vereditos `paper/build/juiz/rodada-v4-3-*.{json,md}` e `rodada-v4-4-astra.{json,md}` | o mesmo prompt do juiz a dois modelos de famílias distintas, com prova de leitura até o fim; o que procedeu foi corrigido na 0.4.2 e na 0.4.3 ([`docs/historico-de-correcoes.md`](docs/historico-de-correcoes.md), seções 9 e 10); a 0.4.3 não foi julgada de novo |
+| Quarto exame (versão 0.4.3), com leitura integral comprovada | [`paper/AUDIT.md`](paper/AUDIT.md) e veredito `paper/build/juiz/rodada-v4-5.json` | o mesmo prompt do juiz ao modelo que o executava, agora com o texto inteiro entregue na mensagem e prova de leitura; o que procedeu foi corrigido na 0.4.4 ([`docs/historico-de-correcoes.md`](docs/historico-de-correcoes.md), seção 11) |
+| Texto-fonte e revisão da v0.5 | [`paper/v05/`](paper/v05/) (`MANUSCRITO.md`, `MATERIAL-COMPLEMENTAR.md` = Apêndices B a M, `QUADRO-E2.md`, `referencias.md`, `mapa-apendices.json`, figuras em fundo branco, `revisao/`) | texto fora do selo; figuras e `README.md` da pasta dentro do selo; `tests/test_numeros_v05.py` trava os números novos de LiHS, variação da taxa por governo, causa indeterminada e coabitação (os demais números vêm dos arquivos de `dados/` e de seus testes) |
+| Pesquisa do contraponto (2026-10-30) | [`research-2026-10-30-contraponto/`](research-2026-10-30-contraponto/) (briefing, três frentes, `sources.jsonl`, conferência de identificadores) | a planilha da LiHS (checagem do GGB 2016) não é distribuída, porque tem nomes de vítimas e de acusados: ficam o SHA-256, a URL e a tabulação em `research-2026-10-30-contraponto/dados/lihs-checagem-ggb2016.META.md` |
 | Revisão hostil | [`escrutinio/revisao_{codex,grok,agy,opus}.md`](research-2026-10-21-rodada3/escrutinio/), pacote enviado (`PACOTE-ESCRUTINIO.md`) | 4 revisores de famílias diferentes, 48 ataques; publicadas como vieram, exceto caminhos locais e termos de operação trocados, um a um em `manifest/MODIFICACOES.tsv` |
 | Triagem dos ataques | [`TRIAGEM.md`](research-2026-10-21-rodada3/escrutinio/TRIAGEM.md), `TRIAGEM.csv`, `_build_triagem.py` | cada ataque com evidência verificada, decisão e frase de correção ou limitação |
 | Reanálises pré-registradas | [`reanalise/`](research-2026-10-21-rodada3/escrutinio/reanalise/) (`CRITERIOS.md` + sha256 gravado antes, `RESULTADOS.md`) e scripts em `dados/{painel,pns,ggb}/` | C02 e C03 recalculadas pelo `run_all.py`; C05 e C08 pela Trilha 2 (microdado da PNS) |
@@ -280,13 +296,13 @@ reproduzir (o recálculo das séries roda na réplica; a tabulação dos 14 GB d
 | Os números de cada resultado, prontos para conferir | `dados/*/` (CSV e MD gerados pelos scripts ao lado), [`dados/presidencia/`](dados/presidencia/), [`dados/exposicao/`](dados/exposicao/) |
 | Saber o que cada teste trava | [`tests/`](tests/), [`paper/tests/`](paper/tests/) |
 | Os pré-registros e quando foram gravados | [`docs/PRE-REGISTROS/`](docs/PRE-REGISTROS/), `dados/presidencia/PREREGISTRO-C09.*`, `dados/exposicao/PREREGISTRO-C10.*`, `dados/painel/R6-PREREGISTRO-FORMA.*`, [`research-2026-10-21-rodada3/escrutinio/reanalise/CRITERIOS.md`](research-2026-10-21-rodada3/escrutinio/reanalise/CRITERIOS.md) |
-| Toda fonte consultada, com URL, data e hash do arquivo lido | 18 ledgers `sources.jsonl` (lista em [`manifest/INVENTARIO-PUBLICO.md`](manifest/INVENTARIO-PUBLICO.md)), [`manifest/MANIFESTO-FONTES.csv`](manifest/MANIFESTO-FONTES.csv) |
+| Toda fonte consultada, com URL, data e, quando o arquivo foi salvo, o hash do arquivo lido | 20 ledgers `sources.jsonl` (lista em [`manifest/INVENTARIO-PUBLICO.md`](manifest/INVENTARIO-PUBLICO.md)), [`manifest/MANIFESTO-FONTES.csv`](manifest/MANIFESTO-FONTES.csv) |
 | O que foi lido em texto integral e o veredito | [`research-2026-10-21-rodada3/A-textointegral/verificacao-metadados.csv`](research-2026-10-21-rodada3/A-textointegral/verificacao-metadados.csv) (139 conferências: periódico, quartil, texto lido, veredito) |
 | Contagens de fontes, idiomas, tipos e scripts, refeitas deste repositório | [`manifest/INVENTARIO-PUBLICO.md`](manifest/INVENTARIO-PUBLICO.md) (`python3 -I scripts/inventario_publico.py --check`) |
 | As revisões hostis, a triagem e as reanálises | [`research-2026-10-21-rodada3/escrutinio/`](research-2026-10-21-rodada3/escrutinio/) |
 | O que mudou em cada arquivo copiado do projeto de origem | [`manifest/MODIFICACOES.tsv`](manifest/MODIFICACOES.tsv) (sha256 antes e depois, motivo) |
 | O que se recalcula, o que só se confere e o que não se refaz | [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md) (matriz de reprodução) |
-| As ressalvas e o que NÃO se pode afirmar | a seção abaixo; [`dados/presidencia/RELATORIO-C09.md`](dados/presidencia/RELATORIO-C09.md); [`dados/exposicao/RELATORIO-EXPOSICAO.md`](dados/exposicao/RELATORIO-EXPOSICAO.md) |
+| As ressalvas e o que NÃO se pode afirmar | a seção abaixo; [`dados/presidencia/RELATORIO-C09.md`](dados/presidencia/RELATORIO-C09.md); [`dados/exposicao/RELATORIO-EXPOSICAO.md`](dados/exposicao/RELATORIO-EXPOSICAO.md); [`dados/regimes/H-RELATORIO.md`](dados/regimes/H-RELATORIO.md) (violência de Estado por tipo de regime: o que as fontes dão e não dão) |
 | A auditoria de publicação (literatura, inventário, privacidade, publicação) | `python3 -I scripts/auditar_publicacao.py --check <nome>` |
 
 ## O que este repositório permite e NÃO permite afirmar
@@ -305,8 +321,8 @@ reproduzir (o recálculo das séries roda na réplica; a tabulação dos 14 GB d
 | Que um survey com SOGI sobreamostrado é o instrumento que falta, e quanto ele custa em amostra | Que a PNS 2019 (uma onda, orientação "experimental" do IBGE) represente 2024-2025 |
 | O que a taxa de homicídio registrado fez em cada governo, federal e estadual (exposição) | Que um governo causou a subida ou a queda: o desenho não separa o governo do que mudou junto (C10) |
 | Que a troca de presidente e o alinhamento governador x presidente não têm efeito detectável, com o intervalo que o desenho exclui (C09) | Que "o presidente não importa": o efeito do ano absorve o do presidente e o poder é baixo |
-| Que, fora do Brasil, há excesso de mortalidade geral em populações LGB+ ou trans definidas por censo ou registro | Que gays morrem mais ou menos **por homicídio** no Brasil ou no mundo: nenhuma fonte lida tem razão populacional de homicídio por orientação |
-| Que nenhum ato de perseguição estatal foi achado no Brasil em 2016-2024 (negativo enumerado, com busca registrada) | Que "nunca houve" perseguição estatal: ausência numa busca enumerada não é prova de inexistência |
+| Que, fora do Brasil, há excesso de mortalidade geral em populações LGB+ ou trans definidas por censo ou registro | Que pessoas LGB+ morrem mais ou menos **por homicídio** no Brasil ou no mundo: nenhuma fonte lida tem razão populacional de homicídio por orientação |
+| Que a busca pré-registrada de 60 consultas sobre os seis governos federais de 2003 a 2026 não localizou perseguição por agentes do Estado (negativo enumerado, com busca registrada) | Que "nunca houve" perseguição estatal: ausência numa busca enumerada não é prova de inexistência, e agentes estaduais e locais (como as polícias) não foram inventariados |
 
 **Congelado, não re-rodável:** coletas de notícia, buscas em portais, arquivos preliminares do DATASUS, curadoria da Wikipédia, leitura de PDFs. Ver [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md).
 
@@ -327,18 +343,22 @@ chain_hash: ver [`output/hash-chain.md`](output/hash-chain.md). Pré-registros (
 ## Estrutura
 
 ```text
-paper/                         figuras (PNG, SVG, PDF), valores desenhados e testes de figura; o artigo (texto, PDF, DOCX) e suas ferramentas entram depois, fora do selo
+paper/                         o artigo (paper.md, PDF em build/v04/, AUDIT.md, PAPER-SHA256.txt) e as ferramentas que o constroem, fora do selo; figuras (PNG, SVG, PDF), valores desenhados e testes de figura, dentro do selo
+paper/v05/                     artigo v0.5: texto, Material Complementar, quadro de afirmações e referências (fora do selo); figuras e README (dentro do selo)
 dados/                         séries e painéis derivados, scripts e saídas (SIM, Sinan, PNS, Anuário, governos, GGB; reanálises c02/c03/c05/c08; R6)
 dados/presidencia/             C09: troca de presidente (pré-registro, scripts, saídas, relatório)
 dados/exposicao/               C10: exposição por governo, federal e estadual (pré-registro, scripts, saídas, relatório)
 dados/disque100/               Disque 100: catálogo dos 23 arquivos, pré-registro, dicionário, séries, scripts e testes (sem os microdados)
+dados/regimes/                 violência de Estado contra homossexuais por tipo de regime: relatório, ledger de 53 fontes e escrutínio externo (sem cópias de terceiros)
 simulacao/                     identificabilidade da série de BOs, poder do survey, projeção registrada 2026-2030
 research-2026-10-21-rodada3/   frentes F2 (custos), F3 (GGB), F5 (economia política), F6, F8 (literatura), GGB-completo, ideologia, discurso, escrutinio
 dashboard/                     números do painel de contagens (extrato público) e o script que os contou
 research-consolidado/          ledger unificado de fontes (571 registros); ledgers por rodada em research-2026-10-1x/
 research-2026-10-24-v03/       ledger da revisão de literatura da v0.3 (mortalidade no mundo; os arquivos lidos não são distribuídos)
+research-2026-10-30-contraponto/  pesquisa do "outro lado" das estatísticas (Brasil, exterior, academia) para a v0.5; ledger de 131 registros
 fontes/                        só entradas abertas pequenas (SIDRA/IBGE, Power & Zucco CC0); o resto é baixado por scripts/acquire_*.py
 docs/dossies/                  dossiê consolidado e partes 1 e 2
+docs/revisao/                  segundo exame do artigo (versão 0.4): triagem, relatório do revisor de outra família, revisão hostil
 docs/laudos/                   laudos das frentes (GGB, mortalidade, governos, mídia, F2/F3/F5/F6/F8, ideologia)
 docs/PRE-REGISTROS/            pré-registros com hash e hora
 docs/briefings/                briefings de pesquisa (método)
@@ -354,20 +374,34 @@ output/                        provenance.json, hash-chain.md
 - **Nenhum PDF/HTML de terceiros** e nenhum texto integral de notícia: a amostra de mídia e os eventos da busca simétrica trazem o sha256 do trecho; o trecho verbatim fica só para o Parlamento e para documento oficial. Ficaram fora do escrutínio: os itens com texto de notícia/resumo acadêmico enviados ao segundo codificador (`itens_C27.jsonl`; ids, hashes e códigos estão em `itens_cruzados_C27.csv`), as respostas cruas do modelo (`brutos_C27/`; os códigos estão em `codif_segundo_*.json`), filas de navegador e logs de execução.
 - **Uso de modelos de linguagem.** Agentes de modelo de linguagem buscaram fontes, leram textos, escreveram scripts e codificaram itens; nenhum número entra sem arquivo e script que o recalcule (`REPRODUCIBILITY.md`). Os nomes dos modelos usados como revisores e codificadores estão nos próprios arquivos. Ferramentas que chamam esses modelos pela assinatura do autor estão marcadas como "ferramenta do autor" e não rodam a partir do clone.
 - **Nenhum microdado bruto grande** (SIM, Sinan, PNS, TSE): scripts de aquisição com URL oficial e SHA-256 esperado.
-- As bases de terceiros mantêm as licenças de origem (ver `NOTICE`); o artigo, quando entrar, segue a licença de texto do repositório.
+- As bases de terceiros mantêm as licenças de origem (ver `NOTICE`); o artigo segue a licença de texto do repositório (CC BY 4.0).
 
 ## Autor
 
 Carlos Ulisses Flores · [ORCID 0000-0002-6034-7765](https://orcid.org/0000-0002-6034-7765) · [ulissesflores.com](https://ulissesflores.com) · [Lattes](http://lattes.cnpq.br/6905246706890561)
 
-## Citação
+## Como citar
+
+O artigo (preprint, versão 0.5):
+
+```bibtex
+@misc{flores_mortalidade_violencia_lgbt_2026,
+  author  = {Flores, Carlos Ulisses},
+  title   = {Mortalidade e viol{\^e}ncia contra pessoas LGBT+ no Brasil: o que os dados p{\'u}blicos permitem afirmar --- uma auditoria de fontes e indicadores, 2010--2026},
+  year    = {2026},
+  note    = {Preprint, vers{\~a}o 0.5},
+  url     = {https://github.com/ulissesflores/lgbt-indicador-violencia}
+}
+```
+
+O repositório (dados derivados, código e testes):
 
 ```bibtex
 @dataset{flores_lgbt_indicador_violencia,
   author  = {Flores, Carlos Ulisses},
-  title   = {Viol{\^e}ncia motivada por LGBTfobia no Brasil: o que os dados p{\'u}blicos sustentam (dados derivados, c{\'o}digo, pr{\'e}-registros e testes)},
+  title   = {Mortalidade e viol{\^e}ncia contra pessoas LGBT+ no Brasil: o que os dados p{\'u}blicos permitem afirmar --- uma auditoria de fontes e indicadores, 2010--2026},
   year    = {2026},
-  version = {0.1.0},
+  version = {1.0.0},
   url     = {https://github.com/ulissesflores/lgbt-indicador-violencia}
 }
 ```

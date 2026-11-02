@@ -1,0 +1,46 @@
+{
+ "sha256_conferido": "4a775cccceb6d7b5eb112b98320d938a7358a16c62c78093b60a25f05127bc02",
+ "dimensoes": {
+  "estrutura_formal": {
+   "pontos": 150,
+   "maximo": 150,
+   "descontos": []
+  },
+  "densidade_tecnica": {
+   "pontos": 140,
+   "maximo": 250,
+   "descontos": [
+    "TDI 1,94 < 3 (tools/densidade_paper.py, corpo 24.220 palavras, 94 termos): 0/80. O limiar não é atingido; termos da lista fixa ausentes incluem TWFE, deff, Lei de Campbell, sha256, ledger, cobertura implícita, SJR, ceteris paribus e razão contagem/esperado, embora vários conceitos apareçam por extenso (efeitos fixos duplos, efeito de desenho, Campbell, 1979, SHA-256)."
+   ]
+  },
+  "fundamentacao_teorica": {
+   "pontos": 150,
+   "maximo": 150,
+   "descontos": []
+  },
+  "originalidade_tese": {
+   "pontos": 200,
+   "maximo": 200,
+   "descontos": []
+  },
+  "consistencia_interna": {
+   "pontos": 100,
+   "maximo": 100,
+   "descontos": []
+  },
+  "correcao_factual": {
+   "pontos": 150,
+   "maximo": 150,
+   "descontos": []
+  }
+ },
+ "total": 890,
+ "achados_criticos": [
+  "TDI 1,94 fica abaixo do limiar 3: a dimensão de densidade técnica perde os 80 pontos do sub-critério, embora filler (0,0004), info density (51,28) e a métrica por subseção cumpram os limiares. A cap dura não se aplica (140 >= 100)."
+ ],
+ "veredito": "Bom — atende limiar mínimo da escala (850–919), abaixo do padrão [instituição omitida] de trabalho final (≥ 950). O único desconto objetivo e integral é o TDI; E-E-A-T médio 80,1, recência 50,5% (49/97), 5/5 tipos aplicáveis, 97/97 citações casadas, hanging indent 720 twips e 35/35 testes de figura passaram.",
+ "_sha256_antes": "4a775cccceb6d7b5eb112b98320d938a7358a16c62c78093b60a25f05127bc02",
+ "_sha256_depois": "4a775cccceb6d7b5eb112b98320d938a7358a16c62c78093b60a25f05127bc02",
+ "_valida": true,
+ "_modelo": null
+}

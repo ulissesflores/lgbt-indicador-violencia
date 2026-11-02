@@ -1,5 +1,5 @@
 ordem,id,uf,cat_ggb,dominio,dupla,fonte,motivo_nr,corresp,morte,tipo,lgbt,base,motivo,desfecho,tipo_fonte,obs
-1,edea8bac6b,ES,Travesti,plox.com.br,1,R,,S,S,H,S,I,C,INQ,noticia,Imprensa: trans (se identificava com nome feminino); PM: possivel briga entre moradores de rua
+1,edea8bac6b,ES,Travesti,plox.com.br,1,R,,S,S,H,S,I,C,ND,noticia,Imprensa: trans (se identificava com nome feminino); PM: possivel briga entre moradores de rua [3a leitura: desfecho INQ->ND]
 2,55f4059377,MG,Gay,redemais.tv.br,1,NR,link_morto_404,,,,,,,,,
 3,968fd2cf06,PE,Gay,petrolandianoticias.com.br,0,NR,link_morto_404,,,,,,,,,
 4,9bfc3a951f,AM,Gay,d24am.com,0,R,,S,S,L,S,P,R,FORAGIDO,noticia,Delegado: relacionamento amoroso suspeito-vitima idosa; suspeita de latrocinio
@@ -157,5 +157,5 @@ ordem,id,uf,cat_ggb,dominio,dupla,fonte,motivo_nr,corresp,morte,tipo,lgbt,base,m
 156,e79f4f24ab,RJ,Travesti,tribunasf.com.br,0,R,,P,S,H,S,I,U,INQ,noticia,Policia ja tem suspeito do homicidio da travesti; GGB so tem prenome
 157,52b370ab19,GO,Travesti,emaisgoias.com.br,0,NR,link_morto_404,,,,,,,,,
 158,5a31319e4b,ES,Travesti,aquinoticias.com,0,R,,S,S,L,S,I,R,INQ,noticia,"Wayback: transexual morta em assalto durante programa (coronhada, arma disparou); suspeitos nao localizados"
-159,c320004b9e,PA,Gay,correiodecarajas.com.br,1,R,,S,I,ND,N,N,U,INQ,noticia,Tecnico achado morto no quarto; causa nao informada; sem mencao a orientacao
+159,c320004b9e,PA,Gay,correiodecarajas.com.br,1,R,,S,S,H,N,N,U,INQ,noticia,Tecnico achado morto no quarto; causa nao informada; sem mencao a orientacao [3a leitura: morte I->S] [3a leitura: tipo ND->H]
 160,f15003ae83,MS,Travesti,campograndenews.com.br,0,R,,P,S,H,S,I,U,INQ,noticia,Travesti esfaqueada em ponto de prostituicao; GGB so tem apelido

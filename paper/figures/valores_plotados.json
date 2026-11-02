@@ -339,8 +339,8 @@
     "fundo": "#f7f7f5"
    },
    "L1|N4": {
-    "rotulo_exibido": "não sustentada pelo que foi medido",
-    "fundo": "#f8e6ee"
+    "rotulo_exibido": "não testável",
+    "fundo": "#e4e3df"
    },
    "L2|N1": {
     "rotulo_exibido": "não testável",
@@ -355,8 +355,8 @@
     "fundo": "#f7f7f5"
    },
    "L2|N4": {
-    "rotulo_exibido": "não sustentada pelo que foi medido",
-    "fundo": "#f8e6ee"
+    "rotulo_exibido": "não testável",
+    "fundo": "#e4e3df"
    },
    "L3|N1": {
     "rotulo_exibido": "sustentada",
@@ -371,8 +371,8 @@
     "fundo": "#f7f7f5"
    },
    "L3|N4": {
-    "rotulo_exibido": "não sustentada pelo que foi medido",
-    "fundo": "#f8e6ee"
+    "rotulo_exibido": "não testável",
+    "fundo": "#e4e3df"
    }
   }
  },
@@ -2675,9 +2675,9 @@
  "fig24": {
   "faixas": {
    "PNS": "14,70% x 3,82%",
-   "Sinan": "sem motivo útil: 53,4% (2015) → 42,5% a 44,5% (2023-25)",
+   "Sinan": "53% sem motivo útil em 2015; 42% a 44% em 2023-25",
    "BO (Anuário)": "783 → 3.481 (2022-2025)",
-   "Disque 100": "só contagem de registros (Figura 27)",
+   "Disque 100": "só contagem de registros",
    "SIM": "sem número de LGBT+",
    "GGB e ANTRA": "257, 291 e 257 (2023-2025)"
   },
@@ -2789,11 +2789,11 @@
    160.0,
    106.0,
    88.0,
-   73.0,
+   74.0,
    50.0
   ],
   "motivos": {
-   "U": 35.0,
+   "U": 36.0,
    "C": 13.0,
    "R": 13.0,
    "P": 6.0,

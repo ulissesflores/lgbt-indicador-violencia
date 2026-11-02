@@ -1,0 +1,198 @@
+{
+ "fig10_identificabilidade": {
+  "como_ler": "Em (a), os losangos são o que foi registrado e as três linhas são o que cada história prevê: elas coincidem. Em (b) e (c), o que cada história supõe por trás: violência estável, subindo ou caindo, compensada por uma chance de registro que cresce de 42% a 72% ao ano. Sem dado externo, não dá para escolher.",
+  "fonte": "paper/figures/fontes/sim_identificabilidade_resumo.json (origem simulacao/resumo.json); incidência e propensão recalculadas da fórmula do paper.",
+  "subtitulo": "Boletins de ocorrência de racismo por homofobia ou transfobia, 2022 a 2025, e três explicações opostas que reproduzem a mesma série",
+  "termos": "BO = boletim de ocorrência · incidência = quantas ocorrências aconteceram de verdade · propensão de registro = fração delas que vira BO · erro de ajuste = distância entre a linha do modelo e os pontos reais, em escala de logaritmo · teste de sensibilidade: o erro é o mesmo com propensão inicial de 2% / 4% / 8% / 15%",
+  "titulo_conclusao": "A série de BOs sobe 4,4 vezes, mas cabe numa incidência constante, crescente ou decrescente: ela sozinha não mede a violência"
+ },
+ "fig11_circulacao_parlamento": {
+  "como_ler": "Em (a), as barras mostram quantas falas contêm cada frase. Em (b), o ponto é a fração das falas que citam um documento oficial ou estudo com nome e ano, e a barra é a faixa de incerteza. A regra literal do livro de códigos (1 de 49) é a principal desta versão; a regra aplicada pelo primeiro codificador (0 de 49) fica como sensibilidade. Em nenhuma delas as falas se distinguem de outras estatísticas de plenário.",
+  "fonte": "paper/figures/fontes/contagens.csv e r7_parlamento_sensibilidade.csv (origens em research-2026-10-21-rodada3/discurso/midia/ e escrutinio/simetria/).",
+  "subtitulo": "Quatro frases em 258.011 falas da Câmara e do Senado, 2015 a 2026, e a fonte que cada fala apresenta",
+  "termos": "fonte primária = documento oficial ou estudo com referência · primeira busca = lista de palavras que casava demais (por exemplo, “trans” dentro de “transporte”); a versão corrigida foi escrita depois de ver o resultado e está declarada como desvio · faixa de incerteza = IC95% de Wilson, adequado a proporções pequenas · teste de Fisher = compara duas proporções (p alto = a diferença pode ser acaso)",
+  "titulo_conclusao": "Só 1 das 49 falas parlamentares sobre “o país que mais mata” cita fonte primária pela regra literal (0 pela regra aplicada); outras estatísticas de plenário também quase nunca citam"
+ },
+ "fig12_escrutinio_dois_lados": {
+  "como_ler": "Cada quadrado é um grupo de objeções parecidas (C01 a C33), colocado na linha de onde veio o ataque e na coluna da decisão: a maioria foi aceita e corrigida, poucos foram rejeitados. Quanto mais escuro, mais prioritário. Nenhum ataque estava factualmente errado no todo: o que caía era a síntese, mais forte que o corpo do texto.",
+  "fonte": "paper/figures/fontes/TRIAGEM.csv (origem research-2026-10-21-rodada3/escrutinio/TRIAGEM.csv; ranking dos 10 de TRIAGEM.md, seção 2).",
+  "subtitulo": "Clusters de objeções da revisão hostil por lado de origem (linhas) e decisão tomada (colunas)",
+  "termos": "cluster = grupo de objeções semelhantes de revisores diferentes · lado = de onde veio o ataque (“+ metodológico” conta no lado) · “ambas” = vale para direita e esquerda · revisores = 4 modelos de IA, cada um com uma revisão escrita",
+  "titulo_conclusao": "Os 33 ataques dos 4 revisores hostis vieram dos dois lados, e 15 viraram correção do texto"
+ },
+ "fig13_pns_sinan_janelas": {
+  "como_ler": "Cada linha é a parcela de LGB+ entre vítimas adultas de violência física num universo diferente: pessoas vitimadas, na pesquisa de domicílios, e notificações elegíveis, nas fichas de saúde. A linha tracejada mostra a parcela de LGB+ na população. As duas parcelas ficam acima dela e diferem em magnitude; uma não valida nem contradiz a outra; no Sinan, a barra fina mostra o intervalo possível quando um quarto das fichas não tem orientação registrada.",
+  "fonte": "paper/figures/fontes/triangulacao_pns_sinan.md e c05_razao_direta.md (origens dados/sinan/ e dados/pns/).",
+  "subtitulo": "Parcela de LGB+ entre adultos que sofreram violência física, vista por duas janelas: a pesquisa de domicílios (PNS) e as notificações dos serviços de saúde (Sinan)",
+  "termos": "PNS = pesquisa de domicílios do IBGE (amostra) · Sinan = sistema de notificação de violência dos serviços de saúde (quem procurou atendimento, não amostra) · orientação válida = ficha em que a orientação sexual foi preenchida · pior/melhor caso = se nenhuma ou todas as fichas sem resposta fossem de LGB+ · faixa da PNS = IC95% (o Sinan não tem IC: é contagem)",
+  "titulo_conclusao": "LGB+ são cerca de 7% das vítimas de violência física na pesquisa de população e 4% nas fichas de saúde, ambos bem acima de 1,89% da população"
+ },
+ "fig14_concordancia_sinan_anuario": {
+  "como_ler": "Em (a), cada bolha é um estado: os mais populosos têm mais de tudo, então as duas contagens sobem juntas. Em (b), o círculo vazado é a concordância bruta, o ×  é quanto se esperaria só pelo tamanho e o quadrado cheio é o que sobra depois de descontá-lo: pequeno e com intervalo que inclui zero em todos os anos.",
+  "fonte": "paper/figures/fontes/concordancia_v2.csv, serie_campo55_uf_ano.csv, anuario_lgbtfobia_uf_ano_v2.csv (edição 2026), sidra_9514.json (Censo 2022).",
+  "subtitulo": "Notificações de LGBTfobia no Sinan x boletins de ocorrência do Anuário de Segurança Pública, por estado (22 a 23 estados por ano), 2022 a 2025",
+  "termos": "Sinan = notificações de violência dos serviços de saúde · BO = boletim de ocorrência (polícia) · Spearman = correlação entre posições dos estados, de −1 a +1 · descontar o tamanho = correlação parcial controlando pela população (Censo 2022) · IC95% = faixa de incerteza, por reamostragem de estados",
+  "titulo_conclusao": "Estados que notificam mais à saúde também têm mais BOs de LGBTfobia, mas é o tamanho: descontado, a concordância cai para 0,14 a 0,32"
+ },
+ "fig15_ideologia_taxa_residuos": {
+  "como_ler": "Cada ponto cinza é um estado num ano. O eixo horizontal diz se o governador estava mais à direita ou à esquerda que o habitual para aquele estado; o vertical, se a taxa de homicídio estava acima ou abaixo do habitual. Se governar à direita mudasse a taxa, os pontos subiriam ou desceriam para a direita. A nuvem não tem direção e a faixa roxa clara, que admite retas inclinadas para os dois lados, mostra que o painel não distingue de zero.",
+  "fonte": "paper/figures/fontes/painel_uf_ano_tse_brc.csv (origem dados/painel/) e c02_indet_resultados.csv (faixa).",
+  "subtitulo": "351 combinações de estado e ano, 2012 a 2024: ideologia do partido do governador x taxa de morte por agressão, depois de descontar o que é de cada estado e de cada ano",
+  "termos": "descontar o estado e o ano = subtrair a média de cada estado e a de cada ano (efeitos fixos), para comparar cada estado só com ele mesmo · ideologia = escore de 0 (esquerda) a 10 (direita) dado por especialistas ao partido do governador · IC95% = faixa de incerteza com erro-padrão agrupado por estado · exploratório: não prova causa",
+  "titulo_conclusao": "Estados com governadores mais à direita não têm mais nem menos homicídios que a média deles: a reta, de inclinação 0,0009, é plana"
+ },
+ "fig16_linha_do_tempo_fontes": {
+  "como_ler": "Cada barra mostra de que ano a que ano a fonte tem dados; o losango é uma pesquisa de um só ano. À direita, em linguagem simples, o que a fonte mede e o que ela não consegue medir. Quando as barras não se sobrepõem, as fontes não podem ser comparadas ano a ano.",
+  "fonte": "anos lidos de paper/figures/fontes/asr_brasil.csv, serie_campo55_uf_ano.csv, anuario_lgbtfobia_uf_ano_v2.csv, serie_ggb_vs_cobertura.csv; textos de cobertura_fontes.tsv (trechos do paper v0.1).",
+  "subtitulo": "Anos cobertos por cada fonte de dados do projeto e o que cada uma mede ou não mede",
+  "termos": "SIM = Sistema de Informações sobre Mortalidade, base de atestados de óbito · Sinan = notificações de violência nos serviços de saúde · Anuário = Anuário Brasileiro de Segurança Pública (BOs) · GGB = Grupo Gay da Bahia · PNS = pesquisa de domicílios do IBGE (autorrelato)",
+  "titulo_conclusao": "Cada fonte cobre anos diferentes e mede coisas diferentes; nenhuma sozinha dá uma taxa de morte de LGBT+"
+ },
+ "fig17_tamanho_de_survey": {
+  "como_ler": "Cada barra é quantos adultos seriam entrevistados; o texto diz a menor mudança na violência física entre duas rodadas que esse tamanho permitiria enxergar. Para ver uma variação de 30% seriam precisos cerca de 306 mil adultos triados, porque só uma pequena fração dos adultos é LGB+ e a amostra é sorteada por conglomerados, com pesos desiguais.",
+  "fonte": "paper/figures/fontes/capacidade_por_opcao.csv, cenarios_n_custo.csv, n_necessario.csv (origem research-2026-10-21-rodada3/F2-custos/).",
+  "subtitulo": "Violência física em 12 meses: tamanho de amostra de cada desenho de pesquisa e a menor mudança entre rodadas que ele consegue ver",
+  "termos": "detectar = distinguir uma mudança real de variação por acaso (poder de 80%, erro de 5%) · efeito de desenho = 5,1: a amostra complexa vale 5,1 vezes menos que uma amostra aleatória simples do mesmo tamanho · triar = visitar domicílios para achar adultos LGB+ · PNAD Contínua = pesquisa trimestral de domicílios do IBGE",
+  "titulo_conclusao": "Uma PNS como a de 2019 só detecta variações de 61% na violência contra LGB+; detectar 30% exige cerca de 306.000 adultos"
+ },
+ "fig18_motivacao_sinan": {
+  "como_ler": "Cada coluna soma 100% das notificações do ano. O cinza-escuro é o campo “motivo” deixado ignorado ou em branco; o roxo é a LGBTfobia, que mal aparece (painel b, ampliado). Como o motivo fica sem informação útil em 42% a 53% das fichas, conforme o ano, e o preenchimento muda de um ano para o outro, o número de casos registrados como LGBTfobia não mostra quanta violência acontece.",
+  "fonte": "paper/figures/fontes/serie_campo55_uf_ano.csv (origem dados/sinan/), linha Brasil.",
+  "subtitulo": "Notificações de violência interpessoal nos serviços de saúde (Sinan), Brasil, 2015 a 2025: motivo registrado na ficha",
+  "termos": "Sinan = Sistema de Informação de Agravos de Notificação, dos serviços de saúde · notificação = ficha preenchida quando alguém atendido sofreu violência · “não se aplica” = a ficha marca que o campo não cabe ao caso · incidência = quantos casos acontecem de verdade",
+  "titulo_conclusao": "Em 30% das notificações de 2025 o motivo da violência ficou ignorado ou em branco, e LGBTfobia aparece em só 0,5%: o registro não mede incidência"
+ },
+ "fig19_ggb_homicidio_uf": {
+  "como_ler": "Cada bolha é um estado. Em (a), estados com mais homicídios em geral têm mais mortes de LGBT+ contadas. Em (b), estados com mais internet têm menos contagem quando a internet entra sozinha no modelo, mas o efeito some (0,98, faixa que inclui 1) quando o homicídio entra junto, e o homicídio fica em 1,33. É uma associação entre estados, não prova de causa.",
+  "fonte": "paper/figures/fontes/uf_2019.csv e inflacao_uf_serie.json (origem research-2026-10-21-rodada3/F3-ggb/dados/; README do F3-ggb, linhas 16 e 137).",
+  "subtitulo": "Mortes de LGBT+ contadas pelo GGB por milhão de habitantes x homicídio e internet, 27 estados, 2019; bolha = população",
+  "termos": "GGB = Grupo Gay da Bahia, que conta mortes de LGBT+ por notícias · ρ (rô) = correlação de Spearman, de −1 a +1 · razão = quantas vezes a contagem muda por desvio-padrão (medida de quanto os estados diferem entre si), em modelo de Poisson com erro robusto · cada razão traz o modelo de onde vem · IC95% = faixa de incerteza · 27 estados, uma edição",
+  "titulo_conclusao": "A contagem do GGB por estado acompanha o homicídio em geral (1,33 vezes por desvio-padrão); a relação com a internet some quando o homicídio entra no modelo"
+ },
+ "fig1_pns2019_vitimizacao": {
+  "como_ler": "No painel (a), cada ponto é a parte dos adultos do grupo que sofreu violência no último ano (azul: LGB+; laranja: heterossexuais). No painel (b), cada símbolo diz quantas vezes a violência é mais comum entre LGB+: 1 = igual; quanto mais à direita, maior a diferença. O círculo vazado é o número direto; o quadrado cheio é o número depois de descontar diferenças entre os grupos.",
+  "fonte": "paper/figures/fontes/seguro_pns2019.csv (origem dados/pns/seguro_pns2019.csv), desenho amostral complexo.",
+  "subtitulo": "Brasil, adultos de 18 anos ou mais, últimos 12 meses; três tipos de violência; barras = IC95%",
+  "termos": "LGB+ = lésbicas, gays, bissexuais e outras orientações · PNS = Pesquisa Nacional de Saúde do IBGE · IC95% = faixa em que o valor verdadeiro provavelmente está · razão = quantas vezes mais · PNS = 88.531 adultos · ajustada = descontando sexo, idade, cor, instrução, região e zona urbana ou rural · “Qualquer tipo” = física, sexual ou psicológica",
+  "titulo_conclusao": "Adultos LGB+ sofrem violência física 3,8 vezes mais que heterossexuais, e a diferença não some ao descontar idade, cor e instrução"
+ },
+ "fig20_serie_nacional_trocas": {
+  "como_ler": "Em (a), a linha roxa é a taxa por 100 mil; as linhas pontilhadas marcam as trocas. Em (b), cada quadrado roxo é a mudança de nível estimada depois da troca e o círculo vazado é a mesma conta com as quebras deslocadas um ano para trás e a série inteira: queda parecida mostra que a estimativa depende da data. Os traços pretos mostram o menor efeito que a análise conseguiria ver; a queda de 2019 é distinguível de zero, mas a conta com a quebra em 2018 também cai, e a taxa já caía de 2017 para 2018, por isso a queda não é atribuível à troca; 2016 e 2023 não se distinguem de zero, com poder baixo.",
+  "fonte": "paper/figures/fontes/c09_d1_resultados.csv e asr_brasil.csv (origens research-2026-10-24-presidencia/ e dados/sim/); RELATORIO-C09.md; pré-registro PREREGISTRO-C09.",
+  "subtitulo": "Taxa nacional de morte por agressão, 2010-2024, e a variação de nível em cada troca de presidente (2016, 2019, 2023), comparada à mesma conta com as quebras um ano antes",
+  "termos": "nível = salto da taxa no ano da troca · quebra um ano antes = a mesma conta com as datas deslocadas, ajustada à série inteira · IC95% = faixa de incerteza · efeito mínimo detectável = menor efeito que a análise veria com 80% de chance · só 15 pontos (2010-2024) e a análise é descritiva, não causal · somando as mortes de causa indeterminada, a queda de 2019 é -9,6% · o óbito não registra orientação sexual: nada aqui é sobre violência contra LGBT+",
+  "titulo_conclusao": "A queda de 17% na taxa nacional em 2019 também aparece com a quebra deslocada para 2018 (-21,8%), e a taxa já caía de 2017 para 2018: os dados não a atribuem ao presidente"
+ },
+ "fig21_alinhamento_governador_presidente": {
+  "como_ler": "Cada quadrado é a melhor estimativa e a barra é a faixa compatível com os dados; todas as barras passam por zero, então o painel não consegue dizer se a interação mudou a taxa. Os traços pretos mostram o menor efeito que a análise detectaria com 80% de chance (-18,9% e +23,3% na principal): efeitos menores têm chance de detecção abaixo de 80%; a barra, e não o traço, mostra os valores compatíveis com os dados. O resultado é “não distinguível de zero, com poder baixo”; não é prova de que o presidente não importa.",
+  "fonte": "paper/figures/fontes/c09_d2_resultados.csv e RELATORIO-C09.md (origem research-2026-10-24-presidencia/); pré-registro PREREGISTRO-C09 gravado antes dos desfechos.",
+  "subtitulo": "Interação entre os escores de ideologia do governador e do presidente (principal) e variações, na taxa de homicídio; 351 combinações de estado e ano (2012-2024); 16 análises em %",
+  "termos": "interação = produto do escore de ideologia do governador (0 a 10) pelo do presidente: mede se o efeito de um depende do outro; “distância entre governador e presidente” e “mesmo partido” são variações separadas · o efeito do presidente em si não é identificável: o efeito de ano o absorve, só a interação aparece · IC95% = faixa de incerteza (erro-padrão agrupado por estado) · efeito mínimo detectável = menor efeito que a análise veria com 80% de chance · 27 estados e 3 trocas de presidente · a razão de óbitos indeterminados (teste de falsificação, em pontos percentuais, 5 estimativas) está na tabela do relatório, não nesta figura · o óbito não registra orientação sexual",
+  "titulo_conclusao": "Nenhuma das 21 estimativas da interação entre a ideologia do governador e a do presidente se distingue de zero, e o painel só teria 80% de poder para efeitos de cerca de 19% para menos ou 23% para mais"
+ },
+ "fig22_taxa_nacional_por_governo": {
+  "como_ler": "Em (a), cada faixa cinza ou branca é um governo e a linha roxa é a taxa por 100 mil. Em (b), cada quadrado roxo é quanto a taxa variou do ano anterior à posse ao último ano inteiro do governo; o círculo vazado faz a mesma conta somando as mortes de causa indeterminada; o losango mostra o que a taxa vinha fazendo nos 3 anos antes da posse, só como contexto. Isto é exposição: mostra o que aconteceu enquanto cada governo estava no cargo, não que o governo causou a mudança.",
+  "fonte": "paper/figures/fontes/c10_e1_federal.csv e c10_e1_serie_longo.csv, RELATORIO-EXPOSICAO.md (origem research-2026-10-24-exposicao/); pré-registro PREREGISTRO-C10 gravado antes dos desfechos.",
+  "subtitulo": "Taxa nacional de morte por agressão, padronizada por idade, por governo (2010-2024), e variação do ano anterior à posse ao último ano inteiro de cada governo",
+  "termos": "taxa padronizada por idade = taxa recalculada como se a população tivesse sempre a mesma distribuição de idades · causa indeterminada = óbito cuja causa não foi definida (CID-10 Y10-Y34); sua fração sobe de 14% (2015) para 30% (2024), então a queda somando-as é sempre menor · intervalo de contagem = só a incerteza do número de mortes, não mede tendência nem causa · 2016 é dividido entre Dilma (até 11/05) e Temer · Lula está em curso (2 de 4 anos; denominadores de 2023-24 estimados) · o governo Lula de 2007-10 não aparece: a série usada começa em 2010, ano do Censo que ancora os denominadores · o óbito não registra orientação sexual",
+  "titulo_conclusao": "A taxa nacional caiu 21,0% entre 2018 e 2022 (13,7% somando causa indeterminada); a queda começou em 2018; isto não é prova de causa"
+ },
+ "fig23_trocas_de_governador_exposicao": {
+  "como_ler": "Cada ponto roxo é uma troca de governador e mostra se a taxa do estado, comparada à do Brasil, ficou mais alta (direita) ou mais baixa (esquerda) depois dela. O losango é a mediana das trocas; a faixa cinza é onde a mediana cairia por acaso nos estados que não trocaram de governo no mesmo ano. Em (b), somando as mortes de causa indeterminada, a mediana passa a 0,5% (34 subiram, 33 caíram) e entra na faixa de referência. Cuidado: a referência são poucos estados (3 a 15 por ano; em 2018-2019, 9 estados, 7 do Nordeste) e não é neutra, então uma diferença pode ser de região e não da troca.",
+  "fonte": "paper/figures/fontes/c10_e2_trocas_longo.csv e c10_e2_resumo.csv, RELATORIO-EXPOSICAO.md (origem research-2026-10-24-exposicao/); pré-registro PREREGISTRO-C10.",
+  "subtitulo": "Variação da taxa de morte por agressão do estado menos a variação do Brasil, entre os 3 anos antes e os 3 anos depois de cada troca de governador (2013-2024), por direção da troca",
+  "termos": "troca = mudança do partido do governador, de eleição ou não · direção = lado do escore de ideologia do partido antes e depois (esquerda, direita, centro; “mesmo bloco” = os dois do mesmo lado) · taxa relativa ao Brasil = variação do estado menos a variação do país no mesmo período, para tirar a tendência nacional · estados sem troca = referência por sorteio repetido (9.999 vezes), pareado por ano · causa indeterminada = óbito sem causa definida (CID-10 Y10-Y34), cuja fração cresceu desde 2018 · não é uma comparação com contrafactual: COVID, armas, facções e o ciclo eleitoral coincidem com as trocas · o óbito não registra orientação sexual",
+  "titulo_conclusao": "Em 67 trocas de governador, a taxa do estado, relativa ao Brasil, subiu em 31 e caiu em 36 (mediana -0,7%); isto é exposição, não prova de causa"
+ },
+ "fig24_caminho_do_dado": {
+  "como_ler": "Cada linha é uma fonte e cada coluna, uma etapa do caminho do dado: acontece, a pessoa procura serviço ou polícia, fica um papel, alguém classifica o motivo, sai a contagem. A seta tracejada da PNS mostra que ela pergunta direto à pessoa e por isso não depende de ela ter procurado ajuda. O ✗ no SIM marca o ponto em que a informação de orientação sexual deixa de existir. A figura é um esquema: a largura das etapas não representa quantidade de casos.",
+  "fonte": "paper/figures/fontes/seguro_pns2019.csv, serie_campo55_uf_ano.csv, anuario_lgbtfobia_uf_ano_v2.csv, serie_ggb_vs_cobertura.csv; desenho conforme o guia de leitura (G1) e a Tabela 3 do paper.",
+  "subtitulo": "De um fato de violência até o número publicado: onde cada fonte do projeto entra e quem fica de fora em cada etapa",
+  "termos": "SIM = Sistema de Informações sobre Mortalidade (Ministério da Saúde) · Sinan = ficha de notificação de violência preenchida em serviço de saúde · BO = boletim de ocorrência, reunido no Anuário Brasileiro de Segurança Pública · GGB = Grupo Gay da Bahia · ANTRA = Associação Nacional de Travestis e Transexuais · PNS = Pesquisa Nacional de Saúde, do IBGE · Disque 100 = canal de denúncias do governo federal · TSE = Justiça Eleitoral · escore de ideologia = nota de 0 a 10 dada por especialistas a cada partido",
+  "titulo_conclusao": "Cada fonte enxerga um pedaço diferente do caminho que o dado percorre; nenhuma mostra a violência inteira"
+ },
+ "fig25_mortalidade_internacional": {
+  "como_ler": "Cada linha é um estudo e cada painel tem a sua própria escala: as medidas são diferentes (razão de taxas, taxa por 100 mil, fator de aceleração, contagem de estudos) e por isso não se comparam entre si, nem formam um único “risco”. Os rótulos em vinho avisam o que o estudo NÃO é: não é Brasil, não é homicídio. Só o estudo de Luis (2026) é brasileiro e não traz taxa, por falta de denominador.",
+  "fonte": "paper/figures/fontes/estudos_mortalidade.tsv, com números literais de L-SECAO-3-3-PROPOSTA.md (frente L, tabela “De onde vem cada número”).",
+  "subtitulo": "Evidência brasileira e internacional de mortalidade e violência publicada entre 2023 e 2026: o que cada estudo mede, em quem e em que país",
+  "termos": "razão de taxas = quantas vezes a mortalidade de um grupo é maior que a do outro, depois de igualar as idades · LGB+ = lésbicas, gays, bissexuais e outras orientações · fator de aceleração = menor que 1 quer dizer que o tempo até o óbito é mais curto · causas violentas = homicídio, suicídio e intenção indeterminada, juntos · Sinan = ficha de notificação de violência de serviço de saúde · SIM = base de atestados de óbito · estudos descritivos: nenhum deles permite dizer que a orientação sexual causa a diferença",
+  "titulo_conclusao": "Fora do Brasil, a mortalidade geral de pessoas LGB+ e trans aparece maior em populações bem definidas; nenhuma fonte lida dá razão de homicídio por orientação sexual, e o estudo brasileiro não tem denominador"
+ },
+ "fig26_ggb_verificabilidade": {
+  "como_ler": "Em (a), cada barra é quantos casos passaram por uma etapa de conferência; a que sobra à direita explica o que saiu: casos sem matéria recuperada ou fora do critério são casos que não deu para verificar, nunca casos considerados falsos. A largura é proporcional ao número de casos. Em (b), entre as mortes violentas confirmadas, o que a própria fonte (matéria, polícia, família) diz ser o motivo; o motivo vem da fonte, não do codificador. Nenhum caso é identificado: só contagens.",
+  "fonte": "paper/figures/fontes/ggb_validacao_resumo.json (origem research-2026-10-21-rodada3/F3-ggb/dados/validacao_resumo.json); conferido contra codificacao_A.csv no teste.",
+  "subtitulo": "Lista de casos do relatório de 2019 do GGB, amostra aleatória de 160: em cada etapa, quantos casos continuam a poder ser conferidos",
+  "termos": "verificável = a matéria foi recuperada, é do caso, confirma morte violenta e identifica a vítima como LGBT+ de forma expressa · amostra de 160 de 329 casos da lista nominal de 2019 · motivo desconhecido = a fonte não informa motivo · “não dá para verificar” não é o mesmo que “falso”: o paper não usa essa palavra · GGB = Grupo Gay da Bahia · latrocínio = roubo seguido de morte",
+  "titulo_conclusao": "Dos 160 casos sorteados da lista do GGB de 2019, 50 (31,3%) puderam ser verificados nos critérios do paper; LGBTfobia aparece como motivo em só 3 das 74 mortes violentas"
+ },
+ "fig27_ggb_curva_de_hipoteses": {
+  "como_ler": "Quanto maior o risco que se supõe para os LGB+, mais mortes seriam esperadas e menor a cobertura da contagem; no eixo vertical, 100% é a contagem igual ao esperado. Cada losango mostra o risco em que a cobertura chegaria a 100%: é só uma conta feita de trás para a frente, para mostrar a escala, e não diz qual é o risco: o risco verdadeiro não foi medido. As linhas cinza claras marcam os riscos 1, 2,82 e 3,84 usados no paper.",
+  "fonte": "paper/figures/fontes/c08_numeradores.csv (origem dados/ggb/c08_numeradores.csv), agressão, prevalência de 1,89%, sem proxy.",
+  "subtitulo": "Cobertura da contagem do GGB (mortes declaradas ÷ mortes esperadas) para cada risco de morte hipotético dos adultos LGB+, 2023 e 2024",
+  "termos": "RR = risco relativo: quantas vezes o risco de morte por agressão dos LGB+ seria o dos pares (mesmo sexo, raça e idade) · esperadas = mortes que ocorreriam em 1,89% da população adulta (PNS 2019) sob esse risco · cenário de subtração = a contagem sem as pessoas trans da tabela de identidade do GGB: é um limite de comparação, não uma estimativa de mortes LGB+ · escalas logarítmicas",
+  "titulo_conclusao": "A contagem do GGB só cobriria 100% das mortes esperadas se adultos LGB+ tivessem risco de 0,23 a 0,29 vezes o dos pares: é uma conta de hipótese, não uma estimativa"
+ },
+ "fig28_disque100_serie": {
+  "como_ler": "Em (a), a linha cinza é o número de linhas do módulo LGBT nos arquivos de 2011-2019 (cada linha é uma vítima em um atendimento, não uma pessoa); a roxa, de 2021 em diante, conta denúncias com ao menos uma linha do módulo; o losango é 2020, que mistura dois formatos. As linhas pontilhadas verticais marcam onde o formato do arquivo ou do formulário mudou: a série não é contínua entre elas. Em (b), cada barra é o canal inteiro na mesma unidade do painel (a) e o número em cima é a parte do módulo LGBT: o canal inteiro cresceu junto, e por isso mais denúncias não quer dizer mais violência.",
+  "fonte": "paper/figures/fontes/d100_serie_anual.csv (origem dados/disque100/saidas/d100_serie_anual.csv; microdados oficiais do Disque 100 em dadosabertos.mdh.gov.br, catálogo com sha256 em dados/disque100/saidas/catalogo.tsv).",
+  "subtitulo": "Registros do Disque 100 (arquivos públicos de 2011 a setembro de 2026): módulo LGBT por ano, com a unidade de cada trecho, e canal inteiro com a parte do módulo LGBT",
+  "termos": "Disque 100 = canal federal de denúncias de violações de direitos humanos (Ministério dos Direitos Humanos e da Cidadania) · linha = uma linha do arquivo público · denúncia = um atendimento, com chave própria desde 2020S2 · módulo LGBT = linhas em que o grupo da denúncia é LGBT · não há chave de pessoa: o total de vítimas únicas não é calculável em nenhum ano · * 2026 vai de janeiro a setembro, e a barra hachurada é parcial · a unidade em (b) é a mesma de (a): linhas até 2020 e denúncias depois, por isso a barra de 2021 é menor que a de 2020",
+  "titulo_conclusao": "Denúncia não é violência: de 2021 a 2025 o módulo LGBT do Disque 100 foi de 1.367 a 9.346 denúncias (6,8 vezes) e o canal inteiro de 222 mil a 638 mil (2,9 vezes), com a série quebrada em quatro pontos"
+ },
+ "fig2_ggb_cobertura_implicita": {
+  "como_ler": "Cada grupo de três barras compara o número que o GGB contou com o que se esperaria se adultos LGB+ morressem por agressão no mesmo ritmo (ou 2,82 e 3,84 vezes mais) que pessoas do mesmo sexo, raça e idade. Barra curta = a contagem está longe de cobrir todas as mortes. Isto mede escala, não conta mortes de LGB+; o numerador B é um cenário de subtração, não um limite inferior.",
+  "fonte": "paper/figures/fontes/c08_numeradores.csv (origem dados/ggb/c08_numeradores.csv), prevalência LGB+ de 1,89%.",
+  "subtitulo": "Mortes declaradas pelo Grupo Gay da Bahia ÷ mortes esperadas, por ano, tipo de contagem e risco suposto",
+  "termos": "GGB = Grupo Gay da Bahia, associação que conta mortes de LGBT+ a partir de notícias · pares = pessoas do mesmo sexo, raça e faixa de idade · latrocínio = roubo seguido de morte · “sem pessoas trans” porque a base de comparação (PNS) só pergunta orientação sexual · esperadas = taxa de agressão dos pares × adultos LGB+ (1,89% dos adultos, PNS 2019)",
+  "titulo_conclusao": "Nos cenários exibidos, a razão entre a contagem do GGB e as mortes esperadas chega a 28,7% se LGB+ morressem como seus pares; não estima a cobertura real"
+ },
+ "fig3_governos_painel_eventos": {
+  "como_ler": "Em (a), cada ponto é a melhor estimativa e a barra é a faixa compatível com os dados: se ela passa por zero, o painel não consegue dizer se houve efeito. Em (b), olha-se a taxa nos anos antes e depois de cada troca de lado: a queda aparece nas duas direções, e em duas das quatro análises a taxa já mudava antes da troca, o que impede ler a queda como efeito do governador.",
+  "fonte": "paper/figures/fontes/c02_indet_resultados.csv e c03_event_pesos_resultados.csv (origem dados/painel/). Exploratório, não causal.",
+  "subtitulo": "Variação da taxa de morte por agressão ao trocar o partido do governador, por grupo (a) e em trocas reais de lado (b)",
+  "termos": "painel = 351 combinações de estado e ano (2012-2024) · IC95% = faixa em que o efeito verdadeiro provavelmente está · janela completa = acompanha 3 anos antes e depois, só com trocas limpas; janela curta = recorte menor, com mais trocas · p = chance de ver tamanha mudança antes da troca se nada estivesse acontecendo (p < 0,05 invalida a leitura causal) · causa indeterminada = óbitos sem causa definida (CID-10 Y10-Y34)",
+  "titulo_conclusao": "O painel de governadores só descarta efeitos fora de -10,8% a +13,1% na taxa de homicídios; dentro dessa faixa não distingue nada"
+ },
+ "fig4_funil_evidencia": {
+  "como_ler": "Cada barra é quantas fontes sobraram depois de um filtro mais exigente. A primeira é tudo o que foi registrado; a última é só o que foi lido por inteiro, está num periódico de primeira linha e sustentou alguma conclusão. A queda mostra por que o paper separa o que leu do que apenas encontrou.",
+  "fonte": "paper/figures/fontes/dashboard_extrato.json (origem dashboard/dashboard_dados.publico.json).",
+  "subtitulo": "Fontes únicas do projeto, de 10 a 23 de outubro de 2026, em quatro etapas",
+  "termos": "fonte única = mesmo DOI ou endereço, contado uma vez · Q1 = o melhor quarto dos periódicos da área, segundo o ranking SJR · texto integral = o artigo inteiro foi lido, não só o resumo",
+  "titulo_conclusao": "Das 829 fontes registradas, só 46 são artigos de primeira linha lidos por inteiro e usados em conclusões"
+ },
+ "fig5_fontes_idioma_tipo": {
+  "como_ler": "Cada barra conta fontes. Em (a), o idioma do texto; em (b), de que tipo de fonte se trata. As barras roxas fortes em (b) destacam os periódicos: os 'Q1 conferido' passaram no teste do paper e os de 'quartil ainda não conferido' aparecem com aviso e não decidem nenhuma conclusão.",
+  "fonte": "paper/figures/fontes/dashboard_extrato.json (origem dashboard/dashboard_dados.publico.json).",
+  "subtitulo": "Fontes únicas por idioma (a) e por tipo (b); cada painel soma o total de fontes",
+  "termos": "quartil Q1 = o melhor quarto dos periódicos da área (ranking SJR, 2023-2025) · oficial = governo e organismos internacionais · ONG = organização da sociedade civil · preprint = texto ainda sem revisão por pares · pt e pt-BR somados em Português",
+  "titulo_conclusao": "377 das 829 fontes estão em inglês e 288 em português; só 61 são periódicos de primeira linha conferidos"
+ },
+ "fig6_proporcao_1_em_7": {
+  "como_ler": "Os dois quadriculados têm 100 quadrados cada: os coloridos mostram quantos adultos de cada grupo, em cada 100, sofreram violência física no último ano (azul: LGB+; laranja: heterossexuais). À direita, a razão diz quantas vezes mais é comum entre LGB+: 1 seria igual. O círculo vazado é o número direto; o quadrado cheio é o número depois de descontar diferenças de sexo, idade, cor, instrução, região e zona.",
+  "fonte": "paper/figures/fontes/seguro_pns2019.csv (origem dados/pns/seguro_pns2019.csv).",
+  "subtitulo": "Violência física nos últimos 12 meses, adultos de 18 anos ou mais (PNS 2019)",
+  "termos": "LGB+ = lésbicas, gays, bissexuais e outras orientações · PNS = Pesquisa Nacional de Saúde do IBGE · IC95% = faixa em que o valor verdadeiro provavelmente está · razão = quantas vezes mais · PNS = 88.531 adultos entrevistados",
+  "titulo_conclusao": "1 em 7 adultos LGB+ sofreu violência física em um ano, contra 1 em 26 heterossexuais"
+ },
+ "fig7_mapa_de_respostas": {
+  "como_ler": "Cada linha é uma pergunta; cada coluna, um jeito de olhar para ela, de “quantos?” (N1) a “por quê?” (N4). Verde com ✓: o dado sustenta a resposta. Cinza com ?: não há dado que permita testar; na coluna N4, nenhuma fração nacional foi estimada, o que não afirma nem nega a motivação dos agressores. Cinza claro: o artigo só descreve, sem dar veredito.",
+  "fonte": "paper/figures/fontes/vereditos_tabela1_tabela5.tsv: cada célula cita um trecho literal da Tabela 1 e das seções 3 e 4 do paper v0.1; a categoria é a classificação desta figura.",
+  "subtitulo": "Resposta do paper a cada pergunta, para o Brasil, em cada nível (N1 a N4); cor e símbolo dizem a força da evidência",
+  "termos": "não letal = violência que não matou · letal = morte · N2 = a diferença persiste depois de descontar idade, cor, instrução e região? · “sem veredito” = há números descritivos, mas o paper não classifica a célula · N4 “não testável” = fração nacional não estimada: nenhum dado nacional permite estimá-la · fora do Brasil, “pessoas LGBT+ morrem mais?” é sustentada para mortalidade geral em populações definidas pela regra ampliada do adendo de 24/10 sobre o quartil Q1 (pela regra original seria “parcial”), sem razão de homicídio · RP = quantas vezes mais",
+  "titulo_conclusao": "No Brasil, só a violência não letal contra LGB+ e as mortes de mulheres e negros são medidas; “pessoas LGBT+ morrem mais?” não é testável com o dado público, e fora do país só vale para mortalidade geral"
+ },
+ "fig8_taxas_sim_grupos": {
+  "como_ler": "Cada barra é a média de três anos; cada traço preto é um dos anos (2022, 2023, 2024). Na coluna da direita, ×19,9 quer dizer “19,9 vezes a taxa das mulheres não negras”, que serve de referência. Quanto maior a barra, mais mortes por agressão para cada 100 mil pessoas do grupo.",
+  "fonte": "paper/figures/fontes/asr_brasil.csv (origem dados/sim/asr_brasil.csv; SIM, Ministério da Saúde).",
+  "subtitulo": "Brasil, óbitos por agressão por 100 mil pessoas do grupo, padronizados por idade, média de 2022 a 2024",
+  "termos": "padronizada por idade = taxa recalculada como se todos os grupos tivessem a mesma distribuição de idades · agressão = homicídios e outras agressões registradas no atestado de óbito (CID-10 X85-Y09) · negros = pretos e pardos · denominadores de 2023 e 2024 estimados a partir do Censo 2022",
+  "titulo_conclusao": "A taxa de morte por agressão dos homens negros é 19,9 vezes a das mulheres não negras"
+ },
+ "fig9_governos_forest": {
+  "como_ler": "A barra roxa clara é o que os dados ainda permitem: do que seria uma queda ao que seria uma alta. O cinza é o que o painel exclui. Como a barra sempre inclui zero, o resultado é “não sei se houve efeito”, e não “não houve efeito”: efeitos pequenos, dentro da barra clara, continuam compatíveis com os dados.",
+  "fonte": "paper/figures/fontes/c02_indet_resultados.csv (origem dados/painel/c02_indet_resultados.csv); IC95% com erro-padrão agrupado por estado.",
+  "subtitulo": "Faixa de variação da taxa registrada de morte por agressão compatível com os dados, por grupo, numa troca de PT por DEM ou PL",
+  "termos": "intervalo normal (a inversão do bootstrap wild-cluster, na Tabela 6 do paper, é um pouco mais larga) · painel = 351 combinações de estado e ano, 2012-2024 · 5 pontos de ideologia = distância média entre o PT (2,97) e DEM ou PL (cerca de 8) numa escala de 0 a 10 · exploratório: não prova causa · base: a taxa registrada, que pode esconder mortes de causa indeterminada",
+  "titulo_conclusao": "No painel de governadores, as variações da taxa de homicídios compatíveis com os dados chegam a 10,1% a 20,4%, conforme o grupo e o sentido, e todos os intervalos incluem zero"
+ }
+}

@@ -1,6 +1,7 @@
 #!/opt/homebrew/bin/python3.14
 """Cenarios de n e custo (R$ de set/2026) para as 3 opcoes de desenho. Le: deff_pns2019.csv, n_necessario.csv, n_regiao.csv,
-validacao.txt (denominadores), custos-fontes.csv (parametros com id), IPCA (SIDRA 1737) e PTAX (BCB). Escreve cenarios_n_custo.csv e n_regiao_custo.csv.
+validacao.txt (denominadores), custos-fontes.csv (parametros com id), sogi_modo.csv, IPCA (SIDRA 1737) e PTAX (BCB). Escreve cenarios_n_custo.csv,
+n_regiao_custo.csv, capacidade_por_opcao.csv, mde_outros_dominios.csv, opcoes_resumo.csv e opcoes_por_modo.csv.
 
 Rodar: /opt/homebrew/bin/python3.14 -I cenarios_custo.py        (sem argumentos)
 
@@ -156,6 +157,30 @@ linha("3. Painel/web probabilistico (mesmo n da opcao 2)", nC, nC / REND, nC * g
 with open(AQUI / "opcoes_resumo.csv", "w", newline="", encoding="utf8") as f:
     w = csv.DictWriter(f, fieldnames=list(res[0].keys())); w.writeheader(); w.writerows(res)
 for x in res: print(x)
+
+# ---- fração LGB+ por modo de preenchimento (2026-11-01, decisão do autor; crítica ARG-01 da r6) ----
+# Mesmo denominador do PI (todos os adultos com módulo V, inclusive quem não declarou orientação): sogi_modo.csv. Só a
+# fração muda; efeito de desenho e prevalência de base ficam os da PNS 2019 (os da Tabela 6), e o custo não muda.
+SM = {r["modo"]: float(r["est"]) for r in lerc("sogi_modo.csv") if r["faixa_idade"] == "18+" and r["indicador"] == "lgb"}
+FRAC = [("PNS 2019, todos os modos", PI), ("modulo preenchido pelo entrevistador", SM["modulo V preenchido pelo entrevistador"]),
+        ("modulo preenchido pelo proprio morador", SM["modulo V preenchido pelo proprio morador"])]
+modo = []
+for x in res:
+    for nome_f, pi_f in FRAC:
+        nl = x["adultos"] * pi_f
+        modo.append(dict(opcao=x["opcao"], fracao=nome_f, pi_lgb=round(pi_f, 4), adultos=x["adultos"], n_lgb=round(nl),
+                         mde_fisica=round(mde(float(gL("fisica")["est"]), nl / float(gL("fisica")["deff"])), 3),
+                         mde_qualquer=round(mde(float(gL("qualquer")["est"]), nl / float(gL("qualquer")["deff"])), 3),
+                         custo_central_BRL=x["custo_central_BRL"]))
+with open(AQUI / "opcoes_por_modo.csv", "w", newline="", encoding="utf8") as f:
+    w = csv.DictWriter(f, fieldnames=list(modo[0].keys())); w.writeheader(); w.writerows(modo)
+for x in modo: print(x)
+pt = lambda x, k=1: f"{100 * x:.{k}f}".replace(".", ",")
+(AQUI / "opcoes_por_modo.md").write_text("\n".join(
+    ["# Capacidade dos tres desenhos com a fracao LGB+ de cada modo (gerado por cenarios_custo.py)", "",
+     "| opcao | fracao | pi LGB+ | n LGB+ | aumento detectavel fisica | aumento detectavel qualquer |", "|---|---|---|---|---|---|"]
+    + [f"| {x['opcao']} | {x['fracao']} | {pt(x['pi_lgb'], 2)}% | {x['n_lgb']} | {pt(x['mde_fisica'])}% | {pt(x['mde_qualquer'])}% |" for x in modo]) + "\n",
+    encoding="utf8")
 
 # ---- regiao: custo no formato B (domicilio dedicado) ----
 rg = lerc("n_regiao.csv")
