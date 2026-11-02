@@ -1,10 +1,10 @@
 {
- "chain_hash": "8b85a966a99bdf1d2e3ec799304cad21124bf59938e5ed73a4bdb551109f9043",
+ "chain_hash": "fd37acad2156e7c9ddd67c67127bfad9c3f56194c6c099973579bac35a525bf4",
  "n_arquivos": 785,
  "arquivos": [
   {
    "arquivo": ".github/workflows/verify.yml",
-   "sha256": "3aa92774a308b82c327eefad6b7c215c404927129141d3cc852da9e7f2c8a1ba"
+   "sha256": "f621b7a5c84d1551bb744e9264e64b7c83c0d5be87ef74c8b4880a3bb7012f7e"
   },
   {
    "arquivo": ".gitignore",
@@ -1092,7 +1092,7 @@
   },
   {
    "arquivo": "manifest/SHA256SUMS.txt",
-   "sha256": "5cb15f1e66e374140b6705fab6a8ed524269c7d2981e54c667eccf2b75567445"
+   "sha256": "26888dbc7b53c46754249ff7ba86de28ea4116c82e59cc7c10285ffbdd4ae01e"
   },
   {
    "arquivo": "paper/figures/FIGURAS-V2.md",
