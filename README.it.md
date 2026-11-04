@@ -27,7 +27,9 @@
 | Lingua | File |
 |---|---|
 | Portoghese (Brasile), originale | [`docs/paper/paper-final.pdf`](docs/paper/paper-final.pdf) |
-| Inglese, spagnolo, italiano | in preparazione |
+| Inglese, traduzione | [`docs/paper/paper-final.en.pdf`](docs/paper/paper-final.en.pdf) |
+| Spagnolo, traduzione | [`docs/paper/paper-final.es.pdf`](docs/paper/paper-final.es.pdf) |
+| Italiano, traduzione | [`docs/paper/paper-final.it.pdf`](docs/paper/paper-final.it.pdf) |
 
 Le figure dell'articolo sono in portoghese; la nota di ciascuna figura ne spiega le etichette. I lettori di lingua
 ebraica possono fare riferimento alla versione inglese.

@@ -1,5 +1,5 @@
 {
- "chain_hash": "18b817f9f0647d8b50d4344ddd5c4c31cee91056f591c7b8508b52d262f2f45b",
+ "chain_hash": "68b6f76f6d58ef120d98078012e1c2d3ed293f85c63258f10d22a0f2a95c9c6d",
  "n_arquivos": 689,
  "arquivos": [
   {
@@ -12,11 +12,11 @@
   },
   {
    "arquivo": ".zenodo.json",
-   "sha256": "b5d5eafc2bdd0a8ad41898f392ffe4b7e67cf575d5ac327f66801d9824a6a6a3"
+   "sha256": "a0a6329b3744fb16ea180efddbc5f869c73e68924ff41e9d28f584b9e4733198"
   },
   {
    "arquivo": "CITATION.cff",
-   "sha256": "7fad73dd522d5a38a32367d4cb60576f23edd175cb6739e4dd964dd7c1ffd6c7"
+   "sha256": "a25259854e7ba5660d5a1e1f887cd5bce293fd34ff62ba1f149e39a59b8b6dd2"
   },
   {
    "arquivo": "LICENSE",
@@ -36,23 +36,23 @@
   },
   {
    "arquivo": "README.es.md",
-   "sha256": "0dd7251bb9789386641987a0ed440e22d50403aeba707ff3993bfc36fbcdaf74"
+   "sha256": "2d63ef27d09d36b6c3d02e3652606f5f5772af99d80ae8dbfca0e1cb39d98059"
   },
   {
    "arquivo": "README.he.md",
-   "sha256": "09f81daa2de5e62471dd33acd653eee80a61dcba43c80bc4833a318b6b117f21"
+   "sha256": "cbb50f35e114e6da66929e4d15837960c0168337e4e5b5543d32b9d083bcaae8"
   },
   {
    "arquivo": "README.it.md",
-   "sha256": "9e75b91c708acc4acebd26d07aa49ad70f2c10b0680d510c589d2a672a25ddf7"
+   "sha256": "938ef3daf9d2c0cbc1e2223a5016a24ac5d8195c7a647af03df36d3da1283598"
   },
   {
    "arquivo": "README.md",
-   "sha256": "83e793a4f2b093e5615e489b78fae6d7c28145f0e9c6476c0e4217725d7441ba"
+   "sha256": "d25f089080d772f12053124a0f24d398d52577874bbce6dc5aa1253701bd25c1"
   },
   {
    "arquivo": "README.pt-BR.md",
-   "sha256": "b6d23a0a22a85ec091ccaf022f88d28d5e89a9fa7292ff0b256b853c52e2f651"
+   "sha256": "b9cb4d422d70ac220bb8b79f63495e97e9edf2f0dc602bc60a2cf5b9e740734b"
   },
   {
    "arquivo": "REPRODUCIBILITY.md",
@@ -1256,7 +1256,7 @@
   },
   {
    "arquivo": "codemeta.json",
-   "sha256": "77d5c82d78427e814b441881ecc55b6ad1866f318b6afbb1a44141e26df1e497"
+   "sha256": "1481ba9726d33ef2ba4df3cf791dfef539aeb6a9501e07a5e8bc598d50f5c4df"
   },
   {
    "arquivo": "data/README.md",
@@ -2556,7 +2556,7 @@
   },
   {
    "arquivo": "manifest/SHA256SUMS.txt",
-   "sha256": "94f5d6df0e9e10e58419ddd768763e91280823641dda83184483cc9692a3a40a"
+   "sha256": "606daa1f1110a017bd9c509d9e42cc7040645ed9fdb3a706bf75a7a2bbbed2c6"
   },
   {
    "arquivo": "preregistrations/governos/PRE-REGISTRO-COM-ADENDO.sha256",
@@ -2604,7 +2604,7 @@
   },
   {
    "arquivo": "pyproject.toml",
-   "sha256": "0e6d3f784933cc028a3eac39fc674bb5858d1baf159f9a36a5360522925fc46c"
+   "sha256": "65009244cc5038504b026663873c0de6d9edb47e478940f0f695afc7926512d4"
   },
   {
    "arquivo": "requirements.lock",

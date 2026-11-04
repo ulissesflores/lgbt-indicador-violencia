@@ -26,7 +26,9 @@
 | Language | File |
 |---|---|
 | Portuguese (Brazil), original | [`docs/paper/paper-final.pdf`](docs/paper/paper-final.pdf) |
-| English, Spanish, Italian | in preparation |
+| English, translation | [`docs/paper/paper-final.en.pdf`](docs/paper/paper-final.en.pdf) |
+| Spanish, translation | [`docs/paper/paper-final.es.pdf`](docs/paper/paper-final.es.pdf) |
+| Italian, translation | [`docs/paper/paper-final.it.pdf`](docs/paper/paper-final.it.pdf) |
 
 The paper's figures are in Portuguese; each figure note explains its labels. Hebrew readers are served by the English
 version.

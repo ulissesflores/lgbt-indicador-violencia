@@ -27,7 +27,9 @@
 | Idioma | Arquivo |
 |---|---|
 | Português (Brasil), original | [`docs/paper/paper-final.pdf`](docs/paper/paper-final.pdf) |
-| Inglês, espanhol, italiano | em preparação |
+| Inglês, tradução | [`docs/paper/paper-final.en.pdf`](docs/paper/paper-final.en.pdf) |
+| Espanhol, tradução | [`docs/paper/paper-final.es.pdf`](docs/paper/paper-final.es.pdf) |
+| Italiano, tradução | [`docs/paper/paper-final.it.pdf`](docs/paper/paper-final.it.pdf) |
 
 As figuras do artigo estão em português; a nota de cada figura explica seus rótulos. Leitores de hebraico contam com a
 versão em inglês.

@@ -1,6 +1,6 @@
 [project]
 name = "lgbt-indicador-violencia"
-version = "1.1.0"
+version = "1.2.0"
 description = "Data, code and verification material for an audit of what Brazilian public data allow us to claim about violence and mortality among LGBT+ people"
 requires-python = ">=3.12"
 license = "Apache-2.0 AND CC-BY-4.0"

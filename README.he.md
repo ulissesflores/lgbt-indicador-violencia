@@ -28,7 +28,9 @@
 | שפה | קובץ |
 |---|---|
 | פורטוגזית (ברזיל), מקור | [`docs/paper/paper-final.pdf`](docs/paper/paper-final.pdf) |
-| אנגלית, ספרדית, איטלקית | בהכנה |
+| אנגלית, תרגום | [`docs/paper/paper-final.en.pdf`](docs/paper/paper-final.en.pdf) |
+| ספרדית, תרגום | [`docs/paper/paper-final.es.pdf`](docs/paper/paper-final.es.pdf) |
+| איטלקית, תרגום | [`docs/paper/paper-final.it.pdf`](docs/paper/paper-final.it.pdf) |
 
 האיורים במאמר כתובים בפורטוגזית; ההערה של כל איור מסבירה את התוויות שבו. קוראי עברית יכולים להיעזר בגרסה
 האנגלית.

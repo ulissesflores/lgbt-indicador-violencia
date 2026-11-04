@@ -27,7 +27,9 @@
 | Idioma | Archivo |
 |---|---|
 | Portugués (Brasil), original | [`docs/paper/paper-final.pdf`](docs/paper/paper-final.pdf) |
-| Inglés, español, italiano | en preparación |
+| Inglés, traducción | [`docs/paper/paper-final.en.pdf`](docs/paper/paper-final.en.pdf) |
+| Español, traducción | [`docs/paper/paper-final.es.pdf`](docs/paper/paper-final.es.pdf) |
+| Italiano, traducción | [`docs/paper/paper-final.it.pdf`](docs/paper/paper-final.it.pdf) |
 
 Las figuras del artículo están en portugués; la nota de cada figura explica sus etiquetas. Los lectores de hebreo cuentan
 con la versión en inglés.
