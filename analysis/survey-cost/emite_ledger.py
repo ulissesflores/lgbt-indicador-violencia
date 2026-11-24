@@ -1,10 +1,10 @@
-#!/opt/homebrew/bin/python3.14
+#!/usr/bin/env python3
 """Emite o ledger sources.jsonl da frente F2 SOMENTE pela porta oficial (emit_sources.py). Rodar uma vez; apaga e recria sources.jsonl."""
 import os as _os
 import pathlib as _pl
 
 REPO_ROOT = _os.environ.get("REPO_ROOT") or str(_pl.Path(__file__).resolve().parents[2])  # raiz configurável
-import hashlib, json, subprocess
+import hashlib, json, subprocess, sys
 from pathlib import Path
 R = Path((REPO_ROOT + "/sources/public/q1-textointegral/F2"))
 OUT = Path(__file__).resolve().parent
@@ -56,7 +56,7 @@ S = [
 ]
 n = 0
 for (url, i, kind, acc, lang, canal, tit, ano, arq, nota) in S:
-    cmd = ["/opt/homebrew/bin/python3.14", X, "--out", str(OUT), "--url", url, "--id", i, "--id-kind", kind, "--acesso", acc, "--idioma", lang, "--canal", canal,
+    cmd = [sys.executable, X, "--out", str(OUT), "--url", url, "--id", i, "--id-kind", kind, "--acesso", acc, "--idioma", lang, "--canal", canal,
            "--titulo", tit, "--ano", str(ano), "--origem", "rodada3-F2", "--nota", nota]
     if arq:
         assert (R / arq).exists(), arq

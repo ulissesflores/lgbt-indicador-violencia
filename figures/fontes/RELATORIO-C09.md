@@ -1,12 +1,12 @@
 # C09 — A troca de presidente incide sobre a violência letal? (relatório, 2026-10-24)
 
-Pasta de todos os arquivos citados: `m4/pesquisas/lgbt-indicador-violencia/research-2026-10-24-presidencia/`.
+Pasta de todos os arquivos citados: `<pasta-de-trabalho>/c09/`.
 
 > [!IMPORTANT]
 > **Resposta:** não se detecta incidência. Nenhuma das 21 estimativas do painel (alinhamento governador-presidente) fica distinguível de zero, e a queda nacional de 2019 não é atribuível à troca: o placebo de 2018 dispara com o mesmo sinal. Pela regra pré-registrada, 1 das 36 células do D1 coincide com a troca: mulheres negras em 2019, −19,7%. Ela some quando se soma a causa indeterminada. Nulo aqui é um intervalo, não "zero": o desenho só exclui efeitos grandes, de cerca de 18% para menos e 10% para mais no contraste principal. Nada disto é sobre violência contra pessoas LGBT: o SIM não registra orientação sexual, identidade de gênero nem motivação.
 
 ## Pergunta e desenho
-- Pedido: "mudança de presidência incide? assim como governador?" (`BRIEFING-C09.md`).
+- Pergunta de pesquisa: "mudança de presidência incide? assim como governador?" (o roteiro de método de trabalho não é distribuído).
 - Pré-registro: `PREREGISTRO-C09.md`, sha256 do corpo `f48b1ee4...a41a`, gravado em 2026-10-24T20:06:38Z ANTES de qualquer script que lesse desfecho (`PREREGISTRO-C09.sha256`). Um adendo só de forma (nomes de arquivo, arredondamento do CSV).
 - **D2 (primária, painel de 351 UF-anos, 2012-2024):** ln(taxa total) = b1·governador + **b2·(governador × presidente)** + efeitos fixos de UF e de ano. O efeito de ano absorve o presidente; só a interação (alinhamento) é identificada. EP agrupado por UF + bootstrap wild-cluster (B = 4999, semente 20261024). Ideologia BRC por período, partido de eleição (Dilma/Lula PT, Temer PMDB, Bolsonaro PSL); 2016 ponderado por dias (0,361 Dilma, 0,639 Temer).
 - Secundárias: distância |gov − pres|, 5 grupos, agressão + indeterminada, razão de indeterminadas (falsificação), escore único 2018, sem 2016, escala BLS9 (escore do próprio presidente), copartidarismo (D3).
@@ -39,4 +39,4 @@ Pasta de todos os arquivos citados: `m4/pesquisas/lgbt-indicador-violencia/resea
 - **Dashboard:** a série nacional pode marcar os mandatos como contexto, sempre com a faixa de agressão + indeterminada e a nota "sem atribuição causal; queda iniciada em 2018".
 - **Para ganhar poder:** estender o SIM para antes de 2010 (público no DATASUS, ainda não baixado) acrescenta a troca de 2003 (FHC -> Lula; a série em CID-10 começa em 1996). Uma medida de coalizão exigiria dado que não está em disco.
 
-Arquivos: `c09_estrutura.py/.md`, `c09_d2_painel.py`, `c09_d1_its.py`, `c09_resultados.md`, `c09_d2_resultados.csv/.md`, `c09_d1_resultados.csv/.md`, `presidentes_2007_2024.csv`, `tests/test_c09.py` (5 testes passam; rodar com `/opt/homebrew/bin/python3.14 -B -m pytest -q -p no:cacheprovider tests/`).
+Arquivos: `c09_estrutura.py/.md`, `c09_d2_painel.py`, `c09_d1_its.py`, `c09_resultados.md`, `c09_d2_resultados.csv/.md`, `c09_d1_resultados.csv/.md`, `presidentes_2007_2024.csv`, `tests/test_c09.py` (5 testes passam; rodar com `python3 -B -m pytest -q -p no:cacheprovider tests/`).

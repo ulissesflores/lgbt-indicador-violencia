@@ -12,7 +12,7 @@ EM = _os.environ.get("EMIT_SOURCES", "emit_sources.py")
 def sha(p): return hashlib.sha256(open(p, "rb").read()).hexdigest()
 def emit(path, url, id_, idk, acesso, idioma, canal, titulo, ano, nota, lic=None):
     assert os.path.exists(path), path
-    cmd = ["/opt/homebrew/bin/python3.14", "-I", EM, "--out", OUT, "--url", url, "--id", id_, "--id-kind", idk, "--acesso", acesso, "--sha256", sha(path),
+    cmd = [sys.executable, "-I", EM, "--out", OUT, "--url", url, "--id", id_, "--id-kind", idk, "--acesso", acesso, "--sha256", sha(path),
            "--idioma", idioma, "--canal", canal, "--titulo", titulo, "--ano", str(ano), "--origem", "rodada3-discurso-governos", "--nota", f"arquivo={path}; {nota}"]
     r = subprocess.run(cmd, capture_output=True, text=True)
     if r.returncode: print("ERRO", id_, r.stderr[:200], file=sys.stderr)

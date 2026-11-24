@@ -64,7 +64,7 @@ with (OUT/"ggb2019_universo_hash.csv").open("w", newline="") as f:
     for n in sorted(cases):
         c = cases[n]; r = rows.get(n, dict(fonte="", link=""))
         dom = urlparse(r["link"]).netloc.lower().removeprefix("www.") if r["link"] else ""
-        tipo = "link" if r["link"] else ("SI" if r["fonte"].strip() in ("SI","") else "sem_link:"+r["fonte"][:30])
+        tipo = "link" if r["link"] else ("SI" if r["fonte"].strip() in ("SI","") else "sem_link")  # sem texto livre da fonte (v1.3.0)
         w.writerow([c["id"], c["uf"], c["cat"], int(bool(c["nome"])), tipo, dom])
 from collections import Counter
 print(Counter(c["cat"] for c in cases.values()))

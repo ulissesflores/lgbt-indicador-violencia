@@ -6,7 +6,7 @@ região e moradia urbana ou rural, com IC95%, em escala log. Mesmos dados e leit
 figures/make_figures.py (seguro_pns2019.csv + tabela 1 de seguro_pns2019.md); acrescenta a psicológica, que a
 figura da v0.4.4 não mostrava. Fundo branco; título, nota e fonte ficam no documento (regra APA do pipeline).
 
-Uso: /opt/homebrew/bin/python3.11 data/pns/fig_pns_v05.py <saida.png>
+Uso: python3 data/pns/fig_pns_v05.py <saida.png>
 """
 from __future__ import annotations
 

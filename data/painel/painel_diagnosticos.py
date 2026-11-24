@@ -8,7 +8,7 @@ Diagnósticos:
   D4 completude racial: para negros/não negros, controla pela parcela de óbitos sem raça/cor informada no UF-ano (total - negros - não negros).
   D5 variação disponível: quanto da ideologia varia DENTRO da UF (a identificação vem só daí) e limites de efeito que o desenho consegue excluir (IC95%; IC90 sem margem de equivalência declarada).
   D6 tratamento binário direita/esquerda (limiar Bolognesi 5,5) em vez de contínuo.
-Rodar: /opt/homebrew/bin/python3.14 -I data/painel/painel_diagnosticos.py   (semente fixa)
+Rodar: python3 -I data/painel/painel_diagnosticos.py   (semente fixa)
 """
 import os as _os
 import pathlib as _pl

@@ -1,6 +1,6 @@
 """H5: linha do tempo de medição/orçamento. Cada evento documental tem trecho verbatim CONFERIDO no arquivo local (normalização de espaços) + sha256 do arquivo; cada evento orçamentário
 é RECALCULADO dos CSVs desta pasta (h5_orcamento_acoes.csv, h5_acoes_lgbt_rdf_2007_2013.csv, h5_series_chave_acoes.csv) e traz a conta. Saída: data/h5_linha_do_tempo.csv.
-Rodar: /opt/homebrew/bin/python3.14 -I scripts/h5_04_linha_do_tempo.py"""
+Rodar: python3 -I scripts/h5_04_linha_do_tempo.py"""
 import os as _os
 import pathlib as _pl
 

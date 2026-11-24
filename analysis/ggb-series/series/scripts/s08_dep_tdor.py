@@ -1,6 +1,6 @@
 """Dependencia da lista TDoR/TMM (Brasil) em relacao ao GGB/Homofobia Mata e a ANTRA, medida pelo TEXTO publico de cada registro (campo Description do export TDoR).
 Conta registros cujo texto cita (a) Homofobia Mata / homofobiamata.wordpress.com, (b) Grupo Gay da Bahia / GGB, (c) ANTRA. Citar a fonte nao prova copia do caso, mostra a rota de descoberta.
-Uso: /opt/homebrew/bin/python3.14 -I s08_dep_tdor.py"""
+Uso: python3 -I s08_dep_tdor.py"""
 import os as _os
 import pathlib as _pl
 

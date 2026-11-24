@@ -1,6 +1,6 @@
 """Monta paises.csv (linhas curadas) a partir de: V-Dem v16 (vdemdata), V-Party v2, ILGA DB (GraphQL publico, 2026-10-22),
 BRC (data/ideologia) e uma lista de EVIDENCIAS verbatim. Cada citacao e VERIFICADA contra o arquivo local (falha alto se nao achar)
-e a pagina (PDF) e achada automaticamente. Saidas: ../paises.csv e ../verificacao-citacoes.tsv. Requer pyreadr, pandas (venv do scratchpad).
+e a pagina (PDF) e achada automaticamente. Saidas: ../paises.csv e ../verificacao-citacoes.tsv. Requer pyreadr, pandas.
 Regras de classificacao: PRE-REGISTRO.md (+ ADENDO). Nada aqui atribui esquerda/direita por julgamento proprio."""
 import os as _os
 import pathlib as _pl

@@ -1,9 +1,9 @@
-#!/opt/homebrew/bin/python3.14
+#!/usr/bin/env python3
 """Cenarios de n e custo (R$ de set/2026) para as 3 opcoes de desenho. Le: deff_pns2019.csv, n_necessario.csv, n_regiao.csv,
 validacao.txt (denominadores), custos-fontes.csv (parametros com id), sogi_modo.csv, IPCA (SIDRA 1737) e PTAX (BCB). Escreve cenarios_n_custo.csv,
 n_regiao_custo.csv, capacidade_por_opcao.csv, mde_outros_dominios.csv, opcoes_resumo.csv e opcoes_por_modo.csv.
 
-Rodar: /opt/homebrew/bin/python3.14 -I cenarios_custo.py        (sem argumentos)
+Rodar: python3 -I cenarios_custo.py        (sem argumentos)
 
 MODELO (todas as premissas explicitas; nada daqui e pesquisa de campo):
   adultos a triar   = n_total_por_rodada do n_necessario.csv = n_LGB_necessario (sem arredondar) / pi_LGB, arredondado uma vez (v0.3; pi = 1,89% da PNS 2019; sobreamostra NAO reduz a triagem)
@@ -158,7 +158,7 @@ with open(AQUI / "opcoes_resumo.csv", "w", newline="", encoding="utf8") as f:
     w = csv.DictWriter(f, fieldnames=list(res[0].keys())); w.writeheader(); w.writerows(res)
 for x in res: print(x)
 
-# ---- fração LGB+ por modo de preenchimento (2026-11-01, decisão do autor; crítica ARG-01 da r6) ----
+# ---- fração LGB+ por modo de preenchimento (2026-11-01, decisão do autor, após revisão) ----
 # Mesmo denominador do PI (todos os adultos com módulo V, inclusive quem não declarou orientação): sogi_modo.csv. Só a
 # fração muda; efeito de desenho e prevalência de base ficam os da PNS 2019 (os da Tabela 6), e o custo não muda.
 SM = {r["modo"]: float(r["est"]) for r in lerc("sogi_modo.csv") if r["faixa_idade"] == "18+" and r["indicador"] == "lgb"}

@@ -1,7 +1,7 @@
 """Selo do pré-registro: confere o sha256 do PREREGISTRO-D100.md (corpo até a linha '**ADENDOS**') e dos scripts
 de regras e tabulação contra PREREGISTRO-D100.sha256. Qualquer divergência aborta a tabulação.
 
-Uso direto: /opt/homebrew/bin/python3.14 -I scripts/d100_selo.py  (imprime ok ou o que divergiu)
+Uso direto: python3 -I scripts/d100_selo.py  (imprime ok ou o que divergiu)
 """
 
 import hashlib

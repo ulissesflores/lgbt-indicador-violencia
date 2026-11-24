@@ -1,4 +1,4 @@
-"""Gera ../estudos.csv a partir de rows.py + Crossref (referência) + sha256 dos arquivos locais. Python: /opt/homebrew/bin/python3.14 -I"""
+"""Gera ../estudos.csv a partir de rows.py + Crossref (referência) + sha256 dos arquivos locais. Python: python3 -I"""
 import csv,json,hashlib,os,sys,time,urllib.request,subprocess
 sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
 from rows import R,SJR

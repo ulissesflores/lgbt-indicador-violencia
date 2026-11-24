@@ -33,7 +33,7 @@ ou login do endereço do catálogo (`saidas/catalogo.tsv`, coluna `url`), e o sh
 
 ## Notas de proveniência
 
-- **Pasta de trabalho de origem:** `research-2026-10-24-disque100/` do projeto privado. O pré-registro e `scripts/d100_comum.py` ficam byte a byte (o hash
+- **Pasta de trabalho de origem:** `research-2026-10-24-disque100/` de trabalho (não publicada). O pré-registro e `scripts/d100_comum.py` ficam byte a byte (o hash
   gravado cobre o corpo do pré-registro e as regras); por isso o pré-registro cita caminhos da pasta de origem (`research-2026-10-24-v03/L-fontes/...`), que
   não existem aqui: o balanço oficial que ele cita é `entradas/balanco-lgbt-perfil-das-vitimas-uf.csv`. `python3 -I data/disque100/scripts/d100_selo.py` confere o selo.
 - **Única adaptação em `scripts/d100_series.py`:** as constantes de caminho (`PROJ` e `BALANCO`) apontam para a raiz do repositório e para `entradas/`, e o balanço (latin-1 na origem) é lido em UTF-8, porque o

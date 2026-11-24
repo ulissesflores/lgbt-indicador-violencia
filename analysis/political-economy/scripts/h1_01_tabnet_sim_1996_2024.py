@@ -1,7 +1,7 @@
 """H1 insumo: óbitos por UF de residência x ano 1996-2024 do SIM/DATASUS (TabNet ext10uf), 3 grandes grupos CID-10:
 4 = X85-Y09 agressões | 5 = Y10-Y34 intenção indeterminada (MVCI) | 6 = Y35-Y36 intervenções legais/guerra.
 Bruto (.prn latin1) vai para data/raw/ com sha256 em data/raw/SHA256SUMS.txt. Saída: data/h1_sim_tabnet_uf_ano.csv.
-Rodar: /opt/homebrew/bin/python3.14 -I scripts/h1_01_tabnet_sim_1996_2024.py   (TabNet é instável: o script tenta 5x por consulta)"""
+Rodar: python3 -I scripts/h1_01_tabnet_sim_1996_2024.py   (TabNet é instável: o script tenta 5x por consulta)"""
 import os as _os
 import pathlib as _pl
 

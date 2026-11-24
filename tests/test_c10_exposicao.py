@@ -1,6 +1,6 @@
 """Trava os números do C10 (exposição por governo). Pré-registro: PREREGISTRO-C10.md (hash em PREREGISTRO-C10.sha256).
 Lê os CSV gerados por c10_estrutura.py e c10_exposicao.py. Tolerâncias = arredondamento do número impresso no RELATORIO-EXPOSICAO.md.
-Rodar: /opt/homebrew/bin/python3.14 -B -m pytest -q -p no:cacheprovider tests/   (sem -I: o pytest está no site do usuário)."""
+Rodar: python3 -B -m pytest -q -p no:cacheprovider tests/   (sem -I: o pytest está no site do usuário)."""
 import csv, collections, hashlib
 from pathlib import Path
 

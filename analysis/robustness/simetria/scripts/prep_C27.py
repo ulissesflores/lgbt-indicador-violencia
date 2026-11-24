@@ -1,6 +1,6 @@
 """C27 passo 1: monta os itens a codificar as cegas. Le do CSV original SOMENTE hash/familia/universo
 (nunca postura/forma/fonte). Texto vem dos _amostra_*.jsonl. Saida: ../itens_C27.jsonl (id opaco, estrato,
-familia, texto) e ../sorteio_100.json. Python: /opt/homebrew/bin/python3.14 -I."""
+familia, texto) e ../sorteio_100.json. Python: python3 -I."""
 import os as _os
 import pathlib as _pl
 

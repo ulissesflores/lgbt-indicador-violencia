@@ -1,7 +1,7 @@
 id,uf,cat_ggb,tem_nome,fonte_tipo,dominio
 00b91e4c51,RS,Travesti,1,link,independente.com.br
 ce0710d34c,ES,Gay,1,SI,
-d762579187,PE,Gay,1,sem_link:Mãe da vítima,
+d762579187,PE,Gay,1,sem_link,
 d1c7fb59ea,PE,Gay,1,link,portalpe10.com.br
 3edcfae137,BA,Gay,1,link,blogs.correio24horas.com.br
 9bfc3a951f,AM,Gay,1,link,d24am.com
@@ -87,8 +87,8 @@ edb6867db6,AM,Travesti,1,link,acritica.com
 5bc848e0fa,MT,Gay,1,link,sonoticias.com.br
 eac53f24a0,CE,Travesti,1,link,cnews.com.br
 fb2bb93138,RJ,Lésbica,1,link,banguaovivo.com.br
-b114b12c0e,SP,Transexual,1,sem_link:Jornal de Itu www.jornaldeitu.,
-da9306cf79,SP,Lésbica,1,sem_link:Facebook,
+b114b12c0e,SP,Transexual,1,sem_link,
+da9306cf79,SP,Lésbica,1,sem_link,
 e9137b70d7,BA,Travesti,1,link,jornalsportnews.blogspot.com
 4cd5ae32f4,PB,Gay,1,link,portalt5.com.br
 f7de449037,SP,Travesti,1,link,meon.com.br
@@ -100,7 +100,7 @@ fed88289bd,PB,Gay,1,link,g1.globo.com
 9f4cf9b0e0,BA,Gay,1,link,blogdolau.com.br
 87efb75060,PB,Travesti,1,link,www2.pbagora.com.br
 83ac87e0b6,BA,Travesti,1,link,radiobahianordeste.com.br
-e8b4934c3f,MG,Gay,1,sem_link:Dalcira Ferrão   Pesquisa MORT,
+e8b4934c3f,MG,Gay,1,sem_link,
 4259e610d1,CE,Travesti,0,link,blogdofernandoribeiro.com.br
 a71c8789fa,CE,Gay,1,link,blogdofernandoribeiro.com.br
 a2f7111554,PR,Travesti,1,SI,
@@ -154,10 +154,10 @@ a04947b6b3,RR,Gay,1,link,g1.globo.com
 7cb9294ad1,PB,Travesti,1,link,g1.globo.com
 df8d566459,BA,Travesti,1,link,vitoriadaconquistanoticias.com.br
 c320004b9e,PA,Gay,1,link,correiodecarajas.com.br
-99351332ea,PE,Travesti,1,sem_link:Grupo de Whatsapp,
+99351332ea,PE,Travesti,1,sem_link,
 735b995f10,BA,Gay,1,link,informebaiano.com.br
 9d9883fa64,SP,Gay,1,link,facebook.com
-4e4eca6bff,MT,Gay,1,sem_link:Jovem Sul News,
+4e4eca6bff,MT,Gay,1,sem_link,
 1a7cf2b0f9,PR,Gay,1,link,correiodolitoral.com
 beae01961a,BA,Gay,1,link,correio24horas.com.br
 5ca125cf1f,BA,Gay,0,link,correio24horas.com.br
@@ -231,7 +231,7 @@ e4e7a13f81,RS,Transexual,1,link,radioprogresso.com.br
 8f47bcbdf1,RS,Gay,1,link,recordtv.r7.com
 c0fe3cfb17,PE,Gay,1,link,interior.ne10.uol.com.br
 e6aa15d7ff,MG,Gay,1,link,hojeemdia.com.br
-2c90235c50,PE,Lésbica,1,sem_link:Blog do Farnésio,
+2c90235c50,PE,Lésbica,1,sem_link,
 c287423934,MG,Gay,1,link,jornaldeuberaba.com.br
 8c46344061,SP,Gay,1,link,sul21.com.br
 209f2a9b58,RN,Travesti,1,SI,
@@ -282,7 +282,7 @@ edea8bac6b,ES,Travesti,1,link,plox.com.br
 96327adb2d,BA,Gay,0,link,vozdabahia.com.br
 ada9e6d8e7,MG,Transexual,0,link,tribunademinas.com.br
 a1c8019580,MG,Gay,1,link,itatiaia.com.br
-83a9c5c431,BA,Travesti,1,sem_link:Mídia Bahia   Anel Rodoviário ,
+83a9c5c431,BA,Travesti,1,sem_link,
 e0294fe6c3,BA,Gay,1,link,uol.com.br
 a02af17d0c,RO,Gay,1,link,g1.globo.com
 015bb2f1ae,PE,Transexual,1,link,tdor.translivesmatter.info
@@ -295,10 +295,10 @@ d9048e65fc,BA,Gay,1,link,bahianoar.com
 d4de22b245,AM,Gay,1,link,oarautodadiversidade.com
 c4a478697b,MG,Gay,1,link,bhaz.com.br
 52743ab514,AL,Transexual,1,link,alagoasnt.com.br
-22cd065de3,ES,Travesti,1,sem_link:Site de Linhares,
+22cd065de3,ES,Travesti,1,sem_link,
 968fd2cf06,PE,Gay,1,link,petrolandianoticias.com.br
-35cf62e7ff,RN,Gay,0,sem_link:Tribuna do Norte,
-5af6bc1bf0,RO,Travesti,1,sem_link:Alerta Rolim,
+35cf62e7ff,RN,Gay,0,sem_link,
+5af6bc1bf0,RO,Travesti,1,sem_link,
 3f30cab1e9,RO,Gay,1,link,gazetaamazonica.com.br
 66bf50c578,SP,Gay,1,link,g1.globo.com
 7582959213,AL,Gay,0,link,novoextra.com.br
@@ -310,7 +310,7 @@ dc17a18d7a,AM,Gay,1,link,portaldoholanda.com.br
 c94924ea4d,PB,Gay,1,link,g1.globo.com
 437b0b3b18,SP,Gay,1,link,agazeta.com.br
 c29d147f5d,PR,Travesti,1,link,opresente.com.br
-60713204af,RN,Transexual,1,sem_link:Monitorament o de Assassinatos,
+60713204af,RN,Transexual,1,sem_link,
 9cb93ee83a,BA,Gay,1,link,bahianoticias.com.br
 7f35e20464,SC,Bissexual,1,link,clmais.com.br
 78dab62806,PI,Transexual,1,link,antenorferreira.com

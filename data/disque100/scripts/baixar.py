@@ -5,7 +5,7 @@ Por quê por pedaços: o servidor (dadosabertos.mdh.gov.br) responde o GET intei
 (medido em 2026-10-24); com Range ele devolve 206 e o tamanho total. Só stdlib, sem cookie
 persistido, sem cadastro, sem aceite de termos.
 
-Uso: /opt/homebrew/bin/python3.14 -I scripts/baixar.py [--workers 24] [--pedaco-mb 4]
+Uso: python3 -I scripts/baixar.py [--workers 24] [--pedaco-mb 4]
 Saída: raw/<arquivo>.csv (arquivo final só aparece quando todos os pedaços chegaram e o
 tamanho bate com o anunciado em scripts/urls.tsv); estado de retomada em raw/<arquivo>.csv.partes.
 """

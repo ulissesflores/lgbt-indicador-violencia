@@ -1,7 +1,7 @@
 """Governador e vice ELEITOS por UF e ciclo (2010, 2014, 2018, 2022) a partir de consulta_cand do TSE (sources/public/p2-f8-governos/tse/z<ano>/consulta_cand_<ano>.zip, baixados de https://cdn.tse.jus.br/estatistica/sead/odsele/consulta_cand/consulta_cand_<ano>.zip em 2026-10-21;
 sha256 em sources/public/p2-f8-governos/tse/SHA256SUMS.txt; *.zip fica fora do git). Saída: data/governadores_tse_eleitos.csv. Só stdlib.
 Regras: eleição ordinária; DS_SIT_TOT_TURNO == 'ELEITO' (vale para eleito no 1º turno e no 2º). Partido = SG_PARTIDO do candidato (partido pelo qual concorreu).
-Rodar: /opt/homebrew/bin/python3.14 -I data/scripts/governadores_tse.py"""
+Rodar: python3 -I data/scripts/governadores_tse.py"""
 import os as _os
 import pathlib as _pl
 

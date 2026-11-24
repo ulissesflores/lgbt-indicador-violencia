@@ -1,8 +1,8 @@
-"""C27 passo 2: codifica as cegas via `grok -p` (assinatura do fornecedor, sem API paga). Uso:
+"""C27 passo 2: codifica as cegas via `grok -p`. Uso:
   rodar_C27.py itens   -> itens_C27.jsonl   (lotes de 10 da mesma familia, embaralhados com semente)
   rodar_C27.py base    -> baseline_itens.jsonl (afirmacao-alvo = estatistica)
 Salva a resposta bruta de cada lote em brutos_C27/ e o consolidado em codif_segundo_*.json.
-Python: /opt/homebrew/bin/python3.14 -I"""
+Python: python3 -I"""
 import os as _os
 import pathlib as _pl
 
@@ -10,7 +10,7 @@ REPO_ROOT = _os.environ.get("REPO_ROOT") or str(_pl.Path(__file__).resolve().par
 import json, os, random, subprocess, sys, tempfile, time, hashlib
 from concurrent.futures import ThreadPoolExecutor
 OUT = (REPO_ROOT + "/analysis/robustness/simetria")
-GROK = _os.environ.get("GROK_BIN", "grok")  # FERRAMENTA DO AUTOR (não re-executável no clone): chama CLIs de modelos de linguagem pela assinatura do autor; defina GROK_BIN com o caminho do executável. As saídas gravadas no repositório são as da execução original.
+GROK = _os.environ.get("GROK_BIN", "grok")  # requer o CLI grok autenticado pelo usuário; defina GROK_BIN com o caminho do executável. As saídas gravadas no repositório são as da execução original.
 SEMENTE = 20261023
 ALVO = {
  "F1": "\"gays/LGBT morrem mais que heterossexuais\" (qualquer forma comparativa: risco, expectativa de vida, suicídio, homicídio).",
@@ -68,10 +68,10 @@ def chama(args):
         try:
             j = json.loads(r.stdout)
             resp = json.loads(j["text"])
-            return nome, valida(fam, lote, resp), j.get("total_cost_usd", 0), list(j.get("modelUsage", {}))
+            return nome, valida(fam, lote, resp), list(j.get("modelUsage", {}))
         except Exception as e:
             print(nome, "tentativa", tent, "falhou:", repr(e)[:200], flush=True)
-    return nome, None, 0, []
+    return nome, None, []
 
 if __name__ == "__main__":
     modo = sys.argv[1]
@@ -96,12 +96,12 @@ if __name__ == "__main__":
     if limite:
         lotes = lotes[:limite]
     print(len(lotes), "lotes", flush=True)
-    res, custo, modelos = {}, 0.0, set()
+    res, modelos = {}, set()
     with ThreadPoolExecutor(4) as ex:
-        for nome, got, c, m in ex.map(chama, lotes):
-            custo += c; modelos.update(m)
+        for nome, got, m in ex.map(chama, lotes):
+            modelos.update(m)
             if got is None:
                 print("LOTE FALHOU", nome, flush=True); continue
             res.update(got)
-    json.dump({"codificacao": res, "total_cost_usd_lista": round(custo, 4), "modelos": sorted(modelos), "n": len(res)}, open(f"{OUT}/{destino}", "w"), ensure_ascii=False, indent=0)
-    print("feito", len(res), round(custo, 3), modelos)
+    json.dump({"codificacao": res, "modelos": sorted(modelos), "n": len(res)}, open(f"{OUT}/{destino}", "w"), ensure_ascii=False, indent=0)
+    print("feito", len(res), modelos)

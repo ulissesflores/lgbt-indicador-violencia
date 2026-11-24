@@ -2,7 +2,7 @@
 Desenho: diferenças-em-diferenças por coorte (janela pré 4 anos x janela pós H anos) contra UFs sem programa documentado na busca (NÃO é "sem programa";
 é "sem programa achado em fonte oficial"), event study 2x2 limpo, TWFE com wild-cluster bootstrap, inferência por randomização (placebo de atribuição de UFs).
 Desfechos: Y1 = Y10-Y34/(X85-Y09 + Y35-Y36 + Y10-Y34) (SIM/TabNet 1996-2024, contagem bruta); Y2 = ocultos/(registrados+ocultos) (Cerqueira & Lins 2024, modelo ML; TD 3015 1996-2021).
-Semente fixa. Rodar: /opt/homebrew/bin/python3.14 -I scripts/h1_03_analise.py"""
+Semente fixa. Rodar: python3 -I scripts/h1_03_analise.py"""
 import os as _os
 import pathlib as _pl
 

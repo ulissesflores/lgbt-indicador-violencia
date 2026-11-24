@@ -1,6 +1,6 @@
 """Trava os números do C09 (presidência x violência letal). Pré-registro: PREREGISTRO-C09.md (hash em PREREGISTRO-C09.sha256).
 Lê os CSV/MD gerados por c09_estrutura.py, c09_d2_painel.py e c09_d1_its.py. Tolerâncias = arredondamento do número impresso no RELATORIO-C09.md.
-Rodar: /opt/homebrew/bin/python3.14 -m pytest -q tests/   (sem -I: o pytest está no site do usuário)."""
+Rodar: python3 -m pytest -q tests/   (sem -I: o pytest está no site do usuário)."""
 import csv, hashlib, math
 from pathlib import Path
 

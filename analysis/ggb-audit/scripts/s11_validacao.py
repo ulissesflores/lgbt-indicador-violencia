@@ -22,7 +22,7 @@ cod = {}
 for l in open(D/"codificacao_A_raw.txt"):
     if not l[:1].isdigit(): continue
     p = l.rstrip("\n").split("|"); cod[p[0]] = dict(zip(["ordem","corresp","morte","tipo","lgbt","base","motivo","desfecho","tipo_fonte","obs"], p))
-# 2026-11-01 (parecer AST-01 da r5; decisão do autor): os 6 casos com desacordo entre A e B foram decididos por uma
+# 2026-11-01 (revisão metodológica de 2026-11-01): os 6 casos com desacordo entre A e B foram decididos por uma
 # terceira leitura cega (s15_terceiro_codificador.py), por maioria de dois de três, e conferidos pelo autor. As contagens
 # usam o código final; o kappa continua sendo A (original) contra B.
 cod_A = {k: dict(v) for k, v in cod.items()}
@@ -45,9 +45,12 @@ for r in amo:
     i = r["id"]; k = r["ordem_sorteio"]; c = cod.get(k)
     d = dict(ordem=k, id=i, uf=uni[i]["uf"], cat_ggb=uni[i]["cat_ggb"], dominio=uni[i]["dominio"], dupla=r["dupla_codificacao"])
     if c is None:
-        d.update(fonte="NR", motivo_nr=nr_motivo(i), corresp="", morte="", tipo="", lgbt="", base="", motivo="", desfecho="", tipo_fonte="", obs="")
+        d.update(fonte="NR", motivo_nr=nr_motivo(i), corresp="", morte="", tipo="", lgbt="", base="", motivo="", desfecho="", tipo_fonte="", diverge_cat_ou_cidade="")
     else:
-        d.update(fonte="R", motivo_nr="", **{x: c[x] for x in ["corresp","morte","tipo","lgbt","base","motivo","desfecho","tipo_fonte","obs"]})
+        # v1.3.0: a nota livre por caso (obs) nao vai a publico (narrativa reidentificavel); dela sai so o indicador 0/1
+        # de divergencia de categoria ou cidade entre o GGB e a fonte, marcado DIVERGE_CAT/DIVERGE_CIDADE na codificacao.
+        d.update(fonte="R", motivo_nr="", diverge_cat_ou_cidade="1" if "DIVERGE" in c["obs"] else "0",
+                 **{x: c[x] for x in ["corresp","morte","tipo","lgbt","base","motivo","desfecho","tipo_fonte"]})
     rows.append(d)
 with (D/"codificacao_A.csv").open("w", newline="") as f:
     w = csv.DictWriter(f, fieldnames=list(rows[0].keys())); w.writeheader(); w.writerows(rows)
@@ -87,7 +90,7 @@ resumo = dict(n_amostra=n, N_universo=N, fracao_amostral=round(n/N, 3), fpc=roun
               motivo_entre_verificavel_estrito=dict(tab), motivo_entre_morte_violenta_confirmada=dict(tab_all), tipo_entre_morte_violenta=dict(tip),
               base_identificacao_entre_verificavel_estrito=dict(base), desfecho_entre_morte_violenta=dict(des), cat_ggb_entre_verificavel_estrito=dict(cat), cat_ggb_entre_correspondem=dict(catuse),
               tipo_fonte_entre_recuperadas=dict(Counter(d["tipo_fonte"] for d in rec)), dominios_nao_recuperadas_top=Counter(d["dominio"] for d in nr).most_common(8),
-              divergencia_categoria_ou_cidade=sum(1 for d in rec if "DIVERGE" in d["obs"]))
+              divergencia_categoria_ou_cidade=sum(1 for d in rec if d["diverge_cat_ou_cidade"] == "1"))
 # tabela de motivos com Wilson (entre morte violenta confirmada, materia que corresponde)
 mot_names = {"V": "LGBTfobia atribuida por alguem na fonte", "R": "roubo/latrocinio", "C": "conflito interpessoal", "P": "passional/ciumes/ex-parceiro", "S": "suicidio", "U": "motivo desconhecido/nao reportado"}
 mt = []

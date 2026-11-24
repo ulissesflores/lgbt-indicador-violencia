@@ -9,7 +9,7 @@ Método (declarado antes de rodar): modelos simples na escala log, selecionados 
   h>5 extrapolado com crescimento sqrt(h/5) do erro de h=5 (limitação declarada).
 LIMITES (valem para a leitura): série curta; denominador de 2023-24 extrapolado (padroniza_idade.py); degradação do registro desde 2018 (mortes de intenção indeterminada: usar 'agressao+indet' como cenário alternativo);
   é projeção CONDICIONAL à continuidade da dinâmica recente, NÃO previsão de políticas ou choques (facções, armas, COVID); o intervalo mede erro histórico de método, não incerteza estrutural.
-Rodar: /opt/homebrew/bin/python3.14 -I data/sim/projecao_grupos.py   Saídas: data/sim/projecao_grupos.csv/.md e fig-projecao_grupos.png"""
+Rodar: python3 -I data/sim/projecao_grupos.py   Saídas: data/sim/projecao_grupos.csv/.md e fig-projecao_grupos.png"""
 import os as _os
 import pathlib as _pl
 

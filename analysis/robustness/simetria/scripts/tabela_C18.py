@@ -1,4 +1,4 @@
-"""C18: gera TABELA_C18.md e consultas_C18.tsv a partir de eventos_C18.csv, picks_C18.tsv, downloads_C18.tsv. Python: /opt/homebrew/bin/python3.14 -I"""
+"""C18: gera TABELA_C18.md e consultas_C18.tsv a partir de eventos_C18.csv, picks_C18.tsv, downloads_C18.tsv. Python: python3 -I"""
 import os as _os
 import pathlib as _pl
 

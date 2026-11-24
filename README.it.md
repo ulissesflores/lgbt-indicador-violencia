@@ -10,6 +10,7 @@
 ![License: Apache-2.0 (code)](https://img.shields.io/badge/code-Apache--2.0-blue)
 ![License: CC BY 4.0 (data, text, figures)](https://img.shields.io/badge/data%20%26%20text-CC%20BY%204.0-lightgrey)
 ![Python 3.12+](https://img.shields.io/badge/python-3.12%2B-blue)
+![Tests: 182 passing](https://img.shields.io/badge/tests-182_passing-brightgreen)
 ![Reproducible: SHA-256 chain](https://img.shields.io/badge/reproducible-SHA--256_chain-green)
 
 </div>
@@ -19,20 +20,26 @@
 > non eterosessuale (LGB+) ha dichiarato violenza fisica nell'anno precedente, contro il 3,82% degli adulti
 > eterosessuali; il rapporto aggiustato è 2,82 (intervallo al 95%, da 2,16 a 3,68). I registri di morte brasiliani non
 > riportano né l'orientamento sessuale né l'identità di genere, quindi non esiste un tasso nazionale di mortalità LGBT+.
-> Dei 160 casi campionati dalla lista del Grupo Gay da Bahia per il 2019, 50 sono stati confermati da notizie sul caso
-> stesso: la lista non è né un tasso né un totale, e i casi non verificati non sono casi inventati.
+> Dei 160 casi campionati dalla lista del Grupo Gay da Bahia per il 2019, 50 sono stati confermati dalla fonte citata (48
+> da notizie): la lista non è né un tasso né un totale, e i casi non verificati non sono casi inventati. Dopo 67 cambi di
+> partito del governatore, il tasso di omicidi dello stato, in rapporto a quello nazionale, è variato del −0,7% (mediana), contro il
+> +4,6% senza cambio; solo nei 21 cambi senza un altro cambio vicino il calo è marcato (−10,2%, contro +6,7%). Il
+> confronto è esplorativo e mostra una coincidenza, non un effetto del governo.
 
 ## L'articolo
 
-| Lingua | File |
-|---|---|
-| Portoghese (Brasile), originale | [`docs/paper/paper-final.pdf`](docs/paper/paper-final.pdf) |
-| Inglese, traduzione | [`docs/paper/paper-final.en.pdf`](docs/paper/paper-final.en.pdf) |
-| Spagnolo, traduzione | [`docs/paper/paper-final.es.pdf`](docs/paper/paper-final.es.pdf) |
-| Italiano, traduzione | [`docs/paper/paper-final.it.pdf`](docs/paper/paper-final.it.pdf) |
+*Mortalità e violenza contro le persone LGBT+ in Brasile: che cosa i dati pubblici permettono di affermare.* L'edizione
+italiana uscirà con un DOI proprio; fino ad allora, l'articolo è in inglese e in portoghese:
 
-Le figure dell'articolo sono in portoghese; la nota di ciascuna figura ne spiega le etichette. I lettori di lingua
-ebraica possono fare riferimento alla versione inglese.
+| Edizione | File |
+|---|---|
+| Inglese | [`docs/paper/paper-final-en.pdf`](docs/paper/paper-final-en.pdf) |
+| Portoghese (Brasile), originale | [`docs/paper/paper-final.pdf`](docs/paper/paper-final.pdf) |
+
+Le edizioni spagnola e italiana della v1.2.0 non fanno parte di questa versione: riportano due letture corrette in
+[`docs/corrections.md`](docs/corrections.md) (in portoghese, [`docs/corrections.pt-BR.md`](docs/corrections.pt-BR.md)) e
+torneranno ciascuna con un proprio DOI. Ogni edizione ha un proprio DOI e figure con etichette nella propria lingua; il codice delle figure in
+`figures/` mantiene le etichette in portoghese dello studio.
 
 ## Che cosa contiene questo repository
 
@@ -44,12 +51,13 @@ ebraica possono fare riferimento alla versione inglese.
 | `preregistrations/` | Preregistrazioni con le relative marche temporali e SHA-256, come citate nell'articolo |
 | `sources/` | Copie delle fonti pubbliche usate dagli script (`public/`), i registri delle fonti (`ledgers/`) e i quartili delle riviste |
 | `manifest/` | Manifesto delle fonti (URL, data di accesso e, quando un file è stato salvato, SHA-256), inventario pubblico e i checksum del sigillo |
+| `docs/` | Riproducibilità e posizione di ciascun risultato (`reproducibility-and-result-locations.md`), uso di modelli linguistici (`language-model-use.md`) e correzioni (`corrections.md`), in inglese e in portoghese (`.pt-BR.md`); l'articolo (`paper/`) |
 | `tests/` | Test che vincolano ogni numero pubblicato al file che lo ha prodotto |
 | `scripts/` | Download dei microdati ufficiali (con lo SHA-256 atteso), l'esecutore della riproduzione e gli audit |
 | `run_all.py`, `make_provenance.py`, `output/` | Verifica di integrità, ricalcolo e la catena SHA-256 |
 
 Il manifesto delle fonti (`manifest/MANIFESTO-FONTES.csv`) e l'inventario pubblico (`manifest/INVENTARIO-PUBLICO.md`)
-contano 1025 identificatori provenienti da 20 registri; il repository contiene 172 script. Codice, commenti e colonne dei
+contano 1022 identificatori provenienti da 20 registri; il repository contiene 174 script. Codice, commenti e colonne dei
 dati mantengono il portoghese originale dello studio.
 
 ## Come verificarlo
@@ -77,7 +85,8 @@ cosa non può essere rieseguito, e perché, è indicato in [`REPRODUCIBILITY.md`
 |---|---|
 | Gli adulti LGB+ dichiarano più violenza fisica, sessuale e psicologica degli adulti eterosessuali (2019) | Che questo divario misuri discriminazione o stile di vita: i dati non distinguono le due cose |
 | Nessun registro pubblico consente un tasso nazionale di mortalità LGBT+ | Che le persone LGBT+ vengano o non vengano uccise più spesso di altre |
-| Denunce alla polizia, segnalazioni alla linea telefonica e notifiche misurano la registrazione | Che la violenza sia aumentata o diminuita sotto un qualsiasi governo |
+| Denunce alla polizia, segnalazioni alla linea telefonica e notifiche misurano la registrazione | Che la violenza contro le persone LGBT+ sia aumentata o diminuita sotto un qualsiasi governo |
+| Il tasso di omicidi dello stato, in rapporto a quello nazionale, è diminuito dopo i 21 cambi di partito del governatore senza un altro cambio vicino (−10,2%, contro +6,7%); confronto esplorativo | Che questo calo sia un effetto del governo |
 | 50 dei 160 casi campionati dalla lista del 2019 (31,3%) sono verificabili dalla fonte che la lista stessa cita | Che la lista sia completa, o che sia inventata |
 
 ## Autore

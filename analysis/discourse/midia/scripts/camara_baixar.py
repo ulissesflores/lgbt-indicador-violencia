@@ -1,6 +1,6 @@
 """Baixa TODOS os discursos de deputados (API publica Dados Abertos da Camara, sem chave)
 2015-01-01..2026-10-21, legislaturas 55-57. Salva cada pagina bruta em RAW/<idDep>_<pag>.json
-(retomavel). Depois MANIFESTO com sha256 de cada arquivo. Python: /opt/homebrew/bin/python3.14 -I."""
+(retomavel). Depois MANIFESTO com sha256 de cada arquivo. Python: python3 -I."""
 import os as _os
 import pathlib as _pl
 

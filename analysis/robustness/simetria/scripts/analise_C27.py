@@ -1,5 +1,5 @@
 """C27 passo 3 (so aqui o rotulo original e lido): kappa de Cohen por campo e estrato, IC95% bootstrap (2000, semente 20261023),
-matrizes de confusao, PABAK, Gwet AC1, recontagem do x/49 e linha de base. Python: /opt/homebrew/bin/python3.14 -I"""
+matrizes de confusao, PABAK, Gwet AC1, recontagem do x/49 e linha de base. Python: python3 -I"""
 import os as _os
 import pathlib as _pl
 

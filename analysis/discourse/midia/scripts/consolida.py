@@ -1,6 +1,6 @@
 """Consolida: contagens.csv (todas as fontes) e amostra_codificada.csv (+ estatisticas de precisao/fonte).
 Entradas: _bruto_*.csv, _gnrss_celulas.jsonl, _amostra_*.jsonl, _codif/<universo>.json
-Python: /opt/homebrew/bin/python3.14 -I."""
+Python: python3 -I."""
 import os as _os
 import pathlib as _pl
 

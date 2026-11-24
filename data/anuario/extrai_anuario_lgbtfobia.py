@@ -1,6 +1,6 @@
 """Extrai a coluna 'Racismo por homofobia ou transfobia' (Ns. Absolutos) por UF e ano das 3 edições do Anuário FBSP.
 
-Substitui o parser perdido (README antigo apontava para um scratchpad que não existe mais). Determinístico, só stdlib.
+Substitui o parser perdido (README antigo apontava para um rascunho de trabalho que não existe mais). Determinístico, só stdlib.
 Entrada: sources/public/t2-anuario-{2024,2025,2026}-*/anuario.txt (pdftotext -layout).
 Saída: data/anuario/anuario_lgbtfobia_uf_ano_v2.csv com a coluna `marca` que o CSV legado perdeu:
   valor      = número informado
@@ -8,7 +8,7 @@ Saída: data/anuario/anuario_lgbtfobia_uf_ano_v2.csv com a coluna `marca` que o 
   inexistente= '-'    (Fenômeno inexistente, legenda do Anuário) -> ambíguo: zero real OU UF que não tipifica; tratar em análise de sensibilidade
 Travas: (1) a linha de âncora tem de conter o cabeçalho esperado; (2) 27 UFs + Brasil por edição; (3) soma das UFs == linha Brasil.
 Verificação contra o CSV legado (colunas edicao, ano_dado, uf, registros, linha_txt): ver `confere_com_legado()`.
-Rodar: /opt/homebrew/bin/python3.14 -I data/anuario/extrai_anuario_lgbtfobia.py
+Rodar: python3 -I data/anuario/extrai_anuario_lgbtfobia.py
 """
 import os as _os
 import pathlib as _pl

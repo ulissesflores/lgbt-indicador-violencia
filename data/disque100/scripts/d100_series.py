@@ -1,7 +1,7 @@
 """Séries anuais, composição, porta de entrada (balanço oficial 2011-2019) e comparação com Sinan e Anuário.
 Lê SÓ saidas/d100_por_periodo.csv (sem raw/) e arquivos públicos já no projeto. PREREGISTRO-D100.md, seções 5, 6, 9 e 10.
 
-Uso: /opt/homebrew/bin/python3.14 -I scripts/d100_series.py
+Uso: python3 -I scripts/d100_series.py
 Saídas: saidas/d100_serie_anual.csv, d100_composicao.csv, d100_uf_ano.csv, d100_porta_balanco.csv,
         d100_comparacao_nacional.csv, d100_comparacao_uf.csv, d100_resultados.md
 """

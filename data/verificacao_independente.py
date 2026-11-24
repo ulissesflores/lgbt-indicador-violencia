@@ -3,7 +3,7 @@
   V1 correlação parcial de Spearman: v2 usa regressão dos postos; aqui, inversa da matriz de correlação (fórmula da precisão), dados lidos com pandas.
   V2 IC da parcela LGB+ implícita na PNS: v1 usa Monte Carlo; aqui, método delta (forma fechada) sobre o logit.
   V3 painel TWFE: o script usa Frisch-Waugh com matriz projetora; aqui, MQO com TODAS as dummies explícitas (lstsq) e CR1 pelo estimador sanduíche direto.
-Rodar: /opt/homebrew/bin/python3.14 -I data/verificacao_independente.py ; exit 1 se algum teste numérico falhar (tolerâncias declaradas em cada V)."""
+Rodar: python3 -I data/verificacao_independente.py ; exit 1 se algum teste numérico falhar (tolerâncias declaradas em cada V)."""
 import os as _os
 import pathlib as _pl
 

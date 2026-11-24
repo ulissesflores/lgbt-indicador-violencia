@@ -9,7 +9,7 @@ Método (declarado antes de rodar; todas as comparações por subgrupo são REPO
   - 'Onde/quem' (V006/V007, V018/V019, V032/V033) referem-se ao episódio mais grave e só existem entre as vítimas.
 LIMITES: uma única onda (2019): NÃO há "quando"/tendência; autorrelato de orientação sexual em survey domiciliar (subestima LGB+ por estigma e revelação); LGB+ ~1,9% => n pequeno por região; violência não letal (não responde à pergunta sobre homicídio, que o SIM não registra por orientação);
 o módulo não pergunta o MOTIVO ("por quê") do agressor: só quem e onde.
-Rodar: /opt/homebrew/bin/python3.14 -I data/pns/seguro_pns2019.py   Saídas: data/pns/seguro_pns2019.md e .csv"""
+Rodar: python3 -I data/pns/seguro_pns2019.py   Saídas: data/pns/seguro_pns2019.md e .csv"""
 import os as _os
 import pathlib as _pl
 

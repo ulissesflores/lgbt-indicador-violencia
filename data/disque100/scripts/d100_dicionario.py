@@ -1,7 +1,7 @@
 """Dicionário harmonizado (rótulo verbatim -> classe pré-registrada), a partir de saidas/estrutura/<periodo>.json.
 Não lê raw/ nem conta nada: só aplica as regras de d100_comum.py a cada rótulo visto e diz em que períodos ele aparece.
 
-Uso: /opt/homebrew/bin/python3.14 -I scripts/d100_dicionario.py
+Uso: python3 -I scripts/d100_dicionario.py
 Saída: saidas/dicionario_rotulos.csv (campo_harmonizado, formato, coluna_origem, rotulo_verbatim, classe, periodos)
 """
 

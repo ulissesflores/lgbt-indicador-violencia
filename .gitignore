@@ -24,5 +24,8 @@ sources/public/pns2019/
 *.dbf
 # Disque 100: os 23 CSV brutos (13 GB) são baixados por data/disque100/scripts/baixar.py e nunca versionados
 data/disque100/raw/
+# LiHS check of the GGB 2016 list: names of victims and of the accused, never versioned (only the .META.md is)
+analysis/counterpoint/dados/*.csv
+**/lihs-checagem-ggb2016*.csv
 # oficina local do artigo (texto-fonte e ferramentas de build): fora do repositório
 /paper/

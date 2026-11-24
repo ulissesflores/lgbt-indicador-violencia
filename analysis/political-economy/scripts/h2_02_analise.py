@@ -3,7 +3,7 @@ Anuário: data/anuario/anuario_lgbtfobia_uf_ano_v2.csv (UF x ano de dados 2022-2
 Desfechos: Z = nº de UF-anos 2022-2025 com nd/inexistente (0-4); Zbin = Z>=1; taxa 2024 por 100 mil (SIM/IBGE pop de data/atlas_uf_series.csv) entre UFs informantes.
 Estrutura: índice S = média de Sim (0/1) em 6 itens da ESTADIC (2019 e 2023; 'Não'=0, 'Sim'=1, Recusa/-=ausente), e binário C = comitê de enfrentamento à violência LGBTfóbica em alguma edição (EDHU5410).
 Testes: Fisher exato (Zbin x C e Zbin x S>=mediana), Spearman Z x S com p por permutação (20000, semente fixa), AUC de S para discriminar Zbin com IC por bootstrap. Poder declarado por simulação.
-Rodar: /opt/homebrew/bin/python3.14 -I scripts/h2_02_analise.py"""
+Rodar: python3 -I scripts/h2_02_analise.py"""
 import os as _os
 import pathlib as _pl
 

@@ -17,7 +17,7 @@ Anomalias de fonte registradas: (1) as tabelas de causa de 2023 e 2025 são IDÊ
   "homicidios_decl" = 221 em 2023 (homicídio + latrocínio) mas 273 em 2024 (homicídio + latrocínio + outras): definições diferentes; N1 corrige para 269.
 SIM só existe até 2024 (data/sim/sim_agressoes_agregado.csv): 2025 não tem esperado verificável; a linha PROXY usa as taxas por célula de 2024 e a população extrapolada de 2025, fora de qualquer veredito.
 Reprodução obrigatória (aborta): todas as linhas de data/ggb/cobertura_implicita.csv (agressão e agressão+indet, 2023-24, 4 prevalências, 3 RR, 2 medidas), esperado ±0,1 e cobertura ±0,001.
-Rodar: /opt/homebrew/bin/python3.14 -I data/ggb/ggb_c08_numeradores.py   Saídas: data/ggb/c08_numeradores.md, c08_numeradores.csv e (v0.3) c08_cenarios_marginais.csv"""
+Rodar: python3 -I data/ggb/ggb_c08_numeradores.py   Saídas: data/ggb/c08_numeradores.md, c08_numeradores.csv e (v0.3) c08_cenarios_marginais.csv"""
 import os as _os
 import pathlib as _pl
 

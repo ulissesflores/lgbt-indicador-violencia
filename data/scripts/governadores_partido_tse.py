@@ -4,7 +4,7 @@ e data/governadores_tse_validacao.md (toda divergência, lado a lado).
 Ciclo do ano: 2011-14 -> eleição 2010; 2015-18 -> 2014 (inclui suplementares de AM 2017 e TO 2018 que o TSE guarda no arquivo de 2014); 2019-22 -> 2018; 2023-26 -> 2022.
 Casamento por nome: primeiro e último token (sem partículas/JUNIOR/FILHO/NETO, sem acento) do nome da Wikipédia dentro dos tokens do nome completo OU do nome de urna do TSE, restrito ao ciclo e à UF.
 Sem casamento (interinos não eleitos: presidente da Assembleia/TJ) -> mantém o partido da Wikipédia e marca fonte_partido=fallback_wiki.
-Rodar: /opt/homebrew/bin/python3.14 -I data/scripts/governadores_partido_tse.py (depois de governadores_tse.py)"""
+Rodar: python3 -I data/scripts/governadores_partido_tse.py (depois de governadores_tse.py)"""
 import os as _os
 import pathlib as _pl
 

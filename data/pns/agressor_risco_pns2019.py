@@ -1,23 +1,23 @@
 """Quem agrediu e o risco por tipo de agressor, LGB+ x heterossexuais, PNS 2019; sensibilidade com estado civil.
 
-Pedido do autor (2026-10-29, conversa sobre a afirmação A1): mostrar com números de desenho amostral
+Decisão metodológica (2026-10-29), sobre a afirmação A1: mostrar com números de desenho amostral
 (1) a composição dos agressores entre as vítimas de violência física, com intervalo e com a diferença LGB+ - het;
 (2) o RISCO na população por tipo de agressor (proporção de adultos que sofreram violência física por aquele tipo de
     agressor em 12 meses), com razão LGB+/het e intervalo: a fatia entre vítimas não é risco;
 (3) a razão de prevalências ajustada de violência física com o estado civil acrescentado ao ajuste do
     seguro_pns2019.py. ANÁLISE FEITA DEPOIS DE VER OS RESULTADOS (não pré-registrada): declarada como desvio.
-(4) [2026-10-29, revisão por três modelos, críticas GRO-01 e AST-01] razão AJUSTADA por tipo de agressor (mesmo ajuste
+(4) [2026-10-29, revisão por três modelos] razão AJUSTADA por tipo de agressor (mesmo ajuste
     do 2,82, e o mesmo + estado civil): o risco por agressor das seções 1 e 2 é bruto;
-(5) [crítica GRO-11] razão de violência física separada por quem preencheu o módulo (V00101: o próprio morador ou o
+(5) [revisão] razão de violência física separada por quem preencheu o módulo (V00101: o próprio morador ou o
     entrevistador), porque a fatia que se declara LGB+ muda com o modo; e o fluxo da amostra (88.531 -> n analítico).
-(6) [2026-11-01, decisão do autor; críticas ARG-02 e AST-R2-02 da r6] razão por tipo de agressor também com o cônjuge
+(6) [2026-11-01, decisão do autor, após revisão] razão por tipo de agressor também com o cônjuge
     no domicílio no ajuste; e todas as razões ajustadas refeitas SEM os adultos de cor ou raça ignorada (C009 = 9), que
     no ajuste publicado entram na categoria de referência com os não negros. Sensibilidades: os números publicados não mudam.
 Mesmo método do seguro_pns2019.py (linearização de Taylor, último conglomerado; Poisson ponderado com variância robusta
 de desenho). Reprodução obrigatória antes do novo: as fatias de parceiro/ex e família publicadas em seguro_pns2019.md.
 LIMITES: a PNS não pergunta o motivo do agressor nem a orientação sexual dele; V018 é o episódio mais grave; 179
 vítimas LGB+ (fatias com intervalo largo); uma única edição (2019). Nada aqui atribui motivo a nenhum agressor.
-Rodar: /opt/homebrew/bin/python3.14 -I data/pns/agressor_risco_pns2019.py   (REPO_ROOT = pasta que contém sources/public/)
+Rodar: python3 -I data/pns/agressor_risco_pns2019.py   (REPO_ROOT = pasta que contém sources/public/)
 Saídas: data/pns/agressor_risco_pns2019.md e .csv
 """
 import math
@@ -198,7 +198,7 @@ sol = lambda grp: ci((d.civil == "solteiro").astype(float), d[grp] & d.civil.not
 L += ["", f"Solteiros entre os adultos: heterossexuais {pc(sol('het'))}%, LGB+ {pc(sol('lgb'))}%.",
       "", "Leitura: a razão que sobra depois de qualquer ajuste não é parcela causada por discriminação nem por "
       "'estilo de vida'; os dados não separam as duas explicações (VanderWeele & Robinson, 2014)."]
-# ---- 4. razão AJUSTADA por tipo de agressor (crítica GRO-01/AST-01: o risco das seções 1-2 é bruto)
+# ---- 4. razão AJUSTADA por tipo de agressor (o risco das seções 1-2 é bruto)
 L += ["", "## 4. Razão de risco AJUSTADA por tipo de agressor (análise feita depois de ver os resultados)", "",
       "Desfecho: ter sofrido violência física em 12 meses e ter apontado esse tipo de agressor em V018 (uma resposta por pessoa). "
       "Colunas ajustadas: a primeira com o mesmo ajuste do 2,82; a segunda com o estado civil somado; a terceira com o cônjuge ou "
@@ -218,7 +218,7 @@ for g, cods in GRUPOS:
     assert a1[3] == a2[3] == a3[3], (g, a1[3], a2[3], a3[3])  # o texto da seção diz que o n é o mesmo nas três
     AGR_COL[g] = col
 
-# ---- 5. modo de preenchimento (crítica GRO-11) e fluxo da amostra (AST-08)
+# ---- 5. modo de preenchimento e fluxo da amostra
 d["auto"] = (d.V00101 == "1").astype(float)
 L += ["", "## 5. Quem preencheu o módulo de violência (V00101) e fluxo da amostra", ""]
 for nome, m in (("próprio morador", d.V00101 == "1"), ("entrevistador", d.V00101 == "2")):
@@ -236,7 +236,7 @@ L += ["", f"Fluxo: {len(d)} adultos responderam o módulo V; {int((d.lgb | d.het
       f"LGB+ (fora: não sabe {ori.get('5', 0)}, recusou {ori.get('6', 0)}, sem resposta {int(d.Y008.isna().sum())}); "
       f"n analítico do ajuste = {poisson_lgb('fisica')[3]} (com faixa, instrução e região conhecidas)."]
 
-# ---- 6. contagens não ponderadas por tipo de agressor (crítica AST-R2-03: esparsidade e critério de omissão do ajuste)
+# ---- 6. contagens não ponderadas por tipo de agressor (esparsidade e critério de omissão do ajuste)
 L += ["", "## 6. Vítimas na amostra (não ponderado) por tipo de agressor", "",
       "Critério de omissão do ajuste por tipo de agressor: menos de 10 vítimas LGB+ na categoria.", "",
       "| Agressor | Vítimas heterossexuais | Vítimas LGB+ |", "|---|---|---|"]
@@ -255,7 +255,7 @@ for grp, nome in (("het", "heterossexuais"), ("lgb", "LGB+")):
              f"{pc(sol[0])}% ({faixa(max(sol[1], 0), sol[2])}); n com resposta = {int(dom.sum())}")
     rows.append(["mora_conjuge", nome, tot[0], sol[0], None, tot[1], tot[2]])
 
-# ---- 8. cor ou raça ignorada fora do ajuste (crítica AST-R2-02): no ajuste publicado, C009 = 9 fica na referência
+# ---- 8. cor ou raça ignorada fora do ajuste: no ajuste publicado, C009 = 9 fica na referência
 ign = d.C009 == "9"
 n_ign_h, n_ign_l = int((ign & d.het).sum()), int((ign & d.lgb).sum())
 L += ["", "## 8. Razões ajustadas sem os adultos de cor ou raça ignorada", "",

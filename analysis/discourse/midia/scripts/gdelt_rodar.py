@@ -1,5 +1,5 @@
-"""Fila de consultas GDELT DOC 2.0 (sem chave). O servico devolve 429 de forma errática neste IP (compartilhado
-com outras frentes): espera 25 s entre pedidos OK e 120 s apos 429, sem desistir. Resultado de cada tarefa
+"""Fila de consultas GDELT DOC 2.0 (sem chave). O servico devolve 429 de forma errática
+(limite de taxa do servico): espera 25 s entre pedidos OK e 120 s apos 429, sem desistir. Resultado de cada tarefa
 anexado em _gdelt_resultados.jsonl (retomavel); bruto + sha256 em sources/public/.../midia/gdelt."""
 import os as _os
 import pathlib as _pl

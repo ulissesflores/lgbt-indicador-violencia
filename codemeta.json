@@ -3,8 +3,8 @@
   "@type": "SoftwareSourceCode",
   "name": "Mortality and violence against LGBT+ people in Brazil: what public data allow us to claim — an audit of sources and indicators, 2010–2026",
   "identifier": "https://doi.org/10.5281/zenodo.23873858",
-  "description": "Data, code and verification material for the article “Mortalidade e violência contra pessoas LGBT+ no Brasil: o que os dados públicos permitem afirmar” (Portuguese original, with English, Spanish and Italian translations). It holds the derived data and the code that recompute every number in the article: a re-analysis of the 2019 Brazilian National Health Survey (violence reported by sexual orientation, who the aggressor was, marital status and cohabitation), age-standardised homicide rates from the Mortality Information System, the motive field of violence notifications, police reports and the Disque 100 hotline, an audit of 160 cases from the Grupo Gay da Bahia list, homicide series by government period, and the statistical power and cost of a victimisation survey. It also holds dated pre-registrations with their SHA-256, tests that lock the published numbers, and a SHA-256 chain that seals the whole distribution. No nominal data, third-party PDFs or raw microdata are distributed: the source manifest gives the URL and access date of every source and, when a file was saved, its SHA-256.",
-  "version": "1.2.0",
+  "description": "Data, code and verification material for the article “Mortalidade e violência contra pessoas LGBT+ no Brasil: o que os dados públicos permitem afirmar” (Brazilian Portuguese original and English edition, Codex Hash Research Report 2026-10). It holds the derived data and the code that recompute every number in the article: a re-analysis of the 2019 Brazilian National Health Survey (violence reported by sexual orientation, who the aggressor was, marital status and cohabitation), age-standardised homicide rates from the Mortality Information System, the motive field of violence notifications, police reports and the Disque 100 hotline, an audit of 160 cases from the Grupo Gay da Bahia list, homicide series by government period, including the four pre-registered cuts of the comparison around changes of governor's party, and the statistical power and cost of a victimisation survey. It also holds dated pre-registrations with their SHA-256, tests that lock the published numbers, and a SHA-256 chain that seals the whole distribution. No nominal data, third-party PDFs or raw microdata are distributed: the source manifest gives the URL and access date of every source and, when a file was saved, its SHA-256. Version 1.3.0 corrects two readings of the v1.2.0 article (see docs/corrections.md) and adds tests that lock the numbers of the corrected article to the frozen data.",
+  "version": "1.3.0",
   "license": [
     "https://spdx.org/licenses/Apache-2.0",
     "https://spdx.org/licenses/CC-BY-4.0"
@@ -38,5 +38,5 @@
   "relatedLink": [
     "https://ulissesflores.com"
   ],
-  "dateModified": "2026-11-03"
+  "dateModified": "2026-11-22"
 }

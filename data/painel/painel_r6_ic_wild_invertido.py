@@ -4,7 +4,7 @@ Modelo idêntico ao painel principal: ln(taxa) = b x ideologia + EF(UF) + EF(ano
 sem alterá-lo. Não substitui nada: o IC normal publicado (b ± 1,96 EP) fica ao lado do invertido e do t(26).
 Álgebra (FWL): com u = M(y - b0 x) e pesos w por UF, M y* = b0 xt + M(u w); como u = yt - b0 xt, M(u w) = M(yt w) - b0 M(xt w): as duas matrizes B x n
 são calculadas uma vez por desfecho e cada b0 custa O(B x G). Pesos Rademacher iguais para todos os b0 do desfecho (números aleatórios comuns).
-Rodar: /opt/homebrew/bin/python3.14 -I data/painel/painel_r6_ic_wild_invertido.py   Saídas: data/painel/r6_ic_wild_invertido.csv e .md"""
+Rodar: python3 -I data/painel/painel_r6_ic_wild_invertido.py   Saídas: data/painel/r6_ic_wild_invertido.csv e .md"""
 import os as _os
 import pathlib as _pl
 

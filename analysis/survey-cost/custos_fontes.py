@@ -1,7 +1,7 @@
-#!/opt/homebrew/bin/python3.14
+#!/usr/bin/env python3
 """Gera custos-fontes.csv: cada valor com moeda, ano, fonte, pagina/secao, trecho verbatim, sha256 do arquivo local.
 
-Rodar: /opt/homebrew/bin/python3.14 -I custos_fontes.py   (sem argumentos; caminhos fixos do projeto)
+Rodar: python3 -I custos_fontes.py   (sem argumentos; caminhos fixos do projeto)
 Regra: o `trecho_verbatim` TEM de existir no texto extraido do arquivo local (espacos normalizados); se nao existir,
 a linha sai com verificado_no_arquivo=NAO e status vira 'ALERTA'. O sha256 e do arquivo baixado (bytes), nao do texto.
 Linhas sem arquivo local (ex.: captura por WebFetch) saem com status 'ALERTA' e nota.

@@ -2,7 +2,7 @@
 LOCOCOR: 1 hospital, 2 outro estabelecimento de saúde, 3 domicílio, 4 via pública, 5 outros, 6 aldeia indígena, 9/branco ignorado. arma = X93-X95.
 Proporções BRUTAS (não padronizadas: o interesse é o perfil do contexto, não a taxa); local ignorado/branco excluído do denominador e reportado.
 Proxy (⚠️): 'domicílio' NÃO é 'violência doméstica' (inclui crimes de rua cujo óbito é no domicílio e exclui a violência doméstica cuja morte ocorre no hospital): é o proxy que o Atlas usa (35,2% das mulheres em 2024).
-Rodar: /opt/homebrew/bin/python3.14 -I data/sim/contexto_local.py   Saída: data/sim/contexto_local.md"""
+Rodar: python3 -I data/sim/contexto_local.py   Saída: data/sim/contexto_local.md"""
 import os as _os
 import pathlib as _pl
 

@@ -1,17 +1,17 @@
 # Inventário público (gerado por `scripts/inventario_publico.py`; não editar à mão)
 
-sha256 de `manifest/INVENTARIO-PUBLICO.json`: `71ef65bb1179771aa77b33f4c7e0a5d2f971b9fbe9bb55af95cd724d23c877ac`
+sha256 de `manifest/INVENTARIO-PUBLICO.json`: `0dfa4e431a7ed4a9a1f7fb33ba91dc5b80ccf51b59b7f4c592b8c2c8445a97a6`
 
 Contado só com os arquivos deste repositório (o mesmo conjunto do selo), com as regras de identidade, idioma e tipo do painel do artigo.
 
 | Item | Repositório | Painel do artigo (árvore privada, até 2026-10-23) |
 | --- | --- | --- |
 | Ledgers `sources.jsonl` | 20 | 17 |
-| Registros nos ledgers | 1783 | 1569 |
-| Fontes únicas (identificadores) | 1025 | 829 |
-| Obras distintas (sem sufixo de versão) | 1024 | - |
+| Registros nos ledgers | 1782 | 1569 |
+| Fontes únicas (identificadores) | 1022 | 829 |
+| Obras distintas (sem sufixo de versão) | 1021 | - |
 | Idiomas | 11 | 10 |
-| Scripts Python | 172 | 139 |
+| Scripts Python | 174 | 139 |
 
 ## Regras
 
@@ -28,7 +28,7 @@ Contado só com os arquivos deste repositório (o mesmo conjunto do selo), com a
 | Idioma | n |
 | --- | --- |
 | en | 510 |
-| pt | 339 |
+| pt | 336 |
 | es | 116 |
 | fr | 29 |
 | de | 20 |
@@ -54,11 +54,11 @@ Contado só com os arquivos deste repositório (o mesmo conjunto do selo), com a
 | dado | 46 | 46 |
 | livro | 11 | 6 |
 | enciclopedia | 27 | 27 |
-| nao_classificado | 98 | 26 |
+| nao_classificado | 95 | 26 |
 
 Diferenças de tipo vêm só das fontes novas da v0.3 (ledgers posteriores ao painel, abaixo).
 
-**Reconciliação.** O mesmo cálculo, restrito aos 17 ledgers que o painel contou, dá 1569 registros, 829 identificadores, 10 idiomas e a mesma contagem por tipo: **igual ao painel em tudo**. Os 196 identificadores a mais vêm dos ledgers posteriores ao painel.
+**Reconciliação.** O mesmo cálculo, restrito aos 17 ledgers que o painel contou, dá 1569 registros, 829 identificadores, 10 idiomas e a mesma contagem por tipo: **igual ao painel em tudo**. Os 193 identificadores a mais vêm dos ledgers posteriores ao painel.
 
 ## Pares de versão fundidos em obra única
 
@@ -106,7 +106,7 @@ Diferenças de tipo vêm só das fontes novas da v0.3 (ledgers posteriores ao pa
   - `data/presidencia/c09_d1_its.py`
   - `data/presidencia/c09_d2_painel.py`
   - `data/presidencia/c09_estrutura.py`
-- Fora da lista, de empacotamento (21): (raiz) 2; figures 1; scripts 8; tests 10.
+- Fora da lista, de empacotamento (23): (raiz) 2; figures 1; scripts 9; tests 11.
 
 ## Ledgers
 

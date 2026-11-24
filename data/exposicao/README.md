@@ -19,5 +19,5 @@ Rodar (da raiz): `python3 -I data/exposicao/c10_estrutura.py` e depois `python3 
 `data/presidencia/presidentes_2007_2024.csv` e `data/presidencia/c09_d1_resultados.md`). Recálculo e comparação: `scripts/reproduzir.py`.
 Os CSV de formato longo são as entradas das figuras 22 e 23 do artigo.
 
-**Pasta de trabalho de origem:** `research-2026-10-24-exposicao/` do projeto privado. O pré-registro fica byte a byte (hash gravado) e por isso
+**Pasta de trabalho de origem:** `research-2026-10-24-exposicao/` de trabalho (não publicada). O pré-registro fica byte a byte (hash gravado) e por isso
 cita a pasta de origem (linha 3) e caminhos `research-2026-10-24-presidencia/...`, que aqui são `data/presidencia/...`.

@@ -1,7 +1,7 @@
 """H1 insumo 2: tabelas por UF-ano do Atlas da Violência 2026 (Tab 2.2 registrados, 3.3 ocultos, 3.5 MVCI; anos 2014-2024),
 do Atlas 2025 (Tab 3.3 ocultos, 2013-2023) e do TD Ipea 3015 (Cerqueira & Lins 2024; Tabelas A.4 registrados e A.5 ocultos 1996-2021, xlsx do repositório).
 Saída: data/h1_atlas_td_uf_ano.csv (fonte,tabela,cod_uf,ano,valor) + data/h1_atlas_parse_checks.txt (totais Brasil lidos x soma das UFs).
-Rodar: /opt/homebrew/bin/python3.14 -I scripts/h1_02_parse_atlas_td.py"""
+Rodar: python3 -I scripts/h1_02_parse_atlas_td.py"""
 import os as _os
 import pathlib as _pl
 

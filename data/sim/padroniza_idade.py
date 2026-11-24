@@ -1,5 +1,5 @@
 """Taxas de mortalidade por agressão PADRONIZADAS POR IDADE (padronização direta), Brasil 2010-2024, por sexo x raça/cor, com decomposição de Kitagawa.
-Resolve a pendência de rigor do F10 ("grupos mais seguros"): as taxas do dossiê eram brutas e as de homens (~37, ~52, ~19) eram aritmética sobre o Atlas.
+Motivo: as taxas anteriores ("grupos mais seguros") eram brutas e as de homens (~37, ~52, ~19) eram aritmética sobre o Atlas.
 Entradas: data/sim/sim_agressoes_agregado.csv (microdados SIM, data/sim/agrega_sim.py) e Censo 2010/2022 por raça x sexo x idade
 (SIDRA 9606; sources/public/p2-f8-dados-uf/sidra/censo9606_n1_raca_sexo_idade_2010_2022.json; sha256 em SHA256SUMS.txt).
 Método (declarado antes de rodar):
@@ -10,7 +10,7 @@ Método (declarado antes de rodar):
     limites sem redistribuição (inferior) e com TODA a raça ignorada atribuída a negros ou a não negros (extremos) para a razão negros/não negros.
   - IC95% de Poisson sobre óbitos redistribuídos (aproximação; ignora a incerteza da redistribuição e dos denominadores).
   - Negros = preta + parda; não negros = branca + amarela + indígena (convenção do Atlas/dossiê).
-Rodar: /opt/homebrew/bin/python3.14 -I data/sim/padroniza_idade.py   Saídas: data/sim/asr_brasil.csv, data/sim/asr_brasil.md"""
+Rodar: python3 -I data/sim/padroniza_idade.py   Saídas: data/sim/asr_brasil.csv, data/sim/asr_brasil.md"""
 import os as _os
 import pathlib as _pl
 
@@ -157,7 +157,7 @@ def main():
     ng_i = pooled("Negros", nr_ag); nn_i = pooled("Não negros", nr_ag)
     L.append(f"| negros / não negros: cenário (raça ignorada descartada) | {ng_i/nn_i:.2f} | |")
     # extremos: os dois grupos partem só da raça conhecida e o ignorado entra UMA vez, no grupo escolhido (antes, até a v0.5-r5,
-    # entrava de novo sobre a base já redistribuída; parecer AST-09 da r5); o total de óbitos se conserva nos dois cenários
+    # entrava de novo sobre a base já redistribuída; revisão metodológica de 2026-11-01); o total de óbitos se conserva nos dois cenários
     so_conhecida = {**nr_ag, **{k: v for k, v in m_ag.items() if k[2] == "ign"}}
     L.append(f"| negros / não negros: extremo A (toda raça ignorada -> negros) | {pooled('Negros', so_conhecida, True)/pooled('Não negros', so_conhecida):.2f} | cota máxima possível a favor de negros mais expostos |")
     L.append(f"| negros / não negros: extremo B (toda raça ignorada -> não negros) | {pooled('Negros', so_conhecida)/pooled('Não negros', so_conhecida, True):.2f} | cota mínima |")

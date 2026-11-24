@@ -1,4 +1,4 @@
-"""Figura da v0.5: o que cada série mostra por período de governo federal (pedido do autor, 2026-10-30:
+"""Figura da v0.5: o que cada série mostra por período de governo federal (decisão metodológica de 2026-10-30:
 "o que estamos verificando é se os crimes contra eles aumentam ou diminuem nesse período de governo").
 
 Painel a: homicídio geral padronizado (SIM), com e sem as mortes de causa indeterminada, 2010-2024 (asr_brasil.csv).
@@ -8,7 +8,7 @@ fichas do SUS com motivo LGBTfobia (2015-2025) e boletins de ocorrência do Anu�
 Nenhuma série LGBT+ separa violência de registro; a figura não atribui causa a governo. Lê só arquivos do repositório.
 Fundo branco; linhas verticais = posse presidencial. Título, nota e fonte ficam no documento (regra APA do pipeline).
 
-Uso: /opt/homebrew/bin/python3.11 data/exposicao/fig_series_por_governo.py <saida.png>
+Uso: python3 data/exposicao/fig_series_por_governo.py <saida.png>
 """
 from __future__ import annotations
 

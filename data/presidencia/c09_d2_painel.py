@@ -5,7 +5,7 @@ presidente do ano (partido de eleição, ponderado por dias; c09_estrutura.pres_
 restrito) com as funções de data/painel/painel_diagnosticos.py IMPORTADAS sem alteração. Numeradores agressão+indet e denominadores: cópia literal da lógica de painel_c02_indet.py.
 Portas de reprodução (abortam): b e EP dos 6 desfechos de resultados_tse_brc.md; p wild 0,943 de tx_total (semente 20261021, primeiro sorteio); SIM agressão = Atlas;
 ideologia do painel = BRC por período arredondado; BLS9 tx_total = resultados_tse_brc.md (341 UF-anos).
-Rodar: /opt/homebrew/bin/python3.14 -I c09_d2_painel.py   Saídas: c09_d2_resultados.md, c09_d2_resultados.csv"""
+Rodar: python3 -I c09_d2_painel.py   Saídas: c09_d2_resultados.md, c09_d2_resultados.csv"""
 import os as _os
 import pathlib as _pl
 

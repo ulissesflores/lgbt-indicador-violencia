@@ -1,5 +1,5 @@
 """H5: varre TODAS as ações dos arquivos anuais da CGU (OrcamentoDespesa 2014-2025, zips baixados por h5_01 em data/raw/orcamento; hashes em data/h5_orcamento_hashes_tudo.txt) por nome de ação LGBT/homofobia/vitimização/etc.
-Saída: data/h5_acoes_lgbt_cgu_2014_2025.csv. Rodar: /opt/homebrew/bin/python3.14 -I scripts/h5_05_acoes_lgbt_cgu.py"""
+Saída: data/h5_acoes_lgbt_cgu_2014_2025.csv. Rodar: python3 -I scripts/h5_05_acoes_lgbt_cgu.py"""
 import os as _os
 import pathlib as _pl
 

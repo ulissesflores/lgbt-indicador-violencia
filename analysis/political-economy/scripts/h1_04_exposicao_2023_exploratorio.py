@@ -1,7 +1,7 @@
 """H1 (EXPLORATÓRIO, não pré-especificado: a ideia surgiu depois de ler o texto do Atlas 2025 p.21, onde o próprio Ipea/FBSP atribui a queda de ocultos em 2023 à 'repercussão' do Atlas 2024):
 as UFs com programa de metas (7 de h1_programas_metas.csv) reagiram mais do que as demais à exposição pública da MVCI em 2023, e isso reverteu em 2024?
 Estatística: média de log(MVCI_t/MVCI_t-1) (Y10-Y34, SIM/TabNet) tratadas - controles; p por permutação de rótulos (UF), 20000 sorteios, semente fixa.
-Rodar: /opt/homebrew/bin/python3.14 -I scripts/h1_04_exposicao_2023_exploratorio.py"""
+Rodar: python3 -I scripts/h1_04_exposicao_2023_exploratorio.py"""
 import os as _os
 import pathlib as _pl
 

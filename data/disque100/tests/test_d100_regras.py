@@ -1,5 +1,5 @@
 """Regras pré-registradas e tabulação em arquivos SINTÉTICOS (tests/fixtures: A.csv, B.csv, C.csv, sem dado real).
-Rodar: /opt/homebrew/bin/python3.14 -m pytest -q tests  (sem -I: o pytest está no site do usuário)."""
+Rodar: python3 -m pytest -q tests  (sem -I: o pytest está no site do usuário)."""
 
 import sys
 from pathlib import Path

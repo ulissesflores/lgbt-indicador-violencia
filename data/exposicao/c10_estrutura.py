@@ -4,7 +4,7 @@ e as datas de data/presidencia/presidentes_2007_2024.csv.
 Calcula: as 67 trocas reais de governador (mesma regra do C03: partido muda E ideologia BRC muda), o bloco BRC (cortes do próprio artigo:
 esquerda < 4,5; centro 4,5 a 5,5; direita > 5,5), a direção, a disponibilidade de janela completa (3 anos antes, 3 depois) e de UFs de referência
 sem troca por ano; e as janelas federais (ano-base e ano-fim por mandato).
-Rodar: /opt/homebrew/bin/python3.14 -I c10_estrutura.py   Saída: c10_estrutura.md e c10_trocas.csv"""
+Rodar: python3 -I c10_estrutura.py   Saída: c10_estrutura.md e c10_trocas.csv"""
 import os as _os
 import pathlib as _pl
 

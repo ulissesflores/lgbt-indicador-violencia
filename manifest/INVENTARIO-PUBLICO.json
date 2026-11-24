@@ -32,11 +32,11 @@
    "sources/ledgers/ledger-04/sources.jsonl",
    "sources/ledgers/ledger-05/sources.jsonl"
   ],
-  "registros": 1783
+  "registros": 1782
  },
  "fontes": {
-  "identificadores_unicos": 1025,
-  "obras_distintas": 1024,
+  "identificadores_unicos": 1022,
+  "obras_distintas": 1021,
   "pares_de_versao": [
    [
     "doi:10.21203/rs.3.rs-2864681",
@@ -45,7 +45,7 @@
   ],
   "por_idioma_identificador": {
    "en": 510,
-   "pt": 339,
+   "pt": 336,
    "es": 116,
    "fr": 29,
    "de": 20,
@@ -58,7 +58,7 @@
   },
   "por_idioma_obra": {
    "en": 509,
-   "pt": 339,
+   "pt": 336,
    "es": 116,
    "fr": 29,
    "de": 20,
@@ -82,11 +82,11 @@
    "dado": 46,
    "livro": 11,
    "enciclopedia": 27,
-   "nao_classificado": 98
+   "nao_classificado": 95
   }
  },
  "scripts": {
-  "no_repositorio": 172,
+  "no_repositorio": 174,
   "lista_do_titulo": 139,
   "da_lista_no_repositorio": 126,
   "da_lista_fora_do_repositorio": [
@@ -131,12 +131,12 @@
    "data/presidencia/c09_d2_painel.py",
    "data/presidencia/c09_estrutura.py"
   ],
-  "fora_da_lista_empacotamento": 21,
+  "fora_da_lista_empacotamento": 23,
   "empacotamento_por_pasta": {
    "(raiz)": 2,
    "figures": 1,
-   "scripts": 8,
-   "tests": 10
+   "scripts": 9,
+   "tests": 11
   }
  },
  "reconciliacao_painel": {

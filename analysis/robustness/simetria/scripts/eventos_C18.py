@@ -1,5 +1,5 @@
 """C18: monta eventos_C18.csv. Cada evento aponta arquivo baixado + ancora (regex) e o trecho verbatim e extraido do TEXTO do arquivo
-(nunca digitado a mao). Python: /opt/homebrew/bin/python3.14 -I"""
+(nunca digitado a mao). Python: python3 -I"""
 import os as _os
 import pathlib as _pl
 

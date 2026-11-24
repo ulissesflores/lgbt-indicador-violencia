@@ -1,6 +1,6 @@
 """Senado: lista de pronunciamentos mes a mes (API publica, sem chave), 2015-01..2026-10.
 Salva bruto em RAW/lista_AAAAMM.json. Depois filtra candidatos (Resumo+Indexacao com termo do grupo)
-e baixa o texto integral (TextoIntegralTxt) so desses. Python: /opt/homebrew/bin/python3.14 -I."""
+e baixa o texto integral (TextoIntegralTxt) so desses. Python: python3 -I."""
 import os as _os
 import pathlib as _pl
 

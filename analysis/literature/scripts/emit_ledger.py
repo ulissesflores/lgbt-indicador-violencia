@@ -9,7 +9,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 import rows
 OUT = (REPO_ROOT + "/analysis/literature")
 EMIT = _os.environ.get("EMIT_SOURCES", "emit_sources.py")
-PY = "/opt/homebrew/bin/python3.14"
+PY = sys.executable
 # id da linha -> metadados do ledger
 M = {
  "A1": dict(url="https://web.archive.org/web/2016id_/http://cnv.memoriasreveladas.gov.br/images/pdf/relatorio/volume_2_digital.pdf", id="cnv-2014-vol2-texto7", kind="other", acesso="wayback", idioma="pt", canal="fonte-oficial", ano=2014, titulo="CNV Relatorio vol. II, texto 7 Ditadura e homossexualidades"),

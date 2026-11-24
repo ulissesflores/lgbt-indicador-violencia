@@ -1,5 +1,5 @@
 """Gera series/sources.jsonl SOMENTE via emit_sources.py (ledger). Le o painel (doc_id, url, sha256, titulo) + fontes consultadas fora do painel.
-Rodar uma vez; para refazer, apague series/sources.jsonl (arquivo nosso) antes. Uso: /opt/homebrew/bin/python3.14 -I s07_emit_sources.py"""
+Rodar uma vez; para refazer, apague series/sources.jsonl (arquivo nosso) antes. Uso: python3 -I s07_emit_sources.py"""
 import os as _os
 import pathlib as _pl
 
@@ -10,7 +10,7 @@ EM = _os.environ.get("EMIT_SOURCES", "emit_sources.py")
 BASE = pathlib.Path(REPO_ROOT)
 if (S / "sources.jsonl").exists(): sys.exit("sources.jsonl ja existe: apague para refazer")
 def emit(**k):
-    cmd = ["/opt/homebrew/bin/python3.14", EM, "--out", str(S), "--origem", "rodada3-GGB-series"]
+    cmd = [sys.executable, EM, "--out", str(S), "--origem", "rodada3-GGB-series"]
     for a, v in k.items():
         if v not in (None, ""): cmd += ["--" + a.replace("_", "-"), str(v)]
     r = subprocess.run(cmd, capture_output=True, text=True)

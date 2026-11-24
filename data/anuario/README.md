@@ -5,7 +5,7 @@ Extração determinística do texto `pdftotext` das três edições. Números ab
 ## Arquivos
 
 - `anuario_lgbtfobia_uf_ano.csv`: 168 linhas = 3 edições x 2 anos x (27 UFs + BR). Colunas: `edicao, ano_dado, uf, registros, nota, linha_txt`. `uf = BR` é a linha Brasil (incluída para conferência). `registros` vazio = `...` (informação não disponível) ou `-` (fenômeno inexistente): a regra pedida manda deixar vazio nos dois casos; a distinção fica implícita aqui e pode ser reconstituída pelo `.txt`.
-- Parser (versionado desde 2026-10-21, substitui o rascunho de scratchpad que se perdeu): `extrai_anuario_lgbtfobia.py` nesta pasta. Reproduz as 168 linhas deste CSV sem divergência (colunas `registros` e `linha_txt`) e grava `anuario_lgbtfobia_uf_ano_v2.csv` com a coluna `marca` (`valor` | `nd` = '...' | `inexistente` = '-'), que este CSV legado perdeu. A coluna `nota` deste arquivo é curadoria manual e não é gerada.
+- Parser (versionado desde 2026-10-21, substitui o rascunho de trabalho que se perdeu): `extrai_anuario_lgbtfobia.py` nesta pasta. Reproduz as 168 linhas deste CSV sem divergência (colunas `registros` e `linha_txt`) e grava `anuario_lgbtfobia_uf_ano_v2.csv` com a coluna `marca` (`valor` | `nd` = '...' | `inexistente` = '-'), que este CSV legado perdeu. A coluna `nota` deste arquivo é curadoria manual e não é gerada.
 
 ## Onde está a tabela em cada edição
 

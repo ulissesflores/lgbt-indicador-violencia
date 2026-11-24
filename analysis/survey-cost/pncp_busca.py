@@ -1,4 +1,4 @@
-#!/opt/homebrew/bin/python3.14
+#!/usr/bin/env python3
 """Varre contratos do PNCP (API publica de consulta) por orgao e ano e filtra o objeto por regex. Uso: pncp_busca.py <cnpj> <ano_ini> <ano_fim> <regex>"""
 import json, re, sys, time, urllib.parse, urllib.request
 cnpj, a0, a1, rx = sys.argv[1], int(sys.argv[2]), int(sys.argv[3]), re.compile(sys.argv[4], re.I)

@@ -1,6 +1,6 @@
 """C27 linha de base: 60 falas da Camara com ESTATISTICA fora dos temas (regras em CRITERIOS.md secao 3).
 Reusa por import GATE/norm_map/d de analise_parlamento.py. Saida: ../baseline_itens.jsonl, ../baseline_pool_stats.json.
-Python: /opt/homebrew/bin/python3.14 -I"""
+Python: python3 -I"""
 import os as _os
 import pathlib as _pl
 

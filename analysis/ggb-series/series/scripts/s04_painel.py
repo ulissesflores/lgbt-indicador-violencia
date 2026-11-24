@@ -1,7 +1,7 @@
 """Monta series/painel_mortes_lgbt.csv (fonte x ano x categoria) a partir de DOCUMENTOS PUBLICOS ja baixados.
 Cada linha carrega: trecho verbatim (validado por busca no texto do PDF), pagina (indice do PDF), caminho absoluto, sha256, URL.
 Se um trecho nao for encontrado, o script ABORTA (nao ha linha sem prova). Python 3.14 stdlib + pdftotext.
-Uso: /opt/homebrew/bin/python3.14 -I s04_painel.py"""
+Uso: python3 -I s04_painel.py"""
 import os as _os
 import pathlib as _pl
 

@@ -1,7 +1,7 @@
 """Aplica o dicionario pre-registrado (regex locais) a TODOS os discursos baixados da Camara e
 aos textos integrais candidatos do Senado. Saidas (em midia/): _bruto_parlamento.csv (contagens por
 entrada x ano, uniao por familia x ano, denominadores), _parlamento_matches.jsonl (itens casados com
-trecho e co-mencao de fontes). Python: /opt/homebrew/bin/python3.14 -I."""
+trecho e co-mencao de fontes). Python: python3 -I."""
 import os as _os
 import pathlib as _pl
 

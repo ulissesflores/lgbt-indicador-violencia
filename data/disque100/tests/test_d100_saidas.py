@@ -1,5 +1,5 @@
 """Travas sobre as SAÍDAS (rodam sem raw/): selo do pré-registro, coerência interna e números publicados no relatório.
-Rodar: /opt/homebrew/bin/python3.14 -m pytest -q tests"""
+Rodar: python3 -m pytest -q tests"""
 
 import csv
 import sys

@@ -21,7 +21,8 @@ Rodar (da raiz do repositório): `python3 -I data/presidencia/c09_estrutura.py`,
 Entradas: só derivados distribuídos (`data/painel/`, `data/ideologia/`, `data/sim/`, `data/atlas_uf_series.csv`) e as cópias abertas de
 `sources/public/` (SIDRA/IBGE; Power & Zucco, CC0).
 
-**Pasta de trabalho de origem.** A análise foi feita na pasta `research-2026-10-24-presidencia/` do projeto privado e realocada aqui. Os scripts
+**Pasta de trabalho de origem.** A análise foi feita na pasta `research-2026-10-24-presidencia/` de trabalho (não publicada) e realocada aqui. Os scripts
 e o relatório trazem o caminho novo; o pré-registro fica byte a byte, porque o hash foi gravado
-antes, e por isso ainda cita a pasta de origem (linha 3) e o arquivo `ASTRA-B-lacunas.md` (revisão externa por modelo de linguagem, não
-distribuída; ver o glossário em [`../../docs/INDEX.md`](../../docs/INDEX.md)). O briefing de método da frente não é distribuído.
+antes, e por isso ainda cita a pasta de origem (linha 3), um briefing de trabalho (linha 9) e uma
+revisão externa por modelo de linguagem (linha 10), nenhum dos dois distribuído; a linha 10 registra que a revisão não existia quando o
+hash foi gravado e que nada dela entrou na análise.

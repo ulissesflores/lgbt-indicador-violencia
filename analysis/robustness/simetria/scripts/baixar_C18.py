@@ -1,6 +1,6 @@
 """C18: baixa as paginas listadas em picks_C18.tsv (sem login, sem aceitar termos). curl com UA comum; se falhar tenta Wayback id_.
 Saidas: sources/public/q1-textointegral/discurso/simetria/brasil/<gov>_<qid>.<ext>, downloads_C18.tsv (status, bytes, sha256), texto extraido .txt.
-Python: /opt/homebrew/bin/python3.14 -I"""
+Python: python3 -I"""
 import os as _os
 import pathlib as _pl
 

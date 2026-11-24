@@ -14,7 +14,7 @@ MÉTODO
 LIMITES: poucos eventos limpos (ver n em cada tabela); 27 clusters (testes conjuntos anticonservadores); event study com tratamento de ideologia reversível e controles que já tiveram/terão troca em outro ano (limpeza só dentro da janela);
  tendências paralelas condicionais a EF de pilha NÃO testadas além das antecipações; sem poder para efeitos pequenos; "pesos negativos" de um regressor contínuo dependem da origem de D (3 variantes mostradas);
  exploratório, NÃO causal; SIM sem motivação; o 'estimado' do Atlas não entra.
-Rodar: /opt/homebrew/bin/python3.14 -I data/painel/painel_c03_event_pesos.py   Saídas: data/painel/c03_event_pesos_resultados.md e c03_event_pesos_resultados.csv"""
+Rodar: python3 -I data/painel/painel_c03_event_pesos.py   Saídas: data/painel/c03_event_pesos_resultados.md e c03_event_pesos_resultados.csv"""
 import os as _os
 import pathlib as _pl
 

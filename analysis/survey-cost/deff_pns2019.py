@@ -1,7 +1,7 @@
-#!/opt/homebrew/bin/python3.14
+#!/usr/bin/env python3
 """Efeito de desenho (deff) da PNS 2019 para violencia e orientacao sexual, e n necessario.
 
-Rodar:  /opt/homebrew/bin/python3.14 -I deff_pns2019.py --micro <PNS_2019.txt> --layout <input_PNS_2019_utf8.txt> --out <pasta>
+Rodar:  python3 -I deff_pns2019.py --micro <PNS_2019.txt> --layout <input_PNS_2019_utf8.txt> --out <pasta>
 (o input oficial do IBGE esta em latin-1; a copia utf8 usada esta em sources/public/q1-textointegral/F2/pns2019/; o script le com errors="replace", sem efeito nos nomes de variavel)
 Dependencias: numpy, pandas (nada mais).
 

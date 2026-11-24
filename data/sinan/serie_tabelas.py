@@ -2,7 +2,7 @@
 e confere linha a linha contra o texto publicado em resumo.md.
 Convenção descoberta por engenharia reversa e confirmada pela conferência: faltante efetivo = pct_m_ign + pct_m_na (valores do CSV, 2 casas);
 por UF = média SIMPLES dos três anos (2015-17 e 2023-25), com a variação calculada sobre as médias NÃO arredondadas; LGBTfobia = média simples de pct_m_lgbt em 2015-25; n = soma de n_interpessoal 2015-25.
-Rodar: /opt/homebrew/bin/python3.14 -I data/sinan/serie_tabelas.py   (saída: serie_tabelas.md; exit 1 se alguma linha publicada não for reproduzida)
+Rodar: python3 -I data/sinan/serie_tabelas.py   (saída: serie_tabelas.md; exit 1 se alguma linha publicada não for reproduzida)
 """
 import os as _os
 import pathlib as _pl

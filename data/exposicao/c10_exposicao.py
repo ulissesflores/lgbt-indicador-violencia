@@ -3,7 +3,7 @@ Pré-registro: PREREGISTRO-C10.md (corpo com sha256 em PREREGISTRO-C10.sha256, g
 E1: taxa nacional padronizada por idade (data/sim/asr_brasil.csv; arma gerada com data/sim/padroniza_idade.py como em c09_d1_its.py) no ano-base e no ano-fim de cada governo.
 E2: 67 trocas reais de governador (c10_estrutura.py); excesso relativo r = 100[(D_uf/A_uf)/(D_br/A_br) - 1] entre as médias dos 3 anos antes (e-3..e-1) e dos 3 depois (e..e+2),
     truncadas a 2012-2024; referência de acaso = UFs sem troca em e-2..e+2 no mesmo ano, reamostragem pareada por ano (B = 9999, semente 20261024 por célula).
-Rodar: /opt/homebrew/bin/python3.14 -I c10_exposicao.py   Saídas: c10_e1_federal.csv, c10_e1_serie_longo.csv, c10_e2_trocas_longo.csv, c10_e2_resumo.csv, c10_resultados.md"""
+Rodar: python3 -I c10_exposicao.py   Saídas: c10_e1_federal.csv, c10_e1_serie_longo.csv, c10_e2_trocas_longo.csv, c10_e2_resumo.csv, c10_resultados.md"""
 import os as _os
 import pathlib as _pl
 

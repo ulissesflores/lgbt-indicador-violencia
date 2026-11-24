@@ -2,7 +2,7 @@
 Variáveis (códigos IBGE do dicionário das próprias bases): EDHU086 (órgão de direitos humanos executa programas/ações para LGBT), EDHU5410 (comitê gestor de enfrentamento à violência LGBTfóbica),
 EDHU576 (política/programa de promoção de direitos LGBT e/ou enfrentamento à LGBTfobia), ESEG4413 (PM: capacitação com tema LGBTfobia), ESEG487 (ações/projetos de prevenção com tema LGBTfobia), ESEG5913 (Polícia Civil: capacitação com tema LGBTfobia).
 Saída: data/h2_estadic_lgbt_uf.csv (uma linha por UF x edição, valores brutos 'Sim'/'Não'/código do IBGE).
-Rodar: /opt/homebrew/bin/python3.14 -I scripts/h2_01_estadic_lgbt.py"""
+Rodar: python3 -I scripts/h2_01_estadic_lgbt.py"""
 import os as _os
 import pathlib as _pl
 

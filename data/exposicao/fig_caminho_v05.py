@@ -4,7 +4,7 @@ Gerado por recorte do código da fig24 (mesmo desenho, mesmos arquivos de origem
 cinza por linha, caixas com preenchimento branco e o vazio do motivo no Sinan com uma casa decimal (42,5% a 44,5%), como
 o quadro de afirmações. Título, nota e fonte ficam no documento.
 
-Uso: /opt/homebrew/bin/python3.11 data/exposicao/fig_caminho_v05.py <saida.png>
+Uso: python3 data/exposicao/fig_caminho_v05.py <saida.png>
 """
 import sys
 from pathlib import Path
@@ -50,7 +50,7 @@ def figura1_v05(saida) -> None:
     rh, y0 = 0.64, 0.8
     for i, (nome, tipo, e1, e2, e3, e4, e5) in enumerate(faixas):
         y = y0 + i * (rh + 0.1)
-        ec, fc = cor[tipo][0], "white"  # v0.5: fundo branco (pedido do autor, 2026-10-30)
+        ec, fc = cor[tipo][0], "white"  # v0.5: fundo branco (decisão metodológica de 2026-10-30)
         ax.text(0.1, y + rh / 2, nome, ha="left", va="center", fontsize=MIN_PT + 0.8, fontweight="bold", color=ec)
         if e1:
             _caixa(ax, cx[0], y, wc, rh, e1, ec, fc)

@@ -41,6 +41,6 @@ Pasta: `data/exposicao/`. Números de `c10_e1_federal.csv`, `c10_e2_resumo.csv` 
 ## Arquivos e reprodução
 - `c10_estrutura.py/.md`, `c10_trocas.csv` (só exposições); `c10_exposicao.py`; `c10_e1_federal.csv` (governo x série); `c10_e1_serie_longo.csv` (ano x série, com a fração do ano de cada presidente, pronto para figura); `c10_e2_trocas_longo.csv` (troca x grupo, com o r de cada referência); `c10_e2_resumo.csv` (189 células: recorte x direção x grupo, Holm em `p_*_holm6`); `c10_resultados.md` (tabelas completas).
 - Portas que passaram: taxas recalculadas = `asr_brasil.csv` (0,005); arma = série do C09; taxas por UF-ano = painel (diferença 0); agressão SIM = Atlas nos 351 UF-anos; Brasil = soma das 27 UFs (teste independente). Duas execuções geram saídas byte a byte iguais.
-- Rodar: `/opt/homebrew/bin/python3.14 -I c10_exposicao.py`; testes: da raiz do repositório, `python3 -m pytest -q tests/test_c10_exposicao.py` (5 passam).
+- Rodar: `python3 -I c10_exposicao.py`; testes: da raiz do repositório, `python3 -m pytest -q tests/test_c10_exposicao.py` (5 passam).
 
 Becos: Lula 2007-10 não computável (o SIM em disco começa em 2010; baixar 1996-2009 do DATASUS daria Lula 1 e 2 e a tendência pré de Dilma). Não há sexo x raça por UF no painel, então o E2 usa 6 grupos. Arma + indeterminada fica n/d, porque o agregado não marca arma em Y22-Y24. 2017 tem 3 UFs de referência. A reamostragem não reproduz a dependência entre trocas da mesma UF.

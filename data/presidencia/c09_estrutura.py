@@ -3,7 +3,7 @@ Lê só exposições: ideologia do governador por UF-ano (data/ideologia/ideolog
 escore BRC por partido-ano (data/ideologia/ideologia_partidos_ano.csv), escores BLS9 (Zucco & Power) e presidentes_2007_2024.csv (datas de exercício).
 Calcula: série do presidente por ano (ponderada por dias em 2016), variação disponível das exposições do D2 depois dos EF, contagens de copartidarismo (D3),
 e o efeito mínimo detectável do D1 em unidades de DP residual (só a matriz de desenho; o DP vem depois, do desfecho).
-Rodar: /opt/homebrew/bin/python3.14 -I c09_estrutura.py   Saída: c09_estrutura.md"""
+Rodar: python3 -I c09_estrutura.py   Saída: c09_estrutura.md"""
 import os as _os
 import pathlib as _pl
 

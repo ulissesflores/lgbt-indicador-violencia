@@ -1,5 +1,5 @@
 """Verifica cada trecho verbatim contra o arquivo, calcula pagina e sha256, grava CSVs e o ledger.
-uso: /opt/homebrew/bin/python3.14 -I build_perfil.py   (cwd irrelevante; caminhos absolutos)"""
+uso: python3 -I build_perfil.py   (cwd irrelevante; caminhos absolutos)"""
 import os as _os
 import pathlib as _pl
 
@@ -10,7 +10,7 @@ import claims as K
 
 OUT = (REPO_ROOT + '/analysis/ggb-series/perfil/')
 EMIT = _os.environ.get("EMIT_SOURCES", "emit_sources.py")
-PY = '/opt/homebrew/bin/python3.14'
+PY = sys.executable
 
 def ns(s):  # compara sem espacos, hifens de quebra e soft hyphen
     return re.sub(r'[\s­]+', '', s).replace('-', '')

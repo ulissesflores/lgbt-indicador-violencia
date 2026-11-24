@@ -10,6 +10,7 @@
 ![License: Apache-2.0 (code)](https://img.shields.io/badge/code-Apache--2.0-blue)
 ![License: CC BY 4.0 (data, text, figures)](https://img.shields.io/badge/data%20%26%20text-CC%20BY%204.0-lightgrey)
 ![Python 3.12+](https://img.shields.io/badge/python-3.12%2B-blue)
+![Tests: 182 passing](https://img.shields.io/badge/tests-182_passing-brightgreen)
 ![Reproducible: SHA-256 chain](https://img.shields.io/badge/reproducible-SHA--256_chain-green)
 
 </div>
@@ -19,20 +20,22 @@
 > heterossexual (LGB+) relataram violência física no ano anterior, contra 3,82% dos adultos heterossexuais; a razão
 > ajustada é 2,82 (intervalo de 95%, 2,16 a 3,68). Os registros de óbito brasileiros não trazem orientação sexual nem
 > identidade de gênero, por isso não existe taxa nacional de mortalidade LGBT+. Dos 160 casos amostrados da lista do
-> Grupo Gay da Bahia de 2019, 50 foram confirmados em notícias sobre o próprio caso: a lista não é taxa nem total, e caso
-> não verificado não é caso inventado.
+> Grupo Gay da Bahia de 2019, 50 foram confirmados pela fonte citada (48 por notícia): a lista não é taxa nem total, e
+> caso não verificado não é caso inventado. Após 67 trocas de partido do governador, o homicídio do estado, relativo ao
+> nacional, variou −0,7% (mediana), contra +4,6% sem troca; só nas 21 trocas sem outra troca próxima a queda é marcada
+> (−10,2%, contra +6,7%). A comparação é exploratória e mostra coincidência, não efeito do governo.
 
 ## O artigo
 
-| Idioma | Arquivo |
+| Edição | Arquivo |
 |---|---|
-| Português (Brasil), original | [`docs/paper/paper-final.pdf`](docs/paper/paper-final.pdf) |
-| Inglês, tradução | [`docs/paper/paper-final.en.pdf`](docs/paper/paper-final.en.pdf) |
-| Espanhol, tradução | [`docs/paper/paper-final.es.pdf`](docs/paper/paper-final.es.pdf) |
-| Italiano, tradução | [`docs/paper/paper-final.it.pdf`](docs/paper/paper-final.it.pdf) |
+| **Português (Brasil), original** | [`docs/paper/paper-final.pdf`](docs/paper/paper-final.pdf) |
+| Inglês | [`docs/paper/paper-final-en.pdf`](docs/paper/paper-final-en.pdf) |
 
-As figuras do artigo estão em português; a nota de cada figura explica seus rótulos. Leitores de hebraico contam com a
-versão em inglês.
+Cada edição tem DOI próprio e figuras com rótulos no seu idioma; o código das figuras em `figures/` mantém os rótulos em
+português do estudo. As edições em espanhol e italiano da v1.2.0 não fazem parte desta versão: trazem duas leituras
+corrigidas em [`docs/corrections.pt-BR.md`](docs/corrections.pt-BR.md) e voltam com DOI
+próprio. Leitores de hebraico contam com a edição em inglês.
 
 ## O que há neste repositório
 
@@ -44,12 +47,13 @@ versão em inglês.
 | `preregistrations/` | Pré-registros com seus carimbos de tempo e SHA-256, conforme citados no artigo |
 | `sources/` | Cópias de fontes públicas usadas pelos scripts (`public/`), os registros de fontes (`ledgers/`) e os quartis de periódicos |
 | `manifest/` | Manifesto de fontes (URL, data de acesso e, quando um arquivo foi salvo, SHA-256), inventário público e as somas de verificação do selo |
+| `docs/` | Reprodutibilidade e localização de cada resultado (`reproducibility-and-result-locations.pt-BR.md`), uso de modelos de linguagem (`language-model-use.pt-BR.md`) e correções (`corrections.pt-BR.md`), cada um com a versão em inglês (sem o sufixo `.pt-BR`); o artigo (`paper/`) |
 | `tests/` | Testes que vinculam cada número publicado ao arquivo que o produziu |
 | `scripts/` | Download dos microdados oficiais (com o SHA-256 esperado), o executor da reprodução e as auditorias |
 | `run_all.py`, `make_provenance.py`, `output/` | Verificação de integridade, recálculo e a cadeia SHA-256 |
 
 O manifesto de fontes (`manifest/MANIFESTO-FONTES.csv`) e o inventário público (`manifest/INVENTARIO-PUBLICO.md`) contam
-1025 identificadores de 20 registros; o repositório contém 172 scripts. Código, comentários e colunas de dados mantêm o
+1022 identificadores de 20 registros; o repositório contém 174 scripts. Código, comentários e colunas de dados mantêm o
 português original do estudo.
 
 ## Como verificar
@@ -77,7 +81,8 @@ executado de novo, e por quê, está em [`REPRODUCIBILITY.md`](REPRODUCIBILITY.m
 |---|---|
 | Adultos LGB+ relatam mais violência física, sexual e psicológica que adultos heterossexuais (2019) | Que essa diferença mede discriminação ou estilo de vida: os dados não separam as duas coisas |
 | Nenhum registro público permite uma taxa nacional de mortalidade LGBT+ | Que pessoas LGBT+ são ou não são mortas com mais frequência que as demais |
-| Registros policiais, denúncias telefônicas e notificações medem o registro | Que a violência subiu ou caiu sob qualquer governo |
+| Registros policiais, denúncias telefônicas e notificações medem o registro | Que a violência contra pessoas LGBT+ subiu ou caiu sob qualquer governo |
+| O homicídio do estado, relativo ao nacional, caiu nas 21 trocas de partido do governador sem outra troca próxima (−10,2%, contra +6,7%); comparação exploratória | Que essa queda seja efeito do governo |
 | 50 dos 160 casos amostrados da lista de 2019 (31,3%) são verificáveis a partir da fonte que a própria lista cita | Que a lista é completa, ou que é inventada |
 
 ## Autor

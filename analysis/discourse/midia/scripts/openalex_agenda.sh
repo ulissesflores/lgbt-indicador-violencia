@@ -5,5 +5,5 @@ LOG=$REPO_ROOT/analysis/discourse/midia/openalex_agenda.log
 cd $REPO_ROOT/analysis/discourse/midia/scripts
 while [ "$(date -u +%H)" != "00" ]; do sleep 120; done
 sleep 60
-/opt/homebrew/bin/python3.14 -I openalex_contar.py contar >> $LOG 2>&1
+python3 -I openalex_contar.py contar >> $LOG 2>&1
 echo "FIM $(date -u +%FT%TZ)" >> $LOG

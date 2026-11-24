@@ -1,7 +1,7 @@
 """Figura 4 da v0.5 (Disque 100), redesenho da fig28 de figures/make_figures.py em fundo branco: as barras do canal
 inteiro de 2011 a 2020 deixam o preenchimento cinza e ficam brancas com contorno. Mesmo código e mesmos dados (sources/public/).
 
-Uso: /opt/homebrew/bin/python3.11 data/disque100/fig_disque_v05.py <saida.png>
+Uso: python3 data/disque100/fig_disque_v05.py <saida.png>
 """
 import sys
 from pathlib import Path

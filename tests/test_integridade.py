@@ -145,3 +145,22 @@ def test_verificacao_independente_tudo_ok():
     assert r.returncode == 0, r.stdout[-1500:] + r.stderr[-500:]
     assert "RESULTADO: TUDO OK" in r.stdout
     assert r.stdout.count("  OK ") >= 19 and "FALHA" not in r.stdout  # V1 (4) + V2 (3) + V3 (12) conferências
+
+
+def test_tabela_da_errata_bate_com_os_arquivos():
+    """Cada SHA-256 'depois' de docs/corrections-files.tsv é o do arquivo distribuído; retirado não existe.
+
+    Sem esta trava a tabela envelhece a cada edição posterior e passa a afirmar um estado que
+    nenhuma versão publicada teve.
+    """
+    linhas = list(csv.DictReader((RAIZ / "docs/corrections-files.tsv").open(encoding="utf-8"), delimiter="\t"))
+    assert linhas, "tabela da errata vazia"
+    assert len({r["path"] for r in linhas}) == len(linhas), "caminho repetido na tabela da errata"
+    for r in linhas:
+        p = RAIZ / r["path"]
+        if r["sha256_v1.3.0"] == "withdrawn":
+            assert not p.exists(), f"{r['path']} consta como retirado e ainda existe"
+        else:
+            assert hashlib.sha256(p.read_bytes()).hexdigest() == r["sha256_v1.3.0"], (
+                f"{r['path']}: SHA-256 difere da tabela da errata (regerar docs/corrections-files.tsv)"
+            )

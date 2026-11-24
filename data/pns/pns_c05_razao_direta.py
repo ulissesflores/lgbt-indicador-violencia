@@ -11,7 +11,7 @@ LIMITES: (1) a base (a) NÃO é o cenário B do Monte Carlo: o cenário B imputo
   (2) n bruto de LGB+ vítimas é pequeno (179 no total; dezenas nos cortes): ICs largos, cortes descritivos, sem multiplicidade corrigida; (3) uma onda, autorrelato de orientação (subestima LGB+), sem motivo do agressor;
   (4) mesmo que o IC contenha 4,1%, o Sinan é registro de quem buscou serviço de saúde (24% sem orientação preenchida; limites 3,1% a 27,4%), não amostra: a comparação não é de estimadores equivalentes;
   (5) a razão de totais cobre vítimas de violência física de qualquer autor e local; o Sinan cobre violência física interpessoal notificada (definições próximas, não idênticas).
-Rodar: /opt/homebrew/bin/python3.14 -I data/pns/pns_c05_razao_direta.py   Saídas: data/pns/c05_razao_direta.md e c05_razao_direta.csv"""
+Rodar: python3 -I data/pns/pns_c05_razao_direta.py   Saídas: data/pns/c05_razao_direta.md e c05_razao_direta.csv"""
 import os as _os
 import pathlib as _pl
 

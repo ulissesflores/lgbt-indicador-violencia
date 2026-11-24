@@ -4,7 +4,7 @@ Placebo pré-fixado: T = 2015, 2018, 2022. Mudança de nível "coincide com a tr
 Séries: data/sim/asr_brasil.csv (Brasil e 4 grupos sexo x raça; agressão e agressão+indet); arma de fogo (agressão, arma == 1) GERADA aqui com as funções de
 data/sim/padroniza_idade.py importadas sem alteração; razão indet/(agressão+indet) Brasil em p.p. das contagens brutas de data/sim/sim_agressoes_agregado.csv.
 Portas (abortam): recalcular com padroniza_idade as taxas de agressão e agressão+indet dos 5 grupos e bater asr_brasil.csv (0,005); contagem nacional de arma = soma das UFs no Atlas.
-Rodar DEPOIS de c09_d2_painel.py: /opt/homebrew/bin/python3.14 -I c09_d1_its.py
+Rodar DEPOIS de c09_d2_painel.py: python3 -I c09_d1_its.py
 Saídas: c09_d1_resultados.md, c09_d1_resultados.csv e c09_resultados.md (= cabeçalho + c09_d2_resultados.md + c09_d1_resultados.md)."""
 import os as _os
 import pathlib as _pl

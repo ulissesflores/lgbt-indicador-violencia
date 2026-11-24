@@ -2,7 +2,7 @@
 (a) Série nacional 2000-2024 (n=25): log GGB ~ log homicídios SIM (+ internet % ITU/Banco Mundial), níveis com Newey-West e primeiras diferenças com bootstrap de blocos.
 (b) Painel UF (2021, 2023, 2024 = os únicos anos com tabela completa por UF nos relatórios do GGB lidos; 2022 tem só 135 de 256; 2017-2020 só rankings parciais) x
     % de domicílios com internet (PNAD Contínua TIC, SIDRA 7307; 2020 não existe): Poisson com EF de UF e ano, permutação de trajetórias entre UFs.
-Semente fixa. Rodar: /opt/homebrew/bin/python3.14 -I scripts/h3_analise.py"""
+Semente fixa. Rodar: python3 -I scripts/h3_analise.py"""
 import os as _os
 import pathlib as _pl
 

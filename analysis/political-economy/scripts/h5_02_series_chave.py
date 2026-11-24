@@ -1,6 +1,6 @@
 """H5: séries de execução orçamentária (empenhado) das ações que sustentam (ou deveriam sustentar) a medição de violência/vitimização, em R$ nominais e em R$ de dez/2025 (IPCA SIDRA 1737, número-índice de dezembro de cada ano).
 CGU 2014-2025 e SIOP-RDF 2007-2013 NÃO se emendam (fontes e conceitos de valor diferentes); a série é cortada em 2013/2014 na tabela. Ações-chave escolhidas ANTES de olhar os valores pelo critério: IBGE (pesquisas/censos) + ações cujo nome é de informação/pesquisa sobre segurança, direitos humanos ou LGBT.
-Rodar: /opt/homebrew/bin/python3.14 -I scripts/h5_02_series_chave.py"""
+Rodar: python3 -I scripts/h5_02_series_chave.py"""
 import os as _os
 import pathlib as _pl
 

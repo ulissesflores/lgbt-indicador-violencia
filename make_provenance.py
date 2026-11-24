@@ -9,11 +9,11 @@ Uso:
                                              # (exit 1 se divergir)
 
 O que entra: todo arquivo versionável sob a raiz, exceto o próprio selo (output/provenance.json,
-output/hash-chain.md), BUILD-STATE.md, caches, .git, .work e .run, e o que o .gitignore exclui por
-regra (microdado bruto, dados nominais).
+output/hash-chain.md), arquivos de estado local, caches, .git, .work e .run, e o que o .gitignore
+exclui por regra (microdado bruto, dados nominais).
 O artigo NÃO entra: o repositório vem primeiro e o artigo deriva dele (cita o DOI e o chain_hash
 deste selo), então o selo não pode cobrir o próprio artigo. Ficam fora do selo o PDF publicado
-(``docs/paper/``) e a oficina local do artigo (``paper/``, fora do git). As figuras (``figures/``)
+(``docs/paper/``) e o texto-fonte do artigo (``paper/``, fora do git). As figuras (``figures/``)
 entram: são derivadas dos dados do repositório.
 Entra byte a byte: a conferência de que os scripts RECALCULAM os derivados (e batem com o commitado)
 é outra etapa (scripts/reproduzir.py), porque o recálculo pode diferir na última casa binária entre
@@ -53,9 +53,16 @@ EXCLUI_PREFIXOS = (
 RAW_LOCAIS = re.compile(
     r"(^raw/)|(^data/raw/)|(/dados/raw/)|(/ideology/raw/)|(/regimes-asia-africa/raw/)"
 )
+# dados nominais (nomes de vítimas e de acusados): a planilha da LiHS fica fora do selo mesmo que
+# alguém a ponha na pasta que o META cita; o .gitignore tem a mesma regra, e o teste
+# test_lihs_planilha_nominal_nao_e_distribuida falha se o arquivo aparecer no disco
+NOMINAIS = re.compile(
+    r"(^analysis/counterpoint/dados/[^/]+\.csv$)|((^|/)lihs-checagem-ggb2016[^/]*\.csv$)"
+)
 # Artigo: fora do selo (o artigo cita o selo, não o integra). docs/paper/: PDF publicado e seu
-# SHA256SUMS.txt; paper/: oficina local do artigo, fora do git
-EXCLUI_PAPER_DIRS = ("paper/", "docs/paper/")
+# SHA256SUMS.txt; paper/: texto-fonte do artigo, fora do git; runs/: registro da execução
+# selada (scripts/registra_run.py), que grava o próprio chain_hash (dentro do selo seria circular)
+EXCLUI_PAPER_DIRS = ("paper/", "docs/paper/", "runs/")
 EXCLUI_PAPER_ARQ: set[str] = set()
 EXCLUI_ARQ = {"BUILD-STATE.md", ".DS_Store", "output/provenance.json", "output/hash-chain.md"}
 SOMAS = "manifest/SHA256SUMS.txt"
@@ -75,7 +82,7 @@ def excluido(rel):
     Returns
     -------
     bool
-        True se o arquivo não é distribuído (cache, bruto, artigo, o próprio selo).
+        True se o arquivo não é distribuído (cache, bruto, dado nominal, artigo, o próprio selo).
     """
     partes = rel.split("/")
     return bool(
@@ -87,6 +94,7 @@ def excluido(rel):
         or rel.endswith((".pyc", ".dbc", ".dbf"))
         or rel.startswith(EXCLUI_PREFIXOS)
         or RAW_LOCAIS.search(rel)
+        or NOMINAIS.search(rel)
     )
 
 

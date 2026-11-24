@@ -13,7 +13,7 @@ guarda o titulo-conclusao, o subtitulo, o texto "Como ler", os termos e a fonte 
 chaves de leitura (rotulos, anotacoes, legendas de cor, titulos de painel). Cores: dicionario
 unico `PALETA` com nome semantico. Azul e laranja SO significam LGB+ e heterossexuais; estatistica (razao
 bruta/ajustada, cenarios, estimativas) usa roxo/cinza-escuro e a FORMA do marcador (vazado = bruta, cheio =
-ajustada); sexo usa verde-azulado e dourado; veredito, prioridade e fonte tem escalas proprias.
+ajustada); sexo usa verde-azulado e dourado; veredito e fonte tem escalas proprias.
 
 Claim-map (figura -> afirmacao do paper -> arquivo-fonte em `sources/public/`):
   fig1  violencia fisica/sexual/qualquer LGB+ x hetero e razao                 -> seguro_pns2019.csv/.md
@@ -27,7 +27,6 @@ Claim-map (figura -> afirmacao do paper -> arquivo-fonte em `sources/public/`):
   fig9  efeitos que o painel de governadores exclui (IC95%)                     -> c02_indet_resultados.csv
   fig10 tres incidencias, mesma serie de BOs (783 -> 3.481)                     -> sim_identificabilidade_resumo.json
   fig11 quatro frases no Parlamento e fonte primaria (1/49 literal; 0/49 sens.)             -> contagens.csv, r7_parlamento_sensibilidade.csv
-  fig12 33 clusters da revisao hostil por lado e decisao                        -> TRIAGEM.csv
   fig13 PNS x Sinan: parcela LGB+ entre vitimas de violencia fisica             -> triangulacao_pns_sinan.md/.csv, c05_razao_direta.md, seguro_pns2019.md
   fig14 Sinan x Anuario por UF: concordancia some ao descontar o tamanho        -> concordancia_v2.csv, serie_campo55_uf_ano.csv, anuario_lgbtfobia_uf_ano_v2.csv, sidra_9514.json
   fig15 ideologia do governador x taxa de agressao (351 UF-anos), residuos      -> painel_uf_ano_tse_brc.csv, c02_indet_resultados.csv
@@ -40,7 +39,7 @@ Claim-map (figura -> afirmacao do paper -> arquivo-fonte em `sources/public/`):
   fig22 taxa nacional por governo (exposicao, sem atribuicao)                   -> c10_e1_federal.csv, c10_e1_serie_longo.csv
   fig23 67 trocas de governador, excesso relativo ao Brasil, referencia sem troca -> c10_e2_trocas_longo.csv, c10_e2_resumo.csv
   fig24 O caminho do dado (esquema das fontes)                                    -> seguro_pns2019.csv, serie_campo55_uf_ano.csv, anuario..., serie_ggb_vs_cobertura.csv
-  fig25 mapa da evidencia internacional de mortalidade                            -> estudos_mortalidade.tsv (L-SECAO-3-3-PROPOSTA.md)
+  fig25 mapa da evidencia internacional de mortalidade                            -> estudos_mortalidade.tsv (estudos_mortalidade_origem.md)
   fig26 verificabilidade da lista do GGB de 2019 (160 -> 50)                     -> ggb_validacao_resumo.json
   fig27 curva de hipoteses da cobertura do GGB                                    -> c08_numeradores.csv
   fig28 Disque 100: modulo LGBT, canal inteiro e quebras de serie (2011-2026)        -> d100_serie_anual.csv
@@ -48,7 +47,7 @@ Claim-map (figura -> afirmacao do paper -> arquivo-fonte em `sources/public/`):
 Saidas deterministicas (sem data nos metadados, sal fixo no SVG): rodar duas vezes da os mesmos bytes;
 `SHA256SUMS` lista todos os arquivos gerados.
 
-Uso: /opt/homebrew/bin/python3.14 -I make_figures.py   (matplotlib 3.10, numpy)
+Uso: python3 -I make_figures.py   (matplotlib 3.10, numpy)
 """
 
 from __future__ import annotations
@@ -86,8 +85,6 @@ PALETA = {
     # veredito
     "ok": "#1b8f66", "ok_bg": "#e3f5ee", "parcial": "#9a6a00", "parcial_bg": "#fbf0d4",
     "nao": "#b03a6e", "nao_bg": "#f8e6ee", "nt": "#4b4a46", "nt_bg": "#e4e3df", "sv": "#8b8a85", "sv_bg": "#f7f7f5",
-    # prioridade (fig12)
-    "p1": "#0f5e5a", "p2": "#6fc1b8", "p3": "#dcf1ee",
     # fontes de dado (fig13, fig14, fig16, fig18, fig19)
     "fonte_a": "#6b3fa0", "fonte_b": "#1b8f8a",
     # tipografia e fundo
@@ -418,12 +415,12 @@ def figura3() -> None:
                                                           "connectionstyle": "arc3,rad=0.15"})
 
     c03 = ler_c03()
-    lado = {"esquerda->direita": "deslocamento para a direita", "direita->esquerda": "deslocamento para a esquerda"}  # sinal do escore, não troca de bloco (AST-03, r5)
+    lado = {"esquerda->direita": "deslocamento para a direita", "direita->esquerda": "deslocamento para a esquerda"}  # sinal do escore, não troca de bloco
     jan = {"estrito": "janela completa", "truncado": "janela curta"}
     rot_ev, pts, lo, hi = [], [], [], []
     for r in c03:
         p = float(r["p_antecipacoes"])
-        aviso = f"já mudava antes (p = {br(p, 3)})" if p < 0.05 else f"mudança anterior não detectada (p = {br(p, 2)})"  # não significância não prova ausência (AST-R2-09)
+        aviso = f"já mudava antes (p = {br(p, 3)})" if p < 0.05 else f"mudança anterior não detectada (p = {br(p, 2)})"  # não significância não prova ausência
         rot_ev.append(f"{lado[r['direcao']]}\n{jan[r['desenho']]}, {r['n_eventos']} trocas\n{aviso}")
         m, l_, h_ = (100 * (math.exp(float(r[k])) - 1) for k in ("media_pos", "media_pos_lo", "media_pos_hi"))
         pts.append(m), lo.append(m - l_), hi.append(h_ - m)
@@ -796,25 +793,6 @@ def figura11() -> None:
     salvar(fig, "fig11_circulacao_parlamento")
 
 
-# ---------------------------------------------------------------- Figura 12: escrutinio dos dois lados
-FLANCO_LADO = {
-    "DIREITA": "Direita", "DIREITA+METODOLÓGICO": "Direita",
-    "ESQUERDA": "Esquerda", "ESQUERDA+METODOLÓGICO": "Esquerda",
-    "AMBAS": "Ambas", "AMBAS (DIREITA no enquadramento; pares na independência)": "Ambas",
-    "METODOLÓGICO": "Metodológico",
-}
-LADOS = ["Direita", "Esquerda", "Ambas", "Metodológico"]
-DECISOES = [("ACEITO-CORRIGIR", "Aceito e\ncorrigido", 4), ("PARCIAL", "Aceito em\nparte", 3), ("VERIFICAR-ANALISE", "Verificar com\nanálise nova", 3),
-            ("ACEITO-LIMITAÇÃO", "Aceito como\nlimitação", 1), ("REJEITADO", "Rejeitado", 1)]
-PRIOR_COR = {"P1": (PALETA["p1"], "white"), "P2": (PALETA["p2"], INK), "P3": (PALETA["p3"], INK)}
-# os 10 clusters mais perigosos da TRIAGEM.md (secao 2), em ordem de risco, com nome em linguagem comum
-PERIGOSOS = [("C16", "Cuba: a perseguição estava mal provada"), ("C20", "“Não existe” é falso: saltava de dado para motivo"),
-             ("C17", "Governos do Brasil: busca desigual entre os lados"), ("C06", "Contagem do GGB: “piso” contradizia o próprio texto"),
-             ("C01", "Painel: coeficiente nulo lido como “nenhum efeito”"), ("C14", "Mortalidade: resumo apagava excessos medidos"),
-             ("C04", "PNS x Sinan: “independentes” e “passa” fortes demais"), ("C21", "“País que mais mata”: sem comparação entre países"),
-             ("C12", "Identificabilidade: “mesmo suporte” mal formulado"), ("C19", "“Nunca”, “ninguém”, “primeira vez” sem busca declarada")]
-
-
 # ---------------------------------------------------------------- Figura 13: PNS x Sinan
 def ler_triangulacao() -> dict:
     """Parcela LGB+ entre vitimas adultas de violencia fisica: PNS (direto e Monte Carlo) e Sinan (pior e melhor caso)."""
@@ -1037,7 +1015,7 @@ def figura17() -> None:
     bars = ax.barh(y, [n / 1000 for _, n, _, _ in linhas], height=0.58, color=[c for *_, c in linhas])
     for (rot, n, mde, c), yy in zip(linhas, y):
         ax.text(n / 1000 + 6, yy + 0.08, f"{miles(n)} adultos", va="bottom", fontsize=MIN_PT + 0.5, color=INK, fontweight="bold")
-        # o cálculo só procura aumento relativo, com 80% de poder (AST-06)
+        # o cálculo só procura aumento relativo, com 80% de poder
         ax.text(n / 1000 + 6, yy - 0.04, f"80% de poder para aumento de {br(100 * mde, 1)}% ou mais", va="top", fontsize=MIN_PT, color=INK2)
     ax.set_yticks(y, [r for r, *_ in linhas], fontsize=MIN_PT + 0.5)
     ax.set_xlim(0, 520)
@@ -1216,7 +1194,7 @@ def figura20() -> None:
     b.legend(frameon=False, fontsize=MIN_PT, loc="upper center", bbox_to_anchor=(0.5, -0.17))
     seta(b, f"quebra em 2018:\nqueda de {br(abs(d1[2019]['placebo_pct']))}%;\ndepende da data", (d1[2019]["placebo_pct_hi"] + 1.0, y[3]), (6, y[3]), va="center", ha="left")
     b.text(1.03, 1.03, "variação [IC95%]", transform=b.transAxes, fontsize=MIN_PT + 0.5, fontweight="bold", color=INK, va="bottom")
-    # sensibilidade à data, com a série inteira, e não estimativa anterior à posse (AST-R2-01)
+    # sensibilidade à data, com a série inteira, e não estimativa anterior à posse
     b.set_title("(b) Cada troca x a mesma conta com a quebra um ano antes", loc="left", fontsize=9.5, fontweight="bold", color=INK, x=-0.45)
     VALORES["fig20"] = {"anos": anos, "agressao": [float(v) for v in la.get_ydata()], "agressao_indet": [float(v) for v in li.get_ydata()],
                         "quebras": [t for t, *_ in linhas], "tipos": [x[1] for x in linhas], "pontos": pts, "ic": ics,
@@ -1229,7 +1207,7 @@ def figura20() -> None:
             "a queda de 2019 é distinguível de zero, mas a conta com a quebra em 2018 também cai, e a taxa já caía de 2017 para 2018, por isso a queda não é atribuível à troca; 2016 e 2023 não se distinguem de zero, com poder baixo.",
             f"nível = salto da taxa no ano da troca · quebra um ano antes = a mesma conta com as datas deslocadas, ajustada à série inteira · IC95% = faixa de incerteza · efeito mínimo detectável = menor efeito que a análise veria com 80% de chance · "
             f"só 15 pontos (2010-2024) e a análise é descritiva, não causal · somando as mortes de causa indeterminada, a queda de 2019 é {br(ai['2019'])}% · o óbito não registra orientação sexual: nada aqui é sobre violência contra LGBT+",
-            "figures/fontes/c09_d1_resultados.csv e asr_brasil.csv (origens research-2026-10-24-presidencia/ e data/sim/); RELATORIO-C09.md; pré-registro PREREGISTRO-C09.")
+            "figures/fontes/c09_d1_resultados.csv e asr_brasil.csv (origens data/presidencia/ e data/sim/); RELATORIO-C09.md; pré-registro PREREGISTRO-C09.")
     salvar(fig, "fig20_serie_nacional_trocas")
 
 
@@ -1297,7 +1275,7 @@ def figura21() -> None:
             "interação = produto do escore de ideologia do governador (0 a 10) pelo do presidente: mede se o efeito de um depende do outro; “distância entre governador e presidente” e “mesmo partido” são variações separadas · o efeito do presidente em si não é identificável: o efeito de ano o absorve, só a interação aparece · "
             "IC95% = faixa de incerteza (erro-padrão agrupado por estado) · efeito mínimo detectável = menor efeito que a análise veria com 80% de chance · 27 estados e 3 trocas de presidente · "
             "a razão de óbitos indeterminados (teste de falsificação, em pontos percentuais, 5 estimativas) está na tabela do relatório, não nesta figura · o óbito não registra orientação sexual",
-            "figures/fontes/c09_d2_resultados.csv e RELATORIO-C09.md (origem research-2026-10-24-presidencia/); pré-registro PREREGISTRO-C09 gravado antes dos desfechos.")
+            "figures/fontes/c09_d2_resultados.csv e RELATORIO-C09.md (origem data/presidencia/); pré-registro PREREGISTRO-C09 gravado antes dos desfechos.")
     salvar(fig, "fig21_alinhamento_governador_presidente")
 
 
@@ -1393,7 +1371,7 @@ def figura22() -> None:
             "taxa padronizada por idade = taxa recalculada como se a população tivesse sempre a mesma distribuição de idades · causa indeterminada = óbito cuja causa não foi definida (CID-10 Y10-Y34); "
             "sua fração sobe de 14% (2015) para 30% (2024), então a queda somando-as é sempre menor · intervalo de contagem = só a incerteza do número de mortes, não mede tendência nem causa · "
             "2016 é dividido entre Dilma (até 11/05) e Temer · Lula está em curso (2 de 4 anos; denominadores de 2023-24 estimados) · o governo Lula de 2007-10 não aparece: a série usada começa em 2010, ano do Censo que ancora os denominadores · o óbito não registra orientação sexual",
-            "figures/fontes/c10_e1_federal.csv e c10_e1_serie_longo.csv, RELATORIO-EXPOSICAO.md (origem research-2026-10-24-exposicao/); pré-registro PREREGISTRO-C10 gravado antes dos desfechos.")
+            "figures/fontes/c10_e1_federal.csv e c10_e1_serie_longo.csv, RELATORIO-EXPOSICAO.md (origem data/exposicao/); pré-registro PREREGISTRO-C10 gravado antes dos desfechos.")
     salvar(fig, "fig22_taxa_nacional_por_governo")
 
 
@@ -1474,7 +1452,7 @@ def figura23() -> None:
             "troca = mudança do partido do governador, de eleição ou não · direção = lado do escore de ideologia do partido antes e depois (esquerda, direita, centro; “mesmo bloco” = os dois do mesmo lado) · "
             "taxa relativa ao Brasil = variação do estado menos a variação do país no mesmo período, para tirar a tendência nacional · estados sem troca = referência por sorteio repetido (9.999 vezes), pareado por ano · "
             "causa indeterminada = óbito sem causa definida (CID-10 Y10-Y34), cuja fração cresceu desde 2018 · não é uma comparação com contrafactual: COVID, armas, facções e o ciclo eleitoral coincidem com as trocas · o óbito não registra orientação sexual",
-            "figures/fontes/c10_e2_trocas_longo.csv e c10_e2_resumo.csv, RELATORIO-EXPOSICAO.md (origem research-2026-10-24-exposicao/); pré-registro PREREGISTRO-C10.")
+            "figures/fontes/c10_e2_trocas_longo.csv e c10_e2_resumo.csv, RELATORIO-EXPOSICAO.md (origem data/exposicao/); pré-registro PREREGISTRO-C10.")
     salvar(fig, "fig23_trocas_de_governador_exposicao")
 
 
@@ -1680,7 +1658,7 @@ def figura25() -> None:
             "razão de taxas = quantas vezes a mortalidade de um grupo é maior que a do outro, depois de igualar as idades · LGB+ = lésbicas, gays, bissexuais e outras orientações · fator de aceleração = menor que 1 quer dizer que o tempo até o óbito é mais curto · "
             "causas violentas = homicídio, suicídio e intenção indeterminada, juntos · Sinan = ficha de notificação de violência de serviço de saúde · SIM = base de atestados de óbito · "
             "estudos descritivos: nenhum deles permite dizer que a orientação sexual causa a diferença",
-            "figures/fontes/estudos_mortalidade.tsv, com números literais de L-SECAO-3-3-PROPOSTA.md (frente L, tabela “De onde vem cada número”).")
+            "figures/fontes/estudos_mortalidade.tsv, com trechos literais da tabela de origem em estudos_mortalidade_origem.md.")
     salvar(fig, "fig25_mortalidade_internacional")
 
 

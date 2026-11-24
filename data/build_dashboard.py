@@ -55,7 +55,7 @@ def ler(path):
 
 COMANDOS = {  # equivalentes de shell para as contagens simples (as demais: o script, funcao calcular())
     "scripts": f"find {PROJ} -name '*.py' -not -path '*/__pycache__/*' -not -path '{PROJ}/sources/public/*' | wc -l",
-    "revisores": f"ls {PROJ}/analysis/robustness/revisao_*.md | wc -l",
+    "revisores": f"ls {PROJ}/analysis/robustness/revisao-interna-*.md | wc -l",
     "ledgers": f"find {PROJ} -name sources.jsonl | wc -l",
     "registros_brutos": f"find {PROJ} -name sources.jsonl -exec cat {{}} + | grep -c .",
     "dias": "python3 -c \"import datetime as d; print((d.date(2026,10,23)-d.date(2026,10,10)).days+1)\"",
@@ -584,7 +584,7 @@ def calcular():
     # ---------- KPIs
     scripts = contar_scripts()
     n_pdf, n_pdf_unicos = contar_pdfs()
-    revisores = sorted(glob.glob(P("analysis/robustness/revisao_*.md")))
+    revisores = sorted(glob.glob(P("analysis/robustness/revisao-interna-*.md")))
     origens = sorted({r["origem"] for r in regs})
     analises = contar_analises()
     with ler(P("data/sinan/serie_campo55_uf_ano.csv")) as fh:
@@ -611,7 +611,7 @@ def calcular():
     reg("dias", kp["dias"], [], f"(2026-10-23 - 2026-10-10) + 1 dias; datas do registro do projeto; ts dos ledgers entre {ts_min} e {ts_max}")
     reg("scripts", kp["scripts"], [], "find PROJ -name '*.py' (sem __pycache__ e sem sources/public/, que e material baixado)")
     NUM["scripts"]["origem"]["lista"] = scripts
-    reg("revisores", kp["revisores"], revisores, "ls escrutinio/revisao_*.md (agy, codex, grok, opus)")
+    reg("revisores", kp["revisores"], revisores, "ls escrutinio/revisao-interna-*.md (4 revisões internas)")
     reg("pdfs", kp["pdfs"], [], f"sha256 distintos de *.pdf em sources/public/ (exceto q1-textointegral/discurso); {n_pdf} arquivos no disco")
     reg("textos_integrais", kp["textos_integrais"], v["arquivos"], "DOIs com veredito != SEM_TEXTO_INTEGRAL em algum CSV de verificacao (inclui os sem linha no ledger)")
     reg("agentes", kp["agentes"], arqs, "valores distintos do campo origem dos ledgers (piso: so quem gravou fonte)")
@@ -638,7 +638,7 @@ LABELS_PT = {
     "kpi.fontes": "fontes únicas registradas", "kpi.fontes.nota": "{reg} linhas em {led} registros, sem repetição",
     "kpi.idiomas": "idiomas das fontes", "kpi.idiomas.nota": "pt e pt-BR somados",
     "kpi.scripts": "scripts em Python", "kpi.scripts.nota": "do projeto; fora do material baixado",
-    "kpi.revisores": "revisores hostis", "kpi.revisores.nota": "modelos de IA diferentes, cada um com uma revisão escrita",
+    "kpi.revisores": "revisão interna", "kpi.revisores.nota": "modelos de IA diferentes, cada um com uma revisão escrita",
     "kpi.pdfs": "PDFs arquivados", "kpi.pdfs.nota": "arquivos distintos (por hash)",
     "kpi.textos": "textos integrais lidos", "kpi.textos.nota": "artigos com DOI conferidos contra o dossiê; {sem} sem linha no registro de fontes",
     "kpi.agentes": "agentes que registraram fontes", "kpi.agentes.nota": "frentes de pesquisa distintas; é piso",
@@ -1277,7 +1277,7 @@ def gerar_spec(c, node_leg, par, ext, erros, conf_loc):
     A = L.append
     A("# DASHBOARD-SPEC: abertura do artigo LGBT-INDICADOR")
     A("")
-    A("Gerado por `dashboard/build_dashboard.py` (`/opt/homebrew/bin/python3.14 -I`, sem aleatoriedade, só leitura, SHA256SUMS ao lado). Números em `dashboard_dados.json`, com arquivo e comando de origem.")
+    A("Gerado por `dashboard/build_dashboard.py` (`python3 -I`, sem aleatoriedade, só leitura, SHA256SUMS ao lado). Números em `dashboard_dados.json`, com arquivo e comando de origem.")
     A("Reuso total: `CountryBarsChart` e `FunnelChart` do site; nenhum componente novo. Datasets em `lgbt-violencia.data.ts` (ids `lgbt-violencia-*`, sufixo `-en|-es|-it|-he`; textos em `LABELS`).")
     A("Insumos de texto: `labels.en.json`, `labels.es.json`, `labels.it.json`, `labels.he.json` (134 chaves cada, lidas pelo build; falta ou sobra de chave, ou {placeholder} diferente, derruba o build). Datas do período formatadas por locale com `Intl` no `.ts`.")
     A("")
@@ -1383,7 +1383,7 @@ def main():
     kf = [("fontes únicas registradas", k["fontes"], "ids únicos nos 17 registros de fontes (DOI em minúsculas; URL sem barra final)"),
           ("scripts .py", k["scripts"], "arquivos .py do projeto, fora de sources/public/ (material baixado) e de __pycache__"),
           ("idiomas", k["idiomas"], "códigos de idioma distintos das fontes únicas (pt e pt-BR somados)"),
-          ("revisores hostis", k["revisores"], "arquivos revisao_*.md em escrutinio/"),
+          ("revisão interna", k["revisores"], "arquivos de revisão interna"),
           ("dias", k["dias"], f"de {DATA_INI.isoformat()} a {DATA_FIM.isoformat()}, inclusive"),
           ("PDFs arquivados", k["pdfs"], "PDFs distintos por hash em sources/public/"),
           ("textos integrais lidos", k["textos_integrais"], "DOIs com texto integral lido nos CSVs de verificação"),

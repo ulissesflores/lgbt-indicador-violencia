@@ -1,9 +1,9 @@
 """S15. Terceira leitura, cega, dos 6 casos em que os codificadores A (Claude Sonnet 5.5) e B (Gemini 3.8 Flash)
-discordaram (kappa.json, "desacordos"); pedido do autor em 2026-11-01 (parecer AST-01 da r5: efeito dos desacordos
-sobre as contagens).
+discordaram (kappa.json, "desacordos"); revisão metodológica de 2026-11-01: efeito dos desacordos sobre as
+contagens.
 
-Regra fixada ANTES de rodar: o codificador C é de uma terceira família (GPT-6 Astra, pela assinatura do ChatGPT,
-`codex exec` sem internet nem arquivos); recebe o mesmo codebook e o mesmo cabeçalho do pacote do codificador B, com o
+Regra fixada ANTES de rodar: o codificador C é de uma terceira família (GPT-6 Astra, via `codex exec` sem internet
+nem arquivos; requer o CLI codex autenticado pelo usuário); recebe o mesmo codebook e o mesmo cabeçalho do pacote do codificador B, com o
 nome da vítima trocado por [VITIMA], mas o TEXTO INTEIRO da matéria (B recebeu uma janela de 3.500 caracteres) e sem ver
 os códigos de A nem de B. Código final de cada variável em desacordo = o que dois dos três codificadores marcaram; se os
 três divergirem, fica o de A (a codificação publicada) e o caso é listado. O autor confere a tabela antes de as
@@ -29,7 +29,7 @@ from pathlib import Path
 
 ROOT = Path(REPO_ROOT); RAW = ROOT / "sources/public/p3-ggb/_raw"
 F3 = ROOT / "analysis/ggb-audit"; D = F3 / "dados"
-CODEX = "/opt/homebrew/bin/codex"
+CODEX = os.environ.get("CODEX_BIN", "codex")
 VARS = ["corresp", "morte", "tipo", "lgbt", "base", "motivo", "desfecho"]
 
 
@@ -60,12 +60,11 @@ if "--so-pacote" in sys.argv:
     raise SystemExit(0)
 
 t0 = time.time()
-with tempfile.TemporaryDirectory() as vazio, tempfile.TemporaryDirectory() as home:
-    Path(home, "auth.json").symlink_to(Path.home() / ".codex/auth.json")
-    out = Path(home, "resp.txt")
+with tempfile.TemporaryDirectory() as vazio:
+    out = Path(vazio, "resp.txt")
     r = subprocess.run([CODEX, "exec", "--skip-git-repo-check", "-s", "read-only", "-m", "gpt-6-astra", "-c", "model_reasoning_effort=high",
                         "--output-last-message", str(out), "-"], input=prompt, capture_output=True, text=True, timeout=3600,
-                       cwd=vazio, env={**_os.environ, "CODEX_HOME": home})
+                       cwd=vazio, env=dict(_os.environ))
     resp = out.read_text() if out.exists() else ""
 m = re.search(r"^model: (\S+)", r.stderr + r.stdout, re.M)
 (RAW / "saida_C.txt").write_text(resp)

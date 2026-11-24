@@ -16,7 +16,7 @@ em 2026-10-20, sem IC; esta versão fixa as especificações abaixo e reporta TO
   NA (UF sem dado no Anuário) sai da análise; nunca vira zero (exceto em S3).
 Entradas: data/sinan/serie_campo55_uf_ano.csv; data/anuario/anuario_lgbtfobia_uf_ano_v2.csv; sources/public/p2-f8-dados-uf/tabnet/raw/sidra_9514.json (Censo 2022)
           e sidra_6579.json (estimativas). Saídas: data/concordancia/concordancia_v2.{md,csv} e fig-concordancia_v2.png.
-Rodar: /opt/homebrew/bin/python3.14 -I data/concordancia/concordancia_v2.py   (semente fixa)
+Rodar: python3 -I data/concordancia/concordancia_v2.py   (semente fixa)
 """
 import os as _os
 import pathlib as _pl

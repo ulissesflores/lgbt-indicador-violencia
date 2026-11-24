@@ -1,6 +1,6 @@
 # Frente C - Por que quase não há ciência brasileira revisada por pares com ponto de vista conservador/opositor sobre dados de violência LGBT?
 
-Data: 2026-10-30 · Playbook: paper-deep-dive (modo deep) · Idioma: PT-BR
+Data: 2026-10-30 · Idioma: PT-BR
 Convenção: FATO DOCUMENTADO = fonte aberta por mim + número. HIPÓTESE = mecanismo proposto, com autor. "não aberto" = só metadados/sinopse/resenha lida.
 Tag de fonte: [SOURCE: paper-deep-dive:<canal>:<chave>] (DOI > URL).
 
@@ -173,7 +173,7 @@ OpenAlex (/works?search=, campos título+abstract+fulltext conforme API; data da
 
 Crossref (query.bibliographic, rows=3): Duarte; Inbar & Lammers; Honeycutt & Freberg; Shields & Dunn; Gross; Clark & Winegard; Langbert (7 consultas, DOIs resolvidos). Crossref listagem BBS 2015 "political diversity social psychology bias" (rows=40): 40 itens, 21 comentários da série Duarte identificados. Crossref lookup por DOI (autores/anos) em ~16 DOIs.
 PubMed (efetch): PMID 26168506 (Inbar & Lammers), 25036715 (Duarte et al.).
-Web (WebSearch, mecanismo US-only): 7 consultas PT/EN sobre professores brasileiros, cientistas políticos, Datafolha, religião de cientistas, Langbert, Gross & Fosse, Brasil + Bolsonaro; WebFetch: FIPE (PDF -> pdftotext), Dados/SciELO, UEL Antíteses, Inside Higher Ed. 403/404/redirect: nas.org, link.springer (2x), DOAJ/ABC.
+Web (buscador com índice dos EUA): 7 consultas PT/EN sobre professores brasileiros, cientistas políticos, Datafolha, religião de cientistas, Langbert, Gross & Fosse, Brasil + Bolsonaro; WebFetch: FIPE (PDF -> pdftotext), Dados/SciELO, UEL Antíteses, Inside Higher Ed. 403/404/redirect: nas.org, link.springer (2x), DOAJ/ABC.
 
 ## Canais pulados
 
@@ -183,4 +183,4 @@ Web (WebSearch, mecanismo US-only): 7 consultas PT/EN sobre professores brasilei
 - Acesso bloqueado: nas.org (403; Langbert foi verificado depois pela cópia em PDF), Springer (404/redirect de login), DOAJ (403). Texto integral de Duarte et al., Inbar & Lammers, Gross, Gross & Fosse, Shields & Dunn, Yancey e Rothman et al. NÃO aberto (somente abstract/metadados/resenha/fonte secundária).
 - Anais da Academia Brasileira de Ciências (2012) sobre religiosidade de cientistas, citado por resultado de busca: não obtido.
 
-ledger: 45 registered, 0 rejected by schema (por esta frente; os 43 iniciais + gwern/Langbert + HxA). O sources.jsonl em analysis/counterpoint/sources.jsonl é COMPARTILHADO com frentes irmãs que escreveram no mesmo OUT_DIR (102 linhas no total ao fim, nenhuma duplicada). O validador exigia o módulo jsonschema, ausente em todos os python3 do sistema; usei um venv descartável no scratchpad da sessão para rodar o emit_sources.py oficial, sem escrever o ledger à mão.
+ledger: 45 registered, 0 rejected by schema (por esta frente; os 43 iniciais + gwern/Langbert + HxA). O sources.jsonl em analysis/counterpoint/sources.jsonl é COMPARTILHADO com frentes irmãs que escreveram no mesmo OUT_DIR (102 linhas no total ao fim, nenhuma duplicada). O validador exigia o módulo jsonschema, ausente em todos os python3 do sistema; usei um venv descartável em pasta temporária para rodar o emit_sources.py oficial, sem escrever o ledger à mão.

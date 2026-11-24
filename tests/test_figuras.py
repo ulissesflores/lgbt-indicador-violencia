@@ -10,7 +10,7 @@ Tambem confere: (i) sha256 de cada copia contra `sources/public/SOURCES.tsv`; (i
 arquivo de origem na raiz do repositorio (data/...) e o extrato contra data/dashboard_dados.publico.json; (iii) SHA256SUMS das
 figuras; (iv) os numeros que o texto do paper cita para cada figura.
 
-Uso: /opt/homebrew/bin/python3.14 -I tests/test_figuras.py   (ou pytest)
+Uso: python3 -I tests/test_figuras.py   (ou pytest)
 """
 
 from __future__ import annotations
@@ -72,7 +72,6 @@ def test_copias_iguais_a_origem_quando_disponivel():
              "estatisticas_amostra.txt": "analysis/discourse/midia/_estatisticas_amostra.txt",
              "baseline_resumo_C27.json": "analysis/robustness/simetria/baseline_resumo_C27.json",
              "fisher_C27.txt": "analysis/robustness/simetria/fisher_C27.txt",
-             "TRIAGEM.csv": "analysis/robustness/TRIAGEM.csv",
              "triangulacao_pns_sinan.md": "data/sinan/triangulacao_pns_sinan.md", "triangulacao_pns_sinan.csv": "data/sinan/triangulacao_pns_sinan.csv",
              "c05_razao_direta.md": "data/pns/c05_razao_direta.md", "concordancia_v2.csv": "data/concordancia/concordancia_v2.csv",
              "serie_campo55_uf_ano.csv": "data/sinan/serie_campo55_uf_ano.csv",
@@ -531,24 +530,25 @@ def _pula(msg: str) -> None:
 
 def _sha_sem_home(p: Path) -> str:
     """sha256 do texto com o prefixo de home dos caminhos removido (as copias em sources/public/ nao carregam caminho de home)."""
-    return hashlib.sha256(p.read_bytes().replace(b"/" + b"Users" + b"/ulissesflores/", b"")).hexdigest()
+    dados = re.sub(rb"/[U]sers/[^/]+/", b"", p.read_bytes())  # [U]: sem o literal de home no código
+    # a pasta de trabalho do autor virou <pasta-de-trabalho>/ nas copias (privacidade, v1.3.0)
+    dados = re.sub(rb"[^`\s]*lgbt-indicador-violencia/(?=research-)", b"<pasta-de-trabalho>/", dados)
+    return hashlib.sha256(dados).hexdigest()
 
 
-def _origem(env: str, pasta: str) -> Path:
-    """Pasta de trabalho fora do repo: variavel de ambiente `env` ou ~/m4/pesquisas/lgbt-indicador-violencia/<pasta> (home deduzida da posicao do repo)."""
-    if os.environ.get(env):
-        return Path(os.environ[env])
-    return PRIVADO.parents[1] / "m4" / "pesquisas" / "lgbt-indicador-violencia" / pasta
+def _origem(env: str, pasta: str) -> Path | None:
+    """Pasta de trabalho `pasta` fora do repo, so pela variavel de ambiente `env` (sem ela, None e o teste e pulado)."""
+    return Path(os.environ[env]) if os.environ.get(env) else None
 
 
-C09_ORIGEM = _origem("LGBT_C09_ORIGEM", "research-2026-10-24-presidencia")
-C10_ORIGEM = _origem("LGBT_C10_ORIGEM", "research-2026-10-24-exposicao")
+C09_ORIGEM = _origem("LGBT_C09_ORIGEM", "c09")
+C10_ORIGEM = _origem("LGBT_C10_ORIGEM", "c10")
 
 
 def test_c09_copias_iguais_a_origem_quando_disponivel():
     """As tres copias da C09 em sources/public/ batem com a pasta de trabalho (se ela existir nesta maquina)."""
-    if not C09_ORIGEM.exists():
-        _pula(f"pasta de origem da C09 ausente (defina LGBT_C09_ORIGEM): {C09_ORIGEM.name}")
+    if C09_ORIGEM is None or not C09_ORIGEM.exists():
+        _pula(f"pasta de origem da C09 ausente (defina LGBT_C09_ORIGEM): {C09_ORIGEM}")
     for a in ("c09_d1_resultados.csv", "c09_d2_resultados.csv", "RELATORIO-C09.md"):
         assert _sha_sem_home(FONTES / a) == _sha_sem_home(C09_ORIGEM / a), a
 
@@ -607,8 +607,8 @@ def test_fig21_alinhamento_governador_presidente():
 # ---------------------------------------------------------------- Figuras 22 e 23 (C10: exposicao por governo)
 def test_c10_copias_iguais_a_origem_quando_disponivel():
     """As cinco copias da C10 em sources/public/ batem com a pasta de trabalho (pulado se ela nao existir nesta maquina)."""
-    if not C10_ORIGEM.exists():
-        _pula(f"pasta de origem da C10 ausente (defina LGBT_C10_ORIGEM): {C10_ORIGEM.name}")
+    if C10_ORIGEM is None or not C10_ORIGEM.exists():
+        _pula(f"pasta de origem da C10 ausente (defina LGBT_C10_ORIGEM): {C10_ORIGEM}")
     for a in ("c10_e1_federal.csv", "c10_e1_serie_longo.csv", "c10_e2_trocas_longo.csv", "c10_e2_resumo.csv", "RELATORIO-EXPOSICAO.md"):
         assert _sha_sem_home(FONTES / a) == _sha_sem_home(C10_ORIGEM / a), a
 
@@ -677,17 +677,6 @@ def test_fig23_trocas_de_governador_exposicao():
 
 
 # ---------------------------------------------------------------- Figuras 24 a 27 (guia de leitura, mortalidade, GGB)
-V03_ORIGEM = _origem("LGBT_V03_ORIGEM", "research-2026-10-24-v03")
-
-
-def test_v03_copias_iguais_a_origem_quando_disponivel():
-    """As copias da frente L em sources/public/ batem com a pasta de trabalho (pulado se ela nao existir nesta maquina)."""
-    if not V03_ORIGEM.exists():
-        _pula(f"pasta de origem da v0.3 ausente (defina LGBT_V03_ORIGEM): {V03_ORIGEM.name}")
-    for a in ("L-RELATORIO.md", "L-SECAO-3-3-PROPOSTA.md"):
-        assert _sha_sem_home(FONTES / a) == _sha_sem_home(V03_ORIGEM / a), a
-
-
 def _chk_fig24(v: dict) -> None:
     n = v["numeros"]
     p = {(r["bloco"], r["rotulo"]): r for r in _csv("seguro_pns2019.csv")}[("nivel", "física")]
@@ -710,9 +699,9 @@ def test_fig24_caminho_do_dado():
 
 def _chk_fig25(v: dict) -> None:
     E = {r["id"]: r for r in _csv("estudos_mortalidade.tsv", "\t")}
-    corpo = " ".join((FONTES / "L-SECAO-3-3-PROPOSTA.md").read_text(encoding="utf-8").split())
+    corpo = " ".join((FONTES / "estudos_mortalidade_origem.md").read_text(encoding="utf-8").split())
     for k, r in E.items():
-        assert " ".join(r["ancora_verbatim"].split()) in corpo, k                  # cada numero tem trecho literal da proposta da frente L
+        assert " ".join(r["ancora_verbatim"].split()) in corpo, k                  # cada numero tem trecho literal da tabela de origem
         assert "falso" not in r["ancora_verbatim"]
     P = v["paineis"]
     assert sorted(P) == sorted(["ONS 2026", "ONS 2025", "McKetta 2024", "Erlangsen 2023", "Luis 2026", "Zachry 2025", "McLellan 2026"])
@@ -732,7 +721,7 @@ def _chk_fig25(v: dict) -> None:
 
 
 def test_fig25_mortalidade_internacional():
-    """Fig. 25: 7 estudos, cada numero com trecho literal da proposta da frente L (ONS 1,31 [1,28-1,33]; 1,23 homens gays; Zachry 14/28/1; Luis 563/1.325...)."""
+    """Fig. 25: 7 estudos, cada numero com trecho literal da tabela de origem (ONS 1,31 [1,28-1,33]; 1,23 homens gays; Zachry 14/28/1; Luis 563/1.325...)."""
     _chk_fig25(_v()["fig25"])
 
 

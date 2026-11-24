@@ -1,6 +1,6 @@
 # F8-literatura: perseguição estatal, violência por viés, omissão do Estado e retórica (Brasil e comparados)
 
-Rodada 3, 2026-10-21. Frente F8-literatura + pergunta nº 1 do autor: "ninguém pode afirmar que há PERSEGUIÇÃO ... para matar gays? E que mesmo em governos extremos nunca houve isso no Brasil? Só pelo resumo não dá, tem que ser tudo Q1."
+Levantamento de 2026-10-21, frente F8-literatura. Pergunta do autor: pode-se afirmar que há perseguição para matar pessoas gays? E que, mesmo em governos extremos, isso nunca houve no Brasil? Critério: texto integral de periódico Q1, não só o resumo.
 Pasta: `analysis/literature/`. PDFs e XML em `sources/public/q1-textointegral/F8-literatura/` (ignorada pelo git).
 
 ## RESPOSTA em 15 linhas: o que pode e o que não pode ser afirmado, por nível

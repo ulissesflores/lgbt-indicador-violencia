@@ -1,6 +1,6 @@
 """H2 sensibilidade: o ESTADIC traz o TOTAL de delegacias especializadas da Polícia Civil por UF (ESEG5134 em 2019; sem tipo: inclui DEAM etc.), não delegacia de crime racial/LGBT.
 Proxy fraco, reportado como tal. Teste: Spearman entre nº de delegacias especializadas por milhão de habitantes e nº de UF-anos sem informação no Anuário; permutação 20000, semente fixa.
-Rodar: /opt/homebrew/bin/python3.14 -I scripts/h2_03_delegacias_proxy.py (depois de h2_02_analise.py)"""
+Rodar: python3 -I scripts/h2_03_delegacias_proxy.py (depois de h2_02_analise.py)"""
 import os as _os
 import pathlib as _pl
 

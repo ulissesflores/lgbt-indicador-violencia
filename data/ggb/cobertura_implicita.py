@@ -9,7 +9,7 @@ Método (declarado antes de rodar):
   3. Esperado E = soma(população LGB+ da célula x taxa da célula) x RR, com RR = 1 (mesmo risco dos pares), 2,82 (RP ajustada de violência física, PNS 2019; cenário, NÃO é razão de risco de morte) e 3,84 (bruta).
   4. Cobertura implícita = contagem GGB / E. IC: só pela prevalência (IC95% 1,73-2,07% da PNS, escalado linearmente); a incerteza da composição não entra.
 LIMITES: GGB inclui pessoas trans (a PNS não mede identidade de gênero) e menores; PNS autorrelato subestima LGB+ (cenários de prevalência 3% e 5% como sensibilidade, NÃO como fato); denominador 2023-24 extrapolado; GGB = mortes noticiadas (não só agressão); o pareamento é só por sexo, raça e idade (NÃO ajusta escolaridade, UF nem urbano/rural: homicídio se concentra em periferias e UFs específicas, então se LGB+ forem mais urbanos/escolarizados o esperado cai; o sentido do viés não foi medido).
-Rodar: /opt/homebrew/bin/python3.14 -I data/ggb/cobertura_implicita.py   Saídas: data/ggb/cobertura_implicita.md/.csv"""
+Rodar: python3 -I data/ggb/cobertura_implicita.py   Saídas: data/ggb/cobertura_implicita.md/.csv"""
 import os as _os
 import pathlib as _pl
 

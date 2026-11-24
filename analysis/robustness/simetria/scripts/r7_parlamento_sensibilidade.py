@@ -3,7 +3,7 @@ e a separação entre "fonte nomeada", "fonte primária" e "fonte capaz de suste
 Entradas: ../recontagem_x49_C27.csv (contagens por codificador), ../baseline_resumo_C27.json (linha de base: 60 falas da Câmara com estatística fora
 dos 4 temas, codificadas pelo SEGUNDO codificador, Grok) e ../SIMETRIA.md (regra literal do codebook: o relatório com nome e ano conta como primária -> 1/49).
 Fisher exato bicaudal = mesma função de fisher_C27.py (hipergeométrica; soma das probabilidades <= a observada).
-Saídas: ../r7_parlamento_sensibilidade.csv e .md.   Rodar: /opt/homebrew/bin/python3.14 -I r7_parlamento_sensibilidade.py
+Saídas: ../r7_parlamento_sensibilidade.csv e .md.   Rodar: python3 -I r7_parlamento_sensibilidade.py
 Limite: a linha de base foi codificada pelo segundo codificador; só "Grok x Grok" compara o mesmo codificador. "Fonte capaz de sustentar a afirmação"
 não é variável codificada (codificá-la seria recodificar): fica declarada como não medida."""
 import ast, csv, json

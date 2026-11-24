@@ -1,10 +1,10 @@
 """Emite no ledger sources.jsonl (SOMENTE via emit_sources.py) as fontes NOVAS usadas pela frente F5. sha256 = do arquivo local lido.
-Rodar: /opt/homebrew/bin/python3.14 -I scripts/emite_ledger_f5.py"""
+Rodar: python3 -I scripts/emite_ledger_f5.py"""
 import os as _os
 import pathlib as _pl
 
 REPO_ROOT = _os.environ.get("REPO_ROOT") or str(_pl.Path(__file__).resolve().parents[3])  # raiz configurável
-import hashlib, subprocess, os
+import hashlib, subprocess, os, sys
 P = REPO_ROOT; B = f"{P}/analysis/political-economy"
 E = _os.environ.get("EMIT_SOURCES", "emit_sources.py")
 H1 = f"{B}/dados/raw/h1_programas"; H5 = f"{B}/dados/raw/h5_docs"; ES = f"{B}/dados/raw/estadic"; Q = f"{P}/sources/public/q1-textointegral/F5"
@@ -35,6 +35,6 @@ L = [
 ]
 for url, i, tit, ano, idi, arq, canal in L:
     sha = hashlib.sha256(open(arq, "rb").read()).hexdigest() if arq and os.path.exists(arq) else None
-    cmd = ["/opt/homebrew/bin/python3.14", E, "--out", B, "--url", url, "--id", i, "--id-kind", "doi" if i.startswith("10.") else "url", "--acesso", "oa", "--idioma", idi, "--canal", canal, "--titulo", tit, "--ano", str(ano), "--origem", "rodada3-F5"]
+    cmd = [sys.executable, E, "--out", B, "--url", url, "--id", i, "--id-kind", "doi" if i.startswith("10.") else "url", "--acesso", "oa", "--idioma", idi, "--canal", canal, "--titulo", tit, "--ano", str(ano), "--origem", "rodada3-F5"]
     if sha: cmd += ["--sha256", sha]
     r = subprocess.run(cmd, capture_output=True, text=True); print("OK" if r.returncode == 0 else "ERRO", tit[:60], r.stderr[:150].strip())

@@ -1,7 +1,7 @@
-#!/opt/homebrew/bin/python3.14
+#!/usr/bin/env python3
 """Sensibilidade do TWFE do painel F8 a safra do escore de ideologia. NAO altera o painel: le os desfechos de data/painel/painel_uf_ano*.csv
 e as variantes de ideologia de impacto_painel_{wiki,tse}.csv (gerado por build_ideologia.py). TWFE copiado de data/painel/painel_f8.py (mesma funcao).
-Rodar: /opt/homebrew/bin/python3.14 -I scripts/sensibilidade_twfe.py"""
+Rodar: python3 -I scripts/sensibilidade_twfe.py"""
 import os as _os
 import pathlib as _pl
 

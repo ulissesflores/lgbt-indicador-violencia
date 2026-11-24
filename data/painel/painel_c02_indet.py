@@ -13,7 +13,7 @@ LIMITES: (1) o agregado só marca `arma` dentro de X85-Y09 (Y22-Y24 sem marca): 
   manipulação (capacidade de perícia, mudança de código, composição de mortes): rejeitar H0 não prova manipulação, e não rejeitar não prova ausência (reportado o viés máximo implícito do IC);
   (4) nenhum teste do 'estimado' do Atlas (série por UF-ano não está em disco); (5) 27 clusters: o IC b±1,96EP é o publicado (CR1 normal), mais curto que o de t(26); o wild p é a referência de inferência;
   (6) exploratório, NÃO causal; seis grupos x três colunas = muitas comparações: Holm declarado nos critérios.
-Rodar: /opt/homebrew/bin/python3.14 -I data/painel/painel_c02_indet.py   Saídas: data/painel/c02_indet_resultados.md e c02_indet_resultados.csv"""
+Rodar: python3 -I data/painel/painel_c02_indet.py   Saídas: data/painel/c02_indet_resultados.md e c02_indet_resultados.csv"""
 import os as _os
 import pathlib as _pl
 

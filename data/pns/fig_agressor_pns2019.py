@@ -3,11 +3,11 @@
 Painel a: dois anéis, um por grupo, com ÁREA proporcional ao risco total (14,70 contra 3,82 adultos agredidos por
 100); cada fatia é o risco por tipo de agressor, de modo que fatia de mesma área = mesmo risco nos dois grupos.
 Painel b: razão de risco LGB+/heterossexual AJUSTADA (mesmo ajuste da razão 2,82) por tipo de agressor, com intervalo de
-95% (eixo em escala log); revisão de 2026-10-30 (críticas GRO-01/AST-01: a razão bruta não tinha ajuste).
+95% (eixo em escala log); revisão de 2026-10-30 (a razão bruta não tinha ajuste).
 Patrão ou chefe (n muito pequeno), policial e outro vão juntos em "Outro" no anel; no painel b só entram os tipos
 com intervalo informativo. Título, nota e fonte ficam no documento (regra APA do pipeline).
 
-Uso: /opt/homebrew/bin/python3.11 data/pns/fig_agressor_pns2019.py <saida.png>
+Uso: python3 data/pns/fig_agressor_pns2019.py <saida.png>
 """
 from __future__ import annotations
 

@@ -8,7 +8,7 @@ permite conferir a leitura sem a planilha.
 | Campo | Valor |
 |---|---|
 | Fonte | Liga Humanista Secular do Brasil (LiHS), "Principais estatísticas brasileiras de morte por homofobia são falsas, conclui checagem independente", 1 de maio de 2019 (https://lihs.org.br/sociedade/homofobia/) |
-| URL da planilha | https://docs.google.com/spreadsheets/d/1QdVdDhPLsFomf9edOscMz-hZhIitqwkSuSi3I7XV3Po/ |
+| URL da planilha | [URL de lista nominal retirada na v1.3.0] |
 | Arquivo lido | CSV exportado da planilha, 349 linhas: 1ª linha de título, 2ª linha de cabeçalho (39 colunas), 347 casos |
 | SHA-256 do CSV lido | `0dc25783bfc422ec635826009fbdfbda4efc41ecd7dca0fa05fc469a9179d5ad` |
 | Data da leitura | 2026-10-30 (registro no ledger: 2026-10-30T05:20:57Z) |

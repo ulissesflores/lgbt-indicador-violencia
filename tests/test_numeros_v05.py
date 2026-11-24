@@ -8,6 +8,7 @@ na função.
 
 import csv
 import hashlib
+import json
 import os
 import sys
 from decimal import ROUND_HALF_UP, Decimal
@@ -58,6 +59,28 @@ def test_lihs_planilha_nominal_nao_e_distribuida():
     assert (RAIZ / LIHS_META).is_file()
     nominais = list((RAIZ / LIHS).rglob("lihs-checagem-ggb2016*.csv"))
     assert not nominais, f"CSV nominal da LiHS no repositório: {nominais}"
+
+
+def test_lihs_planilha_nominal_travada_no_gitignore_e_no_selo():
+    """O caminho da planilha nominal fica fora do git e do selo, mesmo se alguém a puser lá.
+
+    As duas travas são necessárias: o selo (``make_provenance.excluido``) não lê o
+    ``.gitignore``. Como a planilha some de ``arquivos()``, a guarda que a acha no disco é a
+    varredura de ``test_lihs_planilha_nominal_nao_e_distribuida``.
+    """
+    import importlib.util
+
+    spec = importlib.util.spec_from_file_location("_prov_lihs", RAIZ / "make_provenance.py")
+    prov = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(prov)
+    rel = LIHS_CSV.relative_to(RAIZ).as_posix()
+    assert prov.excluido(rel) and prov.excluido("data/lihs-checagem-ggb2016-copia.csv")
+    regras = texto(".gitignore").splitlines()
+    assert "analysis/counterpoint/dados/*.csv" in regras
+    assert "**/lihs-checagem-ggb2016*.csv" in regras
+    selados = {i["arquivo"] for i in json.loads(texto("output/provenance.json"))["arquivos"]}
+    assert not {a for a in selados if "lihs-checagem-ggb2016" in a and a.endswith(".csv")}
+    assert "lihs-checagem-ggb2016.csv" not in texto("manifest/SHA256SUMS.txt")
 
 
 def test_lihs_sha256_gravado_em_todos_os_lugares():

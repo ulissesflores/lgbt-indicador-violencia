@@ -1,6 +1,6 @@
 """H1: confere que cada trecho verbatim de data/h1_programas_metas.csv existe no arquivo local citado (comparação com espaços normalizados) e grava sha256 do arquivo
 (o .txt é derivado do bruto na mesma pasta: o hash do bruto está em data/raw/h1_programas/SHA256SUMS.txt, gerado aqui).
-Rodar: /opt/homebrew/bin/python3.14 -I scripts/h1_00_verifica_citacoes_programas.py"""
+Rodar: python3 -I scripts/h1_00_verifica_citacoes_programas.py"""
 import os as _os
 import pathlib as _pl
 

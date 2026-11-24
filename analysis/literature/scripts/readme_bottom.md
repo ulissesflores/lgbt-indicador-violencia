@@ -27,7 +27,7 @@ Regra usada: toda linha da tabela entra nas duas colunas conforme o que o texto 
 | Levy & Levy 2017 "⚠️ só resumo de busca" | ✅ LIDO | PDF p. 1: "Hate crime and employment nondiscrimination laws ... reduce hate crime incidence. Partnership recognition increases reported hate crimes, though it may not increase actual crime incidence" (B1). Os autores não decidem entre mais violência e mais registro (p. 14) |
 | Pettis et al.: "-0,112/100 mil ... ~1 ano" | ⚠️ não conferido na publicada | O preprint dá -0,111 por 100 mil "from a base of 0.3" (≈ -37%), o que o dossiê não cita; o "~1 ano" e o "weaker results" do abstract publicado não aparecem no preprint (B2) |
 | Müller & Schwarz: "+7% por ano por DP de uso de Twitter (destaque da AEA)" | ⚠️ DIVERGE entre versões | O preprint 2019 diz "a 38% larger increase in anti-Muslim hate crimes" por DP (B8). Ler a publicada antes de citar qualquer dos dois |
-| "2.048 crimes adicionais" (Edwards & Rushin) marcado 🚫 no briefing C | ✅ no PREPRINT | p. 13: "around 410 additional hate crimes nationally per quarter, or 2,048 additional hate crimes since his electoral victory" (B17); desfecho agregado e registrado, sem separar orientação sexual; periódico não confirmado |
+| "2.048 crimes adicionais" (Edwards & Rushin) marcado 🚫 no levantamento inicial | ✅ no PREPRINT | p. 13: "around 410 additional hate crimes nationally per quarter, or 2,048 additional hate crimes since his electoral victory" (B17); desfecho agregado e registrado, sem separar orientação sexual; periódico não confirmado |
 | Brexit "+19-23% (Devine)" | ⚠️ não conferido (sem texto integral) | Estimativas lidas: +15-25% (IZA, B4), +29% (BJC, B3); todas sobre crimes raciais/religiosos, não LGBT |
 | Parte A §2 e Parte E §6: Disque 100 "baixa" qualidade, páginas 404 | ✅ agora com número | Relatório 2019 lido: LGBT 1.685 -> 846 (-49,8%), total +15,4% (B12); a nota do CNDH (C12) mistura denúncias e violações, não é série |
 | Nada sobre perseguição estatal | NOVO | CNV 2014 (A1), OSCE 2018 (A2), TEDH 2023 (A3): nível A passa a ter fonte oficial primária |
@@ -86,13 +86,13 @@ Bases: OpenAlex (`search` e filtro booleano `title_and_abstract.search`), Europe
 
 - `README.md` (este), `sources.jsonl` (49 linhas, só por `emit_sources.py`), `fila-aquisicao.jsonl`, `busca-enumerada.json`, `triagem-BR-LGBT-violencia-politica.tsv`
 - `scripts/`: `rows.py` (linhas da tabela), `build_readme.py`, `emit_ledger.py`, `enum_search.py`, `screen_openalex.py`
-- `aquisicao-out/`, `aquisicao-out2/`, `aquisicao-out3/`: saídas e manifestos do agente de aquisição (aquisição legítima); os PDFs aceitos foram movidos para `sources/public/q1-textointegral/F8-literatura/` (as pastas do agente de aquisição guardam só manifestos, estados e primeiras páginas)
+- `aquisicao-out/`, `aquisicao-out2/`, `aquisicao-out3/`: saídas e manifestos da aquisição automatizada de textos integrais (fontes legítimas; pastas não distribuídas); os PDFs aceitos foram movidos para `sources/public/q1-textointegral/F8-literatura/` (essas pastas guardam só manifestos, estados e primeiras páginas)
 
 ## Becos
 
-- Wiley, Sage, Taylor & Francis, Lancet/Elsevier, Cambridge e OUP devolvem 403/Cloudflare por curl e por navegador sem sessão; PMC/Europe PMC só serviram XML e Wayback para PDF. Volta se a coordenação do projeto tiver sessão institucional.
+- Wiley, Sage, Taylor & Francis, Lancet/Elsevier, Cambridge e OUP devolvem 403/Cloudflare por curl e por navegador sem sessão; PMC/Europe PMC só serviram XML e Wayback para PDF. Volta se houver acesso institucional.
 - CNV: o URL oficial devolve HTML por curl, mas o Wayback serve o PDF do site oficial (captura 2016; usado em A1).
-- gov.br/mdh (notícias do Disque 100 2023) e Agência Gov devolvem "Conteúdo restrito"/vazio; WebFetch idem. Volta com Chrome real logado.
+- gov.br/mdh (notícias do Disque 100 2023) e Agência Gov devolvem "Conteúdo restrito"/vazio; outro cliente HTTP idem. Volta se o acesso for liberado.
 - OpenAlex deu 429 durante a enumeração (cota compartilhada com outras frentes); contagens `erro:` em `busca-enumerada.json` foram repetidas com espera.
 - Scimago (Cloudflare): quartis dos periódicos fora das duas tabelas ficam `nao_verificado`.
-- "Carr et al." do pedido = IZA DP 13902 (Carr, Clifton-Sprigg, James, Vujić); o artigo do BJC `azac071` é de Williams et al. (briefing C do dossiê já o atribuía corretamente).
+- "Carr et al." da lista inicial = IZA DP 13902 (Carr, Clifton-Sprigg, James, Vujić); o artigo do BJC `azac071` é de Williams et al. (o levantamento inicial já o atribuía corretamente).

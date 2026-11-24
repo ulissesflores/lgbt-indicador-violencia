@@ -1,4 +1,4 @@
-#!/opt/homebrew/bin/python3.14
+#!/usr/bin/env python3
 """Le campos de valor de avisos do TED (API publica v3) e grava o JSON cru. Uso: ted_api.py <pasta_saida> <pub-number> [...]"""
 import json, sys, urllib.request
 from pathlib import Path

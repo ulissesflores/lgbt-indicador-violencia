@@ -1,6 +1,6 @@
 """U3 do PRE-REGISTRO: 65 Estados-membros da ONU que a ILGA DB marca como criminalizadores.
 Entradas: ilga-db-csssa-all.json, vdemdata-vdem.RData, vdemdata-vparty.RData (em sources/public/q1-textointegral/discurso/governos/).
-Saida: ../u3_65_criminalizam.csv. Requer pyreadr e pycountry (venv do scratchpad). Nao inventa: campo ausente = vazio."""
+Saida: ../u3_65_criminalizam.csv. Requer pyreadr e pycountry. Nao inventa: campo ausente = vazio."""
 import os as _os
 import pathlib as _pl
 

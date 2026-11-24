@@ -1,7 +1,7 @@
 """Analises de concordancia entre series publicas de mortes LGBT+ no Brasil. Entrada: ../painel_mortes_lgbt.csv (+ F3-ggb para a captura-recaptura 2019).
 Semente fixa 20261022. Bootstrap por pares de ANOS (B=20000, percentil 95%). Saidas: ../dados_analises/*.csv e ../dados_analises/resultados.json.
 LIMITE GERAL: series curtas (n de 2 a 24 variacoes), autocorrelacionadas, nao amostrais; IC mede so a instabilidade entre anos, NAO erro de medida.
-Uso: /opt/homebrew/bin/python3.14 -I s06_analises.py"""
+Uso: python3 -I s06_analises.py"""
 import os as _os
 import pathlib as _pl
 

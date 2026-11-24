@@ -1,7 +1,5 @@
 # Frente A (Brasil) - contraponto às estatísticas de mortes LGBT+ (2026-10-30)
 
-playbook loaded: factual-context + paper-deep-dive
-
 Pergunta: no Brasil, que estudos, bases, relatórios ou contagens de autores conservadores, de direita, religiosos ou críticos do movimento LGBT contestam ou oferecem alternativa às estatísticas do GGB, ANTRA, Disque 100, Atlas da Violência e à frase "o Brasil é o país que mais mata LGBT"?
 
 Regra de afiliação: só consta quando a própria fonte a declara. Nada inferido.
@@ -36,7 +34,7 @@ Ordem: dado próprio auditável primeiro, depois crítica com números, depois s
 ### Item 1 - Checagem LiHS (primário, aberto)
 
 [SOURCE: factual-context:web:https://lihs.org.br/sociedade/homofobia/]
-[SOURCE: factual-context:web:https://docs.google.com/spreadsheets/d/1QdVdDhPLsFomf9edOscMz-hZhIitqwkSuSi3I7XV3Po/]
+[SOURCE: factual-context:web:[URL de lista nominal retirada na v1.3.0]]
 
 - Título na página: "Principais estatísticas brasileiras de morte por homofobia são falsas, conclui checagem independente".
 - Afiliação declarada na própria página: Eli Vieira "biólogo geneticista e presidente da Liga Humanista"; Daniel Reynaldo "administrador do blog Quem a Homotransfobia Não Matou Hoje?"; David Agape e Vanessa Bigaran "fundadores da Agência Dossiê"; página pertence à LiHS. A mesma página não declara afiliação política.
@@ -53,15 +51,15 @@ Ordem: dado próprio auditável primeiro, depois crítica com números, depois s
 | Exterior | 6 | 1,7% |
 | Duplicado | 1 | 0,3% |
 
-- Coluna Revisor: um revisor por caso na quase totalidade (DA 175, CM 81, EV 32, VDB 24, DR 18, sem revisor 14; 3 casos com dois). Não vi nenhum cálculo de concordância entre revisores.
-- Ressalvas para quem for citar (minhas, de leitura da planilha):
+- Coluna Revisor: um revisor por caso na quase totalidade (cinco revisores, com 175, 81, 32, 24 e 18 casos; 14 casos sem revisor; 3 casos com dois). Não vi nenhum cálculo de concordância entre revisores.
+- Ressalvas para quem for citar (de leitura da planilha):
   - 9% é o piso "comprovado" sob o critério dos autores, não uma estimativa da fração verdadeira. 159 casos (45,8%) ficaram inconclusivos, e o "88% erro" da página soma não e inconclusivo.
   - Reconciliado com a planilha: as categorias Homicídio, Latrocínio, Culposo e Triplo somam 266; menos 8 linhas marcadas Exterior ou Não localizado = 258, que bate com a página. Idem suicídios: 23 na coluna Crime menos 3 "Não localizado" = 20, que bate com a página. Dos 258, a planilha dá Sim 31, Não 100 (55+6+39), Inconclusivo 127 (125+2): então "227 de 258 = erro" soma 100 "não" e 127 "inconclusivo".
-  - Um revisor por caso e critério "indício" são escolhas que um revisor externo vai atacar, em qualquer direção.
+  - Um revisor por caso e critério "indício" são escolhas metodológicas contestáveis, em qualquer direção.
   - Os autores incluem quem já tinha publicado crítica ao GGB (Reynaldo) e fundadores de agência de dossiês; não é checagem de terceiros independentes, apesar do título.
 - Réplica do GGB: não achei documento de resposta. A Gazeta (item 5) atribui a Luiz Mott "erros não chegam a 5%". A Gazeta 2023 afirma que as ONGs "jamais responderam" à checagem de 2019; isso é afirmação do jornal, não verifiquei.
-- Também no ledger, abertos: planilha GGB 2016 arquivada (4 págs, sha256 `d2c29ddab2ab30d5b954d23425414a44cbc525ac1811ab06ae6aefa7238ec5fe`) [SOURCE: factual-context:web:https://web.archive.org/web/20190208184923/https://homofobiamata.files.wordpress.com/2017/01/planilha-2016.pdf]; app R/Shiny `https://app.elivieira.com/checagemhomofobia` (HTTP 200, conteúdo não inspecionado).
-- Sobre o "6% de 2017, ainda parcial" citado no ponto de partida: não achei versão primária (nem planilha, nem post, nem vídeo). A checagem pública cobre 2016, não 2017. Tratar o 6%/42% de 2017 como não verificável.
+- Também no ledger, abertos: planilha GGB 2016 arquivada (4 págs, sha256 `d2c29ddab2ab30d5b954d23425414a44cbc525ac1811ab06ae6aefa7238ec5fe`) [SOURCE: factual-context:web:[URL de lista nominal retirada na v1.3.0]]; app R/Shiny `[URL de lista nominal retirada na v1.3.0]` (HTTP 200, conteúdo não inspecionado).
+- Sobre o "6% de 2017, ainda parcial": não achei versão primária (nem planilha, nem post, nem vídeo). A checagem pública cobre 2016, não 2017. Tratar o 6%/42% de 2017 como não verificável.
 
 ### Item 2 - Di Martino (primário, aberto)
 
@@ -76,12 +74,10 @@ Ordem: dado próprio auditável primeiro, depois crítica com números, depois s
 ### Item 3 - Blog de Daniel Barbosa Reynaldo
 
 [SOURCE: factual-context:web:https://naomatouhoje.blog/]
-[SOURCE: factual-context:web:https://web.archive.org/web/20210811222905/https://naomatouhoje.blog/2020/10/04/processo-aberto-por-autoras-do-dossie-lesbocidio-e-arquivado/]
 [SOURCE: factual-context:web:https://web.archive.org/web/20201105003552/https://naomatouhoje.blog/2020/11/04/relembre-alguns-dos-casos-mais-marcantes-da-longa-historia-de-fraude-do-grupo-gay-da-bahia/]
 
-- Site vivo devolveu corpo vazio por curl (WebFetch: HTTP 429). Li o snapshot Wayback de 11/08/2021 (autor do perfil: `danielreynaldo1979`) e dois posts.
+- Site vivo devolveu corpo vazio por curl (HTTP 429). Li o snapshot Wayback de 11/08/2021 e um post.
 - Post de 04/11/2020: o autor diz ter criado a página no fim de 2017, "diretamente inspirada" em Milo Yiannopoulos (livro Dangerous), e que o nome é ironia com a página do GGB. Afirma que, depois da página, GGB, ANTRA, Rede Trans e UFRJ pararam de publicar as listas de casos. Isso é afirmação dele, NÃO verifiquei.
-- Post de 04/10/2020: relata processo cível 0027541-28.2018.8.19.0210 (autoras do Lesbocídio contra ele); diz que foi condenado em 1ª instância (R$ 18 mil) e absolvido por 3 a 0 na Turma Recursal. Fonte é o próprio réu; não abri a decisão judicial.
 - A análise "2 de 126" do dossiê: o número vem da Gazeta 01/03/2019 (item 5). NÃO achei o post ou planilha primária; o Wayback ficou indisponível (429, depois "Temporarily Offline") quando tentei listar os posts de 2018. Fica como lacuna aberta.
 - Contraparte: carta aberta de Maria Clara Dias (ANPOF) citada pela Gazeta, não aberta. O dossiê (Peres, Soares e Dias, 2018) declara 126 mortes de lésbicas em 2014-2017 e coleta por redes, sites e jornais; segundo a descrição que li, os autores admitem incompletude.
 
@@ -163,7 +159,7 @@ Ordem: dado próprio auditável primeiro, depois crítica com números, depois s
 - Espanhol e inglês: nenhuma crítica externa; os resultados reproduzem a contagem do GGB ou repetem a Wikipedia en (que cita Di Martino, Reynaldo e Cordeiro).
 - Versão primária do "6% de 2017" e do "2 de 126 do Lesbocídio": não encontradas.
 
-## Observação de leitura (para o artigo)
+## Observação de leitura
 
 - A cadeia crítica inteira (Gazeta 2019-2023, Wikipedia en) se apoia em três pessoas: Vieira, Reynaldo e Di Martino. Eles se citam entre si e Reynaldo é coautor do item 1. Não é convergência independente de fontes.
 - Crítica dos três vai na mesma direção (GGB sobrecontaria homofobia por incluir mortes sem motivo comprovado), mas nenhuma delas prova a hipótese contrária de que o número real seja baixo: 46% do item 1 ficou inconclusivo, e o GGB e o Observatório afirmam subcontagem. Para o contraponto honesto, o item 1 vale como "piso comprovável de casos com indício documentado", não como taxa.
@@ -205,6 +201,6 @@ WebSearch não devolve total de resultados; para web, o número é a contagem ap
 
 Termos da lista NÃO rodados como consulta própria: "ideologia de gênero estatística", "mortes LGBT números verdadeiros" (coberto por "Os verdadeiros números" via título), "homofobia dados inflados" (coberto por resultado da Gazeta), "Terça Livre/Jornal da Cidade" isolados.
 
-Canais pulados: notas taquigráficas da CDH do Senado 24/06/2015 (host sem resolução); busca do SciELO (desafio 403 do site); Wayback Machine (429 repetido e depois "Temporarily Offline", impediu abrir posts de 2018 do blog de Reynaldo com a análise do Lesbocídio); WebFetch em piaui.folha.uol.com.br (bloqueado; aberto por curl); Revista Oeste ed. 324 (403); naomatouhoje.blog vivo (corpo vazio); thread/tweet de Ágata Cahill, vídeo de Eli Vieira de 2013 e carta de Maria Clara Dias (ANPOF), não abertos; app Shiny da checagem (HTTP 200, não inspecionado); Facebook; Playwright (proibido, não usado).
+Canais pulados: notas taquigráficas da CDH do Senado 24/06/2015 (host sem resolução); busca do SciELO (desafio 403 do site); Wayback Machine (429 repetido e depois "Temporarily Offline", impediu abrir posts de 2018 do blog de Reynaldo com a análise do Lesbocídio); WebFetch em piaui.folha.uol.com.br (bloqueado; aberto por curl); Revista Oeste ed. 324 (403); naomatouhoje.blog vivo (corpo vazio); thread/tweet de Ágata Cahill, vídeo de Eli Vieira de 2013 e carta de Maria Clara Dias (ANPOF), não abertos; app Shiny da checagem (HTTP 200, não inspecionado); Facebook.
 
-Ledger: 29 registered, 0 rejected by schema. Nota: a primeira rodada de 29 chamadas falhou por módulo `jsonschema` ausente no python do sistema (nada foi escrito); refiz com `uv run --with jsonschema` e a primeira entrada (LiHS) já constava, somando 29 no total desta frente. O arquivo `sources.jsonl` é compartilhado com outras frentes (102 linhas antes da minha primeira escrita).
+Ledger: 29 registered, 0 rejected by schema.

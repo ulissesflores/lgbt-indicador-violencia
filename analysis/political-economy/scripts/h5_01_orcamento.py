@@ -3,7 +3,7 @@ Duas fontes oficiais SEM emenda entre elas (conceitos de valor diferem; NÃO som
  (a) 2014-2025: Portal da Transparência/CGU, arquivo anual 'OrcamentoDespesa' (https://portaldatransparencia.gov.br/download-de-dados/orcamento-despesa/<ano>); colunas ORÇAMENTO INICIAL/ATUALIZADO/EMPENHADO/REALIZADO.
  (b) 2007-2013: SIOP/Ministério do Planejamento, dados abertos em RDF da LOA (https://www1.siop.planejamento.gov.br/downloads/rdf/loa<ano>.zip); valores Empenhado/Liquidado/Pago e Dotação Inicial/Projeto de Lei.
 Filtro: unidade orçamentária cujo nome contém 'GEOGRAFIA E ESTAT' (IBGE) + (qualquer UO) ações cujo nome casa com VITIMIZ|SINESP|ESTATIST... em Segurança/Justiça. Zips guardados em data/raw/orcamento (F5_CACHE sobrescreve); sha256 de cada zip em data/h5_orcamento_hashes.txt.
-Rodar: /opt/homebrew/bin/python3.14 -I scripts/h5_01_orcamento.py [cgu|rdf|tudo]"""
+Rodar: python3 -I scripts/h5_01_orcamento.py [cgu|rdf|tudo]"""
 import os as _os
 import pathlib as _pl
 

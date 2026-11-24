@@ -20,7 +20,7 @@ table = '\n'.join(row(i) for i in SEL)
 
 MD = f"""# O que é o Grupo Gay da Bahia (GGB) e o que a sua contagem mede
 
-Data: 2026-10-22. Só documentos públicos, sem contato com ninguém (regra do autor, 2026-10-22). Site oficial: `grupogaydabahia.com.br` (o endereço `grupogaygbahia` do pedido não existe). Páginas PDF = índice do PDF. Nomes de vítimas ficam fora (`_raw`, fora do git).
+Data: 2026-10-22. Só documentos públicos, sem contato com ninguém (regra do autor, 2026-10-22). Site oficial: `grupogaydabahia.com.br` (o endereço `grupogaygbahia` não existe). Páginas PDF = índice do PDF. Nomes de vítimas ficam fora (`_raw`, fora do git).
 Pasta de saída: `{OUT}`. Evidência completa ({len(ev)} trechos, trecho integral, caminho absoluto, sha256, URL): `evidencias.csv`; por ano: `metodologia_por_ano.csv`; ledger: `sources.jsonl` (41, via `emit_sources.py`).
 
 ## 0. Resposta e o que contradiz ou corrige o dossiê (primeiro)

@@ -53,8 +53,8 @@ DATASUS files (SIM 2023–2024, recent Sinan) are regenerated at the source: the
 
 | Step | Why | What the repository holds |
 |---|---|---|
-| Nominal 2019 Grupo Gay da Bahia list (329 cases), its source links, the 160-case verification and the third reading of coder disagreements | needs the nominal list and the news texts, which are not published (victims' privacy) | 10-hex salted ids, state, category, domain, coding, adjudication and results in `analysis/ggb-audit/` |
-| Media and discourse (Google News RSS, OpenAlex, Wikipedia, GDELT, Chamber, Senate) | searches and counts depend on the day; news text belongs to third parties | counts per query and year with date and SHA-256 of the raw file; coded sample without the text |
+| Nominal 2019 Grupo Gay da Bahia list (329 cases), its source links, the 160-case verification and the third reading of coder disagreements | needs the nominal list and the news texts, which are not published (victims' privacy) | 10-hex salted ids (pseudonymous, not anonymous: whoever holds the list the GGB itself publishes, with names, can match the rows to it; the package adds to that list only the coding of each case), state, category, domain, coding (with a 0/1 indicator of disagreement with the cited source, no free-text notes per case), adjudication and results in `analysis/ggb-audit/`; the packets generated for coders B and C (news texts sent to the language models), their prompts and their replies are not distributed |
+| Media and discourse (Google News RSS, OpenAlex, Wikipedia, GDELT, Chamber, Senate) | searches and counts depend on the day; news text belongs to third parties | counts per query and year with date and SHA-256 of the raw file; coded sample, whose only verbatim text is short excerpts of public parliamentary speeches (`analysis/discourse/midia/amostra_codificada.csv`, `trecho_verbatim`) |
 | Literature reading | restricted or copyrighted PDFs | ledgers, screening tables, short verbatim excerpts with page and PDF SHA-256 |
 | Governors (Wikipedia) | manual curation of 27 pages | `data/scripts/mandatos_wiki.json`, `data/governadores_uf_2011_2026*.csv` and the check against TSE |
 | Political economy (Atlas, budget, LAPOP, ESTADIC) | official PDFs and spreadsheets downloaded on given days | derived series in `analysis/political-economy/dados/`, SHA-256 of the raw files, parsing scripts |
@@ -67,6 +67,8 @@ the recording time and later addenda. `data/presidencia/PREREGISTRO-C09.md`, `da
 `data/painel/R6-PREREGISTRO-FORMA.md`, `data/disque100/PREREGISTRO-D100.md` and the criteria in
 `analysis/robustness/reanalise/CRITERIOS.md` and `analysis/robustness/simetria/CRITERIOS.md` follow the same rule. The tests
 recompute every hash. These files are kept byte for byte, so some still carry folder names of the working project.
+
+The frozen criteria in `analysis/robustness/*/CRITERIOS.md` cite `TRIAGEM.md` and `TRIAGEM.csv`, which were withdrawn in 1.3.0 (`docs/corrections.md`).
 
 **What the hash proves.** It proves that the text read today is the text that produced the recorded hash. That the text
 existed before the data were seen rests on the recorded time, which, without an external timestamp, is the author's

@@ -1,7 +1,7 @@
 """Catálogo dos 23 arquivos de microdados do Disque 100: URL, tamanho anunciado e local, Last-Modified,
 data de acesso, formato (pelo cabeçalho) e sha256 do arquivo inteiro baixado (ou 'parcial, sem sha').
 
-Uso: /opt/homebrew/bin/python3.14 -I scripts/d100_catalogo.py
+Uso: python3 -I scripts/d100_catalogo.py
 Saída: saidas/catalogo.tsv
 """
 

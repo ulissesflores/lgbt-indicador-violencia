@@ -1,6 +1,6 @@
 """H5: ações LGBT/homofobia/vitimização em QUALQUER unidade orçamentária, LOA em RDF (SIOP) 2007-2013 (zips baixados por h5_01 em data/raw/orcamento), valores empenhado/liquidado/pago.
 Complementa h5_01 (que filtra por unidade) para a pergunta 'existiu linha orçamentária específica?'. Saída: data/h5_acoes_lgbt_rdf_2007_2013.csv.
-Rodar: /opt/homebrew/bin/python3.14 -I scripts/h5_03_acoes_lgbt_rdf.py"""
+Rodar: python3 -I scripts/h5_03_acoes_lgbt_rdf.py"""
 import os as _os
 import pathlib as _pl
 
