@@ -1,6 +1,6 @@
 # Inventário público (gerado por `scripts/inventario_publico.py`; não editar à mão)
 
-sha256 de `manifest/INVENTARIO-PUBLICO.json`: `0dfa4e431a7ed4a9a1f7fb33ba91dc5b80ccf51b59b7f4c592b8c2c8445a97a6`
+sha256 de `manifest/INVENTARIO-PUBLICO.json`: `f0537b6d5a4bf7a59f5d9521c19937bdd31b70986964961d03a8f1d67c9c138a`
 
 Contado só com os arquivos deste repositório (o mesmo conjunto do selo), com as regras de identidade, idioma e tipo do painel do artigo.
 
@@ -11,7 +11,7 @@ Contado só com os arquivos deste repositório (o mesmo conjunto do selo), com a
 | Fontes únicas (identificadores) | 1022 | 829 |
 | Obras distintas (sem sufixo de versão) | 1021 | - |
 | Idiomas | 11 | 10 |
-| Scripts Python | 174 | 139 |
+| Scripts Python | 182 | 139 |
 
 ## Regras
 
@@ -80,7 +80,9 @@ Diferenças de tipo vêm só das fontes novas da v0.3 (ledgers posteriores ao pa
   - `analysis/regimes-asia-africa/raw/_tools/h2t.py`
   - `analysis/robustness/_build_triagem.py`
   - `analysis/robustness/rodar_externos.py`
-- Fora da lista, de análise (25): criados depois do painel (v0.3) ou em pastas de dados.
+- Fora da lista, de análise (27): criados depois do painel (v0.3) ou em pastas de dados.
+  - `analysis/article-numbers/contas_do_texto.py`
+  - `analysis/article-numbers/numeros_do_bruto.py`
   - `analysis/ggb-audit/scripts/s15_terceiro_codificador.py`
   - `analysis/robustness/simetria/scripts/r7_parlamento_sensibilidade.py`
   - `data/build_dashboard.py`
@@ -106,7 +108,7 @@ Diferenças de tipo vêm só das fontes novas da v0.3 (ledgers posteriores ao pa
   - `data/presidencia/c09_d1_its.py`
   - `data/presidencia/c09_d2_painel.py`
   - `data/presidencia/c09_estrutura.py`
-- Fora da lista, de empacotamento (23): (raiz) 2; figures 1; scripts 9; tests 11.
+- Fora da lista, de empacotamento (29): (raiz) 3; assets 1; figures 4; scripts 9; tests 12.
 
 ## Ledgers
 

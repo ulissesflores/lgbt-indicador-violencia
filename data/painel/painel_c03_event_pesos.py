@@ -1,4 +1,41 @@
-"""C03 (TRIAGEM, rodada 3) — Painel F8: (1) conversão exata de b em %, (2) event study empilhado nas trocas de governante, (3) pesos do TWFE contínuo.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Convert panel coefficients to percentages, run an event study and compute TWFE weights.
+
+The script converts the published coefficient limits of the state panel into exact percent
+changes, estimates a stacked event study around real changes of governor party (strict and
+truncated designs, state-clustered errors, joint tests of leads and lags), and computes the
+weights of the continuous two-way fixed-effects estimator, including the share of negative
+weight. It first reproduces the published estimates and the number of changes, and aborts if
+they differ. It is exploratory and not causal.
+
+Inputs
+------
+- data/painel/painel_uf_ano_tse_brc.csv and painel_uf_ano_tse.csv
+- data/painel/resultados_tse_brc.md
+- data/governadores_uf_2011_2026_tse.csv
+-
+  sources/public/p2-f8-governos/zucco-power-dataverse/bls9_estimates_partiespresidents_long.tab
+
+Outputs
+-------
+- data/painel/c03_event_pesos_resultados.md (also printed to stdout)
+- data/painel/c03_event_pesos_resultados.csv
+
+Usage
+-----
+python3 -I data/painel/painel_c03_event_pesos.py
+
+Status
+------
+Pre-registered analysis (analysis/robustness/reanalise/CRITERIOS.md, item C03). Feeds numbers
+printed in the article (listed in paper_numbers.json).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+C03 (TRIAGEM, rodada 3) — Painel F8: (1) conversão exata de b em %, (2) event study empilhado nas trocas de governante, (3) pesos do TWFE contínuo.
 Critérios de decisão escritos ANTES de rodar: analysis/robustness/reanalise/CRITERIOS.md (hash em CRITERIOS.sha256).
 Dados: data/painel/painel_uf_ano_tse_brc.csv (principal; partido de eleição TSE + ideologia BRC por período, 351 UF-anos) e, como conferência, painel_uf_ano_tse.csv (escore único de 2018).
 Reprodução obrigatória (aborta): b e EP dos 6 desfechos e da robustez BLS9 (resultados_tse_brc.md); 94 = 67 trocas reais + 27 trocas de onda (painel BRC); 68 mudanças = 37 direita + 31 esquerda (painel tse).
@@ -14,7 +51,14 @@ MÉTODO
 LIMITES: poucos eventos limpos (ver n em cada tabela); 27 clusters (testes conjuntos anticonservadores); event study com tratamento de ideologia reversível e controles que já tiveram/terão troca em outro ano (limpeza só dentro da janela);
  tendências paralelas condicionais a EF de pilha NÃO testadas além das antecipações; sem poder para efeitos pequenos; "pesos negativos" de um regressor contínuo dependem da origem de D (3 variantes mostradas);
  exploratório, NÃO causal; SIM sem motivação; o 'estimado' do Atlas não entra.
-Rodar: python3 -I data/painel/painel_c03_event_pesos.py   Saídas: data/painel/c03_event_pesos_resultados.md e c03_event_pesos_resultados.csv"""
+Rodar: python3 -I data/painel/painel_c03_event_pesos.py   Saídas: data/painel/c03_event_pesos_resultados.md e c03_event_pesos_resultados.csv
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

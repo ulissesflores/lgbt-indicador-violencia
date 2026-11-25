@@ -1,4 +1,39 @@
-"""C05 (TRIAGEM, rodada 3) — PNS 2019: estimativa DIRETA de P(LGB+ | violência física em 12 meses, adulto 18+), com desenho amostral complexo,
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Estimate directly the LGB+ share among adult victims of physical violence (PNS 2019).
+
+The script computes the ratio of weighted totals, LGB+ victims over all victims of physical
+violence in 12 months, with the complex design: Taylor linearization and a jackknife by
+sampling unit, with Wald and logit intervals. It uses two bases (all adult victims, and only
+those who declared an orientation) and cuts by age band and sex. It replaces a Monte Carlo
+over published margins. It first reproduces the published prevalences (constants in the
+script), the crude ratio, 442 thousand LGB+ victims and the two Monte Carlo points, and aborts
+if they differ.
+
+Inputs
+------
+- sources/public/q1-textointegral/F2/pns2019/input_PNS_2019_utf8.txt (official layout)
+- sources/public/q1-textointegral/F2/pns2019/x/PNS_2019.txt (microdata) reproduce)
+
+Outputs
+-------
+- data/pns/c05_razao_direta.csv
+- data/pns/c05_razao_direta.md
+
+Usage
+-----
+python3 -I data/pns/pns_c05_razao_direta.py
+
+Status
+------
+Pre-registered analysis (analysis/robustness/reanalise/CRITERIOS.md, item C05). Feeds numbers
+printed in the article (listed in paper_numbers.json).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+C05 (TRIAGEM, rodada 3) — PNS 2019: estimativa DIRETA de P(LGB+ | violência física em 12 meses, adulto 18+), com desenho amostral complexo,
 no lugar do Monte Carlo sobre marginais publicadas (triangulacao_pns_sinan.md, que assume insumos independentes).
 Critérios de decisão escritos ANTES de rodar: analysis/robustness/reanalise/CRITERIOS.md (hash em CRITERIOS.sha256).
 Método: razão de totais ponderados R = soma(w x LGB+ x física) / soma(w x física), w = V00291 (peso calibrado), estrato V0024, UPA = V0024 + UPA_PNS; módulo V (n = 88.531, mesmo universo do seguro_pns2019.py).
@@ -11,7 +46,14 @@ LIMITES: (1) a base (a) NÃO é o cenário B do Monte Carlo: o cenário B imputo
   (2) n bruto de LGB+ vítimas é pequeno (179 no total; dezenas nos cortes): ICs largos, cortes descritivos, sem multiplicidade corrigida; (3) uma onda, autorrelato de orientação (subestima LGB+), sem motivo do agressor;
   (4) mesmo que o IC contenha 4,1%, o Sinan é registro de quem buscou serviço de saúde (24% sem orientação preenchida; limites 3,1% a 27,4%), não amostra: a comparação não é de estimadores equivalentes;
   (5) a razão de totais cobre vítimas de violência física de qualquer autor e local; o Sinan cobre violência física interpessoal notificada (definições próximas, não idênticas).
-Rodar: python3 -I data/pns/pns_c05_razao_direta.py   Saídas: data/pns/c05_razao_direta.md e c05_razao_direta.csv"""
+Rodar: python3 -I data/pns/pns_c05_razao_direta.py   Saídas: data/pns/c05_razao_direta.md e c05_razao_direta.csv
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

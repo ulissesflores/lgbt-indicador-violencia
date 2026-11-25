@@ -1,4 +1,42 @@
-"""Gera ../estudos.csv a partir de rows.py + Crossref (referência) + sha256 dos arquivos locais. Python: python3 -I"""
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Build the table of studies on mortality and violence from the manual rows plus Crossref.
+
+For each manual row in rows.py it looks up the reference in the Crossref API (by DOI), takes the
+journal quartile from the SJR table in rows.py, computes the sha256 of the local full-text file
+that was read, and writes one CSV row per study. Rows without a DOI use fixed reference texts.
+
+Inputs
+------
+- analysis/discourse/mortalidade/scripts/rows.py (manual study rows and SJR quartiles)
+- the local full-text files named in each row (under sources/public/q1-textointegral/)
+- https://api.crossref.org/works/<doi> (network access)
+
+Outputs
+-------
+- analysis/discourse/mortalidade/estudos.csv
+- prints the number of rows and the count of studies per SJR quartile
+
+Usage
+-----
+python3 -I analysis/discourse/mortalidade/scripts/build_estudos.py
+
+Status
+------
+Feeds numbers printed in the article (listed in paper_numbers.json).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Gera ../estudos.csv a partir de rows.py + Crossref (referência) + sha256 dos arquivos locais. Python: python3 -I
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import csv,json,hashlib,os,sys,time,urllib.request,subprocess
 sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
 from rows import R,SJR
@@ -6,7 +44,7 @@ OUT=os.path.join(os.path.dirname(os.path.abspath(__file__)),'..')
 def cr(doi):
     for i in range(4):
         try:
-            return json.load(urllib.request.urlopen(urllib.request.Request('https://api.crossref.org/works/'+doi,headers={'User-Agent':'research-lab (mailto-free)'}),timeout=40))['message']
+            return json.load(urllib.request.urlopen(urllib.request.Request('https://api.crossref.org/works/'+doi,headers={'User-Agent':'lgbt-indicador-violencia (mailto-free)'}),timeout=40))['message']
         except Exception: time.sleep(2*(i+1))
 def ref(m):
     au=m.get('author',[]); nm=[f"{a.get('family','')}, {a.get('given','')[:1]}." if a.get('given') else a.get('family','') for a in au]

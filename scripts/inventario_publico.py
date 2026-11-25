@@ -1,4 +1,43 @@
-"""Inventário público gerado só a partir do que este repositório distribui.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Count sources, languages, types and scripts using only the files this repository distributes.
+
+Rebuilds the public inventory from the distributed file set (the same set as the provenance
+seal): ledger records, unique sources by identifier, distinct works, language, type, quartile
+and the Python scripts. It reuses the identity, language and type rules of the dashboard
+builder, reconciles the counts with the dashboard numbers, and writes the inventory as JSON and
+Markdown. With --check it only compares the result with the stored files and exits 1 on any
+difference.
+
+Inputs
+------
+- sources*.jsonl ledgers among the distributed files
+- data/dashboard_dados.publico.json
+- data/build_dashboard.py (loaded as a module)
+- make_provenance.py (loaded as a module)
+- analysis/full-text/verificacao-*.csv
+- sources/quartiles-from-literature-reviews.csv
+
+Outputs
+-------
+- manifest/INVENTARIO-PUBLICO.json
+- manifest/INVENTARIO-PUBLICO.md
+- prints a summary line to stdout
+
+Usage
+-----
+python3 -I scripts/inventario_publico.py [--check]
+
+Status
+------
+Packaging tool; the article cites the inventory it writes (listed in paper_numbers.json).
+It makes no analysis claim.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Inventário público gerado só a partir do que este repositório distribui.
 
 (escrutínio Astra, item T02).
 
@@ -28,6 +67,12 @@ Uso::
     python3 -I scripts/inventario_publico.py           # grava manifest/INVENTARIO-PUBLICO.{json,md}
     python3 -I scripts/inventario_publico.py --check   # só confere com o gravado
                                                        # (exit 1 se divergir)
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
 """
 
 import csv

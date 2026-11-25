@@ -1,9 +1,53 @@
-"""Verificação INDEPENDENTE dos resultados-chave: cada número é recalculado por um caminho de cálculo DIFERENTE do script que o gerou
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Check key results by recomputing each one through a different calculation path.
+
+Three checks. V1 recomputes the partial Spearman correlation between Sinan LGBT-phobia
+motivation and yearbook registers, controlling for population, through the inverse of the rank
+correlation matrix. V2 recomputes the PNS-implied LGB+ share interval with the delta method on
+the logit scale and compares it with the Monte Carlo interval. V3 refits the state-year panel
+two-way fixed-effects regressions by least squares with explicit dummies and a direct CR1
+sandwich estimator. Each value is compared with the generated file within a stated tolerance.
+
+Inputs
+------
+- data/sinan/serie_campo55_uf_ano.csv
+- data/anuario/anuario_lgbtfobia_uf_ano_v2.csv
+- sources/public/p2-f8-dados-uf/tabnet/raw/sidra_9514.json
+- data/concordancia/concordancia_v2.csv
+- data/sinan/triangulacao_pns_sinan.md
+- data/painel/painel_uf_ano_tse_brc.csv
+- data/painel/resultados_tse_brc.md
+
+Outputs
+-------
+- prints one line per comparison and a final result to stdout; exit status 1 on any failure
+
+Usage
+-----
+python3 -I data/verificacao_independente.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Verificação INDEPENDENTE dos resultados-chave: cada número é recalculado por um caminho de cálculo DIFERENTE do script que o gerou
 (outra álgebra, outra biblioteca de leitura) e comparado com o arquivo gerado.
   V1 correlação parcial de Spearman: v2 usa regressão dos postos; aqui, inversa da matriz de correlação (fórmula da precisão), dados lidos com pandas.
   V2 IC da parcela LGB+ implícita na PNS: v1 usa Monte Carlo; aqui, método delta (forma fechada) sobre o logit.
   V3 painel TWFE: o script usa Frisch-Waugh com matriz projetora; aqui, MQO com TODAS as dummies explícitas (lstsq) e CR1 pelo estimador sanduíche direto.
-Rodar: python3 -I data/verificacao_independente.py ; exit 1 se algum teste numérico falhar (tolerâncias declaradas em cada V)."""
+Rodar: python3 -I data/verificacao_independente.py ; exit 1 se algum teste numérico falhar (tolerâncias declaradas em cada V).
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

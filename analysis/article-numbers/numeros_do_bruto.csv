@@ -1,0 +1,9 @@
+id,linha_pt,impresso,formula,entradas,calculado,bate
+pns_lgb_18_29,736,57%,"soma(w, LGB+ 18-29) / soma(w, LGB+)",PNS 2019 microdado (scripts/acquire_pns2019.py): LGB+ n=1554; 18-29 n=697; peso V00291,57.384768,sim
+exp_afirma,340,11,falas de expectativa com postura AFIRMA,analysis/discourse/midia/amostra_codificada.csv: 13 falas; casadas no bruto 13; falas_expectativa.csv,11.0,sim
+exp_com_idade,340,11,falas que atribuem idade (regra fixa),analysis/discourse/midia/amostra_codificada.csv: 13 falas; casadas no bruto 13; falas_expectativa.csv,11.0,sim
+exp_idade_min,340,27,menor idade atribuída,analysis/discourse/midia/amostra_codificada.csv: 13 falas; casadas no bruto 13; falas_expectativa.csv,27.0,sim
+exp_idade_max,340,36,maior idade atribuída,analysis/discourse/midia/amostra_codificada.csv: 13 falas; casadas no bruto 13; falas_expectativa.csv,40.0,NAO
+exp_com_idade_emenda,340,11,falas que atribuem idade (regra emendada),analysis/discourse/midia/amostra_codificada.csv: 13 falas; casadas no bruto 13; falas_expectativa.csv,11.0,sim
+exp_idade_min_emenda,340,27,menor idade atribuída (regra emendada),analysis/discourse/midia/amostra_codificada.csv: 13 falas; casadas no bruto 13; falas_expectativa.csv,27.0,sim
+exp_idade_max_emenda,340,36,maior idade atribuída (regra emendada),analysis/discourse/midia/amostra_codificada.csv: 13 falas; casadas no bruto 13; falas_expectativa.csv,36.0,sim

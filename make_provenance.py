@@ -1,4 +1,41 @@
-"""Selo de proveniência: um chain_hash SHA-256 sobre TUDO que o repositório distribui.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Build or verify the provenance seal: one SHA-256 chain hash over every distributed file.
+
+Walks the repository, skips caches, raw microdata, nominal data, the article and the seal files
+themselves, and hashes each remaining file. With --build it writes the checksum manifest, the
+provenance record and the hash-chain note. With --verify it recomputes everything and compares
+it with the recorded seal, exiting with status 1 if any file differs. It also exposes the single
+exclusion rule that other scripts and tests import.
+
+Inputs
+------
+- every distributed file under the repository root (read to be hashed)
+- output/provenance.json (read by --verify)
+- manifest/SHA256SUMS.txt (read by --verify)
+
+Outputs
+-------
+- manifest/SHA256SUMS.txt (--build)
+- output/provenance.json (--build)
+- output/hash-chain.md (--build)
+- prints the chain hash and file count to stdout
+
+Usage
+-----
+python3 -I make_provenance.py --build
+python3 -I make_provenance.py --verify
+
+Status
+------
+Integrity tool of the package (docs/adr/0001); the article cites the seal it writes
+(listed in paper_numbers.json). It makes no analysis claim.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Selo de proveniência: um chain_hash SHA-256 sobre TUDO que o repositório distribui.
 
 (código, testes, dados derivados, ledgers, documentos).
 
@@ -20,6 +57,12 @@ Entra byte a byte: a conferência de que os scripts RECALCULAM os derivados (e b
 sistemas; o selo cobre o que está publicado, não o que a máquina de quem confere recalcula.
 chain_hash = sha256 de "<caminho>\\0<sha256>\\n" para cada arquivo, em ordem lexicográfica de
 caminho (inclui manifest/SHA256SUMS.txt).
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
 """
 
 import hashlib
@@ -62,9 +105,21 @@ NOMINAIS = re.compile(
 # Artigo: fora do selo (o artigo cita o selo, não o integra). docs/paper/: PDF publicado e seu
 # SHA256SUMS.txt; paper/: texto-fonte do artigo, fora do git; runs/: registro da execução
 # selada (scripts/registra_run.py), que grava o próprio chain_hash (dentro do selo seria circular)
-EXCLUI_PAPER_DIRS = ("paper/", "docs/paper/", "runs/")
+# assets/demo/: GIF do README gravado DEPOIS do selo, mostrando o chain_hash (dentro seria
+# circular); sem texto analisado, o pente de privacidade dele é à mão (quadros do GIF e o .tape)
+EXCLUI_PAPER_DIRS = ("paper/", "docs/paper/", "runs/", "assets/demo/")
 EXCLUI_PAPER_ARQ: set[str] = set()
-EXCLUI_ARQ = {"BUILD-STATE.md", ".DS_Store", "output/provenance.json", "output/hash-chain.md"}
+# uv.lock: lockfile vazio que o uv cria ao rodar na pasta; o ambiente travado é requirements.lock
+# e o .gitignore já o deixa fora do git (selado e fora do git quebraria o --verify num clone);
+# .profile: marcador local da guarda de perfil do autor, fora do git pela mesma razão
+EXCLUI_ARQ = {
+    "BUILD-STATE.md",
+    ".DS_Store",
+    "output/provenance.json",
+    "output/hash-chain.md",
+    "uv.lock",
+    ".profile",
+}
 SOMAS = "manifest/SHA256SUMS.txt"
 
 

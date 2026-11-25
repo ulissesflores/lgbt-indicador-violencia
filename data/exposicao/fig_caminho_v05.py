@@ -1,10 +1,49 @@
-"""Figura 1 da v0.5 (caminho do dado), redesenho em fundo branco da fig24 de figures/make_figures.py.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Plot the data-path diagram of the article: from the fact to the count.
+
+The script redraws, on a white background, the data-path diagram of figures/make_figures.py
+(same design and source files in figures/fontes/): boxes without grey bands and the share of
+Sinan records with an empty motive shown with one decimal. It imports plotting helpers and
+data readers from figures/make_figures.py and draws the scheme without a scale.
+
+Inputs
+------
+- figures/make_figures.py (helpers, constants and readers)
+- figures/fontes/seguro_pns2019.csv, serie_campo55_uf_ano.csv, anuario_lgbtfobia_uf_ano_v2.csv
+  and serie_ggb_vs_cobertura.csv (read through the helpers)
+- command line: output PNG path
+
+Outputs
+-------
+- the PNG file given on the command line (300 dpi)
+- prints the output path
+
+Usage
+-----
+python3 data/exposicao/fig_caminho_v05.py <output.png>
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Figura 1 da v0.5 (caminho do dado), redesenho em fundo branco da fig24 de figures/make_figures.py.
 
 Gerado por recorte do código da fig24 (mesmo desenho, mesmos arquivos de origem em figures/fontes/): sem as faixas
 cinza por linha, caixas com preenchimento branco e o vazio do motivo no Sinan com uma casa decimal (42,5% a 44,5%), como
 o quadro de afirmações. Título, nota e fonte ficam no documento.
 
 Uso: python3 data/exposicao/fig_caminho_v05.py <saida.png>
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
 """
 import sys
 from pathlib import Path

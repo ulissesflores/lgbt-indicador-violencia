@@ -1,7 +1,7 @@
 # C05 — PNS 2019: P(LGB+ | violência física 12 m, 18+) estimada DIRETAMENTE no microdado (gerado por pns_c05_razao_direta.py)
 
 > [!NOTE]
-> Leia o cabeçalho do script (limites). Critérios pré-escritos em `research-2026-10-21-rodada3/escrutinio/reanalise/CRITERIOS.md`. Taylor de último conglomerado + jackknife JKn por UPA; 574 estratos, 8.027 UPA.
+> Leia o cabeçalho do script (limites). Critérios pré-escritos em `analysis/robustness/reanalise/CRITERIOS.md`. Taylor de último conglomerado + jackknife JKn por UPA; 574 estratos, 8.027 UPA.
 
 ## 0. Reprodução (passou; senão o script aborta)
 

@@ -1,6 +1,44 @@
-"""S01. Extrai do PDF GGB 2019 (texto pdftotext -layout) o Anexo 3 (lista nominal, 329 casos)
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Parse the GGB 2019 report text into the nominal case list and the hashed public universe.
+
+Reads the text extracted from the GGB 2019 PDF with pdftotext -layout, parses Annex 3 (nominal
+list, 329 cases) and Annex 4 (source and link per case), assigns each case a salted hash id, and
+writes the nominal list outside git and the public universe table with hash ids only.
+
+Inputs
+------
+- sources/public/p3-ggb/_raw/txt/ggb2019.txt (pdftotext output; not tracked in git)
+- sources/public/p3-ggb/_raw/salt.txt (created if absent; not tracked in git)
+
+Outputs
+-------
+- sources/public/p3-ggb/_raw/ggb2019_lista_nominal.csv (names; not tracked in git)
+- analysis/ggb-audit/dados/ggb2019_universo_hash.csv (hash ids, state, category, source type)
+- prints counts per category, cases without link and cases missing from Annex 3
+
+Usage
+-----
+python3 -I analysis/ggb-audit/scripts/s01_parse_ggb2019.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+S01. Extrai do PDF GGB 2019 (texto pdftotext -layout) o Anexo 3 (lista nominal, 329 casos)
 e o Anexo 4 (fonte + link por caso). Saida NOMINAL so em sources/public/p3-ggb/_raw (fora do git).
-Saida publica: so ids hash. Uso: python3.14 -I s01_parse_ggb2019.py"""
+Saida publica: so ids hash. Uso: python3.14 -I s01_parse_ggb2019.py
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

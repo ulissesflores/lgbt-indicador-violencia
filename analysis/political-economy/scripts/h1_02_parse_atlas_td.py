@@ -1,7 +1,48 @@
-"""H1 insumo 2: tabelas por UF-ano do Atlas da Violência 2026 (Tab 2.2 registrados, 3.3 ocultos, 3.5 MVCI; anos 2014-2024),
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Parse the state-by-year tables of the Atlas da Violencia and the IPEA hidden-homicide study.
+
+Extracts from the text of Atlas 2026 (registered homicides, hidden homicides and homicides of
+undetermined intent, 2014-2024) and Atlas 2025 (hidden homicides, 2013-2023) the state rows of
+the named tables, and reads the two spreadsheets of IPEA discussion paper 3015 (registered and
+hidden homicides, 1996-2021). It checks the sum of the states against the Brazil total printed
+in each table and writes everything in long form.
+
+Inputs
+------
+- sources/public/t1-atlas-2026/atlas2026.txt and sources/public/t1-atlas-2025/atlas2025.txt
+- sources/public/q1-textointegral/F5/TABELA_A.4.xlsx and TABELA_A.5.xlsx
+- the Python package pandas
+
+Outputs
+-------
+- analysis/political-economy/dados/h1_atlas_td_uf_ano.csv
+- analysis/political-economy/dados/h1_atlas_parse_checks.txt
+- prints the checks and the row count to stdout
+
+Usage
+-----
+python3 -I analysis/political-economy/scripts/h1_02_parse_atlas_td.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+H1 insumo 2: tabelas por UF-ano do Atlas da Violência 2026 (Tab 2.2 registrados, 3.3 ocultos, 3.5 MVCI; anos 2014-2024),
 do Atlas 2025 (Tab 3.3 ocultos, 2013-2023) e do TD Ipea 3015 (Cerqueira & Lins 2024; Tabelas A.4 registrados e A.5 ocultos 1996-2021, xlsx do repositório).
 Saída: data/h1_atlas_td_uf_ano.csv (fonte,tabela,cod_uf,ano,valor) + data/h1_atlas_parse_checks.txt (totais Brasil lidos x soma das UFs).
-Rodar: python3 -I scripts/h1_02_parse_atlas_td.py"""
+Rodar: python3 -I scripts/h1_02_parse_atlas_td.py
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

@@ -1,4 +1,37 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Build the evidence table README of the literature review.
+
+Combines a fixed top and bottom text with one table per evidence level, listing for each work in
+rows.py the reference, quartile status, local file with its SHA-256, study design, verbatim
+finding with page and main limitation.
+
+Inputs
+------
+- analysis/literature/scripts/rows.py
+- analysis/literature/scripts/readme_top.md and readme_bottom.md
+- the local source files listed in rows.py (hashed)
+
+Outputs
+-------
+- analysis/literature/README.md
+- prints the number of rows to stdout
+
+Usage
+-----
+python3 -I analysis/literature/scripts/build_readme.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

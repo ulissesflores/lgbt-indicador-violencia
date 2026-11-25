@@ -1,4 +1,41 @@
-"""C08 (TRIAGEM, rodada 3) — Cobertura implícita do GGB com numeradores COMPARÁVEIS (cópia estendida de cobertura_implicita.py, que não é alterado).
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Recompute the implied GGB coverage with comparable numerators.
+
+The script repeats the expected-death method of cobertura_implicita.py and applies it to
+alternative numerators read from the GGB annual releases: the declared total, homicides plus
+robberies-with-death, and that count minus all trans people (a subtraction scenario, not a
+proven bound). It aborts unless it reproduces every row of cobertura_implicita.csv within
+tolerance, and it adds marginal scenarios, source anomalies and a proxy line for 2025 outside
+any verdict.
+
+Inputs
+------
+- data/sim/padroniza_idade.py (loaded as a module)
+- data/ggb/cobertura_implicita.csv (rows that must be reproduced)
+- sources/public/q1-textointegral/F2/pns2019/input_PNS_2019_utf8.txt and x/PNS_2019.txt
+- sources/public/p3-ggb/_raw/txt/ggb20NN.txt (text of the GGB annual releases)
+
+Outputs
+-------
+- data/ggb/c08_numeradores.csv
+- data/ggb/c08_cenarios_marginais.csv
+- data/ggb/c08_numeradores.md (also printed to stdout)
+
+Usage
+-----
+python3 -I data/ggb/ggb_c08_numeradores.py
+
+Status
+------
+Pre-registered analysis (analysis/robustness/reanalise/CRITERIOS.md, item C08). Feeds numbers
+printed in the article (listed in paper_numbers.json).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+C08 (TRIAGEM, rodada 3) — Cobertura implícita do GGB com numeradores COMPARÁVEIS (cópia estendida de cobertura_implicita.py, que não é alterado).
 Critérios de decisão escritos ANTES de rodar: analysis/robustness/reanalise/CRITERIOS.md (hash em CRITERIOS.sha256).
 Método do esperado E e todos os LIMITES: idênticos ao cobertura_implicita.py (SIM pareado por sexo x raça x faixa de 5 anos, composição LGB+ da PNS 2019; E = soma(pop LGB+ da célula x taxa da célula) x RR; RR = 1, 2,82, 3,84;
   prevalência 1,89% e 1,96%; NÃO é estimativa de mortes nem taxa; pareamento sem escolaridade, UF, urbano/rural; menores no numerador; autorrelato; denominador 2023-24 extrapolado).
@@ -17,7 +54,14 @@ Anomalias de fonte registradas: (1) as tabelas de causa de 2023 e 2025 são IDÊ
   "homicidios_decl" = 221 em 2023 (homicídio + latrocínio) mas 273 em 2024 (homicídio + latrocínio + outras): definições diferentes; N1 corrige para 269.
 SIM só existe até 2024 (data/sim/sim_agressoes_agregado.csv): 2025 não tem esperado verificável; a linha PROXY usa as taxas por célula de 2024 e a população extrapolada de 2025, fora de qualquer veredito.
 Reprodução obrigatória (aborta): todas as linhas de data/ggb/cobertura_implicita.csv (agressão e agressão+indet, 2023-24, 4 prevalências, 3 RR, 2 medidas), esperado ±0,1 e cobertura ±0,001.
-Rodar: python3 -I data/ggb/ggb_c08_numeradores.py   Saídas: data/ggb/c08_numeradores.md, c08_numeradores.csv e (v0.3) c08_cenarios_marginais.csv"""
+Rodar: python3 -I data/ggb/ggb_c08_numeradores.py   Saídas: data/ggb/c08_numeradores.md, c08_numeradores.csv e (v0.3) c08_cenarios_marginais.csv
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

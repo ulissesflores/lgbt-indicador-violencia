@@ -1,6 +1,45 @@
-"""U3 do PRE-REGISTRO: 65 Estados-membros da ONU que a ILGA DB marca como criminalizadores.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Build the table of the 65 UN member states that the ILGA database marks as criminalizing.
+
+For each such state it joins the ILGA penalty and death-penalty fields with the V-Dem regime
+type, the legitimation ideology and the V-Party position of the head of state's party. Missing
+fields are left empty, nothing is invented.
+
+Inputs
+------
+- sources/public/q1-textointegral/discurso/governos/ilga-db-csssa-all.json
+- sources/public/q1-textointegral/discurso/governos/vdemdata-vdem.RData
+- sources/public/q1-textointegral/discurso/governos/vdemdata-vparty.RData
+- requires pyreadr, pycountry and pandas; REPO_ROOT may override the repo root
+
+Outputs
+-------
+- analysis/discourse/governos/u3_65_criminalizam.csv
+- prints the row count and value counts of regime, death penalty and matched party
+
+Usage
+-----
+python3 -I analysis/discourse/governos/scripts/build_u3.py
+
+Status
+------
+Pre-registered analysis (preregistrations/governos/PRE-REGISTRO.md).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+U3 do PRE-REGISTRO: 65 Estados-membros da ONU que a ILGA DB marca como criminalizadores.
 Entradas: ilga-db-csssa-all.json, vdemdata-vdem.RData, vdemdata-vparty.RData (em sources/public/q1-textointegral/discurso/governos/).
-Saida: ../u3_65_criminalizam.csv. Requer pyreadr e pycountry. Nao inventa: campo ausente = vazio."""
+Saida: ../u3_65_criminalizam.csv. Requer pyreadr e pycountry. Nao inventa: campo ausente = vazio.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

@@ -1,8 +1,46 @@
-"""N3 (contexto) do F10 a partir dos microdados do SIM: onde ocorrem e com que meio as mortes por agressão, por sexo x raça, 2022-2024 agregado.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Tabulate place and means of aggression deaths by sex and race, 2022 to 2024 pooled.
+
+Reads the aggregated SIM aggression table, keeps aggression deaths of 2022 to 2024 with known
+sex and race/color, and builds raw (not standardized) shares by place of death (home, public
+road, health facility, other), unknown place as a share of the group, and firearm share. Groups
+are Black and non-Black women and men, plus all women and all men. Unknown place is excluded
+from the place denominators.
+
+Inputs
+------
+- data/sim/sim_agressoes_agregado.csv
+
+Outputs
+-------
+- data/sim/contexto_local.md
+- prints the same table to stdout
+
+Usage
+-----
+python3 -I data/sim/contexto_local.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+N3 (contexto) do F10 a partir dos microdados do SIM: onde ocorrem e com que meio as mortes por agressão, por sexo x raça, 2022-2024 agregado.
 LOCOCOR: 1 hospital, 2 outro estabelecimento de saúde, 3 domicílio, 4 via pública, 5 outros, 6 aldeia indígena, 9/branco ignorado. arma = X93-X95.
 Proporções BRUTAS (não padronizadas: o interesse é o perfil do contexto, não a taxa); local ignorado/branco excluído do denominador e reportado.
 Proxy (⚠️): 'domicílio' NÃO é 'violência doméstica' (inclui crimes de rua cujo óbito é no domicílio e exclui a violência doméstica cuja morte ocorre no hospital): é o proxy que o Atlas usa (35,2% das mulheres em 2024).
-Rodar: python3 -I data/sim/contexto_local.py   Saída: data/sim/contexto_local.md"""
+Rodar: python3 -I data/sim/contexto_local.py   Saída: data/sim/contexto_local.md
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

@@ -1,6 +1,47 @@
-"""Trava os números do C09 (presidência x violência letal). Pré-registro: PREREGISTRO-C09.md (hash em PREREGISTRO-C09.sha256).
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Lock the published numbers of the C09 analysis of presidential terms and lethal violence.
+
+Checks that the pre-registration body still matches the hash recorded before the outcomes were
+computed, that the structure report matches what the pre-registration cites, and that the
+panel (D2) and interrupted time series (D1) result files carry the published values within the
+rounding of the printed numbers, including the pre-registered verdict of the primary analysis.
+
+Inputs
+------
+- data/presidencia/PREREGISTRO-C09.md
+- data/presidencia/PREREGISTRO-C09.sha256
+- data/presidencia/c09_estrutura.md
+- data/presidencia/c09_d2_resultados.csv
+- data/presidencia/c09_d2_resultados.md
+- data/presidencia/c09_d1_resultados.csv
+
+Outputs
+-------
+- none (assertions only)
+
+Usage
+-----
+python3 -I -m pytest tests/test_c09_presidencia.py
+
+Status
+------
+Pre-registered analysis (data/presidencia/PREREGISTRO-C09.md).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Trava os números do C09 (presidência x violência letal). Pré-registro: PREREGISTRO-C09.md (hash em PREREGISTRO-C09.sha256).
 Lê os CSV/MD gerados por c09_estrutura.py, c09_d2_painel.py e c09_d1_its.py. Tolerâncias = arredondamento do número impresso no RELATORIO-C09.md.
-Rodar: python3 -m pytest -q tests/   (sem -I: o pytest está no site do usuário)."""
+Rodar: python3 -m pytest -q tests/   (sem -I: o pytest está no site do usuário).
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import csv, hashlib, math
 from pathlib import Path
 

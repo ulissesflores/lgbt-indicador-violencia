@@ -1,6 +1,46 @@
-"""H2 sensibilidade: o ESTADIC traz o TOTAL de delegacias especializadas da Polícia Civil por UF (ESEG5134 em 2019; sem tipo: inclui DEAM etc.), não delegacia de crime racial/LGBT.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Check a weak proxy for H2 using the count of specialized police stations.
+
+Reads the number of specialized civil police stations per state from the 2019 ESTADIC (a total
+without type, which includes women's stations) and computes the Spearman correlation between
+stations per million inhabitants and the number of state-years without data in the Yearbook,
+with a 20000-draw permutation p-value (seed 20261026). Run it after h2_02_analise.py.
+
+Inputs
+------
+- analysis/political-economy/dados/raw/estadic/estadic2019.xlsx and estadic2023.xlsx
+- analysis/political-economy/dados/h2_uf_resumo.csv
+- data/atlas_uf_series.csv
+- the Python packages openpyxl, numpy, pandas and scipy
+
+Outputs
+-------
+- analysis/political-economy/dados/h2_resultados_delegacias_proxy.csv
+- prints the number of states and the correlation to stdout
+
+Usage
+-----
+python3 -I analysis/political-economy/scripts/h2_03_delegacias_proxy.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+H2 sensibilidade: o ESTADIC traz o TOTAL de delegacias especializadas da Polícia Civil por UF (ESEG5134 em 2019; sem tipo: inclui DEAM etc.), não delegacia de crime racial/LGBT.
 Proxy fraco, reportado como tal. Teste: Spearman entre nº de delegacias especializadas por milhão de habitantes e nº de UF-anos sem informação no Anuário; permutação 20000, semente fixa.
-Rodar: python3 -I scripts/h2_03_delegacias_proxy.py (depois de h2_02_analise.py)"""
+Rodar: python3 -I scripts/h2_03_delegacias_proxy.py (depois de h2_02_analise.py)
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

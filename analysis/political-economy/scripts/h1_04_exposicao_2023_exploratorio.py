@@ -1,7 +1,46 @@
-"""H1 (EXPLORATÓRIO, não pré-especificado: a ideia surgiu depois de ler o texto do Atlas 2025 p.21, onde o próprio Ipea/FBSP atribui a queda de ocultos em 2023 à 'repercussão' do Atlas 2024):
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Compare the 2023 change in undetermined-intent deaths between program and other states.
+
+For the year pairs 2021-2022, 2022-2023, 2023-2024 and 2022-2024 it computes the mean log change
+of undetermined-intent deaths (SIM TabNet) for the seven states with a goals program minus the
+other states, with a p-value from 20000 random relabelings of states (seed 20261022), and the
+death counts of each group at both ends of each pair.
+
+Inputs
+------
+- analysis/political-economy/dados/h1_sim_tabnet_uf_ano.csv
+- analysis/political-economy/dados/h1_programas_metas.csv
+- the Python packages numpy and pandas
+
+Outputs
+-------
+- analysis/political-economy/dados/h1_exposicao_2023_exploratorio.csv
+- prints the result table to stdout
+
+Usage
+-----
+python3 -I analysis/political-economy/scripts/h1_04_exposicao_2023_exploratorio.py
+
+Status
+------
+Post hoc analysis, as stated in the original docstring of this file (kept under Notes).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+H1 (EXPLORATÓRIO, não pré-especificado: a ideia surgiu depois de ler o texto do Atlas 2025 p.21, onde o próprio Ipea/FBSP atribui a queda de ocultos em 2023 à 'repercussão' do Atlas 2024):
 as UFs com programa de metas (7 de h1_programas_metas.csv) reagiram mais do que as demais à exposição pública da MVCI em 2023, e isso reverteu em 2024?
 Estatística: média de log(MVCI_t/MVCI_t-1) (Y10-Y34, SIM/TabNet) tratadas - controles; p por permutação de rótulos (UF), 20000 sorteios, semente fixa.
-Rodar: python3 -I scripts/h1_04_exposicao_2023_exploratorio.py"""
+Rodar: python3 -I scripts/h1_04_exposicao_2023_exploratorio.py
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

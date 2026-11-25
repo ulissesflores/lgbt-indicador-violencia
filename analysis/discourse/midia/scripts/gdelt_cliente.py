@@ -1,6 +1,44 @@
-"""Cliente GDELT DOC 2.0 (publico, sem chave). Limite do servico: 1 pedido/5 s.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Query the GDELT DOC 2.0 API politely and save each raw response with its sha256.
+
+Client for the public GDELT DOC 2.0 API (no key; the service allows one request per 5 seconds).
+It uses a shared file lock, keeps at least 8 seconds between requests and backs off on HTTP 429,
+timeouts and suspiciously empty answers. When run directly it sends one probe query.
+
+Inputs
+------
+- https://api.gdeltproject.org/api/v2/doc/doc (network access, through curl)
+- command line: query, mode and optional key=value parameters
+
+Outputs
+-------
+- sources/public/q1-textointegral/discurso/midia/gdelt/<tag>_<hash>.json (not tracked in git)
+- lock file sources/public/q1-textointegral/discurso/.gdelt.lock
+- prints status code, sha256, file path and the first 400 bytes of the answer
+
+Usage
+-----
+python3 -I analysis/discourse/midia/scripts/gdelt_cliente.py <query> <mode> [key=value ...]
+
+Status
+------
+Data acquisition step; no analysis claim.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Cliente GDELT DOC 2.0 (publico, sem chave). Limite do servico: 1 pedido/5 s.
 Trava de arquivo compartilhada (outras frentes podem usar a mesma API/IP), espaco minimo de 8 s,
-backoff em 429/timeout/vazio suspeito. Salva a resposta bruta + sha256 em RAW."""
+backoff em 429/timeout/vazio suspeito. Salva a resposta bruta + sha256 em RAW.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

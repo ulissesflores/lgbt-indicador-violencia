@@ -1,4 +1,41 @@
-"""Registro de uma execucao selada em runs/<UTC>/ (norma Codex Hash).
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Record a sealed execution in a timestamped run folder.
+
+Runs the provenance verification and stops if it does not report a verified seal. Otherwise it
+creates a run folder named by the UTC time and writes a manifest with the git commit, whether
+the working tree is dirty, the chain hash, the number of sealed files, platform and Python
+details and the pip freeze of the running environment, plus a checksum file for the seal files
+and the requirement files. The run folder is outside the seal because it stores the chain hash.
+
+Inputs
+------
+- make_provenance.py (run with --verify)
+- output/hash-chain.md
+- output/provenance.json
+- requirements.txt
+- requirements.lock
+- git metadata of the repository (git rev-parse, git status)
+
+Outputs
+-------
+- runs/<UTC time>/manifest.json
+- runs/<UTC time>/checksums.sha256
+- prints one confirmation line to stdout
+
+Usage
+-----
+.run/venv/bin/python scripts/registra_run.py (run after python3 -I run_all.py --selar)
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Registro de uma execucao selada em runs/<UTC>/ (norma Codex Hash).
 
 Roda depois de ``run_all.py --selar``: confere o selo com ``make_provenance.py --verify`` e grava
 ``manifest.json`` (commit, ambiente, pip freeze verbatim do ambiente que rodou, chain_hash) e
@@ -6,6 +43,12 @@ Roda depois de ``run_all.py --selar``: confere o selo com ``make_provenance.py -
 proprio chain_hash.
 
 Uso: .run/venv/bin/python scripts/registra_run.py
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
 """
 
 from __future__ import annotations

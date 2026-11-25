@@ -1,6 +1,44 @@
-"""S04. Extrai texto visivel de cada HTML baixado e marca (a) pagina-erro/soft-404/Wayback offline,
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Extract the visible text of each downloaded page and flag errors, name and city presence.
+
+For every saved HTML page it extracts the visible text and flags (a) error pages, soft 404s and
+offline Wayback pages, (b) whether the name or nickname of the victim appears, (c) whether the
+city appears. Raw text stays outside git; the public flags carry no names.
+
+Inputs
+------
+- sources/public/p3-ggb/_raw/ggb2019_lista_nominal.csv (not tracked in git)
+- sources/public/p3-ggb/_raw/news/<id>.html (not tracked in git)
+
+Outputs
+-------
+- sources/public/p3-ggb/_raw/news_txt/<id>.txt (not tracked in git)
+- analysis/ggb-audit/dados/fonte_checks.csv (flags per case, no names)
+- prints counts of valid files, removed offline pages and flagged names and death terms
+
+Usage
+-----
+python3 -I analysis/ggb-audit/scripts/s04_extrair_texto.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+S04. Extrai texto visivel de cada HTML baixado e marca (a) pagina-erro/soft-404/Wayback offline,
 (b) presenca do nome/alcunha da vitima, (c) presenca da cidade. Texto bruto em _raw/news_txt (fora do git);
-flags publicas (sem nomes) em data/fonte_checks.csv. Uso: python3.14 -I s04_extrair_texto.py"""
+flags publicas (sem nomes) em data/fonte_checks.csv. Uso: python3.14 -I s04_extrair_texto.py
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

@@ -1,4 +1,40 @@
-"""C02 (TRIAGEM, rodada 3) — Painel F8 com causa INDETERMINADA: o desfecho "registrado" (X85-Y09) é afetado pelo próprio governo?
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Test whether undetermined-cause deaths respond to governor ideology in the panel.
+
+The script reruns the state-by-year panel (351 state-years, 2012-2024; log rate on governor
+ideology with state and year fixed effects, standard errors clustered by state) for two new
+outcomes: the log rate of aggression plus undetermined-intent deaths, and the share of
+undetermined among both, a falsification outcome. It first reproduces the registered estimates
+and wild-cluster bootstrap p-values and aborts if they do not match. It is exploratory and not
+causal.
+
+Inputs
+------
+- data/painel/painel_diagnosticos.py (loaded as a module for the bootstrap functions)
+- data/painel/painel_uf_ano_tse_brc.csv, resultados_tse_brc.md and diagnosticos.md
+- data/sim/sim_agressoes_agregado.csv and data/atlas_uf_series.csv
+- sources/public/p2-f8-dados-uf/sidra/ (SIDRA tables 6407 and 6403 as JSON)
+
+Outputs
+-------
+- data/painel/c02_indet_resultados.md (also printed to stdout)
+- data/painel/c02_indet_resultados.csv
+
+Usage
+-----
+python3 -I data/painel/painel_c02_indet.py
+
+Status
+------
+Pre-registered analysis (analysis/robustness/reanalise/CRITERIOS.md, item C02). Feeds numbers
+printed in the article (listed in paper_numbers.json).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+C02 (TRIAGEM, rodada 3) — Painel F8 com causa INDETERMINADA: o desfecho "registrado" (X85-Y09) é afetado pelo próprio governo?
 Critérios de decisão escritos ANTES de rodar: analysis/robustness/reanalise/CRITERIOS.md (hash em CRITERIOS.sha256).
 Método: variante `tse brc` do painel_f8.py (351 UF-anos 2012-2024; ln(taxa) = b x ideologia(0-10) + EF(UF) + EF(ano); EP agrupado por UF, CR1, G=27;
   IC95% = b ± 1,96 EP; p do bootstrap wild-cluster-t Rademacher com H0 imposta, B=4999, funções IMPORTADAS de painel_diagnosticos.py sem alterá-lo).
@@ -13,7 +49,14 @@ LIMITES: (1) o agregado só marca `arma` dentro de X85-Y09 (Y22-Y24 sem marca): 
   manipulação (capacidade de perícia, mudança de código, composição de mortes): rejeitar H0 não prova manipulação, e não rejeitar não prova ausência (reportado o viés máximo implícito do IC);
   (4) nenhum teste do 'estimado' do Atlas (série por UF-ano não está em disco); (5) 27 clusters: o IC b±1,96EP é o publicado (CR1 normal), mais curto que o de t(26); o wild p é a referência de inferência;
   (6) exploratório, NÃO causal; seis grupos x três colunas = muitas comparações: Holm declarado nos critérios.
-Rodar: python3 -I data/painel/painel_c02_indet.py   Saídas: data/painel/c02_indet_resultados.md e c02_indet_resultados.csv"""
+Rodar: python3 -I data/painel/painel_c02_indet.py   Saídas: data/painel/c02_indet_resultados.md e c02_indet_resultados.csv
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

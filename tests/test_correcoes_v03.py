@@ -1,6 +1,58 @@
-"""Trava as correções da frente R da v0.3 (2026-10-24), feitas depois do escrutínio do Astra: R1 (amostra LGB+ observada e n necessário),
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Lock the published corrections R1, R2, R4, R6 and R7 by independent recomputation.
+
+Each test recomputes with the standard library what a result file publishes: that the 27
+states add up to the national row of the Sinan series (R2), the observed LGB+ sample of the PNS
+2019 and the sample sizes needed to survey them (R1), the status of scenario N2 and the 2024
+counterexample (R4), the intact pre-registered form and zero-containing intervals of the
+wild-cluster inversion (R6), and the Fisher results of two codings of the parliament data (R7).
+Identity tests have negative controls.
+
+Inputs
+------
+- data/sinan/serie_campo55_uf_ano.csv
+- analysis/ggb-audit/dados/serie_ggb_vs_cobertura.csv
+- analysis/ggb-audit/scripts/s09_uf_series.py
+- analysis/survey-cost/deff_pns2019.csv
+- analysis/survey-cost/capacidade_por_opcao.csv
+- analysis/survey-cost/n_necessario.csv
+- analysis/survey-cost/cenarios_n_custo.csv
+- data/ggb/c08_cenarios_marginais.csv
+- data/ggb/ggb_c08_numeradores.py
+- data/ggb/cobertura_implicita.md
+- data/painel/R6-PREREGISTRO-FORMA.md
+- data/painel/R6-PREREGISTRO-FORMA.sha256
+- data/painel/r6_ic_wild_invertido.csv
+- data/painel/c02_indet_resultados.csv
+- analysis/robustness/simetria/r7_parlamento_sensibilidade.csv
+- analysis/robustness/simetria/r7_parlamento_sensibilidade.md
+
+Outputs
+-------
+- none (assertions only)
+
+Usage
+-----
+python3 -I -m pytest tests/test_correcoes_v03.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Trava as correções da frente R da v0.3 (2026-10-24), feitas depois do escrutínio do Astra: R1 (amostra LGB+ observada e n necessário),
 R2 (total nacional do Sinan duplicado), R4 (N2 como cenário, não limite), R6 (IC por inversão do wild-cluster), R7 (Parlamento 0/49 e 1/49).
 Cada teste recalcula por conta própria (outra implementação, biblioteca padrão) o que o arquivo publica; os testes de identidade têm controle negativo.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
 """
 import hashlib
 import math

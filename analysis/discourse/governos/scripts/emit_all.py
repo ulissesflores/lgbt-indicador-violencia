@@ -1,4 +1,42 @@
-"""Escreve sources.jsonl desta frente SO via emit_sources.py (porta unica). Calcula sha256 dos arquivos em disco."""
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Register the downloaded sources of the governments study in sources.jsonl.
+
+Computes the sha256 of each source file on disk (ILGA extracts, V-Dem files, saved pages and
+PDFs) and calls the emit_sources.py tool once per source, so that the catalogue is written
+only through that single entry point. Prints the number of entries.
+
+Inputs
+------
+- sources/public/q1-textointegral/discurso/governos/ and its brasil/ folder
+- sources/public/q1-textointegral/F8-literatura/ and entregues-pelo-autor/ (PDFs)
+- emit_sources.py (path in the EMIT_SOURCES variable; REPO_ROOT may override the repo root)
+
+Outputs
+-------
+- analysis/discourse/governos/sources.jsonl (written by emit_sources.py)
+- prints the number of entries; errors go to stderr
+
+Usage
+-----
+python3 -I analysis/discourse/governos/scripts/emit_all.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Escreve sources.jsonl desta frente SO via emit_sources.py (porta unica). Calcula sha256 dos arquivos em disco.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

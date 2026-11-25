@@ -1,11 +1,53 @@
-"""R7 (v0.3, 2026-10-24): Parlamento F2 — as duas codificações de "fonte primária" (0/49 e 1/49) como sensibilidade, com Fisher exato,
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Compute the R7 sensitivity table for sources cited in F2 parliamentary speeches.
+
+The script compares, with exact Fisher tests, the share of F2 parliament speeches that cite a
+primary source or any named source against the baseline sample. It reports two codings of the
+original coder (the rule as applied, 0 of 49, and the literal codebook rule, 1 of 49) and the
+second coder, using only counts already recorded. It asserts the expected counts, then writes
+a CSV and a Markdown note; it does not recode anything.
+
+Inputs
+------
+- analysis/robustness/simetria/recontagem_x49_C27.csv (counts per coder, stratum
+  F2-Parlamento)
+- analysis/robustness/simetria/baseline_resumo_C27.json (baseline sample counts)
+- analysis/robustness/simetria/SIMETRIA.md (read to check the quoted codebook rule)
+
+Outputs
+-------
+- analysis/robustness/simetria/r7_parlamento_sensibilidade.csv
+- analysis/robustness/simetria/r7_parlamento_sensibilidade.md
+- prints the Markdown note to stdout
+
+Usage
+-----
+python3 -I analysis/robustness/simetria/scripts/r7_parlamento_sensibilidade.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+R7 (v0.3, 2026-10-24): Parlamento F2 — as duas codificações de "fonte primária" (0/49 e 1/49) como sensibilidade, com Fisher exato,
 e a separação entre "fonte nomeada", "fonte primária" e "fonte capaz de sustentar a afirmação". NENHUMA recodificação: só contagens já gravadas.
 Entradas: ../recontagem_x49_C27.csv (contagens por codificador), ../baseline_resumo_C27.json (linha de base: 60 falas da Câmara com estatística fora
 dos 4 temas, codificadas pelo SEGUNDO codificador, Grok) e ../SIMETRIA.md (regra literal do codebook: o relatório com nome e ano conta como primária -> 1/49).
 Fisher exato bicaudal = mesma função de fisher_C27.py (hipergeométrica; soma das probabilidades <= a observada).
 Saídas: ../r7_parlamento_sensibilidade.csv e .md.   Rodar: python3 -I r7_parlamento_sensibilidade.py
 Limite: a linha de base foi codificada pelo segundo codificador; só "Grok x Grok" compara o mesmo codificador. "Fonte capaz de sustentar a afirmação"
-não é variável codificada (codificá-la seria recodificar): fica declarada como não medida."""
+não é variável codificada (codificá-la seria recodificar): fica declarada como não medida.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import ast, csv, json
 from math import comb
 from pathlib import Path

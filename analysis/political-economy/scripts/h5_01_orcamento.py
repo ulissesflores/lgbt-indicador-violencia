@@ -1,9 +1,52 @@
-"""H5 insumo: orçamento federal EXECUTADO por ação, IBGE e ações de informação/estatística de segurança pública.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Download and filter the federal budget execution files for statistics-related actions.
+
+Downloads (once, with curl) the yearly CGU Transparency Portal expenditure files for 2014-2025
+and the SIOP open-data RDF budget laws for 2007-2013, records the SHA-256 of each archive and
+keeps the rows of the IBGE budget unit and of actions whose name matches victimization, SINESP,
+statistics, survey or diagnosis terms in justice and security bodies. The two sources use
+different value concepts and are not merged. An optional argument selects cgu, rdf or all.
+
+Inputs
+------
+- https://dadosabertos-download.cgu.gov.br/PortalDaTransparencia/saida/orcamento-despesa/
+  <year>_OrcamentoDespesa.zip
+- https://www1.siop.planejamento.gov.br/downloads/rdf/loa<year>.zip
+- cache folder analysis/political-economy/dados/raw/orcamento (or the folder in F5_CACHE)
+
+Outputs
+-------
+- analysis/political-economy/dados/h5_orcamento_acoes.csv (h5_orcamento_acoes_<mode>.csv for a
+  single source)
+- analysis/political-economy/dados/h5_orcamento_hashes_<mode>.txt
+- the downloaded zip archives (not tracked in git)
+
+Usage
+-----
+python3 -I analysis/political-economy/scripts/h5_01_orcamento.py [cgu|rdf|tudo]
+
+Status
+------
+Data acquisition step; no analysis claim.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+H5 insumo: orçamento federal EXECUTADO por ação, IBGE e ações de informação/estatística de segurança pública.
 Duas fontes oficiais SEM emenda entre elas (conceitos de valor diferem; NÃO somar nem emendar):
  (a) 2014-2025: Portal da Transparência/CGU, arquivo anual 'OrcamentoDespesa' (https://portaldatransparencia.gov.br/download-de-dados/orcamento-despesa/<ano>); colunas ORÇAMENTO INICIAL/ATUALIZADO/EMPENHADO/REALIZADO.
  (b) 2007-2013: SIOP/Ministério do Planejamento, dados abertos em RDF da LOA (https://www1.siop.planejamento.gov.br/downloads/rdf/loa<ano>.zip); valores Empenhado/Liquidado/Pago e Dotação Inicial/Projeto de Lei.
 Filtro: unidade orçamentária cujo nome contém 'GEOGRAFIA E ESTAT' (IBGE) + (qualquer UO) ações cujo nome casa com VITIMIZ|SINESP|ESTATIST... em Segurança/Justiça. Zips guardados em data/raw/orcamento (F5_CACHE sobrescreve); sha256 de cada zip em data/h5_orcamento_hashes.txt.
-Rodar: python3 -I scripts/h5_01_orcamento.py [cgu|rdf|tudo]"""
+Rodar: python3 -I scripts/h5_01_orcamento.py [cgu|rdf|tudo]
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

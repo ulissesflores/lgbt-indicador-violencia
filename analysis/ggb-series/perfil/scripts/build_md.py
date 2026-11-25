@@ -1,4 +1,41 @@
-"""Gera GGB-O-QUE-E.md: narrativa (aqui) + tabela afirmacao->fonte->trecho->pagina->sha256 (de evidencias.csv)."""
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Build the GGB profile document from the verified evidence table.
+
+Reads evidencias.csv (one verbatim quote per claim, with page and SHA-256), keeps a selected set
+of claim identifiers, and writes a Markdown document that combines a fixed narrative about what
+the Grupo Gay da Bahia (GGB) is and what its count measures with a table linking each claim to
+its source, quote, page and file hash. Prints the number of lines written.
+
+Inputs
+------
+- analysis/ggb-series/perfil/evidencias.csv (written by build_perfil.py)
+
+Outputs
+-------
+- analysis/ggb-series/perfil/GGB-O-QUE-E.md
+- prints the line count to stdout
+
+Usage
+-----
+python3 -I analysis/ggb-series/perfil/scripts/build_md.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Gera GGB-O-QUE-E.md: narrativa (aqui) + tabela afirmacao->fonte->trecho->pagina->sha256 (de evidencias.csv).
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

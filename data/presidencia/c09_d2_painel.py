@@ -1,11 +1,59 @@
-"""C09 — D2: alinhamento federal-estadual no painel UF x ano (primária + S1-S7 do PREREGISTRO-C09.md, seções 3 e 4).
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Estimate the federal-state alignment model (D2) on the state-by-year panel.
+
+The primary model regresses the log total homicide rate on the governor ideology, the same
+variable interacted with the ideology score of the sitting president, and state and year fixed
+effects (351 state-years), with state-clustered errors and a wild-cluster bootstrap under the
+imposed null. It also runs sensitivity variants S1 to S7, including aggression plus
+undetermined-intent counts and the BLS9 scale. It first reproduces the published estimates and
+the bootstrap p-value and aborts if they differ. It is exploratory and not causal.
+
+Inputs
+------
+- data/painel/painel_uf_ano_tse_brc.csv, painel_uf_ano_tse.csv, resultados_tse_brc.md,
+  diagnosticos.md
+- data/ideologia/ideologia_painel_tse_por_uf_ano.csv and
+  data/governadores_uf_2011_2026_tse.csv
+- data/sim/sim_agressoes_agregado.csv and data/atlas_uf_series.csv
+- data/painel/painel_diagnosticos.py and data/presidencia/c09_estrutura.py (loaded as modules)
+- the SIDRA 6407 and 6403 JSON files under sources/public/p2-f8-dados-uf/sidra/
+-
+  sources/public/p2-f8-governos/zucco-power-dataverse/bls9_estimates_partiespresidents_long.tab
+
+Outputs
+-------
+- data/presidencia/c09_d2_resultados.md (also printed to stdout)
+- data/presidencia/c09_d2_resultados.csv
+
+Usage
+-----
+python3 -I data/presidencia/c09_d2_painel.py
+
+Status
+------
+Pre-registered analysis (data/presidencia/PREREGISTRO-C09.md). Feeds numbers printed in the
+article (listed in paper_numbers.json).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+C09 — D2: alinhamento federal-estadual no painel UF x ano (primária + S1-S7 do PREREGISTRO-C09.md, seções 3 e 4).
 Pré-registro: PREREGISTRO-C09.md (sha256 em PREREGISTRO-C09.sha256, gravado ANTES deste script existir).
 Modelo primário: ln(tx_total) = b1 g + b2 (g x p) + EF(UF) + EF(ano); painel data/painel/painel_uf_ano_tse_brc.csv (351 UF-anos); g = coluna `ideologia`; p = escore BRC do
 presidente do ano (partido de eleição, ponderado por dias; c09_estrutura.pres_score). EP CR1 por UF e bootstrap wild-cluster-t (Rademacher, B = 4999, H0 imposta com g no modelo
 restrito) com as funções de data/painel/painel_diagnosticos.py IMPORTADAS sem alteração. Numeradores agressão+indet e denominadores: cópia literal da lógica de painel_c02_indet.py.
 Portas de reprodução (abortam): b e EP dos 6 desfechos de resultados_tse_brc.md; p wild 0,943 de tx_total (semente 20261021, primeiro sorteio); SIM agressão = Atlas;
 ideologia do painel = BRC por período arredondado; BLS9 tx_total = resultados_tse_brc.md (341 UF-anos).
-Rodar: python3 -I c09_d2_painel.py   Saídas: c09_d2_resultados.md, c09_d2_resultados.csv"""
+Rodar: python3 -I c09_d2_painel.py   Saídas: c09_d2_resultados.md, c09_d2_resultados.csv
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

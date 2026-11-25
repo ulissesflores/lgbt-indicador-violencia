@@ -1,5 +1,41 @@
 #!/usr/bin/env python3
-"""build_dashboard.py -- gera TODO o material do dashboard do artigo LGBT-INDICADOR.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Build the dashboard data, specification and key figures of the article.
+
+Author tool, not reproducible from this repository: it counts files of the full source project
+(including source documents and microdata that are not distributed), reads the label files,
+the article text in each locale and the site types, and computes every number shown on the
+dashboard from those files. It runs a Node process to evaluate the site types when asked,
+writes the outputs and hashes them. It reads only and does not use the network.
+
+Inputs
+------
+- the full source project tree (environment variable LGBT_PROJETO; not distributed)
+- labels.<locale>.json and index.<locale>.mdx next to the output directory
+- optional site chart types (environment variable SITE_TIPOS) and TypeScript compiler
+  (SITE_TSC)
+
+Outputs
+-------
+- <output directory>/dashboard_dados.json and lgbt-violencia.data.ts (output directory from
+  DASHBOARD_OUT)
+- <output directory>/DASHBOARD-SPEC.md, KPIS-FINAIS.md and SHA256SUMS.txt
+- prints the final key figures and the number of hashes written
+
+Usage
+-----
+LGBT_PROJETO=<project root> DASHBOARD_OUT=<output dir> python3 -I data/build_dashboard.py
+
+Status
+------
+Feeds numbers printed in the article (listed in paper_numbers.json).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+build_dashboard.py -- gera TODO o material do dashboard do artigo LGBT-INDICADOR.
 
 FERRAMENTA DO AUTOR, NÃO REPRODUZÍVEL A PARTIR DESTE REPOSITÓRIO: conta arquivos da árvore completa do projeto de origem
 (inclusive sources/public/ com PDFs e microdados que não são distribuídos) e lê os rótulos (labels.<locale>.json), os textos do
@@ -12,6 +48,12 @@ Saidas (mesma pasta): dashboard_dados.json, lgbt-violencia.data.ts, DASHBOARD-SP
 Regra: todo numero exibido e CONTADO aqui, a partir de arquivos reais do projeto; nenhum numero e digitado
 a mao. Sem aleatoriedade (SEED fixo so documenta isso). P8 le a base (k pontos) e os limites exatos da reanalise C03 em data/painel/.
 Somente leitura nas fontes; so escreve na pasta do dashboard. Sem rede.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
 """
 import csv
 import datetime as dt

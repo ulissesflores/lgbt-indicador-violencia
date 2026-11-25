@@ -1,5 +1,39 @@
 #!/usr/bin/env python3
-"""Efeito de desenho (deff) da PNS 2019 para violencia e orientacao sexual, e n necessario.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Estimate PNS 2019 design effects for violence and orientation, and sample sizes.
+
+The script reads the fixed-width PNS 2019 microdata with the official layout, restricts to
+selected residents aged 18+ who answered the violence module, and estimates prevalences by
+domain with Taylor linearization (stratum, primary sampling unit, calibrated weight). It
+checks the variances against a jackknife, decomposes the design effect into weight and cluster
+parts, and computes the sample size and minimum detectable change between two independent
+survey editions.
+
+Inputs
+------
+- PNS 2019 microdata text file (command line option --micro)
+- official input layout of the microdata (command line option --layout)
+
+Outputs
+-------
+- <output directory>/deff_pns2019.csv, deff_regiao_lgb.csv, n_necessario.csv, mde.csv
+- <output directory>/n_regiao.csv, sogi_modo.csv, deff_bootstrap_lgb.csv, validacao.txt
+- prints the validation lines and the result tables to stdout
+
+Usage
+-----
+python3 -I analysis/survey-cost/deff_pns2019.py --micro <micro> --layout <layout> --out <dir>
+
+Status
+------
+Feeds numbers printed in the article (listed in paper_numbers.json).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Efeito de desenho (deff) da PNS 2019 para violencia e orientacao sexual, e n necessario.
 
 Rodar:  python3 -I deff_pns2019.py --micro <PNS_2019.txt> --layout <input_PNS_2019_utf8.txt> --out <pasta>
 (o input oficial do IBGE esta em latin-1; a copia utf8 usada esta em sources/public/q1-textointegral/F2/pns2019/; o script le com errors="replace", sem efeito nos nomes de variavel)
@@ -21,6 +55,12 @@ O que faz
 
 Saidas em --out: deff_pns2019.csv, deff_regiao_lgb.csv, n_necessario.csv, mde.csv, n_regiao.csv, sogi_modo.csv, deff_bootstrap_lgb.csv, validacao.txt
 NAO interpreta politicamente. Limites: ver README.md (secao de limites).
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
 """
 import argparse, math, re, sys
 from pathlib import Path

@@ -1,5 +1,43 @@
-"""H5: varre TODAS as ações dos arquivos anuais da CGU (OrcamentoDespesa 2014-2025, zips baixados por h5_01 em data/raw/orcamento; hashes em data/h5_orcamento_hashes_tudo.txt) por nome de ação LGBT/homofobia/vitimização/etc.
-Saída: data/h5_acoes_lgbt_cgu_2014_2025.csv. Rodar: python3 -I scripts/h5_05_acoes_lgbt_cgu.py"""
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Search the 2014-2025 CGU budget files for LGBT, homophobia and victimization actions.
+
+Scans every action of the yearly CGU expenditure archives and sums the committed amount of the
+actions whose name matches LGBT, homosexual, homophobia, sexual diversity, transvestite,
+transsexual, victimization, hotline, discrimination or hate-crime terms, by year, action code,
+action name and budget unit. Prints the number of rows scanned.
+
+Inputs
+------
+- analysis/political-economy/dados/raw/orcamento/od<year>.zip, 2014-2025 (or the folder in
+  F5_CACHE; archives downloaded by h5_01_orcamento.py, not tracked in git)
+
+Outputs
+-------
+- analysis/political-economy/dados/h5_acoes_lgbt_cgu_2014_2025.csv
+- prints the number of rows scanned and of matching combinations to stdout
+
+Usage
+-----
+python3 -I analysis/political-economy/scripts/h5_05_acoes_lgbt_cgu.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+H5: varre TODAS as ações dos arquivos anuais da CGU (OrcamentoDespesa 2014-2025, zips baixados por h5_01 em data/raw/orcamento; hashes em data/h5_orcamento_hashes_tudo.txt) por nome de ação LGBT/homofobia/vitimização/etc.
+Saída: data/h5_acoes_lgbt_cgu_2014_2025.csv. Rodar: python3 -I scripts/h5_05_acoes_lgbt_cgu.py
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

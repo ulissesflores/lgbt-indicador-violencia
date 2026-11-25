@@ -1,7 +1,47 @@
-"""Governador e vice ELEITOS por UF e ciclo (2010, 2014, 2018, 2022) a partir de consulta_cand do TSE (sources/public/p2-f8-governos/tse/z<ano>/consulta_cand_<ano>.zip, baixados de https://cdn.tse.jus.br/estatistica/sead/odsele/consulta_cand/consulta_cand_<ano>.zip em 2026-10-21;
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Extract elected governors and vice-governors per state and cycle from TSE candidate files.
+
+Reads the zipped TSE candidate registries for the 2010, 2014, 2018 and 2022 elections directly
+from the archive, without extracting it. It keeps ordinary-election rows for governor and
+vice-governor whose final result is ELECTED, with the party the candidate ran for, and reports
+state, office and year keys that have more than one record. Only the standard library is used.
+
+Inputs
+------
+- sources/public/p2-f8-governos/tse/z2010/consulta_cand_2010.zip (not tracked in git)
+- sources/public/p2-f8-governos/tse/z2014/consulta_cand_2014.zip (not tracked in git)
+- sources/public/p2-f8-governos/tse/z2018/consulta_cand_2018.zip (not tracked in git)
+- sources/public/p2-f8-governos/tse/z2022/consulta_cand_2022.zip (not tracked in git)
+
+Outputs
+-------
+- data/governadores_tse_eleitos.csv
+- prints the record counts and any duplicated keys to stdout
+
+Usage
+-----
+python3 -I data/scripts/governadores_tse.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Governador e vice ELEITOS por UF e ciclo (2010, 2014, 2018, 2022) a partir de consulta_cand do TSE (sources/public/p2-f8-governos/tse/z<ano>/consulta_cand_<ano>.zip, baixados de https://cdn.tse.jus.br/estatistica/sead/odsele/consulta_cand/consulta_cand_<ano>.zip em 2026-10-21;
 sha256 em sources/public/p2-f8-governos/tse/SHA256SUMS.txt; *.zip fica fora do git). Saída: data/governadores_tse_eleitos.csv. Só stdlib.
 Regras: eleição ordinária; DS_SIT_TOT_TURNO == 'ELEITO' (vale para eleito no 1º turno e no 2º). Partido = SG_PARTIDO do candidato (partido pelo qual concorreu).
-Rodar: python3 -I data/scripts/governadores_tse.py"""
+Rodar: python3 -I data/scripts/governadores_tse.py
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

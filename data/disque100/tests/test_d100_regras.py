@@ -1,5 +1,42 @@
-"""Regras pré-registradas e tabulação em arquivos SINTÉTICOS (tests/fixtures: A.csv, B.csv, C.csv, sem dado real).
-Rodar: python3 -m pytest -q tests  (sem -I: o pytest está no site do usuário)."""
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Check the pre-registered classification rules and the tabulation on synthetic files.
+
+The tests check, with parametrized cases, the rules of d100_comum.py (missing-value labels,
+LGBT group, violation macro-class, SOGI motivation, dates) and run the tabulation of
+d100_tabular.py on three small synthetic CSV files, one per file format, containing no real
+data.
+
+Inputs
+------
+- data/disque100/tests/fixtures/A.csv, B.csv and C.csv (synthetic fixtures)
+- data/disque100/scripts/d100_comum.py and d100_tabular.py (imported)
+
+Outputs
+-------
+- none (pytest pass or fail report)
+
+Usage
+-----
+python3 -m pytest -q tests   (run from data/disque100; without -I, as in the original note)
+
+Status
+------
+Pre-registered analysis (data/disque100/PREREGISTRO-D100.md).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Regras pré-registradas e tabulação em arquivos SINTÉTICOS (tests/fixtures: A.csv, B.csv, C.csv, sem dado real).
+Rodar: python3 -m pytest -q tests  (sem -I: o pytest está no site do usuário).
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 
 import sys
 from pathlib import Path

@@ -1,4 +1,42 @@
-"""S15. Terceira leitura, cega, dos 6 casos em que os codificadores A (Claude Sonnet 5.5) e B (Gemini 3.8 Flash)
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Run a blind third coding of the cases on which two coders disagreed.
+
+Takes the cases listed as disagreements in kappa.json, builds a package with the full news text
+of each case (the victim name masked as [VITIMA]), and sends it, with the codebook header of
+the second coder's prompt, to an external command-line coding model through a CLI whose command
+comes from CODEX_BIN (default "codex"), run in an empty temporary directory without the other
+coders' codes. For each variable in disagreement the final code is the one shared by two of the
+three coders; if all three differ, the first coder's published code is kept. The option
+--so-pacote stops after writing the package and prompt.
+
+Inputs
+------
+- analysis/ggb-audit/dados/kappa.json, amostra.csv and codificacao_A_raw.txt
+- sources/public/p3-ggb/_raw/ggb2019_lista_nominal.csv, news_txt/<id>.txt, prompt_B.txt and
+  saida_B.txt (not tracked in git: article texts and names)
+- an authenticated external coding CLI (environment variable CODEX_BIN), unless --so-pacote
+
+Outputs
+-------
+- sources/public/p3-ggb/_raw/pacote_C.json, prompt_C.txt and saida_C.txt (not tracked in git)
+- analysis/ggb-audit/dados/adjudicacao.json (case number and codes only, no names)
+- prints the package size and the adjudicated disagreements to stdout
+
+Usage
+-----
+python3.14 -I analysis/ggb-audit/scripts/s15_terceiro_codificador.py [--so-pacote]
+(REPO_ROOT may point to the repository root)
+
+Status
+------
+Feeds numbers printed in the article (listed in paper_numbers.json).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+S15. Terceira leitura, cega, dos 6 casos em que os codificadores A (Claude Sonnet 5.5) e B (Gemini 3.8 Flash)
 discordaram (kappa.json, "desacordos"); revisão metodológica de 2026-11-01: efeito dos desacordos sobre as
 contagens.
 
@@ -12,6 +50,12 @@ contagens mudarem (s11_validacao.py lê adjudicacao.json). O kappa continua send
 Uso: REPO_ROOT=<pasta com sources/public/p3-ggb/_raw> python3.14 -I s15_terceiro_codificador.py [--so-pacote]
 Saídas: _raw/pacote_C.json, _raw/prompt_C.txt, _raw/saida_C.txt (fora do git: texto das matérias) e
 data/adjudicacao.json (só número do caso e códigos, sem nome).
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
 """
 import os as _os
 import pathlib as _pl

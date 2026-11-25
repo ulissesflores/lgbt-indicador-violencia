@@ -1,8 +1,46 @@
-"""H2 insumo: estrutura estadual para enfrentamento da LGBTfobia, ESTADIC/IBGE 2019 e 2023 (bases oficiais .xlsx do FTP do IBGE; sha256 em data/raw/estadic/SHA256SUMS.txt).
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Extract the state LGBT-phobia response variables from the ESTADIC surveys.
+
+Reads the 2019 and 2023 ESTADIC workbooks (IBGE state profile survey) and extracts, for each
+state, six variables on specialized structure: human-rights body programs for LGBT people, a
+committee against LGBT-phobic violence, an LGBT rights policy, and military and civil police
+training or prevention projects on the topic. Values are kept raw (Sim, Nao or the IBGE code).
+
+Inputs
+------
+- analysis/political-economy/dados/raw/estadic/estadic2019.xlsx and estadic2023.xlsx
+- the Python packages openpyxl and pandas
+
+Outputs
+-------
+- analysis/political-economy/dados/h2_estadic_lgbt_uf.csv
+- prints the value counts per edition to stdout
+
+Usage
+-----
+python3 -I analysis/political-economy/scripts/h2_01_estadic_lgbt.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+H2 insumo: estrutura estadual para enfrentamento da LGBTfobia, ESTADIC/IBGE 2019 e 2023 (bases oficiais .xlsx do FTP do IBGE; sha256 em data/raw/estadic/SHA256SUMS.txt).
 Variáveis (códigos IBGE do dicionário das próprias bases): EDHU086 (órgão de direitos humanos executa programas/ações para LGBT), EDHU5410 (comitê gestor de enfrentamento à violência LGBTfóbica),
 EDHU576 (política/programa de promoção de direitos LGBT e/ou enfrentamento à LGBTfobia), ESEG4413 (PM: capacitação com tema LGBTfobia), ESEG487 (ações/projetos de prevenção com tema LGBTfobia), ESEG5913 (Polícia Civil: capacitação com tema LGBTfobia).
 Saída: data/h2_estadic_lgbt_uf.csv (uma linha por UF x edição, valores brutos 'Sim'/'Não'/código do IBGE).
-Rodar: python3 -I scripts/h2_01_estadic_lgbt.py"""
+Rodar: python3 -I scripts/h2_01_estadic_lgbt.py
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

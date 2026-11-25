@@ -1,4 +1,45 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
 """Lock every number the article cites from the state exposure, the corrections and the Abstract.
+
+Each expected value is the number printed in the article, typed as a constant with the section
+or table that prints it; the observed value is read from the frozen file named in each test.
+Tolerance is half a unit of the last printed digit. It also regenerates the article-numbers
+table with its script into a temporary file and requires it to equal the stored one, checks
+that every number listed in paper_numbers.json equals the file it names at the printed
+precision (with negative controls), and checks the erratum figures in the corrections notes.
+
+Inputs
+------
+- paper_numbers.json and verify_paper_numbers.py
+- make_provenance.py (loaded as a module)
+- docs/corrections.md
+- analysis/article-numbers/contas_do_texto.py, contas_do_texto.csv and terceiros_transcritos.csv
+- data/exposicao/c10_e2_resumo.csv and data/exposicao/c10_trocas.csv
+- data/pns/seguro_pns2019.csv and data/ggb/cobertura_implicita.csv
+- analysis/discourse/midia/ (_estimativas.txt, amostra_codificada.csv)
+- analysis/ggb-audit/dados/ (codificacao_A.csv, validacao_resumo.json)
+- analysis/ggb-series/series/painel_mortes_lgbt.csv and analysis/simulation/resumo.json
+- sources/public/p2-f8-dados-uf/sidra/censo9606_n1_raca_sexo_idade_2010_2022.json
+
+Outputs
+-------
+- none (assertions only; the regenerated table goes to a temporary file)
+
+Usage
+-----
+python3 -I -m pytest tests/test_paper_numbers.py
+
+Status
+------
+Test that locks every number printed in the article against paper_numbers.json; it makes
+no analysis claim of its own.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Lock every number the article cites from the state exposure, the corrections and the Abstract.
 
 Each expected value is the number printed in the article (Codex Hash Research Report 2026-10,
 Brazilian Portuguese and English editions), typed here as a constant with the section or table
@@ -9,11 +50,18 @@ printed number fails the test.
 
 Same style as ``test_numeros_v05.py``: standard library only, no raw microdata, and every
 ``test_*`` function runs without arguments (pytest and ``python run_all.py``).
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
 """
 
 import csv
 import json
 import os
+import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -284,3 +332,279 @@ def test_resumo_exposicao():
     assert perto(b["mediana_pct"], -10.2, 0.05) and perto(b["ref_mediana_p50"], 6.7, 0.05)
     grupos = {r["grupo"] for r in csv_rows(E2) if r["p_mediana_holm6"] != ""}
     assert len(grupos) == 6  # the Holm family: total, men, women, Black, non-Black, firearm
+
+
+# ------------------------- Section 3.5: other columns of Table 19, FBSP Yearbook 2026 (p. 135)
+def test_anuario2026_tabela19_linha_brasil():
+    """Homicide 218 and 187, bodily injury 5,079 and 5,452, rape 471 and 480 (2024 and 2025).
+
+    The Brazil row of Table 19 is kept verbatim, with page and PDF SHA-256, in the panel of LGBT+
+    death sources; its first block is the 2,567 -> 3,481 column of ``data/anuario/``.
+    """
+    painel = csv_rows("analysis/ggb-series/series/painel_mortes_lgbt.csv")
+    linhas = [r for r in painel if r["fonte"] == "anu2026"]
+    assert {int(r["ano"]): int(r["valor"]) for r in linhas} == {2024: 218, 2025: 187}
+    for r in linhas:
+        assert r["pagina_pdf"] == "135"
+        cel = r["trecho_verbatim"].split()
+        assert cel[0] == "Brasil" and cel[1:3] == ["2.567", "3.481"]
+        assert cel[4:6] == ["5.079", "5.452"] and cel[7:9] == ["218", "187"]
+        assert cel[10:12] == ["471", "480"]
+
+
+def test_errata_2026_11_24_cinco_leituras():
+    """Os cinco números da errata de 2026-11-24 (docs/corrections.md) saem do script e das fontes.
+
+    Roda ``analysis/article-numbers/contas_do_texto.py`` numa saída temporária, exige que ela seja
+    idêntica ao CSV distribuído, e confere a Tabela H1 pela data (5/10, 5/8, 21/51), o 329.643 do
+    Apêndice K e a transcrição de ODIHR (42 de 57), FRA (30 países; 14% e 13%) e Frisch.
+    """
+    import importlib.util
+    import tempfile
+    from pathlib import Path
+
+    pasta = RAIZ / "analysis/article-numbers"
+    spec = importlib.util.spec_from_file_location(
+        "contas_do_texto_errata", pasta / "contas_do_texto.py"
+    )
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    # dentro do repositório porque o script imprime a saída relativa à raiz; a pasta some no fim
+    with tempfile.TemporaryDirectory(dir=pasta, prefix=".teste-") as tmp:
+        mod.SAIDA = Path(tmp) / "contas_do_texto.csv"
+        mod.main()
+        gerado = mod.SAIDA.read_bytes()
+    assert gerado == (pasta / "contas_do_texto.csv").read_bytes(), (
+        "contas_do_texto.csv difere do que o script gera"
+    )
+
+    contas = {
+        r["id"]: r for r in csv.DictReader((pasta / "contas_do_texto.csv").open(encoding="utf-8"))
+    }
+    for ident, valor in [("h1_nomand_G3", 5), ("h1_nomand_G4", 5), ("h1_nomand_total", 21)]:
+        assert float(contas[ident]["calculado"]) == valor, ident
+    assert round(float(contas["survey_adultos"]["calculado"])) == 329643
+    assert (
+        round(float(contas["survey_n_lgb"]["calculado"]), 1) == 5786.3
+    )  # 5.786,3 arredondado dá 329.644
+
+    terc = list(csv.DictReader((pasta / "terceiros_transcritos.csv").open(encoding="utf-8")))
+
+    def fonte(ref, impresso):
+        """Row of ``terceiros_transcritos.csv`` for one reference and printed value."""
+        achadas = [
+            r
+            for r in terc
+            if r["referencia_apa_curta"].startswith(ref) and r["impresso"] == impresso
+        ]
+        assert achadas and all(r["status"] == "conferido" for r in achadas), (ref, impresso)
+        return achadas[0]
+
+    assert fonte("ODIHR (2025)", "42")["valor_na_fonte"].startswith(
+        "42 Estados com estatísticas oficiais"
+    )
+    assert fonte("ODIHR (2025)", "57")["valor_na_fonte"].startswith("57")
+    assert fonte("FRA (2024)", "30")["valor_na_fonte"] == "30 países"
+    assert "30 países" in fonte("FRA (2024)", "14%")["unidade_ou_recorte"]
+    assert "UE" in fonte("FRA (2024)", "13%")["unidade_ou_recorte"]
+    for impresso in ("1%", "6%"):
+        assert (
+            "gays ou lésbicas"
+            in fonte("Frisch & Brønnum-Hansen (2009)", impresso)["unidade_ou_recorte"]
+        )
+
+
+def test_sem_hash_so_cobre_o_que_o_selo_regrava():
+    """Files exempt from the hash table are only those the seal rewrites and leaves out of itself.
+
+    Negative control: a script or data file added to ``SEM_HASH`` would silence its hash check;
+    this test fails if the exemption holds anything the seal covers.
+    """
+    import importlib.util
+
+    v = _verificador()
+    spec = importlib.util.spec_from_file_location("make_provenance", RAIZ / "make_provenance.py")
+    prov = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(prov)
+    assert v.SEM_HASH, "SEM_HASH vazio: a exceção some e o teste perde o objeto"
+    for rel in v.SEM_HASH:
+        assert prov.excluido(rel), f"{rel} está no selo; isentá-lo do hash esconderia mudança"
+        assert rel not in v.carrega()["sha256"], f"{rel} isento e ainda gravado na tabela"
+    assert not prov.excluido("paper_numbers.json") and not prov.excluido("make_provenance.py")
+
+
+def _verificador():
+    """Import ``verify_paper_numbers.py`` from the repository root."""
+    import importlib.util
+
+    spec = importlib.util.spec_from_file_location(
+        "verify_paper_numbers", RAIZ / "verify_paper_numbers.py"
+    )
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
+def test_todo_numero_de_paper_numbers_json_bate_com_o_arquivo():
+    """Every number in ``paper_numbers.json`` equals, at the printed precision, the file it names.
+
+    One check per printed number (the table lists the article line, the value as printed, the file,
+    the locator inside the file and the script that writes it); every failure is reported at once.
+    The SHA-256 recorded for each file and script must also match: a change in code or data that
+    the table does not know about fails here.
+    """
+    v = _verificador()
+    tabela = v.carrega()
+    falhas = v.confere_hashes(tabela) + v.confere_valores(tabela)
+    assert not falhas, f"{len(falhas)} falhas:\n" + "\n".join(falhas[:40])
+
+
+def test_paper_numbers_json_bem_formado():
+    """Each entry has a known class; located classes name a file and a script; hashes cover them."""
+    v = _verificador()
+    tabela = v.carrega()
+    assert tabela["numbers"], "paper_numbers.json sem números"
+    ids = [e["id"] for e in tabela["numbers"]]
+    assert len(ids) == len(set(ids)), "id repetido"
+    for e in tabela["numbers"]:
+        assert e["class"] in v.CLASSES_COM_LOCAL | v.CLASSES_SEM_LOCAL, e["id"]
+        assert e["printed"] and all("line" in p and "value" in p for p in e["printed"]), e["id"]
+        if e["class"] in v.CLASSES_COM_LOCAL:
+            assert e["locator"]["file"] in tabela["sha256"] or e["locator"]["file"] in v.SEM_HASH, (
+                e["id"]
+            )
+            assert all(s in tabela["sha256"] for s in e.get("scripts", [])), e["id"]
+        if e["class"] == "output":
+            assert e.get("scripts"), f"{e['id']}: output sem o script que grava o arquivo"
+        elif e["class"] == "hand-written" or e["class"] in v.CLASSES_SEM_LOCAL:
+            # text-arithmetic e third-party têm local e script/transcrição; dispensam reason
+            assert e.get("reason"), f"{e['id']}: classe {e['class']} exige reason"
+
+
+def test_paper_numbers_controle_negativo():
+    """The checker fails when the printed value or the source file changes (it is not vacuous).
+
+    Takes the first located entry of each locator type, alters the printed value by one unit of the
+    last printed digit, then alters the located number in a temporary copy of the source file; both
+    must produce a failure, and the untouched copy must produce none.
+    """
+    import copy
+    import shutil
+    import tempfile
+    from pathlib import Path
+
+    v = _verificador()
+    tabela = v.carrega()
+    por_tipo = {}
+    for e in tabela["numbers"]:
+        if e["class"] == "output":
+            por_tipo.setdefault(e["locator"]["type"], e)
+    assert {"csv", "md-table"} <= set(por_tipo), sorted(por_tipo)
+    for e in por_tipo.values():
+        alterada = copy.deepcopy(e)
+        valor, casas = v.numero_impresso(e["printed"][0]["value"])
+        passo = 10**-casas
+        alterada["printed"][0]["value"] = f"{valor + passo:.{casas}f}".replace(".", ",")
+        assert v.confere_valores({"numbers": [alterada]}), f"impresso alterado passou: {e['id']}"
+        with tempfile.TemporaryDirectory() as tmp:
+            rel = e["locator"]["file"]
+            (Path(tmp) / rel).parent.mkdir(parents=True)
+            shutil.copy(RAIZ / rel, Path(tmp) / rel)
+            assert not v.confere_valores({"numbers": [e]}, Path(tmp)), e["id"]
+            fonte = v.resolve(e["locator"], Path(tmp))
+            texto = (Path(tmp) / rel).read_text(encoding="utf-8")
+            achados = [t for t in set(re.findall(r"-?\d+(?:\.\d+)?", texto)) if float(t) == fonte]
+            assert achados, f"valor {fonte} não achado como texto em {rel}"
+            alvo = max(achados, key=len)
+            # +1 na unidade da fonte: trocar só o último dígito de -0.002142346304 não muda o
+            # impresso −0,00214; fronteiras de número para não tocar "12" dentro de "1234"
+            trocado = repr(float(alvo) + 1)
+            texto = re.sub(rf"(?<![\d.]){re.escape(alvo)}(?![\d])", trocado, texto)
+            (Path(tmp) / rel).write_text(texto, encoding="utf-8")
+            assert v.confere_valores({"numbers": [e]}, Path(tmp)), (
+                f"fonte alterada passou: {e['id']}"
+            )
+    # limite impresso ("< ,001"): o valor da fonte tem de ficar abaixo; baixar o limite até
+    # o valor da fonte faz falhar
+    limites = [e for e in tabela["numbers"] if any(p.get("bound") for p in e["printed"])]
+    assert limites, "nenhum número impresso como limite"
+    e = copy.deepcopy(limites[0])
+    assert not v.confere_valores({"numbers": [e]}), e["id"]
+    fonte = v.resolve(e["locator"])
+    e["printed"][0]["value"] = f"{fonte:.6f}".replace(".", ",")
+    assert v.confere_valores({"numbers": [e]}), f"limite igual ao valor passou: {e['id']}"
+
+
+def test_paper_numbers_impresso_corrigido():
+    """A printed number marked ``corrected`` passes only with the note and the right rounding.
+
+    The frozen 1.3.0 article prints 26,3 at line 1221 (Appendix F); the calculation gives 26.35,
+    26,4 at one decimal (erratum of 2026-11-25 in ``docs/corrections.md``). Negative controls:
+    the same entry fails without the note (another id), when the corrected value is not what the
+    source rounds to, and when the printed value already matches (a spurious correction).
+    """
+    import copy
+
+    v = _verificador()
+    tabela = v.carrega()
+    corrigidas = [e for e in tabela["numbers"] if any(p.get("corrected") for p in e["printed"])]
+    assert [
+        (e["id"], e["printed"][0]["value"], e["printed"][0]["corrected"]) for e in corrigidas
+    ] == [("l1221|6", "26,3", "26,4")]
+    e = corrigidas[0]
+    assert not v.confere_valores({"numbers": [e]})
+    assert "docs/corrections.md" in tabela["sha256"]
+    assert round(v.resolve(e["locator"]), 2) == 26.35
+
+    sem_nota = copy.deepcopy(e)
+    sem_nota["id"] = "l1221|99"
+    assert v.confere_valores({"numbers": [sem_nota]}), "corrigido sem nota passou"
+    outro_valor = copy.deepcopy(e)
+    outro_valor["printed"][0]["corrected"] = "26,5"
+    assert v.confere_valores({"numbers": [outro_valor]}), "corrigido que a fonte não dá passou"
+    sobra = copy.deepcopy(e)
+    sobra["printed"][0]["value"] = "26,4"
+    assert v.confere_valores({"numbers": [sobra]}), "correção desnecessária passou"
+    notas = (RAIZ / "docs/corrections.md").read_text(encoding="utf-8")
+    assert v.nota_de_correcao(notas, "l1221|6", "26,3", "26,4")
+    assert not v.nota_de_correcao(notas.replace("26.3", "26.x"), "l1221|6", "26,3", "26,4")
+
+
+def test_estimativas_midia_recalculadas_da_amostra():
+    """Sample counts, proportions and Wilson intervals of ``_estimativas.txt`` come from the sample.
+
+    The file has no distributed writer (the universe sizes N come from intermediate match files
+    that are not distributed), so ``paper_numbers.json`` classes its numbers as hand-written. This
+    test recomputes, from ``amostra_codificada.csv``, every column except N and the scaled
+    estimate: sample size, claims (AFIRMA + ATRIBUI), denials, mentions and the Wilson 95%
+    interval of the proportion, at the precision the file prints. The scaled estimate is then
+    checked as N times the recomputed proportion and bounds.
+    """
+    import math
+    from collections import Counter
+
+    amostra = csv_rows("analysis/discourse/midia/amostra_codificada.csv")
+    por = Counter((r["familia"], r["universo"], r["postura"]) for r in amostra)
+    n_am = Counter((r["familia"], r["universo"]) for r in amostra)
+    linhas = (RAIZ / "analysis/discourse/midia/_estimativas.txt").read_text(encoding="utf-8")
+    vistas = 0
+    for ln in linhas.splitlines()[2:]:
+        fam, uni, n_univ, n, k, p_ic, est_ic, neg, men = ln.split("|")
+        chave = (fam, uni)
+        afirma = por[(*chave, "AFIRMA")] + por[(*chave, "ATRIBUI")]
+        assert (int(n), int(k), int(neg), int(men)) == (
+            n_am[chave],
+            afirma,
+            por[(*chave, "NEGA/CRITICA")],
+            por[(*chave, "MENCIONA")],
+        ), ln
+        z, m = 1.959964, n_am[chave]
+        prop = afirma / m
+        centro = (prop + z * z / (2 * m)) / (1 + z * z / m)
+        meia = z * math.sqrt(prop * (1 - prop) / m + z * z / (4 * m * m)) / (1 + z * z / m)
+        lo, hi = max(0.0, centro - meia), min(1.0, centro + meia)
+        assert p_ic == f"{prop:.2f} [{lo:.2f}-{hi:.2f}]", ln
+        nu = int(n_univ)
+        assert est_ic == f"{round(nu * prop)} [{round(nu * lo)}-{round(nu * hi)}]", ln
+        vistas += 1
+    assert vistas == len(n_am) == 18

@@ -1,6 +1,46 @@
-"""S06. Monta o pacote cego para o 2o codificador (outra familia de modelo): os casos da subamostra de dupla
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Build the blind package for the second coder.
+
+Takes the double-coding subsample cases already coded by the first coder and builds a
+package with the victim name replaced by a placeholder, using the saved source text and the
+nominal list.
+The package stays outside git.
+
+Inputs
+------
+- sources/public/p3-ggb/_raw/ggb2019_lista_nominal.csv (not tracked in git)
+- sources/public/p3-ggb/_raw/news_txt/<id>.txt (not tracked in git)
+- analysis/ggb-audit/dados/amostra.csv
+- analysis/ggb-audit/dados/codificacao_A_raw.txt (first coder's raw coding; not tracked in git)
+
+Outputs
+-------
+- sources/public/p3-ggb/_raw/pacote_B.json (not tracked in git)
+- prints the number of cases and the number of characters
+
+Usage
+-----
+python3 -I analysis/ggb-audit/scripts/s06_pacote_codificador_B.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+S06. Monta o pacote cego para o 2o codificador (outra familia de modelo): os casos da subamostra de dupla
 codificacao que tem fonte recuperada. Nome da vitima trocado por [VITIMA]. Pacote em _raw (fora do git).
-Uso: python3.14 -I s06_pacote_codificador_B.py"""
+Uso: python3.14 -I s06_pacote_codificador_B.py
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 
@@ -10,8 +50,8 @@ from pathlib import Path
 ROOT = Path(REPO_ROOT); RAW = ROOT/"sources/public/p3-ggb/_raw"
 F3 = ROOT/"analysis/ggb-audit"
 nom = {r["id"]: r for r in csv.DictReader((RAW/"ggb2019_lista_nominal.csv").open())}
-amo = list(csv.DictReader((F3/"data/amostra.csv").open()))
-cod = {l.split("|")[0] for l in open(F3/"data/codificacao_A_raw.txt") if l[:1].isdigit()}
+amo = list(csv.DictReader((F3/"dados/amostra.csv").open()))
+cod = {l.split("|")[0] for l in open(F3/"dados/codificacao_A_raw.txt") if l[:1].isdigit()}
 def nz(x): return unicodedata.normalize("NFKD", x.lower()).encode("ascii", "ignore").decode()
 casos = []
 for r in amo:

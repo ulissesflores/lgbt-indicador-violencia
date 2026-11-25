@@ -1,7 +1,50 @@
-"""Monta paises.csv (linhas curadas) a partir de: V-Dem v16 (vdemdata), V-Party v2, ILGA DB (GraphQL publico, 2026-10-22),
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Build the country table with classified governments and verbatim, verified evidence quotes.
+
+Combines V-Dem v16 and V-Party v2 (via vdemdata), the ILGA World Database extract, the party
+ideology table and a curated list of verbatim evidence. Every quote is searched in the local
+source file and its page is located automatically; the script fails loudly when a quote is not
+found. Classification follows the written rules and assigns no left or right label by judgement.
+
+Inputs
+------
+- sources/public/q1-textointegral/discurso/governos/ (ILGA JSON, V-Dem and V-Party RData,
+  saved pages; not tracked in git)
+- sources/public/q1-textointegral/F8-literatura/ and entregues-pelo-autor/ (saved PDFs)
+- data/ideologia/ideologia_partidos_ano.csv
+- pdftotext (external tool); requires pandas and pyreadr; REPO_ROOT may override the repo root
+
+Outputs
+-------
+- analysis/discourse/governos/paises.csv
+- analysis/discourse/governos/verificacao-citacoes.tsv
+- prints the number of rows, quotes and failures
+
+Usage
+-----
+python3 -I analysis/discourse/governos/scripts/build_paises.py
+
+Status
+------
+Pre-registered analysis (preregistrations/governos/PRE-REGISTRO.md). Feeds numbers printed in
+the article (listed in paper_numbers.json).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Monta paises.csv (linhas curadas) a partir de: V-Dem v16 (vdemdata), V-Party v2, ILGA DB (GraphQL publico, 2026-10-22),
 BRC (data/ideologia) e uma lista de EVIDENCIAS verbatim. Cada citacao e VERIFICADA contra o arquivo local (falha alto se nao achar)
 e a pagina (PDF) e achada automaticamente. Saidas: ../paises.csv e ../verificacao-citacoes.tsv. Requer pyreadr, pandas.
-Regras de classificacao: PRE-REGISTRO.md (+ ADENDO). Nada aqui atribui esquerda/direita por julgamento proprio."""
+Regras de classificacao: PRE-REGISTRO.md (+ ADENDO). Nada aqui atribui esquerda/direita por julgamento proprio.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

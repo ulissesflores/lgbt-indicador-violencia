@@ -1,5 +1,45 @@
 #!/usr/bin/env python3
-"""Gera ideologia_mapeamento.md (regras + tabelas derivadas dos CSVs). Rodar depois de build_ideologia.py."""
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Write the Markdown document that explains the party ideology mapping.
+
+Reads the observed survey waves, the correlations between sources and the panel impact summary
+produced by build_ideologia.py and writes ideologia_mapeamento.md with the vocabulary, the
+succession rules for renamed, merged and absorbed parties, the wave-to-year allocation rules,
+the table of observed scores and the convergent-validation correlation tables. Run it after
+build_ideologia.py.
+
+Inputs
+------
+- analysis/ideology/ideologia_ondas_observadas.csv
+- analysis/ideology/ideologia_correlacoes.csv
+- analysis/ideology/impacto_painel_resumo.json
+
+Outputs
+-------
+- analysis/ideology/ideologia_mapeamento.md
+- prints the length of the document to stdout
+
+Usage
+-----
+python3 -I analysis/ideology/scripts/gerar_mapeamento_md.py
+
+Status
+------
+Feeds numbers printed in the article (listed in paper_numbers.json).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Gera ideologia_mapeamento.md (regras + tabelas derivadas dos CSVs). Rodar depois de build_ideologia.py.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import csv, collections, json, os
 H = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 O = list(csv.DictReader(open(f"{H}/ideologia_ondas_observadas.csv")))

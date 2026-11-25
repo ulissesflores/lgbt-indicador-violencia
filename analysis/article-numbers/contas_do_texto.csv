@@ -1,0 +1,136 @@
+id,linha_pt,impresso,formula,entradas,calculado,bate
+pns_1_em_26,143,26,1 / prev_ref,data/pns/seguro_pns2019.csv:nivel/física/prev_ref=0.03824548307977289,26.146879,sim
+d100_lgbt_x,194,"6,8",denúncias grupo_lgbt 2025 / 2021,data/disque100/saidas/d100_serie_anual.csv:grupo_lgbt/denuncias 2021=1367;2025=9346,6.836869,sim
+d100_canal_x,194,"2,9",denúncias do canal 2025 / 2021,data/disque100/saidas/d100_serie_anual.csv:canal/denuncias 2021=222010;2025=637890,2.873249,sim
+fbsp_x,206,"4,4",boletins 2025 / 2022,analysis/simulation/resumo.json:observado 2022=783;2025=3481,4.445722,sim
+sim_fator_S1,979,"1,637",1 + h_registro,analysis/simulation/resumo.json:cenarios/S1 incidencia constante h_registro=0.637;g=0.0,1.637,sim
+sim_produto_S1,979,"1,637",(1 + g) x (1 + h_registro),analysis/simulation/resumo.json:cenarios/S1 incidencia constante h_registro=0.637;g=0.0,1.637,sim
+sim_fator_S2,979,"1,423",1 + h_registro,analysis/simulation/resumo.json:cenarios/S2 incidencia +15%/ano h_registro=0.423;g=0.15,1.423,sim
+sim_produto_S2,979,"1,636",(1 + g) x (1 + h_registro),analysis/simulation/resumo.json:cenarios/S2 incidencia +15%/ano h_registro=0.423;g=0.15,1.63645,sim
+sim_fator_S3,979,"1,723",1 + h_registro,analysis/simulation/resumo.json:cenarios/S3 incidencia -5%/ano h_registro=0.723;g=-0.05,1.723,sim
+sim_produto_S3,979,"1,637",(1 + g) x (1 + h_registro),analysis/simulation/resumo.json:cenarios/S3 incidencia -5%/ano h_registro=0.723;g=-0.05,1.63685,sim
+ggb_24,271,24,morte_violenta - verificavel_estrito,analysis/ggb-audit/dados/validacao_resumo.json:morte_violenta=74;verificavel_estrito=50,24.0,sim
+v1_F1,1713,23,"soma de n nas linhas F1-any, universo v1 literal",analysis/discourse/midia/contagens.csv:F1-any v1,23.0,sim
+v1_F4,1713,4,"soma de n nas linhas F4-any, universo v1 literal",analysis/discourse/midia/contagens.csv:F4-any v1,4.0,sim
+senado_total,1713,38.449,"soma de n, familia TOTAL, universo Senado",analysis/discourse/midia/contagens.csv:TOTAL/Senado,38449.0,sim
+dic_min,703,21%,min por família de v2/v1,analysis/discourse/midia/contagens.csv:F1=14/23;F2=56/161;F3=148/692;F4=2/4,21.387283,sim
+dic_max,703,61%,max por família de v2/v1,analysis/discourse/midia/contagens.csv:F1=14/23;F2=56/161;F3=148/692;F4=2/4,60.869565,sim
+pns_cor_soma,780,1.553,n negros + n não negros,data/pns/seguro_pns2019.md:Negros n=916;Não negros n=637,1553.0,sim
+cr_cob_lo,1094,60%,n_ggb_trans / ic95_normal[1],"analysis/ggb-audit/dados/captura_recaptura_trans2019.json:n_ggb_trans=118;ic95_normal=174.5,197.9",59.626074,sim
+cr_cob_hi,1094,68%,n_ggb_trans / ic95_normal[0],"analysis/ggb-audit/dados/captura_recaptura_trans2019.json:n_ggb_trans=118;ic95_normal=174.5,197.9",67.621777,sim
+f1_3pct_2023,1120,14%,"cob_RR1.0(2023) x 1,89/3","data/ggb/c08_numeradores.csv:agressao/1,89%/N0 cob_RR1.0 2023=0.2290;2024=0.2874",14.427815,sim
+f1_3pct_2024,1120,18%,"cob_RR1.0(2024) x 1,89/3","data/ggb/c08_numeradores.csv:agressao/1,89%/N0 cob_RR1.0 2023=0.2290;2024=0.2874",18.103764,sim
+f1_135pct_2024,1120,40%,"cob_RR1.0(2024) x 1,89/1,35","data/ggb/c08_numeradores.csv:agressao/1,89%/N0 cob_RR1.0 2023=0.2290;2024=0.2874",40.230587,sim
+sim_taxa_adulta_2023,1120,"26,4",100 mil x agressoes_18mais(2023) / denominador,data/sinan/sim_adultos_18mais.csv:agressoes_18mais 2023=40683;2024=37276;data/sinan/sim_adultos.log:denominador=154346198;analysis/simulation/n1-taxa-lgbt-limite.md:taxa 2023=8.8;2024=10.0,26.358278,sim
+sim_taxa_adulta_2024,1120,"24,2",100 mil x agressoes_18mais(2024) / denominador,data/sinan/sim_adultos_18mais.csv:agressoes_18mais 2023=40683;2024=37276;data/sinan/sim_adultos.log:denominador=154346198;analysis/simulation/n1-taxa-lgbt-limite.md:taxa 2023=8.8;2024=10.0,24.150903,sim
+taxa_razao_min,1120,"2,4",min(taxa adulta / taxa GGB) entre 2023 e 2024,data/sinan/sim_adultos_18mais.csv:agressoes_18mais 2023=40683;2024=37276;data/sinan/sim_adultos.log:denominador=154346198;analysis/simulation/n1-taxa-lgbt-limite.md:taxa 2023=8.8;2024=10.0,2.42,sim
+taxa_razao_max,1120,3,max(taxa adulta / taxa GGB) entre 2023 e 2024,data/sinan/sim_adultos_18mais.csv:agressoes_18mais 2023=40683;2024=37276;data/sinan/sim_adultos.log:denominador=154346198;analysis/simulation/n1-taxa-lgbt-limite.md:taxa 2023=8.8;2024=10.0,3.0,sim
+c09_acaso,1315,"1,8","linhas de c09_d1_resultados.csv x 0,05",data/presidencia/c09_d1_resultados.csv:36 linhas,1.8,sim
+c10_acaso,1375,8,"células com p de Holm x 0,05",data/exposicao/c10_e2_resumo.csv:162 células com p_mediana_holm6,8.1,sim
+trocas_curtas,1338,20,trocas - trocas com janela_completa=1,data/exposicao/c10_trocas.csv:67 trocas;47 completas,20.0,sim
+h1_omissoes,1664,8,eventos tipo T3 (sem E09),analysis/robustness/simetria/eventos_C18.csv:T3=8,8.0,sim
+h1_omissoes_mandatos,1664,5,mandatos distintos com T3,"analysis/robustness/simetria/eventos_C18.csv:['G2', 'G3', 'G4', 'G5', 'G6']",5.0,sim
+h1_protecao,1682,10,eventos tipo P,analysis/robustness/simetria/eventos_C18.csv:P=10,10.0,sim
+h1_protecao_pt,1682,4,"mandatos distintos com P, todos do PT","analysis/robustness/simetria/eventos_C18.csv:['G1', 'G2', 'G3', 'G6'];fora do PT=[]",4.0,sim
+h1_nomand_G1,1672,0,páginas no mandato pela regra por data (regra por ano em entradas),analysis/article-numbers/datas_publicacao_C18.tsv:G1 lidas=6 (NOMAND b=6);sem data=['Q4'];regra por data=0;regra por ano=0,0.0,condicional
+h1_nomand_G2,1673,1,páginas no mandato pela regra por data (regra por ano em entradas),analysis/article-numbers/datas_publicacao_C18.tsv:G2 lidas=7 (NOMAND b=7);sem data=['Q7'];regra por data=1;regra por ano=1,1.0,condicional
+h1_nomand_G3,1674,5,páginas no mandato pela regra por data (regra por ano em entradas),analysis/article-numbers/datas_publicacao_C18.tsv:G3 lidas=10 (NOMAND b=10);sem data=['Q8'];regra por data=5;regra por ano=7,5.0,condicional
+h1_nomand_G4,1675,5,páginas no mandato pela regra por data (regra por ano em entradas),analysis/article-numbers/datas_publicacao_C18.tsv:G4 lidas=8 (NOMAND b=8);sem data=[];regra por data=5;regra por ano=6,5.0,sim
+h1_nomand_G5,1676,7,páginas no mandato pela regra por data (regra por ano em entradas),analysis/article-numbers/datas_publicacao_C18.tsv:G5 lidas=10 (NOMAND b=10);sem data=[];regra por data=7;regra por ano=7,7.0,sim
+h1_nomand_G6,1677,3,páginas no mandato pela regra por data (regra por ano em entradas),analysis/article-numbers/datas_publicacao_C18.tsv:G6 lidas=10 (NOMAND b=10);sem data=[];regra por data=3;regra por ano=3,3.0,sim
+h1_nomand_total,1678,21,soma pela regra por data (regra por ano em entradas),analysis/article-numbers/datas_publicacao_C18.tsv:sem data=3;regra por ano=24,21.0,condicional
+survey_n_lgb,1769,"5.786,3","n_duas_prop(p, 1,3p) x deff_lgb",analysis/survey-cost/n_necessario.csv:fisica/0.3/k=1 p_base=0.146959;deff_lgb=5.10688;n_lgb_desenho=5787;analysis/survey-cost/capacidade_por_opcao.csv:B' n_lgb=1554;adultos=88531,5786.288376,sim
+survey_frac,1769,"1,76%",n_lgb / adultos (PNS observada),analysis/survey-cost/n_necessario.csv:fisica/0.3/k=1 p_base=0.146959;deff_lgb=5.10688;n_lgb_desenho=5787;analysis/survey-cost/capacidade_por_opcao.csv:B' n_lgb=1554;adultos=88531,1.755317,sim
+survey_adultos,1769,329.643,n_lgb sem arredondar / fração não ponderada,analysis/survey-cost/n_necessario.csv:fisica/0.3/k=1 p_base=0.146959;deff_lgb=5.10688;n_lgb_desenho=5787;analysis/survey-cost/capacidade_por_opcao.csv:B' n_lgb=1554;adultos=88531,329643.433853,sim
+survey_adultos_mil,1769,330,"n_lgb sem arredondar / fração não ponderada, em mil",analysis/survey-cost/n_necessario.csv:fisica/0.3/k=1 p_base=0.146959;deff_lgb=5.10688;n_lgb_desenho=5787;analysis/survey-cost/capacidade_por_opcao.csv:B' n_lgb=1554;adultos=88531,329.643434,sim
+lihs_erro_n,1244,227,homicídios restantes - motivados,analysis/counterpoint/frente-A-brasil.md:Números da página homicídios=258;motivados=31,227.0,sim
+lihs_erro_pct,1244,88%,(homicídios - motivados) / homicídios,analysis/counterpoint/frente-A-brasil.md:Números da página homicídios=258;motivados=31,87.984496,sim
+x49_den,1715,49,falas F2/Parlamento com postura AFIRMA ou ATRIBUI,analysis/discourse/midia/amostra_codificada.csv:F2/Parlamento AFIRMA+ATRIBUI=49;original primária=0;reclassificada (itens_cruzados_C27.csv)={'2f4ba8743fb6': 'c712aec34162'};analysis/robustness/simetria/baseline_resumo_C27.json:2/38,49.0,sim
+x49_literal,1715,1,primária pela regra literal,analysis/discourse/midia/amostra_codificada.csv:F2/Parlamento AFIRMA+ATRIBUI=49;original primária=0;reclassificada (itens_cruzados_C27.csv)={'2f4ba8743fb6': 'c712aec34162'};analysis/robustness/simetria/baseline_resumo_C27.json:2/38,1.0,sim
+x49_original,1715,0,primária pela regra do codificador original,analysis/discourse/midia/amostra_codificada.csv:F2/Parlamento AFIRMA+ATRIBUI=49;original primária=0;reclassificada (itens_cruzados_C27.csv)={'2f4ba8743fb6': 'c712aec34162'};analysis/robustness/simetria/baseline_resumo_C27.json:2/38,0.0,sim
+x49_fisher_literal,1760,",578",Fisher bilateral literal x linha de base,analysis/discourse/midia/amostra_codificada.csv:F2/Parlamento AFIRMA+ATRIBUI=49;original primária=0;reclassificada (itens_cruzados_C27.csv)={'2f4ba8743fb6': 'c712aec34162'};analysis/robustness/simetria/baseline_resumo_C27.json:2/38,0.578395,sim
+x49_fisher_original,707,",19",Fisher bilateral original x linha de base,analysis/discourse/midia/amostra_codificada.csv:F2/Parlamento AFIRMA+ATRIBUI=49;original primária=0;reclassificada (itens_cruzados_C27.csv)={'2f4ba8743fb6': 'c712aec34162'};analysis/robustness/simetria/baseline_resumo_C27.json:2/38,0.187918,sim
+x49_wilson_literal,1723,,IC95% de Wilson de 1/49 (informativo),analysis/discourse/midia/amostra_codificada.csv:F2/Parlamento AFIRMA+ATRIBUI=49;original primária=0;reclassificada (itens_cruzados_C27.csv)={'2f4ba8743fb6': 'c712aec34162'};analysis/robustness/simetria/baseline_resumo_C27.json:2/38,0.0036;0.1069,informativo
+g4_estrito_dir_total_media_pos,1391,"−19,9",100 x (exp(media_pos) - 1),data/painel/c03_event_pesos_resultados.csv:estrito/esquerda->direita/tx_total media_pos=-0.2217342624758834,-19.887177,sim
+g4_estrito_dir_total_media_pos_lo,1391,"−30,4",100 x (exp(media_pos_lo) - 1),data/painel/c03_event_pesos_resultados.csv:estrito/esquerda->direita/tx_total media_pos_lo=-0.36271952640986005,-30.421845,sim
+g4_estrito_dir_total_media_pos_hi,1391,"−7,8",100 x (exp(media_pos_hi) - 1),data/painel/c03_event_pesos_resultados.csv:estrito/esquerda->direita/tx_total media_pos_hi=-0.08074899854190676,-7.757481,sim
+g4_estrito_dir_mulheres_media_pos,1392,"−19,5",100 x (exp(media_pos) - 1),data/painel/c03_event_pesos_resultados.csv:estrito/esquerda->direita/tx_mulheres media_pos=-0.21666605486687393,-19.480118,sim
+g4_estrito_dir_mulheres_media_pos_lo,1392,"−29,0",100 x (exp(media_pos_lo) - 1),data/painel/c03_event_pesos_resultados.csv:estrito/esquerda->direita/tx_mulheres media_pos_lo=-0.34230565591816003,-28.986888,sim
+g4_estrito_dir_mulheres_media_pos_hi,1392,"−8,7",100 x (exp(media_pos_hi) - 1),data/painel/c03_event_pesos_resultados.csv:estrito/esquerda->direita/tx_mulheres media_pos_hi=-0.09102645381558783,-8.700644,sim
+g4_estrito_dir_negros_media_pos,1393,"−24,7",100 x (exp(media_pos) - 1),data/painel/c03_event_pesos_resultados.csv:estrito/esquerda->direita/tx_negros media_pos=-0.28361107005338726,-24.694052,sim
+g4_estrito_dir_negros_media_pos_lo,1393,"−35,1",100 x (exp(media_pos_lo) - 1),data/painel/c03_event_pesos_resultados.csv:estrito/esquerda->direita/tx_negros media_pos_lo=-0.43216940002899495,-35.090059,sim
+g4_estrito_dir_negros_media_pos_hi,1393,"−12,6",100 x (exp(media_pos_hi) - 1),data/painel/c03_event_pesos_resultados.csv:estrito/esquerda->direita/tx_negros media_pos_hi=-0.1350527400777796,-12.633017,sim
+g4_estrito_dir_arma_media_pos,1394,"−28,6",100 x (exp(media_pos) - 1),data/painel/c03_event_pesos_resultados.csv:estrito/esquerda->direita/tx_arma media_pos=-0.3364746127909585,-28.571598,sim
+g4_estrito_dir_arma_media_pos_lo,1394,"−42,6",100 x (exp(media_pos_lo) - 1),data/painel/c03_event_pesos_resultados.csv:estrito/esquerda->direita/tx_arma media_pos_lo=-0.5556801419047136,-42.631806,sim
+g4_estrito_dir_arma_media_pos_hi,1394,"−11,1",100 x (exp(media_pos_hi) - 1),data/painel/c03_event_pesos_resultados.csv:estrito/esquerda->direita/tx_arma media_pos_hi=-0.11726908367720348,-11.065415,sim
+g4_estrito_esq_total_media_pos,1395,"−18,6",100 x (exp(media_pos) - 1),data/painel/c03_event_pesos_resultados.csv:estrito/direita->esquerda/tx_total media_pos=-0.20617156367617062,-18.630654,sim
+g4_estrito_esq_total_media_pos_lo,1395,"−31,2",100 x (exp(media_pos_lo) - 1),data/painel/c03_event_pesos_resultados.csv:estrito/direita->esquerda/tx_total media_pos_lo=-0.374145969165782,-31.21235,sim
+g4_estrito_esq_total_media_pos_hi,1395,"−3,7",100 x (exp(media_pos_hi) - 1),data/painel/c03_event_pesos_resultados.csv:estrito/direita->esquerda/tx_total media_pos_hi=-0.038197158186559194,-3.747685,sim
+g4_estrito_esq_mulheres_media_pos,1396,"−20,4",100 x (exp(media_pos) - 1),data/painel/c03_event_pesos_resultados.csv:estrito/direita->esquerda/tx_mulheres media_pos=-0.227542883460569,-20.351174,sim
+g4_estrito_esq_mulheres_media_pos_lo,1396,"−34,2",100 x (exp(media_pos_lo) - 1),data/painel/c03_event_pesos_resultados.csv:estrito/direita->esquerda/tx_mulheres media_pos_lo=-0.41792905195702035,-34.159106,sim
+g4_estrito_esq_mulheres_media_pos_hi,1396,"−3,6",100 x (exp(media_pos_hi) - 1),data/painel/c03_event_pesos_resultados.csv:estrito/direita->esquerda/tx_mulheres media_pos_hi=-0.037156714964117626,-3.647488,sim
+g4_estrito_esq_negros_media_pos,1397,"−18,7",100 x (exp(media_pos) - 1),data/painel/c03_event_pesos_resultados.csv:estrito/direita->esquerda/tx_negros media_pos=-0.20731649338140073,-18.723762,sim
+g4_estrito_esq_negros_media_pos_lo,1397,"−33,1",100 x (exp(media_pos_lo) - 1),data/painel/c03_event_pesos_resultados.csv:estrito/direita->esquerda/tx_negros media_pos_lo=-0.4021529190238947,-33.112155,sim
+g4_estrito_esq_negros_media_pos_hi,1397,"−1,2",100 x (exp(media_pos_hi) - 1),data/painel/c03_event_pesos_resultados.csv:estrito/direita->esquerda/tx_negros media_pos_hi=-0.012480067738906725,-1.240251,sim
+g4_estrito_esq_arma_media_pos,1398,"−25,5",100 x (exp(media_pos) - 1),data/painel/c03_event_pesos_resultados.csv:estrito/direita->esquerda/tx_arma media_pos=-0.29483769667424853,-25.534756,sim
+g4_estrito_esq_arma_media_pos_lo,1398,"−39,4",100 x (exp(media_pos_lo) - 1),data/painel/c03_event_pesos_resultados.csv:estrito/direita->esquerda/tx_arma media_pos_lo=-0.500640392775081,-39.385763,sim
+g4_estrito_esq_arma_media_pos_hi,1398,"−8,5",100 x (exp(media_pos_hi) - 1),data/painel/c03_event_pesos_resultados.csv:estrito/direita->esquerda/tx_arma media_pos_hi=-0.08903500057341604,-8.518645,sim
+g4_truncado_dir_total_media_pos,1399,"−15,9",100 x (exp(media_pos) - 1),data/painel/c03_event_pesos_resultados.csv:truncado/esquerda->direita/tx_total media_pos=-0.17323780747912398,-15.906239,sim
+g4_truncado_dir_total_media_pos_lo,1399,"−24,4",100 x (exp(media_pos_lo) - 1),data/painel/c03_event_pesos_resultados.csv:truncado/esquerda->direita/tx_total media_pos_lo=-0.2792664234492504,-24.366163,sim
+g4_truncado_dir_total_media_pos_hi,1399,"−6,5",100 x (exp(media_pos_hi) - 1),data/painel/c03_event_pesos_resultados.csv:truncado/esquerda->direita/tx_total media_pos_hi=-0.06720919150899755,-6.500041,sim
+g4_truncado_dir_mulheres_media_pos,1400,"−9,9",100 x (exp(media_pos) - 1),data/painel/c03_event_pesos_resultados.csv:truncado/esquerda->direita/tx_mulheres media_pos=-0.10461739228499978,-9.933094,sim
+g4_truncado_dir_mulheres_media_pos_lo,1400,"−17,2",100 x (exp(media_pos_lo) - 1),data/painel/c03_event_pesos_resultados.csv:truncado/esquerda->direita/tx_mulheres media_pos_lo=-0.18902135993488003,-17.223117,sim
+g4_truncado_dir_mulheres_media_pos_hi,1400,"−2,0",100 x (exp(media_pos_hi) - 1),data/painel/c03_event_pesos_resultados.csv:truncado/esquerda->direita/tx_mulheres media_pos_hi=-0.02021342463511952,-2.00105,sim
+g4_truncado_dir_negros_media_pos,1401,"−18,7",100 x (exp(media_pos) - 1),data/painel/c03_event_pesos_resultados.csv:truncado/esquerda->direita/tx_negros media_pos=-0.2068151363345681,-18.683004,sim
+g4_truncado_dir_negros_media_pos_lo,1401,"−27,5",100 x (exp(media_pos_lo) - 1),data/painel/c03_event_pesos_resultados.csv:truncado/esquerda->direita/tx_negros media_pos_lo=-0.3218071077503738,-27.516201,sim
+g4_truncado_dir_negros_media_pos_hi,1401,"−8,8",100 x (exp(media_pos_hi) - 1),data/painel/c03_event_pesos_resultados.csv:truncado/esquerda->direita/tx_negros media_pos_hi=-0.0918231649187624,-8.773354,sim
+g4_truncado_dir_arma_media_pos,1402,"−23,9",100 x (exp(media_pos) - 1),data/painel/c03_event_pesos_resultados.csv:truncado/esquerda->direita/tx_arma media_pos=-0.2733166769312663,-23.914819,sim
+g4_truncado_dir_arma_media_pos_lo,1402,"−35,7",100 x (exp(media_pos_lo) - 1),data/painel/c03_event_pesos_resultados.csv:truncado/esquerda->direita/tx_arma media_pos_lo=-0.44225107562053156,-35.741172,sim
+g4_truncado_dir_arma_media_pos_hi,1402,"−9,9",100 x (exp(media_pos_hi) - 1),data/painel/c03_event_pesos_resultados.csv:truncado/esquerda->direita/tx_arma media_pos_hi=-0.10438227824200105,-9.911916,sim
+g4_truncado_esq_total_media_pos,1403,"−14,3",100 x (exp(media_pos) - 1),data/painel/c03_event_pesos_resultados.csv:truncado/direita->esquerda/tx_total media_pos=-0.15424305604190217,-14.293632,sim
+g4_truncado_esq_total_media_pos_lo,1403,"−25,3",100 x (exp(media_pos_lo) - 1),data/painel/c03_event_pesos_resultados.csv:truncado/direita->esquerda/tx_total media_pos_lo=-0.2920951997796537,-25.330255,sim
+g4_truncado_esq_total_media_pos_hi,1403,"−1,6",100 x (exp(media_pos_hi) - 1),data/painel/c03_event_pesos_resultados.csv:truncado/direita->esquerda/tx_total media_pos_hi=-0.016390912304150657,-1.625731,sim
+g4_truncado_esq_mulheres_media_pos,1404,"−16,2",100 x (exp(media_pos) - 1),data/painel/c03_event_pesos_resultados.csv:truncado/direita->esquerda/tx_mulheres media_pos=-0.17678912890025328,-16.204353,sim
+g4_truncado_esq_mulheres_media_pos_lo,1404,"−27,4",100 x (exp(media_pos_lo) - 1),data/painel/c03_event_pesos_resultados.csv:truncado/direita->esquerda/tx_mulheres media_pos_lo=-0.32023339116246574,-27.402042,sim
+g4_truncado_esq_mulheres_media_pos_hi,1404,"−3,3",100 x (exp(media_pos_hi) - 1),data/painel/c03_event_pesos_resultados.csv:truncado/direita->esquerda/tx_mulheres media_pos_hi=-0.033344866638040815,-3.279505,sim
+g4_truncado_esq_negros_media_pos,1405,"−14,3",100 x (exp(media_pos) - 1),data/painel/c03_event_pesos_resultados.csv:truncado/direita->esquerda/tx_negros media_pos=-0.15422302520723946,-14.291915,sim
+g4_truncado_esq_negros_media_pos_lo,1405,"−28,3",100 x (exp(media_pos_lo) - 1),data/painel/c03_event_pesos_resultados.csv:truncado/direita->esquerda/tx_negros media_pos_lo=-0.332229318367796,-28.267719,sim
+g4_truncado_esq_negros_media_pos_hi,1405,"2,4",100 x (exp(media_pos_hi) - 1),data/painel/c03_event_pesos_resultados.csv:truncado/direita->esquerda/tx_negros media_pos_hi=0.023783267953317117,2.406835,sim
+g4_truncado_esq_arma_media_pos,1406,"−19,7",100 x (exp(media_pos) - 1),data/painel/c03_event_pesos_resultados.csv:truncado/direita->esquerda/tx_arma media_pos=-0.21968097058003452,-19.722513,sim
+g4_truncado_esq_arma_media_pos_lo,1406,"−33,0",100 x (exp(media_pos_lo) - 1),data/painel/c03_event_pesos_resultados.csv:truncado/direita->esquerda/tx_arma media_pos_lo=-0.4001894432843358,-32.980693,sim
+g4_truncado_esq_arma_media_pos_hi,1406,"−3,8",100 x (exp(media_pos_hi) - 1),data/painel/c03_event_pesos_resultados.csv:truncado/direita->esquerda/tx_arma media_pos_hi=-0.039172497875733264,-3.841518,sim
+g4_txt_dir_lo,1291,−30,"100 x (exp(media_pos_lo) - 1), sem casa decimal",data/painel/c03_event_pesos_resultados.csv:estrito/esquerda->direita/tx_total media_pos_lo=-0.36271952640986005,-30.421845,sim
+ggb_indicio,271,4,verificavel_largo - verificavel_estrito,analysis/ggb-audit/dados/validacao_resumo.json:verificavel_largo=54;verificavel_estrito=50,4.0,sim
+ggb_sem_mv_aberta,1092,12,"corresp S/P, morte I/N, tipo diferente de A",analysis/ggb-audit/dados/codificacao_A.csv:corresp S/P e morte I/N=14;tipo A=2,12.0,sim
+ggb_atropelamento,1092,2,"corresp S/P, morte I/N, tipo A",analysis/ggb-audit/dados/codificacao_A.csv:corresp S/P e morte I/N=14;tipo A=2,2.0,sim
+ggb_lista_secundaria,1092,2,verificável estrito - confirmados só por notícia,analysis/ggb-audit/dados/resultados.csv:verificavel estrito=50;so noticia=48;so correspondencia S=40;amostra=160,2.0,sim
+ggb_parcial,1092,10,verificável estrito - verificável com correspondência S,analysis/ggb-audit/dados/resultados.csv:verificavel estrito=50;so noticia=48;so correspondencia S=40;amostra=160,10.0,sim
+ggb_estrita_160,1092,"25,0",verificável com correspondência S / amostra,analysis/ggb-audit/dados/resultados.csv:verificavel estrito=50;so noticia=48;so correspondencia S=40;amostra=160,25.0,sim
+ggb_duplicata_l368,368,"0,3%",pares prováveis / casos,analysis/ggb-audit/dados/duplicatas_resumo.json:pares_nome_quase_igual_mesma_uf_cidade=1;n=329,0.303951,sim
+ggb_duplicata_l1092,1092,"0,3%",pares prováveis / casos,analysis/ggb-audit/dados/duplicatas_resumo.json:pares_nome_quase_igual_mesma_uf_cidade=1;n=329,0.303951,sim
+adultos_2023_milhoes,1108,"156,6","adultos estimados para 2023, em milhões","sources/public/p2-f8-dados-uf/sidra/censo9606_n1_raca_sexo_idade_2010_2022.json:adultos 2023=156554235;data/ggb/cobertura_implicita.csv:2023/1,89% pop_LGB_adulta=3025764",156.554235,sim
+lgb_2023_pct_l1108,1108,"1,93%",pop_LGB_adulta 2023 / adultos 2023,"sources/public/p2-f8-dados-uf/sidra/censo9606_n1_raca_sexo_idade_2010_2022.json:adultos 2023=156554235;data/ggb/cobertura_implicita.csv:2023/1,89% pop_LGB_adulta=3025764",1.932726,sim
+lgb_2023_pct_l1120,1120,"1,93%",pop_LGB_adulta 2023 / adultos 2023,"sources/public/p2-f8-dados-uf/sidra/censo9606_n1_raca_sexo_idade_2010_2022.json:adultos 2023=156554235;data/ggb/cobertura_implicita.csv:2023/1,89% pop_LGB_adulta=3025764",1.932726,sim
+c09_d2_t_lo,1315,"−18,9",100 x (exp(K x lo_t) - 1),data/presidencia/c09_d2_resultados.csv:primaria/total K=25.681;lo_t=-0.008137049523;hi_t=0.003852356916,-18.857845,sim
+c09_d2_t_hi,1315,"+10,4",100 x (exp(K x hi_t) - 1),data/presidencia/c09_d2_resultados.csv:primaria/total K=25.681;lo_t=-0.008137049523;hi_t=0.003852356916,10.399164,sim
+c09_celulas,1315,36,linhas de c09_d1_resultados.csv,data/presidencia/c09_d1_resultados.csv:36 linhas;leitura 'coincide com a troca'=1,36.0,sim
+c09_coincide,1315,1,linhas com leitura 'coincide com a troca',data/presidencia/c09_d1_resultados.csv:36 linhas;leitura 'coincide com a troca'=1,1.0,sim
+c10_celulas_holm,1375,162,células com p_mediana_holm6,"data/exposicao/c10_e2_resumo.csv:162 células com p_mediana_holm6;p_mediana<,05=63;p_mediana_holm6<,05=31;destas mediana_pct<0=30",162.0,sim
+c10_p05,1375,63,"células com p_mediana < ,05","data/exposicao/c10_e2_resumo.csv:162 células com p_mediana_holm6;p_mediana<,05=63;p_mediana_holm6<,05=31;destas mediana_pct<0=30",63.0,sim
+c10_holm05,1375,31,"células com p_mediana_holm6 < ,05","data/exposicao/c10_e2_resumo.csv:162 células com p_mediana_holm6;p_mediana<,05=63;p_mediana_holm6<,05=31;destas mediana_pct<0=30",31.0,sim
+c10_holm05_neg,1375,30,"das anteriores, mediana_pct < 0","data/exposicao/c10_e2_resumo.csv:162 células com p_mediana_holm6;p_mediana<,05=63;p_mediana_holm6<,05=31;destas mediana_pct<0=30",30.0,sim
+amostra_n,1713,871,linhas de amostra_codificada.csv,analysis/discourse/midia/amostra_codificada.csv:871 linhas,871.0,sim
+f1_expectativa,1715,13,linhas de falas_expectativa.csv,analysis/article-numbers/falas_expectativa.csv:13 linhas,13.0,sim
+pns_cor_ignorada_max,780,"0,02",max |ajustada sem cor ignorada - ajustada do artigo|,"data/pns/agressor_risco_pns2019.md:seção 8, 9 linhas",0.02,sim
+ggb_desacordo_morte,1221,2,desacordos com a variável morte,analysis/ggb-audit/dados/kappa.json:desacordos=6,2.0,sim
+ggb_wilson_fpc_lo,1221,"26,3","Wilson(k, n) com z x fpc, limite inferior",analysis/ggb-audit/dados/validacao_resumo.json:verificavel_estrito=50;n_amostra=160;N_universo=329,26.350265,corrigido
+ggb_wilson_fpc_hi,1221,"36,6","Wilson(k, n) com z x fpc, limite superior",analysis/ggb-audit/dados/validacao_resumo.json:verificavel_estrito=50;n_amostra=160;N_universo=329,36.607962,sim
+h1_lula12_no_mandato,1680,1,h1_nomand_G1 + h1_nomand_G2 (regra por data),"analysis/article-numbers/contas_do_texto.csv:h1_nomand_G1+G2;analysis/robustness/simetria/scripts/tabela_C18.py:NOMAND G1=(0, 6);G2=(1, 7)",1.0,sim
+h1_lula12_uteis,1680,13,páginas úteis de G1 + G2 (NOMAND b),"analysis/article-numbers/contas_do_texto.csv:h1_nomand_G1+G2;analysis/robustness/simetria/scripts/tabela_C18.py:NOMAND G1=(0, 6);G2=(1, 7)",13.0,sim
+d100_2024_todas_linhas_pct,987,"0,4%",denúncias com todas as linhas LGBT / canal,data/disque100/saidas/d100_serie_anual.csv:2024 grupo_lgbt denuncias_todas_as_linhas=2337;canal denuncias=551693,0.423605,sim
+mdhc2025_soma_fatias,987,100%,"soma das 8 fatias do Gráfico 5 (MDHC, 2025, p. 23)",analysis/article-numbers/terceiros_transcritos.csv:linha_pt=987;impresso=100%;8 fatias,100.0,sim
+d100_n_arquivos,63,23,arquivos no catálogo com status completo,data/disque100/saidas/catalogo.tsv:23 linhas;completo=23,23.0,sim
+ons26_lgb_pct_maior,127,31%,(razão de taxas − 1) x 100,figures/fontes/estudos_mortalidade.tsv:ons26_lgb=1.31,31.0,sim
+ons26b_dif_20_anos,128,1,média das diferenças de expectativa de vida aos 20 anos,"analysis/article-numbers/terceiros_transcritos.csv:linha_pt=1004;[1.2, 0.9]",1.05,sim
+cnv_sete_l333,333,7,numeral por extenso da fonte,analysis/article-numbers/terceiros_transcritos.csv:linha_pt=333;impresso=7;'sete',7.0,sim
+cnv_sete_l1699,1699,7,numeral por extenso da fonte,analysis/article-numbers/terceiros_transcritos.csv:linha_pt=1699;impresso=7;'sete',7.0,sim

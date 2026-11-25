@@ -1,5 +1,46 @@
-"""S12. Localiza (pagina do PDF) cada trecho verbatim usado na tabela de metodologia/criterios do GGB por ano.
-Saida: data/metodologia_trechos.csv (ano, arquivo, sha256, pagina_pdf, trecho verbatim, achado). Uso: python3.14 -I s12_metodologia_paginas.py"""
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Locate in each GGB report the page of every verbatim methodology quote.
+
+Reads the yearly report PDFs of the Grupo Gay da Bahia (GGB), extracts the text page by page
+with pdftotext, and searches each quote listed in the ITENS table (year, file, quote, finding)
+after normalizing whitespace and end-of-line hyphenation. For each quote it records the PDF
+page(s) where it appears (or NAO_LOCALIZADO) and the SHA-256 of the PDF. The resulting table
+supports the year-by-year methodology and inclusion-criteria table of the study.
+
+Inputs
+------
+- sources/public/p3-ggb/_raw/pdf/ggb2017.pdf ... ggb2025.pdf (GGB annual reports;
+  not tracked in git)
+- poppler tools pdfinfo and pdftotext on the PATH
+- optional environment variable REPO_ROOT (defaults to the repository root)
+
+Outputs
+-------
+- analysis/ggb-audit/dados/metodologia_trechos.csv
+- prints year, page list and the first 60 characters of each quote to stdout
+
+Usage
+-----
+python3.14 -I analysis/ggb-audit/scripts/s12_metodologia_paginas.py
+
+Status
+------
+Feeds numbers printed in the article (listed in paper_numbers.json).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+S12. Localiza (pagina do PDF) cada trecho verbatim usado na tabela de metodologia/criterios do GGB por ano.
+Saida: data/metodologia_trechos.csv (ano, arquivo, sha256, pagina_pdf, trecho verbatim, achado). Uso: python3.14 -I s12_metodologia_paginas.py
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

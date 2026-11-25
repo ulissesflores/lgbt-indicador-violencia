@@ -1,4 +1,39 @@
-"""Baixa os 23 CSV de microdados do Disque 100 para raw/ por pedaços (HTTP Range), com retomada.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Download the 23 Disque 100 microdata CSV files in resumable HTTP Range chunks.
+
+The server answers a full GET with chunked transfer and a per-connection speed cap, but
+returns 206 and the total size on Range requests. The script reads the announced URLs and
+sizes from scripts/urls.tsv, downloads each file in parallel chunks (default 24 workers, 4
+MB), retries with growing waits, keeps a per-file resume state, and renames a file to its
+final name only when all chunks arrived and the size matches. Standard library only; no login
+and no terms accepted.
+
+Inputs
+------
+- data/disque100/scripts/urls.tsv (URL and announced byte size of each file)
+- network: the open-data portal of the human rights ministry (the URLs listed in urls.tsv)
+
+Outputs
+-------
+- data/disque100/raw/<file>.csv (not tracked in git)
+- data/disque100/raw/<file>.csv.part and .csv.partes (resume state, removed when a file
+  completes)
+- prints progress lines and the number of chunks with error; exit code 1 if any chunk failed
+
+Usage
+-----
+python3 -I scripts/baixar.py [--workers 24] [--pedaco-mb 4]   (run from data/disque100)
+
+Status
+------
+Data acquisition step; no analysis claim.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Baixa os 23 CSV de microdados do Disque 100 para raw/ por pedaços (HTTP Range), com retomada.
 
 Por quê por pedaços: o servidor (dadosabertos.mdh.gov.br) responde o GET inteiro em
 `Transfer-Encoding: chunked` sem Content-Length e limita cada conexão a ~50-85 KB/s
@@ -8,6 +43,12 @@ persistido, sem cadastro, sem aceite de termos.
 Uso: python3 -I scripts/baixar.py [--workers 24] [--pedaco-mb 4]
 Saída: raw/<arquivo>.csv (arquivo final só aparece quando todos os pedaços chegaram e o
 tamanho bate com o anunciado em scripts/urls.tsv); estado de retomada em raw/<arquivo>.csv.partes.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
 """
 
 import argparse

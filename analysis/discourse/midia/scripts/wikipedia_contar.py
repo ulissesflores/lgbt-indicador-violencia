@@ -1,5 +1,45 @@
-"""Wikipedia pt/en/es: paginas que casam cada entrada (string GDELT sem filtros), via action=query&list=search.
-Retrato do dia (sem serie). Salva bruto + sha256 e uma lista de paginas (pageid, titulo, snippet)."""
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Count Wikipedia pages (pt, en, es) that match each dictionary query.
+
+For each entry it runs a Wikipedia search (action=query, list=search) with the exact phrase
+derived from the GDELT string, without filters, in the wiki of the entry language. It is a
+snapshot of the day, not a series. Saves each raw answer with its sha256 and a list of the
+pages found (page id, title, snippet).
+
+Inputs
+------
+- the pt, en and es Wikipedia API endpoints, https://<lang>.wikipedia.org/w/api.php (network)
+- the query dictionary module dicionario
+
+Outputs
+-------
+- sources/public/q1-textointegral/discurso/midia/wikipedia/<id>_<hash>.json (raw answers)
+- analysis/discourse/midia/_bruto_wikipedia.csv
+- analysis/discourse/midia/_paginas_wikipedia.json
+- prints the entry id, the wiki language and the number of pages
+
+Usage
+-----
+python3 -I analysis/discourse/midia/scripts/wikipedia_contar.py
+
+Status
+------
+Data acquisition step; no analysis claim.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Wikipedia pt/en/es: paginas que casam cada entrada (string GDELT sem filtros), via action=query&list=search.
+Retrato do dia (sem serie). Salva bruto + sha256 e uma lista de paginas (pageid, titulo, snippet).
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

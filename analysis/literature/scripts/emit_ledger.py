@@ -1,5 +1,44 @@
 #!/usr/bin/env python3
-"""Emite sources.jsonl desta frente SÓ via emit_sources.py (porta única do ledger). Reexecutar apaga e refaz o arquivo."""
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Write the source ledger of the literature review.
+
+Rebuilds sources.jsonl from scratch by calling the ledger script named by EMIT_SOURCES (default
+emit_sources.py) once per work in rows.py, with the URL, identifier, access type, language,
+channel, year, title and the SHA-256 of the local file. It adds a fixed list of works for which
+no full text could be obtained, marked as closed access.
+
+Inputs
+------
+- analysis/literature/scripts/rows.py
+- the local source files listed in rows.py (hashed)
+- the ledger script named by EMIT_SOURCES
+
+Outputs
+-------
+- analysis/literature/sources.jsonl (deleted and rebuilt)
+- prints the number of entries emitted to stdout
+
+Usage
+-----
+python3 -I analysis/literature/scripts/emit_ledger.py
+
+Status
+------
+Data acquisition step; no analysis claim.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Emite sources.jsonl desta frente SÓ via emit_sources.py (porta única do ledger). Reexecutar apaga e refaz o arquivo.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

@@ -1,3 +1,34 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Hold the manual study rows from which estudos.csv is built.
+
+Data module: each row records one study read in full text (identifier, DOI, journal, country and
+period, design, sample, definition of orientation, outcome, estimate, verbatim passage, section
+or page, population, cause, role in the verdict, limitations and local file). It also holds the
+SJR quartile of each journal and a list of studies that could not be read.
+
+Inputs
+------
+- none read at run time (constants; file paths point to sources/public/q1-textointegral/)
+
+Outputs
+-------
+- none (library module imported by build_estudos.py and verifica_trechos.py)
+
+Usage
+-----
+Imported by build_estudos.py and verifica_trechos.py; not run directly.
+
+Status
+------
+No registration status is claimed for this file.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 # Linhas manuais do estudos.csv. Cada trecho foi copiado do texto integral local (ver 'arquivo'). Gerado em 2026-10-22.
 import os as _os
 import pathlib as _pl

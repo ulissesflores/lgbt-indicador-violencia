@@ -1,5 +1,45 @@
-"""Travas sobre as SAÍDAS (rodam sem raw/): selo do pré-registro, coerência interna e números publicados no relatório.
-Rodar: python3 -m pytest -q tests"""
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Test the Disque 100 outputs: seal, internal consistency and published numbers.
+
+The tests run without the raw files. They check the seal of the pre-registration, that the
+catalogue has 23 complete periods with SHA-256, the recorded hashes of two files, that
+category counts add up to the totals and that the LGBT cut lies inside the whole channel. They
+also check the numbers quoted in the report and the state comparison outputs. The module is
+skipped when the tabulation output is absent.
+
+Inputs
+------
+- data/disque100/saidas/catalogo.tsv, d100_por_periodo.csv, d100_qualidade.csv,
+  d100_serie_anual.csv
+- data/disque100/saidas/d100_porta_balanco.csv, d100_comparacao_uf.csv and estrutura/
+- data/disque100/scripts/d100_selo.py (imported)
+
+Outputs
+-------
+- none (pytest pass or fail report)
+
+Usage
+-----
+python3 -m pytest -q tests   (run from data/disque100; without -I, as in the original note)
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Travas sobre as SAÍDAS (rodam sem raw/): selo do pré-registro, coerência interna e números publicados no relatório.
+Rodar: python3 -m pytest -q tests
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 
 import csv
 import sys

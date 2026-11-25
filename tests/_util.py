@@ -1,4 +1,39 @@
-"""Leitores mínimos (biblioteca padrão) dos arquivos derivados usados pelos testes."""
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Provide minimal standard-library readers of derived files for the test modules.
+
+Defines the repository root and small helpers that read a CSV file as a list of dictionaries,
+a text file, or a JSON file, all by path relative to the repository root, and a helper that
+tests whether two numbers differ by at most a tolerance.
+
+Inputs
+------
+- none (library module imported by the test files; the files it reads are chosen by the caller)
+
+Outputs
+-------
+- none (library module imported by the test files)
+
+Usage
+-----
+Imported by the test files in tests/; not run directly.
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Leitores mínimos (biblioteca padrão) dos arquivos derivados usados pelos testes.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import csv
 import json
 import re

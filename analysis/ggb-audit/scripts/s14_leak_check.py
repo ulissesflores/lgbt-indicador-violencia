@@ -1,5 +1,45 @@
-"""S14. Verifica que nenhum nome de vitima (tokens >=5 letras da lista nominal e do TDoR) aparece em arquivo publico da frente F3.
-Uso: python3.14 -I s14_leak_check.py  (exit 1 se vazar)"""
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Check that no victim name appears in the public files of the GGB audit.
+
+Builds a set of name tokens (five letters or more, minus a stop list of very common surnames
+and labels) from the nominal list of the 2019 GGB report and from the TDoR export. It then
+scans every text file under analysis/ggb-audit (skipping PDFs, HTML, the source-material folder
+and this script) for any of those tokens as a whole word. It prints the number of tokens
+checked and each file with a possible leak, and exits with status 1 if any is found.
+
+Inputs
+------
+- sources/public/p3-ggb/_raw/ggb2019_lista_nominal.csv (not tracked in git: contains names)
+- sources/public/p3-ggb/_raw/tdor/x/tdor_export.csv (not tracked in git: contains names)
+- every file under analysis/ggb-audit/ except *.pdf, *.html and the source-material folder
+
+Outputs
+-------
+- prints the token count and the verdict (OK or the list of files with possible leaks) to stdout
+- exit status 0 when clean, 1 when a possible leak is found
+
+Usage
+-----
+python3.14 -I analysis/ggb-audit/scripts/s14_leak_check.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+S14. Verifica que nenhum nome de vitima (tokens >=5 letras da lista nominal e do TDoR) aparece em arquivo publico da frente F3.
+Uso: python3.14 -I s14_leak_check.py  (exit 1 se vazar)
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

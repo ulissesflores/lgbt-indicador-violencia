@@ -1,4 +1,37 @@
-"""Trilha 1: recalcula os derivados a partir dos derivados distribuídos.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Recompute the derived files from the distributed derived files and compare them with the commit.
+
+Copies the repository into a replica folder, runs each listed analysis script there with the
+repository root pointed at the replica, and compares every file of the replica with the
+original. It accepts a one-unit difference in the last printed decimal, or a relative
+difference of 1e-10 for full-precision numbers, and says when it does. Figures are only
+informative; plotted values are compared. Nothing in the repository is overwritten; exit
+code 0 only if every script finishes and no file differs.
+
+Inputs
+------
+- the analysis scripts listed in the PASSOS table of the file (under data/ and figures/)
+- the whole repository tree (copied to the replica and compared)
+
+Outputs
+-------
+- .run/replica/ (copy of the repository, not tracked in git)
+- prints one line per script and per differing file to stdout
+
+Usage
+-----
+python3 -I scripts/reproduzir.py [--only <part of a path>]
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Trilha 1: recalcula os derivados a partir dos derivados distribuídos.
 
 Confere contra o que está commitado. Copia o repositório para .run/replica (ignorado pelo git), roda
 cada script abaixo LÁ (REPO_ROOT=réplica, python -I) e compara cada arquivo da réplica com o
@@ -9,11 +42,19 @@ Comparação: bytes idênticos; se diferirem (libm/BLAS de outro sistema), aceit
 máximo 1 unidade na última casa decimal impressa de cada número (arredondamento), e diz que aceitou.
 Número impresso em precisão total (repr do float, >= 15 algarismos significativos): aceita diferença
 relativa <= 1e-10 (BLAS multithread muda a ordem das somas entre execuções; observado em
-painel_c02/c03 na mesma máquina). PNG (matplotlib) é informativo: não entra na comparação.
+painel_c02/c03 na mesma máquina). Figuras (PNG, SVG, PDF) e o figures/SHA256SUMS que as lista são
+informativos: o matplotlib grava a própria versão e desenha diferente entre versões (com 3.9.4 no
+lugar de 3.10.9, 47 arquivos de figura mudam); os valores plotados (figures/*.json) são comparados.
 
 Uso: python3 -I scripts/reproduzir.py [--only <trecho do caminho>]
 Tempo: ~6 min (s06_analises 2 min; painel_diagnosticos, concordancia_v2, h1_03 e h2_02 30-40 s cada;
-C09/C10/R6 na v0.3).
+C09/C10/R6 na v0.3; figuras ~10 s).
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
 """
 
 import os
@@ -72,8 +113,17 @@ PASSOS = [
     (f"{R3}/ideology/scripts/sensibilidade_twfe.py", []),
     (f"{R3}/ideology/scripts/gerar_mapeamento_md.py", []),
     ("analysis/simulation/sim_identificabilidade.py", ["analysis/simulation"]),
+    # 1.3.0: contas que o texto do artigo faz sobre números publicados (Apêndice K, errata
+    # 2026-11-24), a Tabela C18 e a sensibilidade R7, todas sobre arquivos do repositório
+    ("analysis/article-numbers/contas_do_texto.py", []),
+    (f"{R3}/robustness/simetria/scripts/tabela_C18.py", []),
+    (f"{R3}/robustness/simetria/scripts/r7_parlamento_sensibilidade.py", []),
+    # figuras do repositório por último: leem os derivados acima (valores plotados comparados;
+    # imagens informativas)
+    ("figures/make_figures.py", []),
 ]
 IGNORA = {".git", ".work", ".run", "__pycache__"}
+FIGURA = {".png", ".svg", ".pdf"}
 NUM = re.compile(r"-?\d+\.\d+(?:[eE][-+]?\d+)?")
 
 
@@ -177,14 +227,14 @@ def main():
             print(f"[ok] {rotulo} ({time.time() - t:.0f}s)")
         sys.stdout.flush()
     orig, rep = arquivos(RAIZ), arquivos(REPLICA)
-    n_exato = n_num = n_png = 0
+    n_exato = n_num = n_fig = 0
     for k, p in sorted(orig.items()):
         if k.startswith((".run/", ".work/")) or k == "BUILD-STATE.md" or k not in rep:
             continue
         if rep[k].stat().st_mtime_ns == antes.get(k):
             continue  # o passo não reescreveu este arquivo: não é evidência de recálculo
-        if p.suffix == ".png":
-            n_png += 1
+        if p.suffix in FIGURA or k == "figures/SHA256SUMS":  # varia com a versão do matplotlib
+            n_fig += 1
             continue
         if (a := p.read_bytes()) == (b := rep[k].read_bytes()):
             n_exato += 1
@@ -205,7 +255,7 @@ def main():
     print(
         f"arquivos RECALCULADOS pelos scripts e conferidos com o commitado: "
         f"{n_exato} idênticos byte a byte, {n_num} equivalentes numéricos, "
-        f"{n_png} figuras PNG regeneradas (informativas); {falhas} falha(s)/divergência(s)"
+        f"{n_fig} arquivos de figura regenerados (informativos); {falhas} falha(s)/divergência(s)"
     )
     return 1 if falhas else 0
 

@@ -1,4 +1,40 @@
-"""Concordância Sinan (campo 55 = LGBTfobia) x Anuário FBSP (BO 'racismo por homofobia ou transfobia') por UF, 2022-2025 - VERSÃO 2.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Measure Sinan-yearbook agreement by state net of population size (version 2).
+
+The script computes the partial Spearman correlation between Sinan LGBTphobia notifications
+and yearbook police-report counts per state for 2022-2025, controlling for the rank of state
+population, with a bootstrap over states for the interval and a permutation test of residuals
+(fixed seed). It also reports the correlation expected from size alone, rate-based secondary
+measures, five sensitivity variants and a specificity control using Sinan racism
+notifications.
+
+Inputs
+------
+- data/sinan/serie_campo55_uf_ano.csv
+- data/anuario/anuario_lgbtfobia_uf_ano_v2.csv
+- sources/public/p2-f8-dados-uf/tabnet/raw/sidra_9514.json (2022 Census population)
+- sources/public/p2-f8-dados-uf/tabnet/raw/sidra_6579.json (annual population estimates)
+
+Outputs
+-------
+- data/concordancia/concordancia_v2.md (also printed to stdout)
+- data/concordancia/concordancia_v2.csv
+- data/concordancia/fig-concordancia_v2.png
+
+Usage
+-----
+python3 -I data/concordancia/concordancia_v2.py
+
+Status
+------
+Feeds numbers printed in the article (listed in paper_numbers.json).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Concordância Sinan (campo 55 = LGBTfobia) x Anuário FBSP (BO 'racismo por homofobia ou transfobia') por UF, 2022-2025 - VERSÃO 2.
 
 POR QUE EXISTE: a v1 (concordancia_sinan_anuario.py) calculou Spearman sobre CONTAGENS brutas. Contagem de UF cresce com a população
 (Sinan x tamanho: rho 0,96-0,98), então duas contagens quaisquer "concordam" só por tamanho. v2 mede concordância LÍQUIDA de tamanho.
@@ -17,6 +53,12 @@ em 2026-10-20, sem IC; esta versão fixa as especificações abaixo e reporta TO
 Entradas: data/sinan/serie_campo55_uf_ano.csv; data/anuario/anuario_lgbtfobia_uf_ano_v2.csv; sources/public/p2-f8-dados-uf/tabnet/raw/sidra_9514.json (Censo 2022)
           e sidra_6579.json (estimativas). Saídas: data/concordancia/concordancia_v2.{md,csv} e fig-concordancia_v2.png.
 Rodar: python3 -I data/concordancia/concordancia_v2.py   (semente fixa)
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
 """
 import os as _os
 import pathlib as _pl

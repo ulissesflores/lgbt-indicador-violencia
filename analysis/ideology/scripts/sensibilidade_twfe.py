@@ -1,7 +1,47 @@
 #!/usr/bin/env python3
-"""Sensibilidade do TWFE do painel F8 a safra do escore de ideologia. NAO altera o painel: le os desfechos de data/painel/painel_uf_ano*.csv
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Test how the two-way fixed-effects result changes with the ideology score vintage.
+
+Re-estimates the state panel model (log homicide rate on governor ideology with state and year
+fixed effects and state-clustered standard errors) for six outcomes and six ideology variants
+(the current score, the period-specific expert score, the legislator score, their mean, the
+2022 wave for all years and a binary left-government share). It also reports how much of each
+ideology variable varies within states. The panel itself is not altered.
+
+Inputs
+------
+- data/painel/painel_uf_ano.csv and data/painel/painel_uf_ano_tse.csv
+- analysis/ideology/impacto_painel_wiki.csv and impacto_painel_tse.csv (from build_ideologia.py)
+- the Python package numpy
+
+Outputs
+-------
+- analysis/ideology/sensibilidade_twfe.md
+- prints the same Markdown to stdout
+
+Usage
+-----
+python3 -I analysis/ideology/scripts/sensibilidade_twfe.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Sensibilidade do TWFE do painel F8 a safra do escore de ideologia. NAO altera o painel: le os desfechos de data/painel/painel_uf_ano*.csv
 e as variantes de ideologia de impacto_painel_{wiki,tse}.csv (gerado por build_ideologia.py). TWFE copiado de data/painel/painel_f8.py (mesma funcao).
-Rodar: python3 -I scripts/sensibilidade_twfe.py"""
+Rodar: python3 -I scripts/sensibilidade_twfe.py
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

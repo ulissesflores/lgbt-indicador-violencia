@@ -1,6 +1,44 @@
-"""Baixa TODOS os discursos de deputados (API publica Dados Abertos da Camara, sem chave)
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Download every deputy speech from the Chamber of Deputies open data API.
+
+Fetches all speeches of the deputies of legislatures 55 to 57 from 2015-01-01 to 2026-10-21 from
+the public API (no key), saving each raw page as a JSON file so the run can be resumed, then
+writes a manifest with the sha256 of every saved file.
+
+Inputs
+------
+- https://dadosabertos.camara.leg.br/api/v2 (public API, network access)
+
+Outputs
+-------
+- sources/public/q1-textointegral/discurso/midia/camara/<deputy>_<page>.json
+  (not tracked in git)
+- _deputados.json, _falhas.json and _MANIFESTO.sha256 in the same folder
+- prints progress, the total number of speeches and the failures
+
+Usage
+-----
+python3 -I analysis/discourse/midia/scripts/camara_baixar.py
+
+Status
+------
+Data acquisition step; no analysis claim.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Baixa TODOS os discursos de deputados (API publica Dados Abertos da Camara, sem chave)
 2015-01-01..2026-10-21, legislaturas 55-57. Salva cada pagina bruta em RAW/<idDep>_<pag>.json
-(retomavel). Depois MANIFESTO com sha256 de cada arquivo. Python: python3 -I."""
+(retomavel). Depois MANIFESTO com sha256 de cada arquivo. Python: python3 -I.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

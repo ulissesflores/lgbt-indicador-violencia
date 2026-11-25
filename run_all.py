@@ -1,4 +1,37 @@
-"""Entry-point único: integridade, recálculo, testes e selo de proveniência.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Run the whole verification chain: integrity, recomputation, tests and provenance seal.
+
+Runs the provenance verification, then the recomputation script, then every test function in
+the tests folder without requiring pytest (skipped tests are counted apart), and finally the
+provenance verification again. With --rapido it skips the recomputation; with --selar it first
+regenerates the public inventory and the provenance seal. It returns 0 only if all steps pass.
+
+Inputs
+------
+- scripts/inventario_publico.py (run with --selar)
+- make_provenance.py (run as a subprocess)
+- scripts/reproduzir.py (run unless --rapido is given)
+- tests/test_*.py (loaded and executed in process)
+
+Outputs
+-------
+- prints one line per test and a summary to stdout
+- with --selar: whatever the inventory and seal scripts write (see those files)
+
+Usage
+-----
+python3 -I run_all.py [--rapido | --selar]
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Entry-point único: integridade, recálculo, testes e selo de proveniência.
 
 Cadeia: integridade -> recálculo na réplica -> testes dos números publicados -> selo de
 proveniência.
@@ -12,6 +45,12 @@ Uso:
 
 Dependências: numpy, pandas, scipy, matplotlib (requirements.txt). Os testes rodam com ou sem
 pytest.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
 """
 
 import runpy

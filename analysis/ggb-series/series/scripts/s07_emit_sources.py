@@ -1,5 +1,43 @@
-"""Gera series/sources.jsonl SOMENTE via emit_sources.py (ledger). Le o painel (doc_id, url, sha256, titulo) + fontes consultadas fora do painel.
-Rodar uma vez; para refazer, apague series/sources.jsonl (arquivo nosso) antes. Uso: python3 -I s07_emit_sources.py"""
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Write the source ledger of the GGB series study.
+
+Reads the panel of deaths and, for each distinct source document in it, calls the ledger
+script named by EMIT_SOURCES (default emit_sources.py) to append an entry with URL, access
+type, language, channel, title, year and SHA-256. It then adds a fixed list of sources that
+were consulted but are not in the panel. It stops if the ledger file already exists.
+
+Inputs
+------
+- analysis/ggb-series/series/painel_mortes_lgbt.csv
+- the ledger script named by EMIT_SOURCES
+
+Outputs
+-------
+- analysis/ggb-series/series/sources.jsonl
+- prints the ledger path to stdout
+
+Usage
+-----
+python3 -I analysis/ggb-series/series/scripts/s07_emit_sources.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Gera series/sources.jsonl SOMENTE via emit_sources.py (ledger). Le o painel (doc_id, url, sha256, titulo) + fontes consultadas fora do painel.
+Rodar uma vez; para refazer, apague series/sources.jsonl (arquivo nosso) antes. Uso: python3 -I s07_emit_sources.py
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

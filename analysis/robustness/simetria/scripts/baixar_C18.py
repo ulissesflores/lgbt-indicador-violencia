@@ -1,6 +1,49 @@
-"""C18: baixa as paginas listadas em picks_C18.tsv (sem login, sem aceitar termos). curl com UA comum; se falhar tenta Wayback id_.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Download the pages listed for the C18 symmetric search and extract their text.
+
+For each row of picks_C18.tsv the script fetches the URL with curl (no login, no terms
+accepted), falls back to a Wayback Machine snapshot when the direct fetch fails or hits a bot
+challenge, and stores the raw bytes with their SHA-256. HTML and PDF are converted to plain
+text, so that the event table of the C18 search can quote verbatim from files kept in the
+repository.
+
+Inputs
+------
+- analysis/robustness/simetria/picks_C18.tsv (selected pages: government, query id, URL,
+  source type)
+- network: each listed URL, then https://web.archive.org/web/2id_/<URL> as fallback
+- external tool: pdftotext, for PDF pages
+
+Outputs
+-------
+- sources/public/q1-textointegral/discurso/simetria/brasil/<gov>_<qid>.raw (downloaded bytes)
+- sources/public/q1-textointegral/discurso/simetria/brasil/<gov>_<qid>.txt (extracted text)
+- analysis/robustness/simetria/downloads_C18.tsv (status, bytes, SHA-256, characters per page)
+- prints the number of pages fetched out of the number listed
+
+Usage
+-----
+python3 -I analysis/robustness/simetria/scripts/baixar_C18.py
+
+Status
+------
+Data acquisition step; no analysis claim.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+C18: baixa as paginas listadas em picks_C18.tsv (sem login, sem aceitar termos). curl com UA comum; se falhar tenta Wayback id_.
 Saidas: sources/public/q1-textointegral/discurso/simetria/brasil/<gov>_<qid>.<ext>, downloads_C18.tsv (status, bytes, sha256), texto extraido .txt.
-Python: python3 -I"""
+Python: python3 -I
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

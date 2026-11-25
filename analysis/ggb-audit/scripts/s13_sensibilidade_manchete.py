@@ -1,6 +1,45 @@
-"""S13. (4d) Sensibilidade da manchete do GGB a definicoes, com os numeros PUBLICADOS (paginas em data/metodologia_trechos.csv).
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Tabulate how the GGB headline count changes under three definitions.
+
+Holds the totals published by the GGB for 2017-2025 (total, homicides, suicides, robbery-
+murders, other causes, strict homicides) in a table inside the code. For each year it computes
+A (the headline total), B (headline minus suicides) and C (strict homicide, when published),
+the ratios B/A and C/A and the suicide share of A. It then prints the 2017-2025 and 2019-2020
+changes under each definition.
+
+Inputs
+------
+- none read from disk (the published figures are literals in the script; they come from the
+  quotes located in analysis/ggb-audit/dados/metodologia_trechos.csv)
+
+Outputs
+-------
+- analysis/ggb-audit/dados/sensibilidade_manchete.csv
+- prints each yearly row and the change summaries to stdout
+
+Usage
+-----
+python3.14 -I analysis/ggb-audit/scripts/s13_sensibilidade_manchete.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+S13. (4d) Sensibilidade da manchete do GGB a definicoes, com os numeros PUBLICADOS (paginas em data/metodologia_trechos.csv).
 A = manchete (todas as mortes violentas incl. suicidio, latrocinio, outras); B = A - suicidios; C = homicidio estrito (sem latrocinio/outras/suicidio), quando publicado.
-2019 extra: projecao de 'so com LGBTfobia atribuida na fonte' a partir da amostra (ILUSTRATIVA; ver README). Uso: python3.14 -I s13_sensibilidade_manchete.py"""
+2019 extra: projecao de 'so com LGBTfobia atribuida na fonte' a partir da amostra (ILUSTRATIVA; ver README). Uso: python3.14 -I s13_sensibilidade_manchete.py
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

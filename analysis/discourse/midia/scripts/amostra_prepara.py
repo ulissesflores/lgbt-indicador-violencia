@@ -1,7 +1,49 @@
-"""Monta os quadros de amostra (60 por familia x universo, semente pre-registrada) a partir dos itens casados.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Build the coding samples (60 items per family and universe) from the matched items.
+
+Draws a sample with a fixed seed from the matched items of each family (F1 to F4) in the
+selected universe, after sorting them in canonical hash order. Families with 60 items or fewer
+are taken whole (census). Universes: Parliament (House plus Senate), Google News RSS in
+Portuguese and in English and Spanish, OpenAlex and Wikipedia.
+
+Inputs
+------
+- analysis/discourse/midia/_parlamento_matches.jsonl (mode parlamento)
+- analysis/discourse/midia/_gnrss_celulas.jsonl (mode gnrss)
+- OpenAlex raw JSON saved under sources/public/q1-textointegral/discurso/midia/openalex
+- analysis/discourse/midia/_paginas_wikipedia.json (mode wikipedia)
+- the query dictionary module dicionario (seed and source patterns)
+
+Outputs
+-------
+- analysis/discourse/midia/_amostra_<universe>.jsonl (one item per line)
+- prints the sample sizes per family
+
+Usage
+-----
+python3 -I analysis/discourse/midia/scripts/amostra_prepara.py <mode>
+where <mode> is one of parlamento, gnrss, openalex or wikipedia.
+
+Status
+------
+Pre-registered analysis (preregistrations/midia/PRE-REGISTRO.md).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Monta os quadros de amostra (60 por familia x universo, semente pre-registrada) a partir dos itens casados.
 Saida: midia/_amostra_<universo>.jsonl (um item por linha, com id/hash, url, data, familia, entrada, trecho, fontes)
 Universos: Parlamento (Camara+Senado), GNRSS-pt, GNRSS-mundo (en+es), OpenAlex, Wikipedia.
-Uso: amostra_prepara.py parlamento|gnrss|openalex|wikipedia"""
+Uso: amostra_prepara.py parlamento|gnrss|openalex|wikipedia
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

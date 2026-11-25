@@ -1,8 +1,48 @@
-"""Testes de ``scripts/auditar_publicacao.py`` e ``scripts/inventario_publico.py`` (v0.3).
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Test the publication auditor and the public inventory script, with planted-error controls.
+
+Runs the inventory check and the auditor (inventory and privacy checks) on the repository and
+expects success. It then copies the distributed file set to a temporary folder, plants errors
+(a home path in a README, a corrupted verification row, an extra script, a wrong version in
+the Zenodo metadata) and expects the auditor to fail with exit code 1. The release check is
+expected to return 2 (not exercised) before a public repository exists.
+
+Inputs
+------
+- scripts/auditar_publicacao.py
+- scripts/inventario_publico.py
+- make_provenance.py (loaded as a module to list the distributed files)
+- manifest/INVENTARIO-PUBLICO.json
+- the distributed file set (copied to a temporary folder)
+
+Outputs
+-------
+- none (assertions only; temporary copies are removed)
+
+Usage
+-----
+python3 -I -m pytest tests/test_auditar_publicacao.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Testes de ``scripts/auditar_publicacao.py`` e ``scripts/inventario_publico.py`` (v0.3).
 
 Cada verificação roda no repositório (tem de passar) e numa cópia do conjunto distribuído com um
 erro plantado (controle negativo: tem de falhar com código 1). ``release`` sai 2 (NÃO EXERCIDO)
 enquanto não há repositório público, e 1 se os metadados da fase pré-DOI forem quebrados.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
 """
 
 import importlib.util

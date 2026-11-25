@@ -1,6 +1,48 @@
-"""SIM/DATASUS: obitos por agressao (CID-10 X85-Y09), intencao indeterminada (Y10-Y34) e intervencao legal (Y35-Y36), Brasil, por ano de OCORRENCIA?
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Count aggression deaths per year in the SIM mortality files for 2000-2009.
+
+Downloads, when absent, the yearly national death files of the Brazilian Mortality Information
+System (SIM, DATASUS), converts them to DBF and counts deaths by underlying cause: aggression
+(ICD-10 X85-Y09), undetermined intent (Y10-Y34) and legal intervention (Y35-Y36). The yearly
+file is keyed by the year of death. The result extends to 2000-2009 the series already
+aggregated in data/sim for 2010-2024.
+
+Inputs
+------
+- ftp://ftp.datasus.gov.br/dissemin/publicos/SIM/CID10/DORES/DOBR<year>.dbc, fetched with curl
+  into sources/public/p3-ggb/_raw/sim_pre2010/ (large files; not tracked in git)
+- the Python packages pyreaddbc and dbfread
+
+Outputs
+-------
+- analysis/ggb-series/series/dados_sim_2000_2009.csv (rewritten after each year)
+- temporary DBF files, deleted after counting
+- prints each yearly row to stdout
+
+Usage
+-----
+python3.14 -I analysis/ggb-series/series/scripts/s03_sim_2000_2009.py
+(run in an environment where pyreaddbc and dbfread are installed)
+
+Status
+------
+Data acquisition step; no analysis claim.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+SIM/DATASUS: obitos por agressao (CID-10 X85-Y09), intencao indeterminada (Y10-Y34) e intervencao legal (Y35-Y36), Brasil, por ano de OCORRENCIA?
 Nota: o DOBRyyyy do FTP e por ano do OBITO (DTOBITO). Estende para 2000-2009 a serie ja agregada em data/sim (2010-2024).
-Uso: python  # venv com pyreaddbc + dbfread -I s03_sim_2000_2009.py   (precisa de pyreaddbc + dbfread; arquivos grandes em _raw/sim_pre2010, fora do git)"""
+Uso: python  # venv com pyreaddbc + dbfread -I s03_sim_2000_2009.py   (precisa de pyreaddbc + dbfread; arquivos grandes em _raw/sim_pre2010, fora do git)
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

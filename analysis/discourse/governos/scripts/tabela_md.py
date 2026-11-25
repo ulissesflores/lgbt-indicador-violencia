@@ -1,4 +1,38 @@
-"""Gera as linhas da tabela de GOVERNOS.md a partir de paises.csv (evita transcricao manual)."""
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Print the rows of the governments Markdown table from paises.csv.
+
+Avoids manual transcription: reads the country table and prints one Markdown table row per
+country (country and reference year, regime, death penalty, level and axis classification).
+
+Inputs
+------
+- analysis/discourse/governos/paises.csv (REPO_ROOT may override the repo root)
+
+Outputs
+-------
+- prints the table rows to stdout; nothing is written to disk
+
+Usage
+-----
+python3 -I analysis/discourse/governos/scripts/tabela_md.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Gera as linhas da tabela de GOVERNOS.md a partir de paises.csv (evita transcricao manual).
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

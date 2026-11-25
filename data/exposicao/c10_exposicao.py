@@ -1,9 +1,56 @@
-"""C10 (frente E) — EXPOSIÇÃO POR GOVERNO, federal (E1) e estadual (E2). DESCRITIVO: nenhum número aqui é efeito causal do governo.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Compute descriptive homicide exposure by federal government and governor change.
+
+The script first checks that the body of the C10 pre-registration still matches its recorded
+SHA-256 and aborts otherwise. E1 takes the national age-standardized rate at the base year and
+end year of each federal government. E2 takes the 67 real governor changes and computes the
+relative excess of the state rate over the national rate, comparing the mean of the 3 years
+before with the 3 years after, against a chance reference built by paired resampling over
+states without a change (9,999 draws, fixed seed). Nothing here is a causal effect of a
+government.
+
+Inputs
+------
+- data/exposicao/PREREGISTRO-C10.md and PREREGISTRO-C10.sha256 (integrity check)
+- data/sim/padroniza_idade.py, data/exposicao/c10_estrutura.py (loaded as modules)
+- data/sim/asr_brasil.csv and data/sim/sim_agressoes_agregado.csv
+- data/presidencia/c09_d1_resultados.md and presidentes_2007_2024.csv
+- data/painel/painel_uf_ano_tse_brc.csv and data/atlas_uf_series.csv
+- sources/public/p2-f8-dados-uf/sidra/ (SIDRA tables 6407 and 6403 as JSON)
+
+Outputs
+-------
+- data/exposicao/c10_e1_federal.csv and c10_e1_serie_longo.csv
+- data/exposicao/c10_e2_trocas_longo.csv and c10_e2_resumo.csv
+- data/exposicao/c10_resultados.md (also printed to stdout)
+
+Usage
+-----
+python3 -I data/exposicao/c10_exposicao.py
+
+Status
+------
+Pre-registered analysis (data/exposicao/PREREGISTRO-C10.md). Feeds numbers printed in the
+article (listed in paper_numbers.json).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+C10 (frente E) — EXPOSIÇÃO POR GOVERNO, federal (E1) e estadual (E2). DESCRITIVO: nenhum número aqui é efeito causal do governo.
 Pré-registro: PREREGISTRO-C10.md (corpo com sha256 em PREREGISTRO-C10.sha256, gravado ANTES deste script; conferido abaixo, aborta se mudou).
 E1: taxa nacional padronizada por idade (data/sim/asr_brasil.csv; arma gerada com data/sim/padroniza_idade.py como em c09_d1_its.py) no ano-base e no ano-fim de cada governo.
 E2: 67 trocas reais de governador (c10_estrutura.py); excesso relativo r = 100[(D_uf/A_uf)/(D_br/A_br) - 1] entre as médias dos 3 anos antes (e-3..e-1) e dos 3 depois (e..e+2),
     truncadas a 2012-2024; referência de acaso = UFs sem troca em e-2..e+2 no mesmo ano, reamostragem pareada por ano (B = 9999, semente 20261024 por célula).
-Rodar: python3 -I c10_exposicao.py   Saídas: c10_e1_federal.csv, c10_e1_serie_longo.csv, c10_e2_trocas_longo.csv, c10_e2_resumo.csv, c10_resultados.md"""
+Rodar: python3 -I c10_exposicao.py   Saídas: c10_e1_federal.csv, c10_e1_serie_longo.csv, c10_e2_trocas_longo.csv, c10_e2_resumo.csv, c10_resultados.md
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

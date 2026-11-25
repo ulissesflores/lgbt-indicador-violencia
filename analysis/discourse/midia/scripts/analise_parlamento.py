@@ -1,7 +1,49 @@
-"""Aplica o dicionario pre-registrado (regex locais) a TODOS os discursos baixados da Camara e
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Apply the query dictionary to every downloaded House speech and Senate full text.
+
+Runs the local regular expressions of the dictionary on all House speeches and on the Senate
+candidate texts, and counts matches per entry and year, the union per family and year, and the
+denominators (speeches per year). The default dictionary is dicionario_v2, the correction made
+after the first count; another module name can be passed as the first argument.
+
+Inputs
+------
+- sources/public/q1-textointegral/discurso/midia/camara/ (House speeches, not tracked in git)
+- sources/public/q1-textointegral/discurso/midia/senado/ (Senate lists and texts)
+- the dictionary module (default dicionario_v2)
+
+Outputs
+-------
+- analysis/discourse/midia/_bruto_parlamento.csv
+- analysis/discourse/midia/_parlamento_matches.jsonl
+- with another dictionary module: _v1prereg_parlamento_novo.csv and _v1prereg_matches_novo.jsonl
+- prints speech totals and family totals
+
+Usage
+-----
+python3 -I analysis/discourse/midia/scripts/analise_parlamento.py [dictionary_module]
+
+Status
+------
+Pre-registered analysis (preregistrations/midia/PRE-REGISTRO.md). The default dictionary v2 is
+a post-count correction recorded in its addendum.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Aplica o dicionario pre-registrado (regex locais) a TODOS os discursos baixados da Camara e
 aos textos integrais candidatos do Senado. Saidas (em midia/): _bruto_parlamento.csv (contagens por
 entrada x ano, uniao por familia x ano, denominadores), _parlamento_matches.jsonl (itens casados com
-trecho e co-mencao de fontes). Python: python3 -I."""
+trecho e co-mencao de fontes). Python: python3 -I.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

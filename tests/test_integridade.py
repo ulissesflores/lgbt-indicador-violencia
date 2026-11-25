@@ -1,4 +1,48 @@
-"""Integridade e privacidade: pré-registros com hash travado, ausência de dado nominal/segredo/texto de terceiros, manifestos coerentes."""
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Check integrity and privacy: locked pre-registrations and no personal data.
+
+Verifies that the pre-registration texts match their recorded hashes (governments, mortality,
+media) and that amended versions only add to the original. It also scans the distributed file
+set for nominal columns, case identifiers that are not 10-hex hashes, secrets, e-mail
+addresses, CPF numbers and home paths, third-party PDFs and raw microdata, and absolute paths
+in scripts. It checks the source manifest, runs the independent verification script and
+compares the corrections table hashes with the files.
+
+Inputs
+------
+- preregistrations/governos/PRE-REGISTRO.md and its .sha256 files
+- preregistrations/mortalidade/ and preregistrations/midia/ (PRE-REGISTRO files)
+- every distributed file (listed through make_provenance.py)
+- analysis/ggb-audit/dados/ (identifier columns of four CSV files)
+- manifest/MANIFESTO-FONTES.csv
+- data/verificacao_independente.py (run as a subprocess)
+- docs/corrections-files.tsv
+
+Outputs
+-------
+- none (assertions only)
+
+Usage
+-----
+python3 -I -m pytest tests/test_integridade.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Integridade e privacidade: pré-registros com hash travado, ausência de dado nominal/segredo/texto de terceiros, manifestos coerentes.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import csv
 import hashlib
 import importlib.util

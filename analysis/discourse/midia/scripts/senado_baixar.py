@@ -1,6 +1,46 @@
-"""Senado: lista de pronunciamentos mes a mes (API publica, sem chave), 2015-01..2026-10.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Download Senate floor speeches month by month and the full text of candidate speeches.
+
+Fetches the list of plenary speeches for each month from 2015-01 to 2026-10 from the public
+Senate open data API (no key), keeps the raw list, filters candidate speeches whose summary and
+indexing contain a group term, downloads the full text only for those, and writes a manifest
+with the sha256 of every saved file.
+
+Inputs
+------
+- https://legis.senado.leg.br/dadosabertos (public API, network access)
+- the query dictionary module dicionario
+
+Outputs
+-------
+- sources/public/q1-textointegral/discurso/midia/senado/lista_<yyyymm>.json
+- senado/textos/<code>.txt and _candidatos.json (not tracked in git)
+- senado/_MANIFESTO.sha256
+- prints progress, the total of speeches and the number of candidates
+
+Usage
+-----
+python3 -I analysis/discourse/midia/scripts/senado_baixar.py
+
+Status
+------
+Data acquisition step; no analysis claim.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Senado: lista de pronunciamentos mes a mes (API publica, sem chave), 2015-01..2026-10.
 Salva bruto em RAW/lista_AAAAMM.json. Depois filtra candidatos (Resumo+Indexacao com termo do grupo)
-e baixa o texto integral (TextoIntegralTxt) so desses. Python: python3 -I."""
+e baixa o texto integral (TextoIntegralTxt) so desses. Python: python3 -I.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

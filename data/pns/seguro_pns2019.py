@@ -1,4 +1,38 @@
-"""Violência segundo a orientação sexual, PNS 2019 (microdados oficiais do IBGE), com desenho amostral complexo: "é seguro ser LGB+ no Brasil? quanto, onde, quem, por quê?"
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Estimate violence by sexual orientation in the PNS 2019 with the complex design.
+
+The script restricts to selected residents aged 18+ who answered the violence module (88,531)
+and estimates, for LGB+ and heterosexual adults, the 12-month prevalence of psychological,
+physical, sexual and any violence, with differences, prevalence ratios and ratios adjusted by
+weighted Poisson regression (sex, age, color, schooling, region, urban or rural). It adds who
+and where for the most serious episode, and subgroup results. It first reproduces the
+prevalences and intervals of Vasconcelos et al. (2023) within 0.05 percentage points. It is
+exploratory.
+
+Inputs
+------
+- sources/public/q1-textointegral/F2/pns2019/input_PNS_2019_utf8.txt (official layout)
+- sources/public/q1-textointegral/F2/pns2019/x/PNS_2019.txt (microdata)
+
+Outputs
+-------
+- data/pns/seguro_pns2019.md
+- data/pns/seguro_pns2019.csv
+
+Usage
+-----
+python3 -I data/pns/seguro_pns2019.py
+
+Status
+------
+Feeds numbers printed in the article (listed in paper_numbers.json).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Violência segundo a orientação sexual, PNS 2019 (microdados oficiais do IBGE), com desenho amostral complexo: "é seguro ser LGB+ no Brasil? quanto, onde, quem, por quê?"
 Responde, com o que a PNS permite, à pergunta de pesquisa do autor (ponto 5 da lista de verificação). SEM pesquisa de campo: só o microdado público.
 Método (declarado antes de rodar; todas as comparações por subgrupo são REPORTADAS, não só as significativas; análise exploratória, sem correção de multiplicidade):
   - População: morador selecionado de 18+ que respondeu o módulo V (violência) = 88.531 (mesmo n de Vasconcelos et al. 2023). Estrato V0024, UPA UPA_PNS, peso V00291 (calibrado).
@@ -9,7 +43,14 @@ Método (declarado antes de rodar; todas as comparações por subgrupo são REPO
   - 'Onde/quem' (V006/V007, V018/V019, V032/V033) referem-se ao episódio mais grave e só existem entre as vítimas.
 LIMITES: uma única onda (2019): NÃO há "quando"/tendência; autorrelato de orientação sexual em survey domiciliar (subestima LGB+ por estigma e revelação); LGB+ ~1,9% => n pequeno por região; violência não letal (não responde à pergunta sobre homicídio, que o SIM não registra por orientação);
 o módulo não pergunta o MOTIVO ("por quê") do agressor: só quem e onde.
-Rodar: python3 -I data/pns/seguro_pns2019.py   Saídas: data/pns/seguro_pns2019.md e .csv"""
+Rodar: python3 -I data/pns/seguro_pns2019.py   Saídas: data/pns/seguro_pns2019.md e .csv
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

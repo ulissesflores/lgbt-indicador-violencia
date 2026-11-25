@@ -1,7 +1,45 @@
-"""A API da Camara devolve HTTP 500 em certas paginas (a ultima) de deputados com muitos discursos.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Recover House speech pages that the API refused with HTTP 500.
+
+For the deputies listed as failures by camara_baixar.py, repeats the request in one-year
+windows, with smaller page sizes (50, 20, 10) when a page fails, and with monthly windows when
+it still fails. Whatever cannot be recovered is recorded.
+
+Inputs
+------
+- sources/public/q1-textointegral/discurso/midia/camara/_falhas.json
+- https://dadosabertos.camara.leg.br/api/v2 (public API, network access)
+
+Outputs
+-------
+- sources/public/q1-textointegral/discurso/midia/camara/<deputy>_y<year>_<page>.json
+- _recuperacao_perdas.json in the same folder (what was not recovered)
+- prints the number of deputies processed and of losses
+
+Usage
+-----
+python3 -I analysis/discourse/midia/scripts/camara_recupera.py
+
+Status
+------
+Data acquisition step; no analysis claim.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+A API da Camara devolve HTTP 500 em certas paginas (a ultima) de deputados com muitos discursos.
 Recuperacao para os deputados com falha em camara_baixar.py: janelas de 1 ano; se uma pagina da 500,
 tenta itens menores (50, 20, 10) e, persistindo, janelas mensais. Salva {id}_y{ano}_{pag}.json (ou _m{mes}).
-Registra o que NAO foi recuperado em _recuperacao_perdas.json."""
+Registra o que NAO foi recuperado em _recuperacao_perdas.json.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

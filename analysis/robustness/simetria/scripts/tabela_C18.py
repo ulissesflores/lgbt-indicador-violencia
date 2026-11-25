@@ -1,4 +1,44 @@
-"""C18: gera TABELA_C18.md e consultas_C18.tsv a partir de eventos_C18.csv, picks_C18.tsv, downloads_C18.tsv. Python: python3 -I"""
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Build the C18 query list and the per-government summary table of the symmetric search.
+
+The script writes the exact queries (five descriptors, in Portuguese and English, for each of
+six government periods) and then tabulates, per government, pages read, pages published within
+the term, and event counts by type (T1, T3, T4 and others) from the event table. Event E09 is
+skipped because it repeats E08. The counts of pages published within each term are literals in
+the script.
+
+Inputs
+------
+- analysis/robustness/simetria/eventos_C18.csv
+- analysis/robustness/simetria/downloads_C18.tsv
+
+Outputs
+-------
+- analysis/robustness/simetria/consultas_C18.tsv (exact query text per government and
+  descriptor)
+- analysis/robustness/simetria/TABELA_C18.md (summary table, also printed to stdout)
+
+Usage
+-----
+python3 -I analysis/robustness/simetria/scripts/tabela_C18.py
+
+Status
+------
+Feeds numbers printed in the article (listed in paper_numbers.json).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+C18: gera TABELA_C18.md e consultas_C18.tsv a partir de eventos_C18.csv, picks_C18.tsv, downloads_C18.tsv. Python: python3 -I
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 
@@ -28,7 +68,10 @@ ILEGIVEL = {("G1","Q6"),("G2","Q8")}   # repositorio ufsc: Wayback devolveu bina
 for r in dl:
     if r["via"] == "FALHOU" or int(r["chars_texto"]) < 200 or (r["gov"], r["qid"]) in ILEGIVEL: falhas[r["gov"]] += 1
     else: lidas[r["gov"]] += 1
-NOMAND = {"G1": (0, 6), "G2": (1, 7), "G3": (6, 10), "G4": (6, 8), "G5": (7, 10), "G6": (3, 10)}   # publicadas no mandato / lidas (data lida na pagina)
+NOMAND = {"G1": (0, 6), "G2": (1, 7), "G3": (5, 10), "G4": (5, 8), "G5": (7, 10), "G6": (3, 10)}   # publicadas no mandato / lidas (data lida na pagina)
+# Corrigido em 2026-11-24 (docs/corrections.md): G3 6 -> 5 e G4 6 -> 5 pela data de publicacao e pela data em que cada
+# presidente assumiu (Temer em 2016-05-12); recontado em analysis/article-numbers/contas_do_texto.py a partir de
+# analysis/article-numbers/datas_publicacao_C18.tsv. As 3 paginas sem data legivel (G1 Q4, G2 Q7, G3 Q8) nao contam.
 SEC = {"G3": "T1b: 1 (secundario)"}
 c = defaultdict(Counter)
 for e in ev:

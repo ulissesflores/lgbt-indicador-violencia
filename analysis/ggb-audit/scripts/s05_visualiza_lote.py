@@ -1,6 +1,43 @@
-"""S05. Ferramenta de leitura para a codificacao manual: imprime, por ordem de sorteio, a categoria GGB,
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Print excerpts of the sampled sources to support manual coding.
+
+Reading tool: for the sample cases in the given draw-order range, it prints the GGB category,
+city and state, and an excerpt of the source (title, beginning and sentences with identity,
+motive or outcome terms). It only reads; it does not write names to disk.
+
+Inputs
+------
+- sources/public/p3-ggb/_raw/ggb2019_lista_nominal.csv (not tracked in git)
+- analysis/ggb-audit/dados/amostra.csv and fonte_checks.csv
+- sources/public/p3-ggb/_raw/news_txt/<id>.txt (not tracked in git)
+
+Outputs
+-------
+- prints the excerpts to stdout; nothing is written to disk
+
+Usage
+-----
+python3 -I analysis/ggb-audit/scripts/s05_visualiza_lote.py <first> <last>
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+S05. Ferramenta de leitura para a codificacao manual: imprime, por ordem de sorteio, a categoria GGB,
 cidade/UF e um excerto da fonte (titulo + inicio + frases com termos de identidade/motivo/desfecho).
-Uso: python3.14 -I s05_visualiza_lote.py <de> <ate>   (ordem_sorteio inclusiva). So leitura; nao grava nomes."""
+Uso: python3.14 -I s05_visualiza_lote.py <de> <ate>   (ordem_sorteio inclusiva). So leitura; nao grava nomes.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

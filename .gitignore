@@ -5,6 +5,8 @@ __pycache__/
 .ruff_cache/
 .DS_Store
 CLAUDE.md
+# lockfile vazio do uv (o ambiente travado é requirements.lock)
+uv.lock
 # estado interno da montagem e área de trabalho local
 BUILD-STATE.md
 .work/
@@ -13,6 +15,7 @@ BUILD-STATE.md
 /raw/
 **/dados/raw/
 **/ideologia/raw/
+analysis/ideology/raw/
 **/F6-asia-africa/raw/
 sources/public/p3-ggb/
 sources/public/q1-textointegral/
@@ -29,3 +32,6 @@ analysis/counterpoint/dados/*.csv
 **/lihs-checagem-ggb2016*.csv
 # oficina local do artigo (texto-fonte e ferramentas de build): fora do repositório
 /paper/
+
+# marcador do ambiente de trabalho do autor, não é do pacote
+/.profile

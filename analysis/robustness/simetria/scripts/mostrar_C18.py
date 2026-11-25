@@ -1,4 +1,42 @@
-"""Imprime, por arquivo baixado de um governante, as frases com (tema LGBT) E (marca temporal/ator). Uso: mostrar_C18.py G1 [maxfrases]"""
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Print sentences that mention the LGBT theme and an actor, for one government.
+
+Reading aid for the C18 search. The script takes a government code (G1 to G6) and an optional
+maximum number of sentences, splits each extracted page text of that government into
+sentences, and keeps those that match both a theme pattern (homosexual, gay, LGBT, homophobia,
+trans terms) and an actor or measure pattern specific to that government, with 40 to 700
+characters.
+
+Inputs
+------
+- sources/public/q1-textointegral/discurso/simetria/brasil/<gov>_Q*.txt (extracted page text)
+- command line: government code (G1 to G6) and optional sentence limit per file (default 14)
+
+Outputs
+-------
+- prints, per file, the character count, the number of candidate sentences and the sentences
+
+Usage
+-----
+python3 -I analysis/robustness/simetria/scripts/mostrar_C18.py G1 14
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Imprime, por arquivo baixado de um governante, as frases com (tema LGBT) E (marca temporal/ator). Uso: mostrar_C18.py G1 [maxfrases]
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

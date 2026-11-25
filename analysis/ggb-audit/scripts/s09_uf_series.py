@@ -1,7 +1,53 @@
-"""S09. Testes de 'inflacao' (descritivos, ecologicos, n=27 UFs): (b) GGB 2019 por UF x populacao, internet (PNAD C TIC 2019,
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Test whether GGB counts track internet coverage, by state and over the years.
+
+Descriptive ecological checks. (b) For the 27 states in 2019: GGB cases against population,
+household internet use (PNAD Continua TIC 2019), homicide rate (Atlas/SIM) and Sinan field 55
+LGBTphobia notifications, with Poisson models using a population offset. (c) The annual GGB
+series 2000-2025 against national internet use (2016-2025), Sinan LGBTphobia and SIM homicides,
+checking that the sum of the 27 states equals the national Sinan row. (d) Sensitivity of the
+headline.
+
+Inputs
+------
+- sources/public/p3-ggb/_raw/ggb2019_lista_nominal.csv (not tracked in git)
+- sources/public/p3-ggb/ibge/sidra6579_pop_uf_2019.json, sidra7307_uf_2019.json and
+  sidra7331_br_2016_2025.json
+- data/atlas_uf_series.csv
+- data/sinan/serie_campo55_uf_ano.csv
+- requires numpy
+
+Outputs
+-------
+- analysis/ggb-audit/dados/uf_2019.csv
+- analysis/ggb-audit/dados/serie_ggb_vs_cobertura.csv
+- analysis/ggb-audit/dados/inflacao_uf_serie.json
+- prints the results as JSON
+
+Usage
+-----
+python3 -I analysis/ggb-audit/scripts/s09_uf_series.py
+
+Status
+------
+Feeds numbers printed in the article (listed in paper_numbers.json).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+S09. Testes de 'inflacao' (descritivos, ecologicos, n=27 UFs): (b) GGB 2019 por UF x populacao, internet (PNAD C TIC 2019,
 % domicilios com uso de internet), taxa de homicidio (Atlas/SIM 2019), notificacoes Sinan campo 55 LGBTfobia 2019;
 (c) serie anual GGB 2000-2025 x uso de internet (PNAD C, 2016-2025) x Sinan LGBTfobia x homicidios (SIM); (d) sensibilidade da manchete.
-Uso: python3.14 -I s09_uf_series.py"""
+Uso: python3.14 -I s09_uf_series.py
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 
@@ -26,7 +72,7 @@ hom = {nom[r["uf"]]: float(r["valor"]) for r in csv.DictReader((D/"atlas_uf_seri
 sin = {r["uf"]: int(r["m_lgbtfobia"]) for r in csv.DictReader((D/"sinan/serie_campo55_uf_ano.csv").open()) if r["ano"] == "2019"}
 ufs = sorted(pop)
 rows = [dict(uf=u, ggb=cnt.get(u, 0), pop=pop[u], ggb_por_milhao=1e6*cnt.get(u, 0)/pop[u], internet_dom_pct=internet[u], hom_taxa_100mil=hom[u], sinan_lgbtfobia_n=sin[u], sinan_por_milhao=1e6*sin[u]/pop[u]) for u in ufs]
-with (F3/"data/uf_2019.csv").open("w", newline="") as f:
+with (F3/"dados/uf_2019.csv").open("w", newline="") as f:
     w = csv.DictWriter(f, fieldnames=list(rows[0].keys())); w.writeheader(); w.writerows([{k: (round(v, 3) if isinstance(v, float) else v) for k, v in r.items()} for r in rows])
 def rank(a): 
     o = np.argsort(a, kind="mergesort"); r = np.empty(len(a)); r[o] = np.arange(len(a)); 
@@ -78,7 +124,7 @@ atl = {}
 for r in csv.DictReader((D/"atlas_uf_series.csv").open()):
     if r["variavel"] == "homicidios_total_n": atl[int(r["ano"])] = atl.get(int(r["ano"]), 0) + float(r["valor"])
 ser = [dict(ano=a, ggb=ggb_ano[a], internet_pct_10mais=net_br.get(a, ""), sinan_lgbtfobia_n=sin_ano.get(a, ""), homicidios_sim=int(atl[a]) if a in atl else "") for a in sorted(ggb_ano)]
-with (F3/"data/serie_ggb_vs_cobertura.csv").open("w", newline="") as f:
+with (F3/"dados/serie_ggb_vs_cobertura.csv").open("w", newline="") as f:
     w = csv.DictWriter(f, fieldnames=list(ser[0].keys())); w.writeheader(); w.writerows(ser)
 def sp(k1, k2, a0, a1):
     p = [(r[k1], r[k2]) for r in ser if a0 <= r["ano"] <= a1 and r[k1] != "" and r[k2] != ""]
@@ -88,4 +134,4 @@ out["serie"] = {"ggb~internet 2016-2025": sp("ggb", "internet_pct_10mais", 2016,
 # variacao
 out["variacao"] = dict(ggb_2000_2017=ggb_ano[2017] / ggb_ano[2000], ggb_2017_2025=ggb_ano[2025] / ggb_ano[2017], internet_2016_2025=net_br.get(2025, 0) / net_br.get(2016, 1) if net_br else None,
                        sinan_lgbtfobia_2015_2025=sin_ano[2025] / sin_ano[2015])
-(F3/"data/inflacao_uf_serie.json").write_text(json.dumps(out, ensure_ascii=False, indent=1)); print(json.dumps(out, ensure_ascii=False, indent=1)); print(net_br)
+(F3/"dados/inflacao_uf_serie.json").write_text(json.dumps(out, ensure_ascii=False, indent=1)); print(json.dumps(out, ensure_ascii=False, indent=1)); print(net_br)

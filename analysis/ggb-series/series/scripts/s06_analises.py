@@ -1,7 +1,52 @@
-"""Analises de concordancia entre series publicas de mortes LGBT+ no Brasil. Entrada: ../painel_mortes_lgbt.csv (+ F3-ggb para a captura-recaptura 2019).
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Analyze the agreement between the public series of LGBT+ deaths in Brazil.
+
+Reads the panel of published counts and computes correlations of year-on-year changes (Pearson
+and Spearman, bootstrap over pairs of years with B=20000 and a permutation test), ratios between
+series by year, the availability of capture-recapture inputs for 2019, comparisons of the GGB
+with the official SIM series, cumulative and partial comparisons, and the headline sensitivity.
+The random seed is fixed at 20261022. The intervals measure instability between years only,
+not measurement error, and the series are short, autocorrelated and non-sampling.
+
+Inputs
+------
+- analysis/ggb-series/series/painel_mortes_lgbt.csv and dados_tmm_dependencia.csv
+- analysis/ggb-audit/dados/captura_recaptura_trans2019.json and
+  captura_recaptura_sensibilidade.json
+- analysis/ggb-audit/dados/sensibilidade_manchete.csv
+- the Python packages numpy and scipy
+
+Outputs
+-------
+- analysis/ggb-series/series/dados_analises/cor_variacoes.csv, razoes_por_ano.csv,
+  captura_recaptura_disponibilidade.csv, ggb_vs_sim.csv and painel_wide_2017_2025.csv
+- analysis/ggb-series/series/dados_analises/resultados.json
+- prints the main results and the correlation and ratio rows to stdout
+
+Usage
+-----
+python3 -I analysis/ggb-series/series/scripts/s06_analises.py
+
+Status
+------
+Feeds numbers printed in the article (listed in paper_numbers.json).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Analises de concordancia entre series publicas de mortes LGBT+ no Brasil. Entrada: ../painel_mortes_lgbt.csv (+ F3-ggb para a captura-recaptura 2019).
 Semente fixa 20261022. Bootstrap por pares de ANOS (B=20000, percentil 95%). Saidas: ../dados_analises/*.csv e ../dados_analises/resultados.json.
 LIMITE GERAL: series curtas (n de 2 a 24 variacoes), autocorrelacionadas, nao amostrais; IC mede so a instabilidade entre anos, NAO erro de medida.
-Uso: python3 -I s06_analises.py"""
+Uso: python3 -I s06_analises.py
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

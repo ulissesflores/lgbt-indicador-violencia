@@ -1,7 +1,46 @@
-"""S02b. Segunda passada: para cada fonte ainda sem arquivo local, tenta o Wayback pelo atalho
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Retry the Wayback Machine for the sources still missing a local file.
+
+Second pass: for each case that has a link but no saved page, requests the Wayback shortcut
+web.archive.org/web/2019id_/<url> one at a time with pauses. In sample mode it tries only the
+drawn sample cases. The log is written only at the end of the run.
+
+Inputs
+------
+- sources/public/p3-ggb/_raw/ggb2019_lista_nominal.csv (not tracked in git)
+- analysis/ggb-audit/dados/amostra.csv (only in sample mode)
+- web.archive.org (network access)
+
+Outputs
+-------
+- sources/public/p3-ggb/_raw/news/<id>.html (pages recovered; not tracked in git)
+- analysis/ggb-audit/dados/fetch_log_wayback_<mode>.csv
+- prints progress and the count of results
+
+Usage
+-----
+python3 -I analysis/ggb-audit/scripts/s02b_wayback_retry.py [amostra]
+
+Status
+------
+Data acquisition step; no analysis claim.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+S02b. Segunda passada: para cada fonte ainda sem arquivo local, tenta o Wayback pelo atalho
 web.archive.org/web/2019id_/<url>. Sequencial, com pausa. Modo "amostra" tenta so os casos sorteados.
 O log (data/fetch_log_wayback_<modo>.csv) so e gravado ao fim; a execucao da amostra foi interrompida
-(Wayback respondia 404/429/500) apos recuperar 2 casos. Uso: python3.14 -I s02b_wayback_retry.py [amostra]"""
+(Wayback respondia 404/429/500) apos recuperar 2 casos. Uso: python3.14 -I s02b_wayback_retry.py [amostra]
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

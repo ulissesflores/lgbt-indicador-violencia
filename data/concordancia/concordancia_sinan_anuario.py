@@ -1,6 +1,47 @@
-"""SUPERADO em 2026-10-21 por concordancia_v2.py (este script mede CONTAGENS, que refletem tamanho da UF; ver concordancia_v2.md). Mantido só para reprodução da v1: saída em resumo_v1_contagens.md.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Compare Sinan LGBTphobia notifications with yearbook police reports (version 1).
+
+The script pairs, for 2022-2025 and each state, the Sinan counts of notifications flagged as
+LGBTphobia with the yearbook counts of reports of racism motivated by homophobia or
+transphobia (latest edition that carries the year). It computes Spearman and log Pearson
+correlations of the raw counts and the median report-to-notification ratio, draws one scatter
+plot per year and writes a summary. It is superseded by concordancia_v2.py and kept only to
+reproduce version 1.
+
+Inputs
+------
+- data/sinan/serie_campo55_uf_ano.csv
+- data/anuario/anuario_lgbtfobia_uf_ano.csv
+
+Outputs
+-------
+- data/concordancia/fig-concordancia.png
+- data/concordancia/concordancia_uf_ano.csv
+- data/concordancia/resumo_v1_contagens.md (also printed to stdout)
+
+Usage
+-----
+python3 -I data/concordancia/concordancia_sinan_anuario.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+SUPERADO em 2026-10-21 por concordancia_v2.py (este script mede CONTAGENS, que refletem tamanho da UF; ver concordancia_v2.md). Mantido só para reprodução da v1: saída em resumo_v1_contagens.md.
 Concordância Sinan (campo 55 = LGBTfobia, notificações interpessoais, por UF-ano) x Anuário FBSP (BO 'racismo por homofobia ou transfobia', por UF-ano).
-Anos comuns: 2022-2025. Para cada ano usa a edição MAIS RECENTE do Anuário que traz o ano. Métricas: Spearman e Pearson (log) entre contagens; razão BO/Sinan; concordância de ranking; gráfico."""
+Anos comuns: 2022-2025. Para cada ano usa a edição MAIS RECENTE do Anuário que traz o ano. Métricas: Spearman e Pearson (log) entre contagens; razão BO/Sinan; concordância de ranking; gráfico.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

@@ -1,6 +1,45 @@
-"""OpenAlex (API publica sem chave): contagem por ano de obras cujo TITULO+RESUMO casam cada consulta OA.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Count OpenAlex works per year whose title and abstract match each dictionary query.
+
+Uses the public OpenAlex API (no key; shared daily quota) with a group-by publication year
+filter, saves each raw answer with its sha256, and appends the counts to a CSV. The sample mode
+also gets the union count per family and a seeded sample of 60 works per family.
+
+Inputs
+------
+- https://api.openalex.org/works (network access)
+- the query dictionary module dicionario (queries and seed)
+
+Outputs
+-------
+- sources/public/q1-textointegral/discurso/midia/openalex/<id>_<hash>.json (raw answers)
+- analysis/discourse/midia/_bruto_openalex.csv (family, universe, year, count, query, date,
+  sha256)
+- prints the query id, totals and the cost spent
+
+Usage
+-----
+python3 -I analysis/discourse/midia/scripts/openalex_contar.py contar|amostra
+
+Status
+------
+Data acquisition step; no analysis claim.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+OpenAlex (API publica sem chave): contagem por ano de obras cujo TITULO+RESUMO casam cada consulta OA.
 Cota sem chave compartilhada (US$ 0,10/dia/IP); cada consulta ~US$ 0,001. Salva bruto + sha256.
-Uso: openalex_contar.py contar | amostra"""
+Uso: openalex_contar.py contar | amostra
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

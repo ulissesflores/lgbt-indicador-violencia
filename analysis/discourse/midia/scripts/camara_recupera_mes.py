@@ -1,5 +1,43 @@
-"""2a etapa: para cada janela anual com perda (500 persistente na ultima pagina), repete mes a mes (itens=100)
-e, se ainda 500, quinzena. Salva {id}_m{AAAAMM}_{pag}.json. Perdas finais em _recuperacao_perdas2.json."""
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Recover House speech pages month by month after the yearly recovery failed.
+
+Second recovery stage: for each yearly window listed as lost by camara_recupera.py, repeats the
+request month by month (100 items per page) and, if the API still returns 500, by fortnight.
+The module runs its main function when imported or executed.
+
+Inputs
+------
+- sources/public/q1-textointegral/discurso/midia/camara/_recuperacao_perdas.json
+- https://dadosabertos.camara.leg.br/api/v2 (via camara_recupera.py, network access)
+
+Outputs
+-------
+- sources/public/q1-textointegral/discurso/midia/camara/<deputy>_m<yyyymm>_<page>.json
+- _recuperacao_perdas2.json in the same folder (final losses)
+- prints progress and the number of final losses
+
+Usage
+-----
+python3 -I analysis/discourse/midia/scripts/camara_recupera_mes.py
+
+Status
+------
+Data acquisition step; no analysis claim.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+2a etapa: para cada janela anual com perda (500 persistente na ultima pagina), repete mes a mes (itens=100)
+e, se ainda 500, quinzena. Salva {id}_m{AAAAMM}_{pag}.json. Perdas finais em _recuperacao_perdas2.json.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import calendar, json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import camara_recupera as c

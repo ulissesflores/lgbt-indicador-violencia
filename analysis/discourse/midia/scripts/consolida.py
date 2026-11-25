@@ -1,6 +1,47 @@
-"""Consolida: contagens.csv (todas as fontes) e amostra_codificada.csv (+ estatisticas de precisao/fonte).
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Consolidate the media counts and the coded sample, and compute precision by source.
+
+Merges the raw count tables of all sources into contagens.csv and joins the drawn sample with
+the manual coding into amostra_codificada.csv. It also prints and saves the sample statistics:
+precision by family and universe with Wilson intervals, and source co-mention.
+
+Inputs
+------
+- analysis/discourse/midia/_bruto_*.csv and _v1prereg_parlamento.csv
+- analysis/discourse/midia/_gnrss_celulas.jsonl and the saved raw files they point to
+- analysis/discourse/midia/_amostra_*.jsonl
+- analysis/discourse/midia/_codif/<universe>.json
+
+Outputs
+-------
+- analysis/discourse/midia/contagens.csv
+- analysis/discourse/midia/amostra_codificada.csv
+- analysis/discourse/midia/_estatisticas_amostra.txt
+- prints the row counts and the statistics
+
+Usage
+-----
+python3 -I analysis/discourse/midia/scripts/consolida.py
+
+Status
+------
+Feeds numbers printed in the article (listed in paper_numbers.json).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Consolida: contagens.csv (todas as fontes) e amostra_codificada.csv (+ estatisticas de precisao/fonte).
 Entradas: _bruto_*.csv, _gnrss_celulas.jsonl, _amostra_*.jsonl, _codif/<universo>.json
-Python: python3 -I."""
+Python: python3 -I.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

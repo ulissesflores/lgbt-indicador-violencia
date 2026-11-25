@@ -1,8 +1,45 @@
-"""Dicionário harmonizado (rótulo verbatim -> classe pré-registrada), a partir de saidas/estrutura/<periodo>.json.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Build the harmonized dictionary that maps each verbatim label to its pre-registered class.
+
+The script reads the per-period structure files, applies the rules of d100_comum.py to every
+label seen in each harmonized field (group, sex, sexual orientation, gender identity,
+motivation, violation, state) and records the periods where the label appears. It does not
+read the raw files and does not count records.
+
+Inputs
+------
+- data/disque100/saidas/estrutura/<period>.json (labels per column and period)
+- data/disque100/scripts/d100_comum.py (classification rules, imported)
+
+Outputs
+-------
+- data/disque100/saidas/dicionario_rotulos.csv
+- prints the number of distinct labels
+
+Usage
+-----
+python3 -I scripts/d100_dicionario.py   (run from data/disque100)
+
+Status
+------
+Pre-registered analysis (data/disque100/PREREGISTRO-D100.md).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Dicionário harmonizado (rótulo verbatim -> classe pré-registrada), a partir de saidas/estrutura/<periodo>.json.
 Não lê raw/ nem conta nada: só aplica as regras de d100_comum.py a cada rótulo visto e diz em que períodos ele aparece.
 
 Uso: python3 -I scripts/d100_dicionario.py
 Saída: saidas/dicionario_rotulos.csv (campo_harmonizado, formato, coluna_origem, rotulo_verbatim, classe, periodos)
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
 """
 
 import csv

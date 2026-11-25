@@ -1,5 +1,48 @@
 #!/usr/bin/env python3
-"""Rodada 3 / frente IDEOLOGIA — constroi a tabela partido x ano de escores de ideologia partidaria.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Build the party-by-year table of party ideology scores from six expert and legislator surveys.
+
+Reads the published party scores of six sources (the Brazilian expert survey of Bolognesi and
+co-authors, the Brazilian Legislative Surveys, V-Party, PREPPS Latin America, CHES Latin America
+and the Global Party Survey), maps party labels to stable lineages across renamings, merges
+parties by documented rules (DEM and PSL into Uniao Brasil weighted by 2018 seats; PTB and
+Patriota into PRD), allocates each survey wave to calendar years 2010-2024, and computes
+rank and linear correlations between sources, in total and without the left bloc. It also
+recomputes the governor ideology variable of the state panel under alternative score vintages,
+without altering the panel. The script uses only the standard library.
+
+Inputs
+------
+- analysis/ideology/raw/ (df_experts.csv, vparty_v2_brazil.csv, prepps/PREPPS_Latam_V2.tab,
+  ches/la2020_agg.csv, gps/GPS2019_party_level_v2_1.csv; not tracked in git)
+- sources/public/p2-f8-governos/zucco-power-dataverse/bls9_estimates_partiespresidents_long.tab
+- data/ideologia_partidos.csv
+- data/painel/painel_uf_ano.csv and data/painel/painel_uf_ano_tse.csv
+- data/governadores_uf_2011_2026.csv and data/governadores_uf_2011_2026_tse.csv
+
+Outputs
+-------
+- analysis/ideology/ideologia_partidos_ano.csv and ideologia_ondas_observadas.csv
+- analysis/ideology/ideologia_aliases.csv
+- analysis/ideology/ideologia_correlacoes.csv and ideologia_correlacoes_por_ano.csv
+- analysis/ideology/impacto_painel_wiki.csv, impacto_painel_tse.csv and
+  impacto_painel_resumo.json
+- prints the respondent counts, row counts and the panel impact summary to stdout
+
+Usage
+-----
+python3 -I analysis/ideology/scripts/build_ideologia.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Rodada 3 / frente IDEOLOGIA — constroi a tabela partido x ano de escores de ideologia partidaria.
 
 Entradas (todas em raw/ ou sources/public/, hashes em raw/SHA256SUMS.txt):
   BRC  : raw/df_experts.csv            (Bolognesi, Ribeiro, Codato & Silva 2025, Dataverse 10.7910/DVN/MFIXKW; surveys jul/2018 e jul/2022; 0-10)
@@ -11,6 +54,12 @@ Entradas (todas em raw/ ou sources/public/, hashes em raw/SHA256SUMS.txt):
 Saidas (pasta ideologia/): ideologia_ondas_observadas.csv, ideologia_partidos_ano.csv, ideologia_correlacoes.csv,
   ideologia_correlacoes_por_ano.csv, ideologia_aliases.csv, impacto_painel_{wiki,tse}.csv, impacto_painel_resumo.md
 Somente stdlib. Rodar: python3 -I scripts/build_ideologia.py
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
 """
 import os as _os
 import pathlib as _pl

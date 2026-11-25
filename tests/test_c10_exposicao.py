@@ -1,6 +1,50 @@
-"""Trava os números do C10 (exposição por governo). Pré-registro: PREREGISTRO-C10.md (hash em PREREGISTRO-C10.sha256).
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Lock the published numbers of the C10 analysis of exposure by government.
+
+Checks that the pre-registration body still matches its recorded hash, that the counts of
+government changes agree with the structure report, that the national series equals the sum of
+the 27 states using the implied population, and that the federal (E1) and state (E2) result
+files carry the published values within the rounding of the printed numbers.
+
+Inputs
+------
+- data/exposicao/PREREGISTRO-C10.md
+- data/exposicao/PREREGISTRO-C10.sha256
+- data/exposicao/c10_estrutura.md
+- data/exposicao/c10_trocas.csv
+- data/exposicao/c10_e1_federal.csv
+- data/exposicao/c10_e2_resumo.csv
+- data/exposicao/c10_e2_trocas_longo.csv
+- data/painel/painel_uf_ano_tse_brc.csv
+- data/atlas_uf_series.csv
+
+Outputs
+-------
+- none (assertions only)
+
+Usage
+-----
+python3 -I -m pytest tests/test_c10_exposicao.py
+
+Status
+------
+Pre-registered analysis (data/exposicao/PREREGISTRO-C10.md).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Trava os números do C10 (exposição por governo). Pré-registro: PREREGISTRO-C10.md (hash em PREREGISTRO-C10.sha256).
 Lê os CSV gerados por c10_estrutura.py e c10_exposicao.py. Tolerâncias = arredondamento do número impresso no RELATORIO-EXPOSICAO.md.
-Rodar: python3 -B -m pytest -q -p no:cacheprovider tests/   (sem -I: o pytest está no site do usuário)."""
+Rodar: python3 -B -m pytest -q -p no:cacheprovider tests/   (sem -I: o pytest está no site do usuário).
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import csv, collections, hashlib
 from pathlib import Path
 

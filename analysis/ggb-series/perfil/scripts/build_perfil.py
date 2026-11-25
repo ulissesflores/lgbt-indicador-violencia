@@ -1,5 +1,48 @@
-"""Verifica cada trecho verbatim contra o arquivo, calcula pagina e sha256, grava CSVs e o ledger.
-uso: python3 -I build_perfil.py   (cwd irrelevante; caminhos absolutos)"""
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Verify every verbatim quote of the GGB profile and write the evidence tables.
+
+For each claim registered in claims.py it finds the quote in the text of the source file (PDF
+page by page through pdftotext, or a saved web text), computes the page and the file SHA-256,
+and writes the evidence table and the year-by-year methodology table. It aborts with exit status
+1 if any quote is not found. It also rebuilds the source ledger by calling the emit_sources
+script once per source file used.
+
+Inputs
+------
+- analysis/ggb-series/perfil/scripts/claims.py (claims, methodology rows, source file registry)
+- source files under sources/public/p3-ggb/_raw/ (PDFs and saved web pages; not tracked in git)
+- poppler tools pdftotext and pdfinfo on the PATH
+- the ledger script named by EMIT_SOURCES (default emit_sources.py)
+
+Outputs
+-------
+- analysis/ggb-series/perfil/evidencias.csv
+- analysis/ggb-series/perfil/metodologia_por_ano.csv
+- analysis/ggb-series/perfil/sources.jsonl (deleted and rebuilt)
+- prints the counts of evidence rows, methodology rows and sources to stdout
+
+Usage
+-----
+python3 -I analysis/ggb-series/perfil/scripts/build_perfil.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Verifica cada trecho verbatim contra o arquivo, calcula pagina e sha256, grava CSVs e o ledger.
+uso: python3 -I build_perfil.py   (cwd irrelevante; caminhos absolutos)
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

@@ -1,11 +1,56 @@
-"""C09 — D1: série temporal interrompida NACIONAL (descritiva; PREREGISTRO-C09.md seção 5).
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Fit the national interrupted time series (D1) of the aggression rate.
+
+The script fits, by least squares, the log of the age-standardized rate on a linear trend with
+a level and slope change at the breaks of 2016, 2019 and 2023 (15 points, 2010-2024; classical
+standard errors; t(7) intervals), with a placebo one year earlier. Series cover Brazil and
+four sex by race groups, for aggression and aggression plus undetermined intent, and a firearm
+series built here with the functions of padroniza_idade.py. It aborts unless it reproduces
+asr_brasil.csv. It is descriptive, not causal; run it after c09_d2_painel.py.
+
+Inputs
+------
+- data/sim/asr_brasil.csv and data/sim/sim_agressoes_agregado.csv
+- data/sim/padroniza_idade.py and data/presidencia/c09_estrutura.py (loaded as modules)
+- data/atlas_uf_series.csv (national firearm count check)
+- data/presidencia/PREREGISTRO-C09.md and PREREGISTRO-C09.sha256 (integrity check)
+- data/presidencia/c09_d2_resultados.md (joined into the combined report)
+
+Outputs
+-------
+- data/presidencia/c09_d1_resultados.md (also printed to stdout)
+- data/presidencia/c09_d1_resultados.csv
+- data/presidencia/c09_resultados.md (header, D2 results and D1 results together)
+
+Usage
+-----
+python3 -I data/presidencia/c09_d1_its.py   (after c09_d2_painel.py)
+
+Status
+------
+Pre-registered analysis (data/presidencia/PREREGISTRO-C09.md). Feeds numbers printed in the
+article (listed in paper_numbers.json).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+C09 — D1: série temporal interrompida NACIONAL (descritiva; PREREGISTRO-C09.md seção 5).
 ln(taxa padronizada por idade) = a + b(t-2010) + soma_k [L_k 1(t>=T_k) + S_k (t-T_k) 1(t>=T_k)], T = 2016, 2019, 2023; 15 pontos 2010-2024; MQO; EP clássico; IC95% t(7).
 Placebo pré-fixado: T = 2015, 2018, 2022. Mudança de nível "coincide com a troca" só se o IC da quebra exclui 0 E o placebo 1 ano antes NÃO exclui 0 com o mesmo sinal.
 Séries: data/sim/asr_brasil.csv (Brasil e 4 grupos sexo x raça; agressão e agressão+indet); arma de fogo (agressão, arma == 1) GERADA aqui com as funções de
 data/sim/padroniza_idade.py importadas sem alteração; razão indet/(agressão+indet) Brasil em p.p. das contagens brutas de data/sim/sim_agressoes_agregado.csv.
 Portas (abortam): recalcular com padroniza_idade as taxas de agressão e agressão+indet dos 5 grupos e bater asr_brasil.csv (0,005); contagem nacional de arma = soma das UFs no Atlas.
 Rodar DEPOIS de c09_d2_painel.py: python3 -I c09_d1_its.py
-Saídas: c09_d1_resultados.md, c09_d1_resultados.csv e c09_resultados.md (= cabeçalho + c09_d2_resultados.md + c09_d1_resultados.md)."""
+Saídas: c09_d1_resultados.md, c09_d1_resultados.csv e c09_resultados.md (= cabeçalho + c09_d2_resultados.md + c09_d1_resultados.md).
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

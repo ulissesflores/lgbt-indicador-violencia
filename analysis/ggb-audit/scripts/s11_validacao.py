@@ -1,8 +1,53 @@
-"""S11. Resultados da auditoria de validacao por amostra (GGB 2019, n=160 de N=329, AAS semente 20261021).
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Compute the results of the validation audit of the GGB 2019 list on the random sample.
+
+Reads the sample (n = 160 of N = 329), the source checks, the fetch log and the manual coding by
+the first coder, applies the third reading of disagreements only if the author confirmed it, and
+computes the validation proportions with Wilson intervals, the table of motives and, when the
+second coder file exists, the agreement (kappa) between coders.
+
+Inputs
+------
+- analysis/ggb-audit/dados/amostra.csv, fonte_checks.csv, fetch_log.csv and
+  ggb2019_universo_hash.csv
+- analysis/ggb-audit/dados/codificacao_A_raw.txt (first coder, raw)
+- analysis/ggb-audit/dados/adjudicacao.json (third reading, optional)
+- sources/public/p3-ggb/_raw/saida_B.txt (second coder, optional; not tracked in git)
+
+Outputs
+-------
+- analysis/ggb-audit/dados/codificacao_A.csv
+- analysis/ggb-audit/dados/tabela_motivos.csv
+- analysis/ggb-audit/dados/resultados.csv
+- analysis/ggb-audit/dados/validacao_resumo.json
+- analysis/ggb-audit/dados/kappa.json (when the second coder file exists)
+- prints the summary, the proportions with intervals and the motive table
+
+Usage
+-----
+python3 -I analysis/ggb-audit/scripts/s11_validacao.py
+
+Status
+------
+Feeds numbers printed in the article (listed in paper_numbers.json).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+S11. Resultados da auditoria de validacao por amostra (GGB 2019, n=160 de N=329, AAS semente 20261021).
 Le: amostra.csv, fonte_checks.csv, fetch_log.csv, ggb2019_universo_hash.csv, codificacao_A_raw.txt, (opcional) codificacao_B.json
 e adjudicacao.json (terceira leitura dos desacordos, aplicada só se conferida pelo autor).
 Gera: codificacao_A.csv (planilha de codificacao, ids hash), resultados.csv, validacao_resumo.json, kappa.json.
-Uso: python3.14 -I s11_validacao.py"""
+Uso: python3.14 -I s11_validacao.py
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

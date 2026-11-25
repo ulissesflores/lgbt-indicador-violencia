@@ -1,2 +1,2 @@
-b161b2bcfc628468a38f5986694cc418e3a7525f1db571baa75e9975d1065bc7  docs/paper/paper-final.pdf
-ee56a850cd60d35c9f4f93c6abbb75ef909f18a7408d53bd987d3b3da42b0c83  docs/paper/paper-final-en.pdf
+f3df6ffdc1269c20415f6ca2da99f45bf970cf2295ddda794d1af2620a0f34e7  docs/paper/paper-final.pdf
+fa5f787549105bba69768b480193d352e3d47034622faa65f3e42d27a33d6922  docs/paper/paper-final-en.pdf

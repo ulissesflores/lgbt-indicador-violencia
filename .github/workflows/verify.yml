@@ -1,3 +1,40 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+#
+# Verify the package on every push and pull request.
+#
+# GitHub Actions workflow with three jobs. The verify job (Python 3.12 and 3.13) installs the
+# requirements, checks the committed provenance seal, runs pytest, replicates the results with
+# run_all.py, checks every article number with verify_paper_numbers.py and runs the publication
+# audits. The lint job runs ruff and interrogate on the infrastructure code. The lint-pesquisa job
+# is informational (continue-on-error) and only lists ruff findings in the research scripts.
+#
+# Inputs
+# ------
+# - requirements.txt (installed with pip, plus pytest)
+# - make_provenance.py, run_all.py, verify_paper_numbers.py, pyproject.toml
+# - scripts/inventario_publico.py, scripts/auditar_publicacao.py, tests/
+# - tests/test_auditar_publicacao.py and scripts/ (checked by interrogate)
+#
+# Outputs
+# -------
+# - pass or fail status of each job in the GitHub Actions log
+# - no files are written to the repository
+#
+# Usage
+# -----
+# Run by GitHub Actions on push and pull request.
+#
+# Status
+# ------
+# No registration status is claimed for this file.
+#
+# Author
+# ------
+# Carlos Ulisses Flores (Codex Hash Research Laboratory),
+# ORCID https://orcid.org/0000-0002-6034-7765.
+# Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+
 name: verify
 on: [push, pull_request]
 jobs:
@@ -21,6 +58,9 @@ jobs:
       - run: pytest -q
       # 3. recálculo na réplica (Trilha 1) + testes + selo, o mesmo comando do README; falha se algum arquivo divergir
       - run: python -I run_all.py
+      # 3b. todo número que o artigo imprime: hashes de script e saída + valor no arquivo commitado
+      # (o run_all acima já recalculou a réplica e comparou com os commitados, sem rodá-la de novo)
+      - run: python -I verify_paper_numbers.py
       # 4. auditoria de publicação: inventário e literatura têm de passar (código 0)
       - run: python -I scripts/inventario_publico.py --check
       - run: python -I scripts/auditar_publicacao.py --check inventario
@@ -36,7 +76,7 @@ jobs:
       - uses: astral-sh/ruff-action@v3
         with:
           args: format --check
-      - run: pipx run interrogate run_all.py make_provenance.py scripts/ tests/test_auditar_publicacao.py
+      - run: pipx run interrogate run_all.py make_provenance.py verify_paper_numbers.py scripts/ tests/test_auditar_publicacao.py
   lint-pesquisa:
     runs-on: ubuntu-latest
     # informativo: scripts de pesquisa; reformatá-los mudaria arquivos cobertos pelo selo sem mudar lógica

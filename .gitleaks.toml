@@ -1,0 +1,29 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+#
+# gitleaks configuration for the distributed file set (scripts/auditar_publicacao.py copies it
+# with the rest of the set, and gitleaks reads it from the scanned folder).
+# All default rules stay on. The single exception: paper_numbers.json stores the SHA-256 of
+# every file it checks, and a hash next to a path containing "resumo" ("sumo") matches the
+# sumologic-access-token rule. The exception covers only that rule, and only a match whose whole
+# text is a manifest entry: (the tail of) a relative file path with an extension, then a quoted
+# 64-character lowercase hex digest. Any other secret, and any sumologic token written in another
+# shape, is reported. The exception tests the match, not the line, on purpose: gitleaks reads large
+# files in chunks, and when a chunk starts in the middle of a manifest line the "line" it sees is
+# cut, so a line-anchored pattern misses it (measured: 3 of 36 chunk offsets of paper_numbers.json
+# failed with the line pattern, 0 of 36 with this one; a planted 64-character token is still found).
+# A path-based exception is not used on purpose: in gitleaks 8.30.1 an allowlist with
+# condition = "AND" and paths silenced every rule in the file (checked with a planted token).
+# Author: Carlos Ulisses Flores, ORCID 0000-0002-6034-7765
+# https://github.com/ulissesflores/lgbt-indicador-violencia
+
+title = "lgbt-indicador-violencia"
+
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "SHA-256 digests of files, as recorded in paper_numbers.json"
+targetRules = ["sumologic-access-token"]
+regexTarget = "match"
+regexes = ['''^[A-Za-z0-9_./-]*\.[A-Za-z0-9]+": "[0-9a-f]{64}"$''']

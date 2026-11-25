@@ -1,8 +1,52 @@
-"""H1: UFs com programas formais de metas/redução de homicídios têm MAIOR parcela de mortes de intenção indeterminada (Y10-Y34) depois do início do programa?
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Test whether states with homicide-reduction programs report more deaths of undetermined intent.
+
+Hypothesis H1 compares, in a difference-in-differences design by cohort (four pre-program years
+against a post window), states whose program start year is documented with states for which no
+program was found. Outcomes are the share of undetermined-intent deaths (SIM TabNet) and the
+share of hidden homicides (IPEA model). It adds a clean 2x2 event study, a two-way fixed-effects
+estimate with wild-cluster bootstrap, and randomization inference with placebo assignments of
+states. The random seed is fixed at 20261021.
+
+Inputs
+------
+- analysis/political-economy/dados/h1_sim_tabnet_uf_ano.csv
+- analysis/political-economy/dados/h1_atlas_td_uf_ano.csv
+- analysis/political-economy/dados/h1_programas_metas.csv
+- the Python packages numpy and pandas
+
+Outputs
+-------
+- analysis/political-economy/dados/h1_resultados_did.csv
+- analysis/political-economy/dados/h1_resultados_por_uf.csv
+- analysis/political-economy/dados/h1_event_study.csv
+- prints the main results to stdout
+
+Usage
+-----
+python3 -I analysis/political-economy/scripts/h1_03_analise.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+H1: UFs com programas formais de metas/redução de homicídios têm MAIOR parcela de mortes de intenção indeterminada (Y10-Y34) depois do início do programa?
 Desenho: diferenças-em-diferenças por coorte (janela pré 4 anos x janela pós H anos) contra UFs sem programa documentado na busca (NÃO é "sem programa";
 é "sem programa achado em fonte oficial"), event study 2x2 limpo, TWFE com wild-cluster bootstrap, inferência por randomização (placebo de atribuição de UFs).
 Desfechos: Y1 = Y10-Y34/(X85-Y09 + Y35-Y36 + Y10-Y34) (SIM/TabNet 1996-2024, contagem bruta); Y2 = ocultos/(registrados+ocultos) (Cerqueira & Lins 2024, modelo ML; TD 3015 1996-2021).
-Semente fixa. Rodar: python3 -I scripts/h1_03_analise.py"""
+Semente fixa. Rodar: python3 -I scripts/h1_03_analise.py
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

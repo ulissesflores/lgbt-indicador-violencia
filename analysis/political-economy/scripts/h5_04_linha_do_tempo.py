@@ -1,6 +1,48 @@
-"""H5: linha do tempo de medição/orçamento. Cada evento documental tem trecho verbatim CONFERIDO no arquivo local (normalização de espaços) + sha256 do arquivo; cada evento orçamentário
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Build the timeline of survey and budget events on violence measurement.
+
+Records documentary events (victimization surveys of 1988, 2009 and 2012, the SINESP and SUSP
+laws, the first national victimization study, the experimental sexual-orientation item of the
+PNS 2019) each with a verbatim passage checked in the local file and the file SHA-256, and
+budget events recomputed from the project CSVs with the arithmetic shown (IBGE survey and census
+execution, LGBT-specific budget lines in the 2007-2013 and 2014-2025 files).
+
+Inputs
+------
+- analysis/political-economy/dados/raw/h5_docs/ (local documents and their text versions)
+- sources/public/pns-vasconcelos/vasconcelos.html
+- analysis/political-economy/dados/h5_orcamento_acoes.csv, h5_series_chave_acoes.csv,
+  h5_acoes_lgbt_rdf_2007_2013.csv and h5_acoes_lgbt_cgu_2014_2025.csv
+- the Python package pandas
+
+Outputs
+-------
+- analysis/political-economy/dados/h5_linha_do_tempo.csv
+- prints the verification result of each documentary event and the event count to stdout
+
+Usage
+-----
+python3 -I analysis/political-economy/scripts/h5_04_linha_do_tempo.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+H5: linha do tempo de medição/orçamento. Cada evento documental tem trecho verbatim CONFERIDO no arquivo local (normalização de espaços) + sha256 do arquivo; cada evento orçamentário
 é RECALCULADO dos CSVs desta pasta (h5_orcamento_acoes.csv, h5_acoes_lgbt_rdf_2007_2013.csv, h5_series_chave_acoes.csv) e traz a conta. Saída: data/h5_linha_do_tempo.csv.
-Rodar: python3 -I scripts/h5_04_linha_do_tempo.py"""
+Rodar: python3 -I scripts/h5_04_linha_do_tempo.py
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 
@@ -28,7 +70,7 @@ for dt, ev, tp, txt, raw, trecho in docs:
 # PNS 2019: orientação 'experimental'
 v = open(f"{P}/sources/public/pns-vasconcelos/vasconcelos.html", encoding="utf-8", errors="ignore").read(); t = "data on sexual orientation are considered experimental"
 rows.append(dict(data="2019-2020", evento="PNS 2019: orientação sexual medida pela 1a vez, rotulada 'experimental' pelo IBGE; sem recorte de identidade de gênero", tipo="existiu", conferido_verbatim=t in v, trecho=t, arquivo="sources/public/pns-vasconcelos/vasconcelos.html", sha256=sha(f"{P}/sources/public/pns-vasconcelos/vasconcelos.html"), conta=""))
-rows.append(dict(data="2026-10-11", evento="PNDS 2023 (orientação sexual e identidade de gênero, 133 mil domicílios): resultados NÃO publicados até esta data", tipo="nunca publicado (evidência negativa)", conferido_verbatim="", trecho="registro de andamento do projeto, NEG:v1 2026-10-11", arquivo="LGBT-INDICADOR-STATE.md", sha256=sha(f"{P}/LGBT-INDICADOR-STATE.md"), conta="reverificar antes de fechar o dossiê (fila-aquisicao F5-H5-pndS2023)"))
+rows.append(dict(data="2026-10-11", evento="PNDS 2023 (orientação sexual e identidade de gênero, 133 mil domicílios): resultados NÃO publicados até esta data", tipo="nunca publicado (evidência negativa)", conferido_verbatim="", trecho="registro interno de andamento do projeto, evidência negativa datada de 2026-10-11", arquivo="registro interno (não distribuído)", sha256="cade85b5898954af40b2f7bc59bc7f3c6479add19fea7ab8170763de3577287a", conta="evidência negativa datada de 2026-10-11 e não reverificada depois (fila-aquisicao F5-H5-pndS2023)"))
 # orçamento (recalculado)
 o = pd.read_csv(f"{B}/dados/h5_orcamento_acoes.csv"); s = pd.read_csv(f"{B}/dados/h5_series_chave_acoes.csv"); l = pd.read_csv(f"{B}/dados/h5_acoes_lgbt_rdf_2007_2013.csv")
 pes = s[s.categoria.str.startswith("IBGE: pesquisas")].groupby("ano").empenhado_real_dez2025.sum() / 1e6

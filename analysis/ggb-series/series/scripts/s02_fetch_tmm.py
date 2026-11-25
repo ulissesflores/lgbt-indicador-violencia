@@ -1,5 +1,44 @@
-"""Baixa os casos publicos do TGEU Trans Murder Monitoring (API publica do app Uwazi, sem login; titulos ja anonimizados).
-Filtra Brasil localmente. Saida: _raw/tmm/tmm_all.json (sha256 no log) e _raw/tmm/tmm_brasil.csv."""
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Download the public Trans Murder Monitoring cases and keep those in Brazil.
+
+Pages through the public search API of the TGEU Trans Murder Monitoring (TMM) application, which
+needs no login and serves titles already anonymized, stores the full response and filters the
+cases whose country of murder is Brazil into a CSV with date, year, city, identity, occupation,
+type and source fields.
+
+Inputs
+------
+- https://transmurdermonitoring.tgeu.org/api/search (public API, 200 rows per request)
+
+Outputs
+-------
+- sources/public/p3-ggb/_raw/tmm/tmm_all.json (not tracked in git)
+- sources/public/p3-ggb/_raw/tmm/tmm_brasil.csv (not tracked in git)
+- sources/public/p3-ggb/_raw/tmm/fetch_log.json (not tracked in git)
+- prints the total rows, the Brazil rows and the SHA-256 of the full response to stdout
+
+Usage
+-----
+python3.14 -I analysis/ggb-series/series/scripts/s02_fetch_tmm.py
+
+Status
+------
+Data acquisition step; no analysis claim.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Baixa os casos publicos do TGEU Trans Murder Monitoring (API publica do app Uwazi, sem login; titulos ja anonimizados).
+Filtra Brasil localmente. Saida: _raw/tmm/tmm_all.json (sha256 no log) e _raw/tmm/tmm_brasil.csv.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

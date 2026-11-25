@@ -1,5 +1,46 @@
 #!/usr/bin/env python3
-"""Cenarios de n e custo (R$ de set/2026) para as 3 opcoes de desenho. Le: deff_pns2019.csv, n_necessario.csv, n_regiao.csv,
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Compute sample-size and cost scenarios, in September 2026 reais, for three survey designs.
+
+The script reads the design effects and required sample sizes of the PNS 2019 analysis, the
+cost parameters table, and the price index and exchange rates. It converts the number of
+adults to screen into households and into cost for option A (module in the continuous
+household survey), option B (dedicated health survey) and option C (web or mail panel, using a
+foreign benchmark). It also computes the minimum detectable change per option, for other
+population groups, and for regions, and prints the unit costs and the main rows.
+
+Inputs
+------
+- analysis/survey-cost/custos-fontes.csv, deff_pns2019.csv, n_necessario.csv, n_regiao.csv,
+  validacao.txt, sogi_modo.csv
+- sources/public/q1-textointegral/F2/custos/sidra1737_ipca_indice.json (price index)
+- sources/public/q1-textointegral/F2/custos/ptax_<GBP|USD|EUR|CAD>_2026-10-20.json (exchange
+  rates)
+
+Outputs
+-------
+- analysis/survey-cost/cenarios_n_custo.csv
+- analysis/survey-cost/capacidade_por_opcao.csv
+- analysis/survey-cost/mde_outros_dominios.csv
+- analysis/survey-cost/opcoes_resumo.csv
+- analysis/survey-cost/opcoes_por_modo.csv and opcoes_por_modo.md
+- analysis/survey-cost/n_regiao_custo.csv
+- prints unit costs and the main scenario rows to stdout
+
+Usage
+-----
+python3 -I analysis/survey-cost/cenarios_custo.py
+
+Status
+------
+Feeds numbers printed in the article (listed in paper_numbers.json).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Cenarios de n e custo (R$ de set/2026) para as 3 opcoes de desenho. Le: deff_pns2019.csv, n_necessario.csv, n_regiao.csv,
 validacao.txt (denominadores), custos-fontes.csv (parametros com id), sogi_modo.csv, IPCA (SIDRA 1737) e PTAX (BCB). Escreve cenarios_n_custo.csv,
 n_regiao_custo.csv, capacidade_por_opcao.csv, mde_outros_dominios.csv, opcoes_resumo.csv e opcoes_por_modo.csv.
 
@@ -13,6 +54,12 @@ MODELO (todas as premissas explicitas; nada daqui e pesquisa de campo):
   C (painel/web)    = completos x (contrato GSGB / completos de 4 anos), benchmark estrangeiro, cambio PTAX nominal, SEM paridade de poder de compra
   Custo = custeio marginal ao financiador (sem folha permanente do IBGE nas opcoes A e B). Ver README: limites.
 ponytail: n_duas_prop e a bissecao de MDE sao copiadas de deff_pns2019.py (importar rodaria o script inteiro).
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
 """
 import os as _os
 import pathlib as _pl

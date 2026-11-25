@@ -1,6 +1,45 @@
 #!/usr/bin/env python3
-"""Triagem reprodutível: consulta booleana no OpenAlex (título+resumo), pagina TODOS os resultados (até 600),
-marca desenho causal por termos no resumo reconstruído e grava TSV. Uso: screen_openalex.py <id> "<boolean>" [from_year]"""
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Screen OpenAlex works with a Boolean query and flag causal-design terms.
+
+Queries OpenAlex by title and abstract from a given year, pages through up to 600 results,
+rebuilds each abstract, flags terms of causal designs (difference-in-differences, event study,
+synthetic control, regression discontinuity and similar) and writes a tab-separated file sorted
+with flagged works first.
+
+Inputs
+------
+- https://api.openalex.org/works (public API)
+- command-line arguments: a query identifier, the Boolean query and an optional start year
+  (default 2016)
+
+Outputs
+-------
+- triagem-<identifier>.tsv in the current directory
+- prints the identifier, total, number read and number with causal terms to stdout
+
+Usage
+-----
+cd analysis/literature && python3 -I scripts/screen_openalex.py <id> "<boolean>" [from_year]
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Triagem reprodutível: consulta booleana no OpenAlex (título+resumo), pagina TODOS os resultados (até 600),
+marca desenho causal por termos no resumo reconstruído e grava TSV. Uso: screen_openalex.py <id> "<boolean>" [from_year]
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import sys,json,urllib.request,urllib.parse,re,time,datetime
 qid,q=sys.argv[1],sys.argv[2]; fy=sys.argv[3] if len(sys.argv)>3 else "2016"
 UA={"User-Agent":"F8-literatura/1.0 (mailto:seu-email@exemplo.org)"}

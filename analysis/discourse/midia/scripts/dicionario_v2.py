@@ -1,4 +1,36 @@
-"""[v2 = CORRECAO pos-contagem: \\btrans\\b com fronteira de palavra; resto identico a v1]
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Define the pre-registered query dictionary of the media study (version 2, post-count fix).
+
+Single source of the queries: for each entry it holds the id, family, language, label, type
+(exact phrase or co-occurrence), the GDELT query string, the local regular expression applied to
+normalized text (lowercase, no accents), the OpenAlex query and the Wikipedia query. It also
+holds the period, the sampling seed, the source patterns, the news domains and the helper
+functions that normalize text and compile entries. Version 2 only fixes word-boundary matching
+of the term trans; the rest is identical to version 1.
+
+Inputs
+------
+- none (constants and helper functions only)
+
+Outputs
+-------
+- none (library module imported by analise_parlamento.py)
+
+Usage
+-----
+Imported by analise_parlamento.py; not run directly.
+
+Status
+------
+Pre-registered analysis (preregistrations/midia/PRE-REGISTRO.md). Version 2 is a post-count
+correction recorded in its addendum.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+[v2 = CORRECAO pos-contagem: \\btrans\\b com fronteira de palavra; resto identico a v1]
 Dicionario pre-registrado (frente MIDIA, discurso, rodada 3, 2026-10-22).
 
 Fonte unica das consultas. PRE-REGISTRO.md cita o sha256 deste arquivo.
@@ -7,6 +39,12 @@ no mesmo texto/artigo, mais ampla), gdelt (string de consulta), local (regex sob
 normalizado: minusculo, sem acento), oa (consulta OpenAlex title_and_abstract.search),
 wp (consulta Wikipedia, so frases exatas entre aspas).
 Texto normalizado = NFKD, sem marcas combinantes, minusculo, espacos colapsados.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
 """
 import re
 import unicodedata

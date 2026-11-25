@@ -1,4 +1,35 @@
-"""Diagnósticos metodológicos do painel UF x ano (ideologia do governador x taxa de homicídio por grupo). NÃO altera o modelo principal; testa suas premissas.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Run methodological diagnostics on the governor ideology and homicide panel.
+
+The script does not change the main model; it tests its assumptions. The base model is the log
+rate on ideology with state and year fixed effects and state-clustered errors. Diagnostics are
+a wild-cluster bootstrap with 27 clusters, a lead placebo, state-specific linear trends,
+control for the share of deaths without race, a check of the within-state variation of
+ideology and a binary right/left treatment. It uses a fixed seed.
+
+Inputs
+------
+- data/painel/painel_uf_ano_tse_brc.csv, painel_uf_ano_tse.csv and painel_uf_ano.csv
+- data/atlas_uf_series.csv
+
+Outputs
+-------
+- data/painel/diagnosticos.md (also printed to stdout)
+
+Usage
+-----
+python3 -I data/painel/painel_diagnosticos.py
+
+Status
+------
+Post hoc analysis, as stated in data/painel/painel_diagnosticos.py.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Diagnósticos metodológicos do painel UF x ano (ideologia do governador x taxa de homicídio por grupo). NÃO altera o modelo principal; testa suas premissas.
 Entradas: painel_uf_ano_tse_brc.csv (partido de ELEIÇÃO, TSE + ideologia BRC por período; apresentado primeiro por ser a especificação mais defensável, ESCOLHIDA DEPOIS de ver os resultados das variantes: sem pré-especificação), painel_uf_ano_tse.csv e painel_uf_ano.csv (escore único de 2018). Todas concluem o mesmo.
 Modelo base: ln(taxa) = b*ideologia + EF(UF) + EF(ano), EP agrupado por UF (CR1).
 Diagnósticos:
@@ -9,6 +40,12 @@ Diagnósticos:
   D5 variação disponível: quanto da ideologia varia DENTRO da UF (a identificação vem só daí) e limites de efeito que o desenho consegue excluir (IC95%; IC90 sem margem de equivalência declarada).
   D6 tratamento binário direita/esquerda (limiar Bolognesi 5,5) em vez de contínuo.
 Rodar: python3 -I data/painel/painel_diagnosticos.py   (semente fixa)
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
 """
 import os as _os
 import pathlib as _pl

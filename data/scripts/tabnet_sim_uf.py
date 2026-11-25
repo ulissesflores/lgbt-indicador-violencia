@@ -1,4 +1,40 @@
-"""Séries UF x ano de óbitos por agressão (CID X85-Y09) e população, a partir do TabNet/DATASUS e do IBGE SIDRA.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Download state-by-year aggression deaths and population from TabNet and IBGE SIDRA.
+
+Posts queries to the DATASUS TabNet service for SIM deaths by state of residence and year
+(ICD-10 aggression group, women, race/color groups, and firearm categories), requests female
+population from TabNet and total population from IBGE SIDRA tables 6579, 1378 and 9514. It
+computes rates per 100,000 and writes a long table with source URL, download time and data
+status, then prints the SHA-256 of each raw file.
+
+Inputs
+------
+- http://tabnet.datasus.gov.br/cgi/tabcgi.exe?sim/cnv/ext10uf.def (network, HTTP POST)
+- http://tabnet.datasus.gov.br/cgi/tabcgi.exe?ibge/cnv/popuf.def (network, HTTP POST)
+- https://apisidra.ibge.gov.br/values/t/6579/n3/all/v/9324/p/2011-2025 (network)
+- https://apisidra.ibge.gov.br/values/t/1378/n3/all/v/93/p/2010 (network)
+- https://apisidra.ibge.gov.br/values/t/9514/n3/all/v/93/p/2022 (network)
+
+Outputs
+-------
+- sources/public/p2-f8-dados-uf/tabnet/raw/ (raw responses, not tracked in git)
+- data/atlas_uf_series.csv
+- prints per-query counts to stderr and raw-file hashes to stdout
+
+Usage
+-----
+python3 -I data/scripts/tabnet_sim_uf.py
+
+Status
+------
+Data acquisition step; no analysis claim.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Séries UF x ano de óbitos por agressão (CID X85-Y09) e população, a partir do TabNet/DATASUS e do IBGE SIDRA.
 
 Rotas (todas por HTTP, sem navegador):
 - SIM (óbitos residentes): POST em tabnet.datasus.gov.br/cgi/tabcgi.exe?sim/cnv/ext10uf.def (formulário baixado).
@@ -6,6 +42,12 @@ Rotas (todas por HTTP, sem navegador):
 - População total: SIDRA 6579 (2011-2021, 2024-2025), 1378 (Censo 2010), 9514 (Censo 2022). 2023 não publicado nas tabelas testadas.
 
 Brutos em sources/public/p2-f8-dados-uf/tabnet/raw/. Saída: data/atlas_uf_series.csv (nome herdado do plano; NÃO é o Atlas).
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
 """
 import os as _os
 import pathlib as _pl

@@ -1,5 +1,41 @@
-"""Auxiliar de codificacao: grava/atualiza _codif/<universo>.json. Uso: from cod import grava
-grava(universo, indices_range, default=[...8 campos...], overrides={idx:[...]}, texto='so_titulo')"""
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Provide a helper that writes manual coding records for the media sample.
+
+Library function grava(universe, index_range, default, overrides, text) that creates or updates
+the coding file of one universe: every index in the range gets the default eight fields plus
+the text mode, and the overrides replace single items.
+
+Inputs
+------
+- analysis/discourse/midia/_codif/<universe>.json (read if it already exists)
+
+Outputs
+-------
+- analysis/discourse/midia/_codif/<universe>.json (updated)
+- prints the universe name and the number of coded items
+
+Usage
+-----
+Imported as "from cod import grava" by coding scripts; not run directly.
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Auxiliar de codificacao: grava/atualiza _codif/<universo>.json. Uso: from cod import grava
+grava(universo, indices_range, default=[...8 campos...], overrides={idx:[...]}, texto='so_titulo')
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

@@ -1,4 +1,37 @@
-"""Figura 2 da v0.5: violência relatada em 12 meses por adultos LGB+ e heterossexuais (PNS 2019).
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Plot Figure 2: violence in 12 months among LGB+ and heterosexual adults (PNS 2019).
+
+Panel a shows the prevalence of physical, sexual, psychological and any violence with the 95%
+interval of the complex design. Panel b shows the crude (open circle) and adjusted (filled
+square) prevalence ratios, adjusted for sex, age, color, schooling, region and urban or rural
+residence, on a log scale. It reads the result table and the first table of the report written
+by seguro_pns2019.py.
+
+Inputs
+------
+- data/pns/seguro_pns2019.csv
+- data/pns/seguro_pns2019.md (table 1, for the intervals)
+- command line: output PNG path
+
+Outputs
+-------
+- the PNG file given on the command line (300 dpi)
+- prints the output path and the prevalences and adjusted ratio of each outcome
+
+Usage
+-----
+python3 data/pns/fig_pns_v05.py <output.png>
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Figura 2 da v0.5: violência relatada em 12 meses por adultos LGB+ e heterossexuais (PNS 2019).
 
 Painel a: prevalência de violência física, sexual, psicológica e de qualquer tipo, com IC95% (desenho complexo).
 Painel b: razão de prevalências bruta (círculo vazado) e ajustada (quadrado cheio) por sexo, idade, cor, instrução,
@@ -7,6 +40,12 @@ figures/make_figures.py (seguro_pns2019.csv + tabela 1 de seguro_pns2019.md); ac
 figura da v0.4.4 não mostrava. Fundo branco; título, nota e fonte ficam no documento (regra APA do pipeline).
 
 Uso: python3 data/pns/fig_pns_v05.py <saida.png>
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
 """
 from __future__ import annotations
 

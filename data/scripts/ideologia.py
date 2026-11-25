@@ -1,6 +1,43 @@
-"""Gera data/ideologia_partidos.csv a partir de dois brutos baixados (sem rede):
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Build the table of party ideology scores from two downloaded sources.
+
+Reads a saved HTML page of an article on Brazilian party placement (Table 1, mean expert
+scores on a 0 to 10 scale) and the party estimates file from the Power and Zucco legislator
+surveys (1990 to 2005 waves). It writes one row per party and source year with score, scale,
+source description and URL, and prints the row counts per source.
+
+Inputs
+------
+- sources/public/p2-f8-dados-uf/ideologia/doi_303.html
+- sources/public/p2-f8-dados-uf/ideologia/party.estimates.csv
+
+Outputs
+-------
+- data/ideologia_partidos.csv
+- prints the row counts to stdout
+
+Usage
+-----
+python3 -I data/scripts/ideologia.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Gera data/ideologia_partidos.csv a partir de dois brutos baixados (sem rede):
 (a) Bolognesi, Ribeiro & Codato 2023 (Dados 66(2)), Tabela 1 do HTML SciELO (doi 10.1590/dados.2023.66.2.303);
 (b) Zucco & Power, party.estimates.csv (Dataverse doi:10.7910/DVN/ZLAV8S, v2 2024-10-19), ondas 1990-2005.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
 """
 import os as _os
 import pathlib as _pl

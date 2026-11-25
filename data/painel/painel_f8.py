@@ -1,4 +1,41 @@
-"""F8 — painel UF x ano (2012-2024): ideologia do governador x taxas de homicídio por grupo.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Estimate the panel of governor ideology against homicide rates by group.
+
+The script builds the panel from SIM counts (Atlas series), governor tables, party ideology
+scores and SIDRA population tables, and fits a symmetric model: log rate on a continuous 0-10
+ideology score with state and year fixed effects and standard errors clustered by state.
+Arguments select the party source (Wikipedia-based or TSE election party) and the ideology
+scale. It also reads the BLS9 party estimates for a robustness check. It is exploratory and
+not causal.
+
+Inputs
+------
+- data/atlas_uf_series.csv, data/ideologia_partidos.csv
+- data/governadores_uf_2011_2026.csv (or the _tse version) and data/ideologia/
+- sources/public/p2-f8-dados-uf/sidra/sidra6407_n3_606_c2all_c58tot_pall.json
+- sources/public/p2-f8-dados-uf/sidra/sidra6403_n3_606_c86all_pall.json
+-
+  sources/public/p2-f8-governos/zucco-power-dataverse/bls9_estimates_partiespresidents_long.tab
+
+Outputs
+-------
+- data/painel/painel_uf_ano<variant>.csv (the panel)
+- data/painel/resultados<variant>.md (results, also printed to stdout)
+
+Usage
+-----
+python3 -I data/painel/painel_f8.py [wiki|tse] [bolognesi2018|brc]
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+F8 — painel UF x ano (2012-2024): ideologia do governador x taxas de homicídio por grupo.
 Desenho SIMÉTRICO (escore contínuo 0-10, Bolognesi/Ribeiro/Codato 2023), efeitos fixos de UF e ano,
 erro-padrão agrupado por UF. Exploratório: não é causal (ver caveats no .md).
 Entradas: data/atlas_uf_series.csv (SIM/TabNet), data/governadores_uf_2011_2026.csv, data/ideologia_partidos.csv,
@@ -8,6 +45,12 @@ Reprodutibilidade (2026-10-21): com o CSV de governadores ORIGINAL (git: commit 
 Depois a curadoria foi corrigida (ES e GO 2023+: o CSV tinha o vice no lugar do governador eleito, achado no cruzamento com o TSE).
 Uso: painel_f8.py [wiki|tse]  -> resultados.md (partido em exercício, Wikipédia corrigida) | resultados_tse.md (partido de eleição, TSE)
 Saídas: data/painel/painel_uf_ano.csv, data/painel/resultados.md
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
 """
 import os as _os
 import pathlib as _pl

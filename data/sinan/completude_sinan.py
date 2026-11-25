@@ -1,6 +1,50 @@
-"""[2026-10-21] Saída movida de resumo.md (que era sobrescrito, apagando as seções anexadas depois) para completude_2023_2024.md.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Tabulate completeness of Sinan VIVA fields 55, 36 and 37 for 2023 and 2024.
+
+Reads the 2023 and 2024 Sinan VIVA violence notification files and counts, for Brazil and each
+state, the categories of motivation (field 55), sexual orientation (field 36) and gender
+identity (field 37), with percentages. It also counts victim-aggressor relationship items by sex
+for interpersonal notifications (self-inflicted injuries excluded) and writes a short summary
+with the states of worst and best completeness of field 55.
+
+Inputs
+------
+- sources/public/p2-sinan-microdados/VIOLBR23.dbf (not tracked in git)
+- sources/public/p2-sinan-microdados/VIOLBR24.dbf (not tracked in git)
+
+Outputs
+-------
+- data/sinan/campo55_motivacao.csv
+- data/sinan/campo36_orientacao.csv
+- data/sinan/campo37_identidade.csv
+- data/sinan/contexto_por_sexo.csv
+- data/sinan/completude_2023_2024.md
+- prints the summary to stdout
+
+Usage
+-----
+python3 -I data/sinan/completude_sinan.py (needs dbfread; the DBF files are converted from the
+DATASUS DBC files beforehand)
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+[2026-10-21] Saída movida de resumo.md (que era sobrescrito, apagando as seções anexadas depois) para completude_2023_2024.md.
 Completude e distribuição dos campos 55 (VIOL_MOTIV), 36 (ORIENT_SEX) e 37 (IDENT_GEN) do Sinan VIVA, Brasil e UF, 2023-2024,
-e assimetria de contexto (relação vítima-autor) por sexo. Entrada: VIOLBR23/24.dbf (FTP DATASUS, convertidos de .dbc). Saída: CSVs + resumo.md."""
+e assimetria de contexto (relação vítima-autor) por sexo. Entrada: VIOLBR23/24.dbf (FTP DATASUS, convertidos de .dbc). Saída: CSVs + resumo.md.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

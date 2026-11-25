@@ -1,9 +1,51 @@
-"""H2: UFs que não informam (ou informam inexistente) 'racismo por homofobia/transfobia' no Anuário FBSP têm MENOS estrutura estadual especializada (ESTADIC 2019/2023)?
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Test whether states that do not report LGBT-phobia data have less specialized structure.
+
+Hypothesis H2 relates, across states, the count of state-years 2022-2025 with no data or
+"nonexistent" in the Brazilian Public Security Yearbook to a structure index built from six
+ESTADIC items (2019 and 2023) and to the presence of an LGBT-violence committee. It runs Fisher
+exact tests, a Spearman correlation with a 20000-draw permutation p-value, the AUC of the index
+with a bootstrap interval, and a simulated power analysis. The seed is fixed at 20261024.
+
+Inputs
+------
+- data/anuario/anuario_lgbtfobia_uf_ano_v2.csv
+- analysis/political-economy/dados/h2_estadic_lgbt_uf.csv
+- data/atlas_uf_series.csv
+- the Python packages numpy, pandas and scipy
+
+Outputs
+-------
+- analysis/political-economy/dados/h2_uf_resumo.csv
+- analysis/political-economy/dados/h2_resultados.csv
+- prints the state summary and the test results to stdout
+
+Usage
+-----
+python3 -I analysis/political-economy/scripts/h2_02_analise.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+H2: UFs que não informam (ou informam inexistente) 'racismo por homofobia/transfobia' no Anuário FBSP têm MENOS estrutura estadual especializada (ESTADIC 2019/2023)?
 Anuário: data/anuario/anuario_lgbtfobia_uf_ano_v2.csv (UF x ano de dados 2022-2025, última edição que traz o ano). Nenhum UF informou '0' numérico: o 'zero cerimonial' aparece como '...' (nd) ou '-' (inexistente).
 Desfechos: Z = nº de UF-anos 2022-2025 com nd/inexistente (0-4); Zbin = Z>=1; taxa 2024 por 100 mil (SIM/IBGE pop de data/atlas_uf_series.csv) entre UFs informantes.
 Estrutura: índice S = média de Sim (0/1) em 6 itens da ESTADIC (2019 e 2023; 'Não'=0, 'Sim'=1, Recusa/-=ausente), e binário C = comitê de enfrentamento à violência LGBTfóbica em alguma edição (EDHU5410).
 Testes: Fisher exato (Zbin x C e Zbin x S>=mediana), Spearman Z x S com p por permutação (20000, semente fixa), AUC de S para discriminar Zbin com IC por bootstrap. Poder declarado por simulação.
-Rodar: python3 -I scripts/h2_02_analise.py"""
+Rodar: python3 -I scripts/h2_02_analise.py
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

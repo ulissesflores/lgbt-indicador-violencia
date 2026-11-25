@@ -119,3 +119,12 @@ Leitura para o uso: a diferença de Brasil em 2023 (2.090 na ed. 2024 x 1.633 na
 - Nenhuma linha ficou marcada como ambígua: o parser (regra: nome da UF seguido de pelo menos dois valores numéricos ou `...`/`-`) pegou as 27 UFs e o Brasil nas três edições, sem colunas deslocadas.
 - Marca de nota no nome (`(3)`, `(4)`, `(5)`) é removida antes de casar a UF. A coluna `nota` recebe o texto curto da nota da UF (AP/MG em 2024; ES/MG/SP em 2025) e da nota de ano (`(2)` em 2024 e 2025, `(3)` em 2026). Nota de SP (5) e de AP (3) de 2024 falam do total de racismo, não só da coluna homofobia; está registrado assim na coluna.
 - Diferença de série entre edições: a coluna de 2026 vem da Tabela 19. Se o FBSP pretender que a Tabela 18 de 2026 contenha esse dado, ele não está lá; não inferi.
+
+## As outras colunas da Tabela 19 de 2026 citadas no artigo
+
+A seção 3.5 do artigo cita, além da coluna de racismo por homofobia ou transfobia, três colunas da mesma Tabela 19 de
+2026 (p. 135), só na linha Brasil: homicídio doloso (218 em 2024 e 187 em 2025), lesão corporal dolosa (5.079 e 5.452)
+e estupro (471 e 480). Essa linha não é extraída aqui: está guardada verbatim, com página e SHA-256 do PDF, em
+`analysis/ggb-series/series/painel_mortes_lgbt.csv` (fonte `anu2026`, gerado por
+`analysis/ggb-series/series/scripts/s04_painel.py`), e o teste `test_anuario2026_tabela19_linha_brasil`
+(`tests/test_paper_numbers.py`) trava os seis números.

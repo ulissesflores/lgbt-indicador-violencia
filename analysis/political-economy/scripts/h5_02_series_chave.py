@@ -1,6 +1,46 @@
-"""H5: séries de execução orçamentária (empenhado) das ações que sustentam (ou deveriam sustentar) a medição de violência/vitimização, em R$ nominais e em R$ de dez/2025 (IPCA SIDRA 1737, número-índice de dezembro de cada ano).
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Build the executed-budget series of the actions that sustain violence measurement.
+
+Reads the filtered budget actions and the IPCA price index (SIDRA 1737), converts committed
+amounts to December 2025 reais, selects the key actions (IBGE surveys and censuses, public
+security information systems, human-rights information systems and indicators, judiciary
+statistics, the LGBT citizenship research nuclei), and sums them by category, source and year.
+The CGU and SIOP series are not joined. Prints nominal and real tables in millions.
+
+Inputs
+------
+- analysis/political-economy/dados/h5_orcamento_acoes.csv
+- analysis/political-economy/dados/raw/sidra1737_ipca_indice.json
+- the Python packages numpy and pandas
+
+Outputs
+-------
+- analysis/political-economy/dados/h5_series_chave_acoes.csv
+- prints the nominal and real pivot tables to stdout
+
+Usage
+-----
+python3 -I analysis/political-economy/scripts/h5_02_series_chave.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+H5: séries de execução orçamentária (empenhado) das ações que sustentam (ou deveriam sustentar) a medição de violência/vitimização, em R$ nominais e em R$ de dez/2025 (IPCA SIDRA 1737, número-índice de dezembro de cada ano).
 CGU 2014-2025 e SIOP-RDF 2007-2013 NÃO se emendam (fontes e conceitos de valor diferentes); a série é cortada em 2013/2014 na tabela. Ações-chave escolhidas ANTES de olhar os valores pelo critério: IBGE (pesquisas/censos) + ações cujo nome é de informação/pesquisa sobre segurança, direitos humanos ou LGBT.
-Rodar: python3 -I scripts/h5_02_series_chave.py"""
+Rodar: python3 -I scripts/h5_02_series_chave.py
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

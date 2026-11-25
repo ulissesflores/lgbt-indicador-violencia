@@ -1,5 +1,46 @@
-"""C18: monta eventos_C18.csv. Cada evento aponta arquivo baixado + ancora (regex) e o trecho verbatim e extraido do TEXTO do arquivo
-(nunca digitado a mao). Python: python3 -I"""
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Build the C18 event table, quoting each event verbatim from the downloaded page text.
+
+The script holds a hand-written list of events (id, government, date, type, agent, source key,
+regex anchor, judgement note). For each event it opens the extracted text of the cited page,
+locates the anchor with a regular expression and copies the surrounding passage, so the quoted
+excerpt is taken from the file and never typed by hand. It also records the SHA-256 of the raw
+download and reports any anchor that was not found.
+
+Inputs
+------
+- analysis/robustness/simetria/downloads_C18.tsv (URL and source type per downloaded page)
+- sources/public/q1-textointegral/discurso/simetria/brasil/<gov>_<qid>.raw and .txt
+- sources/public/q1-textointegral/discurso/simetria/<fala-...>/<file>.raw and .txt (press
+  report of one remark, referenced by a relative path in the event list)
+
+Outputs
+-------
+- analysis/robustness/simetria/eventos_C18.csv (one row per event, with excerpt and SHA-256)
+- prints the number of events and the ids whose anchor was not found
+
+Usage
+-----
+python3 -I analysis/robustness/simetria/scripts/eventos_C18.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+C18: monta eventos_C18.csv. Cada evento aponta arquivo baixado + ancora (regex) e o trecho verbatim e extraido do TEXTO do arquivo
+(nunca digitado a mao). Python: python3 -I
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

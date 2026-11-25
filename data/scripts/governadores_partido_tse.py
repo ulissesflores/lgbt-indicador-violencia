@@ -1,10 +1,52 @@
-"""Cruza os mandatos de governador (Wikipédia, curados em governadores_uf_2011_2026.csv) com o TSE: troca o partido pelo PARTIDO PELO QUAL A PESSOA FOI ELEITA
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Cross-check governor terms against TSE election records and replace each party label.
+
+Reads the curated governor-term table (UF by year) and the TSE table of elected governors and
+vice-governors. For each row it matches the person by first and last name token inside the
+election cycle and state, and replaces the party with the one under which the person was
+elected.
+Rows with no match (non-elected interim office holders) keep the original party and are marked
+as a fallback; rows with several candidate parties keep it and are marked ambiguous. Every
+divergence is written side by side in a validation report.
+
+Inputs
+------
+- data/governadores_tse_eleitos.csv
+- data/governadores_uf_2011_2026.csv
+
+Outputs
+-------
+- data/governadores_uf_2011_2026_tse.csv (same columns plus partido_wiki and fonte_partido)
+- data/governadores_tse_validacao.md
+- prints the summary line and the number of listed divergences to stdout
+
+Usage
+-----
+python3 -I data/scripts/governadores_partido_tse.py (after data/scripts/governadores_tse.py)
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Cruza os mandatos de governador (Wikipédia, curados em governadores_uf_2011_2026.csv) com o TSE: troca o partido pelo PARTIDO PELO QUAL A PESSOA FOI ELEITA
 (governador ou vice, eleição ordinária ou suplementar) no ciclo da época. Saída: data/governadores_uf_2011_2026_tse.csv (mesmas colunas + partido_wiki, fonte_partido)
 e data/governadores_tse_validacao.md (toda divergência, lado a lado).
 Ciclo do ano: 2011-14 -> eleição 2010; 2015-18 -> 2014 (inclui suplementares de AM 2017 e TO 2018 que o TSE guarda no arquivo de 2014); 2019-22 -> 2018; 2023-26 -> 2022.
 Casamento por nome: primeiro e último token (sem partículas/JUNIOR/FILHO/NETO, sem acento) do nome da Wikipédia dentro dos tokens do nome completo OU do nome de urna do TSE, restrito ao ciclo e à UF.
 Sem casamento (interinos não eleitos: presidente da Assembleia/TJ) -> mantém o partido da Wikipédia e marca fonte_partido=fallback_wiki.
-Rodar: python3 -I data/scripts/governadores_partido_tse.py (depois de governadores_tse.py)"""
+Rodar: python3 -I data/scripts/governadores_partido_tse.py (depois de governadores_tse.py)
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

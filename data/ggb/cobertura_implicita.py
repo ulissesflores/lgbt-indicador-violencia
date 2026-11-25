@@ -1,4 +1,41 @@
-"""Cobertura IMPLÍCITA da contagem do GGB: quantas mortes por agressão seriam ESPERADAS entre adultos LGB+ se tivessem o mesmo risco de morte por agressão
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Compute expected deaths among LGB+ adults at peer risk and the implied GGB coverage.
+
+The script estimates how many deaths by aggression would be expected among adult LGB+ people
+if they had the same risk as peers of the same sex, race group and 5-year age band, and what
+share of that expectation the GGB count represents. Cell rates come from SIM deaths and Census
+population, the LGB+ share per cell from PNS 2019, with scenarios of risk ratio (1, 2.82,
+3.84) and of prevalence. It is an exercise of limit and scale, not an estimate of deaths or of
+a rate.
+
+Inputs
+------
+- data/sim/padroniza_idade.py (loaded as a module: SIM deaths, population and age bands)
+- sources/public/q1-textointegral/F2/pns2019/input_PNS_2019_utf8.txt (official PNS 2019
+  layout)
+- sources/public/q1-textointegral/F2/pns2019/x/PNS_2019.txt (PNS 2019 microdata)
+- GGB yearly counts (constants in the script)
+
+Outputs
+-------
+- data/ggb/cobertura_implicita.csv
+- data/ggb/cobertura_implicita.md
+- prints the first lines of the Markdown report
+
+Usage
+-----
+python3 -I data/ggb/cobertura_implicita.py
+
+Status
+------
+Feeds numbers printed in the article (listed in paper_numbers.json).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Cobertura IMPLÍCITA da contagem do GGB: quantas mortes por agressão seriam ESPERADAS entre adultos LGB+ se tivessem o mesmo risco de morte por agressão
 que os pares do mesmo sexo, raça (negro/não negro) e faixa etária, e quanto da expectativa a contagem do GGB representa.
 NÃO é estimativa de mortes de LGB+ nem taxa: é um exercício de LIMITE/ESCALA. Isso evita comparar a taxa 'implícita' do GGB (8,8-10,0) com a taxa
 geral sem ajustar a composição (LGB+ são mais jovens e mais negros? o ajuste diz).
@@ -9,7 +46,14 @@ Método (declarado antes de rodar):
   3. Esperado E = soma(população LGB+ da célula x taxa da célula) x RR, com RR = 1 (mesmo risco dos pares), 2,82 (RP ajustada de violência física, PNS 2019; cenário, NÃO é razão de risco de morte) e 3,84 (bruta).
   4. Cobertura implícita = contagem GGB / E. IC: só pela prevalência (IC95% 1,73-2,07% da PNS, escalado linearmente); a incerteza da composição não entra.
 LIMITES: GGB inclui pessoas trans (a PNS não mede identidade de gênero) e menores; PNS autorrelato subestima LGB+ (cenários de prevalência 3% e 5% como sensibilidade, NÃO como fato); denominador 2023-24 extrapolado; GGB = mortes noticiadas (não só agressão); o pareamento é só por sexo, raça e idade (NÃO ajusta escolaridade, UF nem urbano/rural: homicídio se concentra em periferias e UFs específicas, então se LGB+ forem mais urbanos/escolarizados o esperado cai; o sentido do viés não foi medido).
-Rodar: python3 -I data/ggb/cobertura_implicita.py   Saídas: data/ggb/cobertura_implicita.md/.csv"""
+Rodar: python3 -I data/ggb/cobertura_implicita.py   Saídas: data/ggb/cobertura_implicita.md/.csv
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

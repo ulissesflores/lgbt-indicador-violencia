@@ -1,8 +1,47 @@
-"""SUPERADO em 2026-10-21 por triangulacao_pns_sinan.py (calcula tudo dos microdados, com IC da PNS); este arquivo tem insumos digitados à mão. Mantido só como histórico.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Compute a non-response sensitivity table for the PNS and Sinan sexual orientation comparison.
+
+Uses counts and shares typed into the script for 2023 and 2024 (violence notifications of
+adults)
+and the PNS 2019 implied LGB+ share. For each year it computes the LGB+ share of the Sinan under
+scenarios for the unanswered orientation field: equal to the observed share, half and double of
+it, zero, all, and the share needed to match the PNS. The script is superseded by
+triangulacao_pns_sinan.py and kept as history.
+
+Inputs
+------
+- none read from disk (all values are typed in the script)
+
+Outputs
+-------
+- data/sinan/resumo.md (section appended)
+- prints the same table to stdout
+
+Usage
+-----
+python3 -I data/sinan/sensibilidade_pns_sinan.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+SUPERADO em 2026-10-21 por triangulacao_pns_sinan.py (calcula tudo dos microdados, com IC da PNS); este arquivo tem insumos digitados à mão. Mantido só como histórico.
 Sensibilidade da triangulação PNS x Sinan à não resposta de orientação sexual (campo 36) no Sinan.
 Recorte: violência física, interpessoal, adultos 18+ (2023 e 2024). Entradas: contagens já calculadas (resumo.md): válidas, ignorado+branco, 'não se aplica', homo+bi.
 Cenários para a parcela LGB+ entre as NÃO respondidas (ign+branco+NA): MCAR (= parcela observada), pior caso (0%), melhor caso (100%),
-e intermediários plausíveis (LGB+ 2x e 0,5x a parcela observada entre não respondidas). Compara com o implícito da PNS (6,9%)."""
+e intermediários plausíveis (LGB+ 2x e 0,5x a parcela observada entre não respondidas). Compara com o implícito da PNS (6,9%).
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

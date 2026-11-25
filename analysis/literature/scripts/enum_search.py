@@ -1,6 +1,45 @@
 #!/usr/bin/env python3
-"""Espaço de busca enumerado (rodada 3, F8-literatura). Cada consulta -> contagem total por base (OpenAlex search relevância-ordenada, Europe PMC).
-Saída: busca-enumerada.json. Contagem é de resultados da base para a string literal, não de relevantes."""
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Count the results of each literature search query in two bibliographic databases.
+
+For each query in a fixed list (Brazilian causal studies, state persecution, comparative cases,
+reviews, death-certificate studies) it asks the OpenAlex works API and the Europe PMC search API
+for the total number of results of the literal string, retrying OpenAlex on errors. The counts
+describe the search space, not the number of relevant works.
+
+Inputs
+------
+- https://api.openalex.org/works (public API)
+- https://www.ebi.ac.uk/europepmc/webservices/rest/search (public API)
+
+Outputs
+-------
+- busca-enumerada.json in the current directory (analysis/literature/busca-enumerada.json
+  when run from analysis/literature)
+- prints each query row to stdout
+
+Usage
+-----
+cd analysis/literature && python3 -I scripts/enum_search.py
+
+Status
+------
+Data acquisition step; no analysis claim.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Espaço de busca enumerado (rodada 3, F8-literatura). Cada consulta -> contagem total por base (OpenAlex search relevância-ordenada, Europe PMC).
+Saída: busca-enumerada.json. Contagem é de resultados da base para a string literal, não de relevantes.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import json, urllib.request, urllib.parse, sys, datetime, time
 UA={"User-Agent":"F8-literatura/1.0 (mailto:seu-email@exemplo.org)"}
 Q=[

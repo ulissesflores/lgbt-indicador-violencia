@@ -1,5 +1,43 @@
 #!/usr/bin/env python3
-"""Confere que cada trecho entre aspas das linhas de rows.py existe no arquivo local (normalizando espaços, ligaduras e aspas)."""
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Check that every quoted passage in the evidence rows exists in its local file.
+
+For each row of rows.py it extracts the quoted passages and searches them in the text of the
+local file (pdftotext for PDFs, tag-stripped text for HTML or XML) after normalizing spaces,
+ligatures, dashes and quotation marks, tolerating editorial brackets and ellipses. It prints
+each passage not found and a final verdict.
+
+Inputs
+------
+- analysis/literature/scripts/rows.py
+- the local source files listed in rows.py (not tracked in git when large)
+- poppler tool pdftotext on the PATH
+
+Outputs
+-------
+- prints "NAO ACHADO" lines for missing passages and a final "ok" or the count to stdout
+
+Usage
+-----
+python3 -I analysis/literature/scripts/check_quotes.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Confere que cada trecho entre aspas das linhas de rows.py existe no arquivo local (normalizando espaços, ligaduras e aspas).
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import sys, os, re, subprocess, html, unicodedata
 sys.path.insert(0, os.path.dirname(__file__))
 import rows

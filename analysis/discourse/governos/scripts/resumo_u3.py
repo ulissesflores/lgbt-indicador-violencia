@@ -1,4 +1,42 @@
-"""Resumo: regime (RoW 2025, V-Dem v16) dos 65 Estados-membros da ONU que criminalizam (ILGA DB 2026-10-22) x os 128 que nao criminalizam. Saida ../u3_resumo.md"""
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Summarize the regime of the 65 criminalizing states against the 128 that do not criminalize.
+
+Counts the V-Dem Regimes of the World category (2025, V-Dem v16) for the UN member states that
+the ILGA database (extract of 2026-10-22) marks as criminalizing and for those it does not,
+and writes the comparison as Markdown.
+
+Inputs
+------
+- sources/public/q1-textointegral/discurso/governos/ilga-db-csssa-all.json
+- sources/public/q1-textointegral/discurso/governos/vdemdata-vdem.RData
+- requires pyreadr, pycountry and pandas; REPO_ROOT may override the repo root
+
+Outputs
+-------
+- analysis/discourse/governos/u3_resumo.md
+- prints the same Markdown text to stdout
+
+Usage
+-----
+python3 -I analysis/discourse/governos/scripts/resumo_u3.py
+
+Status
+------
+Post hoc analysis, as stated in preregistrations/governos/PRE-REGISTRO.md.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Resumo: regime (RoW 2025, V-Dem v16) dos 65 Estados-membros da ONU que criminalizam (ILGA DB 2026-10-22) x os 128 que nao criminalizam. Saida ../u3_resumo.md
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

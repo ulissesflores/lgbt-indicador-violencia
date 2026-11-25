@@ -1,8 +1,51 @@
-"""H3: a série de contagens da sociedade civil (GGB) cresce com a COBERTURA (internet), não só com a incidência (homicídios SIM)?
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Test whether the civil-society death counts grow with coverage and not only with incidence.
+
+Hypothesis H3 has two parts. (a) On the national 2000-2024 series it regresses the log of the
+GGB count on the log of SIM homicides and on the internet-use share, in levels with
+Newey-West errors and with block bootstrap intervals. (b) On a state panel for the years with a
+complete state table (2021, 2023, 2024) it fits a Poisson model with state and year effects
+against the share of households with internet, with a permutation of trajectories across
+states. The random seed is fixed at 20261023.
+
+Inputs
+------
+- analysis/political-economy/dados/h1_sim_tabnet_uf_ano.csv
+- analysis/political-economy/dados/h3_ggb_nacional_2000_2024.csv and h3_ggb_uf_ano_agregado.csv
+- analysis/political-economy/dados/raw/wb_internet_bra.json and sidra7307_dom_internet_uf.json
+- the Python packages numpy and pandas
+
+Outputs
+-------
+- analysis/political-economy/dados/h3_resultados_nacional.csv and h3_serie_nacional_insumos.csv
+- analysis/political-economy/dados/h3_painel_uf.csv and h3_resultados_painel_uf.csv
+- prints the model results to stdout
+
+Usage
+-----
+python3 -I analysis/political-economy/scripts/h3_analise.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+H3: a série de contagens da sociedade civil (GGB) cresce com a COBERTURA (internet), não só com a incidência (homicídios SIM)?
 (a) Série nacional 2000-2024 (n=25): log GGB ~ log homicídios SIM (+ internet % ITU/Banco Mundial), níveis com Newey-West e primeiras diferenças com bootstrap de blocos.
 (b) Painel UF (2021, 2023, 2024 = os únicos anos com tabela completa por UF nos relatórios do GGB lidos; 2022 tem só 135 de 256; 2017-2020 só rankings parciais) x
     % de domicílios com internet (PNAD Contínua TIC, SIDRA 7307; 2020 não existe): Poisson com EF de UF e ano, permutação de trajetórias entre UFs.
-Semente fixa. Rodar: python3 -I scripts/h3_analise.py"""
+Semente fixa. Rodar: python3 -I scripts/h3_analise.py
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

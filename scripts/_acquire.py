@@ -1,4 +1,38 @@
-"""Núcleo comum dos scripts acquire_*.py.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Provide the shared download-and-check routine for the official microdata acquisition scripts.
+
+Reads the manifest of sources, downloads each file of a group with curl (resuming interrupted
+transfers), and compares its SHA-256 with the expected value. A file whose hash differs is
+renamed with the suffix .divergente and reported, because it is not the version used in the
+study. The exit code is the largest failure code: 0 all match, 1 missing or network failure,
+2 hash mismatch. Calling it directly only prints a pointer to the acquisition scripts.
+
+Inputs
+------
+- manifest/MANIFESTO-FONTES.csv (rows of part B-bruto, with URL and expected SHA-256)
+- the official source URLs listed in that manifest (network)
+
+Outputs
+-------
+- downloaded files under the destination folder chosen by the calling script (not tracked in
+  git)
+- prints one status line per file to stdout
+
+Usage
+-----
+Imported by scripts/acquire_sim.py, scripts/acquire_sinan.py, scripts/acquire_tse.py and
+scripts/acquire_pns2019.py; not run directly.
+
+Status
+------
+Data acquisition step; no analysis claim.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Núcleo comum dos scripts acquire_*.py.
 
 Baixa o microdado oficial e confere o SHA-256 esperado do manifesto.
 
@@ -8,6 +42,12 @@ ter sido regerados na origem: se o hash divergir, o arquivo novo NÃO é a vers�
 avisa, guarda o baixado como <nome>.divergente e sai com código 2.
 
 Destino: $REPO_ROOT/fontes/... (ignorado pelo git). Sem REPO_ROOT, usa a raiz do repositório.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
 """
 
 import csv

@@ -1,4 +1,43 @@
-"""Testes figura <-> dado de origem do paper (roda com ou sem pytest).
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Check that each figure of the article matches the data file it was drawn from.
+
+The values compared are those that the figure script read back from the matplotlib artists
+(bar widths, centers and error-bar ends), stored as plotted values. This test does not import
+the figure script: it reopens the source files with its own parser and compares. It also checks
+the SHA-256 of each source copy against the sources table and against the original file in the
+repository, the figure checksum file, that texts outside the image carry no process wording,
+and the numbers the article cites for each figure, with a negative control.
+
+Inputs
+------
+- figures/valores_plotados.json and figures/textos_fora_da_imagem.json
+- figures/SHA256SUMS.txt and figures/fontes/ (copies of the source data)
+- sources/public/SOURCES.tsv
+- data/dashboard_dados.publico.json
+- data/pns/, data/sim/, data/sinan/, data/painel/, data/ggb/, data/concordancia/, data/anuario/
+- data/exposicao/, data/presidencia/ and data/disque100/saidas/d100_serie_anual.csv
+- analysis/ggb-audit/dados/, analysis/survey-cost/, analysis/simulation/resumo.json
+- analysis/robustness/simetria/ and analysis/discourse/midia/
+- sources/public/p2-f8-dados-uf/tabnet/raw/sidra_9514.json
+
+Outputs
+-------
+- none (assertions only)
+
+Usage
+-----
+python3 -I tests/test_figuras.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Testes figura <-> dado de origem do paper (roda com ou sem pytest).
 
 Os valores conferidos aqui sao os que `make_figures.py` leu de volta dos ARTISTAS do matplotlib
 (`figures/valores_plotados.json`): largura de barra, centro e extremos de barra de erro. Este
@@ -11,6 +50,12 @@ arquivo de origem na raiz do repositorio (data/...) e o extrato contra data/dash
 figuras; (iv) os numeros que o texto do paper cita para cada figura.
 
 Uso: python3 -I tests/test_figuras.py   (ou pytest)
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
 """
 
 from __future__ import annotations

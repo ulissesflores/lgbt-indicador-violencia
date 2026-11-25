@@ -1,5 +1,48 @@
-"""Brasil 2011-2025: itens (declaracoes e acoes de governos) com citacao VERIFICADA + dados oficiais por governo.
-Saidas: ../brasil_itens.csv, ../brasil_dados_governo.csv, ../verificacao-brasil.tsv. ponytail: helpers duplicados de build_paises.py (divida aceita)."""
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Build the Brazil 2011-2025 table of government statements and actions with verified quotes.
+
+Each item (statement, decree, law or budget figure for one government) is tied to a quote that
+is searched verbatim in the locally stored source file (HTML or PDF, page located
+automatically). The script also checks official figures per government (Sinan series, Disque 100
+reports) and prints how many quotes failed. Helper functions are duplicated from
+build_paises.py.
+
+Inputs
+------
+- sources/public/q1-textointegral/discurso/governos/brasil/ (saved pages, not tracked in git)
+- sources/public/q1-textointegral/F8-literatura/ (saved PDFs, not tracked in git)
+- data/sinan/serie_campo55_uf_ano.csv
+- pdftotext (external tool) to read PDFs; REPO_ROOT may override the repo root
+
+Outputs
+-------
+- analysis/discourse/governos/brasil_itens.csv
+- analysis/discourse/governos/brasil_dados_governo.csv
+- analysis/discourse/governos/verificacao-brasil.tsv
+- prints the number of items, quotes and failures
+
+Usage
+-----
+python3 -I analysis/discourse/governos/scripts/build_brasil.py
+
+Status
+------
+Pre-registered analysis (preregistrations/governos/PRE-REGISTRO.md).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Brasil 2011-2025: itens (declaracoes e acoes de governos) com citacao VERIFICADA + dados oficiais por governo.
+Saidas: ../brasil_itens.csv, ../brasil_dados_governo.csv, ../verificacao-brasil.tsv. ponytail: helpers duplicados de build_paises.py (divida aceita).
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

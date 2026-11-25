@@ -1,10 +1,52 @@
-"""Agrega os microdados do SIM (DATASUS FTP, DOBR<ano>.dbc, 2010-2024) para mortes por agressão, intenção indeterminada e intervenção legal,
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Aggregate SIM death microdata for aggression, undetermined intent and legal intervention.
+
+Downloads the yearly SIM death files (2010 to 2024) when absent, converts each to DBF, and
+counts deaths by year, state of residence, sex, race/color, five-year age group, cause group
+(aggression X85-Y09, undetermined Y10-Y34, legal intervention Y35-Y36), firearm flag (X93-X95
+within aggression) and place of death. It appends the counts to one CSV, skips years already
+present, and deletes each temporary DBF.
+
+Inputs
+------
+- ftp://ftp.datasus.gov.br/dissemin/publicos/SIM/CID10/DORES/DOBR<year>.dbc (network)
+- sources/public/p2-sim-microdados/DOBR<year>.dbc (not tracked in git)
+- data/sim/sim_agressoes_agregado.csv (read to skip years already aggregated)
+
+Outputs
+-------
+- data/sim/sim_agressoes_agregado.csv
+- sources/public/p2-sim-microdados/SHA256SUMS.txt (hash of each downloaded file appended)
+- prints per-year death counts to stdout
+
+Usage
+-----
+python3 -I data/sim/agrega_sim.py [year ...] (needs pyreaddbc and dbfread; no argument:
+2010-2024)
+
+Status
+------
+Data acquisition step; no analysis claim.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Agrega os microdados do SIM (DATASUS FTP, DOBR<ano>.dbc, 2010-2024) para mortes por agressão, intenção indeterminada e intervenção legal,
 por ano x UF de residência x sexo x raça/cor x faixa etária (5 anos) x arma de fogo x local do óbito.
 Saída: data/sim/sim_agressoes_agregado.csv (+ sha256 dos .dbc em sources/public/p2-sim-microdados/SHA256SUMS.txt).
 Grupos de causa (CID-10, causa básica): agressao X85-Y09 | indet Y10-Y34 | interv_legal Y35-Y36. arma=1 se X93-X95 (só dentro de agressao).
 IDADE do SIM: 1º dígito = unidade (0 min,1 h,2 dia,3 mês,4 ano,5 = 100+ anos); 000/999/branco = ignorada.
 Rodar: python  # venv com pyreaddbc + dbfread -I data/sim/agrega_sim.py [ano ...]   (sem argumentos: 2010-2024; pula ano já agregado)
-Intermediários .dbf são apagados após cada ano."""
+Intermediários .dbf são apagados após cada ano.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

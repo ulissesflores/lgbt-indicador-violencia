@@ -1,4 +1,39 @@
-"""Triangulação PNS 2019 x Sinan VIVA (LGB+ entre vítimas de violência física, adultos) - script gerador COMPLETO.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Triangulate PNS 2019 and Sinan VIVA shares of LGB+ people among adult violence victims.
+
+Counts interpersonal notifications of 2023 and 2024 (self-inflicted excluded) and the adult
+physical-violence subset with valid orientation, and recomputes figures already published in the
+Sinan summary, reporting any mismatch. It computes the LGB+ share implied by the PNS 2019
+(prevalences typed in the script, with a Monte Carlo interval from their published 95%
+intervals), compares it with the Sinan share, and gives worst-case, best-case and break-even
+scenarios for unanswered orientation.
+
+Inputs
+------
+- sources/public/p2-sinan-microdados/VIOLBR23.dbf (not tracked in git)
+- sources/public/p2-sinan-microdados/VIOLBR24.dbf (not tracked in git)
+
+Outputs
+-------
+- data/sinan/triangulacao_pns_sinan.md
+- data/sinan/triangulacao_pns_sinan.csv
+- prints the report to stdout; exit status 1 if a published number is not reproduced
+
+Usage
+-----
+python3 -I data/sinan/triangulacao_pns_sinan.py (needs dbfread; the DBF files are converted from
+the DATASUS DBC files beforehand)
+
+Status
+------
+Feeds numbers printed in the article (listed in paper_numbers.json).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Triangulação PNS 2019 x Sinan VIVA (LGB+ entre vítimas de violência física, adultos) - script gerador COMPLETO.
 
 Substitui o que antes vivia só em data/sinan/resumo.md (seções 'Denominador só INTERPESSOAL', 'Triangulação PNS x Sinan',
 'Sensibilidade') sem script no repositório e com insumos digitados à mão (sensibilidade_pns_sinan.py).
@@ -12,6 +47,12 @@ Definições (fixadas antes de comparar com os números já publicados):
   orientação válida = ORIENT_SEX in {1 hetero, 2 homo, 3 bi}; LGB+ = {2,3}; 8 'não se aplica', 9 e vazio = não respondida
   campo 55 'válida' = VIOL_MOTIV fora de {99, vazio, 88}
 PNS 2019 (Vasconcelos et al. 2023, Tabelas 1-2, sources/public/pns-vasconcelos/vasconcelos.html): prevalências e IC95% copiados abaixo.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
 """
 import os as _os
 import pathlib as _pl

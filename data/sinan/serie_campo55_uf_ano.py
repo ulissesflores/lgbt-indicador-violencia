@@ -1,5 +1,47 @@
-"""Série 2015-2025 por UF x ano da completude do campo 55 (VIOL_MOTIV) e dos campos 36/37, Sinan VIVA, só violência interpessoal.
-Baixa VIOLBRyy.dbc do FTP DATASUS (se ausente), converte p/ .dbf, agrega e APAGA o .dbf (mantém .dbc + sha256). Saída: serie_campo55_uf_ano.csv"""
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Build the 2015-2025 state-by-year series of Sinan VIVA completeness for fields 55, 36 and 37.
+
+For each year it downloads the yearly Sinan VIVA violence file from the DATASUS FTP when it is
+missing (final data first, preliminary data as fallback), converts it to DBF, and counts
+interpersonal notifications (self-inflicted injuries excluded) by state and for Brazil: unknown
+or blank, not applicable, LGBT-phobia, racism and sexism motivation; orientation unknown, not
+applicable and homo or bisexual; gender identity unknown and trans. It writes counts and
+percentages, then deletes the DBF except for 2023 and 2024.
+
+Inputs
+------
+- ftp://ftp.datasus.gov.br/dissemin/publicos/SINAN/DADOS/FINAIS/VIOLBR<yy>.dbc (network)
+- ftp://ftp.datasus.gov.br/dissemin/publicos/SINAN/DADOS/PRELIM/VIOLBR<yy>.dbc (network,
+  fallback)
+- sources/public/p2-sinan-microdados/VIOLBR<yy>.dbc (not tracked in git)
+
+Outputs
+-------
+- data/sinan/serie_campo55_uf_ano.csv
+- prints one summary line per year to stdout
+
+Usage
+-----
+python3 -I data/sinan/serie_campo55_uf_ano.py (needs pyreaddbc and dbfread)
+
+Status
+------
+Feeds numbers printed in the article (listed in paper_numbers.json).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Série 2015-2025 por UF x ano da completude do campo 55 (VIOL_MOTIV) e dos campos 36/37, Sinan VIVA, só violência interpessoal.
+Baixa VIOLBRyy.dbc do FTP DATASUS (se ausente), converte p/ .dbf, agrega e APAGA o .dbf (mantém .dbc + sha256). Saída: serie_campo55_uf_ano.csv
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

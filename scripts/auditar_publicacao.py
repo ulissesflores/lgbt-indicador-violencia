@@ -1,4 +1,42 @@
-"""Auditoria de publicação: itens 6, 9, 10 e 12 do checklist do escrutínio externo (v0.3).
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Audit the repository for publication: ledgers, inventory, privacy and release data.
+
+Runs one named check over a repository root and returns exit code 0 when the criterion is met,
+1 when it is not, and 2 when the check cannot be exercised. The literature check verifies that
+every ledger record has an identifier, URL and date and that verdicts come from read text. The
+inventory check confirms the public inventory, the source manifest and the README numbers. The
+privacy check runs the integrity tests and gitleaks when installed. The release check compares
+version and metadata files for consistency.
+
+Inputs
+------
+- sources*.jsonl ledgers among the distributed files
+- analysis/full-text/verificacao-metadados.csv
+- manifest/MANIFESTO-FONTES.csv
+- manifest/INVENTARIO-PUBLICO.json
+- README.md
+- pyproject.toml, CITATION.cff, codemeta.json, .zenodo.json
+- tests/test_integridade.py and make_provenance.py (loaded as modules)
+
+Outputs
+-------
+- prints each check message and a final verdict line to stdout; no file is written
+
+Usage
+-----
+python3 -I scripts/auditar_publicacao.py --check literatura|inventario|privacidade|release
+[--raiz DIR] [--stage final]
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Auditoria de publicação: itens 6, 9, 10 e 12 do checklist do escrutínio externo (v0.3).
 
 Cada verificação imprime o que conferiu e devolve um código de saída:
 
@@ -30,6 +68,12 @@ Uso::
 
     python3 -I scripts/auditar_publicacao.py --check literatura|inventario|privacidade|release
         [--raiz DIR] [--stage final]
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
 """
 
 import csv

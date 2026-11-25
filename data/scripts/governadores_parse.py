@@ -1,6 +1,44 @@
-"""Extrai mandatos de governador das listas da Wikipedia pt (baixadas em sources/public/.../governadores/).
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Parse state governor terms from downloaded Wikipedia (Portuguese) list pages.
+
+The script reads the saved HTML page of each of the 27 states, extracts the tables of
+governors and, for each term, the name, start date, end date and party when the table has a
+party column. It keeps the window from 2011-01-01 to 2026-12-31 and treats "current" as
+2026-10-11, the download date. The result is an intermediate file; counts per state are
+printed to stderr.
+
+Inputs
+------
+- sources/public/p2-f8-dados-uf/governadores/wiki_<state>.html (saved Wikipedia pages)
+
+Outputs
+-------
+- data/scripts/mandatos_wiki.json (terms per state)
+- prints, to stderr, the number of terms and of terms with a party for each state
+
+Usage
+-----
+python3 -I data/scripts/governadores_parse.py
+
+Status
+------
+Data acquisition step; no analysis claim.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Extrai mandatos de governador das listas da Wikipedia pt (baixadas em sources/public/.../governadores/).
 Saída intermediária: mandatos com nome, início, fim, partido (quando a tabela tem coluna de partido).
-Recorte: 2011-01-01 a 2026-12-31; 'Atual' = 2026-10-11 (data do download)."""
+Recorte: 2011-01-01 a 2026-12-31; 'Atual' = 2026-10-11 (data do download).
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

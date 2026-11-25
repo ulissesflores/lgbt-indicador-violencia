@@ -1,4 +1,41 @@
-"""Confere que cada trecho entre aspas em rows.py aparece literalmente no texto local lido. Uso: verifica_trechos.py"""
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Check that each quoted passage in rows.py appears literally in the local full text.
+
+For every study row it normalizes quotes, dashes and spaces, extracts the text of the local
+file (HTML directly, PDF through pdftotext, a text file for one scanned article) and checks
+that each verbatim passage is found. Prints each passage not found and the number of failures.
+
+Inputs
+------
+- analysis/discourse/mortalidade/scripts/rows.py (rows and quoted passages)
+- the local full-text files named in the rows (not tracked in git)
+- pdftotext (external tool)
+
+Outputs
+-------
+- prints each passage not found and the number of failures; nothing is written to disk
+
+Usage
+-----
+python3 -I analysis/discourse/mortalidade/scripts/verifica_trechos.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Confere que cada trecho entre aspas em rows.py aparece literalmente no texto local lido. Uso: verifica_trechos.py
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import re,subprocess,html,os,sys
 sys.path.insert(0,os.path.dirname(__file__))
 from rows import R

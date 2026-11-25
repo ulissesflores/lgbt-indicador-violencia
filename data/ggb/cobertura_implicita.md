@@ -1,6 +1,5 @@
 # Cobertura implícita da contagem do GGB (gerado por cobertura_implicita.py)
 
-
 **Exercício de escala, não estimativa de mortes nem taxa.** Leia o cabeçalho do script. E = mortes por agressão ESPERADAS entre adultos LGB+ se tivessem o risco dos pares (mesmo sexo, raça, faixa etária).
 
 Prevalência LGB+ entre respondentes com orientação válida: 1.96% (a composição por célula vem daí); o resultado principal escala para 1,89% (publicado por Vasconcelos et al., não resposta contada como não LGB+); 1,96% e cenários maiores entram na sensibilidade.

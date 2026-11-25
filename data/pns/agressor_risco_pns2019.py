@@ -1,4 +1,40 @@
-"""Quem agrediu e o risco por tipo de agressor, LGB+ x heterossexuais, PNS 2019; sensibilidade com estado civil.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Estimate who committed physical violence and the risk by aggressor, LGB+ vs heterosexual.
+
+The script reads the PNS 2019 microdata and, with the complex sampling design (Taylor
+linearization, weighted Poisson with robust variance), reports (1) the composition of
+aggressors among victims of physical violence, (2) the risk in the whole population by
+aggressor type with the LGB+/heterosexual ratio, (3) adjusted ratios, also with marital
+status, spouse in the household and without adults of unknown race, and (4) ratios by who
+filled in the module. It first checks six aggressor shares against published values kept as
+constants in the script.
+
+Inputs
+------
+- sources/public/q1-textointegral/F2/pns2019/input_PNS_2019_utf8.txt (official layout)
+- sources/public/q1-textointegral/F2/pns2019/x/PNS_2019.txt (microdata) or, if absent,
+  sources/public/q1-textointegral/F2/pns2019/PNS_2019_20220525.zip
+
+Outputs
+-------
+- data/pns/agressor_risco_pns2019.md
+- data/pns/agressor_risco_pns2019.csv
+
+Usage
+-----
+python3 -I data/pns/agressor_risco_pns2019.py
+
+Status
+------
+Post hoc analysis, as stated in data/pns/agressor_risco_pns2019.py. Feeds numbers printed in
+the article (listed in paper_numbers.json).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Quem agrediu e o risco por tipo de agressor, LGB+ x heterossexuais, PNS 2019; sensibilidade com estado civil.
 
 Decisão metodológica (2026-10-29), sobre a afirmação A1: mostrar com números de desenho amostral
 (1) a composição dos agressores entre as vítimas de violência física, com intervalo e com a diferença LGB+ - het;
@@ -19,6 +55,12 @@ LIMITES: a PNS não pergunta o motivo do agressor nem a orientação sexual dele
 vítimas LGB+ (fatias com intervalo largo); uma única edição (2019). Nada aqui atribui motivo a nenhum agressor.
 Rodar: python3 -I data/pns/agressor_risco_pns2019.py   (REPO_ROOT = pasta que contém sources/public/)
 Saídas: data/pns/agressor_risco_pns2019.md e .csv
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
 """
 import math
 import os

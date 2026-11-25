@@ -11,10 +11,12 @@ Pré-registro: `CRITERIOS.md` (sha256 em `CRITERIOS.sha256`) + `ADENDO-0/1/2`. P
 |---|---|---|---|---|---|---|---|---|---|
 | Lula 1 (2003-06) | 10 | 6/8 | 0/6 | 0 | 0 | 0 | 0 | 0 | 1 |
 | Lula 2 (2007-10) | 10 | 7/8 | 1/7 | 0 | 0 | 1 | 0 | 0 | 5 |
-| Dilma (2011-16) | 10 | 10/10 | 6/10 | 0 | 0 | 2 | 0 | 0 | 3 |
-| Temer (2016-18) | 10 | 8/9 | 6/8 | 0 | 0 | 2 | 0 | 0 | 0 |
+| Dilma (2011-16) | 10 | 10/10 | 5/10 | 0 | 0 | 2 | 0 | 0 | 3 |
+| Temer (2016-18) | 10 | 8/9 | 5/8 | 0 | 0 | 2 | 0 | 0 | 0 |
 | Bolsonaro (2019-22) | 10 | 10/10 | 7/10 | 1 | 0 | 2 | 1 | 0 | 0 |
 | Lula 3 (2023-26) | 10 | 10/10 | 3/10 | 0 | 0 | 1 (opinião) | 0 | 0 | 1 |
+
+Correção de 2026-11-24: a coluna "publicadas no mandato" dizia 6/10 (Dilma) e 6/8 (Temer); pela data de publicação e pela data em que cada presidente assumiu (Temer em 2016-05-12), são 5/10 e 5/8, total 21/51 (`docs/corrections.pt-BR.md`; recontagem em `analysis/article-numbers/contas_do_texto.py`).
 
 Não somam: 2 "T3?" (sem linha de base: Temer, Lei 13.502; Bolsonaro, MP 870) e E24 (Gazeta do Povo, programa de campanha 2026 "esvaziado", reclassificado NA por não ser corte, extinção nem silêncio documentado). O T3 de Lula 3 (E23, Revista Oeste, 13/12/2024) é opinião citando ativistas, não dado oficial. Visto e não lido pela regra mecânica: Carta Capital sobre o orçamento LGBT recorde de 2024 (resumo da busca G6-Q6), que seria P para Lula 3. Eventos com trecho verbatim, URL, sha256: `eventos_C18.csv`. Tabela: `TABELA_C18.md`.
 Evidência dos T1/T3/T4 (trecho do arquivo baixado):

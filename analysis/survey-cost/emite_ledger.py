@@ -1,5 +1,45 @@
 #!/usr/bin/env python3
-"""Emite o ledger sources.jsonl da frente F2 SOMENTE pela porta oficial (emit_sources.py). Rodar uma vez; apaga e recria sources.jsonl."""
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Emit the sources ledger of the survey-cost study through the official ledger tool.
+
+The script deletes sources.jsonl next to it and rebuilds it. It holds a fixed list of cited
+sources (statistical agency documents, tender notices, papers, laws, exchange-rate and
+price-index queries) with their local file, and calls the emit_sources.py tool once per source
+with the metadata and the SHA-256 of the local file. The program stops if a listed local file
+is missing.
+
+Inputs
+------
+- sources/public/q1-textointegral/F2/<local file of each listed source> (hashed with SHA-256)
+- the emit_sources.py tool (path in the EMIT_SOURCES environment variable; default
+  emit_sources.py)
+
+Outputs
+-------
+- analysis/survey-cost/sources.jsonl (deleted and recreated by emit_sources.py)
+- prints the number of records emitted
+
+Usage
+-----
+python3 -I analysis/survey-cost/emite_ledger.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Emite o ledger sources.jsonl da frente F2 SOMENTE pela porta oficial (emit_sources.py). Rodar uma vez; apaga e recria sources.jsonl.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

@@ -1,7 +1,53 @@
-"""Monta series/painel_mortes_lgbt.csv (fonte x ano x categoria) a partir de DOCUMENTOS PUBLICOS ja baixados.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Build the panel of published LGBT death counts by source, year and category.
+
+For each public document already downloaded (GGB, ANTRA and Observatorio reports, Brazilian
+Public Security Yearbooks, Atlas da Violencia, Disque 100 coverage) it records the figure with
+its declared definition, the verbatim quote validated by searching the PDF text, the PDF page,
+the file path, the SHA-256 and the URL. It adds the TDoR and TMM Brazil counts, the share of
+records citing the GGB, and the official SIM aggression series. The script aborts when a quote
+is not found, so no row exists without proof.
+
+Inputs
+------
+- PDFs and saved pages under sources/public/p3-ggb/ and the t1/t2/t6 source folders
+  (not tracked in git)
+- sources/public/p3-ggb/_raw/tmm/tmm_brasil.csv, tmm_all.json and fetch_log.json
+- sources/public/p3-ggb/_raw/tdor/anual/tdor_br_<year>.csv and fetch_log.json
+- data/sim/asr_brasil.csv
+- analysis/ggb-series/series/dados_sim_2000_2009.csv
+- poppler tool pdftotext on the PATH
+
+Outputs
+-------
+- analysis/ggb-series/series/painel_mortes_lgbt.csv
+- analysis/ggb-series/series/dados_tmm_dependencia.csv
+- prints the number of rows, or the quotes not found, to stdout (exit 1 on failure)
+
+Usage
+-----
+python3 -I analysis/ggb-series/series/scripts/s04_painel.py
+
+Status
+------
+Feeds numbers printed in the article (listed in paper_numbers.json).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Monta series/painel_mortes_lgbt.csv (fonte x ano x categoria) a partir de DOCUMENTOS PUBLICOS ja baixados.
 Cada linha carrega: trecho verbatim (validado por busca no texto do PDF), pagina (indice do PDF), caminho absoluto, sha256, URL.
 Se um trecho nao for encontrado, o script ABORTA (nao ha linha sem prova). Python 3.14 stdlib + pdftotext.
-Uso: python3 -I s04_painel.py"""
+Uso: python3 -I s04_painel.py
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

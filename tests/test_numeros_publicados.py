@@ -1,7 +1,62 @@
-"""Trava os números publicados: cada número do artigo/dossiê que o repositório consegue sustentar é uma asserção sobre os derivados.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Lock the published numbers of the study to the derived files the repository distributes.
+
+Each test is an assertion on a derived CSV, JSON or Markdown file: PNS 2019 self-reported
+victimization, Sinan and SIM series, age-standardized rates, the Sinan and PNS triangulation,
+the state panel and its diagnostics, governments and party ideology, GGB list validation,
+survey simulation and cost tables, media and government discourse files, and a check that the
+ledger identifiers and the fixed random seeds are in place. Tolerances are publication rounding;
+no tolerance hides a difference in the second digit. No raw microdata is read.
+
+Inputs
+------
+- data/pns/seguro_pns2019.csv and data/pns/seguro_pns2019.md
+- data/sinan/resumo.md, data/sinan/triangulacao_pns_sinan.csv,
+  data/sinan/triangulacao_pns_sinan.md
+- data/sim/asr_brasil.csv, data/sim/asr_brasil.md, data/sim/sim_agressoes_agregado.csv
+- data/atlas_uf_series.csv, data/concordancia/concordancia_v2.csv,
+  data/concordancia/concordancia_v2.md
+- data/painel/painel_uf_ano_tse_brc.csv, data/painel/resultados_tse_brc.md,
+  data/painel/diagnosticos.md
+- data/governadores_uf_2011_2026.csv, data/governadores_uf_2011_2026_tse.csv,
+  data/governadores_tse_eleitos.csv
+- data/ideologia_partidos.csv, data/ggb/cobertura_implicita.csv
+- analysis/ggb-audit/dados/ (resultados.csv, validacao_resumo.json, ggb2019_universo_hash.csv)
+- analysis/ggb-series/series/dados_analises/resultados.json
+- analysis/simulation/ (poder-survey.csv, resumo.json), analysis/survey-cost/ (deff_pns2019.csv,
+  n_necessario.csv)
+- analysis/discourse/ (midia and governos files), analysis/ideology/sensibilidade_twfe.md
+- sources/ledgers/ledger-05/sources.jsonl
+- source text of data/concordancia/concordancia_v2.py, data/painel/painel_diagnosticos.py,
+  data/sinan/triangulacao_pns_sinan.py and analysis/simulation/sim_identificabilidade.py
+
+Outputs
+-------
+- none (assertions only)
+
+Usage
+-----
+python3 -I -m pytest tests/test_numeros_publicados.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Trava os números publicados: cada número do artigo/dossiê que o repositório consegue sustentar é uma asserção sobre os derivados.
 
 Lê só os CSV/JSON/MD derivados distribuídos (nada de microdado bruto). Compatível com pytest e com `python run_all.py`
 (que roda cada função test_* sem pytest). Tolerâncias: arredondamento de publicação; nenhuma tolerância esconde divergência de 2º dígito.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
 """
 import json
 import math

@@ -1,6 +1,45 @@
-"""H5: ações LGBT/homofobia/vitimização em QUALQUER unidade orçamentária, LOA em RDF (SIOP) 2007-2013 (zips baixados por h5_01 em data/raw/orcamento), valores empenhado/liquidado/pago.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Search the 2007-2013 budget laws for LGBT, homophobia and victimization actions.
+
+Reads the SIOP RDF budget files for 2007-2013, in any budget unit, and keeps the actions whose
+name matches LGBT, homosexual, homophobia, sexual diversity, transvestite, victimization,
+discrimination, human-rights promotion or hotline terms, summing initial appropriation,
+committed, settled and paid values per year, unit and action. It complements h5_01_orcamento.py,
+which filters by unit.
+
+Inputs
+------
+- analysis/political-economy/dados/raw/orcamento/loa<year>.zip, 2007-2013 (or the folder in
+  F5_CACHE; archives downloaded by h5_01_orcamento.py, not tracked in git)
+
+Outputs
+-------
+- analysis/political-economy/dados/h5_acoes_lgbt_rdf_2007_2013.csv
+- prints the number of matching actions per year to stdout
+
+Usage
+-----
+python3 -I analysis/political-economy/scripts/h5_03_acoes_lgbt_rdf.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+H5: ações LGBT/homofobia/vitimização em QUALQUER unidade orçamentária, LOA em RDF (SIOP) 2007-2013 (zips baixados por h5_01 em data/raw/orcamento), valores empenhado/liquidado/pago.
 Complementa h5_01 (que filtra por unidade) para a pergunta 'existiu linha orçamentária específica?'. Saída: data/h5_acoes_lgbt_rdf_2007_2013.csv.
-Rodar: python3 -I scripts/h5_03_acoes_lgbt_rdf.py"""
+Rodar: python3 -I scripts/h5_03_acoes_lgbt_rdf.py
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

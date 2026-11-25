@@ -1,5 +1,46 @@
-"""Numerador adulto (18+) de óbitos por agressão (X85-Y09) no SIM, Brasil 2023 e 2024, a partir dos microdados DOBRyyyy.dbc (FTP DATASUS).
-IDADE no SIM: código de 3 dígitos: 4xx = xx anos (400=0? não: 4 = anos, 2 dígitos), 5xx = 100+xx anos; 9xx/branco = ignorada. Saída: CSV + linhas no resumo.md."""
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Count adult aggression deaths in the SIM microdata for Brazil, 2023 and 2024.
+
+Downloads the 2023 and 2024 SIM death files from the DATASUS FTP when absent, converts each to
+DBF, and counts deaths with underlying cause X85-Y09 by age (18 or older, under 18, unknown) and
+by sex among adults. It writes a CSV, appends a section to the Sinan summary with an approximate
+adult rate per 100,000 using the 2022 census adult population typed in the script, and deletes
+the temporary DBF files.
+
+Inputs
+------
+- ftp://ftp.datasus.gov.br/dissemin/publicos/SIM/CID10/DORES/DOBR<year>.dbc (network)
+- sources/public/p2-sim-microdados/DOBR2023.dbc (not tracked in git)
+- sources/public/p2-sim-microdados/DOBR2024.dbc (not tracked in git)
+
+Outputs
+-------
+- data/sinan/sim_adultos_18mais.csv
+- data/sinan/resumo.md (section appended)
+- prints the counts and the appended section to stdout
+
+Usage
+-----
+python3 -I data/sinan/sim_adultos_18mais.py (needs pyreaddbc and dbfread)
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Numerador adulto (18+) de óbitos por agressão (X85-Y09) no SIM, Brasil 2023 e 2024, a partir dos microdados DOBRyyyy.dbc (FTP DATASUS).
+IDADE no SIM: código de 3 dígitos: 4xx = xx anos (400=0? não: 4 = anos, 2 dígitos), 5xx = 100+xx anos; 9xx/branco = ignorada. Saída: CSV + linhas no resumo.md.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

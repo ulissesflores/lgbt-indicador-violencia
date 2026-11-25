@@ -1,8 +1,46 @@
-"""Catálogo dos 23 arquivos de microdados do Disque 100: URL, tamanho anunciado e local, Last-Modified,
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Catalogue the 23 Disque 100 microdata files with size, format and SHA-256.
+
+For each row of scripts/urls.tsv the script compares the announced size with the local file in
+raw/. For complete files it reads the header line to detect the file format and hashes the
+whole file with SHA-256; incomplete files are marked as partial without a hash. The access
+date and the catalogue page URL are constants in the script.
+
+Inputs
+------
+- data/disque100/scripts/urls.tsv
+- data/disque100/raw/<file>.csv (not tracked in git)
+- data/disque100/scripts/d100_comum.py (shared rules, imported)
+
+Outputs
+-------
+- data/disque100/saidas/catalogo.tsv
+- prints one line per period with its status and the start of the hash
+
+Usage
+-----
+python3 -I scripts/d100_catalogo.py   (run from data/disque100)
+
+Status
+------
+Data acquisition step; no analysis claim.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Catálogo dos 23 arquivos de microdados do Disque 100: URL, tamanho anunciado e local, Last-Modified,
 data de acesso, formato (pelo cabeçalho) e sha256 do arquivo inteiro baixado (ou 'parcial, sem sha').
 
 Uso: python3 -I scripts/d100_catalogo.py
 Saída: saidas/catalogo.tsv
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
 """
 
 import csv

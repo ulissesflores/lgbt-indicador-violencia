@@ -1,5 +1,46 @@
-"""Emite no ledger sources.jsonl (SOMENTE via emit_sources.py) as fontes NOVAS usadas pela frente F5. sha256 = do arquivo local lido.
-Rodar: python3 -I scripts/emite_ledger_f5.py"""
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Add the sources of the political-economy front to the source ledger.
+
+Calls the ledger script named by EMIT_SOURCES (default emit_sources.py) once for each new
+source listed in the script (IPEA hidden-homicide study and tables, state crime-control
+program documents, IBGE ESTADIC databases, SIDRA and World Bank series, LAPOP questionnaire,
+victimization surveys, budget laws and open-data budget files), with URL, identifier, title,
+year, language, channel and, when the local file exists, its SHA-256. Prints OK or ERRO for
+each entry.
+
+Inputs
+------
+- analysis/political-economy/dados/raw/ (h1_programas, h5_docs, estadic and SIDRA files)
+- sources/public/q1-textointegral/F5/ (local copies of the documents)
+- the ledger script named by EMIT_SOURCES
+
+Outputs
+-------
+- analysis/political-economy/sources.jsonl (entries appended by the ledger script)
+- prints one OK or ERRO line per source to stdout
+
+Usage
+-----
+python3 -I analysis/political-economy/scripts/emite_ledger_f5.py
+
+Status
+------
+Data acquisition step; no analysis claim.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Emite no ledger sources.jsonl (SOMENTE via emit_sources.py) as fontes NOVAS usadas pela frente F5. sha256 = do arquivo local lido.
+Rodar: python3 -I scripts/emite_ledger_f5.py
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

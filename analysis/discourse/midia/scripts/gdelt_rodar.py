@@ -1,6 +1,46 @@
-"""Fila de consultas GDELT DOC 2.0 (sem chave). O servico devolve 429 de forma errática
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Run the queue of GDELT DOC 2.0 queries for the media study, resumable.
+
+Builds one timeline-volume query per dictionary entry (controls first, then English, Spanish
+and Portuguese-Brazil entries) and sends them to the public GDELT API through curl, waiting 25
+seconds between successful requests and 120 seconds after an HTTP 429, without giving up.
+Each result is appended to a log so that a rerun skips finished tasks.
+
+Inputs
+------
+- https://api.gdeltproject.org/api/v2/doc/doc (network access)
+- analysis/discourse/midia/_gdelt_resultados.jsonl (finished tasks, if it exists)
+- the query dictionary module dicionario
+
+Outputs
+-------
+- sources/public/q1-textointegral/discurso/midia/gdelt/<id>_<hash>.json (not tracked in git)
+- analysis/discourse/midia/_gdelt_resultados.jsonl (one record per task, with sha256)
+- prints the task id and the size of each answer
+
+Usage
+-----
+python3 -I analysis/discourse/midia/scripts/gdelt_rodar.py [dom]
+
+Status
+------
+Data acquisition step; no analysis claim.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Fila de consultas GDELT DOC 2.0 (sem chave). O servico devolve 429 de forma errática
 (limite de taxa do servico): espera 25 s entre pedidos OK e 120 s apos 429, sem desistir. Resultado de cada tarefa
-anexado em _gdelt_resultados.jsonl (retomavel); bruto + sha256 em sources/public/.../midia/gdelt."""
+anexado em _gdelt_resultados.jsonl (retomavel); bruto + sha256 em sources/public/.../midia/gdelt.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

@@ -1,4 +1,38 @@
-"""Projeção 2025-2030 da taxa de mortalidade por agressão PADRONIZADA POR IDADE, por sexo x raça (F7: "simular os dados futuros").
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Project age-standardized aggression rates for 2025 to 2030 by sex and race/color.
+
+Reads the standardized rate series for nine groups and fits five simple log-scale models (random
+walk, drift, damped trend, Holt smoothing, OLS on the last seven points). It selects the model
+with the lowest rolling-origin backtest error (origins 2016-2023, horizons 1 to 5) and builds
+80% and 95% intervals from empirical backtest error quantiles. Two central scenarios are kept,
+persistence and damped trend, for the aggression outcome and for aggression plus undetermined
+intent. The result is a conditional projection, not a forecast of policy or shocks.
+
+Inputs
+------
+- data/sim/asr_brasil.csv
+
+Outputs
+-------
+- data/sim/projecao_grupos.csv
+- data/sim/projecao_grupos.md
+- data/sim/fig-projecao_grupos.png
+- prints the report to stdout
+
+Usage
+-----
+python3 -I data/sim/projecao_grupos.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Projeção 2025-2030 da taxa de mortalidade por agressão PADRONIZADA POR IDADE, por sexo x raça (F7: "simular os dados futuros").
 Entrada: data/sim/asr_brasil.csv (padroniza_idade.py; desfecho 'agressao' e 'agressao+indet'). Série 2010-2024 (15 pontos): curta e com quebras (pico 2017, queda desde 2018, COVID 2020).
 Método (declarado antes de rodar): modelos simples na escala log, selecionados por BACKTEST de origem móvel (origens 2016-2023, horizontes 1-5), não por ajuste dentro da amostra:
   rw (último valor) | drift8 (tendência média das últimas 8 diferenças) | damp (tendência média das últimas 5 diferenças amortecida por phi=0,8) |
@@ -9,7 +43,14 @@ Método (declarado antes de rodar): modelos simples na escala log, selecionados 
   h>5 extrapolado com crescimento sqrt(h/5) do erro de h=5 (limitação declarada).
 LIMITES (valem para a leitura): série curta; denominador de 2023-24 extrapolado (padroniza_idade.py); degradação do registro desde 2018 (mortes de intenção indeterminada: usar 'agressao+indet' como cenário alternativo);
   é projeção CONDICIONAL à continuidade da dinâmica recente, NÃO previsão de políticas ou choques (facções, armas, COVID); o intervalo mede erro histórico de método, não incerteza estrutural.
-Rodar: python3 -I data/sim/projecao_grupos.py   Saídas: data/sim/projecao_grupos.csv/.md e fig-projecao_grupos.png"""
+Rodar: python3 -I data/sim/projecao_grupos.py   Saídas: data/sim/projecao_grupos.csv/.md e fig-projecao_grupos.png
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

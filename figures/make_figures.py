@@ -1,4 +1,40 @@
-"""Gera as Figuras 1 a 28 do paper a partir das copias de dados em `sources/public/` (PDF + SVG + PNG).
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Draw Figures 1 to 28 of the article from the source data copies kept in the repository.
+
+Each figure reads files in figures/fontes/ and nothing else; no number is typed in the script.
+After drawing, it reads back the plotted values from the matplotlib artists (bar widths,
+centers and error-bar ends) and stores them, so that the figure test can compare them with the
+source files. Titles, notes and sources are not drawn in the image; they are stored apart in a
+text file. Output is deterministic (no dates in metadata), so two runs give the same bytes, and
+a checksum file lists every generated file.
+
+Inputs
+------
+- figures/fontes/ (copies of the source data: PNS, SIM, Sinan, panel, GGB, exposure,
+  Disque 100 and mortality-study tables)
+
+Outputs
+-------
+- figures/<figure>.pdf, figures/<figure>.svg and figures/<figure>.png
+- figures/valores_plotados.json
+- figures/textos_fora_da_imagem.json
+- figures/SHA256SUMS
+- prints a confirmation line to stdout
+
+Usage
+-----
+python3 -I figures/make_figures.py (matplotlib 3.10, numpy)
+
+Status
+------
+Feeds numbers printed in the article (listed in paper_numbers.json).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Gera as Figuras 1 a 28 do paper a partir das copias de dados em `sources/public/` (PDF + SVG + PNG).
 
 Cada figura le arquivos de `sources/public/` (procedencia e sha256 em `sources/public/SOURCES.tsv`) e nada mais: nenhum
 numero e digitado aqui (titulos e legendas usam f-strings sobre os dados lidos). Depois de desenhar, o script
@@ -48,6 +84,12 @@ Saidas deterministicas (sem data nos metadados, sal fixo no SVG): rodar duas vez
 `SHA256SUMS` lista todos os arquivos gerados.
 
 Uso: python3 -I make_figures.py   (matplotlib 3.10, numpy)
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
 """
 
 from __future__ import annotations

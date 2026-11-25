@@ -1,5 +1,48 @@
-"""C27 passo 3 (so aqui o rotulo original e lido): kappa de Cohen por campo e estrato, IC95% bootstrap (2000, semente 20261023),
-matrizes de confusao, PABAK, Gwet AC1, recontagem do x/49 e linha de base. Python: python3 -I"""
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Measure the agreement between the original and the second blind coding of media items (C27).
+
+Joins the second coder's labels to the original labels by item hash, only after the second
+coding is finished, and computes per field and stratum Cohen's kappa with a 95% percentile
+bootstrap interval (2000 resamples, seed 20261023), PABAK, Gwet's AC1, confusion matrices and
+the agreement on citations of named bodies. It also recounts the x/49 figure of items with a
+verifiable primary source (with Wilson intervals) and evaluates a 60-item baseline sample.
+
+Inputs
+------
+- analysis/discourse/midia/amostra_codificada.csv (original coding)
+- analysis/robustness/simetria/codif_segundo_itens.json and itens_C27.jsonl
+- analysis/robustness/simetria/codif_segundo_base.json and baseline_itens.jsonl
+
+Outputs
+-------
+- analysis/robustness/simetria/itens_cruzados_C27.csv and concordancia_C27.csv
+- analysis/robustness/simetria/cita_entes_C27.csv and matrizes_confusao_C27.md
+- analysis/robustness/simetria/recontagem_x49_C27.csv and itens_com_primaria_C27.csv
+- analysis/robustness/simetria/baseline_resultado_C27.csv and baseline_resumo_C27.json
+- prints the agreement table and the baseline summary to stdout
+
+Usage
+-----
+python3 -I analysis/robustness/simetria/scripts/analise_C27.py
+
+Status
+------
+Pre-registered analysis (analysis/robustness/simetria/CRITERIOS.md).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+C27 passo 3 (so aqui o rotulo original e lido): kappa de Cohen por campo e estrato, IC95% bootstrap (2000, semente 20261023),
+matrizes de confusao, PABAK, Gwet AC1, recontagem do x/49 e linha de base. Python: python3 -I
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

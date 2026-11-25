@@ -1,9 +1,56 @@
-"""Trava os números novos do artigo v0.5, cada um lido de arquivo do repositório.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Lock the numbers added in the fifth article version, each read from a file of the repository.
+
+Same style as the test of published numbers: standard library only and no raw microdata. It
+checks that the nominal spreadsheet of the LiHS check of the GGB 2016 list is neither
+distributed nor sealed and is blocked in the ignore rules, that its recorded SHA-256 and its
+metadata agree wherever they are written, and that, when the spreadsheet is present locally,
+its tabulation matches the published counts. It also locks the GGB audit agreement and coding
+results, the PNS aggressor-risk table, the survey cost options and the SIM standardized rates.
+
+Inputs
+------
+- analysis/counterpoint/dados/lihs-checagem-ggb2016.META.md
+- analysis/counterpoint/dados/lihs-checagem-ggb2016.csv (optional, nominal, not tracked in git)
+- analysis/ggb-audit/dados/ (kappa.json, adjudicacao.json, codificacao_A.csv,
+  validacao_resumo.json)
+- analysis/ggb-audit/planilha_codificacao.csv
+- analysis/survey-cost/opcoes_por_modo.csv and analysis/survey-cost/opcoes_resumo.csv
+- data/pns/agressor_risco_pns2019.csv and data/pns/agressor_risco_pns2019.md
+- data/sim/asr_brasil.csv and data/sim/sim_agressoes_agregado.csv
+- data/exposicao/c10_e1_serie_longo.csv and data/exposicao/RELATORIO-EXPOSICAO.md
+- manifest/SHA256SUMS.txt, output/provenance.json, make_provenance.py
+- .gitignore
+
+Outputs
+-------
+- none (assertions only)
+
+Usage
+-----
+python3 -I -m pytest tests/test_numeros_v05.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Trava os números novos do artigo v0.5, cada um lido de arquivo do repositório.
 
 Mesmo estilo de ``test_numeros_publicados.py``: só biblioteca padrão, nada de microdado bruto, e
 cada função ``test_*`` roda sem argumento (compatível com pytest e com ``python run_all.py``).
 Os valores esperados são os publicados no artigo; a fonte de cada um é o arquivo citado
 na função.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
 """
 
 import csv

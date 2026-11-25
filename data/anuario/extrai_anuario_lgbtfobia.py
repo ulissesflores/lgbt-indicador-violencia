@@ -1,4 +1,40 @@
-"""Extrai a coluna 'Racismo por homofobia ou transfobia' (Ns. Absolutos) por UF e ano das 3 edições do Anuário FBSP.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Extract homophobia and transphobia police-report counts by state from the yearbook.
+
+The script reads the text extracted from the 2024, 2025 and 2026 editions of the FBSP
+yearbook, finds the table "Racismo por homofobia ou transfobia" at a fixed anchor line, and
+parses one row per state plus Brazil, with two year columns per edition. It keeps a mark for
+each cell (value, not available, or non-existent phenomenon), asserts the 27 states plus
+Brazil and that the state sum equals the Brazil row, and compares the result with the legacy
+CSV. Exit code is 1 on any divergence.
+
+Inputs
+------
+- sources/public/t2-anuario-2024-dados2023/anuario.txt
+- sources/public/t2-anuario-2025-dados2024/anuario.txt
+- sources/public/t2-anuario-2026-dados2025/anuario.txt
+- data/anuario/anuario_lgbtfobia_uf_ano.csv (legacy table, used for the comparison)
+
+Outputs
+-------
+- data/anuario/anuario_lgbtfobia_uf_ano_v2.csv (edition, year, state, count, mark, source
+  line)
+- prints the row counts, the number of divergences from the legacy table and the mark counts
+
+Usage
+-----
+python3 -I data/anuario/extrai_anuario_lgbtfobia.py
+
+Status
+------
+Feeds numbers printed in the article (listed in paper_numbers.json).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Extrai a coluna 'Racismo por homofobia ou transfobia' (Ns. Absolutos) por UF e ano das 3 edições do Anuário FBSP.
 
 Substitui o parser perdido (README antigo apontava para um rascunho de trabalho que não existe mais). Determinístico, só stdlib.
 Entrada: sources/public/t2-anuario-{2024,2025,2026}-*/anuario.txt (pdftotext -layout).
@@ -9,6 +45,12 @@ Saída: data/anuario/anuario_lgbtfobia_uf_ano_v2.csv com a coluna `marca` que o 
 Travas: (1) a linha de âncora tem de conter o cabeçalho esperado; (2) 27 UFs + Brasil por edição; (3) soma das UFs == linha Brasil.
 Verificação contra o CSV legado (colunas edicao, ano_dado, uf, registros, linha_txt): ver `confere_com_legado()`.
 Rodar: python3 -I data/anuario/extrai_anuario_lgbtfobia.py
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
 """
 import os as _os
 import pathlib as _pl

@@ -1,4 +1,41 @@
-"""Figura da v0.5: o que cada série mostra por período de governo federal (decisão metodológica de 2026-10-30:
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Plot the figure showing what each series shows over the federal government terms.
+
+Panel a shows the age-standardized general homicide rate (with and without deaths of
+undetermined cause), 2010-2024. Panels b to e show the four LGBT+ registration series
+available: the GGB list, the Disque 100 LGBT module, the health-system notification forms with
+an LGBTphobia motive and the yearbook police reports. Vertical lines mark presidential
+inaugurations. The figure assigns no cause to any government. It reads only files of the
+repository.
+
+Inputs
+------
+- data/sim/asr_brasil.csv
+- analysis/ggb-series/series/painel_mortes_lgbt.csv
+- data/disque100/saidas/d100_serie_anual.csv
+- data/sinan/serie_campo55_uf_ano.csv
+- data/anuario/anuario_lgbtfobia_uf_ano_v2.csv
+- command line: output PNG path
+
+Outputs
+-------
+- the PNG file given on the command line (300 dpi)
+- prints the output path and the year range of each series
+
+Usage
+-----
+python3 data/exposicao/fig_series_por_governo.py <output.png>
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Figura da v0.5: o que cada série mostra por período de governo federal (decisão metodológica de 2026-10-30:
 "o que estamos verificando é se os crimes contra eles aumentam ou diminuem nesse período de governo").
 
 Painel a: homicídio geral padronizado (SIM), com e sem as mortes de causa indeterminada, 2010-2024 (asr_brasil.csv).
@@ -9,6 +46,12 @@ Nenhuma série LGBT+ separa violência de registro; a figura não atribui causa 
 Fundo branco; linhas verticais = posse presidencial. Título, nota e fonte ficam no documento (regra APA do pipeline).
 
 Uso: python3 data/exposicao/fig_series_por_governo.py <saida.png>
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
 """
 from __future__ import annotations
 

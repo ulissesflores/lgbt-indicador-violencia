@@ -1,7 +1,46 @@
-"""Figura 4 da v0.5 (Disque 100), redesenho da fig28 de figures/make_figures.py em fundo branco: as barras do canal
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Plot the Disque 100 figure of the article: the LGBT module by year and the whole channel.
+
+The script redraws the Disque 100 figure of figures/make_figures.py on a white background,
+with the same code and data. Panel (a) shows the yearly records of the LGBT module with the
+unit of each stretch (file rows, then complaints) and the four series breaks; panel (b) shows
+the whole channel in thousands with the LGBT share above each bar. It imports the plotting
+helpers of figures/make_figures.py.
+
+Inputs
+------
+- figures/make_figures.py (helpers and the Disque 100 reader)
+- figures/fontes/d100_serie_anual.csv (read through the helper)
+- command line: output PNG path
+
+Outputs
+-------
+- the PNG file given on the command line (300 dpi)
+- prints the output path
+
+Usage
+-----
+python3 data/disque100/fig_disque_v05.py <output.png>
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Figura 4 da v0.5 (Disque 100), redesenho da fig28 de figures/make_figures.py em fundo branco: as barras do canal
 inteiro de 2011 a 2020 deixam o preenchimento cinza e ficam brancas com contorno. Mesmo código e mesmos dados (sources/public/).
 
 Uso: python3 data/disque100/fig_disque_v05.py <saida.png>
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
 """
 import sys
 from pathlib import Path

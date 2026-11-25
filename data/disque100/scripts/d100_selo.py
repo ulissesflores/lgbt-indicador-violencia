@@ -1,7 +1,47 @@
-"""Selo do pré-registro: confere o sha256 do PREREGISTRO-D100.md (corpo até a linha '**ADENDOS**') e dos scripts
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Check the seal of the Disque 100 pre-registration before any tabulation.
+
+The script hashes the body of PREREGISTRO-D100.md (up to the line "**ADENDOS**") and the
+shared rules script d100_comum.py with SHA-256 and compares them with the hashes recorded in
+PREREGISTRO-D100.sha256; any divergence aborts. With --gravar and a UTC timestamp it writes
+the seal file instead, adding informational hashes of the tabulation scripts that are not
+locked.
+
+Inputs
+------
+- data/disque100/PREREGISTRO-D100.md
+- data/disque100/PREREGISTRO-D100.sha256
+- data/disque100/scripts/d100_comum.py (and, with --gravar, d100_tabular.py, d100_series.py
+  and d100_estrutura.py)
+
+Outputs
+-------
+- prints "ok", or aborts naming the divergent item
+- with --gravar: rewrites data/disque100/PREREGISTRO-D100.sha256
+
+Usage
+-----
+python3 -I scripts/d100_selo.py   (run from data/disque100)
+
+Status
+------
+Feeds numbers printed in the article (listed in paper_numbers.json).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Selo do pré-registro: confere o sha256 do PREREGISTRO-D100.md (corpo até a linha '**ADENDOS**') e dos scripts
 de regras e tabulação contra PREREGISTRO-D100.sha256. Qualquer divergência aborta a tabulação.
 
 Uso direto: python3 -I scripts/d100_selo.py  (imprime ok ou o que divergiu)
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
 """
 
 import hashlib

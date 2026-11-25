@@ -1,4 +1,37 @@
 # -*- coding: utf-8 -*-
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Hold the evidence rows of the literature review.
+
+Data module. It defines ROWS, one record per reviewed work with level, identifier, reference,
+quartile status, local file path, study design grade, the verbatim finding with its page and the
+main limitation. It performs no I/O of its own; the checking, ledger and README scripts
+import it.
+
+Inputs
+------
+- none (library module imported by build_readme.py, check_quotes.py and emit_ledger.py; the
+  file paths it lists point to sources/public/q1-textointegral/F8-literatura/ and
+  analysis/literature/)
+
+Outputs
+-------
+- none (library module imported by build_readme.py, check_quotes.py and emit_ledger.py)
+
+Usage
+-----
+Imported by build_readme.py; not run directly.
+
+Status
+------
+No registration status is claimed for this file.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 # Linhas da tabela de evidência (F8-literatura, rodada 3). Cada quote é verbatim do arquivo local (ligaduras normalizadas).
 import os as _os
 import pathlib as _pl

@@ -1,9 +1,48 @@
-"""Gera data/governadores_uf_2011_2026.csv: uma linha por governador por ano (UF x ano), com o trecho
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Build the table of state governors by state and year from hand-curated terms.
+
+Holds a curated list of governor terms for each state (name, party as listed by the source,
+start and end dates, confidence and notes), taken from the Portuguese Wikipedia lists of
+governors. It expands each term into one row per state and year from 2011 to 2026, splitting
+a year in two rows when the office holder changes. The party is the one shown by the source,
+without any TSE cross-check.
+
+Inputs
+------
+- none read from disk (terms are written in the script; sources are the Wikipedia lists
+  at https://pt.wikipedia.org/wiki/Lista_de_governadores_<UF>, recorded as fonte_url)
+
+Outputs
+-------
+- data/governadores_uf_2011_2026.csv
+- prints the number of rows, states and the year range to stdout
+
+Usage
+-----
+python3 -I data/scripts/governadores.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Gera data/governadores_uf_2011_2026.csv: uma linha por governador por ano (UF x ano), com o trecho
 do mandato naquele ano (troca de governador no meio do ano = duas linhas).
 Fonte: listas 'Lista de governadores do/da <UF>' da Wikipédia pt (HTML baixado em sources/public/p2-f8-dados-uf/governadores/).
 Curadoria manual das linhas de mandato a partir das tabelas baixadas (ver coluna confianca).
 Partido = o que a tabela da fonte indica para o mandato (sigla como na fonte). Vazio = a fonte não trouxe.
-TSE não foi cruzado nesta rodada (ver README)."""
+TSE não foi cruzado nesta rodada (ver README).
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

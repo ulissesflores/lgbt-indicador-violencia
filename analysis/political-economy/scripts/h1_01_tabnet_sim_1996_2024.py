@@ -1,7 +1,47 @@
-"""H1 insumo: óbitos por UF de residência x ano 1996-2024 do SIM/DATASUS (TabNet ext10uf), 3 grandes grupos CID-10:
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Download state-by-year death counts from the SIM TabNet, 1996-2024.
+
+Posts three queries to the DATASUS TabNet service (extended ICD-10 file ext10uf) for deaths by
+state of residence and year of death in three cause groups: aggression (X85-Y09), undetermined
+intent (Y10-Y34) and legal intervention (Y35-Y36). Each query is retried up to five times
+because the service is unstable. The raw responses are stored with their SHA-256 and the
+parsed table is written in long form. Years 2025 and later are excluded as preliminary.
+
+Inputs
+------
+- http://tabnet.datasus.gov.br/cgi/tabcgi.exe?sim/cnv/ext10uf.def (public service, via curl)
+
+Outputs
+-------
+- analysis/political-economy/dados/raw/tabnet_<group>.prn (raw responses)
+- analysis/political-economy/dados/raw/SHA256SUMS.txt
+- analysis/political-economy/dados/h1_sim_tabnet_uf_ano.csv
+- prints the number of states per group to stderr and the output path to stdout
+
+Usage
+-----
+python3 -I analysis/political-economy/scripts/h1_01_tabnet_sim_1996_2024.py
+
+Status
+------
+Data acquisition step; no analysis claim.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+H1 insumo: óbitos por UF de residência x ano 1996-2024 do SIM/DATASUS (TabNet ext10uf), 3 grandes grupos CID-10:
 4 = X85-Y09 agressões | 5 = Y10-Y34 intenção indeterminada (MVCI) | 6 = Y35-Y36 intervenções legais/guerra.
 Bruto (.prn latin1) vai para data/raw/ com sha256 em data/raw/SHA256SUMS.txt. Saída: data/h1_sim_tabnet_uf_ano.csv.
-Rodar: python3 -I scripts/h1_01_tabnet_sim_1996_2024.py   (TabNet é instável: o script tenta 5x por consulta)"""
+Rodar: python3 -I scripts/h1_01_tabnet_sim_1996_2024.py   (TabNet é instável: o script tenta 5x por consulta)
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

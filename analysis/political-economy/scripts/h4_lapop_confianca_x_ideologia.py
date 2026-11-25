@@ -1,8 +1,50 @@
-"""H4 (proxy): confiança em instituições x autoposição esquerda-direita, Brasil, microdados LAPOP/AmericasBarometer (2021, 2023).
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Compare trust in state institutions across left-right self-placement in LAPOP microdata.
+
+Reads a LAPOP AmericasBarometer Brazil Stata file (2021 or 2023), recodes trust in the military
+police, armed forces, legislature and elections to 0-100, groups respondents by left-right
+placement (1-3, 4-7, 8-10), and computes weighted group means and the right minus left
+difference with a 5000-draw weighted bootstrap (seed 20261025). The survey has no item on trust
+in official statistics, so these items are only proxies. The data file is not redistributed.
+
+Inputs
+------
+- a LAPOP Brazil .dta file given as the first argument (terms of use must be accepted; kept
+  under sources/public/q1-textointegral/F5/lapop/, ignored by git)
+- the survey year as the second argument
+- the Python packages numpy and pandas
+
+Outputs
+-------
+- analysis/political-economy/dados/h4_lapop_<year>.csv
+- prints the result table to stdout
+
+Usage
+-----
+python3.14 -I analysis/political-economy/scripts/h4_lapop_confianca_x_ideologia.py
+    <file.dta> <year>
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+H4 (proxy): confiança em instituições x autoposição esquerda-direita, Brasil, microdados LAPOP/AmericasBarometer (2021, 2023).
 O QUESTIONÁRIO Brasil 2023 foi lido (sources/public/q1-textointegral/F5/lapop_bra2023_questionario.pdf, sha256 58c55ca9...): tem B18 (confiança na Polícia Militar, 1-7), B12 (Forças Armadas), B13 (Legislativo), B47A (eleições),
 L1N (esquerda 1 - direita 10), e NENHUM item sobre IBGE/estatísticas oficiais. Logo o construto 'confiança em estatística oficial' NÃO é medido; B18 e B47A são proxies de confiança em instituição de Estado que produz/registra dado.
 Uso: python3.14 -I h4_lapop_confianca_x_ideologia.py <arquivo.dta> <ano>   (o .dta exige aceite dos termos de uso do LAPOP no site e NÃO é redistribuído: guardar em sources/public/q1-textointegral/F5/lapop/, ignorada pelo git)
-Saída: data/h4_lapop_<ano>.csv. Semente fixa. Pesos: variável 'wt' (documentação LAPOP). Bootstrap de 5000 reamostragens ponderadas."""
+Saída: data/h4_lapop_<ano>.csv. Semente fixa. Pesos: variável 'wt' (documentação LAPOP). Bootstrap de 5000 reamostragens ponderadas.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

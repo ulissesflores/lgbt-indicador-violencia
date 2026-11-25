@@ -1,4 +1,43 @@
-"""Tabelas de resumo para MIDIA.md (lê contagens.csv, _parlamento_matches.jsonl, _v1prereg_parlamento.csv)."""
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Print the summary tables used in the media write-up.
+
+Reads the consolidated counts, the matched Parliament items and the sample coding, and prints
+Parliament counts per family and year (version 2 and the literal pre-registered version),
+counts per entry, source co-mention, Google News floor counts, OpenAlex counts, Wikipedia
+counts and the estimate of items that affirm or attribute the claim, with Wilson intervals.
+
+Inputs
+------
+- analysis/discourse/midia/contagens.csv
+- analysis/discourse/midia/_parlamento_matches.jsonl
+- analysis/discourse/midia/_v1prereg_parlamento.csv
+- analysis/discourse/midia/amostra_codificada.csv
+
+Outputs
+-------
+- prints the tables to stdout; nothing is written to disk
+
+Usage
+-----
+python3 -I analysis/discourse/midia/scripts/resumo_tabelas.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Tabelas de resumo para MIDIA.md (lê contagens.csv, _parlamento_matches.jsonl, _v1prereg_parlamento.csv).
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

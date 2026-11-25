@@ -1,10 +1,50 @@
 #!/usr/bin/env python3
-"""Gera custos-fontes.csv: cada valor com moeda, ano, fonte, pagina/secao, trecho verbatim, sha256 do arquivo local.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Build the cost and design parameter table, each value tied to a verbatim excerpt.
+
+The script holds a fixed list of values (survey budgets, contract values, sample sizes,
+exchange rates, price index) with currency, year, source URL, local file and the excerpt that
+supports the value. For each row it hashes the local file and checks that the excerpt exists
+in the text of that file (PDF pages or HTML text, whitespace normalized). Rows whose file is
+missing, whose excerpt is not found or that have no local file are marked as alerts.
+
+Inputs
+------
+- sources/public/q1-textointegral/F2/ (local copies of the cited documents: PDF, HTML, JSON,
+  text)
+- external tools: pdfinfo and pdftotext, for PDF files
+
+Outputs
+-------
+- analysis/survey-cost/custos-fontes.csv (one row per value, with SHA-256 and verification
+  flag)
+- prints the number of rows, how many are OK, and a line per alert
+
+Usage
+-----
+python3 -I analysis/survey-cost/custos_fontes.py
+
+Status
+------
+Feeds numbers printed in the article (listed in paper_numbers.json).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Gera custos-fontes.csv: cada valor com moeda, ano, fonte, pagina/secao, trecho verbatim, sha256 do arquivo local.
 
 Rodar: python3 -I custos_fontes.py   (sem argumentos; caminhos fixos do projeto)
 Regra: o `trecho_verbatim` TEM de existir no texto extraido do arquivo local (espacos normalizados); se nao existir,
 a linha sai com verificado_no_arquivo=NAO e status vira 'ALERTA'. O sha256 e do arquivo baixado (bytes), nao do texto.
 Linhas sem arquivo local (ex.: captura por WebFetch) saem com status 'ALERTA' e nota.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
 """
 import os as _os
 import pathlib as _pl

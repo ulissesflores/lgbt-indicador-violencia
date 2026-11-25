@@ -1,6 +1,44 @@
-"""ADENDO exploratorio (nao pre-registrado): relacao entre eixo economico (v2pariglef_ord) e posicao LGBT (v2palgbt_ord)
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Describe the relation between party economic axis and LGBT position in V-Party v2.
+
+Exploratory addendum, not pre-registered: for the parties in V-Party v2 (1965-2019), all and
+only those that formed governments, it relates the economic left-right variable to the LGBT
+position variable. Descriptive only, no causal inference.
+
+Inputs
+------
+- sources/public/q1-textointegral/discurso/governos/vdemdata-vparty.RData
+- sources/public/q1-textointegral/discurso/governos/vdemdata-vdem.RData
+- requires pyreadr and pandas; REPO_ROOT may override the repo root
+
+Outputs
+-------
+- analysis/discourse/governos/eixo_vparty.md
+- prints the same Markdown text to stdout
+
+Usage
+-----
+python3 -I analysis/discourse/governos/scripts/eixo_vparty.py
+
+Status
+------
+Post hoc analysis, as stated in preregistrations/governos/PRE-REGISTRO.md.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+ADENDO exploratorio (nao pre-registrado): relacao entre eixo economico (v2pariglef_ord) e posicao LGBT (v2palgbt_ord)
 nos partidos do V-Party v2 (1965-2019), todos e so os que formaram governo (v2pagovsup==0). Descritivo, sem inferencia causal.
-Requer pyreadr, pandas. Saida: ../eixo_vparty.md"""
+Requer pyreadr, pandas. Saida: ../eixo_vparty.md
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

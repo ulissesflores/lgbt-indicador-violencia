@@ -1,4 +1,35 @@
-"""Figura 'quem agrediu' da v0.5 (PNS 2019, violência física em 12 meses), lida SÓ de agressor_risco_pns2019.csv.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Plot the "who committed the violence" figure from the aggressor-risk table (PNS 2019).
+
+Panel a draws two rings, one per group, with area proportional to the total risk of physical
+violence in 12 months (14.70 against 3.82 adults per 100); each slice is the risk by aggressor
+type. Panel b plots the adjusted LGB+/heterosexual risk ratio by aggressor type with the 95%
+interval on a log axis. The script reads only the output table of agressor_risco_pns2019.py.
+
+Inputs
+------
+- data/pns/agressor_risco_pns2019.csv
+- command line: output PNG path
+
+Outputs
+-------
+- the PNG file given on the command line (300 dpi)
+- prints the output path and the total risk of each group
+
+Usage
+-----
+python3 data/pns/fig_agressor_pns2019.py <output.png>
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Figura 'quem agrediu' da v0.5 (PNS 2019, violência física em 12 meses), lida SÓ de agressor_risco_pns2019.csv.
 
 Painel a: dois anéis, um por grupo, com ÁREA proporcional ao risco total (14,70 contra 3,82 adultos agredidos por
 100); cada fatia é o risco por tipo de agressor, de modo que fatia de mesma área = mesmo risco nos dois grupos.
@@ -8,6 +39,12 @@ Patrão ou chefe (n muito pequeno), policial e outro vão juntos em "Outro" no a
 com intervalo informativo. Título, nota e fonte ficam no documento (regra APA do pipeline).
 
 Uso: python3 data/pns/fig_agressor_pns2019.py <saida.png>
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
 """
 from __future__ import annotations
 

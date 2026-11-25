@@ -1,8 +1,50 @@
-"""S08. Cruza a lista GGB 2019 (subconjunto trans/travesti, n=118) com a lista TDoR/TGEU-TMM Brasil 2019 (n=139).
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Estimate how many trans victims were missed with a two-list capture-recapture analysis.
+
+Matches the trans and travesti subset of the GGB 2019 list (118 cases) against the TDoR/TGEU-TMM
+Brazil 2019 list (139 cases), by normalized source URL or by state, city and name-token
+overlap. It computes the Chapman estimator for two lists with a normal and a log (Chao)
+interval, a sensitivity table under alternative matching rules, and the number of GGB cases that
+cite TDoR as source. Names stay outside git; the public outputs carry hash ids and indicators.
+
+Inputs
+------
+- sources/public/p3-ggb/_raw/ggb2019_lista_nominal.csv (not tracked in git)
+- sources/public/p3-ggb/_raw/tdor/x/tdor_export.csv (not tracked in git)
+
+Outputs
+-------
+- analysis/ggb-audit/dados/captura_recaptura_trans2019.json
+- analysis/ggb-audit/dados/captura_recaptura_sensibilidade.json
+- analysis/ggb-audit/dados/cr_ggb_trans_hash.csv
+- sources/public/p3-ggb/_raw/cr_pares_nominais.csv (names; not tracked in git)
+- prints the result, the sensitivity scenarios and the TDoR self-citation count
+
+Usage
+-----
+python3 -I analysis/ggb-audit/scripts/s08_captura_recaptura.py
+
+Status
+------
+Feeds numbers printed in the article (listed in paper_numbers.json).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+S08. Cruza a lista GGB 2019 (subconjunto trans/travesti, n=118) com a lista TDoR/TGEU-TMM Brasil 2019 (n=139).
 Chaves: (1) URL da fonte (normalizada) igual; (2) UF + cidade + sobreposicao de tokens de nome.
 A lista GGB nao traz data; por isso nao ha criterio de data +-3 dias (desvio declarado). Nomes ficam em _raw.
 Saida publica: so ids hash + indicadores. Estimador: Chapman (2 listas) + IC normal e log (Chao) sobre N - n_uniao.
-Uso: python3.14 -I s08_captura_recaptura.py"""
+Uso: python3.14 -I s08_captura_recaptura.py
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 
@@ -62,19 +104,19 @@ res = dict(n_ggb_trans=n1, n_tdor=n2, sobreposicao=m, por_criterio=how_ct, chapm
            chapman_so_url=round(chap_u, 1), cobertura_ggb_vs_chapman=round(n1 / chap, 3), cobertura_tdor_vs_chapman=round(n2 / chap, 3),
            obs="dependencia positiva entre listas (ambas por midia; TDoR cita as mesmas materias; GGB cita TDoR em alguns casos) => Chapman subestima N")
 print(json.dumps(res, ensure_ascii=False, indent=1))
-(F3/"data/captura_recaptura_trans2019.json").write_text(json.dumps(res, ensure_ascii=False, indent=1))
+(F3/"dados/captura_recaptura_trans2019.json").write_text(json.dumps(res, ensure_ascii=False, indent=1))
 # casamentos (hash) e GGB trans sem par; TDoR sem par (so contagens; nomes ficam em _raw)
 with (RAW/"cr_pares_nominais.csv").open("w", newline="") as f:
     w = csv.writer(f); w.writerow(["id_ggb", "nome_ggb", "nome_tdor", "criterio"])
     for g in trans:
         if id(g) in matched: k, h = matched[id(g)]; w.writerow([g["id"], g["nome"], td[k]["Name"], h])
-with (F3/"data/cr_ggb_trans_hash.csv").open("w", newline="") as f:
+with (F3/"dados/cr_ggb_trans_hash.csv").open("w", newline="") as f:
     w = csv.writer(f); w.writerow(["id_ggb", "uf", "cat", "no_tdor", "criterio"])
     for g in trans: w.writerow([g["id"], g["uf"], g["cat"], int(id(g) in matched), matched.get(id(g), (0, ""))[1]])
 # fonte do GGB citando TDoR (dependencia declarada)
 cit = [g for g in ggb if "tdor" in g["link"].lower() or "translivesmatter" in g["link"].lower()]
 print("casos GGB (todos) cuja fonte e o proprio TDoR:", len(cit), "| desses trans:", sum(1 for g in cit if g["cat"] in ('Travesti','Transexual','Mulher Trans')))
-(F3/"data/captura_recaptura_trans2019.json").write_text(json.dumps({**res, "ggb_fonte_tdor_total": len(cit)}, ensure_ascii=False, indent=1))
+(F3/"dados/captura_recaptura_trans2019.json").write_text(json.dumps({**res, "ggb_fonte_tdor_total": len(cit)}, ensure_ascii=False, indent=1))
 
 # ---- sensibilidade ----
 def chapman(a, b, m): 
@@ -96,5 +138,5 @@ run("GGB sem os casos cuja fonte e o proprio TDoR", sem_tdor, allT)
 nomeados = {k for k, t in enumerate(td) if not t["Name"].startswith("Name Unknown")}
 gn = [g for g in trans if g["toks"]]
 run("so casos com nome nas duas listas", gn, nomeados)
-(F3/"data/captura_recaptura_sensibilidade.json").write_text(json.dumps(sens, ensure_ascii=False, indent=1))
+(F3/"dados/captura_recaptura_sensibilidade.json").write_text(json.dumps(sens, ensure_ascii=False, indent=1))
 for s_ in sens: print(s_)

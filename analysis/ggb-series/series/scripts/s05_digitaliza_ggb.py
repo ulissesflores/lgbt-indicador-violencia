@@ -1,7 +1,46 @@
-"""Digitaliza o Grafico 1 do relatorio GGB 2020 (mortes de LGBTI+ por ano, 1990-2020; p. 9 do PDF), que NAO traz rotulos de dados.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Digitize the yearly deaths chart of the 2020 GGB report.
+
+Converts page 9 of the 2020 report to SVG with pdftocairo, reads the 31 red markers of the
+chart (1990-2020), which carry no data labels, and calibrates the vertical position to a value
+by linear regression against the years 2010-2020 whose values are in the GGB tables. It
+removes the legend marker, writes the digitized value of every year next to the published table
+value when one exists, and records the maximum calibration residual.
+
+Inputs
+------
+- sources/public/p3-ggb/_raw/pdf/ggb2020.pdf (not tracked in git)
+- poppler tool pdftocairo on the PATH
+
+Outputs
+-------
+- analysis/ggb-series/series/dados_ggb_1990_1999_digitalizado.csv
+- prints the maximum calibration residual to stdout
+
+Usage
+-----
+python3 -I analysis/ggb-series/series/scripts/s05_digitaliza_ggb.py
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Digitaliza o Grafico 1 do relatorio GGB 2020 (mortes de LGBTI+ por ano, 1990-2020; p. 9 do PDF), que NAO traz rotulos de dados.
 Metodo: pdftocairo -svg da p. 9; lê os 31 marcadores vermelhos (cx,cy em pontos); calibra y -> valor por regressao linear contra 2010-2020, anos cujos valores
 sao os da Tabela do GGB 2019/2020 (260,266,338,314,329,319,343,445,420,329,237). Erro de calibracao (max |residuo|) e gravado. Sem numpy.
-Saida: ../dados_ggb_1990_1999_digitalizado.csv (todos os anos 1990-2020, com tabela 2019 quando existe)."""
+Saida: ../dados_ggb_1990_1999_digitalizado.csv (todos os anos 1990-2020, com tabela 2019 quando existe).
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

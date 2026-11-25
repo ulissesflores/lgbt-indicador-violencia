@@ -1,10 +1,54 @@
-"""Simulacao F7 — identificabilidade da serie REGISTRADA de LGBTfobia (Anuario FBSP).
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Simulate whether the registered LGBTphobia series is identifiable; size a survey.
+
+The script fits, for three fixed incidence scenarios (constant, +15% a year, -5% a year), a
+model in which registered cases are Poisson with mean incidence times a reporting probability
+that grows over time. It fits the 2022-2025 yearbook counts by least squares on the log scale,
+projects 2026-2030 with parametric bootstrap and Poisson noise (fixed seed), tests sensitivity
+to the starting reporting probability, and computes the sample size of a two-proportion test
+(alpha 5%, power 80%) needed to detect relative changes in physical victimization among LGB+
+adults.
+
+Inputs
+------
+- none (the observed counts, the PNS 2019 prevalence and the scenarios are literals in the
+  script)
+- command line: optional output directory (default: current directory)
+
+Outputs
+-------
+- <output directory>/fig-identificabilidade.png
+- <output directory>/projecao-registrada-2026-2030.csv
+- <output directory>/poder-survey.csv
+- <output directory>/resumo.json
+- prints the scenario summary, the sensitivity table and the power table as JSON
+
+Usage
+-----
+python3 -I analysis/simulation/sim_identificabilidade.py analysis/simulation
+
+Status
+------
+Feeds numbers printed in the article (listed in paper_numbers.json).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Simulacao F7 — identificabilidade da serie REGISTRADA de LGBTfobia (Anuario FBSP).
 
 Pergunta: a alta 783 -> 3.481 (2022-2025) nos BOs pode vir de incidencia subindo, constante ou caindo?
 Modelo: R_t ~ Poisson(I_t * p_t); I_t = I0*(1+g)^(t-2022); p_t = min(1, p0*(1+h)^(t-2022)).
 Para g fixo (cenario), ajusta I0 e h por minimos quadrados em log; depois projeta 2026-2030 com ruido Poisson
 e incerteza parametrica (bootstrap de residuos). Em seguida: tamanho de survey bienal que separa os cenarios.
 Semente fixa. Saidas: CSV + PNG + resumo.md nesta pasta.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
 """
 import json, math, sys
 import numpy as np

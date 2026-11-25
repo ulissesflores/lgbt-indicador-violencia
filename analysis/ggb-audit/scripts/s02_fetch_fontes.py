@@ -1,6 +1,45 @@
-"""S02. Baixa a fonte primaria de cada caso (link do Anexo 4 do GGB 2019), com fallback Wayback.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Download the primary source page of each GGB 2019 case, with a Wayback Machine fallback.
+
+For each case with a link in Annex 4 it requests the page directly (TLS certificate check is
+turned off on purpose, see the comment in the code), saves the HTML if it is large enough, and
+falls back to the Wayback Machine otherwise. Cases already saved are skipped. The public log
+keeps only the domain, never the URL.
+
+Inputs
+------
+- sources/public/p3-ggb/_raw/ggb2019_lista_nominal.csv (not tracked in git)
+- the case links in that file and web.archive.org (network access)
+
+Outputs
+-------
+- sources/public/p3-ggb/_raw/news/<id>.html (not tracked in git)
+- analysis/ggb-audit/dados/fetch_log.csv (id, domain, route, status, bytes)
+- prints the count per route and the elapsed seconds
+
+Usage
+-----
+python3 -I analysis/ggb-audit/scripts/s02_fetch_fontes.py
+
+Status
+------
+Data acquisition step; no analysis claim.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+S02. Baixa a fonte primaria de cada caso (link do Anexo 4 do GGB 2019), com fallback Wayback.
 Bruto em sources/public/p3-ggb/_raw/news/<id>.html (fora do git). Registro publico: data/fetch_log.csv (sem URL, so dominio).
-Uso: python3.14 -I s02_fetch_fontes.py"""
+Uso: python3.14 -I s02_fetch_fontes.py
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 
@@ -12,6 +51,10 @@ ROOT = Path(REPO_ROOT)
 RAW = ROOT/"sources/public/p3-ggb/_raw"; NEWS = RAW/"news"; NEWS.mkdir(exist_ok=True)
 OUT = ROOT/"analysis/ggb-audit/dados"
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15"
+# Verificação TLS desligada: a coleta aceita certificado inválido ou vencido dos sites de notícia do Anexo 4.
+# O bruto baixado fica em sources/public/ (fora do git, não distribuído) e o script não envia credencial nem dado.
+# Para coletar com verificação, use ssl.create_default_context() sem as duas trocas: páginas com certificado
+# inválido passam a cair no except de one() e seguem para o Wayback.
 ctx = ssl.create_default_context(); ctx.check_hostname = False; ctx.verify_mode = ssl.CERT_NONE
 def clean(u):
     u = u.replace(" ", "")

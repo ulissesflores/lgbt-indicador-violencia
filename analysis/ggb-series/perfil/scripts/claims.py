@@ -1,6 +1,44 @@
-"""Registro de afirmacoes do perfil GGB. Cada item = 1 trecho verbatim, verificado por build_perfil.py.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Register the claims, methodology rows and source files of the GGB profile.
+
+Data module. It defines FILES (the registry of source documents, with local path, text file,
+origin URL, access type, channel, language, year and title), C (the claims, each with one
+verbatim quote and the source key it must be found in), M (the methodology declared by the
+Grupo Gay da Bahia year by year) and SEM_DOC (years with no document located). Victim names are
+not stored here. It performs no I/O; build_perfil.py verifies each quote against its file.
+
+Inputs
+------
+- none (library module imported by build_perfil.py; paths in FILES point to
+  sources/public/p3-ggb/_raw/ and are only read by the importer)
+
+Outputs
+-------
+- none (library module imported by build_perfil.py)
+
+Usage
+-----
+Imported by build_perfil.py; not run directly.
+
+Status
+------
+No registration status is claimed for this file.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Registro de afirmacoes do perfil GGB. Cada item = 1 trecho verbatim, verificado por build_perfil.py.
 FILES: chave -> (arquivo hasheado, arquivo de texto pesquisado ou None, origem/URL, acesso, canal, idioma, ano, titulo)
-Nomes de vitimas NAO entram aqui."""
+Nomes de vitimas NAO entram aqui.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

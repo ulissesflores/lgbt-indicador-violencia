@@ -1,9 +1,51 @@
-"""Trava os números das quatro reanálises pré-registradas (C02, C03, C05, C08) que o artigo e o dossiê publicam.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Lock the numbers of the four pre-registered reanalyses (C02, C03, C05, C08).
+
+Checks that the criteria file still matches the hash recorded before the analyses ran, then
+that the result files carry the published values within the rounding of the printed numbers:
+C02 (aggression plus undetermined intent, share of undetermined deaths), C03 (exact conversion
+of the bounds, event-study directions, two-way fixed-effects weights), C05 (direct ratio from
+the PNS) and C08 (numerators and coverage). C05 and C08 read PNS microdata when recomputed.
+
+Inputs
+------
+- analysis/robustness/reanalise/CRITERIOS.md
+- analysis/robustness/reanalise/CRITERIOS.sha256
+- data/painel/c02_indet_resultados.csv
+- data/painel/c03_event_pesos_resultados.csv
+- data/painel/c03_event_pesos_resultados.md
+- data/pns/c05_razao_direta.csv
+- data/ggb/c08_numeradores.csv
+
+Outputs
+-------
+- none (assertions only)
+
+Usage
+-----
+python3 -I -m pytest tests/test_reanalises_publicadas.py
+
+Status
+------
+Pre-registered analysis (analysis/robustness/reanalise/CRITERIOS.md).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Trava os números das quatro reanálises pré-registradas (C02, C03, C05, C08) que o artigo e o dossiê publicam.
 
 Critérios escritos antes de rodar: analysis/robustness/reanalise/CRITERIOS.md (sha256 gravado em CRITERIOS.sha256).
 Lê os CSV gerados pelos scripts (data/painel/painel_c02_indet.py, painel_c03_event_pesos.py, data/pns/pns_c05_razao_direta.py,
 data/ggb/ggb_c08_numeradores.py). C02 e C03 são recalculados por scripts/reproduzir.py; C05 e C08 leem o microdado da PNS (Trilha 2).
 Tolerâncias: arredondamento do número impresso no artigo.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
 """
 import hashlib
 import math

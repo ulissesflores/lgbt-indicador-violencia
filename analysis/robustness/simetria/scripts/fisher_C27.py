@@ -1,4 +1,41 @@
-"""Fisher exato bicaudal (hipergeometrica) para comparar taxas F2 x linha de base. Python: /opt/homebrew/bin/python3.14 -I"""
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Compute two-sided exact Fisher p-values for F2 source rates against a baseline.
+
+The script defines a hypergeometric two-sided Fisher exact test (sum of the probabilities not
+larger than the observed one) and applies it to five fixed comparisons of counts: primary
+source and any source, F2 original coding and F2 second-coder coding against the baseline
+sample, plus the two F2 codings against each other. The counts are written in the script.
+
+Inputs
+------
+- none (the counts are literals in the script)
+
+Outputs
+-------
+- prints one line per comparison with the p-value to three decimals (recorded in
+  analysis/robustness/simetria/fisher_C27.txt)
+
+Usage
+-----
+python3 -I analysis/robustness/simetria/scripts/fisher_C27.py
+
+Status
+------
+Feeds numbers printed in the article (listed in paper_numbers.json).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Fisher exato bicaudal (hipergeometrica) para comparar taxas F2 x linha de base. Python: /opt/homebrew/bin/python3.14 -I
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 from math import comb
 def fisher(a, n1, b, n2):
     K = a + b; N = n1 + n2

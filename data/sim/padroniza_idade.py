@@ -1,4 +1,38 @@
-"""Taxas de mortalidade por agressão PADRONIZADAS POR IDADE (padronização direta), Brasil 2010-2024, por sexo x raça/cor, com decomposição de Kitagawa.
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Compute age-standardized aggression mortality rates for Brazil by sex and race/color.
+
+Direct standardization over 17 age groups using the 2022 Brazilian population as the standard.
+Deaths come from the aggregated SIM table (aggression X85-Y09, with undetermined intent Y10-Y34
+added as a sensitivity outcome); unknown age and race are redistributed proportionally.
+Denominators are geometric interpolations between the 2010 and 2022 censuses, extrapolated for
+2023 and 2024. It also computes pooled 2022-2024 rate ratios, bounds for unknown race, and a
+Kitagawa decomposition of crude rate differences. Rates carry Poisson 95% intervals.
+
+Inputs
+------
+- data/sim/sim_agressoes_agregado.csv
+- sources/public/p2-f8-dados-uf/sidra/censo9606_n1_raca_sexo_idade_2010_2022.json
+
+Outputs
+-------
+- data/sim/asr_brasil.csv
+- data/sim/asr_brasil.md
+- prints the report to stdout
+
+Usage
+-----
+python3 -I data/sim/padroniza_idade.py
+
+Status
+------
+Feeds numbers printed in the article (listed in paper_numbers.json).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Taxas de mortalidade por agressão PADRONIZADAS POR IDADE (padronização direta), Brasil 2010-2024, por sexo x raça/cor, com decomposição de Kitagawa.
 Motivo: as taxas anteriores ("grupos mais seguros") eram brutas e as de homens (~37, ~52, ~19) eram aritmética sobre o Atlas.
 Entradas: data/sim/sim_agressoes_agregado.csv (microdados SIM, data/sim/agrega_sim.py) e Censo 2010/2022 por raça x sexo x idade
 (SIDRA 9606; sources/public/p2-f8-dados-uf/sidra/censo9606_n1_raca_sexo_idade_2010_2022.json; sha256 em SHA256SUMS.txt).
@@ -10,7 +44,14 @@ Método (declarado antes de rodar):
     limites sem redistribuição (inferior) e com TODA a raça ignorada atribuída a negros ou a não negros (extremos) para a razão negros/não negros.
   - IC95% de Poisson sobre óbitos redistribuídos (aproximação; ignora a incerteza da redistribuição e dos denominadores).
   - Negros = preta + parda; não negros = branca + amarela + indígena (convenção do Atlas/dossiê).
-Rodar: python3 -I data/sim/padroniza_idade.py   Saídas: data/sim/asr_brasil.csv, data/sim/asr_brasil.md"""
+Rodar: python3 -I data/sim/padroniza_idade.py   Saídas: data/sim/asr_brasil.csv, data/sim/asr_brasil.md
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 

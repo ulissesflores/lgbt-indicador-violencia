@@ -1,8 +1,46 @@
-"""Gera as duas tabelas da seção 'Série 2015-2025' de data/sinan/resumo.md a partir de serie_campo55_uf_ano.csv (antes sem gerador no repositório)
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Rebuild the two series tables of the Sinan summary and check them against the published text.
+
+Reads the state-by-year completeness series and builds a national table by year and a table by
+state. The effective missing share is the sum of the unknown-or-blank and not-applicable
+percentages of field 55; the state table compares the simple mean of 2015-2017 with 2023-2025,
+and adds the mean LGBT-phobia share and the notification count. Each generated row is looked up
+in the published summary, and the script exits with status 1 if any row is not reproduced.
+
+Inputs
+------
+- data/sinan/serie_campo55_uf_ano.csv
+- data/sinan/resumo.md
+
+Outputs
+-------
+- data/sinan/serie_tabelas.md
+- prints the number of generated rows and any divergent row to stdout
+
+Usage
+-----
+python3 -I data/sinan/serie_tabelas.py (exit status 1 if a published row is not reproduced)
+
+Status
+------
+Feeds numbers printed in the article (listed in paper_numbers.json).
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+Gera as duas tabelas da seção 'Série 2015-2025' de data/sinan/resumo.md a partir de serie_campo55_uf_ano.csv (antes sem gerador no repositório)
 e confere linha a linha contra o texto publicado em resumo.md.
 Convenção descoberta por engenharia reversa e confirmada pela conferência: faltante efetivo = pct_m_ign + pct_m_na (valores do CSV, 2 casas);
 por UF = média SIMPLES dos três anos (2015-17 e 2023-25), com a variação calculada sobre as médias NÃO arredondadas; LGBTfobia = média simples de pct_m_lgbt em 2015-25; n = soma de n_interpessoal 2015-25.
 Rodar: python3 -I data/sinan/serie_tabelas.py   (saída: serie_tabelas.md; exit 1 se alguma linha publicada não for reproduzida)
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
 """
 import os as _os
 import pathlib as _pl

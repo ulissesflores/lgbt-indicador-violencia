@@ -1,8 +1,50 @@
-"""FALLBACK declarado (ADENDO pos-contagem) para imprensa quando o GDELT esta bloqueado:
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+"""Collect Google News RSS results as a declared fallback while GDELT was blocked.
+
+Queries the public Google News RSS search (no key) for each dictionary entry and year. The feed
+is truncated at about 100 items per query, so each entry and year is split (half year, quarter,
+month) while it returns 95 items or more; a cell that still saturates at month level is marked
+saturated and its count is a floor, not a universe count. One request about every 4 seconds;
+resumable.
+
+Inputs
+------
+- https://news.google.com/rss/search (network access)
+- analysis/discourse/midia/_gnrss_celulas.jsonl (finished cells, if it exists)
+- the query dictionary module dicionario
+
+Outputs
+-------
+- sources/public/q1-textointegral/discurso/midia/gnrss/<id>_<start>_<end>_<hash>.xml
+  (raw XML with sha256 in the name; not tracked in git)
+- analysis/discourse/midia/_gnrss_celulas.jsonl
+- prints the entry, year and number of items
+
+Usage
+-----
+python3 -I analysis/discourse/midia/scripts/gn_rss.py
+
+Status
+------
+Data acquisition step; no analysis claim.
+
+Notes
+-----
+Original description (Portuguese), kept verbatim:
+
+FALLBACK declarado (ADENDO pos-contagem) para imprensa quando o GDELT esta bloqueado:
 Google News RSS (publico, sem chave/cadastro). Lista TRUNCADA em ~100 itens por consulta; por isso cada
 entrada x ano e dividida (semestre, trimestre, mes) enquanto devolver >= 95 itens. Celula que satura no mes
 e marcada 'saturada' (n e piso). NAO e contagem do universo; e piso e quadro de amostra.
-Salva XML bruto + sha256 em RAW. 1 pedido a cada ~4 s. Retomavel."""
+Salva XML bruto + sha256 em RAW. 1 pedido a cada ~4 s. Retomavel.
+
+Author
+------
+Carlos Ulisses Flores (Codex Hash Research Laboratory),
+ORCID https://orcid.org/0000-0002-6034-7765.
+Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+"""
 import os as _os
 import pathlib as _pl
 
