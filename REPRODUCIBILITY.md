@@ -9,7 +9,9 @@ re-run.
 1. **Reproducible derivation (Track 1).** Every published number that depends only on the distributed derived data is
    recomputed by `python3 -I run_all.py` in a separate copy (`.run/replica`) and compared, file by file, with the
    distributed one: identical bytes, or a difference of at most one unit in the last printed decimal place (rounding
-   between math libraries; the runner says when it accepted one).
+   between math libraries), or, when either side is printed at full precision (15 or more significant digits), a
+   relative difference of at most 1e-10 (multithreaded sums and the math library of another operating system move the
+   last bits; on Linux this happens in `figures/valores_plotados.json`). The runner says when it accepted one.
 2. **Frozen evidence, not re-runnable.** Collections that depend on the state of the world on a given day (news, web
    pages, search counts, preliminary DATASUS files, reading of PDFs) do not come back identical. Each has a URL, an
    access date and, when a file was saved, a SHA-256 in `manifest/MANIFESTO-FONTES.csv`; what was read, coded or counted

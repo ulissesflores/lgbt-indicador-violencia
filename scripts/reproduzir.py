@@ -5,7 +5,8 @@
 Copies the repository into a replica folder, runs each listed analysis script there with the
 repository root pointed at the replica, and compares every file of the replica with the
 original. It accepts a one-unit difference in the last printed decimal, or a relative
-difference of 1e-10 for full-precision numbers, and says when it does. Figures are only
+difference of 1e-10 when either side is printed at full precision (15 or more significant
+digits), and says when it does. Figures are only
 informative; plotted values are compared. Nothing in the repository is overwritten; exit
 code 0 only if every script finishes and no file differs.
 
@@ -40,11 +41,13 @@ divergir.
 
 Comparação: bytes idênticos; se diferirem (libm/BLAS de outro sistema), aceita diferença de no
 máximo 1 unidade na última casa decimal impressa de cada número (arredondamento), e diz que aceitou.
-Número impresso em precisão total (repr do float, >= 15 algarismos significativos): aceita diferença
-relativa <= 1e-10 (BLAS multithread muda a ordem das somas entre execuções; observado em
-painel_c02/c03 na mesma máquina). Figuras (PNG, SVG, PDF) e o figures/SHA256SUMS que as lista são
-informativos: o matplotlib grava a própria versão e desenha diferente entre versões (com 3.9.4 no
-lugar de 3.10.9, 47 arquivos de figura mudam); os valores plotados (figures/*.json) são comparados.
+Número em precisão total (repr do float; basta um dos dois lados ter >= 15 algarismos
+significativos, porque o repr mais curto pode ter 14): aceita diferença relativa <= 1e-10 (BLAS
+multithread muda a ordem das somas entre execuções, observado em painel_c02/c03 na mesma máquina;
+a libm do Linux muda os últimos bits de figures/valores_plotados.json). Figuras (PNG, SVG, PDF) e
+o figures/SHA256SUMS que as lista são informativos: o matplotlib grava a própria versão e desenha
+diferente entre versões (com 3.9.4 no lugar de 3.10.9, 47 arquivos de figura mudam); os valores
+plotados (figures/*.json) são comparados.
 
 Uso: python3 -I scripts/reproduzir.py [--only <trecho do caminho>]
 Tempo: ~6 min (s06_analises 2 min; painel_diagnosticos, concordancia_v2, h1_03 e h2_02 30-40 s cada;
@@ -136,12 +139,17 @@ def arquivos(raiz):
     return out
 
 
+def algarismos(s):
+    """Algarismos significativos do número impresso ``s`` (mantissa, sem zeros à esquerda)."""
+    return len(re.sub(r"\D", "", s.split("e")[0].split("E")[0]).lstrip("0"))
+
+
 def equivalentes(a, b):
     """Compara o original ``a`` com o recalculado ``b``.
 
     Devolve "exato" se iguais; uma descrição da tolerância usada se diferem só em até 1 unidade da
-    última casa decimal impressa dos números (ou em precisão total, relativa <= 1e-10); None se
-    divergem.
+    última casa decimal impressa dos números (ou, quando um dos dois lados está em precisão total,
+    >= 15 algarismos significativos, diferença relativa <= 1e-10); None se divergem.
     """
     if a == b:
         return "exato"
@@ -157,13 +165,14 @@ def equivalentes(a, b):
         casas = len(x.split(".")[1].split("e")[0].split("E")[0])
         if abs(float(x) - float(y)) <= 1.0000001 * 10 ** (-casas):
             continue
-        # número impresso em precisão total (repr do float, >= 15 algarismos significativos): a soma
-        # em BLAS multithread (Accelerate/OpenBLAS) muda a ordem das parcelas e mexe nos últimos
-        # bits de uma execução para outra, mesmo na mesma máquina. Aceita diferença relativa <=
-        # 1e-10; números arredondados para impressão continuam na regra de 1 unidade da última casa.
-        if len(re.sub(r"\D", "", x.split("e")[0].split("E")[0]).lstrip("0")) >= 15 and abs(
-            float(x) - float(y)
-        ) <= 1e-10 * max(abs(float(x)), 1e-300):
+        # número em precisão total (repr do float): a soma em BLAS multithread (Accelerate/OpenBLAS)
+        # e a libm de outro sistema mexem nos últimos bits. O repr mais curto de um float pode ter
+        # menos de 15 algarismos (-0.32356125356125 no Mac vira -0.32356125356126064 no Linux), por
+        # isso basta UM dos dois lados ter >= 15 algarismos significativos. Aceita diferença
+        # relativa <= 1e-10; dois números arredondados para impressão seguem a regra de 1 unidade.
+        if max(algarismos(x), algarismos(y)) >= 15 and abs(float(x) - float(y)) <= 1e-10 * max(
+            abs(float(x)), 1e-300
+        ):
             ulp = True
             continue
         return None

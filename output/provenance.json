@@ -1,5 +1,5 @@
 {
- "chain_hash": "75f82f29030fbb7e966aceed0276fe3f27e8f9d2772b1e194ae277f8595f55db",
+ "chain_hash": "3f4baaec2c3103179a9e64db95382fd7e940891722cad75b04f7ed9f8b4c4e2b",
  "n_arquivos": 761,
  "arquivos": [
   {
@@ -64,7 +64,7 @@
   },
   {
    "arquivo": "REPRODUCIBILITY.md",
-   "sha256": "3334242a885c1d29e211e079dd29b8b91a5caffef41a54655dd5a92a0f16abba"
+   "sha256": "0708286508ce14f62699d03084f7b65ab361bd553f932000c6a7982fdd72b005"
   },
   {
    "arquivo": "SECURITY.md",
@@ -2824,7 +2824,7 @@
   },
   {
    "arquivo": "manifest/SHA256SUMS.txt",
-   "sha256": "fffc05733207ae0d39a0a298134504dcaff31266fdd31b3335728b5899424391"
+   "sha256": "283394edb4def70e3f97620c90c4aa045df0224a98edad2dcf6fac8f8764aaa9"
   },
   {
    "arquivo": "paper_numbers.json",
@@ -2924,7 +2924,7 @@
   },
   {
    "arquivo": "scripts/reproduzir.py",
-   "sha256": "b7e81df9e8849d2c58895bb8373084abfad81926dce10a59bacef31c5f3cb379"
+   "sha256": "20a12790c3471479e776d6ba4b5a0c7244c2b0f116564145175a0319b204a543"
   },
   {
    "arquivo": "sources/ledgers/ledger-01/sources.jsonl",
