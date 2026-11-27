@@ -1,6 +1,6 @@
 {
- "chain_hash": "3f4baaec2c3103179a9e64db95382fd7e940891722cad75b04f7ed9f8b4c4e2b",
- "n_arquivos": 761,
+ "chain_hash": "fd7e9cbdef32526ea3dd9a1c5d00d6fd3b462727118b3ce805465e3c20fab4c8",
+ "n_arquivos": 762,
  "arquivos": [
   {
    "arquivo": ".github/workflows/verify.yml",
@@ -64,7 +64,7 @@
   },
   {
    "arquivo": "REPRODUCIBILITY.md",
-   "sha256": "0708286508ce14f62699d03084f7b65ab361bd553f932000c6a7982fdd72b005"
+   "sha256": "910078655b23a9c18be011a091cdf86010a60e7a8daf7f9c8e342bff1db37c0b"
   },
   {
    "arquivo": "SECURITY.md",
@@ -72,19 +72,19 @@
   },
   {
    "arquivo": "analysis/article-numbers/README.md",
-   "sha256": "6bd8ff6623ab9952a3e8658b9582ec18cb15ce8f5346bb248eace0a6ca8d535b"
+   "sha256": "a195d47e1086123174cd2b46593a66bda2f42ba8bea22a18d7f4cd521acb0f00"
   },
   {
    "arquivo": "analysis/article-numbers/README.pt-BR.md",
-   "sha256": "5036a73535208e16604ba2ffe861d47a7cc0177039453e94409261aa393317ec"
+   "sha256": "6ba02112fac86fe2906319555e84d5bd73bffb7be93e7cd9ed1f9323b3614a28"
   },
   {
    "arquivo": "analysis/article-numbers/contas_do_texto.csv",
-   "sha256": "a864576add1219a28a558025dc13675e4e689f1b2e85c4db735a4b7a5965d680"
+   "sha256": "1eed6c58f28bd5281bc7f97ea0475a54c6ece4fcf65716a6a120d1a38fd7cfa3"
   },
   {
    "arquivo": "analysis/article-numbers/contas_do_texto.py",
-   "sha256": "98c46bc523392590b2c8cb7cc856790a481d37bac0248a9070f61678b66403fe"
+   "sha256": "05e1ba3e92b018e292e30dc3464d0523b14d60bddf69224fbdc5eea0c2655b62"
   },
   {
    "arquivo": "analysis/article-numbers/datas_publicacao_C18.tsv",
@@ -93,6 +93,10 @@
   {
    "arquivo": "analysis/article-numbers/falas_expectativa.csv",
    "sha256": "ae43ca25511a69f89d37e8dbe5e548ce3417a22b54f4959fdf15976d0ab93fbb"
+  },
+  {
+   "arquivo": "analysis/article-numbers/ferguson_malouff_2016_tabela1.csv",
+   "sha256": "babc56065c176de79abafe7de115b27b8a2290e0b378494de495edd39581e955"
   },
   {
    "arquivo": "analysis/article-numbers/numeros_do_bruto.csv",
@@ -104,7 +108,7 @@
   },
   {
    "arquivo": "analysis/article-numbers/terceiros_transcritos.csv",
-   "sha256": "fd9ef7f7da79e8f67f0f4f01000ea22af112e46f5c257656718561ccd4baa17f"
+   "sha256": "9e07eca7b9971d64344ecae83bfec1ab2099f90079f089dd256718eebb53ed8d"
   },
   {
    "arquivo": "analysis/counterpoint/dados/lihs-checagem-ggb2016.META.md",
@@ -2256,11 +2260,11 @@
   },
   {
    "arquivo": "docs/corrections.md",
-   "sha256": "b50d1729738fa49076061a0b3141e9e4d6beb0c0244badfe0c1997526e08b27e"
+   "sha256": "7339ea50649a71d27cb03d8bf164bf1e7625d9e9be04707b5a0daa6cb842b483"
   },
   {
    "arquivo": "docs/corrections.pt-BR.md",
-   "sha256": "31fd2c963a2b656ef99e220d821186e639af1395066611eb225522ef4519c8d6"
+   "sha256": "f65809bddfedf0d6ead923b903a78b4ccb3cc12c1026a1f3c960b9375d9f2cf8"
   },
   {
    "arquivo": "docs/language-model-use.md",
@@ -2824,11 +2828,11 @@
   },
   {
    "arquivo": "manifest/SHA256SUMS.txt",
-   "sha256": "283394edb4def70e3f97620c90c4aa045df0224a98edad2dcf6fac8f8764aaa9"
+   "sha256": "c9894909fb4740b070e04e5f5b5575a04e9106e83f3b1f8d5e0f40446f8f4d8b"
   },
   {
    "arquivo": "paper_numbers.json",
-   "sha256": "f827e73b00603b0cb3785c283def55256c99bf88b8c106329e68106498c46b1c"
+   "sha256": "bcb47cfba097a30904f0e11ce4aebb95c97cea56f93fb29d4a99f7e0252fa4ab"
   },
   {
    "arquivo": "preregistrations/governos/PRE-REGISTRO-COM-ADENDO.sha256",
@@ -3032,7 +3036,7 @@
   },
   {
    "arquivo": "tests/test_paper_numbers.py",
-   "sha256": "a51f267817720af8d0dad5a0546ce8b0fffbd16849a55a17426fa1c08b2214ea"
+   "sha256": "30a6bc45a49d1f32c4a73192ab9290efaf4fa0fdf0288a259953c7c25d3176b8"
   },
   {
    "arquivo": "tests/test_readme_arte.py",

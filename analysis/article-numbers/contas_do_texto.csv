@@ -123,7 +123,7 @@ amostra_n,1713,871,linhas de amostra_codificada.csv,analysis/discourse/midia/amo
 f1_expectativa,1715,13,linhas de falas_expectativa.csv,analysis/article-numbers/falas_expectativa.csv:13 linhas,13.0,sim
 pns_cor_ignorada_max,780,"0,02",max |ajustada sem cor ignorada - ajustada do artigo|,"data/pns/agressor_risco_pns2019.md:seção 8, 9 linhas",0.02,sim
 ggb_desacordo_morte,1221,2,desacordos com a variável morte,analysis/ggb-audit/dados/kappa.json:desacordos=6,2.0,sim
-ggb_wilson_fpc_lo,1221,"26,3","Wilson(k, n) com z x fpc, limite inferior",analysis/ggb-audit/dados/validacao_resumo.json:verificavel_estrito=50;n_amostra=160;N_universo=329,26.350265,corrigido
+ggb_wilson_fpc_lo,1221,"26,4","Wilson(k, n) com z x fpc, limite inferior",analysis/ggb-audit/dados/validacao_resumo.json:verificavel_estrito=50;n_amostra=160;N_universo=329,26.350265,sim
 ggb_wilson_fpc_hi,1221,"36,6","Wilson(k, n) com z x fpc, limite superior",analysis/ggb-audit/dados/validacao_resumo.json:verificavel_estrito=50;n_amostra=160;N_universo=329,36.607962,sim
 h1_lula12_no_mandato,1680,1,h1_nomand_G1 + h1_nomand_G2 (regra por data),"analysis/article-numbers/contas_do_texto.csv:h1_nomand_G1+G2;analysis/robustness/simetria/scripts/tabela_C18.py:NOMAND G1=(0, 6);G2=(1, 7)",1.0,sim
 h1_lula12_uteis,1680,13,páginas úteis de G1 + G2 (NOMAND b),"analysis/article-numbers/contas_do_texto.csv:h1_nomand_G1+G2;analysis/robustness/simetria/scripts/tabela_C18.py:NOMAND G1=(0, 6);G2=(1, 7)",13.0,sim
@@ -134,3 +134,8 @@ ons26_lgb_pct_maior,127,31%,(razão de taxas − 1) x 100,figures/fontes/estudos
 ons26b_dif_20_anos,128,1,média das diferenças de expectativa de vida aos 20 anos,"analysis/article-numbers/terceiros_transcritos.csv:linha_pt=1004;[1.2, 0.9]",1.05,sim
 cnv_sete_l333,333,7,numeral por extenso da fonte,analysis/article-numbers/terceiros_transcritos.csv:linha_pt=333;impresso=7;'sete',7.0,sim
 cnv_sete_l1699,1699,7,numeral por extenso da fonte,analysis/article-numbers/terceiros_transcritos.csv:linha_pt=1699;impresso=7;'sete',7.0,sim
+fernandez_cuatro_l1698,1698,4,numeral por extenso da fonte,analysis/article-numbers/terceiros_transcritos.csv:linha_pt=1698;impresso=4;'cuatro',4.0,sim
+ferguson_i2_de_q,1806,95,"I² = (Q − gl) / Q, com Q e gl relatados pela fonte",analysis/article-numbers/terceiros_transcritos.csv:linha_pt=1806;impresso=128;Q=128;gl=6,95.3125,sim
+ferguson_dl_tabela1,1806,"5,2","DerSimonian-Laird em logit, 7 estudos da Tabela 1","analysis/article-numbers/ferguson_malouff_2016_tabela1.csv:eventos=round(taxa x N)=[12, 17, 66, 8, 139, 24, 55]",5.224266,sim
+ferguson_dl_tabela1_ic,1806,,"IC95% e Q do mesmo modelo (informativo; a fonte imprime ,030 a ,089 e Q = 128)","analysis/article-numbers/ferguson_malouff_2016_tabela1.csv:eventos=round(taxa x N)=[12, 17, 66, 8, 139, 24, 55]",0.0299;0.0896;Q=129.1,informativo
+ferguson_dl_spohn_texto,1806,,"o mesmo modelo com 4,5% para Spohn et al. (texto, p. 12) em vez de ,137 (informativo)","analysis/article-numbers/ferguson_malouff_2016_tabela1.csv:eventos=[12, 17, 66, 8, 139, 24, 18]",0.0437;0.0274;0.0689;Q=74.8,informativo

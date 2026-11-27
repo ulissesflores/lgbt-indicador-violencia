@@ -538,31 +538,33 @@ def test_paper_numbers_controle_negativo():
 def test_paper_numbers_impresso_corrigido():
     """A printed number marked ``corrected`` passes only with the note and the right rounding.
 
-    The frozen 1.3.0 article prints 26,3 at line 1221 (Appendix F); the calculation gives 26.35,
-    26,4 at one decimal (erratum of 2026-11-25 in ``docs/corrections.md``). Negative controls:
-    the same entry fails without the note (another id), when the corrected value is not what the
-    source rounds to, and when the printed value already matches (a spurious correction).
+    Line 1221 (Appendix F) printed 26,3 where the calculation gives 26.35, 26,4 at one decimal
+    (erratum of 2026-11-25 in ``docs/corrections.md``); the edition reissued on 2026-11-26 prints
+    26,4, so the table no longer holds a corrected entry and ``l1221|6`` passes as printed. The
+    mechanism stays checked on a synthetic copy of that entry printing 26,3: it passes with the
+    note, and fails without the note (another id), when the corrected value is not what the source
+    rounds to, and when the printed value already matches (a spurious correction).
     """
     import copy
 
     v = _verificador()
     tabela = v.carrega()
-    corrigidas = [e for e in tabela["numbers"] if any(p.get("corrected") for p in e["printed"])]
-    assert [
-        (e["id"], e["printed"][0]["value"], e["printed"][0]["corrected"]) for e in corrigidas
-    ] == [("l1221|6", "26,3", "26,4")]
-    e = corrigidas[0]
+    assert not [e for e in tabela["numbers"] if any(p.get("corrected") for p in e["printed"])]
+    e = next(e for e in tabela["numbers"] if e["id"] == "l1221|6")
+    assert e["printed"][0]["value"] == "26,4"
     assert not v.confere_valores({"numbers": [e]})
-    assert "docs/corrections.md" in tabela["sha256"]
     assert round(v.resolve(e["locator"]), 2) == 26.35
 
-    sem_nota = copy.deepcopy(e)
+    antigo = copy.deepcopy(e)
+    antigo["printed"][0].update(value="26,3", corrected="26,4")
+    assert not v.confere_valores({"numbers": [antigo]}), "corrigido com nota falhou"
+    sem_nota = copy.deepcopy(antigo)
     sem_nota["id"] = "l1221|99"
     assert v.confere_valores({"numbers": [sem_nota]}), "corrigido sem nota passou"
-    outro_valor = copy.deepcopy(e)
+    outro_valor = copy.deepcopy(antigo)
     outro_valor["printed"][0]["corrected"] = "26,5"
     assert v.confere_valores({"numbers": [outro_valor]}), "corrigido que a fonte não dá passou"
-    sobra = copy.deepcopy(e)
+    sobra = copy.deepcopy(antigo)
     sobra["printed"][0]["value"] = "26,4"
     assert v.confere_valores({"numbers": [sobra]}), "correção desnecessária passou"
     notas = (RAIZ / "docs/corrections.md").read_text(encoding="utf-8")

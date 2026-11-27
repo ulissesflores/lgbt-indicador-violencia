@@ -16,6 +16,8 @@ Inputs
 - analysis/robustness/simetria/scripts/tabela_C18.py (read as text)
 - analysis/article-numbers/datas_publicacao_C18.tsv
 - analysis/article-numbers/falas_expectativa.csv
+- analysis/article-numbers/terceiros_transcritos.csv
+- analysis/article-numbers/ferguson_malouff_2016_tabela1.csv (Table 1 of Ferguson & Malouff, 2016)
 
 Outputs
 -------
@@ -504,8 +506,9 @@ def main():
     fpc = math.sqrt((n_u - n_a) / (n_u - 1))
     lo_f, hi_f = wilson(val["verificavel_estrito"], n_a, 1.959963984540054 * fpc)
     ent = f"analysis/ggb-audit/dados/validacao_resumo.json:verificavel_estrito={val['verificavel_estrito']};n_amostra={n_a};N_universo={n_u}"
-    # o artigo imprime 26,3; a conta dá 26,35 (26,4): errata de 2026-11-25 em docs/corrections.md
-    registra("ggb_wilson_fpc_lo", 1221, "26,3", "Wilson(k, n) com z x fpc, limite inferior", ent, lo_f, 100, corrigido="26,4")
+    # a conta dá 26,35 (26,4); o artigo imprimia 26,3 (errata de 2026-11-25 em docs/corrections.md)
+    # e a edição reemitida em 2026-11-26 imprime 26,4
+    registra("ggb_wilson_fpc_lo", 1221, "26,4", "Wilson(k, n) com z x fpc, limite inferior", ent, lo_f, 100)
     registra("ggb_wilson_fpc_hi", 1221, "36,6", "Wilson(k, n) com z x fpc, limite superior", ent, hi_f, 100)
 
     # l.1680 — páginas dos dois primeiros mandatos de Lula: publicadas no mandato (regra por data) e úteis (NOMAND b).
@@ -554,6 +557,56 @@ def main():
         r = next(r for r in ler_csv(rel) if r["linha_pt"] == linha_pt and r["impresso"] == "7")
         palavra = r["valor_na_fonte"].split()[0]
         registra(f"cnv_sete_l{linha_pt}", int(linha_pt), "7", "numeral por extenso da fonte", f"{rel}:linha_pt={linha_pt};impresso=7;'{palavra}'", por_extenso[palavra])
+
+    # Tabela I1 (l.1698) — Fernández Turuelo (2024, p. 112) escreve "las cuatro sentencias condenatorias".
+    r = next(r for r in ler_csv(rel) if r["linha_pt"] == "1698" and r["impresso"] == "4")
+    palavra = r["valor_na_fonte"].split()[1]
+    registra("fernandez_cuatro_l1698", 1698, "4", "numeral por extenso da fonte", f"{rel}:linha_pt=1698;impresso=4;'{palavra}'", {"cuatro": 4}[palavra])
+
+    # l.1806 — Ferguson & Malouff (2016) relatam Q(6) = 128 (p. 13), não I²; I² = (Q − gl) / Q.
+    q_rel = next(r for r in ler_csv(rel) if r["linha_pt"] == "1806" and r["impresso"] == "128")["valor_na_fonte"]
+    gl, q = re.findall(r"\d+", q_rel)[:2]  # "Q(6) = 128, p < .001"
+    gl, q = int(gl), int(q)
+    registra("ferguson_i2_de_q", 1806, "95", "I² = (Q − gl) / Q, com Q e gl relatados pela fonte", f"{rel}:linha_pt=1806;impresso=128;Q={q};gl={gl}", (q - gl) / q, 100)
+
+    # l.1806 — "a estimativa só se reproduz com o valor da tabela": DerSimonian-Laird em logit sobre os 7
+    # estudos da Tabela 1 (p. 24). A tabela dá N e a taxa com 3 casas, não a contagem; a contagem é
+    # reconstruída como round(taxa x N), e a taxa de 3 casas admite mais de um inteiro (Lonsway: 1984 x .070
+    # = 138,9, e 138 e 139 cabem em .0695-.0705). Por isso só o ponto combinado é conta que confere; os
+    # limites do IC e a variante com 4,5% para Spohn et al. (o valor do texto, p. 12) são informativos.
+    tab_rel = "analysis/article-numbers/ferguson_malouff_2016_tabela1.csv"
+    tab = ler_csv(tab_rel)
+
+    def dl_logit(eventos):
+        """DerSimonian-Laird em logit: (proporção combinada, limite inferior, superior, Q)."""
+        y = [math.log(e / (int(t["n"]) - e)) for t, e in zip(tab, eventos)]
+        v = [1 / e + 1 / (int(t["n"]) - e) for t, e in zip(tab, eventos)]
+        w = [1 / x for x in v]
+        media = sum(a * b for a, b in zip(w, y)) / sum(w)
+        q_obs = sum(a * (b - media) ** 2 for a, b in zip(w, y))
+        tau2 = max(0.0, (q_obs - (len(y) - 1)) / (sum(w) - sum(a * a for a in w) / sum(w)))
+        ws = [1 / (x + tau2) for x in v]
+        mu = sum(a * b for a, b in zip(ws, y)) / sum(ws)
+        ep = 1 / math.sqrt(sum(ws))
+        z = 1.959963984540054
+        return (*(1 / (1 + math.exp(-x)) for x in (mu, mu - z * ep, mu + z * ep)), q_obs)
+
+    eventos = [round(int(t["n"]) * float(t["taxa"])) for t in tab]
+    p_dl, lo_dl, hi_dl, q_dl = dl_logit(eventos)
+    ent = f"{tab_rel}:eventos=round(taxa x N)={eventos}"
+    registra("ferguson_dl_tabela1", 1806, "5,2", "DerSimonian-Laird em logit, 7 estudos da Tabela 1", ent, p_dl, 100)
+    LINHAS.append(
+        {"id": "ferguson_dl_tabela1_ic", "linha_pt": 1806, "impresso": "", "formula": "IC95% e Q do mesmo modelo (informativo; a fonte imprime ,030 a ,089 e Q = 128)",
+         "entradas": ent, "calculado": f"{lo_dl:.4f};{hi_dl:.4f};Q={q_dl:.1f}", "bate": "informativo"}
+    )
+    spohn = [i for i, t in enumerate(tab) if t["estudo"].startswith("Spohn")][0]
+    alt = list(eventos)
+    alt[spohn] = round(int(tab[spohn]["n"]) * 0.045)
+    p_alt, lo_alt, hi_alt, q_alt = dl_logit(alt)
+    LINHAS.append(
+        {"id": "ferguson_dl_spohn_texto", "linha_pt": 1806, "impresso": "", "formula": "o mesmo modelo com 4,5% para Spohn et al. (texto, p. 12) em vez de ,137 (informativo)",
+         "entradas": f"{tab_rel}:eventos={alt}", "calculado": f"{p_alt:.4f};{lo_alt:.4f};{hi_alt:.4f};Q={q_alt:.1f}", "bate": "informativo"}
+    )
 
     with open(SAIDA, "w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=list(LINHAS[0]))

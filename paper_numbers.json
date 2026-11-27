@@ -30765,7 +30765,7 @@
   },
   {
    "id": "Tabela I1|Espanha franquista e transição, 1954 a 1979|Contagem citada e o que ela conta|0",
-   "class": "pending-source",
+   "class": "third-party",
    "printed": [
     {
      "line": 1698,
@@ -30773,11 +30773,21 @@
      "value": "12"
     }
    ],
-   "reason": "Fernández Turuelo (2024), Valladolid: PDF da UAM atrás de desafio antibot e Dialnet sem conexão em 2026-11-25; linha pagina-pendente em terceiros_transcritos.csv; retomar quando a página for lida"
+   "locator": {
+    "file": "analysis/article-numbers/terceiros_transcritos.csv",
+    "type": "csv",
+    "row": {
+     "linha_pt": "1698",
+     "impresso": "12"
+    },
+    "column": "valor_na_fonte",
+    "index": 0
+   },
+   "scripts": []
   },
   {
    "id": "Tabela I1|Espanha franquista e transição, 1954 a 1979|Contagem citada e o que ela conta|1",
-   "class": "pending-source",
+   "class": "third-party",
    "printed": [
     {
      "line": 1698,
@@ -30785,7 +30795,17 @@
      "value": "4"
     }
    ],
-   "reason": "Fernández Turuelo (2024), Valladolid: PDF da UAM atrás de desafio antibot e Dialnet sem conexão em 2026-11-25; linha pagina-pendente em terceiros_transcritos.csv; retomar quando a página for lida"
+   "locator": {
+    "file": "analysis/article-numbers/contas_do_texto.csv",
+    "type": "csv",
+    "row": {
+     "id": "fernandez_cuatro_l1698"
+    },
+    "column": "calculado"
+   },
+   "scripts": [
+    "analysis/article-numbers/contas_do_texto.py"
+   ]
   },
   {
    "id": "Tabela I1|Espanha franquista e transição, 1954 a 1979|Contagem citada e o que ela conta|2",
@@ -98845,7 +98865,7 @@
   },
   {
    "id": "l1291|23",
-   "class": "pending-source",
+   "class": "third-party",
    "printed": [
     {
      "line": 1291,
@@ -98853,7 +98873,17 @@
      "value": "30"
     }
    ],
-   "reason": "Pettis et al. (2022), https://doi.org/10.1086/721700: texto integral ainda não aberto; linha pagina-pendente em analysis/article-numbers/terceiros_transcritos.csv"
+   "locator": {
+    "file": "analysis/article-numbers/terceiros_transcritos.csv",
+    "type": "csv",
+    "row": {
+     "linha_pt": "1291",
+     "impresso": "30%"
+    },
+    "column": "valor_na_fonte",
+    "index": 0
+   },
+   "scripts": []
   },
   {
    "id": "l1291|2",
@@ -99241,7 +99271,7 @@
    ]
   },
   {
-   "id": "l1291|26",
+   "id": "l1291|29",
    "class": "third-party",
    "printed": [
     {
@@ -99263,7 +99293,7 @@
    "scripts": []
   },
   {
-   "id": "l1291|27",
+   "id": "l1291|30",
    "class": "third-party",
    "printed": [
     {
@@ -101025,7 +101055,7 @@
     {
      "line": 1822,
      "where": "text",
-     "value": "761"
+     "value": "762"
     }
    ],
    "locator": {
@@ -101253,8 +101283,7 @@
     {
      "line": 1221,
      "where": "text",
-     "value": "26,3",
-     "corrected": "26,4"
+     "value": "26,4"
     }
    ],
    "locator": {
@@ -126430,7 +126459,7 @@
   },
   {
    "id": "l1806|5",
-   "class": "pending-source",
+   "class": "third-party",
    "printed": [
     {
      "line": 1806,
@@ -126438,11 +126467,22 @@
      "value": "2,0"
     }
    ],
-   "reason": "Ferguson & Malouff (2016), Tabela 1 e p. 1189: fonte ainda não aberta (sem acesso; linha pagina-pendente em terceiros_transcritos.csv); leitura delegada, retomar quando a página for lida"
+   "locator": {
+    "file": "analysis/article-numbers/terceiros_transcritos.csv",
+    "type": "csv",
+    "row": {
+     "linha_pt": "1806",
+     "impresso": "2,0%"
+    },
+    "column": "valor_na_fonte",
+    "index": 1,
+    "number_format": "comma"
+   },
+   "scripts": []
   },
   {
    "id": "l1806|6",
-   "class": "pending-source",
+   "class": "third-party",
    "printed": [
     {
      "line": 1806,
@@ -126450,11 +126490,110 @@
      "value": "13,7"
     }
    ],
-   "reason": "Ferguson & Malouff (2016), Tabela 1 e p. 1189: fonte ainda não aberta (sem acesso; linha pagina-pendente em terceiros_transcritos.csv); leitura delegada, retomar quando a página for lida"
+   "locator": {
+    "file": "analysis/article-numbers/terceiros_transcritos.csv",
+    "type": "csv",
+    "row": {
+     "linha_pt": "1806",
+     "impresso": "13,7%"
+    },
+    "column": "valor_na_fonte",
+    "index": 1,
+    "number_format": "comma"
+   },
+   "scripts": []
+  },
+  {
+   "id": "l1806|7",
+   "class": "third-party",
+   "printed": [
+    {
+     "line": 1806,
+     "where": "text",
+     "value": "6"
+    }
+   ],
+   "locator": {
+    "file": "analysis/article-numbers/terceiros_transcritos.csv",
+    "type": "csv",
+    "row": {
+     "linha_pt": "1806",
+     "impresso": "128"
+    },
+    "column": "valor_na_fonte",
+    "index": 0
+   },
+   "scripts": []
   },
   {
    "id": "l1806|8",
-   "class": "pending-source",
+   "class": "third-party",
+   "printed": [
+    {
+     "line": 1806,
+     "where": "text",
+     "value": "128"
+    }
+   ],
+   "locator": {
+    "file": "analysis/article-numbers/terceiros_transcritos.csv",
+    "type": "csv",
+    "row": {
+     "linha_pt": "1806",
+     "impresso": "128"
+    },
+    "column": "valor_na_fonte",
+    "index": 1
+   },
+   "scripts": []
+  },
+  {
+   "id": "l1806|9",
+   "class": "third-party",
+   "printed": [
+    {
+     "line": 1806,
+     "where": "text",
+     "value": ",001"
+    }
+   ],
+   "locator": {
+    "file": "analysis/article-numbers/terceiros_transcritos.csv",
+    "type": "csv",
+    "row": {
+     "linha_pt": "1806",
+     "impresso": "128"
+    },
+    "column": "valor_na_fonte",
+    "index": 2
+   },
+   "scripts": []
+  },
+  {
+   "id": "l1806|10",
+   "class": "text-arithmetic",
+   "printed": [
+    {
+     "line": 1806,
+     "where": "text",
+     "value": "95"
+    }
+   ],
+   "locator": {
+    "file": "analysis/article-numbers/contas_do_texto.csv",
+    "type": "csv",
+    "row": {
+     "id": "ferguson_i2_de_q"
+    },
+    "column": "calculado"
+   },
+   "scripts": [
+    "analysis/article-numbers/contas_do_texto.py"
+   ]
+  },
+  {
+   "id": "l1806|11",
+   "class": "third-party",
    "printed": [
     {
      "line": 1806,
@@ -126462,11 +126601,22 @@
      "value": "13,7"
     }
    ],
-   "reason": "Ferguson & Malouff (2016), Tabela 1 e p. 1189: fonte ainda não aberta (sem acesso; linha pagina-pendente em terceiros_transcritos.csv); leitura delegada, retomar quando a página for lida"
+   "locator": {
+    "file": "analysis/article-numbers/terceiros_transcritos.csv",
+    "type": "csv",
+    "row": {
+     "linha_pt": "1806",
+     "impresso": "13,7%"
+    },
+    "column": "valor_na_fonte",
+    "index": 1,
+    "number_format": "comma"
+   },
+   "scripts": []
   },
   {
-   "id": "l1806|9",
-   "class": "pending-source",
+   "id": "l1806|12",
+   "class": "third-party",
    "printed": [
     {
      "line": 1806,
@@ -126474,10 +126624,20 @@
      "value": "4,5"
     }
    ],
-   "reason": "Ferguson & Malouff (2016), Tabela 1 e p. 1189: fonte ainda não aberta (sem acesso; linha pagina-pendente em terceiros_transcritos.csv); leitura delegada, retomar quando a página for lida"
+   "locator": {
+    "file": "analysis/article-numbers/terceiros_transcritos.csv",
+    "type": "csv",
+    "row": {
+     "linha_pt": "1806",
+     "impresso": "4,5%"
+    },
+    "column": "valor_na_fonte",
+    "index": 0
+   },
+   "scripts": []
   },
   {
-   "id": "l1806|13",
+   "id": "l1806|15",
    "class": "third-party",
    "printed": [
     {
@@ -126499,7 +126659,7 @@
    }
   },
   {
-   "id": "l1806|14",
+   "id": "l1806|16",
    "class": "third-party",
    "printed": [
     {
@@ -126654,11 +126814,11 @@
   }
  ],
  "sha256": {
-  "analysis/article-numbers/contas_do_texto.csv": "a864576add1219a28a558025dc13675e4e689f1b2e85c4db735a4b7a5965d680",
-  "analysis/article-numbers/contas_do_texto.py": "98c46bc523392590b2c8cb7cc856790a481d37bac0248a9070f61678b66403fe",
+  "analysis/article-numbers/contas_do_texto.csv": "1eed6c58f28bd5281bc7f97ea0475a54c6ece4fcf65716a6a120d1a38fd7cfa3",
+  "analysis/article-numbers/contas_do_texto.py": "05e1ba3e92b018e292e30dc3464d0523b14d60bddf69224fbdc5eea0c2655b62",
   "analysis/article-numbers/numeros_do_bruto.csv": "4b1ab55360a4943b3f4e6488e309e56e7a24bc184ade7ed77728c493b3cdb57f",
   "analysis/article-numbers/numeros_do_bruto.py": "e7c844631a1c9f3545c7f984c49e9848132cc1523d0eeedbdfcd5d6da8c8c891",
-  "analysis/article-numbers/terceiros_transcritos.csv": "fd9ef7f7da79e8f67f0f4f01000ea22af112e46f5c257656718561ccd4baa17f",
+  "analysis/article-numbers/terceiros_transcritos.csv": "9e07eca7b9971d64344ecae83bfec1ab2099f90079f089dd256718eebb53ed8d",
   "analysis/counterpoint/dados/lihs-checagem-ggb2016.META.md": "8aa0054f44041103884aa60f60f4131a7fb3b3fd57561ba8a8c6c6ef91f9dc2b",
   "analysis/counterpoint/frente-A-brasil.md": "45a8429190748dc0a6185979ccd64fb79ceed9c7be0087d4552dced5a51e724f",
   "analysis/discourse/governos/paises.csv": "2aa3394b65497120ce82af223f6dea24c2e48f315ebc7bde07ced8f4407cfe86",
@@ -126777,7 +126937,6 @@
   "data/sinan/sim_adultos.log": "5481d1be190e77e32b7e9bf449db1120b49fab3a82af13ef0d39cd9c174677ec",
   "data/sinan/triangulacao_pns_sinan.csv": "a70d4f8fb214e1eb0efc93595835ce647d1519e8e374c144850917ba523322fc",
   "data/sinan/triangulacao_pns_sinan.py": "7ce981e02c8d908e9575b322c22c0646d05ce7b23d3debbb7644292702f35f65",
-  "docs/corrections.md": "b50d1729738fa49076061a0b3141e9e4d6beb0c0244badfe0c1997526e08b27e",
   "figures/fontes/estudos_mortalidade.tsv": "61a8f7c623b61c42bf5ec82fbaa8bb700ea0e55a24a530cf7c52cfd459431ce9",
   "figures/fontes/estudos_mortalidade_origem.md": "f36115dc1ab94012877af4e336523d7c768e5b55ac35952e8ea65b5b04a7cfa1",
   "figures/make_figures.py": "aa4b17b68cbf93cfa7acf89ddfc838fd3d46c248b68216ba6791ce5542e1dc26",

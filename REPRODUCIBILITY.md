@@ -24,7 +24,7 @@ paper PDF (`docs/paper/`) is outside the seal, because the paper cites the repos
 
 ## Every number the article prints
 
-`paper_numbers.json` lists the 5,457 numbers printed in the Brazilian Portuguese edition of the article (the one the
+`paper_numbers.json` lists the 5,461 numbers printed in the Brazilian Portuguese edition of the article (the one the
 other editions are translated from). For each one it records the article line, the value as printed, the class of its
 origin and, when the class has one, the place in the repository that holds it: the file, the locator inside the file
 (CSV row and column, Markdown table section, row and column, JSON path, or a text pattern), the script that writes the
@@ -32,7 +32,7 @@ file, and the SHA-256 of both. The locators were written by reading each table a
 the value.
 
 ```bash
-python3 -I verify_paper_numbers.py           # 137 hashes + every located value at the printed precision
+python3 -I verify_paper_numbers.py           # 135 hashes + every located value at the printed precision
 python3 -I verify_paper_numbers.py --rerun   # also regenerates the outputs (scripts/reproduzir.py) and checks them
 ```
 
@@ -43,18 +43,15 @@ or a source value changed in a copy of the file, must fail.
 | Class | Printed numbers | Checked against |
 |---|---|---|
 | output | 4,437 | a file that a distributed script writes |
-| third-party | 313 | the transcription of the cited source, with page (`analysis/article-numbers/terceiros_transcritos.csv`); this proves the article copies the source correctly, not that the repository computes it |
+| third-party | 323 | the transcription of the cited source, with page (`analysis/article-numbers/terceiros_transcritos.csv`); this proves the article copies the source correctly, not that the repository computes it |
 | hand-written | 165 | a file no distributed script writes (pre-registration, its SHA-256 record, dated report, `analysis/discourse/midia/_estimativas.txt`); each entry states why |
-| text-arithmetic | 132 | the arithmetic the text does on published numbers, recomputed by `analysis/article-numbers/contas_do_texto.py` |
+| text-arithmetic | 133 | the arithmetic the text does on published numbers, recomputed by `analysis/article-numbers/contas_do_texto.py` |
 | parameter | 376 | not checked: a design choice (year, threshold, confidence level, pre-registration date), listed with its reason |
 | declared-limit | 23 | not checked: counts over the nominal LiHS spreadsheet, which is not distributed |
-| pending-source | 7 | not checked: cited source not yet opened (Fernández Turuelo, 2024; Pettis et al., 2022; Ferguson & Malouff, 2016) |
 | manual-conditional | 4 | not checked: Table H1 pages counted by publication date, which depends on the dating rule |
 
-One printed number is wrong in the frozen 1.3.0 edition: the lower bound of the finite-population interval in
-Appendix F, printed 26.3, is 26.4 (26.35 before rounding). Its entry carries the corrected value, and the verifier
-accepts it only because the erratum of 2026-11-25 in `docs/corrections.md` documents it and the calculation rounds to
-26.4, not to 26.3.
+The lower bound of the finite-population interval in Appendix F is 26.4 (26.35 before rounding). This edition prints
+26.4; the erratum of 2026-11-25 in `docs/corrections.md` records the 26.3 printed by the earlier edition.
 
 ## Track 1: light (derived data, a few minutes)
 
