@@ -1,5 +1,5 @@
 {
- "chain_hash": "fd7e9cbdef32526ea3dd9a1c5d00d6fd3b462727118b3ce805465e3c20fab4c8",
+ "chain_hash": "63a682e25e1e8c67333b5bcac239d651cc535cfd87867b53588f77d68859330c",
  "n_arquivos": 762,
  "arquivos": [
   {
@@ -20,7 +20,7 @@
   },
   {
    "arquivo": "CITATION.cff",
-   "sha256": "1d5dc742719b41201944ecdbfa3fe09525da2e8093e69c60af317b478f83c80e"
+   "sha256": "20e7ae236ad4a646d5a0a3958e27e03dc8ba1be3508fd5456560266362c007a5"
   },
   {
    "arquivo": "CONTRIBUTING.md",
@@ -1436,7 +1436,7 @@
   },
   {
    "arquivo": "codemeta.json",
-   "sha256": "eca777a0bfc710c2d04cefc1b778e7c42a692308bffd8b1636f4536fee9a268f"
+   "sha256": "218295bc4f4978886e1c048ce28e0f17a9052b08a6d1b7dcca432cb351c98f86"
   },
   {
    "arquivo": "colab/replication.ipynb",
@@ -2828,7 +2828,7 @@
   },
   {
    "arquivo": "manifest/SHA256SUMS.txt",
-   "sha256": "c9894909fb4740b070e04e5f5b5575a04e9106e83f3b1f8d5e0f40446f8f4d8b"
+   "sha256": "6eebbf2389c9f04de6382ce201668a2986845c89a44c24588fc4580e8134200f"
   },
   {
    "arquivo": "paper_numbers.json",
