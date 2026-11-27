@@ -1,13 +1,13 @@
 {
-  "run_id": "20261126T111925Z",
-  "created_utc": "2026-11-26T11:19:25.241092+00:00",
+  "run_id": "20261127T004420Z",
+  "created_utc": "2026-11-27T00:44:20.133399+00:00",
   "command": "python run_all.py --selar && python scripts/registra_run.py",
   "git": {
-    "commit": "2098b48114c010a081a179aa9e2a5b735847bf2e",
+    "commit": "0675aeeaddba418310a81da14a108d83214ce394",
     "working_tree_dirty": false
   },
-  "chain_hash": "3f4baaec2c3103179a9e64db95382fd7e940891722cad75b04f7ed9f8b4c4e2b",
-  "sealed_files": 761,
+  "chain_hash": "fd7e9cbdef32526ea3dd9a1c5d00d6fd3b462727118b3ce805465e3c20fab4c8",
+  "sealed_files": 762,
   "environment": {
     "platform": "macOS-26.7.3-arm64-arm-64bit-Mach-O",
     "python_version": "3.14.10",
