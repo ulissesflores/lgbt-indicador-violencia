@@ -13,6 +13,8 @@
 [![Python 3.12+](https://img.shields.io/badge/python-3.12%2B-blue.svg)](pyproject.toml)
 [![tests](https://img.shields.io/badge/tests-195_passing-brightgreen.svg)](tests/)
 [![verify](https://github.com/ulissesflores/lgbt-indicador-violencia/actions/workflows/verify.yml/badge.svg)](https://github.com/ulissesflores/lgbt-indicador-violencia/actions/workflows/verify.yml)
+[![REUSE compliant](https://img.shields.io/badge/REUSE-compliant-green.svg)](REUSE.toml)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/ulissesflores/lgbt-indicador-violencia/badge)](https://scorecard.dev/viewer/?uri=github.com/ulissesflores/lgbt-indicador-violencia)
 [![reproducible](https://img.shields.io/badge/reproducible-SHA--256_chain-blueviolet.svg)](output/hash-chain.md)
 [![pre-registered](https://img.shields.io/badge/pre--registered-8_components-8250DF.svg)](REPRODUCIBILITY.md#pre-registrations)
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ulissesflores/lgbt-indicador-violencia/blob/main/colab/replication.ipynb)
@@ -167,9 +169,15 @@ python3 -I make_provenance.py --verify
 
 </div>
 
-די בספריית הסטנדרט. שתי תיקיות נשארות מחוץ לחותם בכוונה: `docs/paper/`, שנבדקת על ידי
-[`SHA256SUMS.txt`](docs/paper/SHA256SUMS.txt) משלה, ו־`assets/demo/`, שההקלטה בה מציגה את ערך הגיבוב של השרשרת ונעשית
-אחרי החותם.
+די בספריית הסטנדרט. ארבע תיקיות נשארות מחוץ לחותם בכוונה: `docs/paper/`, שנבדקת על ידי
+[`SHA256SUMS.txt`](docs/paper/SHA256SUMS.txt) משלה; `assets/demo/`, שההקלטה בה מציגה את ערך הגיבוב של השרשרת ונעשית
+אחרי החותם; `runs/`, התיעוד של ההרצה החתומה; ו־`timestamps/`, חותמות הזמן של החותם.
+
+שלוש בדיקות אינן דורשות אמון במחבר. לקובצי החותם של ה־commit `e68396f` יש חותמת זמן בביטקוין (OpenTimestamps)
+וחותמת זמן של רשות לפי RFC 3161 ([`timestamps/`](timestamps/README.md)). בכל push ל־`main`, GitHub Actions חותם
+על הצהרת מקור (attestation) של הבנייה עבור קובצי החותם
+(`gh attestation verify manifest/SHA256SUMS.txt -R ulissesflores/lgbt-indicador-violencia`). הרישיון של כל קובץ מופיע
+בפורמט קריא למכונה ב־[`REUSE.toml`](REUSE.toml) ונבדק על ידי `reuse lint` באותו workflow.
 
 ## מה יש במאגר הזה
 
@@ -179,6 +187,7 @@ python3 -I make_provenance.py --verify
 | `analysis/` | שאר הניתוחים שהמאמר נשען עליהם: ביקורת על רשימת Grupo Gay da Bahia (`ggb-audit/`, `ggb-series/`, `counterpoint/`), עוצמה סטטיסטית ועלות של הסקר (`survey-cost/`), סימולציה של יכולת הזיהוי (`simulation/`), שיח ציבורי (`discourse/`), בדיקות חוסן (`robustness/`), ציוני אידאולוגיה (`ideology/`), ספרות (`literature/`, `full-text/`) |
 | `figures/` | קוד ונתונים לכל איור (`make_figures.py`, `fontes/` עם הערכים המוצגים) והאיורים של המאמר (`article/`) |
 | `preregistrations/` | רישומים מוקדמים עם חותמות הזמן וערכי ה־SHA-256 שלהם, כפי שהם מצוטטים במאמר |
+| `timestamps/` | חותמות זמן עצמאיות של הרישומים המוקדמים ושל החותם (OpenTimestamps ו־RFC 3161), עם הפקודות לבדוק אותן |
 | `sources/` | עותקים של מקורות ציבוריים שהסקריפטים משתמשים בהם (`public/`), פנקסי המקורות (`ledgers/`) ורבעוני כתבי העת |
 | `manifest/` | מניפסט המקורות (URL, תאריך גישה, וכאשר נשמר קובץ, SHA-256), המלאי הציבורי וסכומי הביקורת של החותם |
 | `docs/` | שחזוריות ומיקום כל תוצאה (`reproducibility-and-result-locations.md`), שימוש במודלי שפה (`language-model-use.md`) ותיקונים (`corrections.md`), באנגלית ובפורטוגזית (`.pt-BR.md`); המאמר (`paper/`) |
@@ -233,7 +242,8 @@ python3 -I make_provenance.py --verify
 קוד: Apache-2.0 ([`LICENSE`](LICENSE), [`LICENSES/Apache-2.0.txt`](LICENSES/Apache-2.0.txt)). נתונים נגזרים, טקסט
 ואיורים: CC BY 4.0 ([`LICENSES/CC-BY-4.0.txt`](LICENSES/CC-BY-4.0.txt)). סימן Codex Hash Research Laboratory
 (`assets/brand/lab-lockup-*.png`) אינו מכוסה באף אחד משני הרישיונות. המיקרו־נתונים הרשמיים של IBGE, DATASUS ו־TSE
-כפופים לתנאים שלהם ואינם מופצים מחדש. ראו [`NOTICE`](NOTICE).
+כפופים לתנאים שלהם ואינם מופצים מחדש. ראו [`NOTICE`](NOTICE). הרישיון של כל קובץ, כולל הנתונים והתעודות של
+צד שלישי, מופיע ב־[`REUSE.toml`](REUSE.toml).
 
 ## מקורות עוגן
 

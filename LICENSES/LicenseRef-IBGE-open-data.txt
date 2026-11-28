@@ -1,0 +1,5 @@
+Official statistics published by the Instituto Brasileiro de Geografia e Estatística (IBGE)
+through the SIDRA API (https://apisidra.ibge.gov.br), included here unchanged as open public data
+because they are needed to recompute the results. They are not authored by this project and are
+not covered by the project's licences; the terms of use of the source (IBGE) apply. Cite IBGE and
+the SIDRA table number when reusing them.

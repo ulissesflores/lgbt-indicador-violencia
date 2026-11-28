@@ -1,0 +1,5 @@
+Codex Hash Research Laboratory mark (assets/brand/lab-lockup-light.png, the laboratory's original
+file, and assets/brand/lab-lockup-dark.png, derived from it). Copyright 2026 Codex Hash Ltda.
+All rights reserved. The mark is outside the Apache-2.0 and CC-BY-4.0 licences of this package:
+it is distributed only so that the README renders, and it may not be reused, modified or
+redistributed outside this package without written permission.

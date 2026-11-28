@@ -1,0 +1,4 @@
+Public certificate material published by the FreeTSA time-stamping service (https://freetsa.org)
+for the purpose of verifying RFC 3161 time-stamp responses. It is reproduced here byte for byte,
+unmodified, so that the proofs in timestamps/ can be checked offline. It is not authored by this
+project and is not covered by the project's licences.

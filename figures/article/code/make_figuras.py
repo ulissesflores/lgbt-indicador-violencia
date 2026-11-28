@@ -869,7 +869,7 @@ def figura13() -> None:
     t = ler_triangulacao()
     linhas = [("PNS 2019, direto no microdado\n(quem respondeu hetero ou LGB+)", t["direto"], estat_cheio, None),
               ("PNS 2019, simulação\n(só quem respondeu a orientação)", t["mc"]["A"], estat_vazado, None),
-              ("PNS 2019, simulação\n(denominador antigo do projeto)", t["mc"]["B"], estat_vazado, None),
+              ("PNS 2019, simulação\n(todos os não-LGB+ no denominador)", t["mc"]["B"], estat_vazado, None),
               ("Sinan 2023\n(fichas com orientação válida)", None, None, 2023),
               ("Sinan 2024\n(fichas com orientação válida)", None, None, 2024)]
     fig, ax = plt.subplots(figsize=(7.2, 3.7))
@@ -2050,7 +2050,7 @@ EN = {
     "LGB+ na população adulta: {}%": "LGB+ in the adult population: {}%",
     "PNS {}, direto no microdado (quem respondeu hetero ou LGB+)": "PNS {}, direct from microdata\n(respondents who said heterosexual or LGB+)",
     "PNS {}, simulação (só quem respondeu a orientação)": "PNS {}, simulation\n(only respondents who reported orientation)",
-    "PNS {}, simulação (denominador antigo do projeto)": "PNS {}, simulation\n(project's earlier denominator)",
+    "PNS {}, simulação (todos os não-LGB+ no denominador)": "PNS {}, simulation\n(all non-LGB+ in the denominator)",
     "Sinan {} (fichas com orientação válida)": "Sinan {}\n(records with valid orientation)",
     "LGB+ entre as vítimas adultas de violência física (%)": "LGB+ share of adult victims of physical violence (%)",
     "estimativa [faixa]": "estimate [interval]",

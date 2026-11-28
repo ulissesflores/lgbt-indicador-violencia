@@ -1,10 +1,14 @@
 {
- "chain_hash": "63a682e25e1e8c67333b5bcac239d651cc535cfd87867b53588f77d68859330c",
- "n_arquivos": 762,
+ "chain_hash": "3fd2c2bf9c6c5f6a607e32360255d8a7f4cf526ecc30e0531f236d400ba86264",
+ "n_arquivos": 768,
  "arquivos": [
   {
+   "arquivo": ".github/workflows/scorecard.yml",
+   "sha256": "3688ca515b7da4c4c5df72b32e885061d879f9c64e63f3c221552b0f83c94d66"
+  },
+  {
    "arquivo": ".github/workflows/verify.yml",
-   "sha256": "bda65cf429fcb7603230dbf53e42926df54c0bc953e54133dc94a659569482f1"
+   "sha256": "8cafec1b5fe2fee5095b3fa8f235363072ad1c0a3ca9d9f543f21732c30e12a5"
   },
   {
    "arquivo": ".gitignore",
@@ -39,32 +43,52 @@
    "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
   },
   {
+   "arquivo": "LICENSES/CC0-1.0.txt",
+   "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499"
+  },
+  {
+   "arquivo": "LICENSES/LicenseRef-CodexHash-mark.txt",
+   "sha256": "cb183ff759d150fc6b77befd274d4b43e85622c18ed6419d38d175698f9234d1"
+  },
+  {
+   "arquivo": "LICENSES/LicenseRef-FreeTSA-public-certificate.txt",
+   "sha256": "f93512556654b442c0d7dac029204f92b3fa83e9ddd180e9084f03d077eec8ac"
+  },
+  {
+   "arquivo": "LICENSES/LicenseRef-IBGE-open-data.txt",
+   "sha256": "7b46a21066c625cc2eb08bb1872773b40eb3936c9015220041ad255c86286dab"
+  },
+  {
    "arquivo": "NOTICE",
-   "sha256": "21702d4099f502359df5d3a43671472a636818bc1609486e8d6dae9a12b9ee7b"
+   "sha256": "7dfed72e39f48a757ff4fe3fda40750187b70b0f21bf436d77245b4f94a17d21"
   },
   {
    "arquivo": "README.es.md",
-   "sha256": "10dc1744f76a307c069d3f68472f7154bda9437da7d0c1c5c35eb1128274cf97"
+   "sha256": "97eefad368fa69d97c20c632834f2521cbca682fb9ba8891fc1a1db1d5fd159e"
   },
   {
    "arquivo": "README.he.md",
-   "sha256": "f4d782aac67d1421aabab6c7e23f26335f7225828c97dc3e51255f93e2fcfac2"
+   "sha256": "8a834de4b8833621a7cb84ff87a3b1d8ecf9624dbf97fa5836372a2f803d8725"
   },
   {
    "arquivo": "README.it.md",
-   "sha256": "5da87018fa7eb813a102b72576d2b773ad798fd887973ee3aed421ba9a551ce3"
+   "sha256": "77d2294ecf982a8ec9840b27a60b4b1edc97d5575c25ec63e58df5f480cac967"
   },
   {
    "arquivo": "README.md",
-   "sha256": "9651096fed3c3267ab7cab10762e6966e84e4b4b17086df3cc7383fde5f78b4c"
+   "sha256": "b8ccbdbe78f74a77275ae05a412152e7912cf7cf6d96163f66442bc82d53c7fc"
   },
   {
    "arquivo": "README.pt-BR.md",
-   "sha256": "9a99c011e67f2dd55e8897c2da9ae02c16bc18c7e392c878df92a49e5946146f"
+   "sha256": "e59aa3cd81b6cab52c33365c080f701ee5948c7d7b5545d5787b79679df28f90"
   },
   {
    "arquivo": "REPRODUCIBILITY.md",
    "sha256": "910078655b23a9c18be011a091cdf86010a60e7a8daf7f9c8e342bff1db37c0b"
+  },
+  {
+   "arquivo": "REUSE.toml",
+   "sha256": "a376af36af8edb98244eaa744cf7c4082f4ec6002b66c6f82664c43346d863ec"
   },
   {
    "arquivo": "SECURITY.md",
@@ -2256,7 +2280,7 @@
   },
   {
    "arquivo": "docs/corrections-files.tsv",
-   "sha256": "378e2f13b88d1659b55455db23fc2a47459e52491c6a73934d389008ee36d2a6"
+   "sha256": "5f7c7250222a1fbfa34cd00218b6bd429a3a7ea82fd5eb9b6e13453a8acf40ba"
   },
   {
    "arquivo": "docs/corrections.md",
@@ -2284,7 +2308,7 @@
   },
   {
    "arquivo": "figures/SHA256SUMS",
-   "sha256": "1ad528cd9136276c6d51cddadc929e5900fc8728e721d1b6991bd59e15e67f30"
+   "sha256": "5352cfcfb7dcf427d74a1eb975fe59f7a67759f70e90b9e52722c58b03afe185"
   },
   {
    "arquivo": "figures/article/code/README.md",
@@ -2296,7 +2320,7 @@
   },
   {
    "arquivo": "figures/article/code/make_figuras.py",
-   "sha256": "a5dfa7cb472bdea206246892a0d76c6850cef815205b608d9d28ff2a14624f84"
+   "sha256": "cda094276d266d6032991642188895238b9fb1d5f09e21e93e999432d8d74c8a"
   },
   {
    "arquivo": "figures/article/code/make_figuras_v05.py",
@@ -2304,19 +2328,19 @@
   },
   {
    "arquivo": "figures/article/code/rotulos/es.json",
-   "sha256": "f9e002e772286de224e7af43d64df4fc21990e7659ee8ac235b5ea1f3dd9d763"
+   "sha256": "c04b5aa92fac44454482b5116fd1aa6b0baac5ea73f5e5e67b154e951a96b19c"
   },
   {
    "arquivo": "figures/article/code/rotulos/fonte-pt-en.json",
-   "sha256": "79eafbd947d604e0afb4d790d34439b553380c85d0130b6bc7c3493daaf90414"
+   "sha256": "a26eb98d50988b6e7c9bd80fa4fc71be0c7e8610d8c8b537796ba02fb68f67b6"
   },
   {
    "arquivo": "figures/article/code/rotulos/he.json",
-   "sha256": "6c492cf59210262332eaafe9b3c5735be461fcf0c6634ee144b6b4bf6561546b"
+   "sha256": "6221cc3ea663d57b8480042267f238f861e6720c558bd9a26d603b46cfa6342b"
   },
   {
    "arquivo": "figures/article/code/rotulos/it.json",
-   "sha256": "48c7cd32a15990c0447fa1f2059f2cb97b63199777ae935e1d1b981abc994024"
+   "sha256": "097085b0893ccc9a352ffbfaf4811fb2df0271c6a211b335f1c95cd2b8f87e63"
   },
   {
    "arquivo": "figures/article/fig10_identificabilidade.png",
@@ -2380,15 +2404,15 @@
   },
   {
    "arquivo": "figures/fig13_pns_sinan_janelas.pdf",
-   "sha256": "59e888851fc577d94e92c1c8aba915f2a933f066363f06cee2c743127457676c"
+   "sha256": "13417b3f16ed7bdd81eb6d61fa4554da9c4aaa051168e3e2b1de13e1b9595fe7"
   },
   {
    "arquivo": "figures/fig13_pns_sinan_janelas.png",
-   "sha256": "431f750f5f52ab40f36216e2ca965e7e80204b501f729b8f969227aec076d5fd"
+   "sha256": "0f325fd2cafb78296f6daae7b67b0f9255a24e7c21771c48f3a8747fb77d947e"
   },
   {
    "arquivo": "figures/fig13_pns_sinan_janelas.svg",
-   "sha256": "016ca8ae96d98c3a7162fae8cfc7336a20b46ff2ce467902a2370c17fab7d895"
+   "sha256": "9d302884b017d4ab8ecc934e2496f210603b31c9df8cdfc68f874355ece08be7"
   },
   {
    "arquivo": "figures/fig14_concordancia_sinan_anuario.pdf",
@@ -2800,7 +2824,7 @@
   },
   {
    "arquivo": "figures/make_figures.py",
-   "sha256": "aa4b17b68cbf93cfa7acf89ddfc838fd3d46c248b68216ba6791ce5542e1dc26"
+   "sha256": "74f270a090543fb5cbabb37eb081901bc29c03cdc6f994769da4f096612b7aa7"
   },
   {
    "arquivo": "figures/textos_fora_da_imagem.json",
@@ -2812,7 +2836,7 @@
   },
   {
    "arquivo": "make_provenance.py",
-   "sha256": "32f83a5a844d448a5eb936bcf0c9d2284700f430bd3c31779a86fdc223d41291"
+   "sha256": "cec22986a3f5aa7959da148db6a6c48bcc2f4de3e7f9cd83b7da1a32b611b0b9"
   },
   {
    "arquivo": "manifest/INVENTARIO-PUBLICO.json",
@@ -2828,11 +2852,11 @@
   },
   {
    "arquivo": "manifest/SHA256SUMS.txt",
-   "sha256": "6eebbf2389c9f04de6382ce201668a2986845c89a44c24588fc4580e8134200f"
+   "sha256": "59e61ef791f226120f4c4433bb22c1c1090e2e9848e911ba2622ef09dee1d1f5"
   },
   {
    "arquivo": "paper_numbers.json",
-   "sha256": "bcb47cfba097a30904f0e11ce4aebb95c97cea56f93fb29d4a99f7e0252fa4ab"
+   "sha256": "1aab2e217cc01015715c3f2d4fa146c743159d9e58d4f223f3953659c430f8dc"
   },
   {
    "arquivo": "preregistrations/governos/PRE-REGISTRO-COM-ADENDO.sha256",

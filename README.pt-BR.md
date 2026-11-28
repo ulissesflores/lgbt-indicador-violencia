@@ -13,6 +13,8 @@
 [![Python 3.12+](https://img.shields.io/badge/python-3.12%2B-blue.svg)](pyproject.toml)
 [![tests](https://img.shields.io/badge/tests-195_passing-brightgreen.svg)](tests/)
 [![verify](https://github.com/ulissesflores/lgbt-indicador-violencia/actions/workflows/verify.yml/badge.svg)](https://github.com/ulissesflores/lgbt-indicador-violencia/actions/workflows/verify.yml)
+[![REUSE compliant](https://img.shields.io/badge/REUSE-compliant-green.svg)](REUSE.toml)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/ulissesflores/lgbt-indicador-violencia/badge)](https://scorecard.dev/viewer/?uri=github.com/ulissesflores/lgbt-indicador-violencia)
 [![reproducible](https://img.shields.io/badge/reproducible-SHA--256_chain-blueviolet.svg)](output/hash-chain.md)
 [![pre-registered](https://img.shields.io/badge/pre--registered-8_components-8250DF.svg)](REPRODUCIBILITY.md#pre-registrations)
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ulissesflores/lgbt-indicador-violencia/blob/main/colab/replication.ipynb)
@@ -155,9 +157,15 @@ distribuídos: código, testes, dados, pré-registros e resultados derivados. Pa
 python3 -I make_provenance.py --verify
 ```
 
-Basta a biblioteca padrão. Duas pastas ficam fora do selo por construção: `docs/paper/`, conferida pelo seu próprio
-[`SHA256SUMS.txt`](docs/paper/SHA256SUMS.txt), e `assets/demo/`, cuja gravação mostra o hash da cadeia e é feita
-depois do selo.
+Basta a biblioteca padrão. Quatro pastas ficam fora do selo por construção: `docs/paper/`, conferida pelo seu
+próprio [`SHA256SUMS.txt`](docs/paper/SHA256SUMS.txt); `assets/demo/`, cuja gravação mostra o hash da cadeia e é feita
+depois do selo; `runs/`, o registro da execução selada; e `timestamps/`, os carimbos de tempo do selo.
+
+Três verificações não dependem de confiar no autor. Os arquivos do selo do commit `e68396f` têm carimbo de tempo no
+Bitcoin (OpenTimestamps) e de uma autoridade RFC 3161 ([`timestamps/`](timestamps/README.md)). A cada push na
+`main`, o GitHub Actions assina uma atestação de proveniência do build dos arquivos do selo
+(`gh attestation verify manifest/SHA256SUMS.txt -R ulissesflores/lgbt-indicador-violencia`). A licença de cada arquivo está em
+formato legível por máquina em [`REUSE.toml`](REUSE.toml) e é conferida por `reuse lint` no mesmo workflow.
 
 ## Organização
 
@@ -167,6 +175,7 @@ depois do selo.
 | `analysis/` | As demais análises em que o artigo se apoia: auditoria da lista do Grupo Gay da Bahia (`ggb-audit/`, `ggb-series/`, `counterpoint/`), poder estatístico e custo da pesquisa (`survey-cost/`), simulação de identificabilidade (`simulation/`), discurso público (`discourse/`), testes de robustez (`robustness/`), escores de ideologia (`ideology/`), literatura (`literature/`, `full-text/`) |
 | `figures/` | Código e dados de cada figura (`make_figures.py`, `fontes/` com os valores plotados) e as figuras do artigo (`article/`) |
 | `preregistrations/` | Pré-registros com seus carimbos de tempo e SHA-256, conforme citados no artigo |
+| `timestamps/` | Carimbos de tempo independentes dos pré-registros e do selo (OpenTimestamps e RFC 3161), com os comandos para conferi-los |
 | `sources/` | Cópias de fontes públicas usadas pelos scripts (`public/`), os registros de fontes (`ledgers/`) e os quartis de periódicos |
 | `manifest/` | Manifesto de fontes (URL, data de acesso e, quando um arquivo foi salvo, SHA-256), inventário público e as somas de verificação do selo |
 | `docs/` | Reprodutibilidade e localização de cada resultado (`reproducibility-and-result-locations.pt-BR.md`), uso de modelos de linguagem (`language-model-use.pt-BR.md`) e correções (`corrections.pt-BR.md`), cada um com a versão em inglês (sem o sufixo `.pt-BR`); o artigo (`paper/`) |
@@ -220,7 +229,8 @@ O botão "Cite this repository" do GitHub lê o [`CITATION.cff`](CITATION.cff).
 Código: Apache-2.0 ([`LICENSE`](LICENSE), [`LICENSES/Apache-2.0.txt`](LICENSES/Apache-2.0.txt)). Dados derivados, texto e
 figuras: CC BY 4.0 ([`LICENSES/CC-BY-4.0.txt`](LICENSES/CC-BY-4.0.txt)). A marca do Codex Hash Research Laboratory
 (`assets/brand/lab-lockup-*.png`) não está coberta por nenhuma das duas licenças. Os microdados oficiais do IBGE, do
-DATASUS e do TSE mantêm seus próprios termos e não são redistribuídos. Veja [`NOTICE`](NOTICE).
+DATASUS e do TSE mantêm seus próprios termos e não são redistribuídos. Veja [`NOTICE`](NOTICE). A licença de cada
+arquivo, inclusive dos dados e certificados de terceiros, está em [`REUSE.toml`](REUSE.toml).
 
 ## Referências-âncora
 

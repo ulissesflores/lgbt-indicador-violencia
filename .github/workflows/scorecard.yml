@@ -1,0 +1,60 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+#
+# OpenSSF Scorecard: score the repository's supply-chain practices and publish the result.
+#
+# Keeps pinned actions, minimal token permissions and branch protection visible and checked by a
+# third party (https://scorecard.dev). It runs on a push to main, when branch protection changes,
+# and on demand; there is no schedule, so nothing runs unless the repository changes.
+#
+# Inputs
+# ------
+# - the repository and its settings, read by ossf/scorecard-action
+#
+# Outputs
+# -------
+# - SARIF in the repository's Security tab and the public Scorecard result
+# - no files are written to the repository
+#
+# Usage
+# -----
+# Run by GitHub Actions; by hand from the Actions tab (workflow_dispatch).
+#
+# Status
+# ------
+# No registration status is claimed for this file.
+#
+# Author
+# ------
+# Carlos Ulisses Flores (Codex Hash Research Laboratory),
+# ORCID https://orcid.org/0000-0002-6034-7765.
+# Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+
+name: scorecard
+on:
+  branch_protection_rule:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions: read-all
+jobs:
+  analysis:
+    name: scorecard analysis
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+      id-token: write
+      contents: read
+      actions: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: ossf/scorecard-action@23f22cd43608bae7a1f1fa2603d7314dee9538a5 # v2.6.0
+        with:
+          results_file: results.sarif
+          results_format: sarif
+          publish_results: true
+      - uses: github/codeql-action/upload-sarif@915412ff23e8b7659517e607487dbeae018f2934 # v4.39.5
+        with:
+          sarif_file: results.sarif

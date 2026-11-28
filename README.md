@@ -13,6 +13,8 @@
 [![Python 3.12+](https://img.shields.io/badge/python-3.12%2B-blue.svg)](pyproject.toml)
 [![tests](https://img.shields.io/badge/tests-195_passing-brightgreen.svg)](tests/)
 [![verify](https://github.com/ulissesflores/lgbt-indicador-violencia/actions/workflows/verify.yml/badge.svg)](https://github.com/ulissesflores/lgbt-indicador-violencia/actions/workflows/verify.yml)
+[![REUSE compliant](https://img.shields.io/badge/REUSE-compliant-green.svg)](REUSE.toml)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/ulissesflores/lgbt-indicador-violencia/badge)](https://scorecard.dev/viewer/?uri=github.com/ulissesflores/lgbt-indicador-violencia)
 [![reproducible](https://img.shields.io/badge/reproducible-SHA--256_chain-blueviolet.svg)](output/hash-chain.md)
 [![pre-registered](https://img.shields.io/badge/pre--registered-8_components-8250DF.svg)](REPRODUCIBILITY.md#pre-registrations)
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ulissesflores/lgbt-indicador-violencia/blob/main/colab/replication.ipynb)
@@ -154,9 +156,15 @@ data, pre-registrations and derived results. To check that nothing changed since
 python3 -I make_provenance.py --verify
 ```
 
-It needs only the standard library. Two folders stay outside the seal by design: `docs/paper/`, checked by its own
-[`SHA256SUMS.txt`](docs/paper/SHA256SUMS.txt), and `assets/demo/`, whose recording shows the chain hash and is made
-after the seal.
+It needs only the standard library. Four folders stay outside the seal by design: `docs/paper/`, checked by its
+own [`SHA256SUMS.txt`](docs/paper/SHA256SUMS.txt); `assets/demo/`, whose recording shows the chain hash and is made
+after the seal; `runs/`, the record of the sealed run; and `timestamps/`, the time-stamps of the seal.
+
+Three checks do not depend on trusting the author. The seal files of commit `e68396f` are time-stamped in Bitcoin
+(OpenTimestamps) and by an RFC 3161 authority ([`timestamps/`](timestamps/README.md)). On every push to `main`,
+GitHub Actions signs a build-provenance attestation of the seal files
+(`gh attestation verify manifest/SHA256SUMS.txt -R ulissesflores/lgbt-indicador-violencia`). The licence of every file is
+machine-readable in [`REUSE.toml`](REUSE.toml) and checked by `reuse lint` in the same workflow.
 
 ## Layout
 
@@ -166,6 +174,7 @@ after the seal.
 | `analysis/` | The other analyses the paper relies on: audit of the Grupo Gay da Bahia list (`ggb-audit/`, `ggb-series/`, `counterpoint/`), survey power and cost (`survey-cost/`), identifiability simulation (`simulation/`), public discourse (`discourse/`), robustness checks (`robustness/`), ideology scores (`ideology/`), literature (`literature/`, `full-text/`) |
 | `figures/` | Code and data for every figure (`make_figures.py`, `fontes/` with the plotted values) and the figures of the paper (`article/`) |
 | `preregistrations/` | Pre-registrations with their timestamps and SHA-256, as cited in the paper |
+| `timestamps/` | Independent time-stamps of the pre-registrations and the seal (OpenTimestamps and RFC 3161), with the commands to check them |
 | `sources/` | Public source copies used by the scripts (`public/`), the source ledgers (`ledgers/`) and journal quartiles |
 | `manifest/` | Source manifest (URL, access date and, when a file was saved, SHA-256), public inventory and the seal's checksums |
 | `docs/` | Reproducibility and where each result lives (`reproducibility-and-result-locations.md`), use of language models (`language-model-use.md`) and corrections (`corrections.md`), each with a Portuguese version (`.pt-BR.md`); the paper (`paper/`) |
@@ -218,7 +227,8 @@ GitHub's "Cite this repository" button reads [`CITATION.cff`](CITATION.cff).
 Code: Apache-2.0 ([`LICENSE`](LICENSE), [`LICENSES/Apache-2.0.txt`](LICENSES/Apache-2.0.txt)). Derived data, text and
 figures: CC BY 4.0 ([`LICENSES/CC-BY-4.0.txt`](LICENSES/CC-BY-4.0.txt)). The Codex Hash Research Laboratory mark
 (`assets/brand/lab-lockup-*.png`) is not covered by either licence. Official microdata from IBGE, DATASUS and TSE keep
-their own terms and are not redistributed. See [`NOTICE`](NOTICE).
+their own terms and are not redistributed. See [`NOTICE`](NOTICE). The licence of each file, including the
+third-party data and certificates, is listed in [`REUSE.toml`](REUSE.toml).
 
 ## Anchor references
 

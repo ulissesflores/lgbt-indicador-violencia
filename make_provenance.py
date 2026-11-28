@@ -107,7 +107,9 @@ NOMINAIS = re.compile(
 # selada (scripts/registra_run.py), que grava o próprio chain_hash (dentro do selo seria circular)
 # assets/demo/: GIF do README gravado DEPOIS do selo, mostrando o chain_hash (dentro seria
 # circular); sem texto analisado, o pente de privacidade dele é à mão (quadros do GIF e o .tape)
-EXCLUI_PAPER_DIRS = ("paper/", "docs/paper/", "runs/", "assets/demo/")
+# timestamps/: carimbos OpenTimestamps e RFC 3161 SOBRE o selo de um commit anterior (dentro do
+# selo seria circular); os certificados da FreeTSA trazem e-mail do terceiro e não se editam
+EXCLUI_PAPER_DIRS = ("paper/", "docs/paper/", "runs/", "assets/demo/", "timestamps/")
 EXCLUI_PAPER_ARQ: set[str] = set()
 # uv.lock: lockfile vazio que o uv cria ao rodar na pasta; o ambiente travado é requirements.lock
 # e o .gitignore já o deixa fora do git (selado e fora do git quebraria o --verify num clone);

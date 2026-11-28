@@ -13,6 +13,8 @@
 [![Python 3.12+](https://img.shields.io/badge/python-3.12%2B-blue.svg)](pyproject.toml)
 [![tests](https://img.shields.io/badge/tests-195_passing-brightgreen.svg)](tests/)
 [![verify](https://github.com/ulissesflores/lgbt-indicador-violencia/actions/workflows/verify.yml/badge.svg)](https://github.com/ulissesflores/lgbt-indicador-violencia/actions/workflows/verify.yml)
+[![REUSE compliant](https://img.shields.io/badge/REUSE-compliant-green.svg)](REUSE.toml)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/ulissesflores/lgbt-indicador-violencia/badge)](https://scorecard.dev/viewer/?uri=github.com/ulissesflores/lgbt-indicador-violencia)
 [![reproducible](https://img.shields.io/badge/reproducible-SHA--256_chain-blueviolet.svg)](output/hash-chain.md)
 [![pre-registered](https://img.shields.io/badge/pre--registered-8_components-8250DF.svg)](REPRODUCIBILITY.md#pre-registrations)
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ulissesflores/lgbt-indicador-violencia/blob/main/colab/replication.ipynb)
@@ -159,9 +161,16 @@ codice, test, dati, preregistrazioni e risultati derivati. Per verificare che nu
 python3 -I make_provenance.py --verify
 ```
 
-Basta la libreria standard. Due cartelle restano fuori dal sigillo per costruzione: `docs/paper/`, verificata dal
-proprio [`SHA256SUMS.txt`](docs/paper/SHA256SUMS.txt), e `assets/demo/`, la cui registrazione mostra l'hash della
-catena ed è fatta dopo il sigillo.
+Basta la libreria standard. Quattro cartelle restano fuori dal sigillo per costruzione: `docs/paper/`, verificata
+dal proprio [`SHA256SUMS.txt`](docs/paper/SHA256SUMS.txt); `assets/demo/`, la cui registrazione mostra l'hash della
+catena ed è fatta dopo il sigillo; `runs/`, il registro dell'esecuzione sigillata; e `timestamps/`, le marche
+temporali del sigillo.
+
+Tre verifiche non richiedono di fidarsi dell'autore. I file del sigillo del commit `e68396f` hanno una marca
+temporale in Bitcoin (OpenTimestamps) e di un'autorità RFC 3161 ([`timestamps/`](timestamps/README.md)). A ogni
+push su `main`, GitHub Actions firma un'attestazione di provenienza della build dei file del sigillo
+(`gh attestation verify manifest/SHA256SUMS.txt -R ulissesflores/lgbt-indicador-violencia`). La licenza di ogni file è in
+formato leggibile da macchina in [`REUSE.toml`](REUSE.toml) ed è verificata da `reuse lint` nello stesso workflow.
 
 ## Che cosa contiene questo repository
 
@@ -171,6 +180,7 @@ catena ed è fatta dopo il sigillo.
 | `analysis/` | Le altre analisi su cui si basa l'articolo: audit della lista del Grupo Gay da Bahia (`ggb-audit/`, `ggb-series/`, `counterpoint/`), potenza e costo dell'indagine (`survey-cost/`), simulazione di identificabilità (`simulation/`), discorso pubblico (`discourse/`), verifiche di robustezza (`robustness/`), punteggi di ideologia (`ideology/`), letteratura (`literature/`, `full-text/`) |
 | `figures/` | Codice e dati di ogni figura (`make_figures.py`, `fontes/` con i valori rappresentati) e le figure dell'articolo (`article/`) |
 | `preregistrations/` | Preregistrazioni con le relative marche temporali e SHA-256, come citate nell'articolo |
+| `timestamps/` | Marche temporali indipendenti delle preregistrazioni e del sigillo (OpenTimestamps e RFC 3161), con i comandi per verificarle |
 | `sources/` | Copie delle fonti pubbliche usate dagli script (`public/`), i registri delle fonti (`ledgers/`) e i quartili delle riviste |
 | `manifest/` | Manifesto delle fonti (URL, data di accesso e, quando un file è stato salvato, SHA-256), inventario pubblico e i checksum del sigillo |
 | `docs/` | Riproducibilità e posizione di ciascun risultato (`reproducibility-and-result-locations.md`), uso di modelli linguistici (`language-model-use.md`) e correzioni (`corrections.md`), in inglese e in portoghese (`.pt-BR.md`); l'articolo (`paper/`) |
@@ -224,7 +234,8 @@ Il pulsante "Cite this repository" di GitHub legge [`CITATION.cff`](CITATION.cff
 Codice: Apache-2.0 ([`LICENSE`](LICENSE), [`LICENSES/Apache-2.0.txt`](LICENSES/Apache-2.0.txt)). Dati derivati, testo e
 figure: CC BY 4.0 ([`LICENSES/CC-BY-4.0.txt`](LICENSES/CC-BY-4.0.txt)). Il marchio del Codex Hash Research Laboratory
 (`assets/brand/lab-lockup-*.png`) non è coperto da nessuna delle due licenze. I microdati ufficiali di IBGE, DATASUS e
-TSE mantengono i propri termini e non vengono ridistribuiti. Vedi [`NOTICE`](NOTICE).
+TSE mantengono i propri termini e non vengono ridistribuiti. Vedi [`NOTICE`](NOTICE). La licenza di ogni file,
+compresi i dati e i certificati di terzi, è in [`REUSE.toml`](REUSE.toml).
 
 ## Riferimenti di ancoraggio
 

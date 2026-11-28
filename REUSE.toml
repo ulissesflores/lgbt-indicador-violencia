@@ -1,0 +1,87 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+#
+# Machine-readable copy of the licence policy in NOTICE (https://reuse.software). It covers the
+# files that cannot carry an SPDX header (data, figures, generated files, pre-registrations,
+# third-party data and certificates). Pre-registered and sealed files are never edited to add a
+# header, so they are covered here. When several annotations match a file, the last one wins;
+# with precedence "closest", a header inside the file takes precedence over this file.
+version = 1
+
+# Text, tables, figures and derived data: CC-BY-4.0 (NOTICE, second item). This is the default
+# for every file; the annotations below narrow it for code and third-party material.
+[[annotations]]
+path = "**"
+precedence = "closest"
+SPDX-FileCopyrightText = "2026 Carlos Ulisses Flores (Codex Hash Ltda.)"
+SPDX-License-Identifier = "CC-BY-4.0"
+
+# Code and configuration: Apache-2.0 (NOTICE, first item).
+[[annotations]]
+path = [
+  "**/*.py",
+  "**/*.sh",
+  "**/*.ipynb",
+  "**/*.tape",
+  "**/*.yml",
+  "**/*.toml",
+  ".gitignore",
+  "requirements.txt",
+  "requirements.lock",
+  "uv.lock",
+]
+precedence = "closest"
+SPDX-FileCopyrightText = "2026 Carlos Ulisses Flores (Codex Hash Ltda.)"
+SPDX-License-Identifier = "Apache-2.0"
+
+# Files whose text quotes an SPDX header as an example (documentation of the header rule, and
+# the notebook cell that prints it). The quotation is not their licence, so this file decides.
+[[annotations]]
+path = "colab/replication.ipynb"
+precedence = "override"
+SPDX-FileCopyrightText = "2026 Carlos Ulisses Flores (Codex Hash Ltda.)"
+SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = [
+  "docs/adr/0006-code-and-data-in-portuguese-documentation-in-english.md",
+  "docs/corrections.md",
+  "docs/corrections.pt-BR.md",
+]
+precedence = "override"
+SPDX-FileCopyrightText = "2026 Carlos Ulisses Flores (Codex Hash Ltda.)"
+SPDX-License-Identifier = "CC-BY-4.0"
+
+# Official IBGE data (SIDRA), included unchanged as open data (NOTICE, third item).
+[[annotations]]
+path = [
+  "sources/public/p2-f8-dados-uf/sidra/*.json",
+  "sources/public/p2-f8-dados-uf/tabnet/raw/sidra_*.json",
+]
+precedence = "override"
+SPDX-FileCopyrightText = "Instituto Brasileiro de Geografia e Estatística (IBGE), https://apisidra.ibge.gov.br"
+SPDX-License-Identifier = "LicenseRef-IBGE-open-data"
+
+# Zucco & Power (2023), doi:10.7910/DVN/6KVTUV, included unchanged (NOTICE, third item).
+[[annotations]]
+path = "sources/public/p2-f8-governos/zucco-power-dataverse/bls9_estimates_partiespresidents_long.tab"
+precedence = "override"
+SPDX-FileCopyrightText = "2023 Cesar Zucco and Timothy Power"
+SPDX-License-Identifier = "CC0-1.0"
+
+# Codex Hash Research Laboratory mark: all rights reserved (NOTICE, sixth item).
+[[annotations]]
+path = [
+  "assets/brand/lab-lockup-light.png",
+  "assets/brand/lab-lockup-dark.png",
+]
+precedence = "override"
+SPDX-FileCopyrightText = "2026 Codex Hash Ltda."
+SPDX-License-Identifier = "LicenseRef-CodexHash-mark"
+
+# Public certificates of the FreeTSA time-stamp authority, reproduced unmodified.
+[[annotations]]
+path = "timestamps/freetsa-*"
+precedence = "override"
+SPDX-FileCopyrightText = "FreeTSA (https://freetsa.org), reproduced unmodified"
+SPDX-License-Identifier = "LicenseRef-FreeTSA-public-certificate"

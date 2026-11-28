@@ -101055,7 +101055,7 @@
     {
      "line": 1822,
      "where": "text",
-     "value": "762"
+     "value": "768"
     }
    ],
    "locator": {
@@ -126939,9 +126939,9 @@
   "data/sinan/triangulacao_pns_sinan.py": "7ce981e02c8d908e9575b322c22c0646d05ce7b23d3debbb7644292702f35f65",
   "figures/fontes/estudos_mortalidade.tsv": "61a8f7c623b61c42bf5ec82fbaa8bb700ea0e55a24a530cf7c52cfd459431ce9",
   "figures/fontes/estudos_mortalidade_origem.md": "f36115dc1ab94012877af4e336523d7c768e5b55ac35952e8ea65b5b04a7cfa1",
-  "figures/make_figures.py": "aa4b17b68cbf93cfa7acf89ddfc838fd3d46c248b68216ba6791ce5542e1dc26",
+  "figures/make_figures.py": "74f270a090543fb5cbabb37eb081901bc29c03cdc6f994769da4f096612b7aa7",
   "figures/valores_plotados.json": "f3585d799b00ba6714d8ef3476ee4bcddb7d4968425ff56cde06a2e1916c6b62",
-  "make_provenance.py": "32f83a5a844d448a5eb936bcf0c9d2284700f430bd3c31779a86fdc223d41291",
+  "make_provenance.py": "cec22986a3f5aa7959da148db6a6c48bcc2f4de3e7f9cd83b7da1a32b611b0b9",
   "manifest/INVENTARIO-PUBLICO.json": "f0537b6d5a4bf7a59f5d9521c19937bdd31b70986964961d03a8f1d67c9c138a",
   "preregistrations/governos/PRE-REGISTRO.sha256": "dabfb8215fb5cce0fd22bd605c6e1215786036b2486032ddd2ca360269f39451",
   "preregistrations/midia/PRE-REGISTRO.md": "4c9ce64558c1d2ac46b2eec57a2e5a411719eff426231d1a46498415a2444fc6",

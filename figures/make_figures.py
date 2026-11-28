@@ -859,7 +859,7 @@ def figura13() -> None:
     t = ler_triangulacao()
     linhas = [("PNS 2019, direto no microdado\n(quem respondeu hetero ou LGB+)", t["direto"], estat_cheio, None),
               ("PNS 2019, simulação\n(só quem respondeu a orientação)", t["mc"]["A"], estat_vazado, None),
-              ("PNS 2019, simulação\n(denominador antigo do projeto)", t["mc"]["B"], estat_vazado, None),
+              ("PNS 2019, simulação\n(todos os não-LGB+ no denominador)", t["mc"]["B"], estat_vazado, None),
               ("Sinan 2023\n(fichas com orientação válida)", None, None, 2023),
               ("Sinan 2024\n(fichas com orientação válida)", None, None, 2024)]
     fig, ax = plt.subplots(figsize=(7.2, 3.7))

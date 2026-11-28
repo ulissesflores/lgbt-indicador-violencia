@@ -25,4 +25,8 @@ Licenses (see LICENSES/):
 - Codex Hash Research Laboratory mark (assets/brand/lab-lockup-light.png, the laboratory's original file, and
   assets/brand/lab-lockup-dark.png, derived from it by assets/brand/make_brand.py): all rights reserved; outside the
   Apache-2.0 and CC-BY-4.0 licenses. The README art drawn by code (banner, icon and finding cards) is CC-BY-4.0.
+- FreeTSA public certificates (timestamps/freetsa-cacert.pem and timestamps/freetsa-tsa.crt), reproduced unmodified
+  to verify the RFC 3161 time-stamps: not authored by this project (LicenseRef-FreeTSA-public-certificate).
 - Not distributed (license or privacy): third-party PDFs and HTML, raw microdata, news texts, the list of victims' names.
+
+The same policy, file by file and machine-readable, is in REUSE.toml (https://reuse.software); `reuse lint` checks it.

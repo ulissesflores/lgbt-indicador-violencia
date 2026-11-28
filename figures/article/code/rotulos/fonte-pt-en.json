@@ -99,7 +99,7 @@
   "LGB+ na população adulta: {}%": "LGB+ in the adult population: {}%",
   "PNS {}, direto no microdado (quem respondeu hetero ou LGB+)": "PNS {}, direct from microdata\n(respondents who said heterosexual or LGB+)",
   "PNS {}, simulação (só quem respondeu a orientação)": "PNS {}, simulation\n(only respondents who reported orientation)",
-  "PNS {}, simulação (denominador antigo do projeto)": "PNS {}, simulation\n(project's earlier denominator)",
+  "PNS {}, simulação (todos os não-LGB+ no denominador)": "PNS {}, simulation\n(all non-LGB+ in the denominator)",
   "Sinan {} (fichas com orientação válida)": "Sinan {}\n(records with valid orientation)",
   "LGB+ entre as vítimas adultas de violência física (%)": "LGB+ share of adult victims of physical violence (%)",
   "estimativa [faixa]": "estimate [interval]",
