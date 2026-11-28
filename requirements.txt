@@ -1,5 +1,5 @@
 # Trilha 1 (conferência dos números publicados): só a biblioteca padrão do Python 3.12+ e os pacotes abaixo.
-numpy>=2.0
+numpy>=2.5.5
 pandas>=2.2
 scipy>=1.13
 matplotlib>=3.8
