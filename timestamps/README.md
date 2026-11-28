@@ -47,3 +47,16 @@ openssl ts -verify -in "$T.tsr" -data "$T" \
 uv run --with opentimestamps-client ots verify "$T.ots"
 uv run --with opentimestamps-client ots info "$T.ots"   # shows the block height
 ```
+
+## Software Heritage archive
+
+The repository is archived by [Software Heritage](https://www.softwareheritage.org/), which keeps a copy
+independent of GitHub and Zenodo. Its identifiers (SWHIDs) are intrinsic: they are computed from the
+content, so they can be checked against a local clone.
+
+| Object | SWHID | Check locally |
+|---|---|---|
+| Release `v1.3.0` (signed tag) | [`swh:1:rel:1441ec717099087dd55dbf861c8af9c76e138c58`](https://archive.softwareheritage.org/swh:1:rel:1441ec717099087dd55dbf861c8af9c76e138c58) | `git rev-parse v1.3.0` |
+| Commit `b7cce1a` (the tree of v1.3.0) | [`swh:1:rev:b7cce1a5b0a9089641553b5d2ff3655c03e58b85`](https://archive.softwareheritage.org/swh:1:rev:b7cce1a5b0a9089641553b5d2ff3655c03e58b85) | `git rev-parse v1.3.0^{commit}` |
+| Source tree of v1.3.0 | [`swh:1:dir:d454d442f21684bd45eb4c7131ca1f581220ccb0`](https://archive.softwareheritage.org/swh:1:dir:d454d442f21684bd45eb4c7131ca1f581220ccb0) | `git rev-parse 'v1.3.0^{tree}'` |
+| Snapshot of the archive visit (2026-11-28) | [`swh:1:snp:c4a5d99462355626ee7c112aa5deaf26813091fb`](https://archive.softwareheritage.org/swh:1:snp:c4a5d99462355626ee7c112aa5deaf26813091fb) | — |
