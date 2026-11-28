@@ -12,7 +12,7 @@ Each stamp covers one commit:
 | File | What it is |
 |---|---|
 | `*.sha256` | Manifest in `sha256sum` format: the three pre-registrations (current and original text), their `.sha256` files and the three seal files (`output/hash-chain.md`, `output/provenance.json`, `manifest/SHA256SUMS.txt`) at the commit of the stamp. Its first line is a comment (in Portuguese in the `e68396f` manifest); each manifest is kept byte for byte because it is the stamped object. |
-| `*.sha256.ots` | OpenTimestamps proof. The `e68396f` proof is anchored in Bitcoin block 977874 (2026-11-28 00:46:11 UTC); the `2550828` proof is anchored once the calendars confirm it and the upgraded file is committed. |
+| `*.sha256.ots` | OpenTimestamps proof. The `e68396f` proof is anchored in Bitcoin block 977874 (2026-11-28 00:46:11 UTC); the `2550828` proof is anchored in Bitcoin block 977889 (2026-11-28 03:39:52 UTC). |
 | `*.sha256.tsq`, `*.sha256.tsr` | RFC 3161 request and response from the FreeTSA time-stamp authority. |
 | `freetsa-cacert.pem`, `freetsa-tsa.crt` | FreeTSA public certificates, reproduced unmodified (`LicenseRef-FreeTSA-public-certificate`); they contain the authority's published contact address. |
 
