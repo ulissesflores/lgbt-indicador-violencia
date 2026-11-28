@@ -1,0 +1,61 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+#
+# CodeQL: static analysis (SAST) of the Python code and of the workflows.
+#
+# Looks for security and correctness problems in the analysis scripts and in the GitHub Actions
+# workflows. It runs on a push to main, on pull requests and when a maintainer starts it by hand;
+# there is no schedule.
+#
+# Inputs
+# ------
+# - the Python files and the workflow files of the repository
+#
+# Outputs
+# -------
+# - code-scanning alerts in the repository's Security tab
+# - no files are written to the repository
+#
+# Usage
+# -----
+# Run by GitHub Actions; by hand from the Actions tab (workflow_dispatch).
+#
+# Status
+# ------
+# No registration status is claimed for this file.
+#
+# Author
+# ------
+# Carlos Ulisses Flores (Codex Hash Research Laboratory),
+# ORCID https://orcid.org/0000-0002-6034-7765.
+# Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+
+name: codeql
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions: read-all
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [python, actions]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: github/codeql-action/init@915412ff23e8b7659517e607487dbeae018f2934 # v4.39.5
+        with:
+          languages: ${{ matrix.language }}
+          build-mode: none
+      - uses: github/codeql-action/analyze@915412ff23e8b7659517e607487dbeae018f2934 # v4.39.5
+        with:
+          category: /language:${{ matrix.language }}

@@ -16,7 +16,7 @@ identifiers:
   - type: doi
     value: "10.5281/zenodo.23873858"
     description: "Concept DOI (all versions)"
-date-released: 2026-11-27
+date-released: 2026-11-28
 license:
   - Apache-2.0
   - CC-BY-4.0

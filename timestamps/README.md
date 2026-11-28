@@ -52,11 +52,18 @@ uv run --with opentimestamps-client ots info "$T.ots"   # shows the block height
 
 The repository is archived by [Software Heritage](https://www.softwareheritage.org/), which keeps a copy
 independent of GitHub and Zenodo. Its identifiers (SWHIDs) are intrinsic: they are computed from the
-content, so they can be checked against a local clone.
+content the same way Git computes its object ids, so they can be checked against a local clone.
 
 | Object | SWHID | Check locally |
 |---|---|---|
 | Release `v1.3.0` (signed tag) | [`swh:1:rel:1441ec717099087dd55dbf861c8af9c76e138c58`](https://archive.softwareheritage.org/swh:1:rel:1441ec717099087dd55dbf861c8af9c76e138c58) | `git rev-parse v1.3.0` |
-| Commit `b7cce1a` (the tree of v1.3.0) | [`swh:1:rev:b7cce1a5b0a9089641553b5d2ff3655c03e58b85`](https://archive.softwareheritage.org/swh:1:rev:b7cce1a5b0a9089641553b5d2ff3655c03e58b85) | `git rev-parse v1.3.0^{commit}` |
+| Commit `b7cce1a` (the commit of v1.3.0) | [`swh:1:rev:b7cce1a5b0a9089641553b5d2ff3655c03e58b85`](https://archive.softwareheritage.org/swh:1:rev:b7cce1a5b0a9089641553b5d2ff3655c03e58b85) | `git rev-parse v1.3.0^{commit}` |
 | Source tree of v1.3.0 | [`swh:1:dir:d454d442f21684bd45eb4c7131ca1f581220ccb0`](https://archive.softwareheritage.org/swh:1:dir:d454d442f21684bd45eb4c7131ca1f581220ccb0) | `git rev-parse 'v1.3.0^{tree}'` |
 | Snapshot of the archive visit (2026-11-28) | [`swh:1:snp:c4a5d99462355626ee7c112aa5deaf26813091fb`](https://archive.softwareheritage.org/swh:1:snp:c4a5d99462355626ee7c112aa5deaf26813091fb) | — |
+
+## Seal of the article and seal of `main`
+
+The article prints the seal of version 1.3.0 (`3fd2c2bf…`, 768 files); `seal-v1.3.0.json` records it, copied from
+`output/provenance.json` at the signed tag `v1.3.0`. Commits after the release carry their own seal: they add CI
+security configuration (CodeQL, Dependabot) and change no data, analysis script or result. Decision and file list:
+[`docs/adr/0008-the-article-certifies-the-v1.3.0-seal.md`](../docs/adr/0008-the-article-certifies-the-v1.3.0-seal.md).

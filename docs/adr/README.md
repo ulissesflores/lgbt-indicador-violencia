@@ -15,3 +15,4 @@ Nygard, with an explicit list of alternatives.
 | [0005](0005-corrections-as-dated-errata-not-rewritten-tags.md) | Corrections as dated errata, not rewritten tags | 2026-11-22 | Accepted |
 | [0006](0006-code-and-data-in-portuguese-documentation-in-english.md) | Code and data in Portuguese, documentation in English | 2026-11-01 | Accepted; amended 2026-11-25 (English file headers) |
 | [0007](0007-readme-art-drawn-from-the-sealed-data.md) | README art drawn by code from the sealed data | 2026-11-24 | Accepted |
+| [0008](0008-the-article-certifies-the-v1.3.0-seal.md) | The article certifies the v1.3.0 seal; later commits carry their own | 2026-11-28 | Accepted |

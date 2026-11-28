@@ -83,6 +83,13 @@ Fonte, página e valor dos itens 2 a 4 estão em `analysis/article-numbers/terce
 
 **O que não mudou.** Os números em si (30%, 5,2%, 3,0% a 8,9%, 2,0%, 13,7%, 4,5%, 12 e 4) e as conclusões que os usam. As seis linhas do arquivo de transcrição trazem agora a página e o trecho, com o status `conferido`, e o `paper_numbers.json` não lista mais nenhum número como `pending-source`.
 
+## Errata de 2026-11-28 (GMT-3): duas afirmações do pacote v1.3.0
+
+1. **A seção "PDFs do artigo da v1.2.0", abaixo,** diz que `docs/paper/` tem traduções novas para o espanhol, o italiano e o hebraico e que cada README aponta a edição no seu idioma. A versão 1.3.0 distribui só a edição de referência em português e a tradução para o inglês, como diz o `README.md`; os READMEs em espanhol, italiano e hebraico apontam a edição em inglês, e as outras edições virão com DOI próprio.
+2. **As descrições da versão 1.3.0** em `.zenodo.json`, `CITATION.cff`, `codemeta.json` e no ADR 0005 dizem que ela corrige "duas leituras" do artigo da v1.2.0. As correções são as entradas datadas deste arquivo de 2026-11-22 a 2026-11-26: onze leituras ou fontes citadas corrigidas e um conserto da pasta de dados de scripts. A descrição do registro da v1.3.0 no Zenodo (DOI 10.5281/zenodo.24635451) foi corrigida em 2026-11-28.
+
+**O que não mudou.** Nenhum número do artigo, arquivo de dados em `data/`, script de análise ou conclusão. As duas afirmações ficam como estão no arquivo da v1.3.0, cujo selo o artigo imprime (ADR 0008).
+
 ## PDFs do artigo da v1.2.0
 
 Os quatro PDFs do artigo distribuídos na v1.2.0 (português, inglês, espanhol e italiano) trazem as leituras corrigidas acima. Eles saem de `docs/paper/` na v1.3.0. A pasta passa a ter só o texto corrigido: a edição de referência em português e a tradução para o inglês, cada uma com DOI próprio, e traduções novas para o espanhol, o italiano e o hebraico, feitas do texto corrigido. Cada README aponta a edição no seu idioma.

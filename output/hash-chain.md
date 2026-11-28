@@ -1,6 +1,6 @@
 # Hash chain
 
-chain_hash: `3fd2c2bf9c6c5f6a607e32360255d8a7f4cf526ecc30e0531f236d400ba86264` (768 arquivos)
+chain_hash: `a2af3c8477ae5f3b46da12ff9758558401e23fc6c979947935644e12c25ea4b2` (771 arquivos)
 
 Verificar: `python3 -I make_provenance.py --verify`
 

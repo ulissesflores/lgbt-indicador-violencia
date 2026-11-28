@@ -83,6 +83,13 @@ Source, page and value for items 2 to 4 are in `analysis/article-numbers/terceir
 
 **What did not change.** The numbers themselves (30%, 5.2%, 3.0% to 8.9%, 2.0%, 13.7%, 4.5%, 12 and 4) and the conclusions that use them. The six rows of the transcription file now carry the page and the passage, with the status `conferido` ("checked"), and `paper_numbers.json` no longer lists any number as `pending-source`.
 
+## Erratum of 2026-11-28 (GMT-3): two statements of the v1.3.0 package
+
+1. **Section "The v1.2.0 article PDFs" below** says that `docs/paper/` holds new Spanish, Italian and Hebrew translations and that each README points to the edition in its own language. Version 1.3.0 distributes only the Portuguese edition of record and the English translation, as `README.md` says; the Spanish, Italian and Hebrew READMEs point to the English edition, and the other editions will come with their own DOI.
+2. **The descriptions of version 1.3.0** in `.zenodo.json`, `CITATION.cff`, `codemeta.json` and ADR 0005 say that it corrects "two readings" of the v1.2.0 article. The corrections are the dated entries of this file from 2026-11-22 to 2026-11-26: eleven corrected readings or cited sources and one fix of a script's data folder. The description of the Zenodo record of v1.3.0 (DOI 10.5281/zenodo.24635451) was corrected on 2026-11-28.
+
+**What did not change.** No number of the article, data file under `data/`, analysis script or conclusion. Both statements are kept as they are in the v1.3.0 archive, whose seal the article prints (ADR 0008).
+
 ## The v1.2.0 article PDFs
 
 The four article PDFs distributed in v1.2.0 (Portuguese, English, Spanish and Italian) carry the readings corrected above. They leave `docs/paper/` in v1.3.0. The folder now holds only the corrected text: the Portuguese edition of record and its English translation, each with its own DOI, and new Spanish, Italian and Hebrew translations made from the corrected text. Each README points to the edition in its own language.

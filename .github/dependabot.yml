@@ -1,0 +1,22 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Carlos Ulisses Flores (Codex Hash Ltda.)
+#
+# Dependabot: proposes updates of the pinned GitHub Actions and of the Python requirements.
+#
+# Updates arrive as pull requests and change nothing by themselves; the sealed environment
+# (requirements.lock) only changes in a new, resealed version.
+#
+# Author: Carlos Ulisses Flores (Codex Hash Research Laboratory),
+# ORCID https://orcid.org/0000-0002-6034-7765.
+# Repository: https://github.com/ulissesflores/lgbt-indicador-violencia
+
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+  - package-ecosystem: pip
+    directory: /
+    schedule:
+      interval: monthly

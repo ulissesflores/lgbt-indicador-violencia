@@ -101059,7 +101059,7 @@
     }
    ],
    "locator": {
-    "file": "output/provenance.json",
+    "file": "timestamps/seal-v1.3.0.json",
     "type": "json",
     "path": [
      "n_arquivos"
@@ -101067,7 +101067,8 @@
    },
    "scripts": [
     "make_provenance.py"
-   ]
+   ],
+   "reason": "the article prints the seal of version 1.3.0; the live seal of later commits differs (docs/adr/0008)"
   },
   {
    "id": "l1822|1",
@@ -126948,6 +126949,7 @@
   "preregistrations/midia/PRE-REGISTRO.sha256.txt": "656bb16d3f6936d47cc74b580a42523dabe1434da856a2cb5984c53d3a4ae04f",
   "preregistrations/mortalidade/PRE-REGISTRO.sha256.txt": "e612a1178a7f5910f941be459b94e2053cf893535f53e1f2e139bab866371b23",
   "scripts/inventario_publico.py": "4f13b9937138012f8ab8ee6b43e8d0fb712717dcecd38d18a9aca46b4c8743a4",
-  "sources/ledgers/ledger-05/sources.jsonl": "638753eaf08e2fbd2a76a4b5a69e074336dd1fc567555210e0fd5af873fafc0e"
+  "sources/ledgers/ledger-05/sources.jsonl": "638753eaf08e2fbd2a76a4b5a69e074336dd1fc567555210e0fd5af873fafc0e",
+  "timestamps/seal-v1.3.0.json": "50126eadc8eeeb19ca204ea34fcd713b1f0f95aaf3f04b8f28bdbc492afc51ac"
  }
 }
